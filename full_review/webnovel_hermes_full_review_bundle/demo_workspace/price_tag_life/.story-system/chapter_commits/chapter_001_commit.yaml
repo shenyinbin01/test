@@ -1,0 +1,33 @@
+chapter_number: 1
+commit_type: initial
+previous_version: null
+current_version: v1
+changes:
+  plot_events:
+  - 林砚在送外卖途中第一次看见人生价格标签
+  - 发现老人头顶价格异常高、客户价格在下跌
+  - 判断失误——标签不代表财富
+  - 在医院看见父亲头顶价格即将归零
+  character_updates:
+  - 林砚：发现能力，处于困惑和试错阶段
+  - 父亲（未具名）：价格归零边缘，病重
+  world_updates:
+  - 价格标签规则初步显露：与财富不完全相关
+  - 能力有代价：使用后头痛
+  dialogue_signatures:
+  - 客户含蓄表达：'这附近最近不太平'（伏笔）
+  - 老人简短回应，暗示价格标签和人的选择有关（伏笔）
+affected_elements:
+  characters:
+  - 林砚
+  - 父亲
+  threads:
+  - 能力起源
+  - 父亲医疗费
+  - 价格标签真相
+  foreshadowing:
+  - 第4段提及'老人好像认识他'，暗示老人可能知道更多
+  - 客户提及'不太平'为后续事件铺垫
+canon_sync:
+  synced: false
+  canon_version: 待更新
