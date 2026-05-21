@@ -1,0 +1,22 @@
+=== deepseek_calls_phase4b.jsonl 验证（GitHub 工作目录）===
+文件路径: /tmp/phase4b_push/repo/full_review/webnovel_hermes_phase4b_fix_review_bundle/phase4b_outputs/phase4b_logs/deepseek_calls_phase4b.jsonl
+文件大小: 4433 bytes
+CR count: 0
+LF count: 6
+readlines 行数: 6
+
+第1行: task_name=preflight_context success=True attempt=1 retry_of=None
+第2行: task_name=chapter_beat success=True attempt=1 retry_of=None
+第3行: task_name=chapter_writer success=True attempt=1 retry_of=None
+第4行: task_name=chapter_review success=True attempt=1 retry_of=None
+第5行: task_name=humanize success=True attempt=1 retry_of=None
+第6行: task_name=chapter_commit success=True attempt=1 retry_of=None
+
+=== 结论 ===
+标准 JSONL: 是（每行一个独立 JSON 对象，LF 行尾）
+总行数: 6
+所有行 json.loads 通过: 是
+所有记录 success=true
+所有记录 attempt=1
+所有记录 retry_of=null
+无 API Key/Authorization/token/cookie 泄露
