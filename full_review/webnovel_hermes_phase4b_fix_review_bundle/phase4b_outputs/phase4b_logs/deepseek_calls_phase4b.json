@@ -1,0 +1,128 @@
+[
+  {
+    "task_name": "preflight_context",
+    "mode": "real",
+    "model": "deepseek-chat",
+    "base_url": "api.deepseek.com/v1",
+    "run_id": "phase4b_20260521_223642",
+    "attempt": 1,
+    "retry_of": null,
+    "start_time": "2026-05-21T22:36:42.594663",
+    "end_time": "2026-05-21T22:36:59.751257",
+    "success": true,
+    "status_code": 200,
+    "error_type": null,
+    "error_message": null,
+    "output_path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/preflight_context.md",
+    "prompt_files": {
+      "system": "/opt/webnovel-hermes-wps/templates/prompts/preflight_context.md",
+      "user_input": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/prompt_input_preflight_context.md"
+    },
+    "input_file": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/prompt_input_preflight_context.md"
+  },
+  {
+    "task_name": "chapter_beat",
+    "mode": "real",
+    "model": "deepseek-chat",
+    "base_url": "api.deepseek.com/v1",
+    "run_id": "phase4b_20260521_223642",
+    "attempt": 1,
+    "retry_of": null,
+    "start_time": "2026-05-21T22:36:59.942378",
+    "end_time": "2026-05-21T22:37:19.870166",
+    "success": true,
+    "status_code": 200,
+    "error_type": null,
+    "error_message": null,
+    "output_path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/beat.md",
+    "prompt_files": {
+      "system": "/opt/webnovel-hermes-wps/templates/prompts/chapter_beat.md",
+      "user_input": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/prompt_input_chapter_beat.md"
+    },
+    "input_file": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/prompt_input_chapter_beat.md"
+  },
+  {
+    "task_name": "chapter_writer",
+    "mode": "real",
+    "model": "deepseek-chat",
+    "base_url": "api.deepseek.com/v1",
+    "run_id": "phase4b_20260521_223642",
+    "attempt": 1,
+    "retry_of": null,
+    "start_time": "2026-05-21T22:37:20.065426",
+    "end_time": "2026-05-21T22:37:42.401652",
+    "success": true,
+    "status_code": 200,
+    "error_type": null,
+    "error_message": null,
+    "output_path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/draft.md",
+    "prompt_files": {
+      "system": "/opt/webnovel-hermes-wps/templates/prompts/chapter_writer.md",
+      "user_input": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/prompt_input_chapter_writer.md"
+    },
+    "input_file": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/prompt_input_chapter_writer.md"
+  },
+  {
+    "task_name": "chapter_review",
+    "mode": "real",
+    "model": "deepseek-chat",
+    "base_url": "api.deepseek.com/v1",
+    "run_id": "phase4b_20260521_223642",
+    "attempt": 1,
+    "retry_of": null,
+    "start_time": "2026-05-21T22:37:42.592730",
+    "end_time": "2026-05-21T22:38:02.335294",
+    "success": true,
+    "status_code": 200,
+    "error_type": null,
+    "error_message": null,
+    "output_path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/review.md",
+    "prompt_files": {
+      "system": "/opt/webnovel-hermes-wps/templates/prompts/chapter_review.md",
+      "user_input": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/prompt_input_chapter_review.md"
+    },
+    "input_file": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/prompt_input_chapter_review.md"
+  },
+  {
+    "task_name": "humanize",
+    "mode": "real",
+    "model": "deepseek-chat",
+    "base_url": "api.deepseek.com/v1",
+    "run_id": "phase4b_20260521_223642",
+    "attempt": 1,
+    "retry_of": null,
+    "start_time": "2026-05-21T22:38:02.528554",
+    "end_time": "2026-05-21T22:38:12.995284",
+    "success": true,
+    "status_code": 200,
+    "error_type": null,
+    "error_message": null,
+    "output_path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/humanized.md",
+    "prompt_files": {
+      "system": "/opt/webnovel-hermes-wps/templates/prompts/humanize.md",
+      "user_input": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/prompt_input_humanize.md"
+    },
+    "input_file": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/prompt_input_humanize.md"
+  },
+  {
+    "task_name": "chapter_commit",
+    "mode": "real",
+    "model": "deepseek-chat",
+    "base_url": "api.deepseek.com/v1",
+    "run_id": "phase4b_20260521_223642",
+    "attempt": 1,
+    "retry_of": null,
+    "start_time": "2026-05-21T22:38:13.202268",
+    "end_time": "2026-05-21T22:38:22.841275",
+    "success": true,
+    "status_code": 200,
+    "error_type": null,
+    "error_message": null,
+    "output_path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/commit.yaml",
+    "prompt_files": {
+      "system": "/opt/webnovel-hermes-wps/templates/prompts/chapter_commit.md",
+      "user_input": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/prompt_input_chapter_commit.md"
+    },
+    "input_file": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/prompt_input_chapter_commit.md"
+  }
+]

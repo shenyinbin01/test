@@ -1,0 +1,23 @@
+=== deepseek_calls_phase4b.json 验证 ===
+文件路径: /tmp/phase4b_push/repo/full_review/webnovel_hermes_phase4b_fix_review_bundle/phase4b_outputs/phase4b_logs/deepseek_calls_phase4b.json
+文件大小: 4969 bytes
+数组长度: 6
+
+第1条: task_name=preflight_context success=True attempt=1 retry_of=None
+第2条: task_name=chapter_beat success=True attempt=1 retry_of=None
+第3条: task_name=chapter_writer success=True attempt=1 retry_of=None
+第4条: task_name=chapter_review success=True attempt=1 retry_of=None
+第5条: task_name=humanize success=True attempt=1 retry_of=None
+第6条: task_name=chapter_commit success=True attempt=1 retry_of=None
+
+=== 安全检查 ===
+敏感字段检查: 通过（未发现密钥泄露）
+
+=== 结论 ===
+标准 JSON 数组: 是
+数组长度: 6
+所有条数 success=true: True
+所有条数 attempt=1: True
+所有条数 retry_of=null: True
+task_name 完整性: [preflight_context, chapter_beat, chapter_writer, chapter_review, humanize, chapter_commit]
+审计权威版本: deepseek_calls_phase4b.json（标准 JSON 数组，GitHub raw 可直接查看）
