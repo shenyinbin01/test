@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "file_count": 18,
+  "all_exist": true,
+  "schema_ok": true,
+  "detailed_checks": [
+    {
+      "file": "project.yaml",
+      "exists": true,
+      "size_bytes": 259
+    },
+    {
+      "file": ".story-system/MASTER_SETTING.yaml",
+      "exists": true,
+      "size_bytes": 1270
+    },
+    {
+      "file": "outlines/chapters_001_030.yaml",
+      "exists": true,
+      "size_bytes": 2259
+    },
+    {
+      "file": ".webnovel/context/chapter_001_context.md",
+      "exists": true,
+      "size_bytes": 558
+    },
+    {
+      "file": "outlines/beats/chapter_001.yaml",
+      "exists": true,
+      "size_bytes": 1690
+    },
+    {
+      "file": "manuscript/drafts/chapter_001_draft.md",
+      "exists": true,
+      "size_bytes": 2004
+    },
+    {
+      "file": "reviews/chapter_001_review.yaml",
+      "exists": true,
+      "size_bytes": 1558
+    },
+    {
+      "file": "manuscript/polished/chapter_001_polished.md",
+      "exists": true,
+      "size_bytes": 1019
+    },
+    {
+      "file": ".story-system/chapter_commits/chapter_001_commit.yaml",
+      "exists": true,
+      "size_bytes": 1059
+    },
+    {
+      "file": "manuscript/chapters/chapter_001_final.md",
+      "exists": true,
+      "size_bytes": 855
+    },
+    {
+      "file": ".story-system/runtime_canon.yaml",
+      "exists": true,
+      "size_bytes": 777
+    },
+    {
+      "file": ".webnovel/state.yaml",
+      "exists": true,
+      "size_bytes": 718
+    },
+    {
+      "file": "schemas/master_setting.schema.yaml",
+      "exists": true,
+      "parsable": true
+    },
+    {
+      "file": "schemas/runtime_canon.schema.yaml",
+      "exists": true,
+      "parsable": true
+    },
+    {
+      "file": "schemas/chapter_outline.schema.yaml",
+      "exists": true,
+      "parsable": true
+    },
+    {
+      "file": "schemas/chapter_beat.schema.yaml",
+      "exists": true,
+      "parsable": true
+    },
+    {
+      "file": "schemas/review_report.schema.yaml",
+      "exists": true,
+      "parsable": true
+    },
+    {
+      "file": "schemas/chapter_commit.schema.yaml",
+      "exists": true,
+      "parsable": true
+    }
+  ]
+}
