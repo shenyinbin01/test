@@ -1,0 +1,172 @@
+{
+  "project": {
+    "project_name": "price_tag_life",
+    "book_title": "人生价格标签",
+    "genre": "都市脑洞",
+    "core_idea": "主角是普通外卖员，能看到每个人的人生价格标签",
+    "target_reader": "男频爽文读者",
+    "style_preference": "快节奏、强钩子、口语化、爽点明确"
+  },
+  "execution_time": "2026-05-21T12:22:42.947846",
+  "mode": "mock",
+  "steps": [
+    {
+      "step": "create_project",
+      "status": "ok",
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/project.yaml"
+    },
+    {
+      "step": "generate_bible",
+      "status": "ok (mock)",
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/.story-system/MASTER_SETTING.yaml"
+    },
+    {
+      "step": "generate_outline",
+      "status": "ok (mock)",
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/outlines/chapters_001_030.yaml"
+    },
+    {
+      "step": "build_context",
+      "status": "ok (mock)",
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/.webnovel/context/chapter_001_context.md"
+    },
+    {
+      "step": "generate_beat",
+      "status": "ok (mock)",
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/outlines/beats/chapter_001.yaml"
+    },
+    {
+      "step": "write_draft",
+      "status": "ok (mock)",
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/manuscript/drafts/chapter_001_draft.md"
+    },
+    {
+      "step": "review",
+      "status": "ok (mock)",
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/reviews/chapter_001_review.yaml"
+    },
+    {
+      "step": "polish",
+      "status": "ok (mock)",
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/manuscript/polished/chapter_001_polished.md"
+    },
+    {
+      "step": "commit",
+      "status": "ok (mock)",
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/.story-system/chapter_commits/chapter_001_commit.yaml"
+    },
+    {
+      "step": "finalize",
+      "status": "ok",
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/manuscript/chapters/chapter_001_final.md"
+    },
+    {
+      "step": "update_canon",
+      "status": "ok (mock)",
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/.story-system/runtime_canon.yaml"
+    },
+    {
+      "step": "project_state",
+      "status": "ok (mock)",
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/.webnovel/state.yaml"
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "file_count": 18,
+    "all_exist": true,
+    "schema_ok": true,
+    "detailed_checks": [
+      {
+        "file": "project.yaml",
+        "exists": true,
+        "size_bytes": 259
+      },
+      {
+        "file": ".story-system/MASTER_SETTING.yaml",
+        "exists": true,
+        "size_bytes": 1270
+      },
+      {
+        "file": "outlines/chapters_001_030.yaml",
+        "exists": true,
+        "size_bytes": 2259
+      },
+      {
+        "file": ".webnovel/context/chapter_001_context.md",
+        "exists": true,
+        "size_bytes": 558
+      },
+      {
+        "file": "outlines/beats/chapter_001.yaml",
+        "exists": true,
+        "size_bytes": 1690
+      },
+      {
+        "file": "manuscript/drafts/chapter_001_draft.md",
+        "exists": true,
+        "size_bytes": 2004
+      },
+      {
+        "file": "reviews/chapter_001_review.yaml",
+        "exists": true,
+        "size_bytes": 1558
+      },
+      {
+        "file": "manuscript/polished/chapter_001_polished.md",
+        "exists": true,
+        "size_bytes": 1019
+      },
+      {
+        "file": ".story-system/chapter_commits/chapter_001_commit.yaml",
+        "exists": true,
+        "size_bytes": 1059
+      },
+      {
+        "file": "manuscript/chapters/chapter_001_final.md",
+        "exists": true,
+        "size_bytes": 855
+      },
+      {
+        "file": ".story-system/runtime_canon.yaml",
+        "exists": true,
+        "size_bytes": 777
+      },
+      {
+        "file": ".webnovel/state.yaml",
+        "exists": true,
+        "size_bytes": 718
+      },
+      {
+        "file": "schemas/master_setting.schema.yaml",
+        "exists": true,
+        "parsable": true
+      },
+      {
+        "file": "schemas/runtime_canon.schema.yaml",
+        "exists": true,
+        "parsable": true
+      },
+      {
+        "file": "schemas/chapter_outline.schema.yaml",
+        "exists": true,
+        "parsable": true
+      },
+      {
+        "file": "schemas/chapter_beat.schema.yaml",
+        "exists": true,
+        "parsable": true
+      },
+      {
+        "file": "schemas/review_report.schema.yaml",
+        "exists": true,
+        "parsable": true
+      },
+      {
+        "file": "schemas/chapter_commit.schema.yaml",
+        "exists": true,
+        "parsable": true
+      }
+    ]
+  }
+}
