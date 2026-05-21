@@ -1,0 +1,86 @@
+=== Security Scan Phase3.5 Fix ===
+--- grep -Ri "sk-" ---
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:    --task-name story_bible --log /data/logs/deepseek_calls.jsonl
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:    parser.add_argument("--task-name", default="default", help="任务名称用于日志追踪")
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/validate_phase3.py:                        for pat in ["sk-", "Authorization:", "API Key"]:
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/validate_phase3.py:                                if pat == "sk-" and "sk-" not in content:
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/run_demo.py:        "--task-name", task_name,
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/run_demo.py:        "--task-name", task_name,
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/run_demo.py:        "--task-name", task_name,
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/run_demo.py:                                "--task-name", "chapter_beat_retry1",
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:--- grep -Ri "sk-" ---
+
+--- grep -Ri "authorization" ---
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                    "Authorization": f"Bearer {api_key}",
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/validate_phase3.py:                        for pat in ["sk-", "Authorization:", "API Key"]:
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/validate_phase3.py:                        for pat in ["sk-", "Authorization:", "API Key"]:
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:--- grep -Ri "authorization" ---
+
+--- grep -Ri "api_key" ---
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:    for k in ["DEEPSEEK_API_KEY", "DEEPSEEK_BASE_URL", "DEEPSEEK_MODEL"]:
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:            if ds.get("api_key") and "DEEPSEEK_API_KEY" not in env:
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                env["DEEPSEEK_API_KEY"] = ds["api_key"]
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:    api_key = env.get("DEEPSEEK_API_KEY")
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:    if not api_key:
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:            "error_message": "未找到 DEEPSEEK_API_KEY"
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                    "Authorization": f"Bearer {api_key}",
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:    safe_entry.pop("api_key", None)
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                    "Authorization": f"Bearer {api_key}",
+
+--- grep -Ri "token" ---
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 token/cookie/password | ✅ 否 |
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:              task_name="default", temperature=0.7, max_tokens=1200,
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:        "max_tokens": max_tokens,
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:    parser.add_argument("--max-tokens", type=int, default=1200, help="最大 token 数 (默认 1200)")
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:            max_tokens=args.max_tokens,
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:--- grep -Ri "token" ---
+
+--- grep -Ri "cookie" ---
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 token/cookie/password | ✅ 否 |
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 token/cookie/password | ✅ 否 |
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:--- grep -Ri "cookie" ---
+
+--- grep -Ri "password" ---
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 token/cookie/password | ✅ 否 |
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 token/cookie/password | ✅ 否 |
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 token/cookie/password | ✅ 否 |
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/scripts/call_deepseek.py:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+
+--- grep -Ri "kdocs" ---
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:--- grep -Ri "kdocs" ---
+
+--- grep -Ri "file_id" ---
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 WPS URL/file_id/doc_link | ✅ 否 |
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:--- grep -Ri "file_id" ---
+
+--- grep -Ri "doc_link" ---
+webnovel_hermes_phase3_5_fix_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 WPS URL/file_id/doc_link | ✅ 否 |
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:webnovel_hermes_phase3_5_fix_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 WPS URL/file_id/doc_link | ✅ 否 |
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:--- grep -Ri "doc_link" ---
+
+--- grep -Ri "folder_id" ---
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:--- grep -Ri "folder_id" ---
+
+--- grep -Ri "link_id" ---
+webnovel_hermes_phase3_5_fix_review_bundle/security_scan.log:--- grep -Ri "link_id" ---
+
+--- find .env ---
+
+=== Scan Complete ===

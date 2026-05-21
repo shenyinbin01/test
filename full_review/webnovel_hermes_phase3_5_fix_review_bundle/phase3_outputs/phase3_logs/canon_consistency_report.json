@@ -1,0 +1,166 @@
+{
+  "mode": "real",
+  "canon_file": "/data/webnovel-lab/workspace/novels/price_tag_life/canon_constraints.yaml",
+  "checked_time": "2026-05-21T17:06:50.269621",
+  "checked_files": [
+    {
+      "file": "/data/webnovel-lab/demo_output/phase3_real_run/story_bible_real.md",
+      "label": "story_bible_real.md",
+      "readable": true,
+      "forbidden_hits": [
+        {
+          "pattern": "倒计时",
+          "matches": [
+            "倒计时"
+          ]
+        }
+      ],
+      "anchor_present": [
+        "林砚",
+        "外卖员",
+        "父亲病重",
+        "人生价格标签",
+        "选择代价",
+        "医院缴费窗口",
+        "即将归零"
+      ],
+      "anchor_missing": [
+        "不是单纯财富",
+        "头痛",
+        "短暂失明"
+      ]
+    },
+    {
+      "file": "/data/webnovel-lab/demo_output/phase3_real_run/chapter_beat_real.md",
+      "label": "chapter_beat_real.md",
+      "readable": true,
+      "forbidden_hits": [
+        {
+          "pattern": "充值",
+          "matches": [
+            "充值"
+          ]
+        }
+      ],
+      "anchor_present": [
+        "林砚",
+        "医院缴费窗口",
+        "即将归零"
+      ],
+      "anchor_missing": [
+        "外卖员",
+        "父亲病重",
+        "人生价格标签",
+        "不是单纯财富",
+        "选择代价",
+        "头痛",
+        "短暂失明"
+      ]
+    },
+    {
+      "file": "/data/webnovel-lab/demo_output/phase3_real_run/humanize_real.md",
+      "label": "humanize_real.md",
+      "readable": true,
+      "forbidden_hits": [],
+      "anchor_present": [
+        "林砚",
+        "选择代价"
+      ],
+      "anchor_missing": [
+        "外卖员",
+        "父亲病重",
+        "人生价格标签",
+        "不是单纯财富",
+        "头痛",
+        "短暂失明",
+        "医院缴费窗口",
+        "即将归零"
+      ]
+    }
+  ],
+  "forbidden_hits": [
+    {
+      "file": "story_bible_real.md",
+      "pattern": "倒计时",
+      "matches": [
+        "倒计时"
+      ]
+    },
+    {
+      "file": "chapter_beat_real.md",
+      "pattern": "充值",
+      "matches": [
+        "充值"
+      ]
+    }
+  ],
+  "required_anchor_checks": [
+    {
+      "file": "story_bible_real.md",
+      "present": [
+        "林砚",
+        "外卖员",
+        "父亲病重",
+        "人生价格标签",
+        "选择代价",
+        "医院缴费窗口",
+        "即将归零"
+      ],
+      "missing": [
+        "不是单纯财富",
+        "头痛",
+        "短暂失明"
+      ]
+    },
+    {
+      "file": "chapter_beat_real.md",
+      "present": [
+        "林砚",
+        "医院缴费窗口",
+        "即将归零"
+      ],
+      "missing": [
+        "外卖员",
+        "父亲病重",
+        "人生价格标签",
+        "不是单纯财富",
+        "选择代价",
+        "头痛",
+        "短暂失明"
+      ]
+    },
+    {
+      "file": "humanize_real.md",
+      "present": [
+        "林砚",
+        "选择代价"
+      ],
+      "missing": [
+        "外卖员",
+        "父亲病重",
+        "人生价格标签",
+        "不是单纯财富",
+        "头痛",
+        "短暂失明",
+        "医院缴费窗口",
+        "即将归零"
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "type": "forbidden_hit",
+      "file": "story_bible_real.md",
+      "pattern": "倒计时",
+      "match": "倒计时"
+    },
+    {
+      "type": "forbidden_hit",
+      "file": "chapter_beat_real.md",
+      "pattern": "充值",
+      "match": "充值"
+    }
+  ],
+  "warnings": [],
+  "passed": false
+}

@@ -1,0 +1,78 @@
+{
+  "mode": "real",
+  "execution_time": "2026-05-21T17:06:04.141303",
+  "phase3_version": "1.0",
+  "nodes": [
+    {
+      "task_name": "story_bible",
+      "mode": "real",
+      "success": false,
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"mode\": \"real\", \"task_name\": \"story_bible\", \"output\": \"/data/webnovel-lab/demo_output/phase3_real_run/story_bible_real.md\", \"attempt\": 1}",
+      "stderr": "",
+      "output_file": "/data/webnovel-lab/demo_output/phase3_real_run/story_bible_real.md",
+      "canon_error": "canon consistency检查未通过"
+    },
+    {
+      "task_name": "chapter_beat",
+      "mode": "real",
+      "success": false,
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"mode\": \"real\", \"task_name\": \"chapter_beat\", \"output\": \"/data/webnovel-lab/demo_output/phase3_real_run/chapter_beat_real.md\", \"attempt\": 1}",
+      "stderr": "",
+      "output_file": "/data/webnovel-lab/demo_output/phase3_real_run/chapter_beat_real.md",
+      "canon_error": "canon consistency检查未通过"
+    },
+    {
+      "task_name": "humanize",
+      "mode": "real",
+      "success": false,
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"mode\": \"real\", \"task_name\": \"humanize\", \"output\": \"/data/webnovel-lab/demo_output/phase3_real_run/humanize_real.md\", \"attempt\": 1}",
+      "stderr": "",
+      "output_file": "/data/webnovel-lab/demo_output/phase3_real_run/humanize_real.md",
+      "canon_error": "canon consistency检查未通过"
+    }
+  ],
+  "total_nodes": 3,
+  "success_count": 3,
+  "failed_count": 3,
+  "has_failure": true,
+  "canon_consistency": {
+    "checked": true,
+    "passed": false,
+    "errors": [
+      {
+        "type": "forbidden_hit",
+        "file": "story_bible_real.md",
+        "pattern": "倒计时",
+        "match": "倒计时"
+      },
+      {
+        "type": "forbidden_hit",
+        "file": "chapter_beat_real.md",
+        "pattern": "充值",
+        "match": "充值"
+      },
+      {
+        "type": "forbidden_hit",
+        "file": "humanize_real.md",
+        "pattern": "生命倒计时",
+        "match": "生命倒计时"
+      },
+      {
+        "type": "forbidden_hit",
+        "file": "humanize_real.md",
+        "pattern": "倒计时",
+        "match": "倒计时"
+      },
+      {
+        "type": "forbidden_hit",
+        "file": "humanize_real.md",
+        "pattern": "父亲死亡",
+        "match": "父亲死亡"
+      }
+    ],
+    "warnings": []
+  }
+}
