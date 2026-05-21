@@ -1,0 +1,408 @@
+{
+  "code_root": "/opt/webnovel-hermes-wps",
+  "data_root": "/data/webnovel-lab",
+  "required_dirs": [
+    {
+      "path": "/opt/webnovel-hermes-wps/skills",
+      "kind": "dir",
+      "exists": true,
+      "size_bytes": 4096,
+      "context": "14 skills"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/schemas",
+      "kind": "dir",
+      "exists": true,
+      "size_bytes": 4096,
+      "context": "6 schemas"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/scripts",
+      "kind": "dir",
+      "exists": true,
+      "size_bytes": 4096,
+      "context": "6 scripts"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/prompts",
+      "kind": "dir",
+      "exists": true,
+      "size_bytes": 4096,
+      "context": "9 prompts"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/deai_rules",
+      "kind": "dir",
+      "exists": true,
+      "size_bytes": 4096,
+      "context": "5 rules"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/wps",
+      "kind": "dir",
+      "exists": true,
+      "size_bytes": 4096,
+      "context": "WPS templates"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/docs",
+      "kind": "dir",
+      "exists": true,
+      "size_bytes": 4096,
+      "context": "docs"
+    }
+  ],
+  "required_files": [
+    {
+      "path": "/opt/webnovel-hermes-wps/README.md",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 4375,
+      "context": "README"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/.env.example",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 291,
+      "context": "env example"
+    }
+  ],
+  "schemas": [
+    {
+      "file": "master_setting.schema.yaml",
+      "exists": true,
+      "parsable": true,
+      "top_key": "project",
+      "has_type": true,
+      "has_required": true,
+      "has_fields": true,
+      "size": 1757
+    },
+    {
+      "file": "runtime_canon.schema.yaml",
+      "exists": true,
+      "parsable": true,
+      "top_key": "canon",
+      "has_type": true,
+      "has_required": true,
+      "has_fields": true,
+      "size": 1475
+    },
+    {
+      "file": "chapter_outline.schema.yaml",
+      "exists": true,
+      "parsable": true,
+      "top_key": "chapter",
+      "has_type": true,
+      "has_required": true,
+      "has_fields": true,
+      "size": 1120
+    },
+    {
+      "file": "chapter_beat.schema.yaml",
+      "exists": true,
+      "parsable": true,
+      "top_key": "beat",
+      "has_type": true,
+      "has_required": true,
+      "has_fields": true,
+      "size": 1384
+    },
+    {
+      "file": "review_report.schema.yaml",
+      "exists": true,
+      "parsable": true,
+      "top_key": "review",
+      "has_type": true,
+      "has_required": true,
+      "has_fields": true,
+      "size": 2069
+    },
+    {
+      "file": "chapter_commit.schema.yaml",
+      "exists": true,
+      "parsable": true,
+      "top_key": "commit",
+      "has_type": true,
+      "has_required": true,
+      "has_fields": true,
+      "size": 1283
+    }
+  ],
+  "scripts": [
+    {
+      "path": "/opt/webnovel-hermes-wps/scripts/env_check.py",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 3665,
+      "context": "Script: env_check.py"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/scripts/validate_project.py",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 10487,
+      "context": "Script: validate_project.py"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/scripts/call_deepseek.py",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 5805,
+      "context": "Script: call_deepseek.py"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/scripts/render_docx.py",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 5285,
+      "context": "Script: render_docx.py"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/scripts/sync_wps.py",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 10254,
+      "context": "Script: sync_wps.py"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/scripts/run_demo.py",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 26314,
+      "context": "Script: run_demo.py"
+    }
+  ],
+  "prompts": [
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/prompts/story_bible.md",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 1196,
+      "context": "Prompt: story_bible.md"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/prompts/chapter_outline.md",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 1047,
+      "context": "Prompt: chapter_outline.md"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/prompts/preflight_context.md",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 968,
+      "context": "Prompt: preflight_context.md"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/prompts/chapter_beat.md",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 1330,
+      "context": "Prompt: chapter_beat.md"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/prompts/chapter_writer.md",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 1175,
+      "context": "Prompt: chapter_writer.md"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/prompts/chapter_review.md",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 1570,
+      "context": "Prompt: chapter_review.md"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/prompts/humanize.md",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 1157,
+      "context": "Prompt: humanize.md"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/prompts/chapter_commit.md",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 1198,
+      "context": "Prompt: chapter_commit.md"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/prompts/projection.md",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 1069,
+      "context": "Prompt: projection.md"
+    }
+  ],
+  "deai_rules": [
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/deai_rules/general_ai_flavor.md",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 2793,
+      "context": "Rule: general_ai_flavor.md"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/deai_rules/chinese_webnovel_style.md",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 1344,
+      "context": "Rule: chinese_webnovel_style.md"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/deai_rules/dialogue_rules.md",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 1486,
+      "context": "Rule: dialogue_rules.md"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/deai_rules/action_scene_rules.md",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 1575,
+      "context": "Rule: action_scene_rules.md"
+    },
+    {
+      "path": "/opt/webnovel-hermes-wps/templates/deai_rules/examples.md",
+      "kind": "file",
+      "exists": true,
+      "size_bytes": 1862,
+      "context": "Rule: examples.md"
+    }
+  ],
+  "skills": [
+    {
+      "skill": "apply_discussion_revision",
+      "has_skilmd": true,
+      "size_bytes": 519,
+      "missing_sections": [],
+      "complete": true
+    },
+    {
+      "skill": "create_chapter_commit",
+      "has_skilmd": true,
+      "size_bytes": 739,
+      "missing_sections": [],
+      "complete": true
+    },
+    {
+      "skill": "create_webnovel_project",
+      "has_skilmd": true,
+      "size_bytes": 1308,
+      "missing_sections": [],
+      "complete": true
+    },
+    {
+      "skill": "discuss_with_agent",
+      "has_skilmd": true,
+      "size_bytes": 558,
+      "missing_sections": [],
+      "complete": true
+    },
+    {
+      "skill": "generate_chapter_beat",
+      "has_skilmd": true,
+      "size_bytes": 705,
+      "missing_sections": [],
+      "complete": true
+    },
+    {
+      "skill": "generate_chapter_outline",
+      "has_skilmd": true,
+      "size_bytes": 784,
+      "missing_sections": [],
+      "complete": true
+    },
+    {
+      "skill": "generate_story_bible",
+      "has_skilmd": true,
+      "size_bytes": 885,
+      "missing_sections": [],
+      "complete": true
+    },
+    {
+      "skill": "humanize_chinese_webnovel",
+      "has_skilmd": true,
+      "size_bytes": 854,
+      "missing_sections": [],
+      "complete": true
+    },
+    {
+      "skill": "preflight_context_build",
+      "has_skilmd": true,
+      "size_bytes": 763,
+      "missing_sections": [],
+      "complete": true
+    },
+    {
+      "skill": "project_story_projection",
+      "has_skilmd": true,
+      "size_bytes": 736,
+      "missing_sections": [],
+      "complete": true
+    },
+    {
+      "skill": "render_project_docx",
+      "has_skilmd": true,
+      "size_bytes": 862,
+      "missing_sections": [],
+      "complete": true
+    },
+    {
+      "skill": "review_chapter",
+      "has_skilmd": true,
+      "size_bytes": 1046,
+      "missing_sections": [],
+      "complete": true
+    },
+    {
+      "skill": "sync_project_to_wps",
+      "has_skilmd": true,
+      "size_bytes": 909,
+      "missing_sections": [],
+      "complete": true
+    },
+    {
+      "skill": "write_chapter_draft",
+      "has_skilmd": true,
+      "size_bytes": 807,
+      "missing_sections": [],
+      "complete": true
+    }
+  ],
+  "demo_output": {
+    "exists": true,
+    "demo_result_md": true,
+    "demo_result_json": true,
+    "validation_report_json": true,
+    "validation_passed": true
+  },
+  "total_errors": 0,
+  "errors": [],
+  "warnings": [],
+  "passed": true,
+  "file_counts": {
+    "schema_files": 6,
+    "script_files": 6,
+    "prompt_files": 9,
+    "rule_files": 5,
+    "skill_files": 14
+  },
+  "checked_categories": [
+    "directories",
+    "readme",
+    "env_example",
+    "schemas",
+    "scripts",
+    "prompts",
+    "deai_rules",
+    "skills",
+    "demo_output"
+  ]
+}
