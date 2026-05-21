@@ -1,0 +1,10 @@
+{
+  "mode": "mock",
+  "chapters": [
+    1,
+    2,
+    3
+  ],
+  "overall_passed": true,
+  "chapter_checks": []
+}

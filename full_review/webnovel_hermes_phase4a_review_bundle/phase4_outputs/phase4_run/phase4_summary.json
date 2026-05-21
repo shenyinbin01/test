@@ -1,0 +1,179 @@
+{
+  "project": "price_tag_life",
+  "mode": "mock",
+  "chapters": [
+    1,
+    2,
+    3
+  ],
+  "execution_time": "2026-05-21T17:42:34.710032",
+  "chapter_results": [
+    {
+      "chapter": 1,
+      "steps": [
+        {
+          "step": "outline",
+          "status": "ok (mock)"
+        },
+        {
+          "step": "preflight",
+          "status": "ok (mock)"
+        },
+        {
+          "step": "beat",
+          "status": "ok (mock)"
+        },
+        {
+          "step": "draft",
+          "status": "ok (mock)",
+          "chars": 615
+        },
+        {
+          "step": "review",
+          "status": "ok (mock)"
+        },
+        {
+          "step": "humanize",
+          "status": "ok (mock)",
+          "chars": 926
+        },
+        {
+          "step": "canon_check",
+          "status": "ok",
+          "passed": true
+        },
+        {
+          "step": "commit",
+          "status": "ok (mock)"
+        },
+        {
+          "step": "final",
+          "status": "ok",
+          "path": "/data/webnovel-lab/demo_output/phase4_run/chapter_001_final.md"
+        }
+      ],
+      "success": true,
+      "humanized_chars": 926,
+      "events": [
+        "林砚在送外卖时第一次看见人生价格标签",
+        "发现老人头顶价格异常高",
+        "发现光鲜客户价格快速下跌",
+        "林砚误以为标签代表财富",
+        "医院缴费窗口看见父亲头顶价格归零"
+      ]
+    },
+    {
+      "chapter": 2,
+      "steps": [
+        {
+          "step": "outline",
+          "status": "ok (mock)"
+        },
+        {
+          "step": "preflight",
+          "status": "ok (mock)"
+        },
+        {
+          "step": "beat",
+          "status": "ok (mock)"
+        },
+        {
+          "step": "draft",
+          "status": "ok (mock)",
+          "chars": 699
+        },
+        {
+          "step": "review",
+          "status": "ok (mock)"
+        },
+        {
+          "step": "humanize",
+          "status": "ok (mock)",
+          "chars": 1010
+        },
+        {
+          "step": "canon_check",
+          "status": "ok",
+          "passed": true
+        },
+        {
+          "step": "commit",
+          "status": "ok (mock)"
+        },
+        {
+          "step": "final",
+          "status": "ok",
+          "path": "/data/webnovel-lab/demo_output/phase4_run/chapter_002_final.md"
+        }
+      ],
+      "success": true,
+      "humanized_chars": 1010,
+      "events": [
+        "林砚回访光鲜客户的地址调查线索",
+        "发现客户标签暴跌与治安事件有关",
+        "林砚对标签的理解从财富推进一步",
+        "使用能力后出现头痛后遗症",
+        "父亲病情仍然持续"
+      ]
+    },
+    {
+      "chapter": 3,
+      "steps": [
+        {
+          "step": "outline",
+          "status": "ok (mock)"
+        },
+        {
+          "step": "preflight",
+          "status": "ok (mock)"
+        },
+        {
+          "step": "beat",
+          "status": "ok (mock)"
+        },
+        {
+          "step": "draft",
+          "status": "ok (mock)",
+          "chars": 527
+        },
+        {
+          "step": "review",
+          "status": "ok (mock)"
+        },
+        {
+          "step": "humanize",
+          "status": "ok (mock)",
+          "chars": 838
+        },
+        {
+          "step": "canon_check",
+          "status": "ok",
+          "passed": true
+        },
+        {
+          "step": "commit",
+          "status": "ok (mock)"
+        },
+        {
+          "step": "final",
+          "status": "ok",
+          "path": "/data/webnovel-lab/demo_output/phase4_run/chapter_003_final.md"
+        }
+      ],
+      "success": true,
+      "humanized_chars": 838,
+      "events": [
+        "林砚在医院观察收费员和病人家属的标签变化",
+        "发现标签随选择变化",
+        "第一次主动试图理解和使用能力",
+        "观察自己的标签发现异常变化",
+        "父亲病情压力仍然存在"
+      ]
+    }
+  ],
+  "pipeline_failed": false,
+  "total_chapters": 3,
+  "success_count": 3,
+  "failed_count": 0,
+  "runtime_canon_events": 15
+}

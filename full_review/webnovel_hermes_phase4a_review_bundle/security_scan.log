@@ -1,0 +1,16 @@
+✅ No 'sk-' found
+✅ No 'authorization' found
+✅ No 'api_key' found
+✅ No 'token' found
+✅ No 'cookie' found
+✅ No 'password' found
+✅ No 'kdocs' found
+✅ No 'file_id' found
+✅ No 'doc_link' found
+✅ No 'folder_id' found
+✅ No 'link_id' found
+✅ No .env files
+✅ No __pycache__ files
+✅ No *.pyc files
+✅ No .git files
+✅ No real secret strings detected
