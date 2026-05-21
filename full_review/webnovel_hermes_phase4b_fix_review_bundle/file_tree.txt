@@ -6,6 +6,7 @@ command_logs/sync_wps_dry_run.log
 command_logs/validate_phase4_mock.log
 command_logs/validate_phase4_phase4b_real.log
 command_logs/validate_project.log
+command_logs/verify_deepseek_calls_jsonl.log
 file_tree.txt
 manifest.txt
 phase4b_outputs/phase4b_logs/deepseek_calls_phase4b.jsonl

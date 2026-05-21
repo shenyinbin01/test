@@ -1,0 +1,67 @@
+=== deepseek_calls_phase4b.jsonl 验证 ===
+文件路径: /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4b_fix_review_bundle/phase4b_outputs/phase4b_logs/deepseek_calls_phase4b.jsonl
+文件大小: 4433 bytes
+行数: 6
+
+第1行:
+  task_name:   preflight_context
+  success:     True
+  attempt:     1
+  retry_of:    None
+  run_id:      phase4b_20260521_223642
+  status_code: 200
+  model:       deepseek-chat
+
+第2行:
+  task_name:   chapter_beat
+  success:     True
+  attempt:     1
+  retry_of:    None
+  run_id:      phase4b_20260521_223642
+  status_code: 200
+  model:       deepseek-chat
+
+第3行:
+  task_name:   chapter_writer
+  success:     True
+  attempt:     1
+  retry_of:    None
+  run_id:      phase4b_20260521_223642
+  status_code: 200
+  model:       deepseek-chat
+
+第4行:
+  task_name:   chapter_review
+  success:     True
+  attempt:     1
+  retry_of:    None
+  run_id:      phase4b_20260521_223642
+  status_code: 200
+  model:       deepseek-chat
+
+第5行:
+  task_name:   humanize
+  success:     True
+  attempt:     1
+  retry_of:    None
+  run_id:      phase4b_20260521_223642
+  status_code: 200
+  model:       deepseek-chat
+
+第6行:
+  task_name:   chapter_commit
+  success:     True
+  attempt:     1
+  retry_of:    None
+  run_id:      phase4b_20260521_223642
+  status_code: 200
+  model:       deepseek-chat
+
+=== 结论 ===
+✅ 标准 JSONL: 是（每行一个独立 JSON 对象）
+✅ 总行数: 6
+✅ 所有行 json.loads 通过: 是
+✅ 所有记录 success=true: True
+✅ 所有记录 attempt=1: True
+✅ 所有记录 retry_of=null: True
+✅ 无 API Key/Authorization/token 泄露
