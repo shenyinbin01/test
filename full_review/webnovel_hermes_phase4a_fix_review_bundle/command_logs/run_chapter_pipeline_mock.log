@@ -1,0 +1,23 @@
+$ python scripts/run_chapter_pipeline.py --project price_tag_life --chapters 1,2,3 --mode mock
+
+  [phase4] project=price_tag_life chapters=[1, 2, 3] mode=mock
+
+  ═══ Chapter 001 ═══
+
+  ✅ Chapter 1 完成 (963 字)
+  ✅ runtime_canon 已更新 (15 个 events)
+
+  ═══ Chapter 002 ═══
+
+  ✅ Chapter 2 完成 (926 字)
+  ✅ runtime_canon 已更新 (15 个 events)
+
+  ═══ Chapter 003 ═══
+
+  ✅ Chapter 3 完成 (950 字)
+  ✅ runtime_canon 已更新 (15 个 events)
+
+
+=======================================================
+  阶段四 mock 完成 ✅ — 所有章节成功
+=======================================================

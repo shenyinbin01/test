@@ -1,0 +1,19 @@
+chapter_id: 2
+title: 误判代价
+summary: 承接第一章医院，林砚发现价格不是财富，尝试通过标签筹钱，选择代价浮现，回收光鲜客户线索，标签暴跌对应现实危险
+confirmed_events:
+- 林砚回访光鲜客户的地址调查线索
+- 发现客户标签暴跌与治安事件有关
+- 林砚对标签的理解从财富推进一步
+- 使用能力后出现头痛后遗症
+- 父亲病情仍然持续
+character_updates:
+- character: 林砚
+  change: 能力理解推进一步
+ability_rule_updates: []
+open_threads_updates:
+- thread_id: father_price_near_zero
+  status: open
+continuity_notes: 第2章完成，连续性好
+canon_risks: []
+canon_ok: true

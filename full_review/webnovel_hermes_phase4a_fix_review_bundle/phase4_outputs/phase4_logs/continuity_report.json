@@ -1,0 +1,29 @@
+{
+  "project": "price_tag_life",
+  "mode": "mock",
+  "chapters_checked": [
+    1,
+    2,
+    3
+  ],
+  "chapter_continuity": [
+    {
+      "chapter": 1,
+      "events_count": 5,
+      "success": true
+    },
+    {
+      "chapter": 2,
+      "events_count": 5,
+      "success": true
+    },
+    {
+      "chapter": 3,
+      "events_count": 5,
+      "success": true
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

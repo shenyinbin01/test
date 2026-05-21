@@ -1,0 +1,19 @@
+chapter_id: 3
+title: 第一次主动选择
+summary: 林砚第一次主动干预选择，标签变化，付出代价，父亲病情压力持续，自己标签异常
+confirmed_events:
+- 林砚在医院观察收费员和病人家属的标签变化
+- 发现标签随选择变化
+- 第一次主动试图理解和使用能力
+- 观察自己的标签发现异常变化
+- 父亲病情压力仍然存在
+character_updates:
+- character: 林砚
+  change: 能力理解推进一步
+ability_rule_updates: []
+open_threads_updates:
+- thread_id: father_price_near_zero
+  status: open
+continuity_notes: 第3章完成，连续性好
+canon_risks: []
+canon_ok: true

@@ -1,0 +1,19 @@
+chapter_id: 1
+title: 价格初现
+summary: 林砚第一次看见价格标签，误以为代表财富，老人高价与客户快速下跌形成反差，第一次判断失误，结尾到医院缴费窗口看见父亲价格归零
+confirmed_events:
+- 林砚在送外卖时第一次看见人生价格标签
+- 发现老人头顶价格异常高
+- 发现光鲜客户价格快速下跌
+- 林砚误以为标签代表财富
+- 医院缴费窗口看见父亲头顶价格归零
+character_updates:
+- character: 林砚
+  change: 能力初步觉醒
+ability_rule_updates: []
+open_threads_updates:
+- thread_id: father_price_near_zero
+  status: open
+continuity_notes: 第一章开局建立
+canon_risks: []
+canon_ok: true

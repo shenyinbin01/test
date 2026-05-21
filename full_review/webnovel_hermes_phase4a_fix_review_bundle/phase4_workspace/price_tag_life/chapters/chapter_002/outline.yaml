@@ -1,0 +1,32 @@
+chapter: 2
+title: 误判代价
+goal: 承接第一章医院，林砚发现价格不是财富，尝试通过标签筹钱，选择代价浮现，回收光鲜客户线索，标签暴跌对应现实危险
+must_include:
+- 父亲仍病重存活
+- 林砚急需筹钱
+- 理解推进一步
+- 选择代价浮现
+- 头痛或短暂失明
+- 回收光鲜客户线索
+- 新钩子
+scenes:
+- order: 1
+  title: 场景1
+  location: 城区
+  purpose: 父亲仍病重存活
+- order: 2
+  title: 场景2
+  location: 城区
+  purpose: 林砚急需筹钱
+- order: 3
+  title: 场景3
+  location: 城区
+  purpose: 理解推进一步
+- order: 4
+  title: 场景4
+  location: 城区
+  purpose: 选择代价浮现
+- order: 5
+  title: 场景5
+  location: 城区
+  purpose: 头痛或短暂失明

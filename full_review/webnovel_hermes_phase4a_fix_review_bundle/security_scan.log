@@ -1,0 +1,16 @@
+✅ No 'sk- (API Key)'
+✅ No 'authorization'
+✅ No 'api_key'
+✅ No 'token'
+✅ No 'cookie'
+✅ No 'password'
+❌ FOUND: /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4a_fix_review_bundle/command_logs/env_check.log:  ✅ kdocs-cli 已安装; /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4a_fix_review_bundle/command_logs/sync_wps_dry_run.log:✅ kdocs-cli: /home/agentuser/.local/bin/kdocs-cli
+✅ No 'file_id'
+✅ No 'doc_link'
+✅ No 'folder_id'
+✅ No 'link_id'
+✅ No .env
+✅ No __pycache__
+✅ No *.pyc
+✅ No .git
+✅ No real secrets
