@@ -1,0 +1,42 @@
+# master_setting.schema.yaml
+# 小说项目顶层设定：书名、题材、核心脑洞、角色、世界观基础
+# 本项目使用 PyYAML 解析，所有字段必须符合 YAML 规范
+
+project:
+  type: object
+  required: [name, genre, core_idea, target_reader, style_preference]
+  fields:
+    name: { type: string, desc: "项目内部名称，用于目录命名和脚本引用" }
+    genre: { type: string, desc: "小说类型，如都市脑洞、玄幻、科幻" }
+    core_idea: { type: string, desc: "一句话核心脑洞" }
+    target_reader: { type: string, desc: "目标读者，如男频爽文读者" }
+    style_preference: { type: string, desc: "风格偏好，如快节奏、强钩子、口语化" }
+
+characters:
+  type: array
+  item:
+    type: object
+    required: [name, age, identity, personality, motivation, arc]
+    fields:
+      name: { type: string, desc: "角色姓名" }
+      age: { type: integer, desc: "年龄" }
+      identity: { type: string, desc: "身份/职业" }
+      personality: { type: string, desc: "性格标签" }
+      motivation: { type: string, desc: "核心动机" }
+      arc: { type: string, desc: "角色弧光方向" }
+      tags: { type: array, items: string, desc: "价格标签初始值/特征" }
+
+world:
+  type: object
+  fields:
+    background: { type: string, desc: "世界观基础设定" }
+    rules: { type: array, items: string, desc: "能力规则/限制" }
+    factions: { type: array, items: string, desc: "势力/阵营" }
+    power_system: { type: string, desc: "能力体系说明" }
+
+outline:
+  type: object
+  fields:
+    total_chapters: { type: integer, desc: "预计总章数" }
+    multi_book: { type: boolean, desc: "是否多卷" }
+    current_arc: { type: string, desc: "当前阶段" }
