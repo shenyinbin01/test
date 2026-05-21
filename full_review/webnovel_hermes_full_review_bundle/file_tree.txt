@@ -6,9 +6,9 @@
 /tmp/webnovel_hermes_full_review_bundle/command_logs/validate_project.log
 /tmp/webnovel_hermes_full_review_bundle/demo_output/demo_result.json
 /tmp/webnovel_hermes_full_review_bundle/demo_output/demo_result.md
-/tmp/webnovel_hermes_full_review_bundle/demo_output/doc_meta.yaml.missing.txt
+/tmp/webnovel_hermes_full_review_bundle/demo_output/doc_meta.yaml
 /tmp/webnovel_hermes_full_review_bundle/demo_output/price_tag_life_main.md
-/tmp/webnovel_hermes_full_review_bundle/demo_output/sync_log.jsonl.missing.txt
+/tmp/webnovel_hermes_full_review_bundle/demo_output/sync_log.jsonl
 /tmp/webnovel_hermes_full_review_bundle/demo_output/validation_report.json
 /tmp/webnovel_hermes_full_review_bundle/demo_workspace/price_tag_life/exports/price_tag_life_main.docx
 /tmp/webnovel_hermes_full_review_bundle/demo_workspace/price_tag_life/exports/price_tag_life_main.md
@@ -27,6 +27,7 @@
 /tmp/webnovel_hermes_full_review_bundle/demo_workspace/price_tag_life/wps/doc_meta.yaml
 /tmp/webnovel_hermes_full_review_bundle/demo_workspace/price_tag_life/wps/sync_log.jsonl
 /tmp/webnovel_hermes_full_review_bundle/file_tree.txt
+/tmp/webnovel_hermes_full_review_bundle/manifest.txt
 /tmp/webnovel_hermes_full_review_bundle/project_files/docs/phase1_result.md
 /tmp/webnovel_hermes_full_review_bundle/project_files/docs/phase2_fix_result.md
 /tmp/webnovel_hermes_full_review_bundle/project_files/docs/phase2_result.md
@@ -73,3 +74,5 @@
 /tmp/webnovel_hermes_full_review_bundle/project_files/templates/prompts/projection.md
 /tmp/webnovel_hermes_full_review_bundle/project_files/templates/prompts/story_bible.md
 /tmp/webnovel_hermes_full_review_bundle/project_files/templates/wps/projection_template.md
+/tmp/webnovel_hermes_full_review_bundle/REVIEW_README.md
+/tmp/webnovel_hermes_full_review_bundle/security_scan.log

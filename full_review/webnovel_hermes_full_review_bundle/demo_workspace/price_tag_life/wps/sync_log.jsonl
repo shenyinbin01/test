@@ -1,7 +1,5 @@
-{"timestamp": "2026-05-20T16:25:50.255200", "file": "/data/webnovel-lab/workspace/novels/price_tag_life/exports/price_tag_life_main.docx", "status": "dry_run", "reason": "WPS env not configured"}
-{"timestamp": "2026-05-20T16:33:21.221720", "file": "人生价格标签_main.docx", "status": "success", "file_id": "zuseHxNTtxM7VBmXc1xW1x9FmqW6Cf3jV", "doc_link": "https://www.kdocs.cn/l/cdfXwM0dCfwc", "folder": "小说"}
-{"timestamp": "2026-05-20T16:37:44.671282", "file": "/data/webnovel-lab/workspace/novels/price_tag_life/exports/price_tag_life_main.docx", "status": "success"}
-{"timestamp": "2026-05-20T21:50:41.498635", "file": "/data/webnovel-lab/workspace/novels/price_tag_life/exports/price_tag_life_main.docx", "status": "dry_run"}
-{"timestamp": "2026-05-20T21:53:58.027435", "file": "/data/webnovel-lab/workspace/novels/price_tag_life/exports/price_tag_life_main.docx", "status": "dry_run"}
-{"timestamp": "2026-05-20T21:58:54.718900", "file": "/data/webnovel-lab/workspace/novels/price_tag_life/exports/price_tag_life_main.docx", "status": "dry_run"}
-{"timestamp": "2026-05-21T12:22:46.824523", "file": "/data/webnovel-lab/workspace/novels/price_tag_life/exports/price_tag_life_main.docx", "status": "dry_run"}
+{"timestamp": "2026-05-20T16:25:50.255200", "file": "price_tag_life_main.docx", "status": "dry_run", "message": "WPS env not configured"}
+{"timestamp": "2026-05-20T21:50:41.498635", "file": "price_tag_life_main.docx", "status": "dry_run"}
+{"timestamp": "2026-05-20T21:53:58.027435", "file": "price_tag_life_main.docx", "status": "dry_run"}
+{"timestamp": "2026-05-20T21:58:54.718900", "file": "price_tag_life_main.docx", "status": "dry_run"}
+{"timestamp": "2026-05-21T12:22:46.824523", "file": "price_tag_life_main.docx", "status": "dry_run"}

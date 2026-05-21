@@ -1,6 +1,4 @@
 {"timestamp": "2026-05-20T16:25:50.255200", "file": "price_tag_life_main.docx", "status": "dry_run", "message": "WPS env not configured"}
-{"timestamp": "2026-05-20T16:33:21.221720", "file": "price_tag_life_main.docx", "status": "success", "message": "历史记录：file_id/doc_link 已脱敏"}
-{"timestamp": "2026-05-20T16:37:44.671282", "file": "price_tag_life_main.docx", "status": "success", "message": "历史记录：未记录 file_id/doc_link"}
 {"timestamp": "2026-05-20T21:50:41.498635", "file": "price_tag_life_main.docx", "status": "dry_run"}
 {"timestamp": "2026-05-20T21:53:58.027435", "file": "price_tag_life_main.docx", "status": "dry_run"}
 {"timestamp": "2026-05-20T21:58:54.718900", "file": "price_tag_life_main.docx", "status": "dry_run"}

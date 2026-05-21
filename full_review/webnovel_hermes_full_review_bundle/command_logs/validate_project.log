@@ -142,7 +142,7 @@
       "path": "/opt/webnovel-hermes-wps/scripts/validate_project.py",
       "kind": "file",
       "exists": true,
-      "size_bytes": 10487,
+      "size_bytes": 10913,
       "context": "Script: validate_project.py"
     },
     {
@@ -381,7 +381,9 @@
     "demo_result_md": true,
     "demo_result_json": true,
     "validation_report_json": true,
-    "validation_passed": true
+    "validation_passed": true,
+    "demo_result_parsable": true,
+    "validation_report_parsable": true
   },
   "total_errors": 0,
   "errors": [],

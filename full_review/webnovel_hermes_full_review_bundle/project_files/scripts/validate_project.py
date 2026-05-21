@@ -179,6 +179,8 @@ def validate_demo_output():
     }
     
     # 检查 JSON 可解析
+    result["demo_result_parsable"] = True
+    result["validation_report_parsable"] = True
     for name, f in [("demo_result.json", demo_json), ("validation_report.json", val_json)]:
         if f.exists():
             try:
@@ -186,7 +188,9 @@ def validate_demo_output():
                 if name == "validation_report.json":
                     result["validation_passed"] = data.get("passed", False)
             except json.JSONDecodeError:
-                result[f"{name.replace('.json', '')}_parsable"] = False
+                key = name.replace(".json", "").replace("-", "_")
+                result[f"{key}_parsable"] = False
+                result["validation_passed"] = False
     
     return result
 
@@ -227,11 +231,11 @@ def run():
             errors.append(f"Schema 解析失败: {s['file']}: {s.get('error', '')}")
         else:
             if not s.get("has_type"):
-                warnings.append(f"Schema {s['file']} 缺少 type 字段")
+                errors.append(f"Schema {s['file']} 缺少 type 字段")
             if not s.get("has_required"):
-                warnings.append(f"Schema {s['file']} 缺少 required 字段")
+                errors.append(f"Schema {s['file']} 缺少 required 字段")
             if not s.get("has_fields"):
-                warnings.append(f"Schema {s['file']} 缺少 fields 字段")
+                errors.append(f"Schema {s['file']} 缺少 fields 字段")
     
     # 4. Scripts
     scripts = validate_scripts()
@@ -270,8 +274,12 @@ def run():
             errors.append("demo_result.json 缺失")
         if not demo.get("validation_report_json"):
             errors.append("validation_report.json 缺失")
+        if demo.get("demo_result_parsable") is False:
+            errors.append("demo_result.json 不是合法 JSON")
+        if demo.get("validation_report_parsable") is False:
+            errors.append("validation_report.json 不是合法 JSON")
         if not demo.get("validation_passed"):
-            warnings.append("validation_report.json 中 passed 不为 true")
+            errors.append("validation_report.json 中 passed 不为 true")
     
     report = {
         "code_root": str(CODE_ROOT),

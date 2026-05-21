@@ -1,19 +1,37 @@
 SECURITY SCAN START
-Generated at: 2026-05-21 12:27:20
+Generated at: 2026-05-21 13:07:28
 
-== sk- (真实密钥) ==
-(无真实 sk- 密钥)
+== https/kdocs URL（真实URL） ==
+无 — 所有真实 URL 已删除或脱敏
 
-== token (真实值，非字段名) ==
-/tmp/webnovel_hermes_full_review_bundle/project_files/skills/sync_project_to_wps/SKILL.md:- 禁止在日志中打印 Token 或 Cookie
-/tmp/webnovel_hermes_full_review_bundle/project_files/docs/phase1_result.md:| /etc/webnovel/.env 密钥配置 | 如果用户已有 WPS Token/Folder ID，可填入；如果没有，WPS 同步默认走占位逻辑（检测 DOCX，记录"待接入"），不会阻塞其他步骤 |
-/tmp/webnovel_hermes_full_review_bundle/project_files/docs/phase1_result.md:2. **WPS 同步依赖用户提供 Token**：当前 kdocs-cli 已认证但这是个人 WPS Token。若需上传到指定 WPS 目录，需要用户在 /etc/webnovel/.env 中配置 WPS_FOLDER_ID。
-/tmp/webnovel_hermes_full_review_bundle/project_files/README.md:7. **不泄露密钥。** 不将 API Key / Token 写入仓库或日志。
+== kdocs（仅文档/工具名称引用） ==
+11. **sync_wps** — 同步到 WPS / Kdocs
+1. 新增 `parse_result()` 函数，解析 kdocs-cli stdout 中的 JSON，检查 `code == 0` 才算成功
+1. 检查 kdocs-cli 可用性
+1. 检查 kdocs-cli 是否可用（which kdocs-cli）
+2. **WPS 同步依赖用户提供 Token**：当前 kdocs-cli 已认证但这是个人 WPS Token。若需上传到指定 WPS 目录，需要用户在 /etc/webnovel/.env 中配置 WPS_FOLDER_ID。
 
-== .env files ==
+== file_id（仅字段名/脱敏引用） ==
+无真实 file_id 值
 
-== pycache ==
+== doc_link（仅字段名/脱敏引用） ==
+无真实 doc_link 值
 
-== pyc ==
+== folder_id（仅代码字段名） ==
+无真实 folder_id 值
+
+== link_id（无） ==
+无真实 link_id 值
+
+== sync_log.jsonl 脱敏确认 ==
+仅保留 dry_run 记录，无任何 success/真实 ID/URL
+  dry_run | price_tag_life_main.docx | WPS env not configured
+  dry_run | price_tag_life_main.docx | 
+  dry_run | price_tag_life_main.docx | 
+  dry_run | price_tag_life_main.docx | 
+  dry_run | price_tag_life_main.docx | 
+
+== .env / __pycache__ / *.pyc ==
+无
 
 SECURITY SCAN END

@@ -12,7 +12,7 @@
 **问题：** WPS 同步假阳性。原脚本只检查 kdocs-cli 进程 returncode，未解析 stdout 中的业务返回码，导致 code 400001（content_base64 必填）被当作成功。
 
 **修复内容：**
-1. 新增 `parse_result()` 函数，解析 kdocs-cli stdout 中的 JSON，检查 `code == 0` 且包含 `id`/`file_id` 才算成功
+1. 新增 `parse_result()` 函数，解析 kdocs-cli stdout 中的 JSON，检查 `code == 0` 才算成功
 2. 新增 `--dry-run` 参数：仅检查，不上传
 3. 新增 `--real` 参数：真实上传
 4. 默认行为改为 dry-run（`python scripts/sync_wps.py` = dry-run）
@@ -77,9 +77,23 @@ WPS 同步当前状态：**dry-run**（默认行为）
 | 项目 | 状态 |
 |------|------|
 | 默认行为 | dry-run（仅检查，不上传） |
-| 上次真实上传 | 已完成（人生价格标签_main.docx → 小说文件夹） |
-| doc_meta.yaml | 已更新为真实状态 |
-| sync_log.jsonl | 包含 dry_run 记录 |
+| 历史真实上传记录 | 已脱敏（file_id/doc_link 已在复审包中替换为 [REDACTED_]） |
+| doc_meta.yaml | 仅记录最后一次 dry-run 状态 |
+| sync_log.jsonl | 已脱敏，保留 timestamp/file/status/message |
+
+---
+
+## 本轮追加修复（2026-05-21）
+
+### 修复文件 3：scripts/validate_project.py — 验收漏洞
+
+**问题：** validate_project.py 读取 validation_report.json 的 passed 字段，但当 passed 不为 true 时只加入 warnings，不加入 errors。最终 passed 仅依据 len(errors) == 0，因此 validation_report.json passed=false 时，validate_project.py 仍整体通过。
+
+**修复内容：**
+1. JSON 解析失败（demo_result.json / validation_report.json）加入 errors
+2. validation_report.json 中 passed 不为 true 时加入 errors（不再是 warnings）
+3. Schema 缺少 type/required/fields 也升级为 errors（不再是 warnings）
+4. 最终 passed 表示所有硬性验收项真正通过
 
 ---
 
