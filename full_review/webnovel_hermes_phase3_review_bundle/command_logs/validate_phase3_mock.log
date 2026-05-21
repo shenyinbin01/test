@@ -1,0 +1,66 @@
+{
+  "mode": "mock",
+  "output_root": "/data/webnovel-lab/demo_output/phase3_mock_run",
+  "checked_files": [
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_mock_run/story_bible_mock.md",
+      "exists": true,
+      "size_bytes": 742
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_mock_run/story_bible_mock.json",
+      "exists": true,
+      "size_bytes": 330
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_mock_run/chapter_beat_mock.md",
+      "exists": true,
+      "size_bytes": 743
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_mock_run/chapter_beat_mock.json",
+      "exists": true,
+      "size_bytes": 333
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_mock_run/humanize_mock.md",
+      "exists": true,
+      "size_bytes": 739
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_mock_run/humanize_mock.json",
+      "exists": true,
+      "size_bytes": 321
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_mock_run/phase3_mock_summary.md",
+      "exists": true,
+      "size_bytes": 422
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_mock_run/phase3_mock_summary.json",
+      "exists": true,
+      "size_bytes": 1299
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_mock_run/story_bible_mock.json",
+      "json_parsable": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_mock_run/chapter_beat_mock.json",
+      "json_parsable": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_mock_run/humanize_mock.json",
+      "json_parsable": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_mock_run/phase3_mock_summary.json",
+      "json_parsable": true
+    }
+  ],
+  "missing_files": [],
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

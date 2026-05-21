@@ -1,0 +1,109 @@
+{
+  "mode": "real",
+  "output_root": "/data/webnovel-lab/demo_output/phase3_real_run",
+  "log_path": "/data/webnovel-lab/demo_output/phase3_logs/deepseek_calls.jsonl",
+  "checked_files": [
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_real_run/story_bible_real.md",
+      "exists": true,
+      "size_bytes": 5065
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_real_run/story_bible_real.json",
+      "exists": true,
+      "size_bytes": 378
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_real_run/chapter_beat_real.md",
+      "exists": true,
+      "size_bytes": 4221
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_real_run/chapter_beat_real.json",
+      "exists": true,
+      "size_bytes": 382
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_real_run/humanize_real.md",
+      "exists": true,
+      "size_bytes": 3488
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_real_run/humanize_real.json",
+      "exists": true,
+      "size_bytes": 366
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_real_run/phase3_real_summary.md",
+      "exists": true,
+      "size_bytes": 422
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_real_run/phase3_real_summary.json",
+      "exists": true,
+      "size_bytes": 1441
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_real_run/story_bible_real.json",
+      "json_parsable": true,
+      "keys": [
+        "task_name",
+        "mode",
+        "success",
+        "returncode",
+        "stdout",
+        "stderr",
+        "output_file"
+      ]
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_real_run/chapter_beat_real.json",
+      "json_parsable": true,
+      "keys": [
+        "task_name",
+        "mode",
+        "success",
+        "returncode",
+        "stdout",
+        "stderr",
+        "output_file"
+      ]
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_real_run/humanize_real.json",
+      "json_parsable": true,
+      "keys": [
+        "task_name",
+        "mode",
+        "success",
+        "returncode",
+        "stdout",
+        "stderr",
+        "output_file"
+      ]
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_real_run/phase3_real_summary.json",
+      "json_parsable": true,
+      "keys": [
+        "mode",
+        "execution_time",
+        "phase3_version",
+        "nodes",
+        "total_nodes",
+        "success_count",
+        "failed_count",
+        "has_failure"
+      ]
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase3_logs/deepseek_calls.jsonl",
+      "exists": true,
+      "size_bytes": 1838
+    }
+  ],
+  "missing_files": [],
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

@@ -1,0 +1,9 @@
+{
+  "task_name": "chapter_beat",
+  "mode": "real",
+  "success": true,
+  "returncode": 0,
+  "stdout": "{\"success\": true, \"mode\": \"real\", \"task_name\": \"chapter_beat\", \"output\": \"/data/webnovel-lab/demo_output/phase3_real_run/chapter_beat_real.md\", \"attempt\": 1}",
+  "stderr": "",
+  "output_file": "/data/webnovel-lab/demo_output/phase3_real_run/chapter_beat_real.md"
+}

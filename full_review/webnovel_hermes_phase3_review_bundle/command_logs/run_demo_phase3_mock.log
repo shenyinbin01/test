@@ -1,0 +1,11 @@
+  [phase3] 节点: story_bible,chapter_beat,humanize
+  [phase3] 模式: mock
+
+  [phase3] mode=mock, steps=all
+  [Story Bible] ... ✅ {"success": true, "mode": "mock", "output": "/data/webnovel-lab/demo_output/phas
+  [Chapter Beat] ... ✅ {"success": true, "mode": "mock", "output": "/data/webnovel-lab/demo_output/phas
+  [Humanize] ... ✅ {"success": true, "mode": "mock", "output": "/data/webnovel-lab/demo_output/phas
+
+=======================================================
+  阶段三 mock 完成 ✅ — 所有节点成功
+=======================================================

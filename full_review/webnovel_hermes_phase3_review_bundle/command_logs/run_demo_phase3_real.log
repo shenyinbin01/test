@@ -1,0 +1,11 @@
+  [phase3] 节点: story_bible,chapter_beat,humanize
+  [phase3] 模式: real
+
+  [phase3] mode=real, steps=all
+  [Story Bible] ... ✅ {"success": true, "mode": "real", "task_name": "story_bible", "output": "/data/w
+  [Chapter Beat] ... ✅ {"success": true, "mode": "real", "task_name": "chapter_beat", "output": "/data/
+  [Humanize] ... ✅ {"success": true, "mode": "real", "task_name": "humanize", "output": "/data/webn
+
+=======================================================
+  阶段三 real 完成 ✅ — 所有节点成功
+=======================================================
