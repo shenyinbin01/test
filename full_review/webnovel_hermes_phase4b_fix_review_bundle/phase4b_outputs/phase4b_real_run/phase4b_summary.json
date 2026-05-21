@@ -1,0 +1,57 @@
+{
+  "project": "price_tag_life",
+  "mode": "real",
+  "phase": "4B",
+  "chapter": 1,
+  "run_id": "phase4b_20260521_223642",
+  "execution_time": "2026-05-21T22:38:22.874533",
+  "chapter_result": {
+    "chapter": 1,
+    "steps": [
+      {
+        "step": "preflight_context",
+        "status": "ok",
+        "attempts": 1
+      },
+      {
+        "step": "chapter_beat",
+        "status": "ok",
+        "attempts": 1
+      },
+      {
+        "step": "chapter_writer",
+        "status": "ok",
+        "attempts": 1
+      },
+      {
+        "step": "chapter_review",
+        "status": "ok",
+        "attempts": 1
+      },
+      {
+        "step": "humanize",
+        "status": "ok",
+        "attempts": 1
+      },
+      {
+        "step": "chapter_commit",
+        "status": "ok",
+        "attempts": 1
+      }
+    ],
+    "success": true
+  },
+  "success": true,
+  "failed_step": null,
+  "total_nodes": 6,
+  "success_count": 6,
+  "failed_count": 0,
+  "deepseek_call_stats": {
+    "run_id": "phase4b_20260521_223642",
+    "actual_call_count": 6,
+    "retry_count": 0,
+    "successful_call_count": 6,
+    "failed_call_count": 0,
+    "expected_nodes": 6
+  }
+}

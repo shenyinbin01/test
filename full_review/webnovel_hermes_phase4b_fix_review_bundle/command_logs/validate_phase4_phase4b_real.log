@@ -1,0 +1,4 @@
+[validate_phase4b] project=price_tag_life phase=4B
+    errors: 0
+    passed: True
+Exit code: 0

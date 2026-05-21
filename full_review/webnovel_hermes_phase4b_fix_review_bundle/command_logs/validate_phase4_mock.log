@@ -1,0 +1,225 @@
+$ python scripts/validate_phase4.py --project price_tag_life --mode mock
+
+  [validate_phase4] project=price_tag_life mode=mock
+    errors: 0
+    passed: True
+{
+  "project": "price_tag_life",
+  "mode": "mock",
+  "checked_chapters": [
+    1,
+    2,
+    3
+  ],
+  "file_checks": [
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_001/outline.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_001/preflight_context.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_001/beat.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_001/draft.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_001/review.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_001/humanized.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_001/canon_check.json",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_001/commit.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_002/outline.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_002/preflight_context.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_002/beat.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_002/draft.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_002/review.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_002/humanized.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_002/canon_check.json",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_002/commit.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_003/outline.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_003/preflight_context.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_003/beat.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_003/draft.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_003/review.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_003/humanized.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_003/canon_check.json",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/workspace/novels/price_tag_life/chapters/chapter_003/commit.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4_run/phase4_summary.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4_run/phase4_summary.json",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4_run/chapter_001_final.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4_run/chapter_002_final.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4_run/chapter_003_final.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4_run/runtime_canon_final.yaml",
+      "exists": true
+    }
+  ],
+  "canon_checks": [
+    {
+      "chapter": 1,
+      "passed": true
+    },
+    {
+      "chapter": 2,
+      "passed": true
+    },
+    {
+      "chapter": 3,
+      "passed": true
+    }
+  ],
+  "continuity_checks": [
+    {
+      "chapter": 2,
+      "references_previous": true
+    },
+    {
+      "chapter": 3,
+      "references_previous": true
+    }
+  ],
+  "quality_checks": [
+    {
+      "chapter": 1,
+      "file": "humanized.md",
+      "chars": 920,
+      "repeated_sentence_hits": 0,
+      "repeated_line_ratio": 0.0,
+      "padding_detected": false
+    },
+    {
+      "chapter": 2,
+      "file": "humanized.md",
+      "chars": 893,
+      "repeated_sentence_hits": 0,
+      "repeated_line_ratio": 0.0,
+      "padding_detected": false
+    },
+    {
+      "chapter": 3,
+      "file": "humanized.md",
+      "chars": 909,
+      "repeated_sentence_hits": 0,
+      "repeated_line_ratio": 0.0,
+      "padding_detected": false
+    }
+  ],
+  "review_checks": [
+    {
+      "chapter": 1,
+      "has_specific": true
+    },
+    {
+      "chapter": 2,
+      "has_specific": true
+    },
+    {
+      "chapter": 3,
+      "has_specific": true
+    }
+  ],
+  "commit_checks": [
+    {
+      "chapter": 1,
+      "events_count": 5
+    },
+    {
+      "chapter": 2,
+      "events_count": 5
+    },
+    {
+      "chapter": 3,
+      "events_count": 5
+    }
+  ],
+  "runtime_canon_checks": [
+    {
+      "events_count": 21
+    },
+    {
+      "father_state": "病重，仍然存活"
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

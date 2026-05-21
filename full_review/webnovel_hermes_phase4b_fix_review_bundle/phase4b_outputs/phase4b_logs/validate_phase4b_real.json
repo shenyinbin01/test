@@ -1,0 +1,190 @@
+{
+  "project": "price_tag_life",
+  "mode": "real",
+  "phase": "4B",
+  "checked_chapter": 1,
+  "file_checks": [
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/outline.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/preflight_context.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/beat.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/draft.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/review.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/humanized.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/final.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/canon_check.json",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/commit.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/review.json",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/phase4b_summary.json",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/runtime_canon_final.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/runtime_canon_after_ch001_real.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_logs/validate_phase4b_real.json",
+      "exists": true
+    },
+    {
+      "check": "log_files_count",
+      "count": 6
+    },
+    {
+      "check": "deepseek_calls_success",
+      "count": 6
+    }
+  ],
+  "canon_checks": [
+    {
+      "chapter": 1,
+      "passed": true
+    }
+  ],
+  "quality_checks": [
+    {
+      "file": "humanized.md",
+      "cn_chars": 1594,
+      "repeated_sentence_hits": 0,
+      "repeated_line_ratio": 0.0,
+      "padding_detected": false
+    },
+    {
+      "file": "final.md",
+      "cn_chars": 1594,
+      "repeated_sentence_hits": 0,
+      "repeated_line_ratio": 0.0,
+      "padding_detected": false
+    }
+  ],
+  "review_checks": [
+    {
+      "chapter": 1,
+      "has_specific": true
+    }
+  ],
+  "commit_checks": [
+    {
+      "chapter": 1,
+      "events_count": 12,
+      "has_character_updates": true,
+      "has_open_threads": true,
+      "has_canon_risks": true,
+      "has_continuity_notes": true,
+      "canon_sync_synced": true
+    }
+  ],
+  "element_checks": [
+    {
+      "file": "humanized.md",
+      "element": "外卖场景",
+      "found": true
+    },
+    {
+      "file": "humanized.md",
+      "element": "老人",
+      "found": true
+    },
+    {
+      "file": "humanized.md",
+      "element": "光鲜客户",
+      "found": true
+    },
+    {
+      "file": "humanized.md",
+      "element": "医院缴费窗口",
+      "found": true
+    },
+    {
+      "file": "humanized.md",
+      "element": "父亲价格归零",
+      "found": true
+    },
+    {
+      "file": "humanized.md",
+      "element": "对话",
+      "found": true
+    },
+    {
+      "file": "humanized.md",
+      "element": "钩子",
+      "found": true
+    },
+    {
+      "file": "final.md",
+      "element": "外卖场景",
+      "found": true
+    },
+    {
+      "file": "final.md",
+      "element": "老人",
+      "found": true
+    },
+    {
+      "file": "final.md",
+      "element": "光鲜客户",
+      "found": true
+    },
+    {
+      "file": "final.md",
+      "element": "医院缴费窗口",
+      "found": true
+    },
+    {
+      "file": "final.md",
+      "element": "父亲价格归零",
+      "found": true
+    },
+    {
+      "file": "final.md",
+      "element": "对话",
+      "found": true
+    },
+    {
+      "file": "final.md",
+      "element": "钩子",
+      "found": true
+    },
+    {
+      "check": "beat_final_consistency",
+      "issues": []
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

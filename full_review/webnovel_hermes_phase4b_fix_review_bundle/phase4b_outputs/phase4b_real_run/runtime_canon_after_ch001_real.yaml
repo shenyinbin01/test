@@ -1,0 +1,42 @@
+project:
+  title: 人生价格标签
+protagonist:
+  name: 林砚
+  age: 24
+  identity: 外卖员
+  status:
+    money_pressure: true
+    father_ill: true
+    ability_awakened: true
+    understands_label: false
+characters:
+- id: father
+  name: 林父
+  role: 父亲
+  current_state: 病重，仍然存活
+confirmed_events:
+- chapter: 1
+  event: 林砚在老旧小区六楼走廊看见一个穿旧夹克的老人头顶悬着六位数的淡金色数字
+- chapter: 1
+  event: 林砚揉眼确认数字存在，试图看清时感到太阳穴刺痛
+- chapter: 1
+  event: 老人平静地看了林砚一眼，没有多言
+- chapter: 1
+  event: 林砚送第二单到高档公寓，开门的光鲜客户头顶有五位数价格且正在快速下跌
+- chapter: 1
+  event: 客户挂断电话后脸色铁青地接过餐盒
+- chapter: 1
+  event: 林砚误以为价格标签代表财富，判断老人是隐形富豪、客户正在破产
+- chapter: 1
+  event: 林砚改变路线返回老旧小区，在水果摊前看到老人为三毛六讨价还价
+- chapter: 1
+  event: 林砚主动搭讪老人，老人回应“年轻人，眼神太好有时候不是好事”后离开
+- chapter: 1
+  event: 林砚收到医院催缴短信，赶到第三人民医院缴费窗口
+- chapter: 1
+  event: 林砚余额不足五千一，差三千一，护士告知欠费三天将停药
+- chapter: 1
+  event: 林砚在病房门口看见病床上父亲头顶价格正在变淡、碎裂、消失
+- chapter: 1
+  event: 父亲头顶数字从五位数降至零，最后一位数字闪烁后彻底熄灭，只剩空白
+open_threads: []
