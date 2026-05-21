@@ -1,0 +1,9 @@
+{
+  "task_name": "chapter_beat",
+  "mode": "mock",
+  "success": true,
+  "returncode": 0,
+  "stdout": "{\"success\": true, \"mode\": \"mock\", \"output\": \"/data/webnovel-lab/demo_output/phase3_mock_run/chapter_beat_mock.md\"}",
+  "stderr": "",
+  "output_file": "/data/webnovel-lab/demo_output/phase3_mock_run/chapter_beat_mock.md"
+}

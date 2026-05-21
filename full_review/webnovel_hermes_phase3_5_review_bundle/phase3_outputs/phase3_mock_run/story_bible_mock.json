@@ -1,0 +1,9 @@
+{
+  "task_name": "story_bible",
+  "mode": "mock",
+  "success": true,
+  "returncode": 0,
+  "stdout": "{\"success\": true, \"mode\": \"mock\", \"output\": \"/data/webnovel-lab/demo_output/phase3_mock_run/story_bible_mock.md\"}",
+  "stderr": "",
+  "output_file": "/data/webnovel-lab/demo_output/phase3_mock_run/story_bible_mock.md"
+}

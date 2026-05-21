@@ -1,0 +1,44 @@
+{
+  "mode": "mock",
+  "execution_time": "2026-05-21T16:06:16.638051",
+  "phase3_version": "1.0",
+  "nodes": [
+    {
+      "task_name": "story_bible",
+      "mode": "mock",
+      "success": true,
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"mode\": \"mock\", \"output\": \"/data/webnovel-lab/demo_output/phase3_mock_run/story_bible_mock.md\"}",
+      "stderr": "",
+      "output_file": "/data/webnovel-lab/demo_output/phase3_mock_run/story_bible_mock.md"
+    },
+    {
+      "task_name": "chapter_beat",
+      "mode": "mock",
+      "success": true,
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"mode\": \"mock\", \"output\": \"/data/webnovel-lab/demo_output/phase3_mock_run/chapter_beat_mock.md\"}",
+      "stderr": "",
+      "output_file": "/data/webnovel-lab/demo_output/phase3_mock_run/chapter_beat_mock.md"
+    },
+    {
+      "task_name": "humanize",
+      "mode": "mock",
+      "success": true,
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"mode\": \"mock\", \"output\": \"/data/webnovel-lab/demo_output/phase3_mock_run/humanize_mock.md\"}",
+      "stderr": "",
+      "output_file": "/data/webnovel-lab/demo_output/phase3_mock_run/humanize_mock.md"
+    }
+  ],
+  "total_nodes": 3,
+  "success_count": 3,
+  "failed_count": 0,
+  "has_failure": false,
+  "canon_consistency": {
+    "checked": false,
+    "passed": false,
+    "errors": [],
+    "warnings": []
+  }
+}

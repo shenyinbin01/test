@@ -1,0 +1,9 @@
+{
+  "task_name": "humanize",
+  "mode": "real",
+  "success": true,
+  "returncode": 0,
+  "stdout": "{\"success\": true, \"mode\": \"real\", \"task_name\": \"humanize\", \"output\": \"/data/webnovel-lab/demo_output/phase3_real_run/humanize_real.md\", \"attempt\": 1}",
+  "stderr": "",
+  "output_file": "/data/webnovel-lab/demo_output/phase3_real_run/humanize_real.md"
+}
