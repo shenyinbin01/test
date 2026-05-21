@@ -1,0 +1,66 @@
+number: 1
+title: 归零
+conflict: 林砚急需钱，但还不知道标签真正代表什么
+hook: 父亲头顶价格即将归零，逼迫主角必须立刻理解并使用能力
+emotion_arc: 压抑→好奇→震惊→压迫→紧迫
+scenes:
+- order: 1
+  title: 接单
+  narrative_function: hook
+  pov: 林砚
+  location: 外卖站点/街头
+  emotion_target: 压抑和疲惫
+  conflict_type: 人与系统
+  dialogue_ratio: 0.3
+  length: 400
+  key_lines:
+  - 手机又响了。
+  - 这个月第三张催缴单。
+- order: 2
+  title: 第一次看见
+  narrative_function: build
+  pov: 林砚
+  location: 写字楼电梯口
+  emotion_target: 困惑和好奇
+  conflict_type: 人与自我
+  dialogue_ratio: 0.2
+  length: 500
+  key_lines:
+  - 老人头顶浮着一排数字。
+  - 他停了一下。
+- order: 3
+  title: 反差
+  narrative_function: conflict
+  pov: 林砚
+  location: 客户家
+  emotion_target: 震惊和困惑
+  conflict_type: 人与人
+  dialogue_ratio: 0.5
+  length: 500
+  key_lines:
+  - 光鲜体面的客户，头顶价格在快速下跌。
+  - '"您的外卖。" 他尽量让自己看起来正常。'
+- order: 4
+  title: 第一次失误
+  narrative_function: climax_payoff
+  pov: 林砚
+  location: 回程路上
+  emotion_target: 挫败和反思
+  conflict_type: 人与系统
+  dialogue_ratio: 0.1
+  length: 400
+  key_lines:
+  - 他以为标签代表财富。
+  - 结果判断错了。
+- order: 5
+  title: 医院
+  narrative_function: cliffhanger
+  pov: 林砚
+  location: 医院缴费窗口
+  emotion_target: 绝望和紧迫
+  conflict_type: 人与系统
+  dialogue_ratio: 0.3
+  length: 400
+  key_lines:
+  - 他爸头顶的价格正在归零。
+  - 不是钱的问题。
