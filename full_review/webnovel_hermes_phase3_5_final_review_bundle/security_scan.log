@@ -1,0 +1,52 @@
+=== Security Scan Phase3.5 Final ===
+--- grep -Ri "sk-" ---
+webnovel_hermes_phase3_5_final_review_bundle/project_files/scripts/validate_phase3.py:                        for pat in ["sk-", "Authorization:", "API Key"]:
+webnovel_hermes_phase3_5_final_review_bundle/project_files/scripts/validate_phase3.py:                                if pat == "sk-" and "sk-" not in content:
+webnovel_hermes_phase3_5_final_review_bundle/project_files/scripts/run_demo.py:        "--task-name", task_name,
+webnovel_hermes_phase3_5_final_review_bundle/project_files/scripts/run_demo.py:        "--task-name", task_name,
+webnovel_hermes_phase3_5_final_review_bundle/project_files/scripts/run_demo.py:        "--task-name", task_name,
+webnovel_hermes_phase3_5_final_review_bundle/project_files/scripts/run_demo.py:                                "--task-name", "chapter_beat_retry1",
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:--- grep -Ri "sk-" ---
+
+--- grep -Ri "authorization" ---
+webnovel_hermes_phase3_5_final_review_bundle/project_files/scripts/validate_phase3.py:                        for pat in ["sk-", "Authorization:", "API Key"]:
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:webnovel_hermes_phase3_5_final_review_bundle/project_files/scripts/validate_phase3.py:                        for pat in ["sk-", "Authorization:", "API Key"]:
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:--- grep -Ri "authorization" ---
+
+--- grep -Ri "api_key" ---
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:--- grep -Ri "api_key" ---
+
+--- grep -Ri "token" ---
+webnovel_hermes_phase3_5_final_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 token/cookie/password | ✅ 否 |
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:--- grep -Ri "token" ---
+
+--- grep -Ri "cookie" ---
+webnovel_hermes_phase3_5_final_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 token/cookie/password | ✅ 否 |
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:webnovel_hermes_phase3_5_final_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 token/cookie/password | ✅ 否 |
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:--- grep -Ri "cookie" ---
+
+--- grep -Ri "password" ---
+webnovel_hermes_phase3_5_final_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 token/cookie/password | ✅ 否 |
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:webnovel_hermes_phase3_5_final_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 token/cookie/password | ✅ 否 |
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:webnovel_hermes_phase3_5_final_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 token/cookie/password | ✅ 否 |
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:webnovel_hermes_phase3_5_final_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 token/cookie/password | ✅ 否 |
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:--- grep -Ri "password" ---
+
+--- grep -Ri "kdocs" ---
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:--- grep -Ri "kdocs" ---
+
+--- grep -Ri "file_id" ---
+webnovel_hermes_phase3_5_final_review_bundle/project_files/docs/phase3_5_fix_result.md:| 是否发现 WPS 链接/file_id | ✅ 否 |
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:--- grep -Ri "file_id" ---
+
+--- grep -Ri "doc_link" ---
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:--- grep -Ri "doc_link" ---
+
+--- grep -Ri "folder_id" ---
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:--- grep -Ri "folder_id" ---
+
+--- grep -Ri "link_id" ---
+webnovel_hermes_phase3_5_final_review_bundle/security_scan.log:--- grep -Ri "link_id" ---
+
+--- find .env ---
+=== Scan Complete ===

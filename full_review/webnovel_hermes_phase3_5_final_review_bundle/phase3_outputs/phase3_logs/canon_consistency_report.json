@@ -1,0 +1,147 @@
+{
+  "mode": "real",
+  "canon_file": "/data/webnovel-lab/workspace/novels/price_tag_life/canon_constraints.yaml",
+  "checked_time": "2026-05-21T17:22:07.065437",
+  "checked_files": [
+    {
+      "file": "/data/webnovel-lab/demo_output/phase3_real_run/story_bible_real.md",
+      "label": "story_bible_real.md",
+      "readable": true,
+      "forbidden_hits": [],
+      "ignored_hits": [
+        {
+          "pattern": "倒计时",
+          "match": "倒计时",
+          "reason": "negated_context",
+          "context": "_tag_meaning\": \"不是寿命倒计时，而是他内心选择放弃治疗、自我了断"
+        }
+      ],
+      "anchor_present": [
+        "林砚",
+        "外卖员",
+        "父亲病重",
+        "人生价格标签",
+        "选择代价",
+        "头痛",
+        "短暂失明",
+        "医院缴费窗口",
+        "即将归零"
+      ],
+      "anchor_missing": [
+        "不是单纯财富"
+      ]
+    },
+    {
+      "file": "/data/webnovel-lab/demo_output/phase3_real_run/chapter_beat_real.md",
+      "label": "chapter_beat_real.md",
+      "readable": true,
+      "forbidden_hits": [],
+      "ignored_hits": [],
+      "anchor_present": [
+        "林砚",
+        "选择代价",
+        "头痛"
+      ],
+      "anchor_missing": [
+        "外卖员",
+        "父亲病重",
+        "人生价格标签",
+        "不是单纯财富",
+        "短暂失明",
+        "医院缴费窗口",
+        "即将归零"
+      ]
+    },
+    {
+      "file": "/data/webnovel-lab/demo_output/phase3_real_run/humanize_real.md",
+      "label": "humanize_real.md",
+      "readable": true,
+      "forbidden_hits": [],
+      "ignored_hits": [],
+      "anchor_present": [
+        "林砚",
+        "外卖员"
+      ],
+      "anchor_missing": [
+        "父亲病重",
+        "人生价格标签",
+        "不是单纯财富",
+        "选择代价",
+        "头痛",
+        "短暂失明",
+        "医院缴费窗口",
+        "即将归零"
+      ]
+    }
+  ],
+  "forbidden_hits": [],
+  "ignored_hits": [
+    {
+      "file": "story_bible_real.md",
+      "pattern": "倒计时",
+      "match": "倒计时",
+      "reason": "negated_context",
+      "context": "_tag_meaning\": \"不是寿命倒计时，而是他内心选择放弃治疗、自我了断"
+    }
+  ],
+  "required_anchor_checks": [
+    {
+      "file": "story_bible_real.md",
+      "present": [
+        "林砚",
+        "外卖员",
+        "父亲病重",
+        "人生价格标签",
+        "选择代价",
+        "头痛",
+        "短暂失明",
+        "医院缴费窗口",
+        "即将归零"
+      ],
+      "missing": [
+        "不是单纯财富"
+      ]
+    },
+    {
+      "file": "chapter_beat_real.md",
+      "present": [
+        "林砚",
+        "选择代价",
+        "头痛"
+      ],
+      "missing": [
+        "外卖员",
+        "父亲病重",
+        "人生价格标签",
+        "不是单纯财富",
+        "短暂失明",
+        "医院缴费窗口",
+        "即将归零"
+      ]
+    },
+    {
+      "file": "humanize_real.md",
+      "present": [
+        "林砚",
+        "外卖员"
+      ],
+      "missing": [
+        "父亲病重",
+        "人生价格标签",
+        "不是单纯财富",
+        "选择代价",
+        "头痛",
+        "短暂失明",
+        "医院缴费窗口",
+        "即将归零"
+      ]
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "chapter_beat_real.md: 缺少关键锚点 '医院缴费窗口'",
+    "chapter_beat_real.md: 缺少关键锚点 '即将归零'",
+    "免除 1 次伪阳性（缺省语境）"
+  ],
+  "passed": true
+}

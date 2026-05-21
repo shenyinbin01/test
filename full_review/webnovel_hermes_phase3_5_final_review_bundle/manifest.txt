@@ -1,0 +1,11 @@
+./manifest.txt
+./phase3_outputs/phase3_logs/canon_consistency_report.json
+./phase3_outputs/phase3_real_run/chapter_beat_real.md
+./phase3_outputs/phase3_real_run/humanize_real.md
+./phase3_outputs/phase3_real_run/phase3_real_summary.json
+./phase3_outputs/phase3_real_run/story_bible_real.md
+./project_files/docs/phase3_5_fix_result.md
+./project_files/scripts/run_demo.py
+./project_files/scripts/validate_canon_consistency.py
+./project_files/scripts/validate_phase3.py
+./REVIEW_README.md
