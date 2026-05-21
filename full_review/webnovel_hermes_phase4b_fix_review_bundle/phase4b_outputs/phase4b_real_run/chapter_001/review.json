@@ -1,8 +1,32 @@
 {
   "chapter": 1,
   "mode": "real",
-  "source": "chapter_review node (DeepSeek)",
-  "review_text_length": 2628,
-  "has_review_content": true,
-  "generated_at": "2026-05-21T22:38:22.873824"
+  "passed": true,
+  "overall_score": 7.2,
+  "dimensions": {
+    "tension": 8,
+    "pacing": 7,
+    "dialogue": 6,
+    "character_consistency": 9,
+    "hook": 8,
+    "world_consistency": 9,
+    "emotion_delivery": 7,
+    "prose_quality": 7,
+    "readability": 8,
+    "ai_flavor_level": 3
+  },
+  "specific_issues": [
+    "对话缺乏个性，老人台词太普通（'有事？'），没有暗示其神秘性",
+    "AI腔两处：'安静地躺在'拟人化表达、'像一把刀'工整比喻",
+    "水果摊场景节奏略拖（约300字细节仅2句核心信息）",
+    "林砚绕回老旧小区的动机跳跃，缺心理活动支撑"
+  ],
+  "suggestions": [
+    "老人第一次开口加隐含深意的台词：'年轻人，眼神太好有时候不是好事'",
+    "统一用'像烧尽的纸灰'意象链描述数字消失",
+    "精简水果摊细节：'老人从一堆蔫苹果里挑出三个，省了三毛六'",
+    "林砚绕路时加一句：'那个数字太扎眼了，万一老人真有钱……'",
+    "高档公寓客户改为穿家居服但暴露身价，避免物业代收不合理"
+  ],
+  "source": "chapter_review node"
 }

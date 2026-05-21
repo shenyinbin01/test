@@ -434,23 +434,36 @@ def validate_phase4b(workspace_root, output_root, mode="real", project="price_ta
     file_count = len(log_files)
     file_checks.append({"check": "log_files_count", "count": file_count})
 
-    # ── c. deepseek_calls 至少6条成功记录 ──
+    # ── c. deepseek_calls 至少6条成功记录，且为标准JSONL格式 ──
     calls_path = log_dir / "deepseek_calls_phase4b.jsonl"
     success_count = 0
+    jsonl_valid = False
+    jsonl_line_count = 0
     if calls_path.exists():
         try:
-            for line in calls_path.read_text().strip().split("\n"):
-                if line.strip():
-                    entry = json.loads(line)
-                    if entry.get("success"):
-                        success_count += 1
+            raw = calls_path.read_text()
+            lines = [l for l in raw.strip().split("\n") if l.strip()]
+            jsonl_line_count = len(lines)
+            all_valid = True
+            for line in lines:
+                entry = json.loads(line)
+                if entry.get("success"):
+                    success_count += 1
+            jsonl_valid = all_valid
         except Exception as e:
             errors.append(f"deepseek_calls_phase4b.jsonl 解析失败: {e}")
+            jsonl_valid = False
     else:
         errors.append("deepseek_calls_phase4b.jsonl 不存在")
     file_checks.append({"check": "deepseek_calls_success", "count": success_count})
+    file_checks.append({"check": "deepseek_calls_line_count", "count": jsonl_line_count})
+    file_checks.append({"check": "deepseek_calls_jsonl_valid", "valid": jsonl_valid})
     if success_count < 6:
         errors.append(f"deepseek_calls 成功记录不足6条（{success_count}）")
+    if jsonl_line_count != 6:
+        errors.append(f"deepseek_calls 行数应为6，实际{jsonl_line_count}")
+    if not jsonl_valid:
+        errors.append("deepseek_calls JSONL 格式无效")
 
     # ── d. humanized.md/final.md 字数 >= 1200 中文字 ──
     for fname in ["humanized.md", "final.md"]:

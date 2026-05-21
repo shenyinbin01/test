@@ -67,6 +67,14 @@
     {
       "check": "deepseek_calls_success",
       "count": 6
+    },
+    {
+      "check": "deepseek_calls_line_count",
+      "count": 6
+    },
+    {
+      "check": "deepseek_calls_jsonl_valid",
+      "valid": true
     }
   ],
   "canon_checks": [

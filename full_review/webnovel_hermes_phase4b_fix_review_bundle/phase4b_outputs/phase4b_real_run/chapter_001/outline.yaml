@@ -1,0 +1,28 @@
+chapter: 1
+title: 价格初现
+goal: 林砚在送外卖时第一次看见价格标签，误以为代表财富，老人高价与客户快速下跌形成反差，第一次判断失误，结尾到医院缴费窗口看见父亲价格归零
+must_include:
+- 外卖场景
+- 老人高价标签
+- 光鲜客户标签下跌
+- 林砚误判
+- 医院缴费窗口
+- 父亲病重
+- 价格归零
+scenes:
+- order: 1
+  title: 外卖配送
+  location: 城区电梯口
+  purpose: 引入价格标签能力
+- order: 2
+  title: 老人与客户反差
+  location: 客户门前
+  purpose: 展示标签反差
+- order: 3
+  title: 林砚误判
+  location: 路上
+  purpose: 主角第一次试图理解标签
+- order: 4
+  title: 医院缴费窗口
+  location: 医院
+  purpose: 结尾钩子：父亲价格归零
