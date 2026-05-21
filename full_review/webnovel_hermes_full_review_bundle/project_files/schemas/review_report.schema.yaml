@@ -1,0 +1,36 @@
+# review_report.schema.yaml
+# 十维度审稿报告
+
+review:
+  type: object
+  required: [chapter_number, dimensions, verdict]
+  fields:
+    chapter_number: { type: integer, desc: "被审章节号" }
+    reviewer: { type: string, desc: "审稿角色" }
+    reviewed_at: { type: string, desc: "审稿时间" }
+
+dimensions:
+  type: object
+  required: [tension, pacing, dialogue, character_consistency, hook,
+             world_consistency, emotion_delivery, prose_quality,
+             readability, ai_flavor_level]
+  fields:
+    tension: { type: object, fields: { score: integer, issue: string, suggestion: string }, desc: "紧张感" }
+    pacing: { type: object, fields: { score: integer, issue: string, suggestion: string }, desc: "节奏" }
+    dialogue: { type: object, fields: { score: integer, issue: string, suggestion: string }, desc: "对白" }
+    character_consistency: { type: object, fields: { score: integer, issue: string, suggestion: string }, desc: "角色一致性" }
+    hook: { type: object, fields: { score: integer, issue: string, suggestion: string }, desc: "钩子强度" }
+    world_consistency: { type: object, fields: { score: integer, issue: string, suggestion: string }, desc: "世界观一致" }
+    emotion_delivery: { type: object, fields: { score: integer, issue: string, suggestion: string }, desc: "情绪传达" }
+    prose_quality: { type: object, fields: { score: integer, issue: string, suggestion: string }, desc: "文笔质量" }
+    readability: { type: object, fields: { score: integer, issue: string, suggestion: string }, desc: "可读性" }
+    ai_flavor_level: { type: object, fields: { score: integer, issue: string, suggestion: string }, desc: "AI腔等级（越低越好）" }
+
+verdict:
+  type: object
+  required: [passed, overall_score]
+  fields:
+    passed: { type: boolean, desc: "是否通过" }
+    overall_score: { type: number, desc: "综合评分 1-10" }
+    critical_issues: { type: array, items: string, desc: "必须修复的问题" }
+    minor_issues: { type: array, items: string, desc: "建议优化项" }
