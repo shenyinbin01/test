@@ -1,0 +1,33 @@
+# chapter_commit.schema.yaml
+# 章节确认记录
+
+commit:
+  type: object
+  required: [chapter_number, commit_type, changes, affected_elements]
+  fields:
+    chapter_number: { type: integer, desc: "章节号" }
+    commit_type: { type: string, desc: "commit 类型：initial / revision / hotfix" }
+    previous_version: { type: string, desc: "上一个版本号" }
+    current_version: { type: string, desc: "当前版本号" }
+
+changes:
+  type: object
+  fields:
+    plot_events: { type: array, items: string, desc: "新增/变更的情节事件" }
+    character_updates: { type: array, items: string, desc: "角色状态变更" }
+    world_updates: { type: array, items: string, desc: "世界观设定变更" }
+    dialogue_signatures: { type: array, items: string, desc: "对话中新增的重要信息" }
+
+affected_elements:
+  type: object
+  fields:
+    characters: { type: array, items: string, desc: "受影响的角色" }
+    threads: { type: array, items: string, desc: "受影响的情节线" }
+    foreshadowing: { type: array, items: string, desc: "埋下的伏笔" }
+
+canon_sync:
+  type: object
+  required: [synced]
+  fields:
+    synced: { type: boolean, desc: "是否已更新到 runtime_canon" }
+    canon_version: { type: string, desc: "更新后的 canon 版本号" }
