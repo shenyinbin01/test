@@ -1,0 +1,18 @@
+project:
+  name: 人生价格标签
+  genre: 都市脑洞
+  current_chapter: 1
+  total_planned: 30
+  current_arc: 觉醒与试错（1-10章）
+character_status:
+- name: 林砚
+  price_tag: 归零边缘
+  summary: 24岁外卖员，刚发现能看到价格标签的能力，在医院面对父亲即将归零的价格。
+threads:
+- name: 能力起源
+  status: 待探索
+- name: 父亲医疗费
+  status: 紧迫
+- name: 价格标签真相
+  status: 刚发现
+latest_chapter_summary: 林砚在送外卖时第一次看见价格标签。他发现穿中山装的老人价格高得离谱，光鲜的客户价格却在下跌。他以为标签代表财富，判断失误。章尾在医院看见父亲头顶价格即将归零。
