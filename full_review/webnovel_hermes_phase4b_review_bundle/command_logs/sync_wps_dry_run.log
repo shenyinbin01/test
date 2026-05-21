@@ -1,0 +1,11 @@
+==================================================
+  WPS 同步检查
+==================================================
+📄 找到 DOCX: /data/webnovel-lab/workspace/novels/price_tag_life/exports/price_tag_life_main.docx
+✅ kdocs-cli: /home/agentuser/.local/bin/kdocs-cli
+✅ WPS 环境就绪
+🔄 模式: dry-run（仅检查，不上传）
+  DOCX 本地路径: /data/webnovel-lab/workspace/novels/price_tag_life/exports/price_tag_life_main.docx
+✅ 同步检查完成（dry-run）
+  DOCX 保留在: /data/webnovel-lab/workspace/novels/price_tag_life/exports/price_tag_life_main.docx
+Exit code: 0

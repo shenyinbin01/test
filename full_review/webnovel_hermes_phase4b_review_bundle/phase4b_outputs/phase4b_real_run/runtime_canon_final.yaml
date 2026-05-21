@@ -1,0 +1,118 @@
+project:
+  title: 人生价格标签
+  genre:
+  - 都市异能
+  - 现实爽文
+  - 悬疑成长
+protagonist:
+  name: 林砚
+  age: 24
+  identity: 外卖员
+  status:
+    money_pressure: true
+    father_ill: true
+    ability_awakened: true
+    understands_label: false
+  ability:
+    name: 人生价格标签
+    known_rules:
+    - 标签不是单纯财富
+    - 标签不是生命倒计时
+    - 标签不是寿命数值
+    - 标签不是系统面板
+    - 标签代表当前人生价值、潜力、风险、选择代价的综合显影
+    - 标签会随选择、情绪、关系和关键事件变化
+    limits:
+    - 只显示当前状态，不显示完整未来
+    - 标签会误导，必须结合现实判断
+    - 强行窥探会头痛或短暂失明
+    - 标签变化不等于命运确定
+characters:
+- id: lin_yan
+  name: 林砚
+  role: 主角
+  current_state: 被债务和父亲病情压迫，刚觉醒能力
+- id: father
+  name: 林父
+  role: 父亲
+  current_state: 病重，仍然存活
+- id: old_man
+  name: 暂未揭示的老人
+  role: 第一章关键反差人物
+  current_state: 表面普通，价格标签异常高
+- id: polished_customer
+  name: 光鲜客户
+  role: 第一章/第二章风险线索
+  current_state: 表面体面，价格标签快速下跌
+confirmed_events:
+- chapter: 1
+  event: 林砚在送外卖时第一次看见人生价格标签
+- chapter: 1
+  event: 发现老人头顶价格异常高
+- chapter: 1
+  event: 发现光鲜客户价格快速下跌
+- chapter: 1
+  event: 林砚误以为标签代表财富
+- chapter: 1
+  event: 医院缴费窗口看见父亲头顶价格归零
+- chapter: 2
+  event: 林砚回访光鲜客户的地址调查线索
+- chapter: 2
+  event: 发现客户标签暴跌与治安事件有关
+- chapter: 2
+  event: 林砚对标签的理解从财富推进一步
+- chapter: 2
+  event: 使用能力后出现头痛后遗症
+- chapter: 2
+  event: 父亲病情仍然持续
+- chapter: 3
+  event: 林砚在医院观察收费员和病人家属的标签变化
+- chapter: 3
+  event: 发现标签随选择变化
+- chapter: 3
+  event: 第一次主动试图理解和使用能力
+- chapter: 3
+  event: 观察自己的标签发现异常变化
+- chapter: 3
+  event: 父亲病情压力仍然存在
+- chapter: 1
+  event: 林砚在送外卖爬楼梯时首次看见老人头顶浮现87,000,000的数字标签
+- chapter: 1
+  event: 林砚在路边观察快递员头顶80万、宝马车主头顶12万，发现数字与财富无关
+- chapter: 1
+  event: 林砚给高档小区客户送餐时，看见其头顶标签从32万快速下跌，并听见门内争吵声
+- chapter: 1
+  event: 林砚在老人递外卖时无意触碰，发现标签从87,000,000涨到87,200,000
+- chapter: 1
+  event: 林砚赶到医院，在缴费窗口方向看见父亲头顶标签从5000逐步下降至归零消失
+- chapter: 1
+  event: 林砚得知父亲已转ICU，银行卡掉在柜台，转身跑向走廊尽头
+- chapter: 1
+  event: 林砚在送外卖爬楼梯时，首次看见灰色工装老人头顶浮现1,200,000价格标签
+- chapter: 1
+  event: 林砚在1206室送餐时，看见光鲜女客户头顶85,000价格标签快速下跌至76,800，并听见门内争吵与摔碎声
+- chapter: 1
+  event: 林砚在快餐店取餐时，看见系围裙老板娘头顶680,000，对比银行门口戴名表西装男头顶450,000，发现标签与财富无关
+- chapter: 1
+  event: 林砚因能力使用过度，出现太阳穴刺痛和短暂失明，能力暂时消失
+- chapter: 1
+  event: 林砚接到医院电话后赶到缴费窗口，看见走廊尽头父亲头顶价格从5,000逐步下降至0后消失
+- chapter: 1
+  event: 林砚因银行卡余额不足无法缴费，转身跑向ICU，透过玻璃窗看见父亲仍在呼吸、监护仪正常
+- chapter: 1
+  event: 林砚盯着父亲头顶空白处，一个数字正在重新浮现
+open_threads:
+- id: father_price_near_zero
+  description: 林父头顶价格即将归零，其含义尚未完全揭示
+  status: advanced
+- id: polished_customer_falling_price
+  description: 光鲜客户价格快速下跌，对应现实风险
+  status: open
+forbidden_facts:
+- 父亲已经死亡
+- 价格标签是生命倒计时
+- 价格标签是寿命数值
+- 林砚拥有系统面板
+- 天秤会已经登场
+- 消耗寿命换价值
+- 触碰即可改写命运

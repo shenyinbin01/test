@@ -1,0 +1,57 @@
+├── command_logs
+  └── compileall.log
+  └── env_check.log
+  └── run_chapter_pipeline_mock.log
+  └── run_chapter_pipeline_phase4b_real.log
+  └── sync_wps_dry_run.log
+  └── validate_phase4_mock.log
+  └── validate_phase4_phase4b_real.log
+  └── validate_project.log
+└── manifest.txt
+├── phase4a_regression
+  └── chapter_001_final.md
+  └── phase4_summary.json
+  └── phase4_validation.json
+├── phase4b_outputs
+  ├── phase4b_logs
+    └── chapter_001_canon.txt
+    └── chapter_001_hard_rules.txt
+    └── deepseek_calls_phase4b.jsonl
+    ├── prompt_inputs
+      └── chapter_beat_input_snapshot.md
+      └── chapter_commit_input_snapshot.md
+      └── chapter_review_input_snapshot.md
+      └── chapter_writer_input_snapshot.md
+      └── humanize_input_snapshot.md
+      └── preflight_context_input_snapshot.md
+    └── validate_phase4b_real.json
+  ├── phase4b_real_run
+    ├── chapter_001
+      └── beat.md
+      └── canon_check.json
+      └── commit.yaml
+      └── draft.md
+      └── final.md
+      └── humanized.md
+      └── outline.yaml
+      └── preflight_context.md
+      └── review.md
+├── project_files
+  ├── docs
+    └── phase4a_fix_result.md
+    └── phase4b_result.md
+  ├── scripts
+    └── call_deepseek.py
+    └── run_chapter_pipeline.py
+    └── sync_wps.py
+    └── validate_canon_consistency.py
+    └── validate_phase4.py
+    └── validate_project.py
+  ├── templates
+    ├── prompts
+      └── chapter_beat.md
+      └── chapter_commit.md
+      └── chapter_review.md
+      └── chapter_writer.md
+      └── humanize.md
+      └── preflight_context.md

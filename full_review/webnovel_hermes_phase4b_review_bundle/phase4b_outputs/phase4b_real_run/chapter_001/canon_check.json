@@ -1,0 +1,23 @@
+{
+  "chapter": 1,
+  "mode": "real",
+  "checked_time": "2026-05-21T22:16:04.576272",
+  "checked_files": [
+    {
+      "file": "beat.md",
+      "forbidden_hits": []
+    },
+    {
+      "file": "draft.md",
+      "forbidden_hits": []
+    },
+    {
+      "file": "humanized.md",
+      "forbidden_hits": []
+    }
+  ],
+  "forbidden_hits": [],
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

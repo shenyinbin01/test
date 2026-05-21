@@ -1,0 +1,21 @@
+  ── Phase4B Chapter 1 ──
+  Step 1/6: preflight_context
+    ✅ preflight_context 完成 (attempt 1)
+  Step 2/6: chapter_beat
+    ✅ chapter_beat 完成 (attempt 1)
+  Step 3/6: chapter_writer
+    ✅ chapter_writer 完成 (attempt 1)
+  Step 4/6: chapter_review
+    ✅ chapter_review 完成 (attempt 1)
+  Step 5/6: humanize
+    ✅ humanize 完成 (attempt 1)
+  Step 6/6: chapter_commit
+    ✅ chapter_commit 完成 (attempt 1)
+    ✅ final.md 已从 humanized.md 复制
+    ✅ canon_check.json 已生成 (passed=True)
+    ✅ runtime_canon 已更新
+
+=======================================================
+  阶段四B real 完成 ✅ — 所有节点成功
+=======================================================
+Exit code: 0

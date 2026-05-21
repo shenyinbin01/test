@@ -1,0 +1,16 @@
+❌ FOUND: /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4b_review_bundle/project_files/scripts/call_deepseek.py:    --task-name story_bible --log /d
+❌ FOUND: /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4b_review_bundle/project_files/docs/phase4b_result.md:| 是否发现 Authorization | 否 ✅ |
+❌ FOUND: /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4b_review_bundle/project_files/scripts/call_deepseek.py:    for k in ["DEEPSEEK_API_KEY", "D
+❌ FOUND: /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4b_review_bundle/project_files/docs/phase4b_result.md:| 是否发现 token/cookie/password | 否 ✅ |
+❌ FOUND: /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4b_review_bundle/project_files/docs/phase4b_result.md:| 是否发现 token/cookie/password | 否 ✅ |
+❌ FOUND: /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4b_review_bundle/project_files/docs/phase4b_result.md:| 是否发现 token/cookie/password | 否 ✅ |
+❌ FOUND: /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4b_review_bundle/project_files/scripts/sync_wps.py:sync_wps.py — 同步 DOCX 到 WPS/Kdocs
+❌ FOUND: /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4b_review_bundle/project_files/docs/phase4b_result.md:| 是否发现 WPS 链接/file_id | 否 ✅ |
+✅ No 'doc_link'
+❌ FOUND: /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4b_review_bundle/project_files/scripts/sync_wps.py:    required_keys = ["WPS_FOLDER_ID"]
+✅ No 'link_id'
+✅ No .env
+✅ No __pycache__
+✅ No *.pyc
+✅ No .git
+✅ No real secrets
