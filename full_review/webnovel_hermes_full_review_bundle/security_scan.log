@@ -1,0 +1,19 @@
+SECURITY SCAN START
+Generated at: 2026-05-21 12:27:20
+
+== sk- (真实密钥) ==
+(无真实 sk- 密钥)
+
+== token (真实值，非字段名) ==
+/tmp/webnovel_hermes_full_review_bundle/project_files/skills/sync_project_to_wps/SKILL.md:- 禁止在日志中打印 Token 或 Cookie
+/tmp/webnovel_hermes_full_review_bundle/project_files/docs/phase1_result.md:| /etc/webnovel/.env 密钥配置 | 如果用户已有 WPS Token/Folder ID，可填入；如果没有，WPS 同步默认走占位逻辑（检测 DOCX，记录"待接入"），不会阻塞其他步骤 |
+/tmp/webnovel_hermes_full_review_bundle/project_files/docs/phase1_result.md:2. **WPS 同步依赖用户提供 Token**：当前 kdocs-cli 已认证但这是个人 WPS Token。若需上传到指定 WPS 目录，需要用户在 /etc/webnovel/.env 中配置 WPS_FOLDER_ID。
+/tmp/webnovel_hermes_full_review_bundle/project_files/README.md:7. **不泄露密钥。** 不将 API Key / Token 写入仓库或日志。
+
+== .env files ==
+
+== pycache ==
+
+== pyc ==
+
+SECURITY SCAN END
