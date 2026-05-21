@@ -1,0 +1,27 @@
+=======================================================
+  webnovel-hermes-wps Demo — 人生价格标签
+  当前模式: mock/demo（不调用 DeepSeek API）
+=======================================================
+
+  [create_project] ... ✅ ok
+  [generate_bible] ... ✅ ok (mock)
+  [generate_outline] ... ✅ ok (mock)
+  [build_context] ... ✅ ok (mock)
+  [generate_beat] ... ✅ ok (mock)
+  [write_draft] ... ✅ ok (mock)
+  [review] ... ✅ ok (mock)
+  [polish] ... ✅ ok (mock)
+  [commit] ... ✅ ok (mock)
+  [finalize] ... ✅ ok
+  [update_canon] ... ✅ ok (mock)
+  [project_state] ... ✅ ok (mock)
+
+  [validate] ... ✅ 通过 (18 项检查)
+
+  ✅ demo_result.md → /data/webnovel-lab/demo_output/demo_result.md
+  ✅ demo_result.json → /data/webnovel-lab/demo_output/demo_result.json
+  ✅ validation_report.json → /data/webnovel-lab/demo_output/validation_report.json
+
+=======================================================
+  Demo 完成 ✅ — 所有文件就绪
+=======================================================
