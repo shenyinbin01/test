@@ -20,6 +20,7 @@
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/phase5_outputs/projection/price_tag_life_volume_001.docx.sha256
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/phase5_outputs/projection/price_tag_life_volume_001.md
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/phase5_outputs/projection/projection_manifest.json
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/phase5_outputs/wps_state/doc_meta.json
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/phase5_outputs/wps_state/doc_meta.yaml
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/phase5_outputs/wps_state/sync_log.json
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/phase5_outputs/wps_state/sync_log.jsonl

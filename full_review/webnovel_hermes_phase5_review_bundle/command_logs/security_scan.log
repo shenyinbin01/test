@@ -1,7 +1,5 @@
-security_scan_phase5_tailfix: 2026-05-23T02:04:14Z
+security_scan_phase5_tailfix_v3: 2026-05-23T02:20:04Z
 result: no real secrets exposed
-match count: 2 (code-level keyword references only)
 
 matches:
-  - scripts/validate_wps_sync.py:125 (keyword array definition - safe)
-  - project_files/scripts/validate_wps_sync.py:83 (keyword array - safe)
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/project_files/scripts/validate_wps_sync.py:125:    for keyword in ["kdocs.cn", "wps.cn", "file_id:", "link_id:", "folder_id:", "doc_link:", "fileid:"]:
