@@ -1,10 +1,14 @@
 {
-  "mode": "real",
+  "mode": "dry-run",
   "projection_root": "/data/webnovel-lab/demo_output/phase5_wps_projection",
   "state_root": "/data/webnovel-lab/demo_output/phase5_wps_state",
-  "passed": true,
-  "errors": [],
+  "passed": false,
+  "errors": [
+    "dry-run 状态文件中不应出现 success"
+  ],
   "warnings": [
+    "dry-run 模式下 doc_meta.yaml status 应为 dry_run，实际为 success",
+    "dry-run 模式下 doc_meta.yaml mode 应为 dry_run，实际为 real",
     "observed_real_success_count(2) > intended_real_upload_limit(1)，存在 policy_deviation"
   ],
   "projection_checks": [

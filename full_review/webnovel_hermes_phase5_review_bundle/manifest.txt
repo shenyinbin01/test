@@ -7,6 +7,7 @@
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/command_logs/validate_project.log
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/command_logs/validate_wps_sync_dry_run_after.log
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/command_logs/validate_wps_sync_dry_run_before.log
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/command_logs/validate_wps_sync_dry_run_tailfix.log
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/command_logs/validate_wps_sync_real_after_tailfix.log
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/command_logs/validate_wps_sync_real.log
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/command_logs/verify_phase5_doc_meta_yaml.log
@@ -23,6 +24,8 @@
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/phase5_outputs/wps_state/sync_log.json
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/phase5_outputs/wps_state/sync_log.jsonl
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/phase5_outputs/wps_state/upload_attempts_audit.json
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/phase5_outputs/wps_state/validate_wps_sync_dry_run_tailfix_result.json
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/phase5_outputs/wps_state/validate_wps_sync_real_result.json
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/phase5_outputs/wps_state/validate_wps_sync_result.json
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/project_files/docs/phase5_fix_result.md
 /opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase5_review_bundle/project_files/docs/phase5_result.md

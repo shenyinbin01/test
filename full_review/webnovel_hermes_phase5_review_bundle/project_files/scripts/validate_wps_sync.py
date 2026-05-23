@@ -292,6 +292,14 @@ def main():
             }
             state_checks.append(audit_findings)
 
+            save_pd = {
+                "detected": observed > intended,
+                "intended_real_upload_limit": intended,
+                "observed_real_success_count": observed,
+                "is_policy_deviation": is_deviation,
+                "acceptance_required_by_controller": True,
+            }
+
             # 强化规则 8: policy_deviation 检测
             if observed > intended:
                 msg = f"observed_real_success_count({observed}) > intended_real_upload_limit({intended})，存在 policy_deviation"
@@ -334,6 +342,9 @@ def main():
         "state_checks": state_checks,
         "security_checks": security_checks,
     }
+    # 条件性加入 policy_deviation 结构化信息
+    if "save_pd" in dir():
+        result["policy_deviation"] = save_pd
 
     # 输出到文件
     result_path = state_dir / "validate_wps_sync_result.json"
