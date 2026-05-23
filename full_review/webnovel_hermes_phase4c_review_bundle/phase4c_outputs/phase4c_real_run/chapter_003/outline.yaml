@@ -1,0 +1,32 @@
+chapter: 3
+title: 第一次主动选择
+goal: 林砚第一次主动干预选择，标签变化，付出代价，父亲病情持续，自己标签异常
+must_include:
+- 承接第二章标签暴跌/现实危险线索
+- 林砚主动选择
+- 价格标签变化
+- 选择代价
+- 能力副作用
+- 父亲病情压力
+- 自己标签异常钩子
+scenes:
+- order: 1
+  title: 承接第二章
+  location: 医院/街道
+  purpose: 展示第二章的后果与林砚的状态
+- order: 2
+  title: 观察标签变化
+  location: 医院内
+  purpose: 发现病人家属标签随选择变化
+- order: 3
+  title: 第一次主动选择
+  location: 医院/街道
+  purpose: 林砚第一次主动干预选择
+- order: 4
+  title: 选择代价
+  location: 路上
+  purpose: 付出代价，能力副作用显现
+- order: 5
+  title: 自己标签异常
+  location: 场景结尾
+  purpose: 发现自己的标签也在异常变化

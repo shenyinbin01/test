@@ -1,0 +1,259 @@
+{
+  "project": "price_tag_life",
+  "mode": "real",
+  "phase": "4C",
+  "checked_chapters": [
+    1,
+    2,
+    3
+  ],
+  "file_checks": [
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/final.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/chapter_001/commit.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4b_real_run/runtime_canon_after_ch001_real.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_002/outline.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_002/preflight_context.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_002/beat.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_002/draft.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_002/review.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_002/review.json",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_002/humanized.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_002/canon_check.json",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_002/commit.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_002/final.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_003/outline.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_003/preflight_context.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_003/beat.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_003/draft.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_003/review.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_003/review.json",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_003/humanized.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_003/canon_check.json",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_003/commit.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_003/final.md",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/runtime_canon_after_ch002_real.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/runtime_canon_after_ch003_real.yaml",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/runtime_canon_real_ch001_to_ch003.yaml",
+      "exists": true
+    },
+    {
+      "check": "deepseek_calls_success",
+      "count": 12
+    },
+    {
+      "check": "deepseek_calls_line_count",
+      "count": 12
+    },
+    {
+      "check": "deepseek_calls_jsonl_valid",
+      "valid": true
+    },
+    {
+      "check": "deepseek_calls_has_run_id",
+      "has": true
+    },
+    {
+      "check": "deepseek_calls_has_chapter_id",
+      "has": true
+    },
+    {
+      "check": "deepseek_calls_has_task_name",
+      "has": true
+    },
+    {
+      "check": "deepseek_calls_has_attempt",
+      "has": true
+    },
+    {
+      "check": "deepseek_calls_has_retry_of",
+      "has": true
+    },
+    {
+      "check": "deepseek_calls_no_api_key_leak",
+      "pass": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_002/review.json",
+      "exists": true
+    },
+    {
+      "path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_003/review.json",
+      "exists": true
+    },
+    {
+      "check": "phase4c_summary_success",
+      "pass": true
+    }
+  ],
+  "continuity_checks": [
+    {
+      "chapter": 2,
+      "references_ch001_events": false
+    },
+    {
+      "chapter": 2,
+      "final_continues_hospital": true
+    },
+    {
+      "chapter": 3,
+      "references_ch001_events": false,
+      "references_ch002_events": false
+    },
+    {
+      "chapter": 3,
+      "final_continues_tag_plot": true
+    }
+  ],
+  "quality_checks": [
+    {
+      "chapter": 2,
+      "file": "final.md",
+      "cn_chars": 1901,
+      "repeated_sentence_hits": 0,
+      "repeated_line_ratio": 0.041,
+      "padding_detected": false,
+      "has_dialogue": true,
+      "has_ending_hook": true
+    },
+    {
+      "chapter": 3,
+      "file": "final.md",
+      "cn_chars": 2219,
+      "repeated_sentence_hits": 0,
+      "repeated_line_ratio": 0.0,
+      "padding_detected": false,
+      "has_dialogue": true,
+      "has_ending_hook": false
+    }
+  ],
+  "canon_checks": [],
+  "review_checks": [
+    {
+      "chapter": 2,
+      "has_specific": true
+    },
+    {
+      "chapter": 3,
+      "has_specific": true
+    }
+  ],
+  "commit_checks": [
+    {
+      "chapter": 2,
+      "events_count": 9,
+      "has_character_updates": true,
+      "has_ability_rule_updates": true,
+      "has_open_threads_updates": true
+    },
+    {
+      "chapter": 3,
+      "events_count": 5,
+      "has_character_updates": true,
+      "has_ability_rule_updates": true,
+      "has_open_threads_updates": true
+    }
+  ],
+  "runtime_canon_checks": [
+    {
+      "canon_file": "ch001",
+      "father_state": "病重，仍然存活"
+    },
+    {
+      "canon_file": "ch002",
+      "father_state": "病重，仍然存活"
+    },
+    {
+      "canon_file": "ch003",
+      "father_state": "病重，仍然存活"
+    },
+    {
+      "canon_file": "ch001_to_003",
+      "father_state": "病重，仍然存活"
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "chapter_002 preflight_context 未明确引用 chapter_001 confirmed_events",
+    "chapter_003 preflight_context 未引用 chapter_001 事件",
+    "chapter_003 preflight_context 未引用 chapter_002 事件",
+    "chapter_002 final.md 未包含钩子关键词「标签暴跌对应现实危险」",
+    "chapter_003 final.md 未包含钩子关键词「自己标签异常」"
+  ],
+  "passed": true
+}

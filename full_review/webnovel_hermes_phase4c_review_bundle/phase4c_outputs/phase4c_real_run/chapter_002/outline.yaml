@@ -1,0 +1,33 @@
+chapter: 2
+title: 误判代价
+goal: 林砚发现价格不是财富，尝试通过标签筹钱，选择代价浮现，回收费城客户线索，标签暴跌对应现实危险
+must_include:
+- 父亲仍病重存活
+- 医院缴费窗口承接
+- 林砚急需筹钱
+- 林砚误解被动摇
+- 选择代价浮现
+- 能力副作用
+- 光鲜客户线索回收
+- 新钩子
+scenes:
+- order: 1
+  title: 医院缴费窗口
+  location: 医院
+  purpose: 承接第一章结尾，缴费压力持续
+- order: 2
+  title: 回访光鲜客户
+  location: 望江路18号
+  purpose: 尝试筹集资金，发现线索
+- order: 3
+  title: 标签暴跌对应危险
+  location: 公寓地下室
+  purpose: 发现标签与现实危险的关联
+- order: 4
+  title: 代价浮现
+  location: 路上
+  purpose: 能力副作用显现，选择代价浮现
+- order: 5
+  title: 医院返回
+  location: 医院
+  purpose: 开头钩子：新线索与新代价

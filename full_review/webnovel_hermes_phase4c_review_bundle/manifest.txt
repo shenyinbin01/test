@@ -1,0 +1,65 @@
+阶段四C复审包清单
+=====================
+生成时间: 2026-05-23
+项目: price_tag_life (人生价格标签)
+阶段: 四C — 第二章与第三章真实连续生产验证
+
+目录结构:
+├── REVIEW_README.md             复审说明
+├── manifest.txt                 文件清单
+├── file_tree.txt                完整文件树
+├── security_scan.log            安全扫描
+├── command_logs/                验证命令日志
+│   ├── env_check.log
+│   ├── validate_project.log
+│   ├── compileall.log
+│   ├── run_chapter_pipeline_mock.log
+│   ├── validate_phase4_mock.log
+│   ├── validate_phase4_phase4b_real.log
+│   ├── sync_wps_dry_run.log
+├── project_files/               项目源文件
+│   ├── docs/
+│   │   ├── phase4b_result.md
+│   │   └── phase4c_result.md
+│   ├── scripts/
+│   │   ├── run_chapter_pipeline.py
+│   │   ├── validate_phase4.py
+│   │   ├── call_deepseek.py
+│   │   ├── validate_canon_consistency.py
+│   │   ├── validate_project.py
+│   │   └── sync_wps.py
+│   └── templates/prompts/
+│       ├── preflight_context.md
+│       ├── chapter_beat.md
+│       ├── chapter_writer.md
+│       ├── chapter_review.md
+│       ├── humanize.md
+│       ├── chapter_commit.md
+│       ├── chapter_outline.md
+│       └── story_bible.md
+├── phase4b_reference/           第一章real引用
+│   ├── chapter_001_final.md
+│   ├── chapter_001_commit.yaml
+│   └── runtime_canon_after_ch001_real.yaml
+└── phase4c_outputs/             阶段四C产物
+    ├── phase4c_summary.json
+    ├── phase4c_summary.md
+    ├── runtime_canon_after_ch002.yaml
+    ├── runtime_canon_after_ch003.yaml
+    ├── runtime_canon_after_ch001_to_ch003.yaml
+    ├── runtime_canon_after_ch002_real.yaml
+    ├── runtime_canon_after_ch003_real.yaml
+    ├── runtime_canon_real_ch001_to_ch003.yaml
+    ├── phase4c_real_run/
+    │   ├── chapter_002/         13个产物文件
+    │   └── chapter_003/         13个产物文件
+    └── phase4c_logs/
+        ├── deepseek_calls_phase4c.jsonl    12次调用
+        ├── validate_phase4c_real.json      验证报告
+        ├── continuity_report.json          连续性报告
+        ├── phase4c_canon.txt               canon约束
+        ├── chapter_002_hard_rules.txt
+        ├── chapter_003_hard_rules.txt
+        └── prompt_inputs/                  12个prompt输入
+
+安全扫描: ✅ 通过 (无API Key/密钥/WPS链接泄露)

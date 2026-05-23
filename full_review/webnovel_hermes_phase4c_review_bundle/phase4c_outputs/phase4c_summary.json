@@ -1,0 +1,98 @@
+{
+  "project": "price_tag_life",
+  "mode": "real",
+  "phase": "4C",
+  "chapters": [
+    2,
+    3
+  ],
+  "run_id": "phase4c_20260523_092706",
+  "execution_time": "2026-05-23T09:29:56.350988",
+  "chapter_results": [
+    {
+      "chapter": 2,
+      "steps": [
+        {
+          "step": "preflight_context",
+          "status": "ok",
+          "attempts": 1
+        },
+        {
+          "step": "chapter_beat",
+          "status": "ok",
+          "attempts": 1
+        },
+        {
+          "step": "chapter_writer",
+          "status": "ok",
+          "attempts": 1
+        },
+        {
+          "step": "chapter_review",
+          "status": "ok",
+          "attempts": 1
+        },
+        {
+          "step": "humanize",
+          "status": "ok",
+          "attempts": 1
+        },
+        {
+          "step": "chapter_commit",
+          "status": "ok",
+          "attempts": 1
+        }
+      ],
+      "success": true
+    },
+    {
+      "chapter": 3,
+      "steps": [
+        {
+          "step": "preflight_context",
+          "status": "ok",
+          "attempts": 1
+        },
+        {
+          "step": "chapter_beat",
+          "status": "ok",
+          "attempts": 1
+        },
+        {
+          "step": "chapter_writer",
+          "status": "ok",
+          "attempts": 1
+        },
+        {
+          "step": "chapter_review",
+          "status": "ok",
+          "attempts": 1
+        },
+        {
+          "step": "humanize",
+          "status": "ok",
+          "attempts": 1
+        },
+        {
+          "step": "chapter_commit",
+          "status": "ok",
+          "attempts": 1
+        }
+      ],
+      "success": true
+    }
+  ],
+  "success": true,
+  "failed_step": null,
+  "total_chapters": 2,
+  "success_count": 2,
+  "failed_count": 0,
+  "deepseek_call_stats": {
+    "run_id": "phase4c_20260523_092706",
+    "actual_call_count": 12,
+    "retry_count": 0,
+    "successful_call_count": 12,
+    "failed_call_count": 0,
+    "expected_nodes": 12
+  }
+}

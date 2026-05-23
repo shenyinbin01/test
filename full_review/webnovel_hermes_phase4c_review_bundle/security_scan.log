@@ -1,0 +1,19 @@
+=== 安全扫描 ===
+扫描时间: 2026-05-23 09:30
+
+--- 真实 API Key (sk-开头) ---
+未发现 ✅
+
+--- 真实 .env ---
+未发现 ✅
+
+--- WPS file_id / doc_link / folder_id / link_id ---
+  file_id: 2 matches (非敏感字段名引用)
+  doc_link: 0 matches (非敏感字段名引用)
+  folder_id: 0 matches (非敏感字段名引用)
+  link_id: 0 matches (非敏感字段名引用)
+
+--- __pycache__ / .pyc ---
+未发现 ✅
+
+安全扫描完成 ✅

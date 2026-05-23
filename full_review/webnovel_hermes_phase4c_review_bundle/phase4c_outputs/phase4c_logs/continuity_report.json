@@ -1,0 +1,22 @@
+{
+  "project": "price_tag_life",
+  "mode": "real",
+  "phase": "4C",
+  "chapters_checked": [
+    2,
+    3
+  ],
+  "chapter_continuity": [
+    {
+      "chapter": 2,
+      "success": true
+    },
+    {
+      "chapter": 3,
+      "success": true
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

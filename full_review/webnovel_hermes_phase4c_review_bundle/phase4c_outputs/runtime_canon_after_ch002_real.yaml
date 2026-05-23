@@ -1,0 +1,70 @@
+project:
+  title: 人生价格标签
+protagonist:
+  name: 林砚
+  age: 24
+  identity: 外卖员
+  status:
+    money_pressure: true
+    father_ill: true
+    ability_awakened: true
+    understands_label: true
+characters:
+- id: father
+  name: 林父
+  role: 父亲
+  current_state: 病重，仍然存活
+confirmed_events:
+- chapter: 1
+  event: 林砚在老旧小区六楼走廊看见一个穿旧夹克的老人头顶悬着六位数的淡金色数字
+- chapter: 1
+  event: 林砚揉眼确认数字存在，试图看清时感到太阳穴刺痛
+- chapter: 1
+  event: 老人平静地看了林砚一眼，没有多言
+- chapter: 1
+  event: 林砚送第二单到高档公寓，开门的光鲜客户头顶有五位数价格且正在快速下跌
+- chapter: 1
+  event: 客户挂断电话后脸色铁青地接过餐盒
+- chapter: 1
+  event: 林砚误以为价格标签代表财富，判断老人是隐形富豪、客户正在破产
+- chapter: 1
+  event: 林砚改变路线返回老旧小区，在水果摊前看到老人为三毛六讨价还价
+- chapter: 1
+  event: 林砚主动搭讪老人，老人回应“年轻人，眼神太好有时候不是好事”后离开
+- chapter: 1
+  event: 林砚收到医院催缴短信，赶到第三人民医院缴费窗口
+- chapter: 1
+  event: 林砚余额不足五千一，差三千一，护士告知欠费三天将停药
+- chapter: 1
+  event: 林砚在病房门口看见病床上父亲头顶价格正在变淡、碎裂、消失
+- chapter: 1
+  event: 父亲头顶数字从五位数降至零，最后一位数字闪烁后彻底熄灭，只剩空白
+- chapter: 2
+  event: 林砚在医院走廊再次使用能力，确认中年男人头顶标签为五位数且稳定，能力未消失
+- chapter: 2
+  event: 林砚接单前往望江路，发现光鲜客户所在公寓楼被警方封锁，涉案经济诈骗金额达八位数
+- chapter: 2
+  event: 林砚通过时间比对确认标签暴跌发生在诈骗暴露前约四分钟，推断标签能预警危险
+- chapter: 2
+  event: 林砚收到一条来自未显示号码的短信“你看见了对吧”，回拨后关机
+- chapter: 2
+  event: 林砚潜入地下停车场，看见一个穿西装的中年男人，其头顶标签为七位数且边缘闪烁红光
+- chapter: 2
+  event: 林砚因强行使用能力导致短暂失明和耳鸣，恢复后发现地上掉落一张“方迟”名片，背面有槐安路17号地址
+- chapter: 2
+  event: 林砚前往槐安路，遇到老人，老人用“两块钱的葱”比喻林砚对标签的理解，并说“眼神太好不是好事”
+- chapter: 2
+  event: 林砚返回医院，父亲头顶依然空白，他拨打名片电话接通后听到女声“你终于打来了”
+- chapter: 2
+  event: 林砚父亲心率急剧下降，护士准备抢救，电话中女声说“你父亲的时间不多了”
+- chapter: 3
+  event: 林砚在重症监护室外观察病人家属头顶标签随选择变化，验证标签代表选择代价而非财富
+- chapter: 3
+  event: 林砚主动借出两千元给陌生妇女，妇女选择昂贵治疗方案后标签上升
+- chapter: 3
+  event: 林砚使用能力后经历剧烈头痛、耳鸣、视力模糊
+- chapter: 3
+  event: 林砚因超时配送被平台扣信用分5分并罚款50元
+- chapter: 3
+  event: 林砚在落地镜中发现自己的标签异常闪烁，边缘带有暗红色光晕，与其他人的稳定标签不同
+open_threads: []
