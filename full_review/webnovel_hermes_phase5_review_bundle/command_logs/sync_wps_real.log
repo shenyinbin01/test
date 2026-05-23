@@ -1,0 +1,13 @@
+==================================================
+  WPS 同步 — real
+==================================================
+
+📄 DOCX: /data/webnovel-lab/demo_output/phase5_wps_projection/price_tag_life_volume_001.docx (46785 bytes)
+✅ kdocs-cli: /home/agentuser/.local/bin/kdocs-cli
+📁 目标文件夹: 小说 (parent_id 已配置)
+
+⬆️ 模式: real（真实上传）
+   文件: price_tag_life_volume_001.docx
+   目标: 小说
+
+✅ WPS 同步成功 (business_code=0)

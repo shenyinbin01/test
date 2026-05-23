@@ -1,0 +1,97 @@
+{
+  "mode": "real",
+  "projection_root": "/data/webnovel-lab/demo_output/phase5_wps_projection",
+  "state_root": "/data/webnovel-lab/demo_output/phase5_wps_state",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "projection_checks": [
+    {
+      "check": "price_tag_life_ch001.md",
+      "exists": true,
+      "ok": true,
+      "size_bytes": 5761
+    },
+    {
+      "check": "price_tag_life_ch002.md",
+      "exists": true,
+      "ok": true,
+      "size_bytes": 7014
+    },
+    {
+      "check": "price_tag_life_ch003.md",
+      "exists": true,
+      "ok": true,
+      "size_bytes": 8174
+    },
+    {
+      "check": "price_tag_life_volume_001.md",
+      "exists": true,
+      "ok": true,
+      "size_bytes": 21026
+    },
+    {
+      "check": "price_tag_life_volume_001.docx",
+      "exists": true,
+      "ok": true,
+      "size_bytes": 46785
+    },
+    {
+      "check": "projection_manifest.json",
+      "exists": true,
+      "ok": true,
+      "size_bytes": 1388
+    },
+    {
+      "check": "projection_manifest.json",
+      "exists": true,
+      "parsable": true,
+      "keys": [
+        "project",
+        "title",
+        "volume",
+        "chapters",
+        "combined_markdown",
+        "docx",
+        "docx_sha256",
+        "docx_size_bytes",
+        "created_at",
+        "source_phase"
+      ]
+    },
+    {
+      "check": "manifest_chapters_count",
+      "count": 3,
+      "expected": 3
+    }
+  ],
+  "state_checks": [
+    {
+      "check": "doc_meta.yaml",
+      "exists": true,
+      "parsable": true,
+      "status": "success",
+      "mode": "real"
+    },
+    {
+      "check": "sync_log.jsonl",
+      "exists": true,
+      "line_count": 4,
+      "valid_lines": 4,
+      "invalid_lines": 0,
+      "all_valid": true
+    }
+  ],
+  "security_checks": [
+    {
+      "check": "doc_meta.yaml_no_real_urls",
+      "issues": [],
+      "secure": true
+    },
+    {
+      "check": "sync_log.jsonl_no_real_urls",
+      "issues": [],
+      "secure": true
+    }
+  ]
+}

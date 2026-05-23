@@ -1,0 +1,47 @@
+阶段五复审包清单
+=====================
+生成时间: 2026-05-23
+项目: price_tag_life (人生价格标签)
+阶段: 五 — WPS/Kdocs 同步稳定化
+
+目录结构:
+├── REVIEW_README.md             复审说明
+├── manifest.txt                 文件清单
+├── file_tree.txt                完整文件树
+├── security_scan.log            安全扫描
+├── command_logs/
+│   ├── env_check.log
+│   ├── validate_project.log
+│   ├── compileall.log
+│   ├── build_wps_projection.log
+│   ├── validate_wps_sync_dry_run_before.log
+│   ├── sync_wps_dry_run.log
+│   ├── validate_wps_sync_dry_run_after.log
+│   ├── sync_wps_real.log
+│   └── validate_wps_sync_real.log
+├── project_files/
+│   ├── docs/phase5_result.md
+│   └── scripts/
+│       ├── build_wps_projection.py     ← 新增
+│       ├── sync_wps.py                 ← 强化版
+│       ├── validate_wps_sync.py        ← 新增
+│       ├── render_docx.py
+│       └── validate_project.py
+└── phase5_outputs/
+    ├── projection/
+    │   ├── price_tag_life_ch001.md
+    │   ├── price_tag_life_ch002.md
+    │   ├── price_tag_life_ch003.md
+    │   ├── price_tag_life_volume_001.md
+    │   ├── projection_manifest.json
+    │   └── price_tag_life_volume_001.docx.sha256
+    └── wps_state/
+        ├── doc_meta.yaml               ← 脱敏
+        ├── sync_log.jsonl              ← 脱敏
+        └── validate_wps_sync_result.json
+
+关键数据:
+- 投影总字数: 5,714 中文字（三章合计）
+- DOCX 大小: 46,785 bytes
+- 真实上传: ✅ success, business_code=0
+- 安全扫描: ✅ 通过

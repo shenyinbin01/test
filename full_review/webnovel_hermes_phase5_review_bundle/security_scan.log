@@ -1,0 +1,19 @@
+=== 安全扫描 ===
+扫描时间: 2026-05-23
+
+  sk-: 0 matches (安全)
+  authorization: 0 matches (安全)
+  api_key: 0 matches (安全)
+  token: 2 matches (安全)
+  cookie: 1 matches (安全)
+  password: 1 matches (安全)
+  kdocs: 20 matches (安全)
+  file_id: 4 matches (安全)
+  doc_link: 3 matches (安全)
+  folder_id: 2 matches (安全)
+  link_id: 2 matches (安全)
+
+--- .env / __pycache__ / .pyc / .git ---
+未发现 ✅
+
+安全扫描通过 ✅
