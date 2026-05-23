@@ -1,0 +1,26 @@
+=== YAML 解析验证 ===
+
+检查文件列表：
+1. /data/webnovel-lab/demo_output/phase4c_real_run/chapter_002/commit.yaml
+2. /data/webnovel-lab/demo_output/phase4c_real_run/chapter_003/commit.yaml
+3. /data/webnovel-lab/demo_output/phase4c_real_run/runtime_canon_after_ch002_real.yaml
+4. /data/webnovel-lab/demo_output/phase4c_real_run/runtime_canon_after_ch003_real.yaml
+5. /data/webnovel-lab/demo_output/phase4c_real_run/runtime_canon_real_ch001_to_ch003.yaml
+
+检查结果：
+  ✅ chapter_002 commit.yaml parse ok (dict)
+  ✅ chapter_003 commit.yaml parse ok (dict)
+  ✅ runtime_canon_after_ch002_real.yaml parse ok (dict)
+  ✅ runtime_canon_after_ch003_real.yaml parse ok (dict)
+  ✅ runtime_canon_real_ch001_to_ch003.yaml parse ok (dict)
+
+修复记录：
+- chapter_003/commit.yaml 曾被 Markdown 代码块 ```yaml ... ``` 包裹，已移除
+- 其余文件格式正常，无需修复
+
+格式说明：
+- 所有文件均为标准多行 YAML（非一行压缩文本）
+- 每行长度适中，无超长行
+- yaml.safe_load 全部通过
+
+结论：YAML 格式全部合规 ✅

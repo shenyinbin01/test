@@ -1,0 +1,20 @@
+=== run_chapter_pipeline_phase4c_real.log 缺失说明 ===
+
+原始 stdout 日志在 git rebase 过程中丢失。
+
+当前可审计依据：
+1. phase4c_summary.json — 汇总了章节执行结果和 DeepSeek 调用统计
+2. deepseek_calls_phase4c.json — 12 次真实调用的完整记录（JSON 数组，权威审计版本）
+3. deepseek_calls_phase4c.jsonl — 12 行标准 JSONL（与 JSON 数组内容一致）
+4. validate_phase4c_real.json — 三章合并验证报告
+5. 各 chapter_002 / chapter_003 目录下的 13 个产物文件
+6. phase4c_outputs/phase4c_logs/prompt_inputs/ — 12 个完整 prompt 快照
+
+执行摘要（从 phase4c_summary.json 提取）：
+- 章节: chapter_002 + chapter_003
+- 模式: real
+- 执行结果: 12/12 节点全部一次成功，0 重试
+- chapter_002: 6/6 成功 ✅
+- chapter_003: 6/6 成功 ✅
+
+后续阶段应保留原始命令日志（使用 tee 或重定向到文件）。

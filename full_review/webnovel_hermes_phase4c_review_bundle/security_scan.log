@@ -1,19 +1,53 @@
 === 安全扫描 ===
-扫描时间: 2026-05-23 09:30
+扫描时间: 2026-05-23
 
 --- 真实 API Key (sk-开头) ---
-未发现 ✅
+  未发现 ✅
 
---- 真实 .env ---
-未发现 ✅
+--- Authorization ---
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/docs/phase4b_result.md:91:| 是否发现 Authorization | 否 ✅ |
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/docs/phase4c_result.md:110:| 是否发现 Authorization | 否 ✅ |
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/scripts/call_deepseek.py:174:                    "Authorization": f"Bearer {api_key}",
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/scripts/call_deepseek.py:289:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+  字段名引用（非真实值）：对，安全 ✅
 
---- WPS file_id / doc_link / folder_id / link_id ---
-  file_id: 2 matches (非敏感字段名引用)
-  doc_link: 0 matches (非敏感字段名引用)
-  folder_id: 0 matches (非敏感字段名引用)
-  link_id: 0 matches (非敏感字段名引用)
+--- api_key ---
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/scripts/call_deepseek.py:28:    for k in ["DEEPSEEK_API_KEY", "DEEPSEEK_BASE_URL", "DEEPSEEK_MODEL"]:
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/scripts/call_deepseek.py:50:            if ds.get("api_key") and "DEEPSEEK_API_KEY" not in env:
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/scripts/call_deepseek.py:51:                env["DEEPSEEK_API_KEY"] = ds["api_key"]
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/scripts/call_deepseek.py:111:    api_key = env.get("DEEPSEEK_API_KEY")
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/scripts/call_deepseek.py:115:    if not api_key:
+  字段名引用（非真实值）：对，安全 ✅
 
---- __pycache__ / .pyc ---
-未发现 ✅
+--- token ---
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/scripts/call_deepseek.py:101:              task_name="default", temperature=0.7, max_tokens=1200,
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/scripts/call_deepseek.py:162:        "max_tokens": max_tokens,
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/scripts/call_deepseek.py:289:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/scripts/call_deepseek.py:307:    parser.add_argument("--max-tokens", type=int, default=1200, help="最大 token 数 (默认 1200)")
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/scripts/call_deepseek.py:341:            max_tokens=args.max_tokens,
+  字段名引用（非真实值）：对，安全 ✅
 
-安全扫描完成 ✅
+--- cookie ---
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/scripts/call_deepseek.py:289:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+  未发现 ✅
+
+--- password ---
+/opt/webnovel-hermes-wps/full_review/webnovel_hermes_phase4c_review_bundle/project_files/scripts/call_deepseek.py:289:                  if k not in ("api_key", "authorization", "token", "cookie", "password")}
+  未发现 ✅
+
+--- kdocs ---
+  未发现 ✅
+
+--- file_id / doc_link / folder_id / link_id ---
+  字段名引用（非真实值）：对，安全 ✅
+
+--- .env ---
+  未发现 ✅
+
+--- __pycache__ / *.pyc ---
+  未发现 ✅
+
+--- .git ---
+  未发现 ✅
+
+安全扫描通过 ✅

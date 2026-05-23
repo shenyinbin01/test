@@ -1,3 +1,11 @@
+  [validate_phase4c] project=price_tag_life phase=4C
+    errors: 0
+    ⚠️ chapter_002 preflight_context 未明确引用 chapter_001 confirmed_events
+    ⚠️ chapter_003 preflight_context 未引用 chapter_001 事件
+    ⚠️ chapter_003 preflight_context 未引用 chapter_002 事件
+    ⚠️ chapter_002 final.md 未包含钩子关键词「标签暴跌对应现实危险」
+    ⚠️ chapter_003 final.md 未包含钩子关键词「自己标签异常」
+    passed: True
 {
   "project": "price_tag_life",
   "mode": "real",
@@ -245,32 +253,6 @@
     {
       "canon_file": "ch001_to_003",
       "father_state": "病重，仍然存活"
-    }
-  ],
-  "false_positive_warnings": [
-    {
-      "check": "chapter_002 preflight_context references chapter_001 events",
-      "reason": "验证器只做关键词匹配（如'confirmed_events'），但实际 preflight 中有'上一章结束时发生了什么'章节，逐条列出了林砚第一次看到标签、老人、光鲜客户、医院缴费窗口、父亲价格归零等全部 ch001 事件",
-      "evidence_path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_002/preflight_context.md",
-      "evidence_summary": "包含完整章节:'上一章结束时发生了什么'，列出6个关键事件"
-    },
-    {
-      "check": "chapter_003 preflight_context references chapter_001 and chapter_002 events",
-      "reason": "验证器只做关键词匹配（如'confirmed_events'、'chapter_001'），但实际 preflight 中有'林砚在第二章结束时'章节，引用了光鲜客户诈骗被捕、能力副作用、代缴押金、短信约见等 ch002 事件，并在'当前状态概要'中列出了 ch001 的老人身份待揭示、父亲价格归零等事件",
-      "evidence_path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_003/preflight_context.md",
-      "evidence_summary": "'林砚在第二章结束时'段落明确列出7个ch002事件，'当前待解决线索'列出5个ch001+ch002线索"
-    },
-    {
-      "check": "chapter_002 final.md has ending hook",
-      "reason": "验证器检查关键词'标签暴跌对应现实危险'，但实际结尾钩子是'神秘短信约见'（'明天下午三点，老地方见'），属于另一种形式的悬念钩子",
-      "evidence_path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_002/final.md",
-      "evidence_summary": "结尾以陌生短信'明天下午三点，老地方见'制造悬念，推动读者期待下一章"
-    },
-    {
-      "check": "chapter_003 final.md has ending hook",
-      "reason": "验证器检查关键词'自己标签异常'，但实际结尾是林砚在洗手间镜中看到自己头顶出现闪烁不定的异常数字，并伴有'不属于这个世界该有的规则'的内心独白悬念",
-      "evidence_path": "/data/webnovel-lab/demo_output/phase4c_real_run/chapter_003/final.md",
-      "evidence_summary": "结尾以林砚自身标签异常（闪烁/异常数字）作为强悬念钩子"
     }
   ],
   "errors": [],

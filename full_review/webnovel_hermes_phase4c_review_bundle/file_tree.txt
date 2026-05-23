@@ -1,11 +1,16 @@
 command_logs/compileall.log
 command_logs/env_check.log
 command_logs/run_chapter_pipeline_mock.log
+command_logs/run_chapter_pipeline_phase4c_real.log.missing.txt
 command_logs/sync_wps_dry_run.log
 command_logs/validate_phase4_mock.log
 command_logs/validate_phase4_phase4b_real.log
+command_logs/validate_phase4_phase4c_real.log
 command_logs/validate_project.log
+command_logs/verify_deepseek_calls_phase4c_json_array.log
+command_logs/verify_phase4c_yaml_parse.log
 file_tree.txt
+manifest.txt
 phase4b_reference/chapter_001_commit.yaml
 phase4b_reference/chapter_001_final.md
 phase4b_reference/commit.yaml
@@ -14,6 +19,7 @@ phase4b_reference/runtime_canon_after_ch001_real.yaml
 phase4c_outputs/phase4c_logs/chapter_002_hard_rules.txt
 phase4c_outputs/phase4c_logs/chapter_003_hard_rules.txt
 phase4c_outputs/phase4c_logs/continuity_report.json
+phase4c_outputs/phase4c_logs/deepseek_calls_phase4c.json
 phase4c_outputs/phase4c_logs/deepseek_calls_phase4c.jsonl
 phase4c_outputs/phase4c_logs/phase4c_canon.txt
 phase4c_outputs/phase4c_logs/prompt_inputs/chapter_beat_input_snapshot_ch2.md
@@ -85,4 +91,5 @@ project_files/templates/prompts/chapter_writer.md
 project_files/templates/prompts/humanize.md
 project_files/templates/prompts/preflight_context.md
 project_files/templates/prompts/story_bible.md
+REVIEW_README.md
 security_scan.log

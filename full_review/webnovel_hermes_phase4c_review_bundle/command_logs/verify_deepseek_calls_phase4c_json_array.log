@@ -1,0 +1,40 @@
+=== deepseek_calls_phase4c.json 审计验证 ===
+JSON 数组路径: full_review/webnovel_hermes_phase4c_review_bundle/phase4c_outputs/phase4c_logs/deepseek_calls_phase4c.json
+
+数组长度：12
+
+chapter_002 调用数：6
+chapter_003 调用数：6
+
+=== chapter_002 任务列表 ===
+  preflight_context  success=True  attempt=1  retry_of=None
+  chapter_beat  success=True  attempt=1  retry_of=None
+  chapter_writer  success=True  attempt=1  retry_of=None
+  chapter_review  success=True  attempt=1  retry_of=None
+  humanize  success=True  attempt=1  retry_of=None
+  chapter_commit  success=True  attempt=1  retry_of=None
+
+=== chapter_003 任务列表 ===
+  preflight_context  success=True  attempt=1  retry_of=None
+  chapter_beat  success=True  attempt=1  retry_of=None
+  chapter_writer  success=True  attempt=1  retry_of=None
+  chapter_review  success=True  attempt=1  retry_of=None
+  humanize  success=True  attempt=1  retry_of=None
+  chapter_commit  success=True  attempt=1  retry_of=None
+
+=== 批量检查 ===
+全部 success=true：是 ✅
+全部 attempt=1：是 ✅
+全部 retry_of=null：是 ✅
+
+=== 安全检查 ===
+  ✅ API Key: 未发现
+  ✅ Authorization: 未发现
+  ✅ api_key: 未发现
+  ✅ token: 未发现
+  ✅ cookie: 未发现
+  ✅ password: 未发现
+
+安全检查通过：是 ✅
+
+结论：deepseek_calls_phase4c.json 可审计 ✅
