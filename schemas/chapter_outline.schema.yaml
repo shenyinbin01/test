@@ -1,0 +1,37 @@
+# chapter_outline.schema.yaml
+# 单章大纲：章节号、标题、核心冲突、爽点、钩子
+
+chapter:
+  type: object
+  required: [number, title, conflict, hook, word_count_budget]
+  fields:
+    number: { type: integer, desc: "章节号" }
+    title: { type: string, desc: "章节标题" }
+    conflict: { type: string, desc: "核心冲突一句话" }
+    hook: { type: string, desc: "章尾钩子" }
+
+pacing:
+  type: object
+  fields:
+    emotion_arc: { type: string, desc: "情绪曲线走向" }
+    tension_start: { type: integer, desc: "开场张力 1-10", min: 1, max: 10 }
+    tension_end: { type: integer, desc: "结尾张力 1-10", min: 1, max: 10 }
+    climax_position: { type: number, desc: "高潮位置（章节百分比 0-1）" }
+
+beats_summary:
+  type: array
+  item:
+    type: object
+    fields:
+      beat: { type: integer, desc: "节拍序号" }
+      action: { type: string, desc: "场景动作简述" }
+      emotion: { type: string, desc: "目标情绪" }
+
+word_count_budget:
+  type: integer
+  desc: "预算字数"
+
+characters_involved:
+  type: array
+  items: string
+  desc: "本章出场角色"

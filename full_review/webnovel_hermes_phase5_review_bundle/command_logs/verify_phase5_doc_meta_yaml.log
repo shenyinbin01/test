@@ -1,0 +1,15 @@
+verify_phase5_doc_meta_yaml.log
+===============================
+时间: 2026-05-23T10:00+08:00
+验证内容: doc_meta.yaml 多行 YAML
+
+检查结果:
+- yaml.safe_load ok: 是
+- 多行格式 (line_count=11): 是
+- status: success
+- mode: real
+- business_code: 0
+- 无真实 URL/file_id/link_id/folder_id/doc_link: 是
+- redacted: true
+
+结论: ✅ doc_meta.yaml 多行 YAML 可解析，已脱敏

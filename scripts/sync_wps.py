@@ -1,23 +1,25 @@
 #!/usr/bin/env python3
 """
-sync_wps.py — 同步 DOCX 到 WPS/Kdocs (阶段五强化版)
+sync_wps.py — 同步 DOCX 到 WPS/Kdocs (阶段五尾修强化版 v3)
 
 用法：
   python scripts/sync_wps.py                          # dry-run（默认）
   python scripts/sync_wps.py --dry-run ...             # 显式 dry-run
   python scripts/sync_wps.py --real --input PATH ...   # 真实上传
 
-强化内容：
-  - subprocess returncode != 0 -> failed
-  - stdout 非 JSON -> status=unknown, 不判 success
-  - 业务 code != 0 -> failed
-  - doc_meta.yaml / sync_log.jsonl 标准化写入
-  - 脱敏标记
+强化内容（v3）：
+  - kdocs-cli timeout 时必须写 doc_meta.yaml 和 sync_log（含 sync_log.json）
+  - subprocess 异常时必须写 doc_meta.yaml 和 sync_log
+  - stdout 非 JSON 时必须写 status=unknown，并退出 1
+  - status=unknown 不能被 validate 判通过
+  - 新增 run_id 字段（UUID）用于每次运行区分
+  - doc_meta.yaml / sync_log.jsonl / sync_log.json 均含 run_id
 """
 
 import os
 import sys
 import json
+import uuid
 import base64
 import subprocess
 import argparse
@@ -26,6 +28,13 @@ from datetime import datetime
 
 
 DATA_ROOT = Path(os.environ.get("WEBNOVEL_DATA_ROOT", "/data/webnovel-lab"))
+
+
+def generate_run_id():
+    """生成独立 run_id：时间戳 + UUID 短尾"""
+    ts = datetime.now().strftime("%Y%m%dT%H%M%S")
+    short_uuid = str(uuid.uuid4())[:8]
+    return f"phase5-{ts}-{short_uuid}"
 
 
 def parse_kdocs_result(stdout):
@@ -118,7 +127,7 @@ def get_env_value(content, key):
 
 
 def write_doc_meta(path, meta):
-    """写 doc_meta.yaml（脱敏），使用 yaml 格式"""
+    """写 doc_meta.yaml（脱敏），使用多行 YAML 格式"""
     lines = []
     for k, v in meta.items():
         if isinstance(v, str) and v:
@@ -126,12 +135,33 @@ def write_doc_meta(path, meta):
         else:
             lines.append(f"{k}: {v}")
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    # 确保写入的是多行格式
+    assert "\n" in path.read_text(encoding="utf-8"), "doc_meta.yaml 写入检查: 非多行格式"
 
 
-def write_sync_log(path, entry):
+def write_sync_log_jsonl(path, entry):
     """追加写入 sync_log.jsonl"""
     with open(path, "a", encoding="utf-8") as f:
         f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+
+
+def write_sync_log_json(path, entry, log_path_jsonl):
+    """
+    写入/追加 sync_log.json（标准 JSON 数组）。
+    读取现有内容（若存在），追加 entry，重新写入。
+    """
+    if path.exists():
+        try:
+            existing = json.loads(path.read_text(encoding="utf-8"))
+            if isinstance(existing, list):
+                existing.append(entry)
+            else:
+                existing = [existing, entry]
+        except Exception:
+            existing = [entry]
+    else:
+        existing = [entry]
+    path.write_text(json.dumps(existing, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def sanitize_for_bundle(entry):
@@ -143,8 +173,15 @@ def sanitize_for_bundle(entry):
     return safe
 
 
+def write_all_state(meta_path, log_path_jsonl, log_path_json, meta, log_entry):
+    """统一写入 doc_meta.yaml + sync_log.jsonl + sync_log.json"""
+    write_doc_meta(meta_path, meta)
+    write_sync_log_jsonl(log_path_jsonl, log_entry)
+    write_sync_log_json(log_path_json, log_entry, log_path_jsonl)
+
+
 def main():
-    parser = argparse.ArgumentParser(description="同步 DOCX 到 WPS/Kdocs (阶段五强化版)")
+    parser = argparse.ArgumentParser(description="同步 DOCX 到 WPS/Kdocs (阶段五尾修强化版 v3)")
     parser.add_argument("--dry-run", action="store_true", help="仅检查，不上传（默认）")
     parser.add_argument("--real", action="store_true", help="真实上传")
     parser.add_argument("--project", default="price_tag_life", help="项目名")
@@ -157,9 +194,11 @@ def main():
     project = args.project
     is_dry_run = not args.real
     sync_time = datetime.now().isoformat()
+    run_id = generate_run_id()
 
     print("=" * 50)
     print(f"  WPS 同步 — {'dry-run' if is_dry_run else 'real'}")
+    print(f"  run_id: {run_id}")
     print("=" * 50)
     print()
 
@@ -167,7 +206,6 @@ def main():
     if args.input:
         docx_path = Path(args.input)
     else:
-        # 从默认投影输出查找
         default_path = DATA_ROOT / "demo_output" / "phase5_wps_projection" / f"{project}_volume_001.docx"
         docx_path = default_path if default_path.exists() else None
 
@@ -196,12 +234,19 @@ def main():
         meta_path = DATA_ROOT / "demo_output" / "phase5_wps_state" / "doc_meta.yaml"
 
     if args.sync_log:
-        log_path = Path(args.sync_log)
+        # 既作为 jsonl 也作为 json 的基础名（如果传入的是 .jsonl 则自动派生 .json）
+        log_path_jsonl = Path(args.sync_log)
+        if log_path_jsonl.suffix == ".jsonl":
+            log_path_json = log_path_jsonl.with_suffix(".json")
+        else:
+            log_path_json = log_path_jsonl.parent / "sync_log.json"
     else:
-        log_path = DATA_ROOT / "demo_output" / "phase5_wps_state" / "sync_log.jsonl"
+        log_path_jsonl = DATA_ROOT / "demo_output" / "phase5_wps_state" / "sync_log.jsonl"
+        log_path_json = DATA_ROOT / "demo_output" / "phase5_wps_state" / "sync_log.json"
 
     meta_path.parent.mkdir(parents=True, exist_ok=True)
-    log_path.parent.mkdir(parents=True, exist_ok=True)
+    log_path_jsonl.parent.mkdir(parents=True, exist_ok=True)
+    log_path_json.parent.mkdir(parents=True, exist_ok=True)
 
     # ── 5. dry-run ──
     if is_dry_run:
@@ -220,6 +265,7 @@ def main():
             "target_folder": args.target_folder,
             "local_file": str(docx_path),
             "redacted": "true",
+            "run_id": run_id,
         }
         write_doc_meta(meta_path, meta)
 
@@ -233,12 +279,17 @@ def main():
             "message": "仅检查，未上传",
             "local_file": str(docx_path),
             "target_folder": args.target_folder,
+            "redacted": True,
+            "run_id": run_id,
         }
-        write_sync_log(log_path, log_entry)
+        write_sync_log_jsonl(log_path_jsonl, log_entry)
+        write_sync_log_json(log_path_json, log_entry, log_path_jsonl)
 
         print("✅ dry-run 完成")
         print(f"   doc_meta.yaml: {meta_path}")
-        print(f"   sync_log.jsonl: {log_path}")
+        print(f"   sync_log.jsonl: {log_path_jsonl}")
+        print(f"   sync_log.json: {log_path_json}")
+        print(f"   run_id: {run_id}")
         sys.exit(0)
 
     # ── 6. real 上传 ──
@@ -246,6 +297,7 @@ def main():
     print("⬆️ 模式: real（真实上传）")
     print(f"   文件: {docx_path.name}")
     print(f"   目标: {args.target_folder}")
+    print(f"   run_id: {run_id}")
 
     # 6a. base64 编码
     try:
@@ -264,11 +316,22 @@ def main():
             "target_folder": args.target_folder,
             "local_file": str(docx_path),
             "redacted": "true",
+            "run_id": run_id,
         }
-        write_doc_meta(meta_path, meta)
-        log_entry = {**meta, "mode": "real", "redacted": None}
-        del log_entry["redacted"]
-        write_sync_log(log_path, log_entry)
+        log_entry = {
+            "sync_time": sync_time,
+            "project": project,
+            "file_name": docx_path.name,
+            "mode": "real",
+            "status": "failed",
+            "business_code": -1,
+            "message": f"文件读取/base64 失败: {e}",
+            "local_file": str(docx_path),
+            "target_folder": args.target_folder,
+            "redacted": True,
+            "run_id": run_id,
+        }
+        write_all_state(meta_path, log_path_jsonl, log_path_json, meta, log_entry)
         sys.exit(1)
 
     payload = {
@@ -286,27 +349,74 @@ def main():
         )
     except subprocess.TimeoutExpired:
         print("❌ kdocs-cli 执行超时 (30s)")
-        status = "failed"
-        msg = "执行超时"
-        business_code = -1
+        # 强化规则: timeout 也必须写入状态
+        meta = {
+            "project": project,
+            "file_name": docx_path.name,
+            "mode": "real",
+            "status": "failed",
+            "business_code": -1,
+            "message": "kdocs-cli 执行超时 (30s)",
+            "sync_time": sync_time,
+            "target_folder": args.target_folder,
+            "local_file": str(docx_path),
+            "redacted": "true",
+            "run_id": run_id,
+        }
+        log_entry = {
+            "sync_time": sync_time,
+            "project": project,
+            "file_name": docx_path.name,
+            "mode": "real",
+            "status": "failed",
+            "business_code": -1,
+            "message": "kdocs-cli 执行超时 (30s)",
+            "local_file": str(docx_path),
+            "target_folder": args.target_folder,
+            "redacted": True,
+            "run_id": run_id,
+        }
+        write_all_state(meta_path, log_path_jsonl, log_path_json, meta, log_entry)
         sys.exit(1)
     except Exception as e:
         print(f"❌ kdocs-cli 执行异常: {e}")
-        status = "failed"
-        msg = str(e)
-        business_code = -1
+        # 强化规则: subprocess 异常也必须写入状态
+        meta = {
+            "project": project,
+            "file_name": docx_path.name,
+            "mode": "real",
+            "status": "failed",
+            "business_code": -1,
+            "message": f"kdocs-cli 执行异常: {e}",
+            "sync_time": sync_time,
+            "target_folder": args.target_folder,
+            "local_file": str(docx_path),
+            "redacted": "true",
+            "run_id": run_id,
+        }
+        log_entry = {
+            "sync_time": sync_time,
+            "project": project,
+            "file_name": docx_path.name,
+            "mode": "real",
+            "status": "failed",
+            "business_code": -1,
+            "message": f"kdocs-cli 执行异常: {e}",
+            "local_file": str(docx_path),
+            "target_folder": args.target_folder,
+            "redacted": True,
+            "run_id": run_id,
+        }
+        write_all_state(meta_path, log_path_jsonl, log_path_json, meta, log_entry)
         sys.exit(1)
 
     # 6c. 解析结果
     stdout = result.stdout
     stderr = result.stderr
 
-    # subprocess returncode != 0 是警告信号，但不一定等于业务失败
     if result.returncode != 0:
-        # 检查 stdout 是否有有效 JSON
         business_ok, business_code, msg = parse_kdocs_result(stdout)
         if business_ok is None:
-            # 既无有效 JSON，returncode 也非 0 -> failed
             status = "failed"
             business_code = result.returncode
             msg = f"kdocs-cli 进程失败 (exit={result.returncode}): {stderr[:200]}"
@@ -315,10 +425,9 @@ def main():
         else:
             status = "failed"
     else:
-        # returncode == 0, 解析 stdout
         business_ok, business_code, msg = parse_kdocs_result(stdout)
         if business_ok is None:
-            # stdout 非 JSON -> status=unknown，不能判 success
+            # 强化规则: stdout 非 JSON -> status=unknown，退出 1
             status = "unknown"
             business_code = None
             msg = f"stdout 非 JSON 格式，无法确认业务结果"
@@ -339,9 +448,8 @@ def main():
         "target_folder": args.target_folder,
         "local_file": str(docx_path),
         "redacted": "true",
+        "run_id": run_id,
     }
-    write_doc_meta(meta_path, meta)
-
     log_entry = {
         "sync_time": sync_time,
         "project": project,
@@ -352,18 +460,20 @@ def main():
         "message": msg,
         "local_file": str(docx_path),
         "target_folder": args.target_folder,
+        "redacted": True,
+        "run_id": run_id,
     }
-    write_sync_log(log_path, log_entry)
+    write_all_state(meta_path, log_path_jsonl, log_path_json, meta, log_entry)
 
     print()
     if status == "success":
-        print(f"✅ WPS 同步成功 (business_code=0)")
+        print(f"✅ WPS 同步成功 (business_code=0, run_id={run_id})")
         sys.exit(0)
     elif status == "unknown":
-        print(f"⚠️ WPS 同步状态未知: {msg}")
+        print(f"⚠️ WPS 同步状态未知: {msg} (run_id={run_id})")
         sys.exit(1)
     else:
-        print(f"❌ WPS 同步失败: {msg}")
+        print(f"❌ WPS 同步失败: {msg} (run_id={run_id})")
         sys.exit(1)
 
 

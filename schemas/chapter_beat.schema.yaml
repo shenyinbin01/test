@@ -1,0 +1,37 @@
+# chapter_beat.schema.yaml
+# 章节规划/节拍：将单章拆解为场景序列
+
+beat:
+  type: object
+  required: [chapter_number, scenes]
+  fields:
+    chapter_number: { type: integer, desc: "所属章节号" }
+    chapter_title: { type: string, desc: "章节标题" }
+    total_scenes: { type: integer, desc: "场景总数" }
+
+scenes:
+  type: array
+  item:
+    type: object
+    required: [order, narrative_function, pov, emotion_target]
+    fields:
+      order: { type: integer, desc: "场景序号" }
+      title: { type: string, desc: "场景小标题" }
+      narrative_function: { type: string, desc: "叙事功能：hook / build / conflict / climax / release / cliffhanger" }
+      pov: { type: string, desc: "视角角色" }
+      location: { type: string, desc: "发生地点" }
+      emotion_target: { type: string, desc: "本场景目标情绪" }
+      conflict_type: { type: string, desc: "冲突类型：人与人 / 人与系统 / 人与自我" }
+      dialogue_ratio: { type: number, desc: "对话占比 0-1" }
+      length: { type: integer, desc: "建议字数" }
+      key_lines: { type: array, items: string, desc: "关键台词或场景描述" }
+
+climax:
+  type: object
+  fields:
+    scene_index: { type: integer, desc: "高潮所在场景序号" }
+    payoff: { type: string, desc: "情绪兑现方式" }
+
+cliffhanger:
+  type: string
+  desc: "章尾钩子内容"

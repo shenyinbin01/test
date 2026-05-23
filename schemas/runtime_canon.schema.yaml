@@ -1,0 +1,43 @@
+# runtime_canon.schema.yaml
+# 已确认正典：实际发生过的事件序列、角色当前状态、关系状态
+# 是写下一章时最重要的上下文依据
+
+canon:
+  type: object
+  required: [version, current_chapter, timeline, character_states]
+  fields:
+    version: { type: string, desc: "正典版本号" }
+    current_chapter: { type: integer, desc: "最新已确认章节号" }
+    last_updated: { type: string, desc: "最后更新时间" }
+
+timeline:
+  type: array
+  item:
+    type: object
+    required: [chapter, event, impact]
+    fields:
+      chapter: { type: integer, desc: "发生章节" }
+      event: { type: string, desc: "事件简述" }
+      impact: { type: string, desc: "对后续的影响" }
+      involved: { type: array, items: string, desc: "涉及角色" }
+
+character_states:
+  type: object
+  desc: "每个角色的当前状态"
+  pattern:
+    type: object
+    fields:
+      status: { type: string, desc: "角色当前状态" }
+      relationship_delta: { type: object, desc: "与其他角色关系变化" }
+      price_tag: { type: string, desc: "当前人生价格标签值" }
+      notable_changes: { type: array, items: string, desc: "重要变化" }
+
+active_threads:
+  type: array
+  item:
+    type: object
+    required: [thread, status]
+    fields:
+      thread: { type: string, desc: "情节线名称" }
+      status: { type: string, desc: "open / resolved / pending" }
+      last_chapter: { type: integer, desc: "最后提及章节" }

@@ -1,0 +1,50 @@
+[
+  {
+    "sync_time": "2026-05-23T09:53:03.499136",
+    "project": "price_tag_life",
+    "file_name": "price_tag_life_volume_001.docx",
+    "mode": "dry_run",
+    "status": "dry_run",
+    "business_code": null,
+    "message": "仅检查，未上传",
+    "target_folder": "小说",
+    "local_file": "/data/webnovel-lab/demo_output/phase5_wps_projection/price_tag_life_volume_001.docx",
+    "redacted": true
+  },
+  {
+    "sync_time": "2026-05-23T09:53:13.630828",
+    "project": "price_tag_life",
+    "file_name": "price_tag_life_volume_001.docx",
+    "mode": "real",
+    "status": "success",
+    "business_code": 0,
+    "message": "success",
+    "target_folder": "小说",
+    "local_file": "/data/webnovel-lab/demo_output/phase5_wps_projection/price_tag_life_volume_001.docx",
+    "redacted": true
+  },
+  {
+    "sync_time": "2026-05-23T09:53:45.397465",
+    "project": "price_tag_life",
+    "file_name": "price_tag_life_volume_001.docx",
+    "mode": "dry_run",
+    "status": "dry_run",
+    "business_code": null,
+    "message": "仅检查，未上传",
+    "target_folder": "小说",
+    "local_file": "/data/webnovel-lab/demo_output/phase5_wps_projection/price_tag_life_volume_001.docx",
+    "redacted": true
+  },
+  {
+    "sync_time": "2026-05-23T09:53:45.516189",
+    "project": "price_tag_life",
+    "file_name": "price_tag_life_volume_001.docx",
+    "mode": "real",
+    "status": "success",
+    "business_code": 0,
+    "message": "success",
+    "target_folder": "小说",
+    "local_file": "/data/webnovel-lab/demo_output/phase5_wps_projection/price_tag_life_volume_001.docx",
+    "redacted": true
+  }
+]
