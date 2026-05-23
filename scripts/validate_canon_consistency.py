@@ -22,9 +22,32 @@ from datetime import datetime
 
 DEFAULT_OUTPUT_ROOT = Path("/data/webnovel-lab/demo_output")
 DEFAULT_CANON = Path("/data/webnovel-lab/workspace/novels/price_tag_life/canon_constraints.yaml")
+STORY_SYSTEM_PATTERNS = Path("/data/webnovel-lab/workspace/novels/price_tag_life/.story-system/canon_patterns.yaml")
 
-# 禁止模式（具体化，减少伪阳性）
-FORBIDDEN_PATTERNS = [
+# 尝试从 .story-system 加载规则（优先）
+# 如果 canon_patterns.yaml 不存在，使用内联硬编码作为 fallback
+def load_patterns_from_story_system():
+    """从 .story-system/canon_patterns.yaml 加载规则"""
+    import yaml
+    if STORY_SYSTEM_PATTERNS.exists():
+        try:
+            data = yaml.safe_load(STORY_SYSTEM_PATTERNS.read_text())
+            forbidden = data.get("forbidden_patterns", [])
+            wide = data.get("wide_patterns", {})
+            anchors = data.get("required_anchors", [])
+            negation_prefixes = data.get("negation_prefixes", [])
+            print(f"  [canon] 从 .story-system 加载规则: "
+                  f"forbidden={len(forbidden)}, wide={len(wide)}, anchors={len(anchors)}")
+            return forbidden, wide, anchors, negation_prefixes
+        except Exception as e:
+            print(f"  [canon] ⚠️  .story-system 加载失败: {e}，使用内联 fallback")
+    else:
+        print(f"  [canon] .story-system/canon_patterns.yaml 不存在，使用内联 fallback")
+    return None
+
+
+# 内联 fallback 规则（对应 .story-system 中的定义）
+FALLBACK_FORBIDDEN_PATTERNS = [
     r"天秤会",
     r"系统面板",
     r"系统任务",
@@ -52,14 +75,13 @@ FORBIDDEN_PATTERNS = [
     r"生命数值同步",
 ]
 
-# 旧有的大范围模式，用于发现但需要上下文豁免
-WIDE_PATTERNS = {
+FALLBACK_WIDE_PATTERNS = {
     "倒计时": {"type": "negation_check", "negation_prefixes": ["不是", "并非", "不等于", "不是死亡", "不是生命", "并非死亡", "并非生命", "不等于死亡", "不等于生命"]},
     "充值": {"type": "context_check", "allowed_context": ["医院", "缴费", "住院费", "余额不足", "窗口", "电子提示音"]},
     "商城": {"type": "negation_check", "negation_prefixes": ["不是", "并非"]},
 }
 
-REQUIRED_ANCHORS = [
+FALLBACK_REQUIRED_ANCHORS = [
     "林砚",
     "外卖员",
     "父亲病重",
@@ -71,6 +93,18 @@ REQUIRED_ANCHORS = [
     "医院缴费窗口",
     "即将归零",
 ]
+
+FALLBACK_NEGATION_PREFIXES = ["不是", "并非", "不等于"]
+
+# 初始化规则 — 优先从 .story-system 加载
+_loaded = load_patterns_from_story_system()
+if _loaded:
+    FORBIDDEN_PATTERNS, WIDE_PATTERNS, REQUIRED_ANCHORS, NEGATION_PREFIXES = _loaded
+else:
+    FORBIDDEN_PATTERNS = FALLBACK_FORBIDDEN_PATTERNS
+    WIDE_PATTERNS = FALLBACK_WIDE_PATTERNS
+    REQUIRED_ANCHORS = FALLBACK_REQUIRED_ANCHORS
+    NEGATION_PREFIXES = FALLBACK_NEGATION_PREFIXES
 
 
 def load_canon(file_path):

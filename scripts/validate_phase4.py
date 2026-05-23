@@ -26,9 +26,27 @@ CODE_ROOT = Path(os.environ.get("WEBNOVEL_CODE_ROOT", "/opt/webnovel-hermes-wps"
 DATA_ROOT = Path(os.environ.get("WEBNOVEL_DATA_ROOT", "/data/webnovel-lab"))
 
 
-# ── Forbidden patterns（复用阶段三点五的精确规则）────────────
+# ── 规则加载：优先从 .story-system 读取 ──
 
-FORBIDDEN_PATTERNS = [
+STORY_SYSTEM_PATTERNS = DATA_ROOT / "workspace" / "novels" / "price_tag_life" / ".story-system" / "canon_patterns.yaml"
+
+def _load_forbidden_phase4():
+    """尝试从 canon_patterns.yaml 加载禁止词，失败时用内联 fallback"""
+    import yaml
+    if STORY_SYSTEM_PATTERNS.exists():
+        try:
+            data = yaml.safe_load(STORY_SYSTEM_PATTERNS.read_text())
+            forbidden = data.get("forbidden_patterns", [])
+            negation = data.get("negation_prefixes", [])
+            if forbidden:
+                print(f"  [validate_phase4] 从 .story-system 加载禁止词: {len(forbidden)} 条")
+                return forbidden, negation
+        except Exception:
+            pass
+    print("  [validate_phase4] 使用内联 fallback 禁止词")
+    return _FALLBACK_PHASE4_FORBIDDEN, _FALLBACK_PHASE4_NEGATION
+
+_FALLBACK_PHASE4_FORBIDDEN = [
     r"\u5929\u79e4\u4f1a", r"\u7cfb\u7edf\u9762\u677f", r"\u7cfb\u7edf\u4efb\u52a1",
     r"\u4efb\u52a1\u5956\u52b1", r"\u7cfb\u7edf\u5145\u503c", r"\u5145\u503c\u5165\u53e3",
     r"\u5145\u503c\u5546\u57ce", r"\u5145\u503c\u83b7\u5f97", r"\u6c2b\u91d1",
@@ -39,9 +57,9 @@ FORBIDDEN_PATTERNS = [
     r"\u7236\u4eb2\u6b7b\u4ea1", r"\u5168\u7403\u5f02\u80fd", r"\u7b49\u7ea7\u4f53\u7cfb",
     r"\u5fc3\u7535\u56fe\u540c\u6b65", r"\u751f\u547d\u6570\u503c\u540c\u6b65",
 ]
+_FALLBACK_PHASE4_NEGATION = [r"\u4e0d\u662f", r"\u5e76\u975e", r"\u4e0d\u7b49\u4e8e"]
 
-# For wide patterns with exemption
-NEGATION_PREFIXES = [r"\u4e0d\u662f", r"\u5e76\u975e", r"\u4e0d\u7b49\u4e8e"]
+FORBIDDEN_PATTERNS, NEGATION_PREFIXES = _load_forbidden_phase4()
 
 CHAPTER_REQUIRED_FILES = [
     "outline.yaml", "preflight_context.md", "beat.md", "draft.md",
