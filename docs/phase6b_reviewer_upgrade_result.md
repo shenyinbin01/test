@@ -22,7 +22,7 @@
 
 | 文件 | 大小 | 说明 |
 |------|------|------|
-| `skills/webnovel-reviewer/SKILL.md` | 4,195 bytes | 审稿角色 Skill 定义 |
+| `skills/webnovel_reviewer/SKILL.md` | 4,195 bytes | 审稿角色 Skill 定义 |
 | `reviews/chapter_001_review_with_deai.yaml` | 4,211 bytes | 第 1 章 Reviewer 样例报告 |
 | `docs/phase6b_reviewer_upgrade_result.md` | 本文 | 阶段结果报告 |
 
@@ -40,7 +40,7 @@
 
 | 属性 | 值 |
 |------|-----|
-| Skill 路径 | `skills/webnovel-reviewer/SKILL.md` |
+| Skill 路径 | `skills/webnovel_reviewer/SKILL.md` |
 | 是否存在 | ✅ |
 | 输入 | 章节草稿、beat、MASTER_SETTING、sentence_rhythm 报告、ai_flavor 报告、deai_rules 规则库 |
 | 输出 | `reviews/chapter_XXX_review_with_deai.yaml` |
