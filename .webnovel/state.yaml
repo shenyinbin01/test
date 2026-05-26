@@ -1,0 +1,42 @@
+# .webnovel/state.yaml
+# 投影状态文件 — 由 webnovel-state-manager Skill 自动维护
+# 反映 .story-system 真源的最新快照，供 Python 工具层读取
+#
+# 警告：此文件是投影产物，不要直接手改。如需更新状态，
+# 请通过 webnovel-state-manager 读取 .story-system/ 真源后重新生成。
+
+version: v1
+last_updated: "2026-05-26T00:00:00+08:00"
+generated_by: "webnovel-state-manager"
+
+# ── 项目元信息 ──
+project: "price_tag_life"
+
+# ── 章节进度 ──
+# 当前已完成的章节（有 commit 记录）
+completed_chapters: []
+
+# ── 当前活跃章节 ──
+# 当前正在生产中的章节
+active_chapter: null
+
+# ── 真源检查摘要 ──
+# 仅反映文件存在性，不校验内容
+source_files_integrity:
+  MASTER_SETTING.yaml: false
+  runtime_canon.yaml: false
+  reader_debts.yaml: false
+  canon_patterns.yaml: false
+  audit_log.jsonl: false
+  chapter_commits_dir: false
+
+# ── 投影文件清单 ──
+projections:
+  story_bible_projection: "projection/story_bible_projection.md"
+  outline_projection: "projection/outline_projection.md"
+  manuscript_projection: "projection/manuscript_projection.md"
+  review_projection: "projection/review_projection.md"
+  state_projection: "projection/state_projection.md"
+
+# ── 总结文件清单 ──
+summaries: {}

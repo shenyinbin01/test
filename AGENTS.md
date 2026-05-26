@@ -145,7 +145,7 @@ Hermes 不应在 DeepCode 可用时自行代行 DeepCode 职责。
 - 验收 DeepCode 输出（检查文件改动、跑回归测试、确认符合规范）
 - 直接调用 DeepSeek（通过 Prompt 指令）
 - 直接执行 Python 工具脚本（不需要 DeepCode 修改的任务）
-- 管理 `.story-system` 内容更新（状态层）
+- 通过 webnovel-state-manager Skill 管理 `.story-system` 内容更新；Hermes 不直接手改状态文件，除非用户明确要求人工修复。
 - 输出最终验收结论给用户
 
 ### 2.4 DeepCode 负责

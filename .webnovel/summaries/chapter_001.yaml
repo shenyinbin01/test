@@ -1,0 +1,11 @@
+# .webnovel/summaries/chapter_001.yaml
+# 第一章（价格初现）总结投影
+# 由 webnovel-state-manager Skill 在第三章生产完成后生成
+#
+# 此文件是 .story-system 真源（chapter_commits、runtime_canon）的投影产物。
+# 不直接手改。
+
+chapter_number: 1
+title: "价格初现"
+status: "not_produced"  # not_produced | produced | accepted
+hook: "父亲头顶价格归零"

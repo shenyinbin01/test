@@ -26,40 +26,16 @@ CODE_ROOT = Path(os.environ.get("WEBNOVEL_CODE_ROOT", "/opt/webnovel-hermes-wps"
 DATA_ROOT = Path(os.environ.get("WEBNOVEL_DATA_ROOT", "/data/webnovel-lab"))
 
 
-# ── 规则加载：优先从 .story-system 读取 ──
+# ── 规则加载：统一使用 canon_rules_loader ──
+# 优先读取 .story-system/canon_patterns.yaml，降级到 templates/default_canon_patterns.yaml
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from canon_rules_loader import load_canon_patterns
 
-STORY_SYSTEM_PATTERNS = DATA_ROOT / "workspace" / "novels" / "price_tag_life" / ".story-system" / "canon_patterns.yaml"
-
-def _load_forbidden_phase4():
-    """尝试从 canon_patterns.yaml 加载禁止词，失败时用内联 fallback"""
-    import yaml
-    if STORY_SYSTEM_PATTERNS.exists():
-        try:
-            data = yaml.safe_load(STORY_SYSTEM_PATTERNS.read_text())
-            forbidden = data.get("forbidden_patterns", [])
-            negation = data.get("negation_prefixes", [])
-            if forbidden:
-                print(f"  [validate_phase4] 从 .story-system 加载禁止词: {len(forbidden)} 条")
-                return forbidden, negation
-        except Exception:
-            pass
-    print("  [validate_phase4] 使用内联 fallback 禁止词")
-    return _FALLBACK_PHASE4_FORBIDDEN, _FALLBACK_PHASE4_NEGATION
-
-_FALLBACK_PHASE4_FORBIDDEN = [
-    r"\u5929\u79e4\u4f1a", r"\u7cfb\u7edf\u9762\u677f", r"\u7cfb\u7edf\u4efb\u52a1",
-    r"\u4efb\u52a1\u5956\u52b1", r"\u7cfb\u7edf\u5145\u503c", r"\u5145\u503c\u5165\u53e3",
-    r"\u5145\u503c\u5546\u57ce", r"\u5145\u503c\u83b7\u5f97", r"\u6c2b\u91d1",
-    r"\u5546\u57ce\u5145\u503c", r"\u5145\u503c\u70b9\u6570", r"\u5145\u503c\u5151\u6362",
-    r"\u6d88\u8017\u5bff\u547d", r"\u5bff\u547d\u6362", r"\u751f\u547d\u5012\u8ba1\u65f6",
-    r"\u89e6\u78b0\u6539\u53d8\u547d\u8fd0", r"\u89e6\u78b0\u6539\u5199\u547d\u8fd0",
-    r"\u7236\u6bcd\u65e9\u901d", r"\u6bcd\u4eb2\u53bb\u4e16", r"\u7236\u4eb2\u5df2\u6b7b",
-    r"\u7236\u4eb2\u6b7b\u4ea1", r"\u5168\u7403\u5f02\u80fd", r"\u7b49\u7ea7\u4f53\u7cfb",
-    r"\u5fc3\u7535\u56fe\u540c\u6b65", r"\u751f\u547d\u6570\u503c\u540c\u6b65",
-]
-_FALLBACK_PHASE4_NEGATION = [r"\u4e0d\u662f", r"\u5e76\u975e", r"\u4e0d\u7b49\u4e8e"]
-
-FORBIDDEN_PATTERNS, NEGATION_PREFIXES = _load_forbidden_phase4()
+_CANON_RULES = load_canon_patterns()
+FORBIDDEN_PATTERNS = _CANON_RULES["forbidden_patterns"]
+NEGATION_PREFIXES = _CANON_RULES["negation_prefixes"]
+CANON_RULES_SOURCE = _CANON_RULES["source"]
+print(f"  [validate_phase4] 规则源: {CANON_RULES_SOURCE}")
 
 CHAPTER_REQUIRED_FILES = [
     "outline.yaml", "preflight_context.md", "beat.md", "draft.md",

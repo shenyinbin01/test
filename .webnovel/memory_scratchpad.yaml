@@ -1,0 +1,26 @@
+# .webnovel/memory_scratchpad.yaml
+# 临时工作记忆 — 非持久，仅当前生产会话使用
+#
+# 用途：记录跨步骤的状态（当前正在处理的章节、pending 的 commit、
+# 待处理的 reader_debts 更新等），供同一生产会话内的各工具/Agent 临时引用。
+#
+# 注意：此文件是临时工作区，不是故事真源。
+# 所有永久状态必须写入 .story-system/ 真源。
+
+# ── 当前生产上下文 ──
+current_session:
+  active_chapter: null
+  phase: null          # 4A | 4B | 4C | 5 | 6A | 6B | 6C
+  started_at: null
+  last_step: null
+
+# ── 跨步骤暂存 ──
+pending:
+  commit_to_update: []
+  reader_debt_updates: []
+
+# ── 上次操作记录 ──
+last_action:
+  action: null
+  timestamp: null
+  result: null

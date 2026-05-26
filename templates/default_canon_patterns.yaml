@@ -1,0 +1,87 @@
+# templates/default_canon_patterns.yaml
+# canon 规则默认 fallback 模板
+# 两个 validator 通过 canon_rules_loader.py 优先读取 .story-system/canon_patterns.yaml，
+# 不存在时降级到此模板。
+#
+# 此文件是唯一的 fallback 规则源，两个 validator 不再各自维护内联 fallback 常量。
+
+version: v1
+last_updated: "2026-05-23T10:30:00+08:00"
+source: "templates/default_canon_patterns.yaml（默认 fallback）"
+
+# ── 精确禁止词 ──
+# 这些词一旦出现在正文中即视为违规（除非被 negation_prefixes 豁免）
+forbidden_patterns:
+  - 天秤会
+  - 系统面板
+  - 系统任务
+  - 任务奖励
+  - 系统充值
+  - 充值入口
+  - 充值商城
+  - 充值获得
+  - 氪金
+  - 商城充值
+  - 充值点数
+  - 充值兑换
+  - 消耗寿命
+  - 寿命换
+  - 生命倒计时
+  - 触碰改变命运
+  - 触碰改写命运
+  - 父母早逝
+  - 母亲去世
+  - 父亲已死
+  - 父亲死亡
+  - 全球异能
+  - 等级体系
+  - 心电图同步
+  - 生命数值同步
+
+# ── 大范围模式（有豁免条件） ──
+wide_patterns:
+  倒计时:
+    type: negation_check
+    negation_prefixes:
+      - 不是
+      - 并非
+      - 不等于
+      - 不是死亡
+      - 不是生命
+      - 并非死亡
+      - 并非生命
+      - 不等于死亡
+      - 不等于生命
+  充值:
+    type: context_check
+    allowed_context:
+      - 医院
+      - 缴费
+      - 住院费
+      - 余额不足
+      - 窗口
+      - 电子提示音
+  商城:
+    type: negation_check
+    negation_prefixes:
+      - 不是
+      - 并非
+
+# ── 必需锚点 ──
+required_anchors:
+  - 林砚
+  - 外卖员
+  - 父亲病重
+  - 人生价格标签
+  - 不是单纯财富
+  - 选择代价
+  - 头痛
+  - 短暂失明
+  - 医院缴费窗口
+  - 即将归零
+
+# ── 否定前缀 ──
+negation_prefixes:
+  - 不是
+  - 并非
+  - 不等于
