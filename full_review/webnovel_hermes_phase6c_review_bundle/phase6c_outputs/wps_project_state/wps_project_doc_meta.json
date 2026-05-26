@@ -7,7 +7,7 @@
     {
       "doc_key": "volume_current",
       "title": "人生价格标签_第一卷_当前版",
-      "local_path": "/data/webnovel-lab/demo_output/phase6c_wps_project_projection/publish/人生价格标签_第一卷_当前版.docx",
+      "local_path": "[REDACTED_PATH]/publish/人生价格标签_第一卷_当前版.docx",
       "target_folder": "00_发布稿",
       "status": "dry_run",
       "redacted": true
@@ -15,7 +15,7 @@
     {
       "doc_key": "story_bible",
       "title": "人生价格标签_Story_Bible_当前版",
-      "local_path": "/data/webnovel-lab/demo_output/phase6c_wps_project_projection/story_bible/人生价格标签_Story_Bible_当前版.docx",
+      "local_path": "[REDACTED_PATH]/story_bible/人生价格标签_Story_Bible_当前版.docx",
       "target_folder": "01_设定资料",
       "status": "dry_run",
       "redacted": true
@@ -23,7 +23,7 @@
     {
       "doc_key": "wiki",
       "title": "人生价格标签_小说Wiki_当前版",
-      "local_path": "/data/webnovel-lab/demo_output/phase6c_wps_project_projection/wiki/人生价格标签_小说Wiki_当前版.docx",
+      "local_path": "[REDACTED_PATH]/wiki/人生价格标签_小说Wiki_当前版.docx",
       "target_folder": "02_小说Wiki",
       "status": "dry_run",
       "redacted": true
@@ -31,7 +31,7 @@
     {
       "doc_key": "archive",
       "title": "2026-05-26_v001_第一卷前三章",
-      "local_path": "/data/webnovel-lab/demo_output/phase6c_wps_project_projection/archive/2026-05-26_v001_第一卷前三章.docx",
+      "local_path": "[REDACTED_PATH]/archive/2026-05-26_v001_第一卷前三章.docx",
       "target_folder": "99_归档版本",
       "status": "dry_run",
       "redacted": true

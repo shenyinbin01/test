@@ -15,7 +15,7 @@ WPS 项目化一轮交付的三步已完成：
 - ✅ 第 2 步：同步与验证工具（2 个脚本）
 - ✅ 第 3 步（部分）：dry-run 全部通过，real 因 WPS 配置不完整跳过
 
-**一句话总结：** price_tag_life 的 WPS 项目化本地投影已完整生成，同步验证工具已就绪，dry-run 通过。因 `/etc/webnovel/.env` 中缺少 `WPS_FOLDER_ID`，real 同步未执行。主控方配置 WPS 认证后可直接执行 real。
+**一句话总结：** price_tag_life 的 WPS 项目化本地投影已完整生成，同步验证工具已就绪，dry-run 通过。real 同步未通过 Phase 6C 工具（sync_wps_project.py）执行（原因：sudo 环境下 kdocs-cli PATH 问题）。4 个 docx 由操作员手动上传至 WPS，手动操作不计入工具验收。完整请参见复审包中的 v2 尾修报告。
 
 ---
 

@@ -1,6 +1,7 @@
 {
   "project_id": "price_tag_life",
   "mode": "dry-run",
+  "status": "dry_run_validation",
   "projection_checks": [
     {
       "check": "projection_root",
@@ -57,5 +58,6 @@
   ],
   "errors": [],
   "warnings": [],
-  "passed": true
+  "passed": true,
+  "redacted": true
 }

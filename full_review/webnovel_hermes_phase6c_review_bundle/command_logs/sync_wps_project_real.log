@@ -1,9 +1,9 @@
-$ python scripts/sync_wps_project.py --project price_tag_life --real 2>&1; echo '---'; cat /data/webnovel-lab/demo_output/phase6c_wps_project_state/sync_wps_project_real.skipped.txt 2>/dev/null || echo 'no skipped file'
+$ sudo python3 scripts/sync_wps_project.py --real 2>&1
 
 STDOUT:
 ==================================================
   Phase 6C WPS 项目同步 — real
-  run_id: phase6c-20260526T124401-a18b63f8
+  run_id: phase6c-20260526T140258-dfd111ec
 ==================================================
 
 ✅ manifest 已读取: price_tag_life / 人生价格标签
@@ -12,11 +12,11 @@ STDOUT:
 📋 sync_plan: 4 个文档待同步
 
 ⬆️  real 模式
-❌ WPS 配置不完整（WPS_FOLDER_ID 缺失）
+❌ kdocs-cli 不可用
+
+EXIT: 1
 ---
-Skipped: WPS_FOLDER_ID missing
-run_id: phase6c-20260526T124401-a18b63f8
-
-STDERR:
-
-EXIT: 0
+NOTE: real sync was NOT executed by sync_wps_project.py.
+WPS_FOLDER_ID was later configured but kdocs-cli was not found in PATH under sudo.
+4 docx files were manually uploaded via kdocs-cli by operator (not via Phase 6C tool).
+This manual operation is NOT counted as Phase 6C tool acceptance.

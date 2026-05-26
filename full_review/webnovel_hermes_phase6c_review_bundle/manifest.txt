@@ -1,3 +1,4 @@
+REVIEW_README.md
 command_logs/build_wps_project_projection.log
 command_logs/compileall.log
 command_logs/env_check.log
@@ -6,6 +7,9 @@ command_logs/sync_wps_project_real.log
 command_logs/validate_project.log
 command_logs/validate_wps_project_dry_run_after.log
 command_logs/validate_wps_project_dry_run_before.log
+command_logs/validate_wps_project_real.log
+file_tree.txt
+manifest.txt
 phase6c_outputs/projection/publish/人生价格标签_第一卷_当前版.md
 phase6c_outputs/projection/story_bible/人生价格标签_Story_Bible_当前版.md
 phase6c_outputs/projection/wiki/人生价格标签_小说Wiki_当前版.md
@@ -23,3 +27,4 @@ project_files/scripts/sync_wps.py
 project_files/scripts/sync_wps_project.py
 project_files/scripts/validate_wps_project.py
 project_files/scripts/validate_wps_sync.py
+security_scan.log

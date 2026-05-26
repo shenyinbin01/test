@@ -1,39 +1,40 @@
-command_logs/
-  command_logs/build_wps_project_projection.log (964 bytes)
-  command_logs/compileall.log (61 bytes)
-  command_logs/env_check.log (751 bytes)
-  command_logs/sync_wps_project_dry_run.log (565 bytes)
-  command_logs/sync_wps_project_real.log (691 bytes)
-  command_logs/validate_project.log (9528 bytes)
-  command_logs/validate_wps_project_dry_run_after.log (1327 bytes)
-  command_logs/validate_wps_project_dry_run_before.log (1327 bytes)
-  file_tree.txt (0 bytes)
-  manifest.txt (1264 bytes)
-phase6c_outputs/
-phase6c_outputs/projection/
-phase6c_outputs/projection/archive/
-phase6c_outputs/projection/index/
-phase6c_outputs/projection/publish/
-  phase6c_outputs/projection/publish/人生价格标签_第一卷_当前版.md (21026 bytes)
-phase6c_outputs/projection/story_bible/
-  phase6c_outputs/projection/story_bible/人生价格标签_Story_Bible_当前版.md (3348 bytes)
-phase6c_outputs/projection/wiki/
-  phase6c_outputs/projection/wiki/人生价格标签_小说Wiki_当前版.md (4834 bytes)
-  phase6c_outputs/projection/wps_project_manifest.json (1964 bytes)
-  phase6c_outputs/projection/wps_project_structure.yaml (240 bytes)
-phase6c_outputs/wps_project_state/
-  phase6c_outputs/wps_project_state/validate_wps_project_result.json (1033 bytes)
-  phase6c_outputs/wps_project_state/wps_project_doc_meta.json (1702 bytes)
-  phase6c_outputs/wps_project_state/wps_project_sync_log.json (213 bytes)
-  phase6c_outputs/wps_project_state/wps_project_sync_log.jsonl (180 bytes)
-  phase6c_outputs/wps_project_state/wps_project_sync_plan.json (1453 bytes)
-project_files/
-  project_files/README.md (12 bytes)
-project_files/docs/
-  project_files/docs/phase6c_wps_project_result.md (5644 bytes)
-project_files/scripts/
-  project_files/scripts/build_wps_project_projection.py (12301 bytes)
-  project_files/scripts/sync_wps.py (16132 bytes)
-  project_files/scripts/sync_wps_project.py (13215 bytes)
-  project_files/scripts/validate_wps_project.py (10390 bytes)
-  project_files/scripts/validate_wps_sync.py (14877 bytes)
+├── REVIEW_README.md (907 bytes)
+├── command_logs/
+│   ├── build_wps_project_projection.log (964 bytes)
+│   ├── compileall.log (61 bytes)
+│   ├── env_check.log (751 bytes)
+│   ├── sync_wps_project_dry_run.log (565 bytes)
+│   ├── sync_wps_project_real.log (712 bytes)
+│   ├── validate_project.log (9528 bytes)
+│   ├── validate_wps_project_dry_run_after.log (1327 bytes)
+│   ├── validate_wps_project_dry_run_before.log (1327 bytes)
+│   └── validate_wps_project_real.log (461 bytes)
+├── file_tree.txt (2019 bytes)
+├── manifest.txt (1264 bytes)
+├── phase6c_outputs/
+│   ├── projection/
+│   │   ├── publish/
+│   │   │   └── 人生价格标签_第一卷_当前版.md (21026 bytes)
+│   │   ├── story_bible/
+│   │   │   └── 人生价格标签_Story_Bible_当前版.md (3348 bytes)
+│   │   ├── wiki/
+│   │   │   └── 人生价格标签_小说Wiki_当前版.md (4834 bytes)
+│   │   ├── wps_project_manifest.json (1964 bytes)
+│   │   └── wps_project_structure.yaml (240 bytes)
+│   └── wps_project_state/
+│       ├── validate_wps_project_result.json (1087 bytes)
+│       ├── wps_project_doc_meta.json (1518 bytes)
+│       ├── wps_project_sync_log.json (559 bytes)
+│       ├── wps_project_sync_log.jsonl (180 bytes)
+│       └── wps_project_sync_plan.json (1453 bytes)
+├── project_files/
+│   ├── README.md (12 bytes)
+│   ├── docs/
+│   │   └── phase6c_wps_project_result.md (6674 bytes)
+│   └── scripts/
+│       ├── build_wps_project_projection.py (12301 bytes)
+│       ├── sync_wps.py (16132 bytes)
+│       ├── sync_wps_project.py (13215 bytes)
+│       ├── validate_wps_project.py (10390 bytes)
+│       └── validate_wps_sync.py (14877 bytes)
+└── security_scan.log (6711 bytes)

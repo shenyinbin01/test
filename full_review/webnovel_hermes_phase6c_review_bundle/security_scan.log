@@ -1,36 +1,75 @@
 === Phase 6C 复审包安全扫描 ===
 
-⚠️  发现以下敏感信息痕迹（允许占位符和字段名）:
+扫描范围：full_review/webnovel_hermes_phase6c_review_bundle/
+排除项：sha256 等完整性哈希值、业务码、版本号
 
-  project_files/scripts/validate_wps_project.py: for pattern, name in [("sk-", "API Key (sk-)"),
-  project_files/scripts/validate_wps_project.py: ("Authorization", "Authorization"),
-  project_files/docs/phase6c_wps_project_result.md: | 发现 token/cookie/password | ❌ 无 |
-  project_files/scripts/validate_wps_project.py: ("token", "token"),
-  project_files/docs/phase6c_wps_project_result.md: | 发现 token/cookie/password | ❌ 无 |
-  project_files/scripts/validate_wps_project.py: ("cookie", "cookie"),
-  project_files/docs/phase6c_wps_project_result.md: | 发现 token/cookie/password | ❌ 无 |
-  project_files/scripts/validate_wps_project.py: ("password", "password"),
-  project_files/docs/phase6c_wps_project_result.md: | 是否未上传 | ✅ 未调用 kdocs-cli |
-  project_files/docs/phase6c_wps_project_result.md: 1. **WPS 文件夹创建逻辑依赖 kdocs-cli 能力** — 当前 `sync_wps_project.py` 直接上传到 parent_id，未自动创建子文件夹
-  project_files/scripts/sync_wps_project.py: def parse_kdocs_result(stdout):
-  project_files/scripts/sync_wps_project.py: print(f"🔄 dry-run 完成，未调用 kdocs-cli")
-  project_files/scripts/sync_wps_project.py: # 检查 kdocs-cli
-  project_files/scripts/sync_wps_project.py: subprocess.run(["which", "kdocs-cli"], capture_output=True, text=True, timeout=5, check=True)
-  project_files/scripts/sync_wps_project.py: print("❌ kdocs-cli 不可用")
-  project_files/scripts/sync_wps_project.py: result = subprocess.run(["kdocs-cli", "drive", "upload-file"],
-  project_files/scripts/sync_wps_project.py: business_ok, business_code, msg = parse_kdocs_result(stdout)
-  project_files/scripts/sync_wps_project.py: business_ok, business_code, msg = parse_kdocs_result(stdout)
-  project_files/scripts/validate_wps_sync.py: for keyword in ["kdocs.cn", "wps.cn", "file_id:", "link_id:", "folder_id:", "doc_link:", "fileid:"]:
-  project_files/scripts/sync_wps.py: sync_wps.py — 同步 DOCX 到 WPS/Kdocs (阶段五尾修强化版 v3)
-  project_files/scripts/sync_wps.py: - kdocs-cli timeout 时必须写 doc_meta.yaml 和 sync_log（含 sync_log.json）
-  project_files/scripts/sync_wps.py: def parse_kdocs_result(stdout):
-  project_files/scripts/sync_wps.py: 解析 kdocs-cli stdout，判断业务成功/失败。
-  project_files/scripts/sync_wps.py: def check_kdocs():
-  project_files/scripts/sync_wps.py: """检查 kdocs-cli 是否可用"""
-  project_files/scripts/sync_wps.py: ["which", "kdocs-cli"],
-  project_files/scripts/sync_wps.py: parser = argparse.ArgumentParser(description="同步 DOCX 到 WPS/Kdocs (阶段五尾修强化版 v3)")
-  project_files/scripts/sync_wps.py: # ── 2. kdocs-cli 检查 ──
-  project_files/scripts/sync_wps.py: kdocs_ok, kdocs_path = check_kdocs()
-  project_files/scripts/sync_wps.py: if kdocs_ok:
+━━━ 一、允许字段名（代码中的变量/参数名，非泄露）━━━
+共 55 条
 
-共 76 条，请人工确认是否为真实敏感值。
+  project_files/docs/phase6c_wps_project_result.md:114: | 发现 API Key | ❌ 无 |
+  project_files/docs/phase6c_wps_project_result.md:115: | 发现 token/cookie/password | ❌ 无 |
+  project_files/docs/phase6c_wps_project_result.md:116: | 发现 WPS URL/file_id/folder_id | ❌ 无 |
+  project_files/docs/phase6c_wps_project_result.md:140: 1. **WPS 文件夹创建逻辑依赖 kdocs-cli 能力** — 当前 `sync_wps_project.py` 直接上传到 parent_id，未自动创建子文件夹
+  project_files/scripts/sync_wps.py:169: 审查包脱敏：移除可能包含真实 file_id/URL 的字段。
+  project_files/scripts/sync_wps.py:172: safe = {k: v for k, v in entry.items() if k not in ("raw_stdout", "raw_file_id", "raw_url", "doc_link")}
+  project_files/scripts/sync_wps.py:227: parent_id = get_env_value(env_content, "WPS_FOLDER_ID") or "0"
+  project_files/scripts/sync_wps.py:228: print(f"📁 目标文件夹: {args.target_folder} (parent_id 已{'配置' if parent_id != '0' else '用根目录'})")
+  project_files/scripts/sync_wps.py:338: "parent_id": parent_id,
+  project_files/scripts/sync_wps_project.py:162: parent_id = get_env_value(env_content, "WPS_FOLDER_ID") or None
+  project_files/scripts/sync_wps_project.py:163: if not parent_id:
+  project_files/scripts/sync_wps_project.py:218: "parent_id": parent_id,
+  project_files/scripts/validate_wps_project.py:168: for pattern, name in [("sk-", "API Key (sk-)"),
+  project_files/scripts/validate_wps_project.py:169: ("Authorization", "Authorization"),
+  project_files/scripts/validate_wps_project.py:170: ("token", "token"),
+  project_files/scripts/validate_wps_project.py:171: ("cookie", "cookie"),
+  project_files/scripts/validate_wps_project.py:172: ("password", "password"),
+  project_files/scripts/validate_wps_project.py:173: ("file_id", "file_id"),
+  project_files/scripts/validate_wps_project.py:174: ("folder_id", "folder_id"),
+  project_files/scripts/validate_wps_project.py:175: ("link_id", "link_id"),
+  project_files/scripts/validate_wps_project.py:176: ("doc_link", "doc_link")]:
+  project_files/scripts/validate_wps_project.py:183: if pattern in ["token", "file_id", "folder_id", "link_id", "doc_link"] and content.count("[REDACTED") >= content.count(p
+  project_files/scripts/validate_wps_sync.py:12: 7. 安全性检查（无真实 URL/file_id）
+  project_files/scripts/validate_wps_sync.py:119: """检查文件不包含真实 WPS URL/file_id/link_id/folder_id/doc_link"""
+  project_files/scripts/validate_wps_sync.py:125: for keyword in ["kdocs.cn", "wps.cn", "file_id:", "link_id:", "folder_id:", "doc_link:", "fileid:"]:
+  project_files/scripts/validate_wps_sync.py:324: warnings.append(f"{fname} 可能包含真实 URL/file_id，需脱敏: {sec.get('issues')}")
+  security_scan.log:8: project_files/docs/phase6c_wps_project_result.md:114: | 发现 API Key | ❌ 无 |
+  security_scan.log:9: project_files/docs/phase6c_wps_project_result.md:115: | 发现 token/cookie/password | ❌ 无 |
+  security_scan.log:10: project_files/docs/phase6c_wps_project_result.md:116: | 发现 WPS URL/file_id/folder_id | ❌ 无 |
+  security_scan.log:11: project_files/docs/phase6c_wps_project_result.md:140: 1. **WPS 文件夹创建逻辑依赖 kdocs-cli 能力** — 当前 `sync_wps_project.py` 直接上传到
+  ... 还有 25 条
+
+━━━ 二、脱敏占位符（[REDACTED]）━━━
+共 21 条
+
+  REVIEW_README.md:29: - 所有状态文件已脱敏（[REDACTED]）
+  phase6c_outputs/wps_project_state/wps_project_doc_meta.json:10: "local_path": "[REDACTED_PATH]/publish/人生价格标签_第一卷_当前版.docx",
+  phase6c_outputs/wps_project_state/wps_project_doc_meta.json:18: "local_path": "[REDACTED_PATH]/story_bible/人生价格标签_Story_Bible_当前版.docx",
+  phase6c_outputs/wps_project_state/wps_project_doc_meta.json:26: "local_path": "[REDACTED_PATH]/wiki/人生价格标签_小说Wiki_当前版.docx",
+  phase6c_outputs/wps_project_state/wps_project_doc_meta.json:34: "local_path": "[REDACTED_PATH]/archive/2026-05-26_v001_第一卷前三章.docx",
+  project_files/scripts/sync_wps_project.py:47: return "[REDACTED]" if val and val != "0" else val
+  project_files/scripts/validate_wps_project.py:181: if f.suffix in (".json", ".yaml") and content.count(pattern) <= content.count("[REDACTED"):
+  project_files/scripts/validate_wps_project.py:183: if pattern in ["token", "file_id", "folder_id", "link_id", "doc_link"] and content.count("[REDACTED") >= content.count(p
+  security_scan.log:29: project_files/scripts/validate_wps_project.py:183: if pattern in ["token", "file_id", "folder_id", "link_id", "doc_link"
+  security_scan.log:40: ━━━ 二、脱敏占位符（[REDACTED]）━━━
+  security_scan.log:43: REVIEW_README.md:29: - 所有状态文件已脱敏（[REDACTED]）
+  security_scan.log:44: phase6c_outputs/wps_project_state/wps_project_doc_meta.json:10: "local_path": "[REDACTED_PATH]/publish/人生价格标签_第一卷_当前版.do
+  security_scan.log:45: phase6c_outputs/wps_project_state/wps_project_doc_meta.json:18: "local_path": "[REDACTED_PATH]/story_bible/人生价格标签_Story_
+  security_scan.log:46: phase6c_outputs/wps_project_state/wps_project_doc_meta.json:26: "local_path": "[REDACTED_PATH]/wiki/人生价格标签_小说Wiki_当前版.do
+  security_scan.log:47: phase6c_outputs/wps_project_state/wps_project_doc_meta.json:34: "local_path": "[REDACTED_PATH]/archive/2026-05-26_v001_第
+  security_scan.log:48: project_files/scripts/sync_wps_project.py:47: return "[REDACTED]" if val and val != "0" else val
+  security_scan.log:49: project_files/scripts/validate_wps_project.py:181: if f.suffix in (".json", ".yaml") and content.count(pattern) <= conte
+  security_scan.log:50: project_files/scripts/validate_wps_project.py:183: if pattern in ["token", "file_id", "folder_id", "link_id", "doc_link"
+  security_scan.log:52: security_scan.log:40: ━━━ 二、脱敏占位符（[REDACTED]）━━━
+  security_scan.log:53: security_scan.log:43: full_review/webnovel_hermes_phase6c_review_bundle/REVIEW_README.md:29: - 所有状态文件已脱敏（[REDACTED]）
+  ... 还有 1 条
+
+━━━ 三、真实敏感值命中（必须为空）━━━
+共 0 条
+
+  ✅ 无真实敏感值泄露
+
+━━━ 四、结论 ━━━
+  允许字段名（代码引用）：55 条
+  脱敏占位符：21 条
+  真实敏感值命中：0 条
+  安全扫描通过 ✅ 无真实 WPS URL / file_id / folder_id / token 泄露
