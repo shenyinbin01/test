@@ -1,0 +1,20 @@
+$ python scripts/sync_wps_project.py --project price_tag_life --dry-run
+
+STDOUT:
+==================================================
+  Phase 6C WPS 项目同步 — dry-run
+  run_id: phase6c-20260526T124401-71b28295
+==================================================
+
+✅ manifest 已读取: price_tag_life / 人生价格标签
+   文档数: 4
+
+📋 sync_plan: 4 个文档待同步
+
+🔄 dry-run 完成，未调用 kdocs-cli
+   sync_plan: /data/webnovel-lab/demo_output/phase6c_wps_project_state/wps_project_sync_plan.json
+   状态文件已生成
+
+STDERR:
+
+EXIT: 0

@@ -1,0 +1,25 @@
+$ python scripts/build_wps_project_projection.py --project price_tag_life
+
+STDOUT:
+  ✅ publish/人生价格标签_第一卷_当前版.md
+  ✅ publish/人生价格标签_第一卷_当前版.docx.sha256
+  发布稿: 21026 chars, DOCX: 46706 bytes
+  ✅ story_bible/人生价格标签_Story_Bible_当前版.md
+  ✅ story_bible/人生价格标签_Story_Bible_当前版.docx.sha256
+  Story Bible: 3348 chars, DOCX: 38770 bytes
+  ✅ wiki/人生价格标签_小说Wiki_当前版.md
+  ✅ wiki/人生价格标签_小说Wiki_当前版.docx.sha256
+  Wiki: 4834 chars, DOCX: 39393 bytes
+  ✅ index/人生价格标签_章节索引.md
+  ✅ index/人生价格标签_角色状态表.md
+  ✅ index/人生价格标签_伏笔线索表.md
+  ✅ archive/2026-05-26_v001_第一卷前三章.docx.sha256
+  ✅ wps_project_manifest.json
+  ✅ wps_project_structure.yaml
+
+✅ 输出: /data/webnovel-lab/demo_output/phase6c_wps_project_projection
+   文件数: 16
+
+STDERR:
+
+EXIT: 0

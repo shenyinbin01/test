@@ -1,0 +1,36 @@
+=== Phase 6C 复审包安全扫描 ===
+
+⚠️  发现以下敏感信息痕迹（允许占位符和字段名）:
+
+  project_files/scripts/validate_wps_project.py: for pattern, name in [("sk-", "API Key (sk-)"),
+  project_files/scripts/validate_wps_project.py: ("Authorization", "Authorization"),
+  project_files/docs/phase6c_wps_project_result.md: | 发现 token/cookie/password | ❌ 无 |
+  project_files/scripts/validate_wps_project.py: ("token", "token"),
+  project_files/docs/phase6c_wps_project_result.md: | 发现 token/cookie/password | ❌ 无 |
+  project_files/scripts/validate_wps_project.py: ("cookie", "cookie"),
+  project_files/docs/phase6c_wps_project_result.md: | 发现 token/cookie/password | ❌ 无 |
+  project_files/scripts/validate_wps_project.py: ("password", "password"),
+  project_files/docs/phase6c_wps_project_result.md: | 是否未上传 | ✅ 未调用 kdocs-cli |
+  project_files/docs/phase6c_wps_project_result.md: 1. **WPS 文件夹创建逻辑依赖 kdocs-cli 能力** — 当前 `sync_wps_project.py` 直接上传到 parent_id，未自动创建子文件夹
+  project_files/scripts/sync_wps_project.py: def parse_kdocs_result(stdout):
+  project_files/scripts/sync_wps_project.py: print(f"🔄 dry-run 完成，未调用 kdocs-cli")
+  project_files/scripts/sync_wps_project.py: # 检查 kdocs-cli
+  project_files/scripts/sync_wps_project.py: subprocess.run(["which", "kdocs-cli"], capture_output=True, text=True, timeout=5, check=True)
+  project_files/scripts/sync_wps_project.py: print("❌ kdocs-cli 不可用")
+  project_files/scripts/sync_wps_project.py: result = subprocess.run(["kdocs-cli", "drive", "upload-file"],
+  project_files/scripts/sync_wps_project.py: business_ok, business_code, msg = parse_kdocs_result(stdout)
+  project_files/scripts/sync_wps_project.py: business_ok, business_code, msg = parse_kdocs_result(stdout)
+  project_files/scripts/validate_wps_sync.py: for keyword in ["kdocs.cn", "wps.cn", "file_id:", "link_id:", "folder_id:", "doc_link:", "fileid:"]:
+  project_files/scripts/sync_wps.py: sync_wps.py — 同步 DOCX 到 WPS/Kdocs (阶段五尾修强化版 v3)
+  project_files/scripts/sync_wps.py: - kdocs-cli timeout 时必须写 doc_meta.yaml 和 sync_log（含 sync_log.json）
+  project_files/scripts/sync_wps.py: def parse_kdocs_result(stdout):
+  project_files/scripts/sync_wps.py: 解析 kdocs-cli stdout，判断业务成功/失败。
+  project_files/scripts/sync_wps.py: def check_kdocs():
+  project_files/scripts/sync_wps.py: """检查 kdocs-cli 是否可用"""
+  project_files/scripts/sync_wps.py: ["which", "kdocs-cli"],
+  project_files/scripts/sync_wps.py: parser = argparse.ArgumentParser(description="同步 DOCX 到 WPS/Kdocs (阶段五尾修强化版 v3)")
+  project_files/scripts/sync_wps.py: # ── 2. kdocs-cli 检查 ──
+  project_files/scripts/sync_wps.py: kdocs_ok, kdocs_path = check_kdocs()
+  project_files/scripts/sync_wps.py: if kdocs_ok:
+
+共 76 条，请人工确认是否为真实敏感值。

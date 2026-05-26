@@ -1,0 +1,7 @@
+$ python -m compileall scripts -q
+
+STDOUT:
+
+STDERR:
+
+EXIT: 0

@@ -1,0 +1,12 @@
+folders:
+- key: publish
+  name: 00_发布稿
+- key: story_bible
+  name: 01_设定资料
+- key: wiki
+  name: 02_小说Wiki
+- key: index
+  name: 03_章节索引
+- key: archive
+  name: 99_归档版本
+project_folder: 小说/人生价格标签

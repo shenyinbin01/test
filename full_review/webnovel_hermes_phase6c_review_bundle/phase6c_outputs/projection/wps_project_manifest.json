@@ -1,0 +1,51 @@
+{
+  "project_id": "price_tag_life",
+  "title": "人生价格标签",
+  "source_truth": ".story-system",
+  "projection_type": "wps_project",
+  "created_at": "2026-05-26T12:42:11.106358",
+  "project_folder": "小说/人生价格标签",
+  "folders": [
+    "00_发布稿",
+    "01_设定资料",
+    "02_小说Wiki",
+    "03_章节索引",
+    "99_归档版本"
+  ],
+  "documents": [
+    {
+      "doc_key": "volume_current",
+      "title": "人生价格标签_第一卷_当前版",
+      "local_path": "/data/webnovel-lab/demo_output/phase6c_wps_project_projection/publish/人生价格标签_第一卷_当前版.docx",
+      "target_folder": "00_发布稿",
+      "format": "docx",
+      "sha256": "427a09d7474b25ea3a126980b3e75fbd49d12792e9ce948603ca2062e778e46f"
+    },
+    {
+      "doc_key": "story_bible",
+      "title": "人生价格标签_Story_Bible_当前版",
+      "local_path": "/data/webnovel-lab/demo_output/phase6c_wps_project_projection/story_bible/人生价格标签_Story_Bible_当前版.docx",
+      "target_folder": "01_设定资料",
+      "format": "docx",
+      "sha256": "be2ce7b1a13b36a66912c051e6ac2166879b6f72f314abadc56a18a8bde7160f"
+    },
+    {
+      "doc_key": "wiki",
+      "title": "人生价格标签_小说Wiki_当前版",
+      "local_path": "/data/webnovel-lab/demo_output/phase6c_wps_project_projection/wiki/人生价格标签_小说Wiki_当前版.docx",
+      "target_folder": "02_小说Wiki",
+      "format": "docx",
+      "sha256": "b2b0ce32d893e424ed87e3f601b909c8e2993bbd54015adf6cdae6efa30b7ac7"
+    },
+    {
+      "doc_key": "archive",
+      "title": "2026-05-26_v001_第一卷前三章",
+      "local_path": "/data/webnovel-lab/demo_output/phase6c_wps_project_projection/archive/2026-05-26_v001_第一卷前三章.docx",
+      "target_folder": "99_归档版本",
+      "format": "docx",
+      "sha256": "427a09d7474b25ea3a126980b3e75fbd49d12792e9ce948603ca2062e778e46f"
+    }
+  ],
+  "version": "v001",
+  "redacted": true
+}

@@ -1,0 +1,61 @@
+{
+  "project_id": "price_tag_life",
+  "mode": "dry-run",
+  "projection_checks": [
+    {
+      "check": "projection_root",
+      "passed": true
+    },
+    {
+      "check": "manifest_parsable",
+      "passed": true
+    },
+    {
+      "check": "structure_parsable",
+      "passed": true
+    },
+    {
+      "check": "docx_volume_current",
+      "passed": true
+    },
+    {
+      "check": "docx_story_bible",
+      "passed": true
+    },
+    {
+      "check": "docx_wiki",
+      "passed": true
+    },
+    {
+      "check": "docx_archive",
+      "passed": true
+    }
+  ],
+  "sync_state_checks": [
+    {
+      "check": "doc_meta_parsable",
+      "passed": true
+    },
+    {
+      "check": "sync_log_json_parsable",
+      "passed": true
+    },
+    {
+      "check": "sync_log_jsonl_parsable",
+      "passed": true
+    },
+    {
+      "check": "sync_plan_parsable",
+      "passed": true
+    }
+  ],
+  "security_checks": [
+    {
+      "check": "no_sensitive_data",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

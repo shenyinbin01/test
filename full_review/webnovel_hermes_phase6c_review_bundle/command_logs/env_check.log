@@ -1,0 +1,27 @@
+$ python scripts/env_check.py
+
+STDOUT:
+==================================================
+  webnovel-hermes-wps 环境检查报告
+==================================================
+
+  ✅ Python 版本 — 3.11.15
+  ✅ 代码根目录存在 — /opt/webnovel-hermes-wps
+  ✅ 数据根目录存在 — /data/webnovel-lab
+  ✅ 数据目录可写
+  ✅ /etc/webnovel/ 目录存在
+  ✅ /etc/webnovel/.env 存在
+  ✅ .env.example 存在
+  ✅ 必需目录完整 — 7 个
+  ✅ PyYAML — 6.0.3
+  ✅ python-docx — 1.2.0
+  ✅ requests — 2.33.1
+  ✅ kdocs-cli 已安装
+
+--------------------------------------------------
+  结论：✅ 环境就绪，可以继续执行。
+--------------------------------------------------
+
+STDERR:
+
+EXIT: 0
