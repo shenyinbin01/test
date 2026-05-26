@@ -306,12 +306,13 @@ Phase 6：架构回归与质量底座
 
 ### 7.2 子阶段
 
-| 子阶段 | 名称 | 内容 |
-|--------|------|------|
-| 6A | 状态层回归 | 创建 / 补齐 canon_patterns.yaml、reader_debts.yaml、webnovel-state-manager Skill、validator 改造、保留 run_chapter_pipeline.py 作为回归基线、输出 phase6a_state_manager_result.md |
-| 6B | 去 AI 味质量闸门 | （待定） |
-| 6C | WPS 项目化管理 | （待定） |
+| 子阶段 | 名称 | 内容 | 状态 |
+|--------|------|------|------|
+| 6A | 状态层回归 | 创建 / 补齐 canon_patterns.yaml、reader_debts.yaml、webnovel-state-manager Skill、validator 改造、保留 run_chapter_pipeline.py 作为回归基线、输出 phase6a_state_manager_result.md | ✅ completed |
+| 6B | 去 AI 味质量闸门 | Detector → Reviewer → Polisher 三层质量闸门，AI 味分数降至低风险 | ✅ completed |
+| 6C | WPS 项目化管理 | build/sync/validate 工具链，本地投影 + real 同步 4/4 success | ✅ completed |
 
-### 7.3 Phase 6A 优先级
+### 7.3 整体状态
 
-Phase 6A 优先级最高。未完或 6A 尚未全部验证前，不进入 6B/6C。
+Phase 6 整体状态：completed / pending-human-acceptance
+下一阶段状态：not-started
