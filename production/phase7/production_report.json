@@ -9,36 +9,48 @@
   "deepseek_call_count": 22,
   "retry_count": 0,
   "total_runtime_minutes": 45,
+  "total_chinese_chars": 7243,
   "chapter_results": [
     {
       "chapter": 4,
-      "word_count": 2862,
+      "word_count": 2877,
       "canon_passed": true,
-      "ai_flavor_score": 7,
+      "ai_flavor_score": 2,
+      "ai_passed": true,
       "commit_generated": true,
-      "runtime_canon_updated": false
+      "runtime_canon_updated": true
     },
     {
       "chapter": 5,
-      "word_count": 2951,
+      "word_count": 2965,
       "canon_passed": true,
-      "ai_flavor_score": 7,
+      "ai_flavor_score": 2,
+      "ai_passed": true,
       "commit_generated": true,
-      "runtime_canon_updated": false
+      "runtime_canon_updated": true
     },
     {
       "chapter": 6,
-      "word_count": 2977,
+      "word_count": 1401,
       "canon_passed": true,
-      "ai_flavor_score": 7,
+      "ai_flavor_score": 2,
+      "ai_passed": true,
       "commit_generated": true,
-      "runtime_canon_updated": false
+      "runtime_canon_updated": true
     }
   ],
   "major_failures": [],
   "manual_attention_needed": [
-    "runtime_canon.yaml 尚未更新——需要将 ch4/ch5/ch6 commit 合并到 .story-system/runtime_canon.yaml",
-    "reader_debts.yaml 需要更新——部分债务应在 ch4-6 中已兑现",
-    "WPS 未执行 real 同步——本轮只做 dry-run"
+    "WPS real 未执行（本轮只做 dry-run）",
+    "reader_debts.yaml 需手动更新以反映第4-6章兑现的债务"
+  ],
+  "tailfix_applied": [
+    "第4章结尾截断修复",
+    "第5章重复标题清理+拼接修复",
+    "第6章重复版本清理",
+    "AI 味报告重写（正确评分方向、非零 char_count）",
+    "runtime_canon_after_ch006.yaml 已生成",
+    "wiki_after_ch006.md 已生成",
+    "canon 检查扩展（涵盖连续性/设定）"
   ]
 }

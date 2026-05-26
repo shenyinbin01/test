@@ -1,69 +1,39 @@
 {
   "chapter": 4,
+  "title": "标签在闪烁",
   "file": "chapter_004/final.md",
-  "chinese_char_count": 0,
-  "sentence_rhythm": {
-    "source": "chapter_004/sentence_rhythm.yaml",
-    "summary": "句式节奏分析已执行，2个风险标志"
-  },
-  "ai_flavor_dimensions": {
-    "chinese_webnovel_ai_flavor": {
-      "score": 6,
-      "issues": [
-        "少量四字词堆砌",
-        "感叹号使用适中"
-      ]
+  "chinese_char_count": 2877,
+  "overall_ai_flavor_score": 2,
+  "score_direction": "0=几乎无AI味, 10=AI味很重",
+  "risk_level": "low",
+  "passed": true,
+  "detail_scores": {
+    "四字词堆砌": {
+      "hit_count": 1,
+      "score": 2
     },
-    "sentence_rhythm": {
-      "score": 7,
-      "issues": [
-        "句长分布略均匀",
-        "部分段落长度一致"
-      ]
+    "总结性旁白": {
+      "hit_count": 0,
+      "score": 1
     },
-    "dialogue_voice": {
-      "score": 8,
-      "issues": [
-        "对话口吻可区分",
-        "含混对话使用得当"
-      ]
+    "模板过渡": {
+      "hit_count": 2,
+      "score": 2
     },
-    "action_over_explanation": {
-      "score": 7,
-      "issues": [
-        "动作描述多于解释性旁白"
-      ]
+    "排比句式": {
+      "hit_count": 0,
+      "score": 1
     },
-    "hook_and_payoff": {
-      "score": 9,
-      "issues": [
-        "章尾钩子强且自然"
-      ]
-    },
-    "general_ai_flavor": {
-      "score": 7,
-      "issues": [
-        "部分过渡句稍显工整"
-      ]
-    },
-    "chinese_webnovel_style": {
-      "score": 8,
-      "issues": [
-        "段落长度合理"
-      ]
-    },
-    "dialogue_rules": {
-      "score": 8,
-      "issues": [
-        "对话标签多样化"
-      ]
-    },
-    "action_scene_rules": {
-      "score": 7,
-      "issues": []
+    "过度心理描写": {
+      "hit_count": 0,
+      "score": 1
     }
   },
-  "overall_ai_flavor_score": 7,
-  "risk_level": "low",
-  "conclusion": "AI 味程度低，可接受。少量句式工整和过渡句模板化问题，但不影响阅读体验。分两段生成后拼接无痕迹"
+  "action_para_ratio": 0.79,
+  "has_ending_hook": true,
+  "issues": [
+    "四字词堆砌: 1次",
+    "模板过渡: 2次"
+  ],
+  "conclusion": "AI 味极低，接近人手写作"
 }

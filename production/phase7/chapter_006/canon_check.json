@@ -4,5 +4,13 @@
   "rule_source": "/data/webnovel-lab/workspace/novels/price_tag_life/.story-system/canon_patterns.yaml",
   "forbidden_hits": [],
   "forbidden_count": 0,
-  "passed": true
+  "passed": true,
+  "continuity_checks": {
+    "父亲未死亡": true,
+    "标签未变成系统/寿命/倒计时": true,
+    "方迟线未跳成组织追杀": true,
+    "老人身份未完全揭示": true,
+    "林砚未完全掌握能力": true,
+    "第6章钩子": true
+  }
 }

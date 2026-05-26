@@ -1,0 +1,121 @@
+version: v2
+current_chapter: 6
+last_updated: '2026-05-26T18:30:00'
+timeline:
+- chapter: 1
+  event: 林砚在送外卖过程中首次看见人生价格标签，通过老人和客户的对比意识到标签不代表财富。在医院缴费窗口看见父亲头顶价格归零。
+- chapter: 2
+  event: 林砚回访光鲜客户地址，发现客户标签暴跌与经济事件有关。林砚对标签的理解从财富推进一步。收到神秘短信"你看见了对吧"。父亲费用缺口扩大到5800。
+- chapter: 3
+  event: 林砚在医院观察收费员和病人家属的标签变化，发现标签随选择变化。第一次主动试图理解和使用能力。观察自己的标签发现异常下降。父亲病情压力持续。
+- chapter: 4
+  event: 林砚发现自己标签从382降到369（过夜掉13）
+- chapter: 4
+  event: 测试发现不买茶叶蛋标签降1（自我牺牲相关）
+- chapter: 4
+  event: 老人捡流浪猫标签涨1.2万，猫头顶没有标签
+- chapter: 4
+  event: 帮新人说话、送水——标签没变
+- chapter: 4
+  event: 决定多跑两单——标签涨2（从368到370）
+- chapter: 4
+  event: 闯红灯——标签暴跌15（从370到355）
+- chapter: 4
+  event: 光鲜客户丈夫也能看到标签，已自我封闭
+- chapter: 4
+  event: 收到5000元转账，备注"望江路"
+- chapter: 4
+  event: 标签在转账后剧烈闪烁（248和0之间跳）
+- chapter: 4
+  event: 林砚选择保留这笔钱
+- chapter: 5
+  event: 林砚去光鲜客户家，丈夫锁书房两天不吃不喝
+- chapter: 5
+  event: 丈夫标签在脉冲式闪烁，随恐惧程度下降
+- chapter: 5
+  event: 林砚发现丈夫的标签规则和他不一样（恐惧就掉）
+- chapter: 5
+  event: 5000元转账不是客户给的——是方迟
+- chapter: 5
+  event: 女人确认方迟就是见过丈夫的人（戴眼镜西装男）
+- chapter: 5
+  event: 林砚用5000元交了父亲部分费用
+- chapter: 5
+  event: 父亲出现苏醒迹象（眼皮动），标签从空白变极淡的1
+- chapter: 5
+  event: 章尾收到20000元转账，备注"尾款"
+- chapter: 5
+  event: 林砚标签从355暴跌至289
+- chapter: 5
+  event: 林砚选择继续收下这笔钱
+- chapter: 6
+  event: 林砚决定只取一万元现金，留一万五在卡里
+- chapter: 6
+  event: 标签从289跳到291（因做出艰难选择而涨）
+- chapter: 6
+  event: 老人说方迟是"小方"，他给的不是钱是门票
+- chapter: 6
+  event: 老人说"你已经开始用标签做选择了，但你不知道自己在买什么"
+- chapter: 6
+  event: 林砚发现自己的标签四天从382掉到289——不是行为导致的
+- chapter: 6
+  event: 父亲握了林砚的手，标签仍为1
+- chapter: 6
+  event: 出租屋门缝下收到白色信封，内有方迟名片
+- chapter: 6
+  event: 名片背面约林砚明天下午三点去槐安路17号
+- chapter: 6
+  event: 林砚把名片放进钱包
+character_states:
+  林砚:
+    status: 标签持续下降（289），收到方迟约见，面临是否赴约的抉择
+    price_tag: 289
+    notable_changes:
+    - 发现标签奖励自我牺牲、惩罚违规
+    - 能力变强（站门外就能被动捕捉标签），代价变大（剧烈头痛）
+    - 发现丈夫的标签规则和自己不一样（恐惧导致下降）
+    - 确认自己标签本身有问题（四天掉将近100）
+    - 收了方迟25000块钱
+    - 收到方迟名片约去槐安路17号
+  父亲:
+    status: 出现苏醒迹象，标签从空白变极淡的1
+    price_tag: 1
+    notable_changes:
+    - 握了林砚的手（主动回应）
+    - 标签稳定在1
+  光鲜客户（女）:
+    status: 标签从68万掉到43万，丈夫崩溃，方迟线暴露
+  光鲜客户丈夫:
+    status: 首次正面出场，标签因恐惧自我归零，经济和精神双重崩溃
+  老人（槐安路）:
+    status: 标签981.2万，因捡猫涨1.2万，认识方迟（叫他"小方"）
+    notable_changes:
+    - 说"方迟给的不是钱是门票"
+    - 暗示林砚已经"进去了"
+  方迟:
+    status: 风险评估师，主动接触林砚（转钱+名片约见面）
+active_threads:
+- thread: 能力起源和真相
+  status: open
+  last_chapter: 6
+- thread: 父亲医疗费与苏醒
+  status: open
+  last_chapter: 6
+- thread: 价格标签的规则（因人而异）
+  status: open
+  last_chapter: 6
+- thread: 林砚自身标签异常
+  status: open
+  last_chapter: 6
+- thread: 方迟的身份与目的
+  status: open
+  last_chapter: 6
+- thread: 神秘短信发送者
+  status: open
+  last_chapter: 5
+- thread: 光鲜客户丈夫的命运
+  status: open
+  last_chapter: 6
+- thread: 老人的身份
+  status: open
+  last_chapter: 6
