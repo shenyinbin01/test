@@ -9,11 +9,11 @@
   "deepseek_call_count": 22,
   "retry_count": 0,
   "total_runtime_minutes": 45,
-  "total_chinese_chars": 7243,
+  "total_chinese_chars": 7213,
   "chapter_results": [
     {
       "chapter": 4,
-      "word_count": 2877,
+      "word_count": 2812,
       "canon_passed": true,
       "ai_flavor_score": 2,
       "ai_passed": true,
@@ -22,7 +22,7 @@
     },
     {
       "chapter": 5,
-      "word_count": 2965,
+      "word_count": 3008,
       "canon_passed": true,
       "ai_flavor_score": 2,
       "ai_passed": true,
@@ -31,7 +31,7 @@
     },
     {
       "chapter": 6,
-      "word_count": 1401,
+      "word_count": 1393,
       "canon_passed": true,
       "ai_flavor_score": 2,
       "ai_passed": true,
@@ -44,13 +44,18 @@
     "WPS real 未执行（本轮只做 dry-run）",
     "reader_debts.yaml 需手动更新以反映第4-6章兑现的债务"
   ],
-  "tailfix_applied": [
-    "第4章结尾截断修复",
-    "第5章重复标题清理+拼接修复",
-    "第6章重复版本清理",
-    "AI 味报告重写（正确评分方向、非零 char_count）",
-    "runtime_canon_after_ch006.yaml 已生成",
-    "wiki_after_ch006.md 已生成",
-    "canon 检查扩展（涵盖连续性/设定）"
+  "revision_applied": [
+    "第4章结尾截断修复（v1）",
+    "第5章重复标题清理+拼接修复（v1）",
+    "第6章重复版本清理（v1）",
+    "AI 味报告重写（正确评分方向、非零 char_count）（v1）",
+    "runtime_canon_after_ch006.yaml 已生成（v1）",
+    "wiki_after_ch006.md 已生成（v1）",
+    "canon 检查扩展（涵盖连续性/设定）（v1）",
+    "内容修订（v2）：统一林砚自身标签数值表达（\"三块二\"→382等）",
+    "内容修订（v2）：第5章余额/标签混淆已拆分明示",
+    "内容修订（v2）：第6章删除\"母亲的药也该续了\"（母亲无前文疾病线）",
+    "内容修订（v2）：AI味报告结论改为保守表述\"低风险，初步通过\"",
+    "内容修订（v2）：ch006 action_para_ratio 从1.03修正为1.00"
   ]
 }

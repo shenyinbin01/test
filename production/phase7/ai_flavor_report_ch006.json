@@ -2,7 +2,7 @@
   "chapter": 6,
   "title": "推开的门",
   "file": "chapter_006/final.md",
-  "chinese_char_count": 1401,
+  "chinese_char_count": 1393,
   "overall_ai_flavor_score": 2,
   "score_direction": "0=几乎无AI味, 10=AI味很重",
   "risk_level": "low",
@@ -29,8 +29,8 @@
       "score": 1
     }
   },
-  "action_para_ratio": 1.03,
+  "action_para_ratio": 1.00,
   "has_ending_hook": true,
   "issues": [],
-  "conclusion": "AI 味极低，接近人手写作"
+  "conclusion": "AI味低风险，初步通过，建议结合人工审读确认"
 }

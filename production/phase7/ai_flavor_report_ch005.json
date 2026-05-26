@@ -2,7 +2,7 @@
   "chapter": 5,
   "title": "钱的味道",
   "file": "chapter_005/final.md",
-  "chinese_char_count": 2965,
+  "chinese_char_count": 3008,
   "overall_ai_flavor_score": 2,
   "score_direction": "0=几乎无AI味, 10=AI味很重",
   "risk_level": "low",
@@ -35,5 +35,5 @@
     "模板过渡: 3次",
     "过度心理描写: 2次"
   ],
-  "conclusion": "AI 味极低，接近人手写作"
+  "conclusion": "AI味低风险，初步通过，建议结合人工审读确认"
 }
