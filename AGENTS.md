@@ -298,7 +298,7 @@ WPS → 反推故事状态
 
 ---
 
-## 7. 当前阶段：Phase 6
+## 7. 当前阶段：Phase 6 → ✅ 已验收通过
 
 ### 7.1 阶段名称
 
@@ -314,5 +314,5 @@ Phase 6：架构回归与质量底座
 
 ### 7.3 整体状态
 
-Phase 6 整体状态：completed / pending-human-acceptance
-下一阶段状态：not-started
+Phase 6 整体状态：✅ accepted（2026-05-26 主控方验收通过）
+下一阶段：Phase 7（待规划，状态：not-started）
