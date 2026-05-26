@@ -1,0 +1,90 @@
+# .story-system/canon_patterns.yaml
+# 故事核心规则：禁止词、大范围豁免模式、必需锚点
+# 此文件是来自 validate_canon_consistency.py 和 validate_phase4.py 硬编码规则的提取
+# validator 优先读取此文件
+
+version: v1
+last_updated: "2026-05-23T10:30:00+08:00"
+source_files:
+  - scripts/validate_canon_consistency.py
+  - scripts/validate_phase4.py
+
+# ── 精确禁止词 ──
+# 这些词一旦出现在正文中即视为违规（除非被 negation_prefixes 豁免）
+forbidden_patterns:
+  - 天秤会
+  - 系统面板
+  - 系统任务
+  - 任务奖励
+  - 系统充值
+  - 充值入口
+  - 充值商城
+  - 充值获得
+  - 氪金
+  - 商城充值
+  - 充值点数
+  - 充值兑换
+  - 消耗寿命
+  - 寿命换
+  - 生命倒计时
+  - 触碰改变命运
+  - 触碰改写命运
+  - 父母早逝
+  - 母亲去世
+  - 父亲已死
+  - 父亲死亡
+  - 全球异能
+  - 等级体系
+  - 心电图同步
+  - 生命数值同步
+
+# ── 大范围模式（有豁免条件） ──
+# 这些词在特定上下文中是允许的
+wide_patterns:
+  倒计时:
+    type: negation_check
+    negation_prefixes:
+      - 不是
+      - 并非
+      - 不等于
+      - 不是死亡
+      - 不是生命
+      - 并非死亡
+      - 并非生命
+      - 不等于死亡
+      - 不等于生命
+  充值:
+    type: context_check
+    allowed_context:
+      - 医院
+      - 缴费
+      - 住院费
+      - 余额不足
+      - 窗口
+      - 电子提示音
+  商城:
+    type: negation_check
+    negation_prefixes:
+      - 不是
+      - 并非
+
+# ── 必需锚点 ──
+# 正文中应出现的正向元素
+required_anchors:
+  - 林砚
+  - 外卖员
+  - 父亲病重
+  - 人生价格标签
+  - 不是单纯财富
+  - 选择代价
+  - 头痛
+  - 短暂失明
+  - 医院缴费窗口
+  - 即将归零
+
+# ── 否定前缀 ──
+# 当 forbidden_patterns 出现在这些前缀后面时豁免
+negation_prefixes:
+  - 不是
+  - 并非
+  - 不等于

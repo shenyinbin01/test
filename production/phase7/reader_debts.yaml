@@ -1,0 +1,163 @@
+# .story-system/reader_debts.yaml
+# 读者债务追踪：承诺给读者的伏笔、未回答问题、期待兑现点
+# 每章结束后更新
+
+version: v1
+last_updated: "2026-05-23T10:30:00+08:00"
+
+debts:
+  - id: debt-001
+    description: "老人（住槐安路小区、修电表箱）的身份和背景"
+    created_chapter: 1
+    status: open
+    urgency: medium
+    expected_payoff_chapter: 4-6
+    hints_given:
+      - "老人头顶六位数价格"
+      - "老人对林砚说'眼神太好有时候不是好事'"
+      - "老人认识风险评估师方迟"
+      - "老人住槐安路，名片上地址也是槐安路"
+
+  - id: debt-002
+    description: "光鲜客户（望江路18号）的经济诈骗事件与标签暴跌的关联"
+    created_chapter: 1
+    status: open
+    urgency: medium
+    expected_payoff_chapter: 4-8
+    hints_given:
+      - "客户价格在快速下跌"
+      - "客户在打电话谈资金周转问题"
+      - "第二天客户住所被警方封锁"
+
+  - id: debt-003
+    description: "父亲头顶价格消失（不是零，是空白）意味着什么"
+    created_chapter: 1
+    status: open
+    urgency: high
+    expected_payoff_chapter: 3-5
+    hints_given:
+      - "父亲头顶价格从五位数→四位数→三位数→两位→空白"
+      - "林砚查看其他人标签确认能力未消失"
+      - "标签消失不等于死亡（心电还在跳）"
+
+  - id: debt-004
+    description: "标签机制的完整规则：不限于财富，还可能反映危险/风险/选择代价"
+    created_chapter: 1
+    status: open
+    urgency: high
+    expected_payoff_chapter: 5-10
+    hints_given:
+      - "老人高标签 vs 穿得破（不是财富）"
+      - "客户标签暴跌 vs 经济诈骗（危险预警）"
+      - "老人在水果摊砍价三毛六（确实不是有钱人）"
+      - "方迟名片上写'风险评估师'"
+
+  - id: debt-005
+    description: "神秘短信'你看见了对吧'的发送者身份"
+    created_chapter: 2
+    status: open
+    urgency: high
+    expected_payoff_chapter: 4-7
+    hints_given:
+      - "号码未显示"
+      - "回拨关机"
+      - "林砚扫视人群无人看他"
+
+  - id: debt-006
+    description: "方迟（风险评估师）的身份和立场"
+    created_chapter: 2
+    status: open
+    urgency: high
+    expected_payoff_chapter: 3-6
+    hints_given:
+      - "名片落在停车场"
+      - "地址是槐安路17号（老人住的小区）"
+      - "接电话的是女声"
+
+  - id: debt-007
+    description: "电话女声说'你父亲的时间不多了'——她怎么知道林砚的情况"
+    created_chapter: 2
+    status: open
+    urgency: high
+    expected_payoff_chapter: 3-5
+    hints_given:
+      - "她没等林砚自报身份就说'你终于打来了'"
+      - "她同步知道父亲正在抢救"
+      - "时间节点精确"
+
+  - id: debt-008
+    description: "能力使用代价的深层规则"
+    created_chapter: 1
+    status: open
+    urgency: low
+    expected_payoff_chapter: 8-15
+    hints_given:
+      - "头痛"
+      - "短暂失明"
+      - "太阳穴刺痛"
+      - "看越仔细代价越大"
+
+  - id: debt-009
+    description: "停车场西装男（七位数、红灯闪烁）的身份"
+    created_chapter: 2
+    status: open
+    urgency: low
+    expected_payoff_chapter: 6-12
+    hints_given:
+      - "他在打电话说'那笔钱不能动，风险太高'"
+      - "边缘闪着红光"
+
+  - id: debt-010
+    description: "林砚自己的能力标签是什么——一直未看到自己"
+    created_chapter: 1
+    status: open
+    urgency: low
+    expected_payoff_chapter: 8-15
+    hints_given:
+      - "他能看到别人但从未尝试看自己"
+      - "父亲归零暗示'自己的标签也可能异常'"
+
+  - id: debt-011
+    description: "老人说的'两块钱'——标签真正价值单位"
+    created_chapter: 2
+    status: open
+    urgency: medium
+    expected_payoff_chapter: 4-8
+    hints_given:
+      - "'你头顶那玩意儿，还不如这把葱值钱'"
+      - "'因为你压根没搞明白它是啥'"
+      - "暗示标签不是'多少钱'而是'多少价值/选择'"
+
+  - id: debt-012
+    description: "医院费用缺口从3100扩大到5800（新药）——资金压力持续"
+    created_chapter: 2
+    status: open
+    urgency: high
+    expected_payoff_chapter: 3-5
+    hints_given:
+      - "父亲欠费清单更新"
+      - "加上今天的新药"
+      - "缺口5800"
+      - "林砚经济压力加剧"
+
+  - id: debt-013
+    description: "林砚父亲一旦离世对故事走向的影响"
+    created_chapter: 1
+    status: pending
+    urgency: high
+    expected_payoff_chapter: 3-4
+    hints_given:
+      - "价格归零"
+      - "抢救中"
+      - "女声说'时间不多了'"
+
+  - id: debt-014
+    description: "老人是否知道标签系统的真相？是否与组织有关？"
+    created_chapter: 1
+    status: open
+    urgency: low
+    expected_payoff_chapter: 10-20
+    hints_given:
+      - "老人对'看见数字'不惊讶"
+      - "老人给出暗示性警告"
+      - "老人认识风险评估师"

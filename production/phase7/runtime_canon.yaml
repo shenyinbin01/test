@@ -1,0 +1,26 @@
+version: v1
+current_chapter: 1
+last_updated: '2026-05-21T13:07:02.809717'
+timeline:
+- chapter: 1
+  event: 林砚在送餐过程中首次看见人生价格标签，通过老人和客户的对比意识到标签不代表财富。在医院缴费窗口看见父亲头顶价格归零。
+  impact: 主角获得能力认知，但处于试错阶段。父亲状况成为核心驱动力。
+  involved:
+  - 林砚
+character_states:
+  林砚:
+    status: 发现能力，负债压力大
+    price_tag: 归零边缘
+    notable_changes:
+    - 首次使用能力
+    - 判断失误一次
+active_threads:
+- thread: 能力起源和真相
+  status: open
+  last_chapter: 1
+- thread: 父亲医疗费
+  status: open
+  last_chapter: 1
+- thread: 价格标签的规则
+  status: open
+  last_chapter: 1

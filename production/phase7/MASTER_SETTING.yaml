@@ -1,0 +1,34 @@
+project:
+  name: price_tag_life
+  genre: 都市脑洞
+  core_idea: 主角是普通外卖员，能看到每个人的人生价格标签。标签不是财富，而是人生价值、潜力、风险、选择代价的综合显影。
+  target_reader: 男频爽文读者
+  style_preference: 快节奏、强钩子、口语化
+characters:
+- name: 林砚
+  age: 24
+  identity: 外卖员
+  personality: 克制、敏感、观察力强，不圣母但有底线
+  motivation: 父亲病重欠债，急需钱
+  arc: 从被动受压→主动利用能力改变命运
+  initial_price_tag: 归零边缘
+  price_tag_meaning: 当前人生价值和风险的显影
+world:
+  background: 现代都市，主角所在城市经济压力大，外卖行业竞争激烈
+  rules:
+  - 标签只显示当前状态，不直接显示完整未来
+  - 标签会误导，必须结合现实判断
+  - 每次强行窥探能力会带来头痛或短暂失明
+  - 标签变化不等于命运确定
+  - 标签和财富不完全相关
+  factions:
+  - 外卖平台系统
+  - 医院/医疗体系
+  - 隐藏设定（待后续展开）
+outline:
+  total_chapters: 30
+  current_arc: 能力觉醒期（1-10章）
+  key_arcs:
+  - 觉醒与试错（1-10章）
+  - 成长与博弈（11-20章）
+  - 真相与抉择（21-30章）

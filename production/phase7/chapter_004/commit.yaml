@@ -1,0 +1,39 @@
+chapter_id: 4
+title: 标签在闪烁
+summary: 林砚通过主动测试发现标签在奖励自我牺牲、惩罚违规行为。老人捡猫涨了标签但猫没有标签。光鲜客户的丈夫也能看到标签已崩溃。章尾收到5000元望江路转账，标签剧烈闪烁，林砚选择接受。
+confirmed_events:
+- 林砚发现自己标签从382降到369（过夜掉13）
+- 测试发现不买茶叶蛋标签降1（自我牺牲相关）
+- 老人捡流浪猫标签涨1.2万，猫头顶没有标签
+- 帮新人说话、送水——标签没变
+- 决定多跑两单——标签涨2（从368到370）
+- 闯红灯——标签暴跌15（从370到355）
+- 光鲜客户丈夫也能看到标签，已自我封闭
+- 收到5000元转账，备注"望江路"
+- 标签在转账后剧烈闪烁（248和0之间跳）
+- 林砚选择保留这笔钱
+character_updates:
+- character: 林砚
+  change: 对标签理解推进一步——发现它奖励自我牺牲、惩罚违规，但不是完全掌握
+- character: 光鲜客户（女）
+  change: 标签从68万掉到43万，丈夫也有同样能力
+- character: 老人
+  change: 因捡猫标签涨1.2万，暗示积极行为对标签的影响
+- character: 光鲜客户丈夫
+  change: 首次出现（未正面出场），也能看到标签
+open_threads_updates:
+- thread_id: mystery_sms
+  status: open
+  note: 未直接推进但同号码再次发短信
+- thread_id: father_medical
+  status: open
+  note: 费用缺口扩大至6200+，林砚选择接受不明转账
+- thread_id: label_mechanism
+  status: open
+  note: 林砚发现自我牺牲涨、违规跌的规律，但不完全理解
+- thread_id: husband_ability
+  status: open
+  note: 光鲜客户丈夫也能看到标签，已崩溃，新线索
+continuity_notes: 第4章承接第3章林砚开始理解标签随选择变化，推进了主动测试
+canon_risks: []
+canon_ok: true
