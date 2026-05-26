@@ -255,14 +255,14 @@ DeepCode 只服务编码、审查、测试、报告。
 
 ### 5.1 目标角色 Skill
 
-| Skill | 职责 | 边界 |
-|-------|------|------|
-| webnovel-planner | Story Bible、大纲、章节 Beat、剧情规划讨论 | 不写正文、不审稿、不润色、不同步 WPS |
-| webnovel-writer | 根据 Beat 写正文草稿 | 不审稿、不状态更新、不最终定稿 |
-| webnovel-reviewer | 十维度审稿，输出 rewrite_instructions | 不直接改正文、不新增重大剧情 |
-| webnovel-polisher | 去 AI 味、网文化表达、调整句式、增强动作对话场景 | 不改主线剧情、不更新 runtime_canon |
-| webnovel-state-manager | 读取 accepted chapter_commit，更新 runtime_canon、reader_debts、.webnovel/state.yaml，写 audit_log，调用 canon validator | 不写正文、不润色正文、不生成剧情、不同步 WPS |
-| webnovel-wps-sync | 渲染 DOCX、生成 WPS 投影、同步 WPS、更新 doc_meta.yaml 和 sync_log.jsonl | 不修改故事状态、不修改正文内容 |
+| Skill | 职责 | 边界 | 状态 |
+|-------|------|------|------|
+| webnovel_planner | Story Bible、大纲、章节 Beat、剧情规划讨论 | 不写正文、不审稿、不润色、不同步 WPS | ✅ Phase 7 已实现 |
+| webnovel_writer | 根据 Beat 写正文草稿 | 不审稿、不状态更新、不最终定稿 | ✅ Phase 7 已实现 |
+| webnovel_reviewer | 十维度审稿，输出 rewrite_instructions | 不直接改正文、不新增重大剧情 | ✅ Phase 6B 已实现 |
+| webnovel_polisher | 去 AI 味、网文化表达、调整句式、增强动作对话场景 | 不改主线剧情、不更新 runtime_canon | ✅ Phase 6B 已实现 |
+| webnovel_state_manager | 读取 accepted chapter_commit，更新 runtime_canon、reader_debts、.webnovel/state.yaml，写 audit_log，调用 canon validator | 不写正文、不润色正文、不生成剧情、不同步 WPS | ✅ Phase 7 已实现 |
+| webnovel_wps_sync | 渲染 DOCX、生成 WPS 投影、同步 WPS、更新 doc_meta.yaml 和 sync_log.jsonl | 不修改故事状态、不修改正文内容 | ✅ Phase 7 已实现 |
 
 ### 5.2 角色 Skill 禁止行为
 
@@ -298,21 +298,21 @@ WPS → 反推故事状态
 
 ---
 
-## 7. 当前阶段：Phase 6 → ✅ 已验收通过
+## 7. 当前阶段：Phase 7 → 🔄 实施中（本阶段）
 
 ### 7.1 阶段名称
 
-Phase 6：架构回归与质量底座
+Phase 7：多角色小说创作 Skill 体系落地
 
 ### 7.2 子阶段
 
 | 子阶段 | 名称 | 内容 | 状态 |
 |--------|------|------|------|
-| 6A | 状态层回归 | 创建 / 补齐 canon_patterns.yaml、reader_debts.yaml、webnovel-state-manager Skill、validator 改造、保留 run_chapter_pipeline.py 作为回归基线、输出 phase6a_state_manager_result.md | ✅ completed |
-| 6B | 去 AI 味质量闸门 | Detector → Reviewer → Polisher 三层质量闸门，AI 味分数降至低风险 | ✅ completed |
-| 6C | WPS 项目化管理 | build/sync/validate 工具链，本地投影 + real 同步 4/4 success | ✅ completed |
+| 7.1 | 补齐缺位角色 Skill | 创建 webnovel_planner / webnovel_writer / webnovel_state_manager / webnovel_wps_sync 四个 SKILL.md | 🔄 实施中 |
+| 7.2 | 建立多角色创作工作流 | 创建 docs/phase7_multirole_creation_workflow.md，升级 Prompts | 🔄 实施中 |
+| 7.3 | 沙盒 Demo | 用沙盒项目跑完整多角色链路 | 🔄 实施中 |
 
 ### 7.3 整体状态
 
 Phase 6 整体状态：✅ accepted（2026-05-26 主控方验收通过）
-下一阶段：Phase 7（待规划，状态：not-started）
+Phase 7 整体状态：🔄 in_progress

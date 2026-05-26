@@ -26,20 +26,22 @@ skill-pack/
 
 | 类型 | 数量 | 状态 |
 |------|------|------|
-| 创作角色 Skill | 3 | ✅ 已实现 |
-| DeepCode 编程 Skill | 5 | ✅ 已实现 |
-| 已定义但未实现 | 3 | ⚠️ 等待实现 |
+| 创作角色 Skill | 7 | ✅ 全部已实现 |
+| DeepCode 编程 Skill | 5 | ✅ 全部已实现 |
 
-### 已定义但未实现的 Skill（AGENTS.md §5.1）
+### 完整创作链路
 
-| Skill | 职责 | 状态 |
-|-------|------|------|
-| webnovel-planner | Story Bible、大纲、章节 Beat | ❌ 未实现 |
-| webnovel-writer | 根据 Beat 写正文草稿 | ❌ 未实现 |
-| webnovel-state-manager | 更新 runtime_canon、reader_debts、state.yaml | ❌ 未实现 |
-| webnovel-wps-sync | 渲染 DOCX、同步 WPS | ❌ 未实现 |
+```
+webnovel_planner
+  → webnovel_writer
+  → detect_webnovel_ai_flavor
+  → webnovel_reviewer
+  → webnovel_polisher
+  → webnovel_state_manager
+  → webnovel_wps_sync
+```
 
-> 注：以上 4 个 Skill 已在架构文档中定义职责边界但尚未以独立 SKILL.md 文件形式存在。
+参见: `docs/phase7_multirole_creation_workflow.md`
 
 ## 审核要点
 
@@ -48,4 +50,6 @@ skill-pack/
 3. 禁止行为是否充分？
 4. 执行步骤是否可操作？
 5. 与 AGENTS.md 分工是否一致？
-6. 已实现 vs 待实现 Skill 的划分是否合理？
+6. 完整 7 角色创作链路是否覆盖了全部创作流程？
+7. 已定义但未实现的 Skill — 已全部补齐，不再有待实现缺口。
+8. Prompt 模板与对应 Skill 的职责是否一致？
