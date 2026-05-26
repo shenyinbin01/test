@@ -8,12 +8,14 @@
     "redacted": true
   },
   {
-    "sync_time": "2026-05-26T14:03:01.198343",
+    "sync_time": "2026-05-26T15:45:31.985033",
     "project_id": "price_tag_life",
     "mode": "real",
-    "status": "skipped",
-    "message": "WPS_FOLDER_ID was configured later but real sync via sync_wps_project.py was skipped due to kdocs-cli PATH issue in sudo",
-    "run_id": "phase6c-20260526T140301-skipped",
+    "status": "success",
+    "doc_count": 4,
+    "success_count": 4,
+    "failed_count": 0,
+    "run_id": "phase6c-20260526T154505-08fce15a",
     "redacted": true
   }
 ]

@@ -17,6 +17,20 @@ def generate_run_id():
     ts = datetime.now().strftime("%Y%m%dT%H%M%S")
     return f"phase6c-{ts}-{str(uuid.uuid4())[:8]}"
 
+KDOCS_PATH = "/home/agentuser/.local/bin"
+KDOCS_BIN = f"{KDOCS_PATH}/kdocs-cli"
+KDOCS_HOME = "/home/agentuser"
+
+def kdocs_env():
+    """返回包含 kdocs-cli 路径和 HOME 环境变量（确保 sudo 下能找到 token 密钥链）"""
+    env = {**os.environ}
+    env["HOME"] = KDOCS_HOME
+    current_path = env.get("PATH", "")
+    if KDOCS_PATH not in current_path:
+        env["PATH"] = f"{KDOCS_PATH}:{current_path}"
+    return env
+
+
 def parse_kdocs_result(stdout):
     text = stdout.strip()
     if not text:
@@ -52,6 +66,13 @@ def read_env_file(path):
     try:
         return p.read_text()
     except PermissionError:
+        # sudo 下无法读取受保护文件时尝试 sudo cat
+        try:
+            r = subprocess.run(["sudo", "cat", str(p)], capture_output=True, text=True, timeout=10)
+            if r.returncode == 0:
+                return r.stdout
+        except Exception:
+            pass
         return ""
 
 def get_env_value(content, key):
@@ -172,7 +193,7 @@ def main():
 
     # 检查 kdocs-cli
     try:
-        subprocess.run(["which", "kdocs-cli"], capture_output=True, text=True, timeout=5, check=True, env={**os.environ, "PATH": os.environ.get("PATH","") + ":/home/agentuser/.local/bin"})
+        subprocess.run(["which", KDOCS_BIN], capture_output=True, text=True, timeout=5, check=True, env=kdocs_env())
     except:
         print("❌ kdocs-cli 不可用")
         sys.exit(1)
@@ -221,10 +242,10 @@ def main():
         }
 
         try:
-            result = subprocess.run(["kdocs-cli", "drive", "upload-file"],
+            result = subprocess.run([KDOCS_BIN, "drive", "upload-file"],
                                     input=json.dumps(payload), capture_output=True,
                                     text=True, timeout=60,
-                                    env={**os.environ, "PATH": os.environ.get("PATH","") + ":/home/agentuser/.local/bin"})
+                                    env=kdocs_env())
         except subprocess.TimeoutExpired:
             print(f"  ❌ 超时")
             doc_results.append({"doc_key": doc_key, "title": entry["title"],

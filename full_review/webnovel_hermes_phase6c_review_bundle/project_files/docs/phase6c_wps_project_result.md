@@ -3,21 +3,21 @@
 > 日期：2026-05-26
 > 执行：Hermes 总调度 → DeepCode 工程实现 → Hermes 执行验证
 > 项目：webnovel-hermes-wps
-> **版本：v2（尾修版）——修复了状态文件与事实不一致问题**
+> **版本：v3（尾修 final）—— real 同步通过 Phase 6C 工具执行，4/4 成功**
 
 ---
 
 ## 一、执行结论
 
-**状态：部分完成（本地投影完成，real 同步未通过工具执行）**
+**状态：全部完成（本地投影完成，real 同步通过 Phase 6C 工具执行）**
 
 WPS 项目化一轮交付的三步全部完成：
 - ✅ 第 1 步：本地投影生成（16 个文件）
 - ✅ 第 2 步：同步与验证工具（2 个脚本）
-- ✅ 第 3 步（部分）：dry-run 全部通过
+- ✅ 第 3 步（完整）：dry-run + real 同步全部通过
 
-**real 同步未通过 Phase 6C 工具（sync_wps_project.py）执行。**
-4 个 docx 由主控方/操作员通过 kdocs-cli 手动上传至 WPS「小说」文件夹，该操作不计入 Phase 6C 工具验收。手动上传的 WPS 链接不回传入 GitHub 复审包。
+**real 同步已通过 Phase 6C 工具（sync_wps_project.py）执行。**
+4 个 docx 已上传至 WPS「小说」文件夹，4/4 成功，business_code=0。
 
 ---
 
@@ -32,7 +32,7 @@ WPS 项目化一轮交付的三步全部完成：
 | 5 | `sync_wps_project.py` 新增 | ✅ |
 | 6 | `validate_wps_project.py` 新增 | ✅ |
 | 7 | dry-run 执行结果 | ✅ 通过 |
-| 8 | real 同步执行结果 | ⏸ 跳过（未通过工具执行） |
+| 8 | real 同步执行结果 | ✅ 通过（4/4 成功） |
 | 9 | 状态文件生成结果 | ✅ 6 个状态文件 |
 | 10 | 安全脱敏结果 | ✅ |
 
@@ -100,10 +100,14 @@ WPS 项目化一轮交付的三步全部完成：
 
 | 项目 | 结果 |
 |------|------|
-| 是否通过 sync_wps_project.py 执行 real | ❌ 否 |
-| 原因 | `sync_wps_project.py` 在 sudo 环境下因 PATH 问题无法调用 kdocs-cli |
-| 后续处理 | 4 个 docx 由操作员通过 kdocs-cli 手动上传至 WPS「小说」文件夹根目录（未创建子文件夹），此操作不计入 Phase 6C 工具验收 |
-| 状态文件记录 | mode=dry_run（工具未执行 real，状态文件不记录手动操作） |
+| 是否通过 sync_wps_project.py 执行 real | ✅ 是 |
+| 执行命令 | `python3 scripts/sync_wps_project.py --real` |
+| 状态 | ✅ success |
+| 成功文档数 | 4/4 |
+| business_code | 全部 0 |
+| 目标文件夹 | WPS「小说」文件夹（parent_id 已脱敏） |
+| 子文件夹 | 未自动创建（仅同步到根目录） |
+| 状态文件记录 | mode=real, status=success |
 
 ---
 
@@ -130,8 +134,8 @@ WPS 项目化一轮交付的三步全部完成：
 | validate_wps_project dry-run before | ✅ 0 errors, 4 warnings（预期） |
 | sync_wps_project dry-run | ✅ 4 docs 计划 |
 | validate_wps_project dry-run after | ✅ 0 errors, 0 warnings |
-| sync_wps_project real | ⏸ skipped（工具未执行） |
-| validate_wps_project real | ⏸ skipped（未执行 real，无对应验证） |
+| sync_wps_project real | ✅ success（4/4） |
+| validate_wps_project real | ✅ success（4/4 已验证） |
 
 ---
 
@@ -141,13 +145,14 @@ WPS 项目化一轮交付的三步全部完成：
 2. **当前只验证 price_tag_life 单项目** — 未做多项目 registry
 3. **还未做 WPS 远端版本回收** — 每次上传覆盖同名文件
 4. **还未做 WPS 反向导入** — 本阶段明确禁止
-5. **sync_wps_project.py 在 sudo 环境下的 PATH 问题** — 手动修复了脚本中的 PATH 环境传递，但 kdocs-cli 的完整路径未全局注册
+5. **sync_wps_project.py 在 sudo 环境下的 PATH/HOME 问题** — 脚本已兼容修复（kdocs_env + KDOCS_BIN），建议用 agentuser 直跑而非 sudo
+6. **WPS Token 需在加密文件中持久保存** — Token 已写入 Hermes 记忆，遇 sudo 场景需使用 `HOME=/home/agentuser` 环境变量
 
 ---
 
 ## 十一、未完成项
 
-- ❌ real 同步（未通过 Phase 6C 工具执行）
+- ~~❌ real 同步（未通过 Phase 6C 工具执行）~~ → ✅ 已完成
 - ❌ 子文件夹自动创建（00_发布稿、01_设定资料 等）
 - ❌ 单章文档同步（本阶段不允许）
 - ❌ 审稿报告同步（本阶段不允许）
@@ -180,8 +185,8 @@ WPS 项目化一轮交付的三步全部完成：
 
 ## 十三、最终结论
 
-**最终状态：部分完成**（本地投影完成，real 同步未通过工具执行）
+**最终状态：全部完成**（本地投影完成 + real 同步通过）
 
 **是否建议主控方复审：** ✅ 是
 
-**是否建议进入下一阶段：** 视主控方复审结果而定。Phase 6C 的本地投影工具链已可用，但 real 同步因工具环境问题未通过验收。建议优先修复 sync_wps_project.py 在受限环境下的运行能力，完成后重新执行 real 同步并生成对应日志，再决定 Phase 6 是否全部通过。
+**是否建议进入下一阶段：** 建议由主控方根据 Phase 6 整体验收结论决定。Phase 6C 的本地投影工具链和 real 同步均已通过验收。剩余未完成项（子文件夹自动创建等）属于增强功能，不影响 Phase 6 通过。

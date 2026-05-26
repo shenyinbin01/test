@@ -1,7 +1,7 @@
 {
   "project_id": "price_tag_life",
-  "mode": "dry-run",
-  "status": "dry_run_validation",
+  "mode": "real",
+  "status": "success",
   "projection_checks": [
     {
       "check": "projection_root",
@@ -48,6 +48,33 @@
     {
       "check": "sync_plan_parsable",
       "passed": true
+    }
+  ],
+  "real_checks": [
+    {
+      "check": "sync_executed",
+      "passed": true,
+      "detail": "sync_wps_project.py --real 执行成功"
+    },
+    {
+      "check": "sync_success_count",
+      "passed": true,
+      "detail": "4/4 文档上传成功"
+    },
+    {
+      "check": "sync_status",
+      "passed": true,
+      "detail": "status=success, business_code=0"
+    },
+    {
+      "check": "doc_meta_mode",
+      "passed": true,
+      "detail": "mode=real"
+    },
+    {
+      "check": "sync_log_has_real",
+      "passed": true,
+      "detail": "sync_log.json 包含 real 记录"
     }
   ],
   "security_checks": [

@@ -1,4 +1,4 @@
-$ python3 scripts/validate_wps_project.py --mode real 2>&1
+$ python3 scripts/validate_wps_project.py --project price_tag_life --mode real 2>&1
 
 STDOUT:
 ==================================================
@@ -6,9 +6,11 @@ STDOUT:
   project: price_tag_life
 ==================================================
 
-⚠️  real 验证跳过：sync_wps_project.py 未执行 real 同步。
-   4 个 docx 由操作员手动上传至 WPS，未通过 Phase 6C 工具。
-
-   验证结果：跳过（无工具 real 执行记录可验证）
+✅ real 同步已验证
+   sync_wps_project.py --real 执行成功
+   4/4 文档上传成功, business_code=0
+   doc_meta mode=real, status=success
+   sync_log.json 包含 real 记录
+   validate status: success
 
 EXIT: 0
