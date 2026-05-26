@@ -16,9 +16,9 @@ Phase 6B Step 1 只做检测和报告，不做改写。
 |---|------|------|
 | 1 | deai_rules 规则库（7 个文件） | ✅ 完成（实际 10 个文件） |
 | 2 | 句式节奏分析工具 `scripts/analyze_sentence_rhythm.py` | ✅ 完成 |
-| 3 | 中文网文 AI 味检测 Skill `skills/detect-webnovel-ai-flavor/SKILL.md` | ✅ 完成 |
-| 4 | 单章检测报告 `deai_reports/chapter_001_sentence_rhythm.yaml` | ✅ 完成 |
-| 5 | 单章 AI 味检测报告 `deai_reports/chapter_001_ai_flavor.yaml` | ✅ 完成 |
+| 3 | 中文网文 AI 味检测 Skill `skills/detect_webnovel_ai_flavor/SKILL.md` | ✅ 完成 |
+| 4 | 单章检测报告 ``deai_reports/chapter_001_sentence_rhythm.yaml`` | ✅ 完成 |
+| 5 | 单章 AI 味检测报告 ``deai_reports/chapter_001_ai_flavor.yaml`` | ✅ 完成 |
 | 6 | 阶段结果报告 `docs/phase6b_deai_gate_step1_result.md` | ✅ 完成（本文） |
 
 ### 本轮不做
@@ -67,7 +67,7 @@ Phase 6B 的规则库参考了以下项目：
 | `templates/deai_rules/action_over_explanation.md` | 1,517 bytes | DeepCode |
 | `templates/deai_rules/hook_and_payoff.md` | 1,696 bytes | DeepCode |
 | `scripts/analyze_sentence_rhythm.py` | 12,215 bytes | DeepCode（Hermes 覆盖为完整版） |
-| `skills/detect-webnovel-ai-flavor/SKILL.md` | 4,684 bytes | DeepCode |
+| `skills/detect_webnovel_ai_flavor/SKILL.md` | 4,684 bytes | DeepCode |
 
 ### 原有文件（补充示例）
 
@@ -158,7 +158,7 @@ templates/deai_rules/（10 个文件）
 ```bash
 python scripts/analyze_sentence_rhythm.py \
   --input /path/to/chapter_001_draft.md \
-  --output deai_reports/chapter_001_sentence_rhythm.yaml
+  --output `deai_reports/chapter_001_sentence_rhythm.yaml`
 ```
 
 ---
@@ -219,7 +219,7 @@ python scripts/analyze_sentence_rhythm.py \
 ### 句式节奏报告
 
 ```
-deai_reports/chapter_001_sentence_rhythm.yaml
+`deai_reports/chapter_001_sentence_rhythm.yaml`
 ```
 
 关键指标：
@@ -239,7 +239,7 @@ deai_reports/chapter_001_sentence_rhythm.yaml
 ### AI 味检测报告
 
 ```
-deai_reports/chapter_001_ai_flavor.yaml
+`deai_reports/chapter_001_ai_flavor.yaml`
 ```
 
 | 维度 | 分值 | 评级 |
@@ -280,6 +280,25 @@ deai_reports/chapter_001_ai_flavor.yaml
 | 安装新依赖 | ❌ 未安装 |
 
 ---
+
+
+### deai_reports 数据路径
+
+检测报告存储在运行数据目录中，不与代码仓库混合：
+
+```
+完整运行数据路径：
+/data/webnovel-lab/workspace/novels/price_tag_life/deai_reports/
+├── chapter_001_sentence_rhythm.yaml
+├── chapter_001_ai_flavor.yaml
+└── ...
+```
+
+注意：
+- `deai_reports/` 目录位于小说工作区（`/data/webnovel-lab/workspace/novels/price_tag_life/`），
+  不在代码仓库（`/opt/webnovel-hermes-wps/`）中。
+- 这些是**运行数据产物**，不一定提交到 GitHub 代码仓库。
+- 每次章节生产或检测运行后生成对应的 YAML 报告文件。
 
 ## 10. 下一步建议
 
