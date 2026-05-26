@@ -172,7 +172,7 @@ def main():
 
     # 检查 kdocs-cli
     try:
-        subprocess.run(["which", "kdocs-cli"], capture_output=True, text=True, timeout=5, check=True)
+        subprocess.run(["which", "kdocs-cli"], capture_output=True, text=True, timeout=5, check=True, env={**os.environ, "PATH": os.environ.get("PATH","") + ":/home/agentuser/.local/bin"})
     except:
         print("❌ kdocs-cli 不可用")
         sys.exit(1)
@@ -223,7 +223,8 @@ def main():
         try:
             result = subprocess.run(["kdocs-cli", "drive", "upload-file"],
                                     input=json.dumps(payload), capture_output=True,
-                                    text=True, timeout=30)
+                                    text=True, timeout=60,
+                                    env={**os.environ, "PATH": os.environ.get("PATH","") + ":/home/agentuser/.local/bin"})
         except subprocess.TimeoutExpired:
             print(f"  ❌ 超时")
             doc_results.append({"doc_key": doc_key, "title": entry["title"],
