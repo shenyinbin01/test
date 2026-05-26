@@ -1,4 +1,3 @@
-REVIEW_README.md
 command_logs/build_wps_project_projection.log
 command_logs/compileall.log
 command_logs/env_check.log
@@ -20,11 +19,12 @@ phase6c_outputs/wps_project_state/wps_project_doc_meta.json
 phase6c_outputs/wps_project_state/wps_project_sync_log.json
 phase6c_outputs/wps_project_state/wps_project_sync_log.jsonl
 phase6c_outputs/wps_project_state/wps_project_sync_plan.json
-project_files/README.md
 project_files/docs/phase6c_wps_project_result.md
+project_files/README.md
 project_files/scripts/build_wps_project_projection.py
-project_files/scripts/sync_wps.py
 project_files/scripts/sync_wps_project.py
+project_files/scripts/sync_wps.py
 project_files/scripts/validate_wps_project.py
 project_files/scripts/validate_wps_sync.py
+REVIEW_README.md
 security_scan.log

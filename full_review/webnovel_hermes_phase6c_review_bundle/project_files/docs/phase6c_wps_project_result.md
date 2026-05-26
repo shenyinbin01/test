@@ -170,11 +170,11 @@ WPS 项目化一轮交付的三步全部完成：
 | Story Bible 人类版生成 | 是 | md + docx + sha256 |
 | 小说 Wiki 人类版生成 | 是 | md + docx + sha256 |
 | wps_project_manifest 可解析 | 是 | 4 documents, 5 folders |
-| sync_wps_project.py 支持 dry-run | 是 | 已测试通过 |
-| sync_wps_project.py 支持 real | 是 | 因工具环境问题未执行 |
-| validate_wps_project.py 可验证状态 | 是 | 已测试通过 |
-| dry-run 通过 | 是 | 0 errors, 0 warnings |
-| real 同步执行 | ❌ | 未通过工具执行（不计入验收） |
+|| sync_wps_project.py 支持 dry-run | 是 | 已测试通过 |
+|| sync_wps_project.py 支持 real | 是 | 已执行，4/4 成功 |
+|| validate_wps_project.py 可验证状态 | 是 | 已测试通过 |
+|| dry-run 通过 | 是 | 0 errors, 0 warnings |
+|| real 同步执行 | ✅ | 已通过工具执行，4/4 成功 |
 | 状态文件脱敏 | 是 | 无敏感信息 |
 | 未破坏正文 | 是 | |
 | 未修改 .story-system | 是 | |

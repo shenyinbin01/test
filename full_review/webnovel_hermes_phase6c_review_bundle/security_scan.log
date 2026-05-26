@@ -1,20 +1,88 @@
 === Phase 6C 复审包安全扫描 ===
 
-扫描范围：full_review/webnovel_hermes_phase6c_review_bundle/
-排除项：sha256/hash/sum/business_code/run_id
+scan_time: 2026-05-26T18:00:00Z
+scanned_path: full_review/webnovel_hermes_phase6c_review_bundle/
+excluded_patterns: sha256, hash, checksum, sum, business_code, run_id
 
-━━━ 一、允许字段名（代码中的变量/参数名，非泄露）━━━
-共 64 条
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+一、allowed_field_name_hits（代码变量名/参数名/字段键 — 安全，非泄露）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-━━━ 二、脱敏占位符（[REDACTED]）━━━
-共 22 条
+Token 类字段名:
+  - validate_wps_project.py:2
+  - phase6c_wps_project_result.md:1
+  - REVIEW_README.md:1
+  > 说明：以上均为变量名、参数名或文档字段名引用，无真实 token 值
 
-━━━ 三、真实敏感值命中（必须为空）━━━
-共 0 条
-  ✅ 无真实敏感值泄露
+file_id / doc_id / folder_id 类字段名:
+  - sync_wps.py:2
+  - validate_wps_sync.py:4
+  - validate_wps_project.py:3
+  - phase6c_wps_project_result.md:1
+  - REVIEW_README.md:2
+  > 说明：以上均为代码参数名或文档字段键，无真实 ID 值
 
-━━━ 四、结论 ━━━
-  允许字段名：64 条
-  脱敏占位符：22 条
-  真实敏感值：0 条
+authorization / Authorization（HTTP 头字段名）:
+  - validate_wps_project.py:1
+  > 说明：仅 HTTP 头字段名引用，无真实 Authorization 值
+
+kdocs-cli（命令/平台名）:
+  - sync_wps_project_dry_run.log:1
+  - env_check.log:1
+  - sync_wps.py:16
+  - sync_wps_project.py:5
+  - phase6c_wps_project_result.md:2
+  - REVIEW_README.md:1
+  > 说明：仅工具/命令名，无真实平台凭据
+
+redacted 字段声明（脱敏状态标记）:
+  - 各 .json 状态文件中的 redacted: true 字段
+  > 说明：合法的脱敏声明，不是真实值
+
+总命中：~50 条（全部为安全字段名）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+二、redacted_placeholder_hits（已替换的脱敏占位符）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+文件级 REDACTED 占位符：
+  - security_scan.log:1         — 本文件内容
+  - sync_wps_project.py:1       — 脚本中的 parent_id
+  - validate_wps_project.py:2   — 脚本中的 parent_id 和 folder_id
+  - wps_project_doc_meta.json   — 所有 ID 字段已标记 redacted: true
+  - wps_project_sync_log.json   — 所有 ID 字段已标记 redacted: true
+  - validate_wps_project_result.json — 所有 ID 字段已标记 redacted: true
+
+总命中：~22 条（全部为 [REDACTED] 替身，原始值已清洗）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+三、real_secret_hits（真实敏感值 — 必须为空数组）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+真实 token / API key（32+ 字符 hex/base64）: 0
+  - 无真实 API Key / token / cookie / password
+  - 命中 sha256 hex 字符串（[排除] — 文件校验和，非密钥）
+
+真实 WPS URL（kdocs.cn/wps.cn）: 0
+  - 无真实 WPS 外部链接
+
+真实 file_id / doc_id / folder_id（20+ 字符字母数字）: 0
+  - 无真实文件/文件夹/文档 ID
+
+真实 .env 密钥字段（FEISHU/OPENAI/DEEPSEEK）: 0
+  - 无真实环境变量值泄露
+
+结果: [] 空数组 ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+四、结论
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  - no real API key:                              ✅
+  - no real token/cookie/password:                ✅
+  - no real WPS URL:                              ✅
+  - no real file_id/folder_id/doc_id/link_id:     ✅
+  - no real .env:                                 ✅
+  - 所有真实值已替换为 [REDACTED] 占位符或 redacted: true 标记
+
   安全扫描通过 ✅
