@@ -1,0 +1,41 @@
+chapter_id: 5
+title: 钱的味道
+summary: 林砚去光鲜客户家看丈夫，发现丈夫标签因恐惧自我归零。5000元不是客户转的，是方迟（风险评估师）转的。父亲出现苏醒迹象，标签从空白变极淡的1。章尾收到20000元尾款转账，标签从355暴跌至289，林砚收下。
+confirmed_events:
+- 林砚去光鲜客户家，丈夫锁书房两天不吃不喝
+- 丈夫标签在脉冲式闪烁，随恐惧程度下降
+- 林砚发现丈夫的标签规则和他不一样（恐惧就掉）
+- 5000元转账不是客户给的——是方迟
+- 女人确认方迟就是见过丈夫的人（戴眼镜西装男）
+- 林砚用5000元交了父亲部分费用
+- 父亲出现苏醒迹象（眼皮动），标签从空白变极淡的1
+- 章尾收到20000元转账，备注"尾款"
+- 林砚标签从355暴跌至289
+- 林砚选择继续收下这笔钱
+character_updates:
+- character: 林砚
+  change: 能力在变强（站门外就能被动捕捉到别人标签），但代价更大（剧烈头痛）。理解了标签规则因人而异
+- character: 光鲜客户丈夫
+  change: 首次正面出场，精神和经济双重崩溃，标签因恐惧归零
+- character: 光鲜客户（女）
+  change: 确认方迟身份，处境进一步恶化，丈夫崩溃她撑家
+- character: 父亲
+  change: 出现苏醒迹象，标签从空白恢复至极淡的1
+- character: 方迟
+  change: 首次被确认身份——他就是来找丈夫的那个风险评估师。与5000元转账有关
+open_threads_updates:
+- thread_id: father_price_near_zero
+  status: open
+  note: 父亲标签从空白恢复至1，暗示有转机但不能死亡
+- thread_id: fang_chi
+  status: open
+  note: 方迟身份确认——他见了光鲜客户丈夫，转了一笔钱给林砚。目的不明
+- thread_id: mystery_sms
+  status: open
+  note: 未直接推进但方迟线密集发酵
+- thread_id: label_rules_differ
+  status: open
+  note: 丈夫的标签规则和林砚不同（恐惧导致下降而非违规导致下降）
+continuity_notes: 第5章紧接第4章结尾，林砚履约去看丈夫，方迟线推进了一大步
+canon_risks: []
+canon_ok: true

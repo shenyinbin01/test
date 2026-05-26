@@ -1,0 +1,41 @@
+chapter_id: 6
+title: 推开的门
+summary: 林砚面对25000块做出选择（取一半），标签因此微涨。老人说方迟给的不是钱是门票。林砚发现自己的标签四天掉了一百——不是行为导致的，是标签本身有问题。父亲出现苏醒迹象握了林砚的手。章尾在出租屋门口收到方迟的信封，约他去槐安路17号。
+confirmed_events:
+- 林砚决定只取一万元现金，留一万五在卡里
+- 标签从289跳到291（因做出艰难选择而涨）
+- 老人说方迟是"小方"，他给的不是钱是门票
+- 老人说"你已经开始用标签做选择了，但你不知道自己在买什么"
+- 林砚发现自己的标签四天从382掉到289——不是行为导致的
+- 父亲握了林砚的手，标签仍为1
+- 出租屋门缝下收到白色信封，内有方迟名片
+- 名片背面约林砚明天下午三点去槐安路17号
+- 林砚把名片放进钱包
+character_updates:
+- character: 林砚
+  change: 第一次获得外界对自己标签问题的确认——老人说他"已经开始用标签做选择"。面临是否赴约方迟的抉择
+- character: 老人
+  change: 确认认识方迟（"小方"），暗示他知道方迟做了什么。标签981.2万
+- character: 父亲
+  change: 出现明确苏醒迹象（主动握紧林砚的手），标签稳定在1
+- character: 方迟
+  change: 首次主动接触林砚（通过名片），约见面
+open_threads_updates:
+- thread_id: fang_chi
+  status: open
+  note: 方迟主动约见林砚，明天下午三点槐安路17号——这是本章的开门钩子
+- thread_id: label_self_anomaly
+  status: open
+  note: 林砚确认自己的标签在持续下降（382→289），不是行为导致的
+- thread_id: father_price_near_zero
+  status: open
+  note: 父亲苏醒迹象明显，标签稳定在1，但不能死亡
+- thread_id: old_man
+  status: open
+  note: 老人认识方迟，暗示他知道标签和方迟的运作方式
+- thread_id: mystery_sms
+  status: open
+  note: 未直接推进但方迟线和短信线可能重叠
+continuity_notes: 第6章承接第5章的方迟线推向直接接触，章尾形成强力新阶段钩子
+canon_risks: []
+canon_ok: true

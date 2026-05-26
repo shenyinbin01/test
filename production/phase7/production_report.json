@@ -1,0 +1,44 @@
+{
+  "project": "price_tag_life",
+  "chapters": [
+    4,
+    5,
+    6
+  ],
+  "mode": "real",
+  "deepseek_call_count": 22,
+  "retry_count": 0,
+  "total_runtime_minutes": 45,
+  "chapter_results": [
+    {
+      "chapter": 4,
+      "word_count": 2862,
+      "canon_passed": true,
+      "ai_flavor_score": 7,
+      "commit_generated": true,
+      "runtime_canon_updated": false
+    },
+    {
+      "chapter": 5,
+      "word_count": 2951,
+      "canon_passed": true,
+      "ai_flavor_score": 7,
+      "commit_generated": true,
+      "runtime_canon_updated": false
+    },
+    {
+      "chapter": 6,
+      "word_count": 2977,
+      "canon_passed": true,
+      "ai_flavor_score": 7,
+      "commit_generated": true,
+      "runtime_canon_updated": false
+    }
+  ],
+  "major_failures": [],
+  "manual_attention_needed": [
+    "runtime_canon.yaml 尚未更新——需要将 ch4/ch5/ch6 commit 合并到 .story-system/runtime_canon.yaml",
+    "reader_debts.yaml 需要更新——部分债务应在 ch4-6 中已兑现",
+    "WPS 未执行 real 同步——本轮只做 dry-run"
+  ]
+}
