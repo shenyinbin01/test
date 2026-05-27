@@ -298,21 +298,22 @@ WPS → 反推故事状态
 
 ---
 
-## 7. 当前阶段：Phase 7 → 🔄 实施中（本阶段）
+## 7. 当前阶段：Phase 7 → 🔄 审计修正（本阶段）
 
 ### 7.1 阶段名称
 
-Phase 7：多角色小说创作 Skill 体系落地
+Phase 7：多角色小说创作 Skill 体系落地 — 审计修正
 
 ### 7.2 子阶段
 
 | 子阶段 | 名称 | 内容 | 状态 |
 |--------|------|------|------|
-| 7.1 | 补齐缺位角色 Skill | 创建 webnovel_planner / webnovel_writer / webnovel_state_manager / webnovel_wps_sync 四个 SKILL.md | 🔄 实施中 |
-| 7.2 | 建立多角色创作工作流 | 创建 docs/phase7_multirole_creation_workflow.md，升级 Prompts | 🔄 实施中 |
-| 7.3 | 沙盒 Demo | 用沙盒项目跑完整多角色链路 | 🔄 实施中 |
+| 7.1 | 补齐缺位角色 Skill | 创建 webnovel_planner / webnovel_writer / webnovel_state_manager / webnovel_wps_sync 四个 SKILL.md | ✅ 已完成 |
+| 7.2 | 建立多角色创作工作流 | 创建 docs/phase7_multirole_creation_workflow.md，升级 Prompts | ✅ 已完成 |
+| 7.3 | 沙盒 Demo | 用沙盒项目跑完整多角色链路 | ✅ 已完成 |
+| 7.4 | 审计修正 | Prompt 去项目绑定、StateManager 安全顺序修正、Skill name 统一、文档更新 | ✅ 已完成 |
 
 ### 7.3 整体状态
 
 Phase 6 整体状态：✅ accepted（2026-05-26 主控方验收通过）
-Phase 7 整体状态：🔄 in_progress
+Phase 7 整体状态：🔍 pending_audit（审计修正已完成，待主控方验收后进入正式生产试运行）

@@ -99,24 +99,47 @@ tags: ["webnovel", "state-manager", "canon", "projection", "phase7"]
 
 ### apply_commit 模式
 
-1. 确认 `.story-system/chapter_commits/chapter_XXX_commit.yaml` 存在
-2. 检查 commit 文件中 status 字段是否为 `accepted`
-3. 如非 accepted → 停止并报告
-4. 如为 accepted → 更新 runtime_canon.yaml（合并新事件/角色状态/活跃线索）
-5. 更新 reader_debts.yaml（标记已兑现的债务，新增新债务）
-6. 更新 `.webnovel/state.yaml`
-7. 写入 `.webnovel/summaries/chapter_XXX.yaml`
-8. 生成或刷新 `.webnovel/projection/` 下的投影文件
-9. 调用 `scripts/validate_canon_consistency.py` 检查一致性
-10. 写入 `.story-system/audit_log.jsonl`
-11. 报告更新结果
+#### 安全顺序（必须严格按此顺序执行）
+
+1. **校验准备**
+   - 确认 `.story-system/chapter_commits/chapter_XXX_commit.yaml` 存在
+   - 检查 commit 文件中 status 字段是否为 `accepted`
+   - 如非 accepted → 停止并报告
+   - 如为 accepted → 继续
+
+2. **生成临时状态（不污染正式文件）**
+   - 读取当前 runtime_canon.yaml、reader_debts.yaml、.webnovel/state.yaml
+   - 基于 accepted chapter_commit，在内存中构建 `next_runtime_canon` / `next_reader_debts` / `next_webnovel_state`
+   - 将临时状态写入临时文件（如 `_tmp_next_runtime_canon.yaml`），注意：临时文件必须位于同一目录，确保 validator 能读取
+
+3. **运行 canon validator**
+   - 调用 `scripts/validate_canon_consistency.py`，指向临时状态文件
+   - 获取 validator 输出（pass / fail + 具体问题列表）
+
+4. **根据验证结果决定写入**
+   - **通过（pass）**：
+     - 将 next_runtime_canon 写入正式 `runtime_canon.yaml`
+     - 将 next_reader_debts 写入正式 `reader_debts.yaml`
+     - 更新 `.webnovel/state.yaml`
+     - 写入 `.webnovel/summaries/chapter_XXX.yaml`
+     - 生成或刷新 `.webnovel/projection/` 下的投影文件
+     - 写入 `.story-system/audit_log.jsonl`，记录 `validated: true, validation_result: pass`
+   - **失败（fail）**：
+     - 不写入任何正式文件
+     - 不污染 runtime_canon、reader_debts、.webnovel 投影
+     - 仅写入 `.story-system/audit_log.jsonl`，记录 `validated: true, validation_result: fail, issues: [...]`
+     - 报告失败原因和具体问题列表，要求修改 chapter_commit 后重试
+
+5. **清理临时文件**
+   - 删除 `_tmp_next_*` 临时文件
+   - 报告更新结果（通过或失败详情）
 
 ## 失败处理
 
 1. polished/final 不存在 → draft_commit 停止并报告
 2. chapter_commit 不存在 → apply_commit 停止并报告
 3. chapter_commit status != accepted → apply_commit 停止并报告
-4. canon validator 不一致 → 报告不一致项，不阻止写入
+4. canon validator 不一致 → 报告不一致项，阻止写入正式文件，仅记录 audit_log
 5. 写入路径不存在 → 自动创建目录
 6. DeepSeek 输出截断 → 重试最多 1 次
 

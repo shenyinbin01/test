@@ -1,5 +1,5 @@
 ---
-name: webnovel-polisher
+name: webnovel_polisher
 description: "webnovel-hermes-wps 润色角色 Skill — 根据 Reviewer 审稿报告、AI 味检测报告、句式节奏报告和 deai_rules，对章节正文进行定向去 AI 味重写。不覆盖 draft/final，不修改 .story-system，不同步 WPS。"
 tags: ["webnovel", "polisher", "deai", "quality-gate", "phase6b"]
 ---

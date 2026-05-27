@@ -17,7 +17,7 @@
 你必须评估以下 11 个维度：
 
 1. plot_progress（剧情推进）：本章是否有新信息、新冲突、不可逆变化？
-2. character_consistency（角色一致性）：林砚、父亲、老人、客户的行为是否符合人设？
+2. character_consistency（角色一致性）：每个角色的行为是否符合人设？
 3. logic_continuity（逻辑连续性）：是否承接上一章？是否推翻 runtime_canon？
 4. pacing（节奏）：是否张弛有度？钩子密度是否合理？
 5. ending_hook（章尾钩子）：结尾是否制造了「必须读下一章」的缺口？

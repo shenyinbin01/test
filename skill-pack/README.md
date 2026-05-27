@@ -9,10 +9,14 @@ GitHub: https://github.com/shenyinbin01/test
 skill-pack/
 ├── README.md                    ← 本文件
 ├── AGENTS.md                    ← 项目架构总纲（指向 /AGENTS.md）
-├── creation_skills/             ← 小说创作角色 Skill（Hermes 调用）
-│   ├── webnovel-reviewer/       ← 十维度审稿 Skill
-│   ├── webnovel-polisher/       ← 去 AI 味润色 Skill
-│   └── detect-ai-flavor/        ← AI 味检测 Skill
+├── creation_skills/             ← 小说创作角色 Skill（Hermes 调用，全部已实现）
+│   ├── webnovel_planner/        ← 规划角色 Skill
+│   ├── webnovel_writer/         ← 写手角色 Skill
+│   ├── detect_webnovel_ai_flavor/ ← AI 味检测 Skill
+│   ├── webnovel_reviewer/       ← 十维度审稿 Skill
+│   ├── webnovel_polisher/       ← 去 AI 味润色 Skill
+│   ├── webnovel_state_manager/  ← 状态管理 Skill
+│   └── webnovel_wps_sync/       ← WPS 同步 Skill
 ├── deepcode_skills/             ← DeepCode 编码代理 Skill
 │   ├── deepcode-project-onboarding/
 │   ├── deepcode-repo-audit/
@@ -51,5 +55,4 @@ webnovel_planner
 4. 执行步骤是否可操作？
 5. 与 AGENTS.md 分工是否一致？
 6. 完整 7 角色创作链路是否覆盖了全部创作流程？
-7. 已定义但未实现的 Skill — 已全部补齐，不再有待实现缺口。
-8. Prompt 模板与对应 Skill 的职责是否一致？
+7. Prompt 模板与对应 Skill 的职责是否一致？

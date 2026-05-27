@@ -1,5 +1,5 @@
 ---
-name: detect-webnovel-ai-flavor
+name: detect_webnovel_ai_flavor
 description: "中文网文 AI 味检测 Skill — 读取章节正文、deai_rules 规则库、句式节奏分析报告，生成 12 维度 AI 味检测报告。Hermes 读取此 Skill 后调用 analyze_sentence_rhythm.py 再进行语义检测，不直接改正文。"
 tags: ["webnovel", "deai", "quality-gate", "detection", "phase6b"]
 ---

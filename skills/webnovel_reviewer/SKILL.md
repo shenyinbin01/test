@@ -1,5 +1,5 @@
 ---
-name: webnovel-reviewer
+name: webnovel_reviewer
 description: "webnovel-hermes-wps 审稿角色 Skill — 从十维度评估章节正文质量，吸收 sentence_rhythm 报告和 ai_flavor 检测报告，输出结构化审稿报告和 Polisher 指令。不修改正文，不生成新章节，不同步 WPS。"
 tags: ["webnovel", "reviewer", "quality-gate", "deai", "phase6b"]
 ---

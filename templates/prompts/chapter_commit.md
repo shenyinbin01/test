@@ -37,37 +37,19 @@
 - character_updates 必须精确到谁、什么变化
 - foreshadowing 必须具体（不能写"埋了某个伏笔"，要写"在第X段提到..."）
 
-【Canon 约束】
+# canon priority
 - canon_constraints 优先级最高，不得违反。
 - runtime_canon 是已发生正典，不得推翻。
-- preflight_context 是当前章写作边界。
 - 不得新增未授权设定。
-- 不得把价格标签写成寿命、倒计时、系统面板。
-- 不得让父亲死亡。
-- 不得新增天秤会、组织追杀、全球异能、等级体系。
-- 输出必须围绕《人生价格标签》。
 - 输出必须用中文。
 - 输出前必须做 canon_check 自检。
 
-【章节特殊要求】
+# recording constraints
 - 只能提交实际已发生内容，不允许把猜测写入 confirmed_events。
 - 不允许把未来伏笔写成已发生事实。
 - 必须区分 confirmed_events 和 open_threads。
 
-# 阶段四B real 执行强化
-- 本次为真实 DeepSeek 调用，输出质量直接影响项目进展
-- canon_constraints 优先级最高，runtime_canon 是已确认正典，不得推翻
-- 不得将价格标签写成寿命、倒计时、系统面板
-- 不得让父亲死亡
-- 不得新增天秤会、系统、组织追杀、全球异能、等级体系
-- 输出必须用中文
-- 输出前必须自检 canon
-- 只能记录实际已发生内容
-- confirmed_events 不能写未来猜测
-- father 状态必须仍为病重存活
-- ability_rule_updates 只记录林砚理解变化，不新增真实规则
-
-## 连续性约束
+# 连续性约束
 - 只能记录本章实际发生内容
 - 必须区分 confirmed_events 与 open_threads
 - 必须写出下一章需要承接什么
