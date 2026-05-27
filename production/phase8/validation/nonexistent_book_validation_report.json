@@ -1,0 +1,74 @@
+{
+  "book_id": "nonexistent_book",
+  "validated_at": "2026-05-27T16:31:00.915058",
+  "directory_check": {
+    "exists": false,
+    "missing_dirs": [
+      "corpus/nonexistent_book",
+      "corpus/nonexistent_book/chapters",
+      "corpus/nonexistent_book/chapter_cards"
+    ]
+  },
+  "source_meta_check": {
+    "exists": false,
+    "required_fields_present": false
+  },
+  "manifest_check": {
+    "exists": false,
+    "required_fields_present": false
+  },
+  "chapters_check": {
+    "chapter_count": 0,
+    "expected_count": 0
+  },
+  "chapter_cards_check": {
+    "card_count": 0,
+    "expected_count": 0
+  },
+  "core_reports_check": {
+    "chapter_fact_audit_report.md": false,
+    "reverse_story_bible.md": false,
+    "volume_structure_report.md": false,
+    "reader_debt_lifecycle.md": false,
+    "hook_payoff_map.md": false,
+    "character_cards_dir": true
+  },
+  "reverse_assets_path": "/opt/webnovel-hermes-wps/production/phase8/reverse_assets",
+  "craft_assets_check": {
+    "candidate_exists": true,
+    "approved_exists": true,
+    "rejected_exists": true
+  },
+  "skill_injection_check": {
+    "plan_exists": true,
+    "writer_forbidden_declared": true
+  },
+  "schema_check": {
+    "exists": true,
+    "count": 12
+  },
+  "template_check": {
+    "exists": true,
+    "count": 12
+  },
+  "prompt_check": {
+    "exists": true,
+    "count": 5
+  },
+  "missing_files": [
+    "缺失目录: corpus/nonexistent_book",
+    "缺失目录: corpus/nonexistent_book/chapters",
+    "缺失目录: corpus/nonexistent_book/chapter_cards",
+    "source_meta.yaml 缺失",
+    "manifest.yaml 缺失",
+    "chapters/ 目录缺失"
+  ],
+  "risks": [
+    "核心报告未就绪: chapter_fact_audit_report.md",
+    "核心报告未就绪: reverse_story_bible.md",
+    "核心报告未就绪: volume_structure_report.md",
+    "核心报告未就绪: reader_debt_lifecycle.md",
+    "核心报告未就绪: hook_payoff_map.md"
+  ],
+  "passed": false
+}

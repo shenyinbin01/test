@@ -1,0 +1,98 @@
+# chapter_card.schema.yaml
+# 每章压缩的机器层证据
+
+type: object
+required:
+  - book_id
+  - chapter_number
+  - title
+  - source_file
+  - one_sentence
+  - chapter_function
+  - main_events
+  - characters_present
+  - confidence
+fields:
+  book_id:
+    type: string
+  chapter_number:
+    type: integer
+  title:
+    type: string
+  source_file:
+    type: string
+    description: 对应原文路径
+  one_sentence:
+    type: string
+    description: 一句话概括本章
+  chapter_function:
+    type: string
+    enum: [setup, development, twist, climax, denouement, bridge, transition, cold_open, payoff, multiple]
+  main_events:
+    type: array
+    items:
+      type: string
+  characters_present:
+    type: array
+    items:
+      type: string
+  protagonist_state_change:
+    type: string
+    description: 主角状态变化
+  relationship_changes:
+    type: array
+    items:
+      type: string
+  world_state_change:
+    type: string
+  hook_opened:
+    type: array
+    items:
+      type: string
+  hook_paid:
+    type: array
+    items:
+      type: string
+  reader_debts_opened:
+    type: array
+    items:
+      type: string
+  reader_debts_paid:
+    type: array
+    items:
+      type: string
+  ending_pull:
+    type: string
+    description: 章尾推力/拉力
+  scene_vitality_notes:
+    type: string
+  evidence:
+    type: array
+    items:
+      type: object
+      required:
+        - source_ref
+        - summary
+        - evidence_type
+        - confidence
+      fields:
+        source_ref:
+          type: string
+          description: 原文引用位置
+        summary:
+          type: string
+          description: 证据摘要
+        evidence_type:
+          type: string
+          enum: [direct_quote, paraphrase, structural_pattern, inference, unknown]
+        confidence:
+          type: string
+          enum: [high, medium, low, unknown]
+  confidence:
+    type: string
+    enum: [high, medium, low]
+  unknown_fields:
+    type: array
+    items:
+      type: string
+    description: 未能确定的字段列表

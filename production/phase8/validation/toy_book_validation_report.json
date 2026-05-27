@@ -1,0 +1,57 @@
+{
+  "book_id": "toy_book",
+  "validated_at": "2026-05-27T16:31:17.393971",
+  "directory_check": {
+    "exists": true,
+    "missing_dirs": []
+  },
+  "source_meta_check": {
+    "exists": true,
+    "required_fields_present": true
+  },
+  "manifest_check": {
+    "exists": true,
+    "required_fields_present": true
+  },
+  "chapters_check": {
+    "chapter_count": 3,
+    "expected_count": 3
+  },
+  "chapter_cards_check": {
+    "card_count": 3,
+    "expected_count": 3
+  },
+  "core_reports_check": {
+    "chapter_fact_audit_report.md": true,
+    "reverse_story_bible.md": true,
+    "volume_structure_report.md": true,
+    "reader_debt_lifecycle.md": true,
+    "hook_payoff_map.md": true,
+    "character_cards_dir": true
+  },
+  "reverse_assets_path": "/opt/webnovel-hermes-wps/production/phase8/reverse_assets/toy_book",
+  "craft_assets_check": {
+    "candidate_exists": true,
+    "approved_exists": true,
+    "rejected_exists": true
+  },
+  "skill_injection_check": {
+    "plan_exists": true,
+    "writer_forbidden_declared": true
+  },
+  "schema_check": {
+    "exists": true,
+    "count": 12
+  },
+  "template_check": {
+    "exists": true,
+    "count": 12
+  },
+  "prompt_check": {
+    "exists": true,
+    "count": 5
+  },
+  "missing_files": [],
+  "risks": [],
+  "passed": true
+}

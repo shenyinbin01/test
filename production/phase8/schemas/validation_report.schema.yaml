@@ -1,0 +1,80 @@
+# validation_report.schema.yaml
+# Phase 8 校验报告
+
+type: object
+required:
+  - book_id
+  - validated_at
+  - directory_check
+  - source_meta_check
+  - manifest_check
+  - chapters_check
+  - chapter_cards_check
+  - core_reports_check
+  - craft_assets_check
+  - skill_injection_check
+  - passed
+fields:
+  book_id: type: string
+  validated_at:
+    type: string
+    format: date-time
+  directory_check:
+    type: object
+    fields:
+      exists: type: boolean
+      missing_dirs: type: array
+  source_meta_check:
+    type: object
+    fields:
+      exists: type: boolean
+      required_fields_present: type: boolean
+  manifest_check:
+    type: object
+    fields:
+      exists: type: boolean
+      required_fields_present: type: boolean
+  chapters_check:
+    type: object
+    fields:
+      chapter_count: type: integer
+      expected_count: type: integer
+      missing_chapters: type: array
+  chapter_cards_check:
+    type: object
+    fields:
+      card_count: type: integer
+      expected_count: type: integer
+      missing_cards: type: array
+      low_confidence_cards: type: array
+  core_reports_check:
+    type: object
+    fields:
+      chapter_fact_audit: type: boolean
+      reverse_story_bible: type: boolean
+      character_cards_dir: type: boolean
+      volume_structure_report: type: boolean
+      reader_debt_lifecycle: type: boolean
+      hook_payoff_map: type: boolean
+  craft_assets_check:
+    type: object
+    fields:
+      candidate_exists: type: boolean
+      approved_exists: type: boolean
+      rejected_exists: type: boolean
+  skill_injection_check:
+    type: object
+    fields:
+      plan_exists: type: boolean
+      writer_forbidden_declared: type: boolean
+  missing_files:
+    type: array
+    items: type: string
+  missing_fields:
+    type: array
+    items: type: string
+  risks:
+    type: array
+    items: type: string
+  passed:
+    type: boolean

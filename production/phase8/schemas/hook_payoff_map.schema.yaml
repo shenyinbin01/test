@@ -1,0 +1,35 @@
+# hook_payoff_map.schema.yaml
+# 钩子与兑现地图
+
+type: object
+required:
+  - book_id
+  - hooks
+fields:
+  book_id: type: string
+  hooks:
+    type: array
+    items:
+      type: object
+      required:
+        - hook_id
+        - hook_type
+        - opening_chapter
+        - hook_content
+        - status
+      fields:
+        hook_id: type: string
+        hook_type:
+          type: string
+          enum: [悬念, 伏笔, 爽点承诺, 情感承诺, 身份承诺, 能力边界问题, 反派压迫, 长期主线问题]
+        opening_chapter: type: integer
+        hook_content: type: string
+        escalation_chapters: type: array
+        payoff_chapter: type: integer
+        payoff_content: type: string
+        payoff_strength:
+          type: string
+          enum: [strong, medium, weak]
+        status:
+          type: string
+          enum: [open, escalated, paid, abandoned]

@@ -1,0 +1,14 @@
+# manifest.yaml — Toy Book
+book_id: toy_book
+title: "追踪者"
+source_meta_path: "production/phase8/examples/toy_book/source_meta.yaml"
+full_book_path: "production/phase8/examples/toy_book/full_book.txt"
+chapter_count: 3
+word_count_estimate: 1500
+language: "zh-CN"
+genre: "都市悬疑"
+status: initialized
+chapter_index: []
+quality_flags: []
+created_at: "2026-05-26T00:00:00"
+updated_at: "2026-05-26T00:00:00"

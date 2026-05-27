@@ -1,0 +1,84 @@
+# reverse_story_bible.schema.yaml
+# 逆向故事圣经 — 从正文反推的故事工程蓝图
+
+type: object
+required:
+  - book_id
+  - title
+  - core_appeal
+  - genre_positioning
+  - reader_promise
+  - protagonist_initial_dilemma
+  - protagonist_long_term_goal
+  - protagonist_drive
+  - power_system
+  - world_rules
+  - main_conflict
+  - main_antagonists
+  - phase_progression
+  - cool_point_model
+  - ending_promise
+  - do_not_copy_elements
+  - evidence_index
+fields:
+  book_id: type: string
+  title: type: string
+  core_appeal:
+    type: string
+    description: 核心卖点
+  genre_positioning:
+    type: string
+    description: 题材定位
+  reader_promise:
+    type: string
+    description: 目标读者承诺
+  protagonist_initial_dilemma:
+    type: string
+  protagonist_long_term_goal:
+    type: string
+  protagonist_drive:
+    type: string
+    description: 核心驱动力
+  power_system:
+    type: string
+    description: 金手指 / 核心优势机制
+  world_rules:
+    type: array
+    items: type: string
+  main_conflict:
+    type: string
+  main_antagonists:
+    type: array
+    items: type: string
+  phase_progression:
+    type: array
+    items:
+      type: object
+      fields:
+        phase: type: integer
+        chapters: type: string
+        protagonist_goal: type: string
+        pressure_source: type: string
+        payoff: type: string
+  cool_point_model:
+    type: string
+    description: 爽点模型
+  ending_promise:
+    type: string
+  do_not_copy_elements:
+    type: array
+    items: type: string
+    description: 不能复制的原作专属元素
+  evidence_index:
+    type: array
+    items:
+      type: object
+      fields:
+        claim: type: string
+        evidence_ref: type: array
+  low_confidence_judgments:
+    type: array
+    items: type: string
+  unknown_judgments:
+    type: array
+    items: type: string

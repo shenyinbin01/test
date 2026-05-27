@@ -1,0 +1,47 @@
+# volume_structure_report.schema.yaml
+# 分卷结构报告
+
+type: object
+required:
+  - book_id
+  - phases
+  - mid_book_endurance
+  - ending_closure
+  - evidence_index
+fields:
+  book_id: type: string
+  phases:
+    type: array
+    items:
+      type: object
+      required:
+        - phase
+        - chapter_range
+        - protagonist_goal
+        - primary_pressure
+        - core_cool_point
+        - climax
+        - protagonist_gains
+        - next_phase_opening
+      fields:
+        phase: type: integer
+        chapter_range: type: string
+        protagonist_goal: type: string
+        primary_pressure: type: string
+        core_cool_point: type: string
+        climax: type: string
+        protagonist_gains: type: string
+        next_phase_opening: type: string
+  mid_book_endurance:
+    type: string
+    description: 中盘续航机制
+  ending_closure:
+    type: string
+    description: 终局回收机制
+  evidence_index:
+    type: array
+    items:
+      type: object
+      fields:
+        claim: type: string
+        chapter_ref: type: array

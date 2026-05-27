@@ -1,0 +1,31 @@
+book_id: toy_book
+title: 追踪者
+source_meta_path: /opt/webnovel-hermes-wps/production/phase8/corpus/toy_book/source_meta.yaml
+full_book_path: /opt/webnovel-hermes-wps/production/phase8/corpus/toy_book/full_book.txt
+chapter_count: 3
+word_count_estimate: 0
+language: zh-CN
+genre: 都市悬疑
+status: chapters_split
+chapter_index:
+- chapter_number: 1
+  title: 第一章 不速之客
+  file_path: /opt/webnovel-hermes-wps/production/phase8/corpus/toy_book/chapters/chapter_0001.md
+  word_count: 351
+  checksum: c3364f04f581f9df4b8cae0e6dc4b0b0cfede0e5378e17596e5c986f76670d1a
+  split_confidence: high
+- chapter_number: 2
+  title: 第二章 另一条路
+  file_path: /opt/webnovel-hermes-wps/production/phase8/corpus/toy_book/chapters/chapter_0002.md
+  word_count: 454
+  checksum: 5396399c826c0319bcd24801a7f791f7630f53d7bd36d76c69c3b4630d81ce10
+  split_confidence: high
+- chapter_number: 3
+  title: 第三章 筹码
+  file_path: /opt/webnovel-hermes-wps/production/phase8/corpus/toy_book/chapters/chapter_0003.md
+  word_count: 469
+  checksum: 0cc6b0cac2d86fd517e3454922f4a6e59a365b8416ccaa47b21cb269912aded1
+  split_confidence: high
+quality_flags: []
+created_at: '2026-05-27T15:52:30.062908'
+updated_at: '2026-05-27T15:52:32.850341'

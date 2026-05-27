@@ -1,0 +1,62 @@
+# skill_injection_plan.schema.yaml
+# Skill 反哺方案
+
+type: object
+required:
+  - book_id
+  - planner_craft
+  - writer_craft
+  - reviewer_craft
+  - polisher_craft
+  - writer_forbidden_inputs
+  - max_injection_per_task
+  - trigger_conditions
+  - usage_log_requirements
+  - reviewer_verification_method
+  - contamination_check_method
+fields:
+  book_id: type: string
+  planner_craft:
+    type: array
+    items:
+      type: object
+      fields:
+        asset_id: type: string
+        name: type: string
+  writer_craft:
+    type: array
+    items:
+      type: object
+      fields:
+        asset_id: type: string
+        name: type: string
+        contamination_check: type: string
+  reviewer_craft:
+    type: array
+    items:
+      type: object
+      fields:
+        asset_id: type: string
+        name: type: string
+  polisher_craft:
+    type: array
+    items:
+      type: object
+      fields:
+        asset_id: type: string
+        name: type: string
+  writer_forbidden_inputs:
+    type: array
+    items: type: string
+    description: Writer 禁止接触的内容
+  max_injection_per_task:
+    type: integer
+  trigger_conditions:
+    type: array
+    items: type: string
+  usage_log_requirements:
+    type: string
+  reviewer_verification_method:
+    type: string
+  contamination_check_method:
+    type: string

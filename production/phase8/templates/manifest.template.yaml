@@ -1,0 +1,14 @@
+# manifest.template.yaml
+book_id: ""
+title: ""
+source_meta_path: ""
+full_book_path: ""
+chapter_count: 0
+word_count_estimate: 0
+language: "zh-CN"
+genre: ""
+status: initialized
+chapter_index: []
+quality_flags: []
+created_at: ""
+updated_at: ""

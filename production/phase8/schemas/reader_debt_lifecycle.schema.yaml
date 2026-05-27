@@ -1,0 +1,37 @@
+# reader_debt_lifecycle.schema.yaml
+# 读者债生命周期
+
+type: object
+required:
+  - book_id
+  - debts
+fields:
+  book_id: type: string
+  debts:
+    type: array
+    items:
+      type: object
+      required:
+        - debt_id
+        - debt_type
+        - opening_chapter
+        - promise
+        - status
+      fields:
+        debt_id: type: string
+        debt_type:
+          type: string
+          enum: [悬念, 伏笔, 爽点承诺, 情感承诺, 身份承诺, 能力边界问题, 反派压迫, 长期主线问题]
+        opening_chapter: type: integer
+        promise: type: string
+        escalation_chapters:
+          type: array
+          items: type: integer
+        payoff_chapter: type: integer
+        payoff_method: type: string
+        payoff_strength: type: string
+        leaves_new_question: type: boolean
+        evidence_index: type: array
+        status:
+          type: string
+          enum: [opened, escalated, paid, unresolved]

@@ -1,0 +1,48 @@
+# chapter_card — 第一章
+book_id: toy_book
+chapter_number: 1
+title: "不速之客"
+source_file: "production/phase8/examples/toy_book/chapters/chapter_0001.md"
+one_sentence: "林远在加班时发现公司账上少了三百万，并被老板派来的人警告收手。"
+chapter_function: setup
+main_events:
+  - "林远加班核对财务报表，发现三百万缺口"
+  - "收到匿名短信提醒钱有问题"
+  - "黑衣男子闯入办公室，口头警告林远"
+  - "林远意识到自己被公司高层盯上了"
+characters_present:
+  - "林远"
+  - "黑衣男子"
+protagonist_state_change: "从正常工作的财务人员转变为被公司高层针对的调查者"
+relationship_changes:
+  - "与老板的关系从信任转为敌对"
+world_state_change: "林远的安全状态被打破，公司内部存在系统性财务造假"
+hook_opened:
+  - "三百万缺口是否真实存在"
+  - "黑衣男子是谁派来的"
+  - "匿名短信发送者的身份"
+  - "前财务总监老周的线索"
+hook_paid: []
+reader_debts_opened:
+  - "三百万缺口如何形成"
+  - "匿名短信发送者是谁"
+  - "前财务总监老周知道多少"
+  - "黑衣男子的警告意味着什么"
+reader_debts_paid: []
+ending_pull: "林远意识到这不是慰问，是警告——悬念拉满，读者想知道他下一步怎么做"
+scene_vitality_notes: "单一场景（办公室），通过对话和短信推动悬疑感"
+evidence:
+  - source_ref: "第1段-第3段"
+    summary: "林远加班核对报表发现三百万缺口"
+    evidence_type: paraphrase
+    confidence: high
+  - source_ref: "第4段-第5段"
+    summary: "收到匿名短信提醒"
+    evidence_type: paraphrase
+    confidence: high
+  - source_ref: "第6段-第12段"
+    summary: "黑衣男子闯入并警告"
+    evidence_type: paraphrase
+    confidence: high
+confidence: high
+unknown_fields: []

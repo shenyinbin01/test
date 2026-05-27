@@ -1,0 +1,55 @@
+# character_card.schema.yaml
+# 人物工程卡 — 不写人设，写人物在故事中的功能和弧线
+
+type: object
+required:
+  - character_name
+  - first_appearance_chapter
+  - story_function
+  - relationship_with_protagonist
+  - core_desire
+  - key_behaviors
+fields:
+  character_name:
+    type: string
+  first_appearance_chapter:
+    type: integer
+  last_major_chapter:
+    type: integer
+  story_function:
+    type: string
+    enum: [ally, mentor, antagonist, foil, love_interest, comic_relief, world_character,阶段性_antagonist, final_boss, neutral]
+  relationship_with_protagonist:
+    type: array
+    items:
+      type: object
+      fields:
+        chapter: type: integer
+        state: type: string
+  core_desire:
+    type: string
+  key_behaviors:
+    type: array
+    items: type: string
+  turning_points:
+    type: array
+    items:
+      type: object
+      fields:
+        chapter: type: integer
+        event: type: string
+  voice_features:
+    type: string
+    description: 声口特征
+  final_state:
+    type: string
+  evidence_index:
+    type: array
+    items:
+      type: object
+      fields:
+        claim: type: string
+        chapter: type: integer
+  low_confidence_judgments:
+    type: array
+    items: type: string

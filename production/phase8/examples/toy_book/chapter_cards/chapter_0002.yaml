@@ -1,0 +1,50 @@
+# chapter_card — 第二章
+book_id: toy_book
+chapter_number: 2
+title: "另一条路"
+source_file: "production/phase8/examples/toy_book/chapters/chapter_0002.md"
+one_sentence: "林远工资卡被冻结，通过前财务总监老周的线索发现凭证造假，得知老周已出车祸。"
+chapter_function: development
+main_events:
+  - "林远工资卡被冻结"
+  - "林远回忆老周离职时的提示：凭证编号"
+  - "发现凭证编号中间缺了六张"
+  - "接到老周妹妹的电话，得知老周出车祸"
+  - "林远决定去找老周拿证据"
+characters_present:
+  - "林远"
+  - "老周妹妹（电话中）"
+protagonist_state_change: "从被动发现问题的财务人员转变为主动寻找证据的调查者"
+relationship_changes:
+  - "与老周的关系从普通同事升级为同盟"
+  - "与老周妹妹建立初步联系"
+world_state_change: "公司内部的对抗升级，对方已经开始对知情人采取物理手段"
+hook_opened:
+  - "六张缺失凭证的具体内容"
+  - "老周是否安全"
+  - "老周妹妹的身份和可信度"
+hook_paid:
+  - "匿名短信发送者身份部分明确（关联老周）"
+reader_debts_opened:
+  - "老周手里的凭证照片能否拿到"
+  - "公司高层为什么需要三百万"
+  - "老周妹妹为什么能联系上林远"
+reader_debts_paid:
+  - "三百万缺口的形成方式（凭证造假）"
+ending_pull: "林远冲进雨里去找老周——行动推进，悬念升级"
+scene_vitality_notes: "多场景切换（咖啡店→回忆→电话→街边），节奏比第一章快"
+evidence:
+  - source_ref: "第1段-第4段"
+    summary: "工资卡被冻结，缺口真实存在"
+    evidence_type: paraphrase
+    confidence: high
+  - source_ref: "第5段-第6段"
+    summary: "老周提示凭证编号，林远发现缺六张"
+    evidence_type: paraphrase
+    confidence: high
+  - source_ref: "第7段-第14段"
+    summary: "接到老周妹妹电话得知老周出车祸"
+    evidence_type: paraphrase
+    confidence: high
+confidence: high
+unknown_fields: []

@@ -1,0 +1,56 @@
+# chapter_card — 第三章
+book_id: toy_book
+chapter_number: 3
+title: "筹码"
+source_file: "production/phase8/examples/toy_book/chapters/chapter_0003.md"
+one_sentence: "林远找到负伤的老周拿到转账证据，发现资金流向指向集团总部而非直属上司。"
+chapter_function: twist
+main_events:
+  - "林远前往老周住所"
+  - "见到受伤的老周，拿到凭证照片和转账记录"
+  - "老周告知被袭击经过"
+  - "老周揭示资金流向集团总部"
+  - "林远意识到问题的规模远超预期"
+characters_present:
+  - "林远"
+  - "老周"
+protagonist_state_change: "从获取证据的主动调查者转变为面对更大阴谋的决策者"
+relationship_changes:
+  - "与老周的同盟关系加固"
+  - "与公司高层的对立从直属上司扩展到集团总部"
+world_state_change: "问题的范围从部门级财务造假升级为集团级系统性犯罪"
+hook_opened:
+  - "集团总部谁在参与"
+  - "三百万在集团层面是什么角色"
+  - "林远下一步打算怎么做"
+hook_paid:
+  - "六张凭证的内容（照片已获取）"
+  - "钱去哪了（集团总部方向）"
+reader_debts_opened:
+  - "集团总部的真正角色"
+  - "林远是否会交出证据"
+  - "老周的后续安全"
+reader_debts_paid:
+  - "老周是否安全（受伤但有自保能力）"
+  - "老周妹妹的身份（老周本人安排的联络人）"
+ending_pull: "老周揭露资金去向指向集团总部——故事格局突然扩大，读者强烈想知道林远的下一步选择"
+scene_vitality_notes: "单一场景（老周家），但对话承载了大量信息反转，结尾制造了新的更大悬念"
+evidence:
+  - source_ref: "第1段-第10段"
+    summary: "林远到老周家拿到凭证照片和转账记录"
+    evidence_type: paraphrase
+    confidence: high
+  - source_ref: "第11段-第13段"
+    summary: "老周被袭击，但留了一手"
+    evidence_type: paraphrase
+    confidence: high
+  - source_ref: "第14段-第18段"
+    summary: "老周揭示资金流向集团总部"
+    evidence_type: direct_quote
+    confidence: high
+  - source_ref: "第19段-第21段"
+    summary: "林远意识到问题规模远超预期"
+    evidence_type: paraphrase
+    confidence: high
+confidence: high
+unknown_fields: []

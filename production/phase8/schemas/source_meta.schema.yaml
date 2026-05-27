@@ -1,0 +1,73 @@
+# source_meta.schema.yaml
+# 记录每本书的来源元数据
+
+type: object
+required:
+  - source_id
+  - title
+  - author
+  - source_type
+  - permission_status
+  - genre
+  - language
+  - allowed_operations
+  - do_not_copy
+  - created_at
+fields:
+  source_id:
+    type: string
+    description: 唯一来源标识
+  title:
+    type: string
+    description: 书名
+  author:
+    type: string
+    description: 作者
+  source_type:
+    type: string
+    enum: [webnovel, published_book, original_script, other]
+  permission_status:
+    type: string
+    enum: [own_work, public_domain, licensed, fair_use_analysis, unknown]
+  permission_notes:
+    type: string
+    description: 权限说明备注
+  genre:
+    type: string
+    description: 题材
+  language:
+    type: string
+    description: 语言代码
+  word_count_estimate:
+    type: integer
+    description: 字数估计
+  chapter_count_estimate:
+    type: integer
+    description: 章节数估计
+  reason_for_selection:
+    type: string
+    description: 选择此书用于分析的原因
+  allowed_operations:
+    type: array
+    items:
+      type: string
+      enum: [ingest, compress, distill_craft, quote, train_model]
+    description: 允许的操作列表
+  do_not_copy:
+    type: boolean
+    default: true
+    description: 禁止复制原文内容到其他项目
+  quote:
+    type: boolean
+    default: false
+    description: 是否允许引用原文作为证据
+  train_model:
+    type: boolean
+    default: false
+    description: 是否允许用于模型训练
+  reviewed_by:
+    type: string
+    description: 审核人
+  created_at:
+    type: string
+    format: date-time

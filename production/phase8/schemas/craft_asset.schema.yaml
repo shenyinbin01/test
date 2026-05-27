@@ -1,0 +1,45 @@
+# craft_asset.schema.yaml
+# 技法资产卡
+
+type: object
+required:
+  - asset_id
+  - name
+  - craft_type
+  - problem_solved
+  - applicable_genres
+  - applicable_scenes
+  - steps
+  - expected_effect
+  - contamination_risk
+  - do_not_copy
+  - target_skill
+  - status
+  - version
+fields:
+  asset_id: type: string
+  name: type: string
+  craft_type:
+    type: string
+    enum: [opening_hook, payoff, pacing, scene_vitality, character_voice, conflict, reversal, volume_arc, reader_debt, genre_formula]
+  problem_solved: type: string
+  applicable_genres: type: array
+  applicable_scenes: type: array
+  steps:
+    type: array
+    items: type: string
+  expected_effect: type: string
+  not_applicable_scenes: type: array
+  common_failures: type: array
+  contamination_risk:
+    type: string
+    enum: [high, medium, low]
+  do_not_copy: type: string
+  target_skill:
+    type: string
+    enum: [planner, writer, reviewer, polisher]
+  evidence_source: type: string
+  status:
+    type: string
+    enum: [candidate, approved, rejected]
+  version: type: string

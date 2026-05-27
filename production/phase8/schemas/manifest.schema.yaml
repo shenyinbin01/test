@@ -1,0 +1,80 @@
+# manifest.schema.yaml
+# 全书处理清单
+
+type: object
+required:
+  - book_id
+  - title
+  - source_meta_path
+  - full_book_path
+  - chapter_count
+  - language
+  - genre
+  - status
+  - chapter_index
+  - created_at
+fields:
+  book_id:
+    type: string
+    description: 书唯一标识
+  title:
+    type: string
+    description: 书名
+  source_meta_path:
+    type: string
+    description: source_meta.yaml 路径
+  full_book_path:
+    type: string
+    description: 完整原文路径
+  chapter_count:
+    type: integer
+    description: 章节总数
+  word_count_estimate:
+    type: integer
+    description: 总字数估计
+  language:
+    type: string
+    description: 语言代码
+  genre:
+    type: string
+    description: 题材
+  status:
+    type: string
+    enum: [initialized, chapters_split, chapter_cards_ready, audit_complete, assets_distilled, review_package_ready]
+  chapter_index:
+    type: array
+    items:
+      type: object
+      required:
+        - chapter_number
+        - title
+        - file_path
+        - word_count
+        - checksum
+        - split_confidence
+      fields:
+        chapter_number:
+          type: integer
+        title:
+          type: string
+        file_path:
+          type: string
+        word_count:
+          type: integer
+        checksum:
+          type: string
+          description: sha256 of chapter file
+        split_confidence:
+          type: string
+          enum: [high, medium, low]
+  quality_flags:
+    type: array
+    items:
+      type: string
+    description: 质量标记列表
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

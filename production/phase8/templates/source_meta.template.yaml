@@ -1,0 +1,21 @@
+# source_meta.template.yaml
+source_id: ""
+title: ""
+author: ""
+source_type: webnovel
+permission_status: unknown
+permission_notes: ""
+genre: ""
+language: "zh-CN"
+word_count_estimate: 0
+chapter_count_estimate: 0
+reason_for_selection: ""
+allowed_operations:
+  - ingest
+  - compress
+  - distill_craft
+do_not_copy: true
+quote: false
+train_model: false
+reviewed_by: ""
+created_at: ""

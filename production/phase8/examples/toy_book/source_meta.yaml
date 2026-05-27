@@ -1,0 +1,21 @@
+# source_meta.yaml — Toy Book
+source_id: toy_book
+title: "追踪者"
+author: "DeepCode (原创示例)"
+source_type: original_script
+permission_status: own_work
+permission_notes: "完全原创的迷你故事，仅用于 Phase 8 工程框架演示"
+genre: "都市悬疑"
+language: "zh-CN"
+word_count_estimate: 1500
+chapter_count_estimate: 3
+reason_for_selection: "Phase 8 MVP 演示用最小闭环"
+allowed_operations:
+  - ingest
+  - compress
+  - distill_craft
+do_not_copy: true
+quote: false
+train_model: false
+reviewed_by: "DeepCode"
+created_at: "2026-05-26T00:00:00"
