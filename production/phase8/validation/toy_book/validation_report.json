@@ -1,0 +1,47 @@
+{
+  "book_id": "toy_book",
+  "mode": "delivery",
+  "validated_at": "2026-05-27T16:45:29.160887",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "core_deliverables": {
+    "chapter_fact_audit_report.md": true,
+    "reverse_story_bible.md": true,
+    "character_cards": true,
+    "volume_structure_report.md": true,
+    "reader_debt_lifecycle.md": true,
+    "hook_payoff_map.md": true,
+    "skill_injection_plan": true
+  },
+  "writer_safety": {
+    "forbids_raw_text": true,
+    "forbids_source_evidence": true,
+    "forbids_candidate_assets": true,
+    "approved_only": true
+  },
+  "directory_check": {
+    "exists": true,
+    "missing_dirs": []
+  },
+  "source_meta_check": {
+    "exists": true
+  },
+  "manifest_check": {
+    "exists": true,
+    "chapter_index_count": 3
+  },
+  "chapters_check": {
+    "chapter_count": 3,
+    "expected_count": 3
+  },
+  "chapter_cards_check": {
+    "card_count": 3,
+    "expected_count": 3
+  },
+  "craft_assets_check": {
+    "candidate_count": 2,
+    "approved_count": 1,
+    "rejected_count": 1
+  }
+}

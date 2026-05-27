@@ -10,9 +10,11 @@ word_count_estimate: 0
 chapter_count_estimate: 0
 reason_for_selection: ''
 allowed_operations:
-- ingest
-- compress
-- distill_craft
+  ingest: true
+  compress: true
+  distill_craft: true
+  quote: false
+  train_model: false
 do_not_copy: true
 quote: false
 train_model: false

@@ -48,23 +48,34 @@ fields:
     type: string
     description: 选择此书用于分析的原因
   allowed_operations:
-    type: array
-    items:
-      type: string
-      enum: [ingest, compress, distill_craft, quote, train_model]
-    description: 允许的操作列表
+    type: object
+    required:
+      - ingest
+      - compress
+      - distill_craft
+      - quote
+      - train_model
+    fields:
+      ingest:
+        type: boolean
+        default: true
+      compress:
+        type: boolean
+        default: true
+      distill_craft:
+        type: boolean
+        default: false
+      quote:
+        type: boolean
+        default: false
+      train_model:
+        type: boolean
+        default: false
+    description: 允许的操作字典，所有 key 必须存在
   do_not_copy:
     type: boolean
     default: true
     description: 禁止复制原文内容到其他项目
-  quote:
-    type: boolean
-    default: false
-    description: 是否允许引用原文作为证据
-  train_model:
-    type: boolean
-    default: false
-    description: 是否允许用于模型训练
   reviewed_by:
     type: string
     description: 审核人

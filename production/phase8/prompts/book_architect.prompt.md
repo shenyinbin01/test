@@ -31,3 +31,16 @@
 - 不要写出 "这本书告诉我们……" 的读后感
 - 不要写出 "作者通过……手法" 的文学分析
 - 要写出 "这个结构在第 3-7 章使用了 A 模式，产生 B 效果" 的工程语言
+
+## Evidence Matrix 要求
+
+每个核心结论必须附带 evidence_matrix，格式为：
+- claim → supporting_chapters → evidence_refs → confidence
+
+示例：
+| Claim | Supporting Chapters | Evidence Refs | Confidence |
+|-------|-------------------|---------------|------------|
+| 主角从被动转为主动 | 2-3 | 第2章调查行动，第3章独立决策 | high |
+| 公司内部存在系统性腐败 | 1-3 | 第1章三百万缺口，第2章凭证造假，第3章集团总部 | high |
+
+所有 matrix 行必须基于 chapter_cards 中的 evidence，不能凭空编造。无证据的行必须标 unknown 或 low confidence。

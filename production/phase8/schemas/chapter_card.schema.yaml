@@ -48,19 +48,48 @@ fields:
   hook_opened:
     type: array
     items:
-      type: string
+      one_of:
+        - type: string
+          description: 旧格式字符串
+        - type: object
+          required: [id, text]
+          fields:
+            id: type: string
+            text: type: string
+    description: 钩子开启，支持新格式 dict {id, text} 和旧格式 string
   hook_paid:
     type: array
     items:
-      type: string
+      one_of:
+        - type: string
+        - type: object
+          required: [id, payoff]
+          fields:
+            id: type: string
+            payoff: type: string
+    description: 钩子兑现，支持新格式 dict {id, payoff} 和旧格式 string
   reader_debts_opened:
     type: array
     items:
-      type: string
+      one_of:
+        - type: string
+        - type: object
+          required: [id, text]
+          fields:
+            id: type: string
+            text: type: string
+    description: 读者债开启，支持新格式 dict {id, text} 和旧格式 string
   reader_debts_paid:
     type: array
     items:
-      type: string
+      one_of:
+        - type: string
+        - type: object
+          required: [id, payoff]
+          fields:
+            id: type: string
+            payoff: type: string
+    description: 读者债兑现，支持新格式 dict {id, payoff} 和旧格式 string
   ending_pull:
     type: string
     description: 章尾推力/拉力

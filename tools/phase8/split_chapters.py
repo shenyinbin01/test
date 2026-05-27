@@ -8,7 +8,7 @@ split_chapters.py — 根据章节标题规则切分 full_book.txt。
   - 卷一 / 第一卷
 
 用法:
-  python tools/phase8/split_chapters.py --book-id toy_book
+  python tools/phase8/split_chapters.py --book-id toy_book --project-root .
 
 输出:
   production/phase8/corpus/{book_id}/chapters/chapter_0001.md
@@ -20,8 +20,7 @@ import os, sys, re, yaml, hashlib
 from pathlib import Path
 from datetime import datetime
 
-PROJECT = Path("/opt/webnovel-hermes-wps")
-CORPUS = PROJECT / "production" / "phase8" / "corpus"
+from tools.phase8.common import resolve_project_root
 
 # 支持的中文章节标题正则
 CHAPTER_PATTERNS = [
@@ -65,9 +64,13 @@ def main():
     import argparse
     parser = argparse.ArgumentParser(description="切分 full_book.txt 为单章文件")
     parser.add_argument("--book-id", required=True)
+    parser.add_argument("--project-root", default=None, help="项目根目录，默认自动查找")
     args = parser.parse_args()
 
-    book_dir = CORPUS / args.book_id
+    project_root = resolve_project_root(args.project_root)
+    corpus = project_root / "production" / "phase8" / "corpus"
+
+    book_dir = corpus / args.book_id
     if not book_dir.exists():
         print(f"❌ 书籍目录不存在: {book_dir}")
         sys.exit(1)

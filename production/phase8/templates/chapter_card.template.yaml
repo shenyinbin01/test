@@ -14,6 +14,17 @@ hook_opened: []
 hook_paid: []
 reader_debts_opened: []
 reader_debts_paid: []
+# 支持新旧两种格式：
+# 新格式（推荐）：
+# hook_opened:
+#   - id: H001
+#     text: 三百万缺口是否真实存在
+# hook_paid:
+#   - id: H001
+#     payoff: 发现凭证造假
+# 旧格式（兼容）：
+# hook_opened:
+#   - "三百万缺口是否真实存在"
 ending_pull: ""
 scene_vitality_notes: ""
 evidence: []

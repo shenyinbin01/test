@@ -67,3 +67,9 @@
 ## unknown 判断
 
 {unknown_judgments}
+
+## Evidence Matrix
+
+| Claim | Supporting Chapters | Evidence Refs | Confidence |
+|-------|-------------------|---------------|------------|
+{evidence_matrix_rows}

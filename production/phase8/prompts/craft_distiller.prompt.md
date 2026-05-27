@@ -27,6 +27,17 @@ candidate 技法资产卡（YAML，每张一个文件）
 
 - opening_hook, payoff, pacing, scene_vitality, character_voice, conflict, reversal, volume_arc, reader_debt, genre_formula
 
+## 去原作化检查
+
+所有 candidate 技法必须先通过"去原作化检查"：
+
+1. 是否包含原作人名
+2. 是否包含原作地点 / 组织 / 专属机制
+3. 是否复刻具体桥段顺序
+4. 是否引用原文表达
+
+如果任一为 yes，不能输出为 candidate，必须进入 rejected_reason。
+
 ## 禁止行为
 
 1. 不能保留原作人物名
