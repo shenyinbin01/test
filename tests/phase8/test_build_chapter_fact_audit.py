@@ -12,8 +12,9 @@ test_build_chapter_fact_audit.py — 测试审计表生成
 import os, sys, yaml, json, tempfile, shutil
 from pathlib import Path
 
-PROJECT = Path("/opt/webnovel-hermes-wps")
-sys.path.insert(0, str(PROJECT))
+# conftest.py 已自动注入 project_root 到 sys.path
+from tests.phase8.conftest import get_project_root
+PROJECT = get_project_root()
 
 
 def test_toy_book_audit_report_exists():

@@ -5,14 +5,16 @@ test_validate_phase8.py — 测试校验工具
   1. toy_book scaffold 模式通过
   2. toy_book delivery 模式通过 (齐全)
   3. delivery 模式缺失交付物必须 FAIL
-  4. check 辅助函数
+  4. missing book 必须 FAIL
+  5. check 辅助函数
 """
 
 import os, sys, json, tempfile, shutil
 from pathlib import Path
 
-PROJECT = Path("/opt/webnovel-hermes-wps")
-sys.path.insert(0, str(PROJECT))
+# conftest.py 已自动注入 project_root 到 sys.path
+from tests.phase8.conftest import get_project_root
+PROJECT = get_project_root()
 
 
 def test_validate_toy_book_scaffold():
@@ -37,16 +39,16 @@ def test_validate_toy_book_delivery():
 
 def test_validate_delivery_fails_on_missing():
     """delivery 模式缺失核心交付物必须 FAIL"""
-    import tempfile
+    import yaml
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)
-        # 搭建 phase8 骨架（只有 corpus，没有 reverse_assets）
+        # 搭建 phase8 骨架（只有 corpus，没有 reverse_assets 和 skill_injection 交付物）
         phase8 = tmp / "production" / "phase8"
         (phase8 / "schemas").mkdir(parents=True)
         (phase8 / "templates").mkdir(parents=True)
         (phase8 / "prompts").mkdir(parents=True)
-        (phase8 / "corpus" / "empty_book" / "chapters").mkdir(parents=True)
-        (phase8 / "corpus" / "empty_book" / "chapter_cards").mkdir(parents=True)
+        (phase8 / "corpus" / "sparse_book" / "chapters").mkdir(parents=True)
+        (phase8 / "corpus" / "sparse_book" / "chapter_cards").mkdir(parents=True)
         (phase8 / "audit").mkdir(parents=True)
         (phase8 / "reverse_assets").mkdir(parents=True)
         (phase8 / "craft_assets" / "candidate").mkdir(parents=True)
@@ -55,21 +57,23 @@ def test_validate_delivery_fails_on_missing():
         (phase8 / "skill_injection").mkdir(parents=True)
         (phase8 / "validation").mkdir(parents=True)
 
-        # 最小化 source_meta
-        import yaml
-        meta = {"source_id": "empty_book", "title": "Empty", "author": "test",
+        # 最小化 source_meta（使用 object 模型）
+        meta = {"source_id": "sparse_book", "title": "Sparse", "author": "test",
                 "source_type": "original_script", "permission_status": "own_work",
                 "allowed_operations": {"ingest": True, "compress": True, "distill_craft": False,
                                        "quote": False, "train_model": False},
                 "do_not_copy": True}
-        (phase8 / "corpus" / "empty_book" / "source_meta.yaml").write_text(yaml.dump(meta))
+        (phase8 / "corpus" / "sparse_book" / "source_meta.yaml").write_text(
+            yaml.dump(meta, allow_unicode=True, default_flow_style=False))
 
         # 最小化 manifest
-        manifest = {"book_id": "empty_book", "title": "Empty", "chapter_count": 0,
+        manifest = {"book_id": "sparse_book", "title": "Sparse", "chapter_count": 0,
                     "chapter_index": [], "status": "initialized"}
-        (phase8 / "corpus" / "empty_book" / "manifest.yaml").write_text(yaml.dump(manifest))
+        (phase8 / "corpus" / "sparse_book" / "manifest.yaml").write_text(
+            yaml.dump(manifest, allow_unicode=True, default_flow_style=False))
 
-        sys.argv = ["validate_phase8.py", "--book-id", "empty_book", "--mode", "delivery", "--project-root", str(tmp)]
+        sys.argv = ["validate_phase8.py", "--book-id", "sparse_book",
+                    "--mode", "delivery", "--project-root", str(tmp)]
         from tools.phase8.validate_phase8 import main
         try:
             main()
@@ -77,7 +81,7 @@ def test_validate_delivery_fails_on_missing():
             assert e.code != 0, "delivery 模式下缺失交付物应失败"
 
             # 验证 JSON 报告包含缺失项
-            report_path = phase8 / "validation" / "empty_book" / "validation_report.json"
+            report_path = phase8 / "validation" / "sparse_book" / "validation_report.json"
             if report_path.exists():
                 report = json.loads(report_path.read_text())
                 assert not report["passed"]

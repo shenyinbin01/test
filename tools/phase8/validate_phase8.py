@@ -14,6 +14,14 @@ import os, sys, yaml, json
 from pathlib import Path
 from datetime import datetime
 
+# 确保项目根目录在 sys.path 中，支持直接 python tools/phase8/validate_phase8.py 运行
+_THIS_FILE = Path(__file__).resolve()
+for _p in [_THIS_FILE.parent.parent.parent, *_THIS_FILE.parents]:
+    if (_p / "tools" / "phase8").exists():
+        if str(_p) not in sys.path:
+            sys.path.insert(0, str(_p))
+        break
+
 from tools.phase8.common import resolve_project_root
 
 

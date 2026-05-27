@@ -11,8 +11,9 @@ test_split_chapters.py — 测试章节切分功能
 import os, sys, yaml, tempfile, shutil
 from pathlib import Path
 
-PROJECT = Path("/opt/webnovel-hermes-wps")
-sys.path.insert(0, str(PROJECT))
+# conftest.py 已自动注入 project_root 到 sys.path
+from tests.phase8.conftest import get_project_root
+PROJECT = get_project_root()
 
 from tools.phase8 import split_chapters
 from tools.phase8.common import resolve_project_root

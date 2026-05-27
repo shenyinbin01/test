@@ -1,7 +1,7 @@
 {
   "book_id": "nonexistent_book",
   "mode": "scaffold",
-  "validated_at": "2026-05-27T16:45:18.110529",
+  "validated_at": "2026-05-27T21:13:19.620282",
   "passed": false,
   "errors": [
     "缺失目录: corpus/nonexistent_book",
