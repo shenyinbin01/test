@@ -62,12 +62,12 @@
    - 角色职责
    - pipeline 节点
 5. 检查角色型 Skill 是否存在：
-   - webnovel-planner
-   - webnovel-writer
-   - webnovel-reviewer
-   - webnovel-polisher
-   - webnovel-state-manager
-   - webnovel-wps-sync
+   - webnovel_planner
+   - webnovel_writer
+   - webnovel_reviewer
+   - webnovel_polisher
+   - webnovel_state_manager
+   - webnovel_wps_sync
 6. 检查 .story-system 是否完整：
    - MASTER_SETTING.yaml
    - runtime_canon.yaml

@@ -13,7 +13,7 @@ skill-pack/
 │   ├── webnovel_planner/        ← 规划角色 Skill
 │   ├── webnovel_writer/         ← 写手角色 Skill
 │   ├── detect_webnovel_ai_flavor/ ← AI 味检测 Skill
-│   ├── webnovel_reviewer/       ← 十维度审稿 Skill
+│   ├── webnovel_reviewer/       ← 11 维章节质量审稿 Skill
 │   ├── webnovel_polisher/       ← 去 AI 味润色 Skill
 │   ├── webnovel_state_manager/  ← 状态管理 Skill
 │   └── webnovel_wps_sync/       ← WPS 同步 Skill

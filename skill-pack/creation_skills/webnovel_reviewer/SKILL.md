@@ -1,14 +1,14 @@
 ---
 name: webnovel_reviewer
-description: "webnovel-hermes-wps 审稿角色 Skill — 从十维度评估章节正文质量，吸收 sentence_rhythm 报告和 ai_flavor 检测报告，输出结构化审稿报告和 Polisher 指令。不修改正文，不生成新章节，不同步 WPS。"
+description: "webnovel-hermes-wps 审稿角色 Skill — 从十一维度评估章节正文质量，吸收 sentence_rhythm 报告和 ai_flavor 检测报告，输出结构化审稿报告和 Polisher 指令。不修改正文，不生成新章节，不同步 WPS。"
 tags: ["webnovel", "reviewer", "quality-gate", "deai", "phase6b"]
 ---
 
-# webnovel-reviewer Skill
+# webnovel_reviewer Skill
 
 ## 适用场景
 
-1. 章节草稿完成后，审稿人做十维度质量评估
+1. 章节草稿完成后，审稿人做十一维度质量评估
 2. 审稿报告中必须吸收去 AI 味检测结果
 3. 输出 rewrite_instructions 供 Writer 参考，输出 polisher_instructions 供 Polisher 使用
 4. 决定该章节是否可以进入 Polisher 阶段

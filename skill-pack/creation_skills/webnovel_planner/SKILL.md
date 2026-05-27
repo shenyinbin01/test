@@ -70,7 +70,12 @@ tags: ["webnovel", "planner", "outline", "beat", "phase7"]
 
 1. Hermes 传入任务说明（新项目 / 续写 / 剧情讨论）
 2. 读取所有可选输入（如存在）
-3. 如为新项目，生成 Story Bible → 写入 MASTER_SETTING.yaml
+3. 如为新项目，生成 Story Bible：
+   a. 调用 DeepSeek，传入 project.yaml + 设定上下文，生成 Story Bible JSON
+   b. 校验 JSON 结构完整性（project / story_synopsis / characters / world / outline）
+   c. 转写为 MASTER_SETTING.yaml 格式
+   d. 检查 canon_check（无内部矛盾、无禁词、符合约束）
+   e. 写入 `.story-system/MASTER_SETTING.yaml`
 4. 如需要生成大纲，调用 DeepSeek 生成前 N 章 outline → 写入 `outlines/chapters_001_030.yaml`
 5. 如需生成单章 beat，读取 outline + runtime_canon + reader_debts，调用 DeepSeek 生成 chapter beat → 写入 `outlines/beats/chapter_XXX.yaml`
 6. 如需生成上下文，写入 `.webnovel/context/chapter_XXX_context.yaml`

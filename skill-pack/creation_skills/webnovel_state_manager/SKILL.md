@@ -116,7 +116,11 @@ tags: ["webnovel", "state-manager", "canon", "projection", "phase7"]
 1. polished/final 不存在 → draft_commit 停止并报告
 2. chapter_commit 不存在 → apply_commit 停止并报告
 3. chapter_commit status != accepted → apply_commit 停止并报告
-4. canon validator 不一致 → 报告不一致项，不阻止写入
+4. canon validator 不一致时的处理规则：
+   - draft_commit 模式：允许生成 chapter_commit 草案，但必须标记 validation_failed
+   - apply_commit 模式：必须停止写入 runtime_canon / reader_debts / .webnovel 投影
+   - 只有 Hermes 明确 override 时才能继续 apply
+   - override 必须写入 audit_log
 5. 写入路径不存在 → 自动创建目录
 6. DeepSeek 输出截断 → 重试最多 1 次
 

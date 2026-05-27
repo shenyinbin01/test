@@ -68,7 +68,7 @@ tags: ["webnovel", "writer", "draft", "phase7"]
 4. 读取 Writer Prompt 模板
 5. 调用 DeepSeek，传入 beat + context + 设定 + deai_rules
 6. 接收 DeepSeek 输出的正文草稿
-7. 检查是否完整（章节长度 1500-3000 字，场景数匹配 beat）
+7. 检查是否完整（章节目标 2500-3000 中文字，最低 2200，超过 3500 建议拆章；场景数匹配 beat）
 8. 写入 `manuscript/drafts/chapter_XXX_draft.md`
 9. 向 Hermes 报告输出路径和基本信息（字数、场景数）
 
@@ -76,14 +76,14 @@ tags: ["webnovel", "writer", "draft", "phase7"]
 
 1. chapter beat 不存在 → 停止并报告，要求先 Planner
 2. DeepSeek 输出截断 → 分两段调用后合并
-3. 字数不足 1500 → 报告但保留文件，由 Hermes 判断
+3. 字数低于 2200 或高于 3200 → 报告原因，由 Hermes 判断；超过 3500 建议拆章
 4. 生成的内容明显偏离 beat → 停止并报告，不写入
 5. 写入路径不存在 → 自动创建目录
 
 ## 验收标准
 
 1. draft.md 是纯正文，不包含提示词或说明
-2. 字数在 1500-3000 字范围内
+2. 字数在 2500-3000 中文字范围（最低 2200 可接受，需说明原因；超过 3500 建议拆章）
 3. 场景数与 beat 一致
 4. 未出现禁止词列表中的词
 5. 未修改 final / runtime_canon / .story-system

@@ -145,7 +145,7 @@ Hermes 不应在 DeepCode 可用时自行代行 DeepCode 职责。
 - 验收 DeepCode 输出（检查文件改动、跑回归测试、确认符合规范）
 - 直接调用 DeepSeek（通过 Prompt 指令）
 - 直接执行 Python 工具脚本（不需要 DeepCode 修改的任务）
-- 通过 webnovel-state-manager Skill 管理 `.story-system` 内容更新；Hermes 不直接手改状态文件，除非用户明确要求人工修复。
+- 通过 webnovel_state_manager Skill 管理 `.story-system` 内容更新；Hermes 不直接手改状态文件，除非用户明确要求人工修复。
 - 输出最终验收结论给用户
 
 ### 2.4 DeepCode 负责
@@ -234,7 +234,7 @@ DeepCode 未完成 onboarding 前，不允许执行 Phase 6A / 6B / 6C 具体改
 
 DeepCode 的项目内编程 Skill Pack 位于：
 
-/opt/webnovel-hermes-wps/deepcode_skills/
+skill-pack/deepcode_skills/
 
 包含：
 1. deepcode_project_onboarding
@@ -259,7 +259,7 @@ DeepCode 只服务编码、审查、测试、报告。
 |-------|------|------|------|
 | webnovel_planner | Story Bible、大纲、章节 Beat、剧情规划讨论 | 不写正文、不审稿、不润色、不同步 WPS | ✅ Phase 7 已实现 |
 | webnovel_writer | 根据 Beat 写正文草稿 | 不审稿、不状态更新、不最终定稿 | ✅ Phase 7 已实现 |
-| webnovel_reviewer | 十维度审稿，输出 rewrite_instructions | 不直接改正文、不新增重大剧情 | ✅ Phase 6B 已实现 |
+| webnovel_reviewer | 11 维章节质量审稿，输出 rewrite_instructions | 不直接改正文、不新增重大剧情 | ✅ Phase 6B 已实现 |
 | webnovel_polisher | 去 AI 味、网文化表达、调整句式、增强动作对话场景 | 不改主线剧情、不更新 runtime_canon | ✅ Phase 6B 已实现 |
 | webnovel_state_manager | 读取 accepted chapter_commit，更新 runtime_canon、reader_debts、.webnovel/state.yaml，写 audit_log，调用 canon validator | 不写正文、不润色正文、不生成剧情、不同步 WPS | ✅ Phase 7 已实现 |
 | webnovel_wps_sync | 渲染 DOCX、生成 WPS 投影、同步 WPS、更新 doc_meta.yaml 和 sync_log.jsonl | 不修改故事状态、不修改正文内容 | ✅ Phase 7 已实现 |
