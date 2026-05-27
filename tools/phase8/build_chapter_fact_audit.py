@@ -59,6 +59,19 @@ def _normalize_hook_debt(items):
     return ids, legacy
 
 
+def _extract_yaml(text: str) -> str:
+    """从 LLM 输出中提取 YAML（处理 ```yaml 包裹）"""
+    if "```yaml" in text:
+        parts = text.split("```yaml", 1)
+        inner = parts[1].split("```", 1)
+        return inner[0] if inner else text
+    if "```" in text:
+        parts = text.split("```", 1)
+        inner = parts[1].split("```", 1)
+        return inner[0] if inner else text
+    return text
+
+
 def main():
     import argparse
     parser = argparse.ArgumentParser(description="生成章节事实审计报告")
@@ -93,7 +106,7 @@ def main():
     card_files = sorted(cards_dir.glob("*.yaml"))
     card_map = {}
     for cf in card_files:
-        card = yaml.safe_load(cf.read_text()) or {}
+        card = yaml.safe_load(_extract_yaml(cf.read_text())) or {}
         ch = card.get("chapter_number", 0)
         card_map[ch] = card
 
@@ -126,7 +139,13 @@ def main():
         one_sentence = card.get("one_sentence", "")
         ch_func = card.get("chapter_function", "")
         proto_change = card.get("protagonist_state_change", "")
-        chars = ", ".join(card.get("characters_present", []))[:40]
+        chars_raw = card.get("characters_present", [])
+        if chars_raw and isinstance(chars_raw[0], dict):
+            chars = ", ".join(
+                (c.get("name", "") if isinstance(c, dict) else str(c)) for c in chars_raw
+            )[:40]
+        else:
+            chars = ", ".join(str(c) for c in chars_raw)[:40]
         hooks_open_raw = card.get("hook_opened", [])
         hooks_pay_raw = card.get("hook_paid", [])
         debts_open_raw = card.get("reader_debts_opened", [])
