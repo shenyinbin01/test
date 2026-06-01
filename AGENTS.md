@@ -298,7 +298,36 @@ WPS → 反推故事状态
 
 ---
 
-## 7. 当前阶段：Phase 7 → 🔄 审计修正（本阶段）
+## 7. Project Collaboration Rules
+
+### 7.1 决策权归属
+
+1. 项目负责人和外部审计方是主动决策方。
+2. Hermes 是信息传递和执行协调层，不是最终指挥者。
+3. DeepCode 是工程执行和自检主体。
+
+### 7.2 真源原则
+
+4. GitHub 是任务模板、产物、报告、审计包的真源。
+5. 稳定规则必须固化到本项目 AGENTS.md，不要反复通过聊天传递。
+6. 阶段任务细节必须固化到 task_templates，不要每次由 Hermes 重新展开。
+
+### 7.3 任务下发规范
+
+7. Hermes 给 DeepCode 下发任务时，默认只提供：任务名、模板路径、输入路径、输出路径、参数、关键约束、回传要求。
+8. Hermes 不应重写 task_template，不应复制粘贴完整模板给 DeepCode，除非项目负责人明确要求。
+9. DeepCode 接到任务后，必须自己读取模板并执行。
+
+### 7.4 阶段流程
+
+10. 每个关键 Step 完成后，必须提交 GitHub，等待项目负责人 / 外部审计方验收。
+11. Draft assets 不等于 approved assets。
+12. craft_assets 必须经历 draft → curator → approved，不得一步入库。
+13. 被判定为 not accepted 的上游产物不得作为后续真源。
+
+---
+
+## 8. 当前阶段：Phase 7 → 🔄 审计修正（本阶段）
 
 ### 7.1 阶段名称
 
