@@ -1,0 +1,55 @@
+# Dachengqi Draft Craft Assets Manifest
+
+book_id: dachengqi
+source_step: step4
+status: draft
+generated_at: "2026-06-01T17:00:00+08:00"
+
+total_candidates: 22
+keep: 12
+revise: 8
+reject: 2
+draft_patterns_generated: 20
+approved_patterns_generated: 0
+
+forbidden_sources_checked: true
+original_contamination_check: true
+
+output_files:
+  - README.md
+  - manifest.yaml
+  - craft_distiller_report.md
+  - craft_distiller_report.json
+  - protagonist_engine_patterns/DCQG-C001-cognitive-overwhelm.md
+  - protagonist_engine_patterns/DCQG-C006-identity-camouflage.md
+  - protagonist_engine_patterns/DCQG-C009-internalized-pressure.md
+  - protagonist_engine_patterns/DCQG-C011-multi-role-intervention.md
+  - arc_structure_patterns/DCQG-C010-conflict-spiral-escalation.md
+  - arc_structure_patterns/DCQG-C012-worldbuilding-revelation-driver.md
+  - arc_structure_patterns/DCQG-C017-multi-thread-weaving.md
+  - reader_pull_patterns/DCQG-C004-external-quest-trigger.md
+  - reader_pull_patterns/DCQG-C008-immersive-history-revelation.md
+  - reader_pull_patterns/DCQG-C014-dimensional-reduction-intro.md
+  - payoff_patterns/DCQG-C005-short-long-hook.md
+  - payoff_patterns/DCQG-C020-ultimate-cost-tradeoff.md
+  - payoff_patterns/DCQG-C022-epilogue-return-to-origin.md
+  - character_function_patterns/DCQG-C003-mirror-antagonist.md
+  - character_function_patterns/DCQG-C007-protagonist-as-mentor.md
+  - conflict_generator_patterns/DCQG-C002-rule-deconstruction-breakthrough.md
+  - conflict_generator_patterns/DCQG-C015-ideological-conflict.md
+  - conflict_generator_patterns/DCQG-C021-rule-system-exploit.md
+  - pacing_patterns/DCQG-C013-emotional-anchor.md
+  - comedy_contrast_patterns/DCQG-C018-comedy-relief.md
+  - rejected_patterns/DCQG-R001-C016-rejected-closure.md
+  - rejected_patterns/DCQG-R002-C019-rejected-growth.md
+
+category_distribution:
+  protagonist_engine_patterns: 4
+  arc_structure_patterns: 3
+  reader_pull_patterns: 3
+  payoff_patterns: 3
+  character_function_patterns: 2
+  conflict_generator_patterns: 3
+  pacing_patterns: 1
+  comedy_contrast_patterns: 1
+  rejected_patterns: 2

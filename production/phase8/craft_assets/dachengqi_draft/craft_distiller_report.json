@@ -1,0 +1,49 @@
+{
+  "report_type": "craft_distiller_report",
+  "book_id": "dachengqi",
+  "generated_at": "2026-06-01T17:00:00+08:00",
+  "status": "draft",
+  "input": {
+    "source_step": "step3b",
+    "total_candidates": 22,
+    "curator_keep": 12,
+    "curator_revise": 8,
+    "curator_reject": 2
+  },
+  "output": {
+    "draft_patterns": 20,
+    "rejected_patterns": 2,
+    "output_directory": "production/phase8/craft_assets/dachengqi_draft/"
+  },
+  "category_distribution": {
+    "protagonist_engine_patterns": {"count": 4, "ids": ["C001", "C006", "C009", "C011"]},
+    "arc_structure_patterns": {"count": 3, "ids": ["C010", "C012", "C017"]},
+    "reader_pull_patterns": {"count": 3, "ids": ["C004", "C008", "C014"]},
+    "payoff_patterns": {"count": 3, "ids": ["C005", "C020", "C022"]},
+    "character_function_patterns": {"count": 2, "ids": ["C003", "C007"]},
+    "conflict_generator_patterns": {"count": 3, "ids": ["C002", "C015", "C021"]},
+    "pacing_patterns": {"count": 1, "ids": ["C013"]},
+    "comedy_contrast_patterns": {"count": 1, "ids": ["C018"]},
+    "rejected_patterns": {"count": 2, "ids": ["C016", "C019"]}
+  },
+  "de_originalization": {
+    "revised_cards": ["C002", "C003", "C005", "C010", "C011", "C014", "C017", "C021"],
+    "original_name_occurrences": 0,
+    "original_setting_occurrences": 0,
+    "all_have_contamination_guard": true
+  },
+  "confidence_distribution": {
+    "high": 13,
+    "medium": 7,
+    "low": 0
+  },
+  "forbidden_sources_checked": true,
+  "original_contamination_check": true,
+  "approved_patterns_generated": 0,
+  "known_limitations": [
+    "部分 medium confidence 技法证据较泛",
+    "所有技法源自单书反向工程",
+    "正例为虚构创作",
+    "技法尚未注入 Skill Pack"
+  ]
+}
