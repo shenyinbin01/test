@@ -174,21 +174,44 @@ async def main():
         )
         if result.get("success"):
             print(f"[notify-send] WeChat sent: {result.get('message_id', '?')}", file=sys.stderr)
+            # 成功日志
+            _write_structured_log(args, result, success=True)
+            sys.exit(0)
         else:
-            print(f"[notify-send] WeChat send failed: {result.get('error', '?')}", file=sys.stderr)
-            # 写错误日志
-            err_dir = f"/tmp/deepcode_jobs/{args.job_id}" if args.job_id else "/tmp/deepcode_jobs"
-            Path(err_dir).mkdir(parents=True, exist_ok=True)
-            Path(f"{err_dir}/notify_error.log").write_text(
-                json.dumps({"error": result.get("error", "unknown"), "result": str(result)}, ensure_ascii=False)
-            )
+            error_msg = result.get('error', '?')
+            print(f"[notify-send] WeChat send failed: {error_msg}", file=sys.stderr)
+            _write_structured_log(args, result, success=False, error=error_msg)
+            sys.exit(1)
     except Exception as e:
+        error_msg = str(e)
         print(f"[notify-send] Exception: {e}", file=sys.stderr)
-        err_dir = f"/tmp/deepcode_jobs/{args.job_id}" if args.job_id else "/tmp/deepcode_jobs"
-        Path(err_dir).mkdir(parents=True, exist_ok=True)
-        Path(f"{err_dir}/notify_error.log").write_text(
-            json.dumps({"error": str(e)}, ensure_ascii=False)
-        )
+        _write_structured_log(args, {"error": error_msg}, success=False, error=error_msg)
+        sys.exit(1)
+
+
+def _write_structured_log(args, result, success=False, error=""):
+    """写结构化日志（不包含 token）。"""
+    import datetime
+    log_entry = {
+        "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+        "success": success,
+        "status": args.status,
+        "title": args.title[:80] if args.title else "",
+        "duration_seconds": args.duration,
+        "body_length": len(args.body) if args.body else 0,
+        "chat_id": args.chat_id,
+        "account_id": os.getenv("WEIXIN_ACCOUNT_ID", ""),
+        "base_url": os.getenv("WEIXIN_BASE_URL", "https://ilinkai.weixin.qq.com"),
+        "result_message_id": result.get("message_id", "") if isinstance(result, dict) else "",
+        "result_platform": result.get("platform", "") if isinstance(result, dict) else "",
+        "error": error,
+        "job_id": args.job_id if args.job_id else "",
+    }
+    err_dir = f"/tmp/deepcode_jobs/{args.job_id}" if args.job_id else "/tmp/deepcode_jobs"
+    Path(err_dir).mkdir(parents=True, exist_ok=True)
+    Path(f"{err_dir}/notify_error.log").write_text(
+        json.dumps(log_entry, ensure_ascii=False, indent=2)
+    )
 
 
 if __name__ == "__main__":

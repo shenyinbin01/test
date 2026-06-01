@@ -5,8 +5,8 @@
 #
 # 功能：
 # 1. 写入状态文件 /tmp/deepcode_jobs/<job_id>/
-# 2. 如果配置了 WEBHOOK_URL，发送飞书卡片消息
-# 3. BODY 最长截取 2000 字
+# 2. 发送微信通知
+# 3. 如果配置了 WEBHOOK_URL，发送飞书卡片消息
 
 set -euo pipefail
 
@@ -30,53 +30,19 @@ else
 fi
 
 # ============================================================
-# 写入状态文件
+# 聊天目标：优先 WEIXIN_HOME_CHANNEL 环境变量
+# ============================================================
+CHAT_ID="${WEIXIN_HOME_CHANNEL:-o9cq803Qx92-E0CO3-LYxj7fZ80s@im.wechat}"
+
+# ============================================================
+# 写入状态文件和发送微信通知（统一用 Python 处理）
 # ============================================================
 JOBS_DIR="/tmp/deepcode_jobs"
 JOB_DIR="$JOBS_DIR/$JOB_ID"
 mkdir -p "$JOB_DIR"
 
-# 摘要 BODY（截取 2000 字 + 保留最后 500 字用于上下文）
-BODY_SUMMARY="${BODY:0:2000}"
-if [ "${#BODY}" -gt 2000 ]; then
-    BODY_SUMMARY="${BODY_SUMMARY}\n\n...(truncated, full length: ${#BODY} chars)..."
-fi
-
-# 写入 status.json
-cat > "$JOB_DIR/status.json" << JSONEOF
-{
-  "job_id": "$JOB_ID",
-  "status": "$STATUS",
-  "title": "$TITLE",
-  "duration_seconds": $DURATION,
-  "fail_reason": "$FAIL_REASON",
-  "body_length": ${#BODY},
-  "generated_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-}
-JSONEOF
-
-# 写入 last_output.md（摘要版）
-cat > "$JOB_DIR/last_output.md" << MDEOF
-# DeepCode 任务完成报告
-
-**状态：** $STATUS
-**任务：** $TITLE
-**耗时：** ${DURATION}s
-**Job ID：** $JOB_ID
-
----
-
-$BODY_SUMMARY
-MDEOF
-
-echo "[notify] status written to $JOB_DIR/status.json" >&2
-
-# ============================================================
-# 微信主动通知（核心事件驱动）
-# ============================================================
 WEIXIN_SEND_SCRIPT="/home/agentuser/.deepcode/notify_send_weixin.py"
 if [ -x "$WEIXIN_SEND_SCRIPT" ]; then
-    # 提取 marker 和 summary 用于微信消息
     python3 "$WEIXIN_SEND_SCRIPT" \
         --status "$STATUS" \
         --title "$TITLE" \
@@ -85,16 +51,19 @@ if [ -x "$WEIXIN_SEND_SCRIPT" ]; then
         --fail-reason "$FAIL_REASON" \
         --job-id "$JOB_ID" \
         --result-path "$JOB_DIR/status.json" \
-        --chat-id "o9cq803Qx92-E0CO3-LYxj7fZ80s@im.wechat" \
-        2>&1 || echo "[notify] WeChat send failed (non-fatal)" >&2
+        --chat-id "$CHAT_ID" \
+        2>&1
+    NOTIFY_EXIT=$?
+    if [ "$NOTIFY_EXIT" -ne 0 ]; then
+        echo "[notify] WeChat send failed (exit=$NOTIFY_EXIT)" >&2
+    fi
 fi
 
 # ============================================================
 # 飞书 Webhook 通知（仅在配置了 WEBHOOK_URL 时发送）
 # ============================================================
 if [ -n "$WEBHOOK_URL" ]; then
-    # 构建飞书卡片消息（摘要版，不塞完整 BODY）
-    # 从 BODY 中提取关键信息
+    # 构建飞书卡片消息（摘要版）
     SUMMARY=""
     if echo "$BODY" | grep -q "\[FINAL_DONE\]" 2>/dev/null; then
         SUMMARY=$(echo "$BODY" | grep -A 10 "\[FINAL_DONE\]" | head -12)
@@ -118,11 +87,11 @@ let emoji = '✅';
 let statusText = '已完成';
 if (status === 'failed') { emoji = '❌'; statusText = '失败'; }
 
-const content = '**' + emoji + ' DeepCode 任务 ' + statusText + '**\\n'
-    + '> **任务：** ' + title + '\\n'
-    + '> **耗时：** ' + duration + 's\\n'
-    + (failReason ? '> **失败原因：** ' + failReason + '\\n' : '')
-    + '> **Job ID：** ' + (process.env.JOB_ID || 'N/A') + '\\n\\n'
+const content = '**' + emoji + ' DeepCode 任务 ' + statusText + '**\\\\n'
+    + '> **任务：** ' + title + '\\\\n'
+    + '> **耗时：** ' + duration + 's\\\\n'
+    + (failReason ? '> **失败原因：** ' + failReason + '\\\\n' : '')
+    + '> **Job ID：** ' + (process.env.JOB_ID || 'N/A') + '\\\\n\\\\n'
     + summary.slice(0, 1500);
 
 process.stdout.write(JSON.stringify({
