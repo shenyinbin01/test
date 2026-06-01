@@ -1,0 +1,61 @@
+```yaml
+book_id: ""
+chapter_number: 745
+title: "相同的前世，不同的今生"
+source_file: ""
+one_sentence: "江离与初帝对比前世，发现闲人摆烂。"
+chapter_function: "揭示三位主角（江离、初帝、闲人）因不同思想走向不同道路，为后续冲突铺垫。"
+main_events:
+  - "江离在地府与众人交谈，提及过往经历。"
+  - "长眉佛感慨江离兼具大乘期与大乘佛法。"
+  - "初帝教育元祖，元祖意识到被天道欺骗。"
+  - "江离与初帝前往周天世界，确认闲人经历相同。"
+  - "两人讨论三人思想差异：江离坚持公平，初帝追求秩序兼特权，闲人摆烂。"
+  - "江离与初帝伪装后回到九州，听到路人议论。"
+  - "路人提及白人皇（白宏图）代理事务、灵植大阵、红颜传说等。"
+characters_present:
+  - "江离"
+  - "初帝"
+  - "长眉佛"
+  - "元祖"
+  - "后土娘娘"
+  - "阎罗王"
+  - "陆人皇"
+  - "战仙（被提及）"
+  - "白人皇（白宏图，被提及）"
+  - "须弥老佛（被提及）"
+  - "长存仙翁（被提及）"
+protagonist_state_change: "江离从地府交谈状态转变为返回九州、确认闲人思想差异，无显著内在变化。"
+relationship_changes: []
+world_state_change: "元祖意识到被天道欺骗，地府准备迎接仙魂；九州已一年无人皇消息，白人皇代理事务。"
+hook_opened:
+  - id: H001
+    text: "闲人摆烂后，将如何被天道利用？"
+  - id: H002
+    text: "须弥老佛成仙后为何独坐须弥山顶不下山？"
+hook_paid: []
+reader_debts_opened:
+  - id: D001
+    text: "元祖被天道欺骗的具体细节未完全揭示。"
+  - id: D002
+    text: "闲人的系统如何引导他摆烂？"
+  - id: D003
+    text: "须弥老佛成仙后的异常行为原因。"
+reader_debts_paid: []
+ending_pull: "通过路人议论引出闲人离开后的九州现状，以及须弥老佛、红颜传说等未解之谜，暗示闲人影响下的世界暗流涌动。"
+scene_vitality_notes: ""
+evidence:
+  - source_ref: "段落1-5"
+    summary: "江离在地府与众人谈笑，长眉佛感慨江离兼具大乘期与大乘佛法。"
+  - source_ref: "段落6-9"
+    summary: "初帝教育元祖，元祖意识到被天道欺骗；陆人皇叹息，地府准备迎接仙魂。"
+  - source_ref: "段落10-11"
+    summary: "江离与初帝前往周天世界，确认蓝星相同，三人思想差异。"
+  - source_ref: "段落12-14"
+    summary: "两人伪装回九州，听到路人议论白人皇代理、灵植大阵、须弥老佛异状及红颜传说。"
+confidence: low
+unknown_fields:
+  - "relationship_changes"
+  - "hook_paid"
+  - "reader_debts_paid"
+```

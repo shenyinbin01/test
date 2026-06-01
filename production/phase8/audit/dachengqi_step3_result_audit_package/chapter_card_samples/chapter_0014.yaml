@@ -1,0 +1,49 @@
+```yaml
+book_id: ""
+chapter_number: 14
+title: "江家有功，但功不抵过"
+source_file: ""
+one_sentence: "江族长请求加入人皇殿，被江离驳回并驳斥功过相抵论。"
+chapter_function: "通过江离与江族长的对峙，深化功过相抵的伦理冲突，展示江离的强硬立场。"
+main_events:
+  - "江族长现身拜见江离，陈述江家历史与江一星的悔意，请求加入人皇殿。"
+  - "江离拒绝江家加入人皇殿，指出人皇殿无家族先例。"
+  - "围观群众中有人支持江家，认为功德可抵魔道罪过。"
+  - "江离抓住支持者，以自己拯救九州三次为例，反问为何不能屠杀他们，驳斥功过相抵论。"
+characters_present:
+  - "江离"
+  - "江族长"
+  - "袁五行"
+  - "周皇姬止"
+  - "围观群众（包括支持者与丢失孩子的父母）"
+protagonist_state_change: "江离从笑而不语转为冷酷强硬，展现其人屠一面。"
+relationship_changes: []
+world_state_change: ""
+hook_opened:
+  - id: H001
+    text: "江离是否会对江家采取进一步行动？"
+hook_paid: []
+reader_debts_opened:
+  - id: D001
+    text: "江一星的心魔与魔道细节尚未完全揭示。"
+reader_debts_paid: []
+ending_pull: "江离以人屠姿态震慑全场，暗示其可能对江家或支持者采取更激烈手段。"
+scene_vitality_notes: ""
+evidence:
+  - source_ref: "第十四章，第一段"
+    summary: "江族长拜见江离，陈述江家历史与江一星的悔意。"
+  - source_ref: "第十四章，江离拒绝加入人皇殿"
+    summary: "江离明确拒绝江家加入人皇殿，指出无家族先例。"
+  - source_ref: "第十四章，围观群众支持功过相抵"
+    summary: "有群众认为江家功德可抵魔道罪过，支持其加入人皇殿。"
+  - source_ref: "第十四章，江离驳斥功过相抵"
+    summary: "江离抓住支持者，以自己拯救九州三次为例，反问为何不能屠杀他们。"
+  - source_ref: "第十四章，结尾"
+    summary: "江离展现人屠一面，全场肃杀。"
+confidence: high
+unknown_fields:
+  - "relationship_changes"
+  - "world_state_change"
+  - "hook_paid"
+  - "reader_debts_paid"
+```

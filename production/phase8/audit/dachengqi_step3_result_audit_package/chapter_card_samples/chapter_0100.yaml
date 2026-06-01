@@ -1,0 +1,53 @@
+```yaml
+book_id: ""
+chapter_number: 100
+title: "五位统领"
+source_file: ""
+one_sentence: "江离通知五位统领停止寻找化神修士墓。"
+chapter_function: "通过五位统领的各自遭遇，展现人皇殿统领的个性与日常，为主角收集白泽血任务收尾做铺垫。"
+main_events:
+  - "江离找到系统任务所指的化神修士墓，决定通知其他统领停止寻找。"
+  - "张孔虎因无事可做继续睡觉，未听到后续通知。"
+  - "马卓夫妇正与白蛇执念战斗，欲取蛇胆壮阳，得知消息后放手攻击。"
+  - "黄统领在悬崖边饮酒悲观，感慨人生与死亡。"
+  - "木统领伪装成练气修士与少年队伍探险，计划在关键时刻显露身份。"
+characters_present:
+  - "江离"
+  - "张孔虎"
+  - "马卓"
+  - "卓统领"
+  - "黄统领"
+  - "木统领"
+  - "红尘仙子"
+  - "李念儿"
+protagonist_state_change: "江离从需要寻找化神修士墓的状态，变为已找到目标、通知完其他统领，准备炼丹。"
+relationship_changes: []
+world_state_change: "五位统领的寻墓任务被取消。"
+hook_opened:
+  - text: "木统领的伪装探险将如何收场？"
+hook_paid: []
+reader_debts_opened:
+  - text: "白蛇执念与蛇胆的具体作用未明确。"
+  - text: "木统领的探险队伍是否安全脱险？"
+reader_debts_paid: []
+ending_pull: "江离已找到白泽血，准备炼丹，暗示下一步炼丹过程即将展开。"
+scene_vitality_notes: "章节以轻松幽默的笔调刻画五位统领的个性，通过通讯符串联多线场景。"
+evidence:
+  - source_ref: "第一段"
+    summary: "江离找到化神修士墓，确认是系统任务目标。"
+  - source_ref: "第二段至第四段"
+    summary: "张孔虎睡觉，未听到通知。"
+  - source_ref: "第五段至第十一段"
+    summary: "马卓夫妇与白蛇战斗，欲取蛇胆壮阳。"
+  - source_ref: "第十二段至第十五段"
+    summary: "黄统领悲观饮酒，感慨人生。"
+  - source_ref: "第十六段至第二十五段"
+    summary: "木统领伪装练气修士与少年队伍探险。"
+  - source_ref: "倒数第二段至末尾"
+    summary: "江离陪红尘仙子、李念儿几日，送红尘仙子回净土，准备炼丹。"
+confidence: high
+unknown_fields:
+  - relationship_changes
+  - hook_paid
+  - reader_debts_paid
+```

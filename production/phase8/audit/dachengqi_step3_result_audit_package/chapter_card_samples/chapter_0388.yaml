@@ -1,0 +1,65 @@
+```yaml
+book_id: "unknown"
+chapter_number: 388
+title: "两篇作文"
+source_file: "unknown"
+one_sentence: "阅卷组长发现高考作文《如何修仙》可真实引气入体。"
+chapter_function: "引入修仙功法通过高考作文泄露到凡人世界的核心悬念，推动异能管理局介入调查作者身份。"
+main_events:
+  - "两位老师对《论渡劫期如何战胜大乘期》作文评分差异巨大（25分 vs 60分），提交阅卷组长仲裁。"
+  - "阅卷组长阅读《如何修仙》作文后，尝试其中方法竟成功引气入体，成为练气期。"
+  - "阅卷组长因权限不足无法查看作者信息，上报教育部门无果，转而联系异能者管理局。"
+  - "阅卷组长在异能者管理局演示胸口碎大石，证明引气入体真实有效。"
+  - "异能管理局副局长将两篇作文上报给局长，局长正接待江离和白宏图。"
+  - "江离和白宏图询问阅卷组长对两篇作文的评价。"
+characters_present:
+  - "阅卷组组长（异能者，一阶预知凶吉）"
+  - "第一位评分老师（打25分）"
+  - "第二位评分老师（打60分）"
+  - "壮汉异能者（隔山打牛）"
+  - "治愈系异能者"
+  - "异能者管理局副局长"
+  - "局长"
+  - "江离"
+  - "白宏图"
+protagonist_state_change: "unknown（本章无明确主角）"
+relationship_changes: []
+world_state_change: "修仙功法《如何修仙》通过高考作文形式流入凡人世界，且被证实可真实修炼。"
+hook_opened:
+  - id: H388_1
+    text: "《如何修仙》作文的作者是谁？"
+  - id: H388_2
+    text: "两篇作文的作者是否为同一人？"
+  - id: H388_3
+    text: "江离和白宏图为何对这两篇作文感兴趣？"
+hook_paid: []
+reader_debts_opened:
+  - id: RD388_1
+    text: "《如何修仙》作文的后续内容是什么？"
+  - id: RD388_2
+    text: "异能管理局能否查到作者身份？"
+  - id: RD388_3
+    text: "江离和白宏图如何看待这两篇作文？"
+reader_debts_paid: []
+ending_pull: "江离和白宏图突然出现在局长办公室，并直接询问阅卷组长对两篇作文的评价，暗示他们与作文作者或事件有深层关联。"
+scene_vitality_notes: ""
+evidence:
+  - source_ref: "第2-5段"
+    summary: "两位老师对《论渡劫期如何战胜大乘期》分别打25分和60分，差异巨大。"
+  - source_ref: "第6-10段"
+    summary: "阅卷组长阅读《如何修仙》后尝试引气入体成功，成为练气期。"
+  - source_ref: "第11-15段"
+    summary: "阅卷组长因权限不足无法查作者，上报教育部门无果，转报异能者管理局。"
+  - source_ref: "第16-23段"
+    summary: "阅卷组长在异能管理局演示胸口碎大石，证明修仙功法真实有效。"
+  - source_ref: "第24-28段"
+    summary: "副局长将两篇作文上报局长，局长办公室有江离和白宏图两位客人。"
+  - source_ref: "第29-31段"
+    summary: "江离和白宏图询问阅卷组长对两篇作文的评价。"
+confidence: high
+unknown_fields:
+  - book_id
+  - source_file
+  - protagonist_state_change
+  - relationship_changes
+```
