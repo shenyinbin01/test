@@ -1,7 +1,7 @@
-# Step 3B Quality Report
+# Step 3B Quality Report (Updated)
 
-> 生成时间: 2026-06-01T15:00:00
-> 生成方式: 程序聚合 + 人工抽查
+> 生成时间: 2026-06-01T15:30:00
+> 生成方式: 程序聚合 + 人工抽查 + Cleanup 后更新
 
 ## 1. 交付物完整度
 
@@ -119,3 +119,69 @@
 | 是否还有"只喂统计摘要"的情况 | ❌ 否，arc_mechanism 喂的是完整数据；但跨阶段汇总可能受 context 限制 |
 
 **建议：待主控方人工抽查 arc_mechanism 和 candidate_pool 质量后，再决定是否进入 Step 4。**
+
+---
+
+## 11. Cleanup 更新记录
+
+### 11.1 LLM 对话腔清理结果
+
+| 文件 | 状态 | 操作 |
+|------|------|------|
+| arc_mechanism_index.md | ✅ 已清理 | 修复「《仙逆》」→「《大乘期才有逆袭系统》」（2处错书名） |
+| protagonist_engine.md | ✅ 已清理 | 删除开头「好的，作为…」对话腔 +「请记住」提示语 |
+| character_function_map.md | ✅ 已清理 | 删除开头「好的，遵照您的指示…」对话腔；删除重复标题 |
+| craft_distillation_candidate_pool.md | ✅ 已清理 | 删除开头「好的，作为…」对话腔 |
+| refined_volume_structure.md | ✅ 已清理 | 删除开头「好的，作为…」对话腔；删除重复标题 |
+
+### 11.2 错书名/事实错误修正
+
+| 问题 | 文件 | 修复 |
+|------|------|------|
+|「《仙逆》独有的」 | arc_mechanism_index.md（2处） | →「《大乘期才有逆袭系统》独有的」 |
+
+### 11.3 candidate_pool curator 统计
+
+| 指标 | 数值 |
+|------|------|
+| 总候选 | 22 |
+| keep（可直接进入 Step 4） | 12 |
+| revise（去原作化后进入 Step 4） | 8 |
+| reject（不建议进入 Step 4） | 2 |
+| low 污染风险 | 16 |
+| medium 污染风险 | 6 |
+| high 污染风险 | 0 |
+
+### 11.4 confidence 校准后分布
+
+| 产物 | high | medium | low |
+|------|------|--------|-----|
+| full_chapter_spine | 768 | 3 | 3 |
+| arc_mechanism_index | 6 | 4 | 1 |
+| protagonist_engine | 3 | 4 | 1 |
+| character_function_map | 3 | 6 | 2 |
+| craft_distillation_candidate_pool | 9 | 11 | 2 |
+
+**结果：不再存在"全部 high"的问题 ✅**
+
+### 11.5 Step 4 放行建议
+
+**建议：conditionally pass — 允许进入 Step 4，但附以下约束。**
+
+Step 4 允许读取：
+1. full_chapter_spine.md
+2. refined_volume_structure.md
+3. arc_mechanism_index.md
+4. protagonist_engine.md
+5. character_function_map.md
+6. craft_distillation_candidate_pool.md
+7. candidate_pool_curator_report.md
+8. confidence_calibration_report.md
+
+Step 4 禁止读取：
+1. 旧 Step 3 reverse_story_bible.md
+2. 旧 Step 3 character_cards/
+3. 旧 Step 3 reader_debt_lifecycle.md
+4. 旧 Step 3 hook_payoff_map.md
+5. 原文全文
+6. 未经 curator 标记的 candidate 直接进入 approved

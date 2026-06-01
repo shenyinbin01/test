@@ -1,6 +1,6 @@
 {
-  "report_name": "Step 3B Quality Report",
-  "generated_at": "2026-06-01T15:00:00",
+  "report_name": "Step 3B Quality Report (Updated with Cleanup)",
+  "generated_at": "2026-06-01T15:30:00",
   "deliverables": {
     "full_chapter_spine": {"file": "full_chapter_spine.md", "coverage": 774, "status": "ok"},
     "refined_volume_structure": {"file": "refined_volume_structure.md", "coverage": 774, "status": "ok"},
@@ -16,32 +16,44 @@
     "stages_over_200": 0,
     "stages_over_160": 0
   },
-  "mechanism_analysis": {
-    "num_arc_mechanisms": 11,
-    "with_reusable_mechanism": 11,
-    "with_non_transferable_elements": 11,
-    "batch_generated": true,
-    "num_llm_calls_per_stage": 11
+  "cleanup": {
+    "llm_dialogue_cleaned": true,
+    "wrong_book_names_fixed": 2,
+    "wrong_book_names_files": ["arc_mechanism_index.md"]
   },
-  "character_function_map": {
-    "num_function_slots": 11,
-    "organized_by_function": true
+  "candidate_pool_curator": {
+    "total": 22,
+    "keep": 12,
+    "revise": 8,
+    "reject": 2
   },
-  "candidate_pool": {
-    "num_candidates": 22,
-    "threshold_met": true
+  "confidence_calibration": {
+    "full_chapter_spine": {"high": 768, "medium": 3, "low": 3},
+    "arc_mechanism_index": {"high": 6, "medium": 4, "low": 1},
+    "protagonist_engine": {"high": 3, "medium": 4, "low": 1},
+    "character_function_map": {"high": 3, "medium": 6, "low": 2},
+    "candidate_pool": {"high": 9, "medium": 11, "low": 2},
+    "all_high_issue_resolved": true
   },
-  "confidence_distribution": {
-    "high": 768,
-    "medium": 3,
-    "low": 3,
-    "note": "LLM self-assessed; protagonist_engine/character_function_map/candidate_pool are all high"
-  },
-  "risks": [
-    {"risk": "confidence all high", "severity": "medium"},
-    {"risk": "cross-stage synthesis input may exceed context window", "severity": "medium"},
-    {"risk": "candidate_pool may have original contamination", "severity": "medium"},
-    {"risk": "arc_mechanism needs manual verification", "severity": "medium"}
+  "step4_recommendation": "conditionally_pass",
+  "step4_allowed_inputs": [
+    "full_chapter_spine.md",
+    "refined_volume_structure.md",
+    "arc_mechanism_index.md",
+    "protagonist_engine.md",
+    "character_function_map.md",
+    "craft_distillation_candidate_pool.md",
+    "candidate_pool_curator_report.md",
+    "confidence_calibration_report.md"
   ],
-  "step4_recommendation": "pending_manual_review"
+  "step4_forbidden_inputs": [
+    "旧 Step 3 reverse_story_bible.md",
+    "旧 Step 3 character_cards/",
+    "旧 Step 3 reader_debt_lifecycle.md",
+    "旧 Step 3 hook_payoff_map.md",
+    "原文全文",
+    "未经 curator 标记的 candidate 直接进入 approved"
+  ],
+  "craft_assets_generated": false,
+  "approved_patterns_generated": false
 }
