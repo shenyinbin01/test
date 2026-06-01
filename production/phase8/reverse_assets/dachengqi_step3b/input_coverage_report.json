@@ -1,0 +1,32 @@
+{
+  "report_name": "Step 3B Input Coverage Report",
+  "generated_at": "2026-06-01T15:00:00",
+  "total_chapter_cards": 774,
+  "actual_read_chapter_cards": 774,
+  "full_chapter_spine_coverage": 774,
+  "volume_structure_coverage": 774,
+  "arc_mechanism_coverage": 774,
+  "uncovered_chapters": 0,
+  "statistics_only_chapters": 0,
+  "sampling_based": false,
+  "old_step3_products_used": false,
+  "stages": [
+    {"stage": "S01", "chapter_range": "1-95", "chapter_count": 95, "llm_input_type": "full_chapter_card_data+spine"},
+    {"stage": "S02", "chapter_range": "96-196", "chapter_count": 101, "llm_input_type": "full_chapter_card_data+spine"},
+    {"stage": "S03", "chapter_range": "197-289", "chapter_count": 93, "llm_input_type": "full_chapter_card_data+spine"},
+    {"stage": "S04", "chapter_range": "290-386", "chapter_count": 97, "llm_input_type": "full_chapter_card_data+spine"},
+    {"stage": "S05", "chapter_range": "387-452", "chapter_count": 66, "llm_input_type": "full_chapter_card_data+spine"},
+    {"stage": "S06", "chapter_range": "453-482", "chapter_count": 30, "llm_input_type": "full_chapter_card_data+spine"},
+    {"stage": "S07", "chapter_range": "483-577", "chapter_count": 95, "llm_input_type": "full_chapter_card_data+spine"},
+    {"stage": "S08", "chapter_range": "578-638", "chapter_count": 61, "llm_input_type": "full_chapter_card_data+spine"},
+    {"stage": "S09", "chapter_range": "639-675", "chapter_count": 37, "llm_input_type": "full_chapter_card_data+spine"},
+    {"stage": "S10", "chapter_range": "676-757", "chapter_count": 82, "llm_input_type": "full_chapter_card_data+spine"},
+    {"stage": "S11", "chapter_range": "758-774", "chapter_count": 17, "llm_input_type": "full_chapter_card_data+spine"}
+  ],
+  "cross_stage_synthesis": [
+    {"product": "refined_volume_structure", "input_chapters": "1-774", "total_chapters": 774, "input_type": "full_spine_summary+stage_boundaries"},
+    {"product": "protagonist_engine", "input_chapters": "1-774", "total_chapters": 774, "input_type": "full_spine_summary+11_stage_analyses"},
+    {"product": "character_function_map", "input_chapters": "1-774", "total_chapters": 774, "input_type": "full_spine_summary+character_stats"},
+    {"product": "candidate_pool", "input_chapters": "1-774", "total_chapters": 774, "input_type": "11_stage_analyses_complete"}
+  ]
+}
