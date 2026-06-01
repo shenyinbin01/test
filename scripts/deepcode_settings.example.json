@@ -1,0 +1,11 @@
+{
+  "env": {
+    "MODEL": "deepseek-v4-pro",
+    "BASE_URL": "https://api.deepseek.com",
+    "API_KEY": "<REDACTED>",
+    "WEBHOOK_URL": ""
+  },
+  "thinkingEnabled": true,
+  "reasoningEffort": "max",
+  "notify": "/home/agentuser/.deepcode/notify-feishu.sh"
+}
