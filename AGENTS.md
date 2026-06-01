@@ -318,6 +318,34 @@ WPS → 反推故事状态
 8. Hermes 不应重写 task_template，不应复制粘贴完整模板给 DeepCode，除非项目负责人明确要求。
 9. DeepCode 接到任务后，必须自己读取模板并执行。
 
+### 7.5 事件驱动调度策略
+
+1. 禁止 Hermes 高频轮询 DeepCode 状态。
+2. Hermes 默认不主动读取 DeepCode 状态，仅以下情况才处理事件：
+   a. 收到 notify 事件（DeepCode 完成后自动触发 notify-feishu.sh）
+   b. 用户主动询问进度
+   c. 超过预设超时时间（默认 30 分钟无通知）
+   d. notify 状态为 FAILED 或 NEED_HUMAN
+3. 状态读取优先读 /tmp/deepcode_jobs/<job_id>/status.json 和 last_output.md，不直接拉完整终端上下文。
+4. 所有 DeepCode 任务输出必须包含以下三种最终状态之一：
+
+   [FINAL_DONE] — 正常完成
+   - completed_items:
+   - changed_files:
+   - tests:
+   - risks:
+   - next_suggestion:
+
+   [NEED_HUMAN] — 需要人工干预
+   - blocking_question:
+   - options:
+   - current_progress:
+
+   [FAILED] — 执行失败
+   - fail_reason:
+   - attempted:
+   - suggested_fix:
+
 ### 7.4 阶段流程
 
 10. 每个关键 Step 完成后，必须提交 GitHub，等待项目负责人 / 外部审计方验收。
