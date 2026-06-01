@@ -31,6 +31,10 @@ load_dotenv("/home/agentuser/.hermes/.env")
 # 默认微信目标
 DEFAULT_CHAT_ID = os.getenv("WEIXIN_HOME_CHANNEL", "")
 
+# 微信 iLink 错误码
+TOKEN_EXPIRED_ERRCODE = -14
+ERROR_SESSION_EXPIRED = "TOKEN_EXPIRED"
+
 
 def detect_marker(body: str) -> str:
     """从 BODY 中识别任务状态标记。"""
@@ -180,21 +184,37 @@ async def main():
         else:
             error_msg = result.get('error', '?')
             print(f"[notify-send] WeChat send failed: {error_msg}", file=sys.stderr)
-            _write_structured_log(args, result, success=False, error=error_msg)
+            et = _classify_error(error_msg)
+            print(f"[notify-send] error_type={et}", file=sys.stderr)
+            if et == ERROR_SESSION_EXPIRED:
+                print("[notify-send] 微信 iLink session 已过期，需要重新登录/刷新 WEIXIN_TOKEN", file=sys.stderr)
+            _write_structured_log(args, result, success=False, error=error_msg, error_type=et)
             sys.exit(1)
     except Exception as e:
         error_msg = str(e)
         print(f"[notify-send] Exception: {e}", file=sys.stderr)
-        _write_structured_log(args, {"error": error_msg}, success=False, error=error_msg)
+        et = _classify_error(error_msg)
+        print(f"[notify-send] error_type={et}", file=sys.stderr)
+        if et == ERROR_SESSION_EXPIRED:
+            print("[notify-send] 微信 iLink session 已过期，需要重新登录/刷新 WEIXIN_TOKEN", file=sys.stderr)
+        _write_structured_log(args, {"error": error_msg}, success=False, error=error_msg, error_type=et)
         sys.exit(1)
 
 
-def _write_structured_log(args, result, success=False, error=""):
+def _classify_error(error_msg: str) -> str:
+    """分类错误类型。"""
+    if "ret=-14" in error_msg or "errcode=-14" in error_msg or "session timeout" in error_msg.lower():
+        return ERROR_SESSION_EXPIRED
+    return "UNKNOWN"
+
+
+def _write_structured_log(args, result, success=False, error="", error_type=""):
     """写结构化日志（不包含 token）。"""
     import datetime
     log_entry = {
         "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
         "success": success,
+        "error_type": error_type or _classify_error(error),
         "status": args.status,
         "title": args.title[:80] if args.title else "",
         "duration_seconds": args.duration,
@@ -206,6 +226,7 @@ def _write_structured_log(args, result, success=False, error=""):
         "result_platform": result.get("platform", "") if isinstance(result, dict) else "",
         "error": error,
         "job_id": args.job_id if args.job_id else "",
+        "user_hint": "微信 iLink session 已过期，需要重新登录/刷新 WEIXIN_TOKEN" if _classify_error(error) == ERROR_SESSION_EXPIRED else "",
     }
     err_dir = f"/tmp/deepcode_jobs/{args.job_id}" if args.job_id else "/tmp/deepcode_jobs"
     Path(err_dir).mkdir(parents=True, exist_ok=True)

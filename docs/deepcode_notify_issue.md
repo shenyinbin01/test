@@ -135,3 +135,16 @@ tmux_monitor.sh 是**兜底方案**，不是真正的事件驱动方案。
 - 用途：在用户询问"好了吗"时，或定时任务轮询时，主动检查 DeepCode tmux 会话是否有 `[FINAL_DONE]` 标记
 - 定位：解决了 Hermes 侧"可检测与可补发"的问题，但不能替代 DeepCode 原生的任务完成事件推送
 - 不应用来描述为"解决了 DeepCode 完成后主动通知"
+
+---
+
+## 最终结论（2026-06-01 隔离实验后）
+
+| 问题 | 结论 |
+|------|------|
+| DeepCode notify 是否在每任务完成时触发 | ✅ 是（每次 finally 块调用） |
+| notify-feishu.sh 是否被调用 | ✅ 是（实验C日志证实） |
+| status.json 是谁写的 | notify-feishu.sh（bash heredoc） |
+| 微信发送是否可用 | ❌ ret=-2 100% 持续，实际原因是 -14 session timeout |
+| 根因 | **iLink token/session 过期（TOKEN_EXPIRED）**，非代码或 notify 机制问题 |
+
