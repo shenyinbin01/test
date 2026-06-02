@@ -1,0 +1,64 @@
+# Phase 8 Step 7 — Selected Patterns for Minimal Injection
+# mode: minimal_formal_injection
+# date: 2026-06-02
+
+selected_patterns:
+  - pattern_id: DCQG-C001
+    name: 认知优势
+    target_skill: webnovel_planner
+    injection_type: bible_field
+    field_name: protagonist_cognitive_advantage
+    description: >
+      Story Bible 必须定义主角相对世界/敌人/配角/读者预期的高维认知优势是什么。
+      不写成旁白解释，通过行动/决策/对话展示。
+
+  - pattern_id: DCQG-C009
+    name: 内在代价
+    target_skill: webnovel_planner
+    injection_type: bible_field
+    field_name: internalized_pressure
+    description: >
+      Story Bible 必须定义主角能力/身份/优势带来的内在代价。
+      代价必须是能力的同源产物，影响剧情选择，非口号式。
+
+  - pattern_id: DCQG-C012
+    name: 世界观揭秘驱动
+    target_skill: webnovel_planner
+    injection_type: volume_design_rule
+    field_name: revelation_phases
+    description: >
+      分卷/阶段设计必须标注 revelation_phases。
+      每阶段核心谜面+谜底，谜底揭示伴随剧情转折。
+
+  - pattern_id: DCQG-C004
+    name: 事件驱动开场
+    target_skill: webnovel_writer
+    injection_type: writing_rule
+    field_name: scene_opening_rule
+    description: >
+      开章 200 字内必须进入压力/冲突/任务/异常场景。
+      禁止开章大段设定说明/环境描写/内心独白。
+
+  - pattern_id: DCQG-C002
+    name: 规则破局
+    target_skill: webnovel_writer
+    injection_type: writing_rule
+    field_name: climax_resolution_rule
+    description: >
+      高潮解法优先考虑规则利用而非力量碾压。
+      先理解规则→找漏洞/约束→在框架内逆转局面。
+
+  - pattern_id: DCQG-C005
+    name: 短钩快兑/长钩慢兑
+    target_skill: webnovel_reviewer
+    injection_type: review_checklist
+    field_name: hook_pacing
+    description: >
+      Reviewer 新增 hook_pacing / payoff_visibility 检查项。
+      逐章检查钩子开兑节奏和兑现质量。
+
+excluded_patterns_reason: >
+  C006/C007/C008/C010/C011/C013-C020: 本批仅做最小注入(6/20)。
+  第二批覆盖剩余 patterns 并纳入 Polisher。
+  Polisher 暂缓原因: 好稿应主要在 Planner/Writer/Reviewer 阶段成型，
+  Polisher 后续只做轻量增强，不负责救稿。

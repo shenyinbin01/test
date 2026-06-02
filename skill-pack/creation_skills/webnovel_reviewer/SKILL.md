@@ -1,14 +1,14 @@
 ---
 name: webnovel_reviewer
-description: "webnovel-hermes-wps 审稿角色 Skill — 从十一维度评估章节正文质量，吸收 sentence_rhythm 报告和 ai_flavor 检测报告，输出结构化审稿报告和 Polisher 指令。不修改正文，不生成新章节，不同步 WPS。"
-tags: ["webnovel", "reviewer", "quality-gate", "deai", "phase6b"]
+description: "webnovel-hermes-wps 审稿角色 Skill — 从十四维度评估章节正文质量，吸收 sentence_rhythm 报告和 ai_flavor 检测报告，输出结构化审稿报告和 Polisher 指令。不修改正文，不生成新章节，不同步 WPS。"
+tags: ["webnovel", "reviewer", "quality-gate", "deai", "phase6b", "phase8"]
 ---
 
 # webnovel_reviewer Skill
 
 ## 适用场景
 
-1. 章节草稿完成后，审稿人做十一维度质量评估
+1. 章节草稿完成后，审稿人做多维度质量评估
 2. 审稿报告中必须吸收去 AI 味检测结果
 3. 输出 rewrite_instructions 供 Writer 参考，输出 polisher_instructions 供 Polisher 使用
 4. 决定该章节是否可以进入 Polisher 阶段
@@ -28,7 +28,9 @@ tags: ["webnovel", "reviewer", "quality-gate", "deai", "phase6b"]
 
 `reviews/chapter_XXX_review_with_deai.yaml`
 
-## 十一个审稿维度
+## 审稿维度（十四维度）
+
+### 基础十一维度
 
 | # | 维度 | 说明 | 分值方向 |
 |---|------|------|----------|
@@ -44,6 +46,16 @@ tags: ["webnovel", "reviewer", "quality-gate", "deai", "phase6b"]
 | 10 | ai_flavor | AI 味程度：基于 ai_flavor 报告 + 规则对照 | 1-10 |
 | 11 | style_consistency | 风格一致性：是否保持网文质感 | 1-10 |
 
+### Phase 8 注入三维度
+
+| # | 维度 | 说明 | 分值方向 |
+|---|------|------|----------|
+| 12 | hook_pacing | 钩子节奏：短钩是否快兑/长钩是否有延续/章尾是否形成拉力 | 1-10 |
+| 13 | payoff_visibility | 兑现可见度：兑现是否被读者看见/是否有情绪冲击/是否只是信息说明 | 1-10 |
+| 14 | template_risk | 模板化风险：是否过度重复认知碾压/是否所有冲突同一种解法/技法感是否强于故事感 | 1-10 |
+
+---
+
 ## 评分标准
 
 - 1-3: 差（需要重写）
@@ -52,9 +64,59 @@ tags: ["webnovel", "reviewer", "quality-gate", "deai", "phase6b"]
 
 ### 通过标准
 
-- 十一个维度中没有 1-3 分项目
+- 十四个维度中没有 1-3 分项目
 - ai_flavor 分数 <= 6
+- template_risk 分数 >= 5（不能有明显的模板化痕迹）
 - deai_summary.risk_level 不为 high
+
+---
+
+## Phase 8 注入维度详细说明
+
+### 维度 12: hook_pacing（钩子节奏）
+
+检查清单：
+- 本章开了哪些短钩（1~3 章内兑现的小悬念）？
+- 本章开了哪些长钩（跨卷大悬念）？
+- 上一章开的短钩是否在本章兑现？如未兑现，是否有合理解释？
+- 长钩在本章是否有延续（线索/障碍/新问题）？
+- 同期进行中的长钩是否超过 3 个？（超过则标记 overload）
+- 章尾是否形成了下一章的拉力？
+
+评分标准：
+- 1-3: 本章无钩子，或开钩太多但一个都没推进
+- 4-6: 有钩子但兑现节奏拖沓（短钩超过 3 章未兑现）
+- 7-10: 短钩及时兑现，长钩持续推进，章尾拉力明确
+
+### 维度 13: payoff_visibility（兑现可见度）
+
+检查清单：
+- 兑现点是否在正文中被读者清楚看到？（不是隐含的推理结果）
+- 兑现时是否有情绪冲击？（不是平淡的信息说明）
+- 兑现是否是"作者说给读者听"而非"角色经历给读者看"？
+- 长钩的微推进是否可感知？（读者能感觉到"离真相更近了"）
+- 有没有开了钩但悄悄丢掉没兑现的？
+
+评分标准：
+- 1-3: 兑现被埋在信息堆里，或开了钩没兑现就忘了
+- 4-6: 有兑现但冲击力弱，像信息说明
+- 7-10: 兑现清晰、有情绪冲击、读者能明确感受到
+
+### 维度 14: template_risk（模板化风险）
+
+检查清单：
+- 是否本章又用了"认知碾压三拍"（发现问题→心算真相→碾压解决）？
+- 是否连续 2 章以上都在用同一模式解决冲突？
+- 所有冲突是否都用了同一种解法（认知/力量/规则）？
+- 技法感是否强于故事感？（读起来像"这是一次认知碾压的演示"而非"这是一个故事"）
+- 认知优势是否被写成了旁白解释而非行为展示？
+
+评分标准：
+- 1-3: 明显的模板化——连续多章同模式，技法感碾压故事感
+- 4-6: 有模板化倾向但尚可接受
+- 7-10: 技法自然融入故事，无模板感
+
+---
 
 ## 输出 YAML 格式
 
@@ -73,7 +135,28 @@ dimensions:
     score: 0
     issues: []
     suggestions: []
-  # ... 其余 10 个维度
+  # ... 其余 10 个基础维度
+  hook_pacing:
+    score: 0
+    short_hooks_opened: []
+    short_hooks_paid: []
+    long_hooks_progressed: []
+    overloaded: false
+    issues: []
+    suggestions: []
+  payoff_visibility:
+    score: 0
+    payoff_events: []
+    emotional_impact: ""  # weak / moderate / strong
+    issues: []
+    suggestions: []
+  template_risk:
+    score: 0
+    repeated_patterns: []
+    all_conflict_same_method: false
+    technique_feels_stronger_than_story: false
+    issues: []
+    suggestions: []
 
 deai_summary:
   risk_level: low | medium | high
@@ -94,9 +177,12 @@ must_not_change: []
 4. 读取 sentence_rhythm 报告，检查句式节奏问题
 5. 读取 ai_flavor 报告，检查 AI 味问题
 6. 读取 deai_rules 规则库，逐条对照
-7. 输出结构化审稿报告
-8. 给出 rewrite_instructions（给 Writer 的修改方向）
-9. 给出 polisher_instructions（给 Polisher 的定向重写指令）
+7. **逐章检查钩子节奏（hook_pacing）：本章的短钩/长钩/兑现状态**
+8. **检查兑现可见度（payoff_visibility）：兑现是否被读者看见、是否有情绪冲击**
+9. **检查模板化风险（template_risk）：是否过度重复认知碾压、冲突解法单一、技法感 > 故事感**
+10. 输出结构化审稿报告
+11. 给出 rewrite_instructions（给 Writer 的修改方向）
+12. 给出 polisher_instructions（给 Polisher 的定向重写指令）
 
 ## Reviewer 禁止
 
@@ -118,7 +204,7 @@ must_not_change: []
 2. 读取章节正文、beat、MASTER_SETTING
 3. 读取 sentence_rhythm 报告和 ai_flavor 报告
 4. 读取 deai_rules 规则库
-5. 逐维度评估，产生 score + issues + suggestions
+5. 逐维度评估（含 Phase 8 注入的 hook_pacing / payoff_visibility / template_risk），产生 score + issues + suggestions
 6. 综合 deai_summary
 7. 生成 rewrite_instructions 和 polisher_instructions
 8. 输出 YAML 到 reviews/chapter_XXX_review_with_deai.yaml

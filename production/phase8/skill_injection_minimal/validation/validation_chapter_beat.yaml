@@ -1,0 +1,62 @@
+# Chapter 1 Beat: 入门测试
+chapter: 1
+title: "四十五点"
+
+scenes:
+  - id: 1
+    location: 青云宗演武场
+    summary: |
+      入门测试——所有新入门弟子测试经络积分。前四人依次检测：89点、76点、91点、82点。
+      轮到苏衍时只显示了45点，全场安静，随后是窃笑。测试官冷漠地念出"四十五点——杂役弟子"。
+    conflict: 外部（身份危机）
+    cognitive_advantage_triggered: false
+    pressure_deepened: false
+    revelation_progress: false
+    ending_pull: 苏衍看到测试官的积分在虚空中微微颤抖——但他以为是幻觉
+
+  - id: 2
+    location: 演武场→杂役宿舍
+    summary: |
+      苏衍被分配到最偏的杂役宿舍。路上经过主殿，他看见测试过程中那些高积分弟子周围有一种淡淡的光晕在流失——他能"看见"溢出了。
+      他试探性地朝那股溢出一伸手——一道极细的金线从虚空中被拉回，钻入他的经络。
+      他的积分从45变成了46。
+    conflict: 内部（发现+试探）
+    cognitive_advantage_triggered: true
+    pressure_deepened: false
+    revelation_progress: false
+    ending_pull: 他的经络里多了一点不属于他的"冷"——积分里夹着别人的情绪碎片
+
+  - id: 3
+    location: 杂役宿舍
+    summary: |
+      苏衍在宿舍试探回收技巧。他发现只要有人在附近运转功法，就会有溢出可回收。
+      他收集到52点时，一阵莫名的愤怒涌上心头——那是白天那个76分弟子运转功法时留下的竞争欲。
+      他意识到：回收溢出有代价。
+    conflict: 内部（代价初现）
+    cognitive_advantage_triggered: true
+    pressure_deepened: true
+    revelation_progress: false
+    ending_pull: 他需要决定：继续回收，还是接受45点的命运
+
+  - id: 4
+    location: 演武场（次日）
+    summary: |
+      第二天实战测试。苏衍的对手是76分的柳青砚。
+      柳青砚开局压制，每一掌都带出大量溢出——苏衍在战斗中实时回收，每被击中一次积分反而在涨。
+      柳青砚打到第三回合发现不对劲：苏衍的气息越来越强。
+      苏衍没有硬拼，而是利用柳青砚功法的运转规律——每次出掌后有一瞬经络虚浮——在那个瞬间用回收来的积分反震。
+      柳青砚被击退，全场哗然。
+    conflict: 外部+内部（实战+代价显现）
+    cognitive_advantage_triggered: true
+    pressure_deepened: true
+    revelation_progress: true  # 首次展示溢出回收在实战中的效果
+    conflict_resolution_type: rule  # 规则破局：利用对手功法运转规律
+    ending_pull: |
+      测试官盯着苏衍：你的积分……刚才涨了多少？
+      苏衍低头看了看自己的经络——67点。然后他感到后脑一阵剧痛，不属于他的记忆碎片在脑海中炸开。
+
+# 开章类型: 冲突入口（测试现场）
+# 本章钩子:
+#   短钩1: 苏衍的积分到底能涨到多少？（下章兑现）
+#   短钩2: 记忆碎片里是什么？（下章兑现）
+#   长钩1: 经络积分的真相是什么？（跨卷）
