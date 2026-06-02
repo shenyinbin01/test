@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C020 |
 | name | 终极解决方案的代价与取舍（Ultimate Solution: Cost & Trade-off） |
 | source_candidate_id | C020 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_planner, webnovel_writer |
 | applicable_genres | 玄幻, 奇幻, 科幻, 所有需要"拯救世界"结局的故事 |
 | confidence | medium |

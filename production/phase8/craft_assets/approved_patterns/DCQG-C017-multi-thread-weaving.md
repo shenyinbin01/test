@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C017 |
 | name | 多线并行织网模型（Multi-Thread Weaving Model） |
 | source_candidate_id | C017 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_planner, webnovel_writer |
 | applicable_genres | 玄幻, 奇幻, 都市, 群像剧, 所有多角色长篇 |
 | confidence | high |
@@ -97,4 +97,3 @@
 | source_files | craft_distillation_candidate_pool.md, arc_mechanism_index.md, character_function_map.md |
 | supporting_mechanism | S02 阶段"多线并行与交织"分析、S03 阶段"于丰线与主线交织"分析、character_function_map 功能位结构 |
 | evidence_confidence | high（4个阶段贯穿，character_function_map 确认了功能位分类体系） |
-

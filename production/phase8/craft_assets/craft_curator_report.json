@@ -1,62 +1,20 @@
 {
-  "report_type": "craft_curator_report",
-  "book_id": "dachengqi",
-  "source_commit": "fe9ab61",
-  "curated_at": "2026-06-01T20:18:20+08:00",
-  "summary": {
-    "total_reviewed": 20,
-    "approved": 12,
-    "revision_needed": 8,
-    "rejected_new": 0,
-    "rejected_prior": 2
-  },
-  "approved_patterns": [
-    {"pattern_id": "DCQG-C002", "name": "规则解构式破局", "category": "conflict_generator_patterns", "verdict_reason": "contamination_risk=low, positive_example clean, mechanism actionable"},
-    {"pattern_id": "DCQG-C004", "name": "外部任务作为剧情触发器", "category": "reader_pull_patterns", "verdict_reason": "contamination_risk=low, positive_example clean"},
-    {"pattern_id": "DCQG-C006", "name": "伪装身份/扮猪吃虎", "category": "protagonist_engine_patterns", "verdict_reason": "contamination_risk=low, classic generic pattern"},
-    {"pattern_id": "DCQG-C007", "name": "主角作为导师/幕后操盘手", "category": "character_function_patterns", "verdict_reason": "contamination_risk=low, positive_example fully fictional"},
-    {"pattern_id": "DCQG-C008", "name": "历史沉浸揭秘", "category": "reader_pull_patterns", "verdict_reason": "contamination_risk=low, positive_example clean"},
-    {"pattern_id": "DCQG-C009", "name": "压力源内化：责任与未知", "category": "protagonist_engine_patterns", "verdict_reason": "contamination_risk=low, positive_example fully fictional"},
-    {"pattern_id": "DCQG-C012", "name": "世界观揭秘作为核心驱动力", "category": "arc_structure_patterns", "verdict_reason": "contamination_risk=low, positive_example clean"},
-    {"pattern_id": "DCQG-C013", "name": "情感锚点：温情与守护", "category": "pacing_patterns", "verdict_reason": "contamination_risk=low, positive_example clean"},
-    {"pattern_id": "DCQG-C015", "name": "理念冲突/价值观辩论", "category": "conflict_generator_patterns", "verdict_reason": "contamination_risk=low, positive_example clean"},
-    {"pattern_id": "DCQG-C018", "name": "喜剧/荒诞元素调剂", "category": "comedy_contrast_patterns", "verdict_reason": "contamination_risk=low, positive_example clean"},
-    {"pattern_id": "DCQG-C020", "name": "终极解决方案的代价与取舍", "category": "payoff_patterns", "verdict_reason": "contamination_risk=low, positive_example fully fictional"},
-    {"pattern_id": "DCQG-C022", "name": "番外/尾声的初心回归", "category": "payoff_patterns", "verdict_reason": "contamination_risk=low, positive_example clean"}
-  ],
-  "revision_needed_patterns": [
-    {"pattern_id": "DCQG-C001", "name": "认知碾压式爽点", "issue": "forbidden_original_elements contains '修仙体系' (generic genre term, not original-specific)", "fix_action": "Remove '修仙体系', add '逆袭系统', note generic terms are exempt"},
-    {"pattern_id": "DCQG-C003", "name": "镜像反派/黑暗可能", "issue": "contamination_risk='medium → low（after de-originalization）' non-standard enum", "fix_action": "Change contamination_risk to 'low'"},
-    {"pattern_id": "DCQG-C005", "name": "短钩快兑，长钩慢兑", "issue": "contamination_risk='very low' non-standard enum", "fix_action": "Change contamination_risk to 'low'"},
-    {"pattern_id": "DCQG-C010", "name": "冲突螺旋升级", "issue": "contamination_risk='low（after de-originalization）' non-standard enum", "fix_action": "Change contamination_risk to 'low'"},
-    {"pattern_id": "DCQG-C011", "name": "主角多重介入身份", "issue": "contamination_risk='low（after de-originalization）' non-standard enum", "fix_action": "Change contamination_risk to 'low'"},
-    {"pattern_id": "DCQG-C014", "name": "降维打击式世界观引入", "issue": "contamination_risk='low（after de-originalization）' non-standard enum", "fix_action": "Change contamination_risk to 'low'"},
-    {"pattern_id": "DCQG-C017", "name": "多线并行织网模型", "issue": "contamination_risk='low（after de-originalization）' non-standard enum", "fix_action": "Change contamination_risk to 'low'"},
-    {"pattern_id": "DCQG-C021", "name": "规则系统漏洞利用", "issue": "contamination_risk='medium → low（after de-originalization）' non-standard enum", "fix_action": "Change contamination_risk to 'low'"}
-  ],
-  "output_directories": {
-    "approved_patterns": {"created": true, "file_count": 12},
-    "revision_needed_patterns": {"created": true, "file_count": 8},
-    "rejected_patterns": {"created": true, "file_count": 2}
-  },
-  "quality_gates": {
-    "total_reviewed_equals_20": true,
-    "each_card_has_independent_verdict": true,
-    "no_blanket_approval": true,
-    "revision_needed_have_fix_instructions": true,
-    "contamination_risk_uses_standard_enum": true,
-    "generic_terms_not_misclassified": true
-  },
-  "compliance": {
-    "phase7_skill_pack_not_modified": true,
-    "old_step3_not_read": true,
-    "original_text_not_read": true,
-    "skill_injection_not_done": true
-  },
-  "recommendation": "Proceed to Step 6 Skill Injection after revision_needed cards are fixed and re-curated.",
-  "notes": [
-    "8 revision_needed cards all have field-format issues only, no content problems",
-    "5 medium-confidence cards (C007, C009, C013, C020, C022) approved but need close attention in Step 6 sandbox demo",
-    "Positive Abstract Examples across all 20 cards are free of original work elements"
-  ]
+  "curator_report": {
+    "title": "Phase 8 Step 5 Curator - Finalized",
+    "date": "2026-06-02",
+    "approved_count": 20,
+    "revision_needed_count": 8,
+    "rejected_count": 2,
+    "status_consistency": {
+      "approved_patterns_status_draft_remaining": 4,
+      "approved_patterns_status_approved": 16,
+      "approved_patterns_file_count": 20,
+      "all_contamination_risk_standard_enum": true,
+      "rejected_not_in_approved": true,
+      "revision_needed_backup_only": true
+    },
+    "phase7_skill_pack_modified": false,
+    "step6_started": true,
+    "recommendation": "Step 5 accepted — proceed to Step 6"
+  }
 }

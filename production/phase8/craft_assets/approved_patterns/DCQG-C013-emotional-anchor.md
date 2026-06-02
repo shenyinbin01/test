@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C013 |
 | name | 情感锚点：温情与守护（Emotional Anchor: Warmth & Protection） |
 | source_candidate_id | C013 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_writer, webnovel_planner |
 | applicable_genres | 全题材通用 |
 | confidence | medium |

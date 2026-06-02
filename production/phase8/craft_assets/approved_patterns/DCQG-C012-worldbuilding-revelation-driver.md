@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C012 |
 | name | 世界观揭秘作为核心驱动力（Worldbuilding Revelation as Core Driver） |
 | source_candidate_id | C012 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_planner |
 | applicable_genres | 玄幻, 奇幻, 科幻, 悬疑, 解谜向, 无限流 |
 | confidence | high |

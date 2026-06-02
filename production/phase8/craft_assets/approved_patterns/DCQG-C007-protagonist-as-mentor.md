@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C007 |
 | name | 主角作为导师 / 幕后操盘手（Protagonist as Mentor / Behind-the-Scenes Operator） |
 | source_candidate_id | C007 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_planner, webnovel_writer |
 | applicable_genres | 玄幻, 奇幻, 无敌流, 群像剧, 养成类 |
 | confidence | medium |

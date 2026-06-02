@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C009 |
 | name | 压力源内化：责任与未知（Internalized Pressure: Responsibility & Unknown） |
 | source_candidate_id | C009 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_planner |
 | applicable_genres | 玄幻, 奇幻, 科幻, 无敌流, 英雄叙事 |
 | confidence | medium |

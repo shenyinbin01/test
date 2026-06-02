@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C001 |
 | name | 认知碾压式爽点（Cognitive Overwhelm Satisfaction） |
 | source_candidate_id | C001 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_planner, webnovel_writer |
 | applicable_genres | 穿越, 重生, 无限流, 科幻, 玄幻, 无敌流, 智者流 |
 | confidence | high |
@@ -90,4 +90,3 @@
 | source_files | craft_distillation_candidate_pool.md, protagonist_engine.md, arc_mechanism_index.md |
 | supporting_mechanism | protagonist_engine "认知碾压→规则破坏→实力释放→新谜题"的核心循环、S01-S11各阶段均出现认知碾压爽点 |
 | evidence_confidence | high（全书贯穿，774章中大量evidence） |
-

@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C006 |
 | name | 伪装身份 / 扮猪吃虎（Identity Camouflage / Playing Pig to Eat Tiger） |
 | source_candidate_id | C006 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_writer, webnovel_planner |
 | applicable_genres | 玄幻, 奇幻, 都市异能, 重生, 穿越, 无敌流, 回归流 |
 | confidence | high |

@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C018 |
 | name | 喜剧 / 荒诞元素调剂（Comedy & Absurdity as Tonal Relief） |
 | source_candidate_id | C018 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_writer, webnovel_polisher |
 | applicable_genres | 全题材通用 |
 | confidence | high |

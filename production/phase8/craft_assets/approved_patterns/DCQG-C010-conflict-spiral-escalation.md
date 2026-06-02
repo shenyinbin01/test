@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C010 |
 | name | 冲突螺旋升级（Conflict Spiral Escalation） |
 | source_candidate_id | C010 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_planner |
 | applicable_genres | 玄幻, 奇幻, 科幻, 无限流, 所有长篇连载 |
 | confidence | high |
@@ -95,4 +95,3 @@
 | source_files | craft_distillation_candidate_pool.md, refined_volume_structure.md, arc_mechanism_index.md |
 | supporting_mechanism | refined_volume_structure 中每个阶段的 transition_to_next 字段、S01-S11各阶段"冲突升级"分析 |
 | evidence_confidence | high（全书11阶段贯穿，每阶段均有明显的冲突升级模式） |
-

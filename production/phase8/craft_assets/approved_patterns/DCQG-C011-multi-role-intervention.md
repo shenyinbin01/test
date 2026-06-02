@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C011 |
 | name | 主角多重介入身份（Multi-Role Protagonist Intervention） |
 | source_candidate_id | C011 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_planner, webnovel_writer |
 | applicable_genres | 玄幻, 奇幻, 科幻, 无限流, 都市异能, 无敌流, 回归流 |
 | confidence | high |
@@ -103,4 +103,3 @@
 | source_files | craft_distillation_candidate_pool.md, protagonist_engine.md, arc_mechanism_index.md |
 | supporting_mechanism | protagonist_engine "冲突介入方式"分析（潜入者/导师/仲裁者交替）、S01 阶段"主角介入方式多样化"分析 |
 | evidence_confidence | high（全书贯穿，protagonist_engine 中确认主角有5种以上介入方式） |
-

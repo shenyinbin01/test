@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C003 |
 | name | 镜像反派 / 黑暗可能（Mirror Antagonist） |
 | source_candidate_id | C003 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_planner, webnovel_writer |
 | applicable_genres | 玄幻, 奇幻, 科幻, 无限流, 重生, 群穿 |
 | confidence | high |
@@ -87,4 +87,3 @@
 | source_files | craft_distillation_candidate_pool.md, arc_mechanism_index.md, protagonist_engine.md |
 | supporting_mechanism | S04 阶段"镜像反派机制"分析（初帝作为黑暗可能）、S10 阶段"镜像对比深化主题机制"分析 |
 | evidence_confidence | high（多阶段贯穿，在 S04/S09/S10 中均有展现） |
-

@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C005 |
 | name | 短钩快兑，长钩慢兑（Short Hook Fast Payoff, Long Hook Slow Payoff） |
 | source_candidate_id | C005 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_planner, webnovel_writer, webnovel_reviewer |
 | applicable_genres | 全题材通用 |
 | confidence | high |
@@ -105,4 +105,3 @@
 | source_files | craft_distillation_candidate_pool.md, arc_mechanism_index.md, full_chapter_spine.md |
 | supporting_mechanism | S01 阶段"兑现模式——短钩快兑长钩慢兑"分析、S03 阶段"三级钩子结构"分析 |
 | evidence_confidence | high（全书贯穿，11个阶段均有evidence） |
-

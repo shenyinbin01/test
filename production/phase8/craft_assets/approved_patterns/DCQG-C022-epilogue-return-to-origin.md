@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C022 |
 | name | 番外 / 尾声的初心回归（Epilogue: Return to Origin） |
 | source_candidate_id | C022 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_writer, webnovel_planner |
 | applicable_genres | 全题材通用 |
 | confidence | medium |

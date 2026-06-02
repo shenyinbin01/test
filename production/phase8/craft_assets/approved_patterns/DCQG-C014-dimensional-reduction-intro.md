@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C014 |
 | name | 降维打击式世界观引入（Dimensional-Reduction World Introduction） |
 | source_candidate_id | C014 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_planner, webnovel_writer |
 | applicable_genres | 玄幻, 奇幻, 科幻, 无限流, 穿越异界 |
 | confidence | high |
@@ -94,4 +94,3 @@
 | source_files | craft_distillation_candidate_pool.md, arc_mechanism_index.md |
 | supporting_mechanism | S02 阶段"跨世界副本任务链"机制、S06 阶段"降维认知破局机制"分析 |
 | evidence_confidence | high（多阶段贯穿，4个阶段有evidence） |
-

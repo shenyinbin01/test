@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C004 |
 | name | 外部任务作为剧情触发器（External Quest as Plot Trigger） |
 | source_candidate_id | C004 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_planner |
 | applicable_genres | 玄幻, 奇幻, 无限流, 系统文, 游戏竞技, 任务制叙事 |
 | confidence | high |

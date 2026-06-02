@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C015 |
 | name | 理念冲突 / 价值观辩论（Ideological Conflict / Values Debate） |
 | source_candidate_id | C015 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_planner, webnovel_writer |
 | applicable_genres | 玄幻, 奇幻, 科幻, 历史, 都市, 所有追求深度的网文 |
 | confidence | high |

@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C008 |
 | name | 历史沉浸揭秘（Immersive History Revelation） |
 | source_candidate_id | C008 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_planner, webnovel_writer |
 | applicable_genres | 玄幻, 奇幻, 科幻, 历史架空, 史诗, 解谜向 |
 | confidence | high |

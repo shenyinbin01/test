@@ -7,7 +7,7 @@
 | pattern_id | DCQG-C002 |
 | name | 规则解构式破局（Rule Deconstruction Breakthrough） |
 | source_candidate_id | C002 |
-| status | draft |
+| status | approved |
 | suggested_target_skill | webnovel_writer, webnovel_planner |
 | applicable_genres | 玄幻, 奇幻, 无限流, 科幻, 游戏竞技, 系统文, 穿越 |
 | confidence | high |
