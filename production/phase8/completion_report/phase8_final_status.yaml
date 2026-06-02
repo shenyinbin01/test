@@ -1,0 +1,58 @@
+# Phase 8 Final Status — 《大乘期》单书闭环
+
+project: webnovel-hermes-wps
+phase: phase8
+book_id: dachengqi
+status: completed_single_book_loop
+date: 2026-06-02
+
+steps:
+  step1_ingest: accepted
+  step2_chapter_cards: accepted
+  step3_old_architect: not_accepted
+  step3b_mechanism_index: accepted
+  step3b_cleanup: accepted
+  step4_craft_distiller: accepted
+  step5_craft_curator: accepted
+  step6_forward_validation: accepted
+  step7_minimal_skill_injection: accepted
+  step7_five_chapter_validation: accepted
+  step7_polisher_light_injection: accepted
+
+skill_pack_modified:
+  - webnovel_planner
+  - webnovel_writer
+  - webnovel_reviewer
+  - webnovel_polisher
+
+skill_pack_not_modified:
+  - detect_webnovel_ai_flavor
+  - webnovel_state_manager
+  - webnovel_wps_sync
+
+craft_assets:
+  approved_patterns: 20
+  rejected_patterns: 2
+  source: dachengqi (single book)
+
+validation:
+  five_chapter_validation: passed
+  score_trend: [7.7, 7.8, 8.0, 8.2, 8.4]
+  original_contamination: 0
+  event_driven_opening_ratio: "5/5"
+  rule_based_resolution_ratio: "3/5"
+  polisher_role: lightweight_enhancement_only
+
+next_recommended_stage:
+  - new_book_pipeline_productization
+  - cross_book_pattern_merge
+  - genre_style_craft_library_planning
+
+commits:
+  step5_status_fix: 97e655a
+  step6_forward_validation: 2c6bf3d
+  step6_report_fix: 45e3c04
+  step7_minimal_injection: fc105fc
+  step7_five_chapter_validation: cf887a0
+  step7_polisher_injection: 403f9ad
+  completion_report: "<this commit>"

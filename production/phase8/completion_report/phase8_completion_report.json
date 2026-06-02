@@ -1,0 +1,66 @@
+{
+  "project": "webnovel-hermes-wps",
+  "phase": "phase8",
+  "book_id": "dachengqi",
+  "status": "completed_single_book_loop",
+  "generated_date": "2026-06-02",
+  "steps": {
+    "step1_ingest": "accepted",
+    "step2_chapter_cards": "accepted",
+    "step3_old_architect": "not_accepted",
+    "step3b_mechanism_index": "accepted",
+    "step4_craft_distiller": "accepted",
+    "step5_craft_curator": "accepted",
+    "step6_forward_validation": "accepted",
+    "step7_minimal_skill_injection": "accepted",
+    "step7_five_chapter_validation": "accepted",
+    "step7_polisher_light_injection": "accepted"
+  },
+  "craft_assets": {
+    "approved_patterns": 20,
+    "rejected_patterns": 2
+  },
+  "skill_pack_modified": [
+    "webnovel_planner",
+    "webnovel_writer",
+    "webnovel_reviewer",
+    "webnovel_polisher"
+  ],
+  "skill_pack_not_modified": [
+    "detect_webnovel_ai_flavor",
+    "webnovel_state_manager",
+    "webnovel_wps_sync"
+  ],
+  "validation": {
+    "five_chapter_score_trend": [
+      7.7,
+      7.8,
+      8.0,
+      8.2,
+      8.4
+    ],
+    "original_contamination": 0,
+    "event_driven_opening": "5/5",
+    "rule_based_resolution": "3/5",
+    "polisher_role": "lightweight_enhancement_only"
+  },
+  "commits": [
+    "97e655a",
+    "2c6bf3d",
+    "45e3c04",
+    "fc105fc",
+    "cf887a0",
+    "403f9ad"
+  ],
+  "limitations": [
+    "only_one_book_validated",
+    "patterns_sourced_from_single_book",
+    "cross_book_validation_needed",
+    "skill_pack_should_not_grow_unbounded"
+  ],
+  "next_recommended_stage": [
+    "new_book_pipeline_productization",
+    "cross_book_pattern_merge",
+    "genre_style_craft_library_planning"
+  ]
+}
