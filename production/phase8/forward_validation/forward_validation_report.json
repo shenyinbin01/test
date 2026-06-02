@@ -1,0 +1,29 @@
+{
+  "report": {
+    "step": "step6_forward_validation",
+    "date": "2026-06-02",
+    "mode": "sandbox",
+    "book_id": "dachengqi",
+    "patterns_injected": 18,
+    "patterns_confirmed_effective": 14,
+    "patterns_partial": 3,
+    "patterns_not_applicable": 1,
+    "patterns_not_injected": 2,
+    "roles_tested": ["planner", "writer", "reviewer", "polisher"],
+    "deepseek_calls": 4,
+    "original_contamination": 0,
+    "recommend_formal_modification": true,
+    "recommended_skills": {
+      "P0": ["webnovel_planner", "webnovel_writer"],
+      "P1": ["webnovel_reviewer"],
+      "P2": ["webnovel_polisher"]
+    },
+    "templating_risk_watch": ["DCQG-C001"],
+    "compliance": {
+      "skill_pack_unmodified": true,
+      "no_new_patterns": true,
+      "no_original_contamination": true,
+      "sandbox_only": true
+    }
+  }
+}
