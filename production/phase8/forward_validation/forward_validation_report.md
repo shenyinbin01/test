@@ -80,7 +80,7 @@
 
 ## 3. Patterns Actually Effective
 
-**Confirmed effective (12 patterns)**:
+**Confirmed effective (14 patterns)**:
 DCQG-C001, C002, C004, C005, C006, C008, C009, C010, C011, C012, C015, C020, C021, C022
 
 **Partially effective / needs arc-level validation (4 patterns)**:
@@ -155,11 +155,19 @@ Sandbox story is 100% original (cyberpunk detective, precognition cost, Neo-Harb
 | webnovel_planner | Bible 模板增加 protagonist_cognitive_advantage, internalized_pressure, revelation_phases | P0 |
 | webnovel_writer | 开章规则增加 C004, 高潮规则增加 C002 | P0 |
 | webnovel_reviewer | 审核维度增加 hook_pacing, emotional_anchor, tonal_variety | P1 |
-| webnovel_polisher | 润色指南增加 cognitive_contrast, value_dialogue | P2 |
+| webnovel_polisher | 润色指南增加 cognitive_contrast, value_dialogue | P2 — 暂缓，仅作建议，不直接改核心 skill |
 
 ## 10. Non-Recommendation Defense
 
-N/A — 本验证建议正式修改。
+N/A — 本验证建议正式修改（P0/P1 小范围注入）。
+
+## Final Status
+
+Step 6 sandbox validation passed after report cleanup (2026-06-02).
+- Effective patterns: 14/20 confirmed
+- Recommended formal skill-pack modification: P0 (Planner + Writer), P1 (Reviewer) only
+- P2 (Polisher) deferred as advisory suggestion
+- All compliance checks passed
 
 ## Compliance Checklist
 

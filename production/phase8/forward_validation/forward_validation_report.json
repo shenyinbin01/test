@@ -8,7 +8,8 @@
     "patterns_confirmed_effective": 14,
     "patterns_partial": 3,
     "patterns_not_applicable": 1,
-    "patterns_not_injected": 2,
+    "patterns_not_injected": 0,
+    "patterns_review_or_polish_scoped": 2,
     "roles_tested": ["planner", "writer", "reviewer", "polisher"],
     "deepseek_calls": 4,
     "original_contamination": 0,
@@ -16,7 +17,7 @@
     "recommended_skills": {
       "P0": ["webnovel_planner", "webnovel_writer"],
       "P1": ["webnovel_reviewer"],
-      "P2": ["webnovel_polisher"]
+      "P2_deferred": ["webnovel_polisher"]
     },
     "templating_risk_watch": ["DCQG-C001"],
     "compliance": {
@@ -24,6 +25,7 @@
       "no_new_patterns": true,
       "no_original_contamination": true,
       "sandbox_only": true
-    }
+    },
+    "status": "step6_sandbox_passed_after_cleanup"
   }
 }

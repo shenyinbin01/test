@@ -48,12 +48,11 @@
 | 规则系统漏洞利用 | DCQG-C021 | Polish: cleverness amplification |
 | 尾声初心回归 | DCQG-C022 | Polish: ending emotional resonance |
 
-### Not injected (2 patterns — medium confidence, post-climax only)
+### No approved pattern fully excluded (2 patterns — C020/C022 are review/polish-scoped, not full-arc-only)
 
-| Pattern | ID | Reason |
-|---------|-----|--------|
-| 终极代价与取舍 | DCQG-C020 | Reviewer-only; full application needs complete arc |
-| 尾声初心回归 | DCQG-C022 | Polisher-only; validation is single-chapter |
+C020 and C022 are injected into Reviewer and Polisher roles respectively for this validation, but their full arc-level application requires multi-chapter context. No approved pattern is completely excluded from role mapping.
+
+C007 (protagonist-as-mentor) was attempted but single-chapter validation is not applicable for mentor dynamics.
 
 ## Risk Assessment
 
