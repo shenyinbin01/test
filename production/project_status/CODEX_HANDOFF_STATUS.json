@@ -1,0 +1,171 @@
+{
+  "report_title": "CODEX_HANDOFF_STATUS — webnovel-hermes-wps",
+  "generated_at": "2026-06-03",
+  "generated_by": "Hermes Agent",
+  "repository": "https://github.com/shenyinbin01/test",
+  "branch": "main",
+  "latest_main_commit": "05e380e716920976a8c66a9a04b824895009d6a2",
+  "latest_main_commit_message": "docs(phase8): completion report — dachengqi single-book loop closed",
+  "local_head_synced": true,
+  "checked_paths": {
+    "AGENTS.md": {
+      "exists": true,
+      "has_project_collaboration_rules": true,
+      "roles_defined": {
+        "project_owner_and_chatgpt_as_decision_maker": "PARTIAL — mentions '项目负责人和外部审计方' but does NOT explicitly name ChatGPT or Codex",
+        "hermes_as_info_and_coordination": true,
+        "deepcode_codex_as_engineering": "PARTIAL — mentions DeepCode as engineering execution, but does NOT mention Codex",
+        "gap": "AGENTS.md should be updated to explicitly include ChatGPT as decision layer and Codex as engineering execution layer alongside DeepCode"
+      },
+      "github_as_source_of_truth": true
+    },
+    "skill_pack": {
+      "exists": true,
+      "creation_skills_count": 7,
+      "creation_skills": [
+        "detect_webnovel_ai_flavor",
+        "webnovel_planner",
+        "webnovel_polisher",
+        "webnovel_reviewer",
+        "webnovel_state_manager",
+        "webnovel_wps_sync",
+        "webnovel_writer"
+      ],
+      "deepcode_skills_count": 5,
+      "deepcode_skills": [
+        "deepcode_engineering_report",
+        "deepcode_project_onboarding",
+        "deepcode_regression_test",
+        "deepcode_repo_audit",
+        "deepcode_safe_refactor"
+      ],
+      "top_level_files": [
+        "skill-pack/AGENTS.md",
+        "skill-pack/README.md",
+        "skill-pack/mapping.md"
+      ]
+    },
+    "phase8_core_artifacts": {
+      "production/phase8/corpus/dachengqi": {
+        "exists_on_main": false,
+        "status": "MISSING — exists locally as untracked files, NOT committed/pushed",
+        "action_required": "Commit and push before Codex access"
+      },
+      "production/phase8/corpus/toy_book": {
+        "exists_on_main": true,
+        "status": "OK"
+      },
+      "production/phase8/reverse_assets/dachengqi_step3b": {
+        "exists_on_main": true,
+        "status": "OK"
+      },
+      "production/phase8/craft_assets/approved_patterns": {
+        "exists_on_main": true,
+        "status": "OK"
+      },
+      "production/phase8/craft_assets/rejected_patterns": {
+        "exists_on_main": true,
+        "status": "OK"
+      },
+      "production/phase8/forward_validation": {
+        "exists_on_main": true,
+        "status": "OK"
+      },
+      "production/phase8/skill_injection_minimal": {
+        "exists_on_main": true,
+        "status": "OK"
+      },
+      "production/phase8/skill_injection_minimal/validation_5ch/drafts": {
+        "exists_on_main": true,
+        "status": "OK"
+      }
+    },
+    "phase8_additional_dirs_on_main": [
+      "production/phase8/audit",
+      "production/phase8/completion_report",
+      "production/phase8/examples",
+      "production/phase8/input",
+      "production/phase8/polisher_light_injection",
+      "production/phase8/prompts",
+      "production/phase8/schemas",
+      "production/phase8/skill_injection",
+      "production/phase8/task_templates",
+      "production/phase8/templates",
+      "production/phase8/validation"
+    ]
+  },
+  "missing_paths": [
+    "production/phase8/corpus/dachengqi"
+  ],
+  "phase8_status_summary": {
+    "step1_extraction": "accepted",
+    "step2_chapter_cards": "accepted",
+    "step3_old_full_book_reverse": "not accepted (superseded by Step 3B)",
+    "step3b_dachengqi_reverse": "accepted",
+    "step4_pattern_extraction": "accepted",
+    "step5_forward_validation": "accepted",
+    "step6_skill_pack_injection": "accepted",
+    "skill_pack_first_injection": {
+      "status": "executed",
+      "quality": "FAILED — 机制注入可见，但人味失败",
+      "validation_5ch_quality": "不通过",
+      "next": "转入 Human Texture 项目"
+    },
+    "polisher_second_injection": "暂缓（在 Human Texture 解决前不推进）",
+    "human_texture_engine": "待立项调研"
+  },
+  "current_failure_sample_paths": {
+    "description": "这 5 章不是成功样本，而是'机制注入可见，但人味失败'的 Human Texture 失败样本",
+    "paths": [
+      "production/phase8/skill_injection_minimal/validation_5ch/drafts/chapter_001_draft.md",
+      "production/phase8/skill_injection_minimal/validation_5ch/drafts/chapter_002_draft.md",
+      "production/phase8/skill_injection_minimal/validation_5ch/drafts/chapter_003_draft.md",
+      "production/phase8/skill_injection_minimal/validation_5ch/drafts/chapter_004_draft.md",
+      "production/phase8/skill_injection_minimal/validation_5ch/drafts/chapter_005_draft.md"
+    ],
+    "all_exist_on_main": true
+  },
+  "current_blockers": [
+    "corpus/dachengqi 未推送到 GitHub main 分支",
+    "AGENTS.md 未提及 Codex/ChatGPT 角色定义",
+    "Human Texture Engine 未立项",
+    "5 章验证质量不通过，机制注入可见但人味失败"
+  ],
+  "forbidden_next_actions": [
+    "不要继续 Polisher 注入",
+    "不要继续追加技法卡",
+    "不要启动新书拆解",
+    "不要让 Codex 直接改 skill-pack",
+    "不要让 Codex 直接重写小说正文"
+  ],
+  "recommended_next_codex_task": {
+    "title": "Human Texture Engine 调研与立项方案",
+    "codex_should_read": [
+      "AGENTS.md",
+      "skill-pack/",
+      "production/phase8/",
+      "production/phase8/skill_injection_minimal/validation_5ch/drafts/"
+    ],
+    "codex_should_output": [
+      "production/human_texture/README.md",
+      "production/human_texture/HUMAN_TEXTURE_PLAN.md",
+      "production/human_texture/research/industry_research.md",
+      "production/human_texture/research/github_project_survey.md",
+      "production/human_texture/research/paper_and_method_notes.md",
+      "production/human_texture/research/human_texture_evaluation_rubric.md",
+      "production/human_texture/audit/current_5ch_failure_diagnosis.md",
+      "production/human_texture/integration/integration_with_existing_skill_pack.md",
+      "production/human_texture/summary.md"
+    ],
+    "codex_forbidden_for_this_task": [
+      "不修改 skill-pack",
+      "不重写 5 章正文",
+      "不启动 Polisher",
+      "不生成新 approved_patterns",
+      "不修改 Phase 8 craft_assets",
+      "不把 Human Texture 当成普通去 AI 味",
+      "不只做网页摘要",
+      "不只看 README，重点项目必须看代码结构"
+    ]
+  }
+}
