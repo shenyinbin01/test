@@ -302,9 +302,11 @@ WPS → 反推故事状态
 
 ### 7.1 决策权归属
 
-1. 项目负责人和外部审计方是主动决策方。
+1. 项目负责人和外部审计方（含 ChatGPT）是主动决策方。
 2. Hermes 是信息传递和执行协调层，不是最终指挥者。
-3. DeepCode 是工程执行和自检主体。
+3. DeepCode 和 Codex 是工程执行与调研执行方。
+4. Codex 不应默认要求上传 raw corpus。
+5. Raw corpus / copyrighted source material 不得推送到 GitHub，除非项目负责人明确批准。
 
 ### 7.2 真源原则
 

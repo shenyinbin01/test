@@ -78,7 +78,7 @@ AGENTS.md 当前**未提及**以下角色：
 
 | 路径 | main 分支 | 状态 |
 |------|-----------|------|
-| `production/phase8/corpus/dachengqi/` | ❌ | **缺失 — 仅存在于本地 untracked，未提交推送** |
+| `production/phase8/corpus/dachengqi/` | 🚫 | **Intentionally not pushed — 包含全量原文和 chapter_cards，Codex 第一任务不需要。如需全量 corpus 访问，项目负责人必须明确批准安全数据包。** |
 | `production/phase8/reverse_assets/dachengqi_step3b/` | ✅ | OK |
 | `production/phase8/craft_assets/approved_patterns/` | ✅ | OK |
 | `production/phase8/craft_assets/rejected_patterns/` | ✅ | OK |
@@ -86,7 +86,7 @@ AGENTS.md 当前**未提及**以下角色：
 | `production/phase8/skill_injection_minimal/` | ✅ | OK |
 | `production/phase8/skill_injection_minimal/validation_5ch/drafts/` | ✅ | OK |
 
-> **注意**: `corpus/dachengqi` 存在于本地文件系统（`production/phase8/corpus/dachengqi/`），包含 chapter_cards、chapters、manifest.yaml 等完整产物，但尚未提交到 Git。Codex 接入前需完成 `git add` + `git commit` + `git push`。
+> **安全策略**: `corpus/dachengqi` **有意不推送**。该目录包含《大乘期》全量章节原文和 chapter_cards，属于 raw corpus material。Codex 第一任务（Human Texture Engine 调研）不需要全量原文；当前可用失败样本 `validation_5ch/drafts/` 五章 + 已推送的 reports/patterns 已足够。如需未来全量 corpus 访问，项目负责人必须明确批准安全数据包。详见 `CORPUS_ACCESS_POLICY.md`。
 
 main 分支上还存在的其他 Phase 8 目录：
 `audit/`, `completion_report/`, `examples/`, `input/`, `polisher_light_injection/`, `prompts/`, `schemas/`, `skill_injection/`, `task_templates/`, `templates/`, `validation/`
@@ -191,17 +191,22 @@ production/human_texture/
 
 | 优先级 | 事项 | 负责人 |
 |--------|------|--------|
-| 🔴 P0 | `git add production/phase8/corpus/dachengqi && git commit && git push` | Hermes / 沈总 |
-| 🟡 P1 | AGENTS.md 补充 Codex/ChatGPT 角色定义 | Hermes / 项目负责人 |
+| 🟡 P1 | AGENTS.md 补充 Codex/ChatGPT 角色定义 + corpus 安全规则 | Hermes / 项目负责人 |
 | 🟢 P2 | 确认 Codex 可读取本仓库 main 分支 | 沈总 |
+| ⏸️ 暂缓 | `corpus/dachengqi` 全量访问 — 需项目负责人明确批准安全数据包后方可处理 | 沈总 |
 
 ---
 
 ## 10. 结论
 
-**main 分支基本就绪，可接入 Codex 进行 Human Texture 调研任务**，但有两个缺口需先补齐：
+**main 分支已就绪，可接入 Codex 进行 Human Texture 调研任务**。
 
-1. `corpus/dachengqi` 未推送到 GitHub — Codex 将无法获取 dachengqi 全量 chapter_cards 和章节原文作为调研素材
-2. AGENTS.md 未提及 Codex — 不阻塞调研任务，但建议在工程执行任务开始前更新
+Codex 第一任务所需的所有输入均已就位：
+- `AGENTS.md` ✅
+- `skill-pack/` ✅
+- `production/phase8/craft_assets/approved_patterns/` ✅
+- `production/phase8/forward_validation/` ✅
+- `production/phase8/skill_injection_minimal/validation_5ch/drafts/` ✅
+- `production/project_status/CODEX_HANDOFF_STATUS.md` ✅
 
-补齐以上两项后，Codex 可立即启动 Human Texture Engine 调研。
+`corpus/dachengqi` 有意不推送（安全策略），Codex 第一任务不需要全量原文。AGENTS.md 已补充 ChatGPT/Codex 角色定义和 raw corpus 安全规则。详见 `CORPUS_ACCESS_POLICY.md`。
