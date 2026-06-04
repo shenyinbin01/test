@@ -1,0 +1,71 @@
+version: 1
+generated_at: "2026-06-04"
+source_scope:
+  - production/human_texture/HUMAN_TEXTURE_PLAN.md
+  - production/human_texture/research/human_texture_evaluation_rubric.md
+  - production/human_texture/audit/current_5ch_failure_diagnosis.md
+  - production/phase8/skill_injection_minimal/validation_5ch/drafts/chapter_003_draft.md
+  - production/phase8/skill_injection_minimal/validation_5ch/drafts/chapter_004_draft.md
+experiments:
+  c4_liuqingyan_relationship_node:
+    source_chapter: chapter_004_draft.md
+    pov_character:
+      name: 苏衍
+      private_want: 通过复检，同时不把柳青砚拖进自己的异常里。
+      shame_or_avoidance: 他怕柳青砚看见自己吸收了别人的情绪，也怕承认自己已经利用了她掌心金线的秘密。
+      imperfect_choice: 当柳青砚给台阶时，他选择当众撒谎，说自己没有秘密。
+    side_characters:
+      - name: 柳青砚
+        visible_function: 指控积分异常，逼出复检风险。
+        private_agenda: 她想让苏衍承认一部分真相，以便把秘密从个人风险变成可被宗门程序保护的问题；同时她也不想自己的金线秘密暴露。
+        relationship_debt_change: 她给了苏衍一次台阶，苏衍当众否认，欠下信任债。
+      - name: 胖少年
+        visible_function: 替苏衍提供反证，使指控无法成立。
+        private_agenda: 他不想再欠苏衍一次，也怕自己九十一分的异常被卷进来。
+        relationship_debt_change: 苏衍欠他一次公开作证的人情，但暂时不能道谢。
+      - name: 杂役队列
+        visible_function: 无人作证，体现杂役处境。
+        private_agenda: 每个人都想保住自己的白签和前途。
+        relationship_debt_change: 苏衍理解他们，但也被他们的沉默推得更孤立。
+    relationship_debt_change: 柳青砚从“怀疑但愿意拉他一把”变成“被他亲手推开”；胖少年从旁观者变成苏衍欠下的人情债。
+    scene_life_function: 复检场是宗门分配前途的制度现场，不只是检测积分的舞台。
+    scene_resistance: 正式弟子和杂役分队、白签/红签、证人规则、旁人目光都迫使苏衍公开选择。
+    non_instrumental_detail: 苏衍手心汗水把白签边角浸软，柳青砚袖口有一截被剑茧磨亮的布边。
+    information_carrier: 柳青砚的低声提醒、执事的证人规则、胖少年的仓促作证。
+    misread_or_withholding: 柳青砚误以为苏衍会顺着台阶承认一部分；苏衍故意隐瞒矿洞和吸收情绪。
+    exposure_cost: 若苏衍承认，可能暴露异常；若否认，就失去柳青砚的信任。
+    inherited_cost: 上一章矿洞带来的积分暴涨、情绪碎片、执事警告。
+    new_cost: 苏衍通过复检，但欠下柳青砚和胖少年的关系债。
+    next_chapter_friction: 柳青砚不再主动替他说话；胖少年的帮忙会让苏衍在正式弟子中更显眼。
+    human_aftertaste_beat: 白签到手时，苏衍没有胜利感，只记得柳青砚退开那一步。
+  c3_canteen_mine_information_node:
+    source_chapter: chapter_003_draft.md
+    pov_character:
+      name: 苏衍
+      private_want: 在复检前弄清金线源头，同时不让杂役和执事发现自己离开岗位。
+      shame_or_avoidance: 他怕被人发现自己偷听正式弟子区和老杂役谈话，更怕承认自己已经把别人情绪当线索用。
+      imperfect_choice: 他为了追线索误了半日杂役活，并借别人的送柴牌绕过后山封路。
+    side_characters:
+      - name: 老杂役甲
+        visible_function: 提供矿洞旧闻。
+        private_agenda: 想提醒年轻杂役别靠近后山，又不敢明说宗门禁区。
+        relationship_debt_change: 他用含混传闻帮苏衍避险，苏衍却把提醒当成线索。
+      - name: 老杂役乙
+        visible_function: 补充矿洞曾是修炼室的信息。
+        private_agenda: 怕被正式弟子听见自己议论旧禁地，只敢把话藏在饭堂噪声里。
+        relationship_debt_change: 他的沉默和改口让信息带上误读风险。
+      - name: 看火杂役
+        visible_function: 让苏衍借到后山送柴牌。
+        private_agenda: 想少跑一趟后山，不在乎苏衍为什么去。
+        relationship_debt_change: 苏衍欠下一顿饭钱或一次替班。
+    relationship_debt_change: 苏衍为获取信息欠下看火杂役替班债，并把老杂役的避险提醒变成自己冒险的入口。
+    scene_life_function: 饭堂是杂役换消息、躲正式弟子耳目、分配杂活的地方；后山矿洞是被制度半遮半掩的旧禁地。
+    scene_resistance: 稀粥、木屏风、送柴牌、荒药田、封路木牌、天黑前点名都限制苏衍行动。
+    non_instrumental_detail: 苏衍碗底有一粒没煮开的硬米，硌得牙疼；送柴牌背面沾着旧油烟。
+    information_carrier: 老杂役的含混闲谈、送柴牌、封路木牌、矿洞旧刻痕、阵眼边缘的维护标记。
+    misread_or_withholding: 老杂役把“修炼室”说成“矿洞”避祸；苏衍先误以为灵气断裂是事故，后来发现多处维护日期说明是周期。
+    exposure_cost: 苏衍误工、欠替班债，并留下去过后山的行踪痕迹。
+    inherited_cost: 上一章金线、积分残余、复检压力。
+    new_cost: 苏衍得到枯竭/筛选线索，但积分和情绪碎片增加，且被制度边缘的人看见踪迹。
+    next_chapter_friction: 复检前他不仅要藏积分，还要解释半日缺勤和可能被执事追问的后山行踪。
+    human_aftertaste_beat: 他离开矿洞时，先想起的不是阵眼，而是饭堂里那粒硌牙的硬米和自己欠下的替班。
