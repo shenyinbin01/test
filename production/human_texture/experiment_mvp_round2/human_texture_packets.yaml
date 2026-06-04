@@ -1,0 +1,94 @@
+version: 1
+generated_at: "2026-06-04"
+source_scope:
+  - production/human_texture/experiment_mvp/
+  - production/phase8/skill_injection_minimal/validation_5ch/drafts/chapter_004_draft.md
+  - production/phase8/skill_injection_minimal/validation_5ch/drafts/chapter_005_draft.md
+experiments:
+  group_announcement_rules:
+    source_chapter: chapter_005_draft.md
+    fragment_type: group_announcement
+    pov_character:
+      name: 苏衍
+      private_want: 听清元启公布的规则，同时不要让自己的异常曲线把所有目光引到身上。
+      shame_or_avoidance: 他怕众人发现枯竭提前与自己抽走阵眼活性有关。
+      imperfect_choice: 他没有提醒那个想离开的杂役，默认对方也被留在检测里。
+    side_characters:
+      - name: 元启
+        visible_function: 公布古阵规则和回收标准。
+        private_agenda: 用选择权包装强制检测，让众人自己承担“不走”的后果。
+      - name: 想离开的杂役
+        visible_function: 显示没人敢第一个退出。
+        private_agenda: 想保命，不想保积分，但怕被同伴认定为放弃前途。
+      - name: 柳青砚
+        visible_function: 见证苏衍曲线暴露。
+        private_agenda: 想确认苏衍到底瞒了多少，同时不想在众人面前再替他说话。
+    relationship_debt_change: 苏衍没有帮想走的杂役，也没有向柳青砚解释曲线，群体和柳青砚都更难信任他。
+    scene_life_function: 演武场从复检场变成强制选择现场，弟子们在同门眼光下决定是否保留积分。
+    scene_resistance: 镜前空地、队列、袖子被拉住、谁先走的目光压力让退出几乎不可能。
+    non_instrumental_detail: 想离开的杂役袖口被同伴攥皱，古镜前地面还留着昨日复检红签的红蜡痕。
+    information_carrier: 元启的规则话术、古镜曲线、弟子是否走动、被标记后的身体反应。
+    misread_or_withholding: 众人以为“不走”只是旁观真相，元启把它定义为同意检测；苏衍隐瞒枯竭提前的原因。
+    exposure_cost: 留下的人被标记；想走的人失去退出机会；苏衍的曲线被展示。
+    inherited_cost: C4 复检隐瞒、白签、柳青砚失望、阵眼活性被抽走。
+    new_cost: 苏衍被群体看见异常曲线，且默认旁人被卷入检测。
+    next_chapter_friction: 群体会把苏衍视为异类或诱因，柳青砚更难接受他的沉默。
+    human_aftertaste_beat: 规则公布后，苏衍记住的不是镜面，而是那个杂役被攥皱又松不开的袖口。
+  emotion_consequence_cost:
+    source_chapter: chapter_004_draft.md
+    fragment_type: emotion_consequence
+    pov_character:
+      name: 苏衍
+      private_want: 把积分压到正常范围，拿到白签。
+      shame_or_avoidance: 他不想让任何人看见自己燃烧的是别人的竞争欲、焦虑、恨意和孤独。
+      imperfect_choice: 为了通过复检，他强行烧掉情绪，差点在队列里露出不属于自己的反应。
+    side_characters:
+      - name: 胖少年
+        visible_function: 情绪来源之一。
+        private_agenda: 想证明自己不是只会靠高分的人。
+      - name: 白衣女弟子
+        visible_function: 焦虑碎片来源。
+        private_agenda: 怕自己复检出红签。
+      - name: 柳青砚
+        visible_function: 后续指控者。
+        private_agenda: 观察苏衍是否还会继续隐瞒。
+    relationship_debt_change: 苏衍燃烧了来自胖少年等人的情绪，却不能承认；后续胖少年替他说话时，这笔债更重。
+    scene_life_function: 复检队列是公开排序和公开前途分配现场，每个人都在忍受自己的恐惧。
+    scene_resistance: 距离测试石只剩两步，旁人目光、执事竹简、三息读数窗口压缩苏衍反应时间。
+    non_instrumental_detail: 苏衍咬破下唇后把血咽下去，怕红色落在白签桌前。
+    information_carrier: 分数下降、身体失控、测试石三息读数。
+    misread_or_withholding: 外人只看见读数正常，不知道他刚烧掉别人的情绪；苏衍把身体异样压成沉默。
+    exposure_cost: 他通过复检，但留下唇血、手抖、误步和后续判断迟滞。
+    inherited_cost: C3 矿洞带来的高分和情绪洪流。
+    new_cost: 情绪残留进入身体，影响他接下来面对柳青砚质问时的反应。
+    next_chapter_friction: 他以后每次见到胖少年或白衣女弟子，都可能被烧过的情绪勾回去。
+    human_aftertaste_beat: 六十一出现时，他先感觉到的不是安全，而是自己嘴里的血腥味。
+  ending_hook_aftertaste:
+    source_chapter: chapter_004_draft.md
+    fragment_type: ending_hook
+    pov_character:
+      name: 苏衍
+      private_want: 在元启降临前向柳青砚解释一点，至少不让关系彻底断掉。
+      shame_or_avoidance: 他怕开口后只能说出更多谎，也怕柳青砚已经不想听。
+      imperfect_choice: 天幕裂缝出现后，他选择先看危机，没有叫住柳青砚。
+    side_characters:
+      - name: 柳青砚
+        visible_function: 被钩子压过的关系余波。
+        private_agenda: 想知道苏衍会不会主动补一句，但不愿再给第二次台阶。
+      - name: 执事
+        visible_function: 证明元启提前到来。
+        private_agenda: 知道苏衍可能导致提前，却选择不看他。
+      - name: 胖少年
+        visible_function: 旁观大事件。
+        private_agenda: 想找苏衍确认刚才自己作证有没有惹祸。
+    relationship_debt_change: 苏衍错过向柳青砚补救的最后小窗口；胖少年的人情债被更大危机压住但没有消失。
+    scene_life_function: 复检结束后的演武场原本是领签、离队、重新分配身份的位置。
+    scene_resistance: 人群散开、柳青砚背影、黑衣人记录、天幕裂缝同时抢夺苏衍注意力。
+    non_instrumental_detail: 白签边角在苏衍掌心折出一道痕，胖少年半抬手又放下。
+    information_carrier: 执事口型、积分震颤、元启降临、掌心符文标记。
+    misread_or_withholding: 柳青砚以为苏衍不会再解释；苏衍以为等危机过去还能补救。
+    exposure_cost: 他选择看天幕，错过叫住柳青砚；回收标准公布时关系债更难还。
+    inherited_cost: C4 复检撒谎、柳青砚失望、白签。
+    new_cost: 大钩子到来，但苏衍失去一段可补救关系的现场机会。
+    next_chapter_friction: 柳青砚后续靠近会更冷，胖少年作证后也会被卷进苏衍风险。
+    human_aftertaste_beat: 天空裂缝亮起时，苏衍想叫柳青砚的名字，却发现她已经不在原来的位置。
