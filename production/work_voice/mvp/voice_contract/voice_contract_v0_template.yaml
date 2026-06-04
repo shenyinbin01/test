@@ -1,0 +1,59 @@
+version: v0
+status: draft
+voice_type:
+  description: "用一句话描述本作品声音。不要写成某作者风格。"
+  value:
+narrator_position:
+  default:
+  scene_switches:
+    - scene_type:
+      position:
+      allowed_intervention:
+      forbidden_intervention:
+reader_relationship:
+protagonist_distance:
+world_attitude:
+intervention_rules:
+  -
+humor_rules:
+  -
+showoff_rules:
+  -
+detail_selection_rules:
+  -
+sentence_rhythm_rules:
+  -
+scene_type_switching_rules:
+  - scene_type:
+    default_position:
+    switch_condition:
+    switch_to:
+    switch_back:
+stable_flaws_to_keep:
+  -
+forbidden_original_elements:
+  -
+anti_ai_voice_rules:
+  - "不要用总结句替代现场"
+  - "不要用情绪标签替代情绪行为"
+  - "不要每段都显性解释动机"
+  - "不要让旁白像评审报告"
+  - "不要为了人味而硬塞生活细节"
+human_texture_interaction:
+  compatible_fields:
+    - private_want
+    - shame_or_avoidance
+    - relationship_debt_change
+    - scene_resistance
+    - information_carrier
+    - consequence_next_friction
+  conflict_resolution:
+reviewer_gate:
+  required_dimensions:
+    - narrator_position_stability
+    - protagonist_distance_control
+    - reader_relationship_clarity
+    - world_attitude_consistency
+    - no_author_imitation
+    - no_source_contamination
+  fail_policy:

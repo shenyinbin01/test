@@ -1,0 +1,33 @@
+project: work_voice_mvp
+version: v0
+status: design_draft
+branch: experiment/work-voice-mvp-design-v0
+based_on:
+  research_path: production/work_voice/research/
+  required_inputs_read:
+    - production/work_voice/research/summary.md
+    - production/work_voice/research/proposed_work_voice_distillation_pipeline.md
+    - production/work_voice/research/applicability_to_webnovel_pipeline.md
+    - production/work_voice/research/risks_and_open_questions.md
+  human_texture_status: "v0 formal trial / baseline anti-bad layer"
+scope:
+  modify_skill_pack: false
+  modify_phase8: false
+  add_approved_patterns: false
+  generate_fiction: false
+  rewrite_chapters: false
+  use_raw_corpus: false
+  save_source_excerpt: false
+  author_imitation: false
+  start_deepseek_chain: false
+deliverables:
+  sample_plan: production/work_voice/mvp/sample_plan.md
+  observation_card_schema: production/work_voice/mvp/voice_observation_cards/voice_observation_card_schema.yaml
+  aggregation_templates: production/work_voice/mvp/aggregation/
+  voice_contract_schema: production/work_voice/mvp/voice_contract/voice_contract_schema.yaml
+  validation_plan: production/work_voice/mvp/validation/abc_validation_plan.md
+next_step:
+  - human_review
+  - revise_mvp_design
+  - prepare_skill_pack_injection_design
+  - run_abc_validation_after_approval

@@ -1,0 +1,134 @@
+schema_name: voice_contract
+version: v0
+description: "Executable Work Voice contract for conditioning Writer and guiding Reviewer. It is not a style imitation target."
+fields:
+  voice_type:
+    type: string
+    required: true
+    description: "One-sentence abstract description of the work voice. Exists to align Planner, Writer, and Reviewer."
+    examples: ["冷静贴主角 + 关键处站在世界规则上方补刀", "读者同伙式荒诞叙述"]
+    forbidden_content: ["specific author style target", "source work title as style label"]
+  narrator_position:
+    type: object
+    required: true
+    description: "Default narrator stance and scene-specific switches. Exists to answer where the storyteller stands."
+    examples:
+      default: "close_to_protagonist"
+      scene_switches:
+        - scene_type: "world_rule_exposition"
+          position: "above_world_rules"
+          allowed_intervention: "short rule-pressure comment"
+          forbidden_intervention: "system-report exposition"
+    forbidden_content: ["copied narrator phrasing"]
+  reader_relationship:
+    type: string
+    required: true
+    description: "Defines what the narrator treats the reader as."
+    examples: ["accomplice", "spectator", "rule_learner", "teased_reader"]
+    forbidden_content: ["direct copied reader address from source"]
+  protagonist_distance:
+    type: string
+    required: true
+    description: "Defines emotional and cognitive distance from protagonist."
+    examples: ["action_close_emotion_restrained", "biased_but_not_defensive"]
+    forbidden_content: ["source sentence", "specific author persona"]
+  world_attitude:
+    type: string
+    required: true
+    description: "Defines the narrator's stable attitude toward the story world."
+    examples: ["rule_machine", "absurd_but_cruel", "warm_but_unsentimental"]
+    forbidden_content: ["source-specific worldbuilding term"]
+  intervention_rules:
+    type: array
+    required: true
+    description: "Rules for when narrator interrupts, hides, withholds, summarizes, or cuts."
+    examples: ["payoff 前隐身，payoff 后允许一句短评", "情绪余波不总结动机"]
+    forbidden_content: ["source aside copied", "author catchphrase"]
+  humor_rules:
+    type: array
+    required: false
+    description: "Rules for humor mode if humor is part of the voice."
+    examples: ["幽默来自制度荒诞和行动反差", "不使用脱离场景的段子"]
+    forbidden_content: ["source joke copied"]
+  showoff_rules:
+    type: array
+    required: true
+    description: "Rules for showing competence and payoff without AI announcement."
+    examples: ["先动作后果，再旁人反应确认优势"]
+    forbidden_content: ["source payoff bridge copied"]
+  detail_selection_rules:
+    type: array
+    required: true
+    description: "Rules for what details the narrator tends to notice."
+    examples: ["优先道具痕迹、空间阻力、旁人反应"]
+    forbidden_content: ["source-specific prop or named object"]
+  sentence_rhythm_rules:
+    type: array
+    required: true
+    description: "Abstract rhythm constraints, not copied syntax."
+    examples: ["推进段短句密，判断段可略拉长", "章尾留白，不用总结句压死"]
+    forbidden_content: ["source sentence pattern copied too closely"]
+  scene_type_switching_rules:
+    type: array
+    required: true
+    description: "How narrator stance changes by scene_type."
+    examples:
+      - scene_type: "payoff_delivery"
+        position: "hidden_until_consequence"
+        switch_back: "after reaction beat"
+    forbidden_content: ["source scene sequence copied"]
+  stable_flaws_to_keep:
+    type: array
+    required: true
+    description: "Stable imperfections that make the narrator embodied."
+    examples: ["嘴硬", "偏心但克制", "过度相信规则", "冷幽默"]
+    forbidden_content: ["specific author persona", "source catchphrase"]
+  forbidden_original_elements:
+    type: array
+    required: true
+    description: "Elements that must never be used in generated text."
+    examples: ["source-specific names", "recognizable bridge", "distinctive catchphrase"]
+    forbidden_content: ["empty list without review"]
+  anti_ai_voice_rules:
+    type: array
+    required: true
+    description: "Rules that prevent generic AI narration and fake human texture."
+    examples: ["不要用总结句替代现场", "不要让旁白像评审报告"]
+    forbidden_content: ["generic style advice only"]
+  human_texture_interaction:
+    type: object
+    required: true
+    description: "Defines how this contract interacts with Human Texture fields."
+    examples:
+      supports:
+        - scene_resistance
+        - relationship_debt_change
+      conflict_resolution: "voice distance controls narration; Human Texture controls scene material"
+    forbidden_content: ["polisher fixes narrator stance"]
+  reviewer_gate:
+    type: object
+    required: true
+    description: "Reviewer checks bound to this contract."
+    examples:
+      required_dimensions:
+        - narrator_position_stability
+        - no_source_contamination
+      fail_policy: "return_to_contract_or_writer"
+    forbidden_content: ["pass without contamination check"]
+  version:
+    type: string
+    required: true
+    description: "Contract version."
+    examples: ["v0"]
+    forbidden_content: ["unversioned"]
+  status:
+    type: string
+    required: true
+    description: "Current contract lifecycle status."
+    allowed_values:
+      - draft
+      - reviewed
+      - approved_for_test
+      - rejected
+      - retired
+    forbidden_content: ["approved without reviewer gate"]

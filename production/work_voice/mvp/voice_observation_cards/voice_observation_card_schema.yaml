@@ -1,0 +1,182 @@
+schema_name: voice_observation_card
+version: v0
+description: "Single-sample Work Voice observation card. Records abstract narrative stance observations only; never stores source text."
+fields:
+  sample_id:
+    type: string
+    required: true
+    description: "Unique sample identifier. Exists so observations can be traced without storing source text."
+    examples: ["WV-S001", "WV-SAMPLE-OPENING-01"]
+    forbidden_content: ["source text", "author name as target", "raw corpus path"]
+  source_work_id:
+    type: string
+    required: true
+    description: "Abstract source work identifier. Exists for grouping observations, not as a style label."
+    examples: ["WORK_A", "SOURCE_001"]
+    forbidden_content: ["specific author imitation target", "raw corpus path", "source excerpt"]
+  chapter_id:
+    type: string
+    required: true
+    description: "Abstract chapter or position id. Exists to locate the observation without preserving text."
+    examples: ["ch_001", "opening_scene", "midpoint_note_02"]
+    forbidden_content: ["source paragraph", "full chapter title if identifying and unnecessary"]
+  scene_type:
+    type: string
+    required: true
+    description: "Scene class used for stratified sampling and stance switching analysis."
+    allowed_values:
+      - opening_voice_setup
+      - protagonist_suppressed
+      - world_rule_exposition
+      - information_revelation
+      - side_character_pressure_or_misread
+      - payoff_delivery
+      - chapter_ending_hook
+      - emotional_aftermath
+      - crowd_scene
+      - transition_or_time_jump
+      - other
+    forbidden_content: ["source plot copied in detail"]
+  what_happens:
+    type: string
+    required: true
+    description: "Brief abstract event summary. Exists to explain the observation context without source prose."
+    examples: ["主角被规则压制并被迫选择", "信息被部分揭示但读者仍保留疑问"]
+    forbidden_content: ["source sentence", "source paragraph", "recognizable bridge copied from source"]
+  narrator_position:
+    type: string
+    required: true
+    description: "Where the storyteller stands: near protagonist, above world rules, beside reader, detached, hidden camera, or other stance."
+    allowed_values:
+      - close_to_protagonist
+      - above_world_rules
+      - beside_reader
+      - detached_observer
+      - storyteller_pressure
+      - hidden_camera
+      - mixed
+      - unclear
+    examples: ["贴主角行动", "站在世界规则上方", "站在读者旁边冷眼补刀"]
+    forbidden_content: ["specific author style label"]
+  protagonist_distance:
+    type: string
+    required: true
+    description: "How close the narrator is to the protagonist emotionally and cognitively."
+    allowed_values:
+      - empathic
+      - biased_but_restrained
+      - teasing
+      - cold
+      - pitying
+      - refuses_to_defend
+      - action_close_emotion_distant
+      - unclear
+    examples: ["行动贴近但不替主角辩护", "偏心但克制"]
+    forbidden_content: ["source wording", "author imitation"]
+  reader_relationship:
+    type: string
+    required: true
+    description: "What role the narrator assigns the reader. Exists because stable reader relationship is a core voice signal."
+    allowed_values:
+      - accomplice
+      - spectator
+      - overhearer
+      - teased_reader
+      - rule_learner
+      - witness
+      - judge
+      - unclear
+    examples: ["把读者当同伙", "把读者当看热闹的人", "把读者当需要理解规则的人"]
+    forbidden_content: ["direct invitation copied from source"]
+  world_attitude:
+    type: string
+    required: true
+    description: "Narrator attitude toward the story world, institutions, fate, absurdity, and rules."
+    allowed_values:
+      - cold_hard
+      - absurd
+      - cruel
+      - lively
+      - jianghu
+      - rule_machine
+      - fate_weighted
+      - warm_but_unsentimental
+      - unclear
+    examples: ["规则机器", "残酷但热闹", "荒诞且冷硬"]
+    forbidden_content: ["source-specific worldbuilding term"]
+  intervention_style:
+    type: string
+    required: true
+    description: "When the narrator interrupts, hides, withholds, summarizes, or adds a cutting comment."
+    examples: ["爽点前隐身，结果后短评", "规则露出时补一刀，情绪场不总结"]
+    forbidden_content: ["copied narrator aside", "specific author catchphrase"]
+  humor_mode:
+    type: string
+    required: false
+    description: "How humor appears, if any. Exists to avoid generic jokes and preserve stance."
+    examples: ["冷幽默", "制度荒诞", "反差", "无幽默"]
+    forbidden_content: ["source joke copied"]
+  showoff_mode:
+    type: string
+    required: false
+    description: "How competence, advantage, or payoff is shown."
+    examples: ["先动作后果，再旁人反应", "不提前公告天赋"]
+    forbidden_content: ["source payoff sequence copied"]
+  sentence_rhythm:
+    type: string
+    required: false
+    description: "Observed abstract rhythm pattern, not source phrasing."
+    examples: ["行动句短，判断句稍长", "转场压缩，钩子留白"]
+    forbidden_content: ["source sentence", "distinctive source syntax"]
+  detail_bias:
+    type: string
+    required: false
+    description: "What details the narrator tends to select."
+    examples: ["道具痕迹", "动作后果", "旁人反应", "空间阻力"]
+    forbidden_content: ["source-specific object or named prop"]
+  stable_flaw:
+    type: string
+    required: true
+    description: "Stable imperfection that makes the voice feel embodied rather than generic."
+    examples: ["嘴硬", "偏心", "冷幽默", "爱补刀", "爱装正经", "过度克制", "过度相信规则"]
+    forbidden_content: ["specific author persona", "source catchphrase"]
+  transferable_voice_rule:
+    type: string
+    required: true
+    description: "Abstract rule that can be transferred to original work without copying expression or setting."
+    examples: ["规则露出先制造压迫，再让主角行动撬开缝隙"]
+    forbidden_content: ["source setting", "source wording", "specific author style"]
+  non_transferable_original_element:
+    type: array
+    required: true
+    description: "Elements that must not enter new work. Exists as contamination guard."
+    examples: [["专属设定", "专属名词", "可识别桥段"]]
+    forbidden_content: ["empty list when source-specific elements exist"]
+  evidence_ref:
+    type: string
+    required: true
+    description: "Abstract evidence reference only; never source text."
+    examples: ["WORK_A / ch_001 / opening / note_03"]
+    forbidden_content: ["source sentence", "source paragraph", "raw corpus path"]
+  confidence:
+    type: number
+    required: true
+    description: "Observer confidence from 0.0 to 1.0."
+    allowed_values: ["0.0-1.0"]
+    forbidden_content: ["unbounded score"]
+  review_notes:
+    type: string
+    required: false
+    description: "Human review note about ambiguity, disagreement, or need for second review."
+    examples: ["可能是类型套路，不确定是否为 Work Voice"]
+    forbidden_content: ["source excerpt"]
+  contamination_check:
+    type: object
+    required: true
+    description: "Checklist proving the card contains no source text or author imitation target."
+    examples:
+      - copied_source_text: false
+        raw_corpus_saved: false
+        author_style_target: false
+        source_specific_terms_removed: true
+    forbidden_content: ["unchecked", "unknown for copied_source_text"]
