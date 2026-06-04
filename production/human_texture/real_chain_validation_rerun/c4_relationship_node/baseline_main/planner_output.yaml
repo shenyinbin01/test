@@ -1,0 +1,85 @@
+# C4 柳青砚关系节点 — Baseline (main) Planner 输出
+# 分支: main (980a74e)  目录: /tmp/ht_main
+# 模型: deepseek-v4-pro  来源: 干净 brief，无已有正文参考
+
+chapter_number: 4
+chapter_title: "裂隙"
+total_scenes: 5
+
+cognitive_advantage_triggered: true
+pressure_deepened: true
+revelation_progress:
+  triggered: false
+  description: "本章聚焦人物关系转折，非世界观揭示节点"
+
+scenes:
+  - order: 1
+    title: "被盯上"
+    narrative_function: hook
+    pov: "苏衍"
+    location: "宗门测试殿"
+    emotion_target: "被审视的紧张"
+    conflict_type: "人与系统"
+    dialogue_ratio: 0.2
+    length: 300
+    key_lines:
+      - "苏衍把右手藏进袖子里。测试碑不会撒谎，但袖子可以遮住发抖的手指"
+      - "执事翻开花名册，念他的名字像念一道菜名"
+
+  - order: 2
+    title: "追问"
+    narrative_function: conflict
+    pov: "苏衍"
+    location: "测试殿侧廊"
+    emotion_target: "被逼到墙角的窒息感"
+    conflict_type: "人与人"
+    dialogue_ratio: 0.5
+    length: 400
+    key_lines:
+      - "柳青砚拦住他去路：'你上次跟我交手的时候，经络里有东西不在宗门登记册上'"
+      - "苏衍：'你感知错了'"
+
+  - order: 3
+    title: "台阶"
+    narrative_function: build
+    pov: "苏衍"
+    location: "测试殿侧廊"
+    emotion_target: "矛盾——想接又不敢接"
+    conflict_type: "人与人"
+    dialogue_ratio: 0.4
+    length: 350
+    key_lines:
+      - "柳青砚压低声音：'我不是来告发你的。但你得让我知道那是什么——不然下次不是我，是执事'"
+      - "苏衍看见她手在抖，不是害怕，是在克制"
+
+  - order: 4
+    title: "撒谎"
+    narrative_function: climax
+    pov: "苏衍"
+    location: "测试殿侧廊"
+    emotion_target: "决裂、被推开"
+    conflict_type: "人与人"
+    dialogue_ratio: 0.3
+    length: 300
+    key_lines:
+      - "苏衍说：'什么都没有。你感知错了'"
+      - "柳青砚往后退了两步，然后转身走了。没有摔门，没有回头"
+
+  - order: 5
+    title: "过关"
+    narrative_function: release
+    pov: "苏衍"
+    location: "测试殿"
+    emotion_target: "空虚、欠债感"
+    conflict_type: "人与自我"
+    dialogue_ratio: 0.1
+    length: 200
+    key_lines:
+      - "胖少年在他经过时低声说：'她刚才帮你挡了一次抽查'"
+      - "苏衍捏着通过牌，牌的温度跟刚才柳青砚转身时的空气一样冷"
+
+climax:
+  scene_index: 4
+  payoff: "苏衍撒谎→柳青砚不再追问→关系出现不可逆裂痕"
+
+cliffhanger: "胖少年告诉他柳青砚帮他挡过抽查。苏衍通过复检，但柳青砚已转身离开。他手里的通过牌是冷的。"
