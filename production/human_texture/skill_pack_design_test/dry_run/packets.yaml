@@ -1,0 +1,127 @@
+version: 1
+generated_at: "2026-06-04"
+mode: "dry_run_compact_packet"
+source_design:
+  - production/human_texture/skill_pack_design/human_texture_packet_schema.md
+  - production/human_texture/skill_pack_design/reviewer_gate_design.md
+source_experiments:
+  - production/human_texture/experiment_mvp/
+  - production/human_texture/experiment_mvp_round2/
+constraints:
+  - "不修改正式 skill-pack"
+  - "每个片段只选择 2-3 个 focus_fields"
+  - "字段是写作约束，不是正文模板"
+  - "B 版为短改写，不替换正式正文"
+
+experiments:
+  c4_liuqingyan_relationship_node:
+    source_chapter: production/phase8/skill_injection_minimal/validation_5ch/drafts/chapter_004_draft.md
+    fragment_type: "relationship_break"
+    original_function:
+      - "苏衍复检读数通过"
+      - "柳青砚指出异常"
+      - "胖少年提供反证"
+      - "证人规则压住指控"
+      - "柳青砚给台阶"
+      - "苏衍当众撒谎"
+      - "白签到手但关系破裂"
+    human_texture:
+      focus_fields:
+        - shame_or_avoidance
+        - relationship_debt_change
+        - consequence_next_friction
+      private_want: "苏衍想通过复检，也想让柳青砚不要被他的异常牵连。"
+      shame_or_avoidance: "他怕承认秘密会暴露自己已经看见柳青砚掌心金线，也怕显得自己利用过她。"
+      relationship_debt_change: "柳青砚给台阶被他当众拒绝；胖少年替他说话，形成未还人情。"
+      scene_resistance: "正式弟子/杂役分队、证人规则、白签红签让他必须公开选择。"
+      information_carrier: "柳青砚低声给台阶、执事证人规则、胖少年作证共同承载风险。"
+      consequence_next_friction: "柳青砚后续不再默认替他说话；胖少年作证让苏衍在正式弟子中更显眼。"
+    compression_note: "保留羞耻、关系债、下一章摩擦三项；删除 side_characters.private_agenda 等显性说明。"
+
+  c3_canteen_mine_information_node:
+    source_chapter: production/phase8/skill_injection_minimal/validation_5ch/drafts/chapter_003_draft.md
+    fragment_type: "information_exposure"
+    original_function:
+      - "复检压力存在"
+      - "苏衍在饭堂得到矿洞线索"
+      - "矿洞曾是修炼室"
+      - "苏衍进入后山矿洞"
+      - "阵眼枯竭"
+      - "积分分配/回流/筛选机制被揭示"
+    human_texture:
+      focus_fields:
+        - scene_resistance
+        - information_carrier
+        - consequence_next_friction
+      private_want: "苏衍想在复检前弄清金线源头，同时不暴露离岗。"
+      shame_or_avoidance: "他知道自己在偷听，也知道自己把别人避祸的话当成线索。"
+      relationship_debt_change: "他借送柴牌进入后山，欠看火杂役一次替班。"
+      scene_resistance: "饭堂分区、送柴牌、后山点名、封路木牌限制他行动。"
+      information_carrier: "老杂役改口、送柴牌、旧禁牌、维护刻痕和残缺汇报共同露出真相。"
+      consequence_next_friction: "苏衍误工、欠替班债，并留下后山行踪痕迹。"
+    compression_note: "保留场景阻力、信息载体、后续摩擦；不保留长段非工具性细节。"
+
+  c5_group_announcement_rules:
+    source_chapter: production/phase8/skill_injection_minimal/validation_5ch/drafts/chapter_005_draft.md
+    fragment_type: "group_announcement"
+    original_function:
+      - "元启竖古镜"
+      - "公布积分来自古阵"
+      - "展示苏衍积分曲线"
+      - "说明三千年寿命、枯竭筛选和回收"
+      - "众人被迫接受检测"
+    human_texture:
+      focus_fields:
+        - scene_resistance
+        - information_carrier
+        - consequence_next_friction
+      private_want: "苏衍想听清规则，同时不让自己的曲线成为所有人恐惧的靶子。"
+      shame_or_avoidance: "他不敢提醒想走的杂役，因为自己也怕暴露枯竭提前和自己有关。"
+      relationship_debt_change: "柳青砚看见他的曲线暴露，但仍不替他挡；小杂役被迫留下。"
+      scene_resistance: "镜前空地、同伴目光、袖口被拉住，让退出几乎不可行。"
+      information_carrier: "元启规则话术、古镜账册、名字亮起、标记反应共同承载规则。"
+      consequence_next_friction: "苏衍曲线被群体看见；留下者被标记，群体后续会追问异类诱因。"
+    compression_note: "公告仍保留，但关键规则由选择、标记和曲线暴露承担，不靠全旁白说明。"
+
+  c4_emotion_consequence_cost:
+    source_chapter: production/phase8/skill_injection_minimal/validation_5ch/drafts/chapter_004_draft.md
+    fragment_type: "emotion_consequence"
+    original_function:
+      - "苏衍把积分从一百一十二压低"
+      - "保留九十、八十五、七十八、七十一、六十四的分数链"
+      - "测试石最终显示六十一"
+      - "后续柳青砚质疑被触发"
+    human_texture:
+      focus_fields:
+        - shame_or_avoidance
+        - consequence_next_friction
+      private_want: "苏衍想拿到白签，且不让任何人看见自己燃烧的是别人的情绪。"
+      shame_or_avoidance: "他把不属于自己的反应压进身体，怕被队列、执事或柳青砚看见。"
+      relationship_debt_change: "胖少年的竞争欲被烧掉，后续胖少年替他说话时人情债更重。"
+      scene_resistance: "测试石三息窗口、旁人目光和白签桌压缩他的反应时间。"
+      information_carrier: "分数下降、错步、唇血、测试石三息读数共同承载代价。"
+      consequence_next_friction: "情绪残留影响他接下来面对柳青砚质问时的反应。"
+    compression_note: "只选两项 focus_fields，避免每个情绪碎片都扩写成独立戏。"
+
+  c4_ending_hook_aftertaste:
+    source_chapter: production/phase8/skill_injection_minimal/validation_5ch/drafts/chapter_004_draft.md
+    fragment_type: "ending_hook"
+    original_function:
+      - "白签到手"
+      - "关系余波存在"
+      - "天幕裂缝出现"
+      - "元启降临"
+      - "枯竭提前与回收标准公布"
+      - "章尾危机成立"
+    human_texture:
+      focus_fields:
+        - private_want
+        - relationship_debt_change
+        - consequence_next_friction
+      private_want: "苏衍想在元启降临前向柳青砚解释一点，至少不让关系彻底断掉。"
+      shame_or_avoidance: "他怕开口只会说出更多谎，也怕柳青砚已经不想听。"
+      relationship_debt_change: "苏衍错过补救窗口；柳青砚不再给第二次台阶，胖少年的人情债被大危机压住。"
+      scene_resistance: "领签、离队、黑衣人抬头、裂缝出现同时抢夺他的注意力。"
+      information_carrier: "执事口型、积分震颤、元启降临和掌心符文标记承载大钩子信息。"
+      consequence_next_friction: "大危机到来，但苏衍失去当场修补关系的机会，下一章合作门槛更高。"
+    compression_note: "保留大钩子；只把人物承受点嵌入钩子发生时，不追加长尾抒情。"
