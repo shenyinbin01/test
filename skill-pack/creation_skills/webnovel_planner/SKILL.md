@@ -115,6 +115,35 @@ revelation_phases:
 
 ---
 
+## Human Texture beat 约束（实验 v0）
+
+Human Texture 不是普通"去 AI 味"，目标是让机制压力落到人物选择、关系、场景和后果上。生成单章 chapter beat 时，可附加一个轻量 `human_texture` block：
+
+```yaml
+human_texture:
+  focus_fields: [] # 每章最多 2-3 个
+  private_want: ""
+  shame_or_avoidance: ""
+  relationship_debt_change: ""
+  scene_resistance: ""
+  information_carrier: ""
+  consequence_next_friction: ""
+  carry_forward:
+    relationship_debt: []
+    consequence: []
+```
+
+**字段限制**：`focus_fields` 只能从 `private_want` / `shame_or_avoidance` / `relationship_debt_change` / `scene_resistance` / `information_carrier` / `consequence_next_friction` 中选择，每章最多 2-3 个，不强行写满。
+
+**Planner 职责**：
+- 选择本章最关键的 Human Texture 字段，并让它们服务 beat / hook / payoff / rule-breaking / cost
+- 维护可继承的关系债与后果账；没有下一章用途的关系变化不要写入
+- 为重要信息揭示指定 `information_carrier`，避免默认依赖权威公告或旁白说明
+
+**Planner 不负责**：写正文、写心理细节、临时文学化、替 Writer 生成具体句子。
+
+---
+
 ## 禁止行为
 
 1. 不写正文
@@ -146,6 +175,7 @@ revelation_phases:
      - `cognitive_advantage_triggered`: 本章是否触发主角认知优势（true/false）
      - `pressure_deepened`: 本章是否加深内在代价（true/false）
      - `revelation_progress`: 本章是否推进一个揭秘点（true/false + 描述）
+   - 如本章存在关系破裂、信息揭示、情绪代价、规则公告或章尾大钩子，可附加 `human_texture` block；其中 `focus_fields` 最多 2-3 个，且 `relationship_debt_change` / `consequence_next_friction` 必须能进入下一章计划
 6. 如需生成上下文，写入 `.webnovel/context/chapter_XXX_context.yaml`
 7. 向 Hermes 报告输出文件路径
 
@@ -164,6 +194,7 @@ revelation_phases:
 4. 所有输出与已有 canon 无冲突
 5. 未写入任何正文内容
 6. 未修改任何已有正文文件
+7. 如输出 `human_texture`，字段不超过 2-3 个重点，且不是抽象口号或正文模板
 
 ## 与其他 Skill 的关系
 

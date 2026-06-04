@@ -71,6 +71,44 @@ tags: ["webnovel", "reviewer", "quality-gate", "deai", "phase6b", "phase8"]
 
 ---
 
+## Human Texture gate（实验 v0）
+
+如果 chapter beat 或正文包含 `human_texture`，Reviewer 必须额外检查它是否让正文从"机制展示"变成"人在机制压力下做选择，并留下关系、情绪、场景和后果"。
+
+**检查项**：
+- `focus_fields` 是否被正文执行，且没有逐项显性模板化
+- 原有 webnovel function 是否保留：推进、钩子、规则破局、爽点、信息揭示和节奏不得被牺牲
+- 信息公告是否有代价、误读、人物/物件/制度缝隙等载体；无载体时退回 Planner / Writer
+- 情绪代价是否造成行为后果；无行为后果时退回 Writer
+- 章尾钩子是否吞掉人物余波；吞掉时退回 Planner / Writer
+- 人物仍是功能件、关系债无继承、后果不进入下一章计划时，退回 Planner
+- 只有语言粗糙但结构有效时，才允许进入 Polisher
+
+结构性空心不得交给 Polisher。
+
+建议输出块：
+
+```yaml
+human_texture_review:
+  focus_fields_checked:
+    - ""
+  scores:
+    private_want: null
+    shame_or_avoidance: null
+    relationship_debt_change: null
+    scene_resistance: null
+    information_carrier: null
+    consequence_next_friction: null
+  webnovel_function_preserved: true
+  system_display_risk: "low|medium|high"
+  template_risk: "low|medium|high"
+  gate: "pass_to_polisher|return_to_planner|return_to_writer"
+  required_fix:
+    - ""
+```
+
+---
+
 ## Phase 8 注入维度详细说明
 
 ### 维度 12: hook_pacing（钩子节奏）
@@ -164,6 +202,21 @@ deai_summary:
   sentence_rhythm_issues: []
   must_fix_before_polish: []
 
+human_texture_review:
+  focus_fields_checked: []
+  scores:
+    private_want: null
+    shame_or_avoidance: null
+    relationship_debt_change: null
+    scene_resistance: null
+    information_carrier: null
+    consequence_next_friction: null
+  webnovel_function_preserved: true
+  system_display_risk: "low|medium|high"
+  template_risk: "low|medium|high"
+  gate: "pass_to_polisher|return_to_planner|return_to_writer"
+  required_fix: []
+
 rewrite_instructions: []
 polisher_instructions: []
 must_not_change: []
@@ -180,9 +233,10 @@ must_not_change: []
 7. **逐章检查钩子节奏（hook_pacing）：本章的短钩/长钩/兑现状态**
 8. **检查兑现可见度（payoff_visibility）：兑现是否被读者看见、是否有情绪冲击**
 9. **检查模板化风险（template_risk）：是否过度重复认知碾压、冲突解法单一、技法感 > 故事感**
-10. 输出结构化审稿报告
-11. 给出 rewrite_instructions（给 Writer 的修改方向）
-12. 给出 polisher_instructions（给 Polisher 的定向重写指令）
+10. 如存在 `human_texture`，执行 Human Texture gate，判断应退回 Planner / Writer，还是允许 Polisher
+11. 输出结构化审稿报告
+12. 给出 rewrite_instructions（给 Writer 的修改方向）
+13. 给出 polisher_instructions（给 Polisher 的定向重写指令；结构性空心不得交给 Polisher）
 
 ## Reviewer 禁止
 

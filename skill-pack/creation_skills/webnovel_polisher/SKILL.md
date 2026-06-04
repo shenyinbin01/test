@@ -13,6 +13,10 @@ tags: ["webnovel", "polisher", "deai", "quality-gate", "phase6b", "phase8"]
 **Phase 8 核心定位变更：Polisher 是轻量增强角色，不是救稿角色。**
 如果章节在结构、爽点、钩子、主角动机层面存在缺失，应退回 Reviewer → Writer 重新处理，不由 Polisher 硬补。
 
+**Human Texture 实验 v0 边界：如果 Reviewer 的 `human_texture_review.gate` 不是 `pass_to_polisher`，不得进入 Polisher。**
+Polisher 只能压缩显性说明、调整重复句式、增强已有章尾留白、让已有动作和对话更贴人物状态，并在结构通过后提升语言光泽。
+Polisher 不得补人物私心、补关系债、重排信息露出、补代价后果、重写场景生活逻辑、用风景/比喻/口语化假装有人味，或把结构性失败润色成顺滑失败。
+
 ## 适用场景
 
 1. 章节草稿完成并经过 Reviewer 审稿后
@@ -73,6 +77,8 @@ tags: ["webnovel", "polisher", "deai", "quality-gate", "phase6b", "phase8"]
 15. 不允许把 Reviewer 报告和检测报告原文塞进正文
 16. **不允许补充缺失的结构、爽点、钩子或主角动机——这些应退回 Reviewer/Writer**
 17. **不允许改变原 beat、原事件、原因果链**
+18. **不允许补 Human Texture 的 private_want / relationship_debt_change / information_carrier / consequence_next_friction**
+19. **不允许在 Human Texture gate 未通过时执行润色**
 
 ---
 
@@ -175,16 +181,17 @@ tags: ["webnovel", "polisher", "deai", "quality-gate", "phase6b", "phase8"]
 5. 读取 Reviewer 的 rewrite_instructions 和 polisher_instructions
 6. 读取 ai_flavor 和 sentence_rhythm 报告中的具体问题
 7. 读取 deai_rules 规则库
-8. **审查 Reviewer 的 template_risk 分数——若 ≥8，四条 Phase 8 增强规则全部跳过**
-9. **根据 Reviewer 各项评分，选择适用的 Phase 8 增强规则（通常 1-2 条）**
-10. 只针对明确问题 + 适用规则重写，不自由发挥
-11. 保留剧情事件、人物关系、设定和章节结果
-12. **保留原 beat、原事件、原因果链——不得修改**
-13. 输出新的 polished 文件到 `manuscript/polished/`
-14. 生成 polish_comparison 报告
-15. 不更新 final
-16. 不更新 .story-system
-17. 不同步 WPS
+8. 如 Reviewer 报告包含 `human_texture_review`，确认其 `gate` 为 `pass_to_polisher`；否则停止并退回 Reviewer
+9. **审查 Reviewer 的 template_risk 分数——若 ≥8，四条 Phase 8 增强规则全部跳过**
+10. **根据 Reviewer 各项评分，选择适用的 Phase 8 增强规则（通常 1-2 条）**
+11. 只针对明确问题 + 适用规则重写，不自由发挥
+12. 保留剧情事件、人物关系、设定和章节结果
+13. **保留原 beat、原事件、原因果链——不得修改**
+14. 输出新的 polished 文件到 `manuscript/polished/`
+15. 生成 polish_comparison 报告
+16. 不更新 final
+17. 不更新 .story-system
+18. 不同步 WPS
 
 ## 输出要求
 
@@ -229,3 +236,4 @@ tags: ["webnovel", "polisher", "deai", "quality-gate", "phase6b", "phase8"]
 8. 对比报告存在
 9. **polished 文件的剧情结构和事件结果与原文一致**
 10. **字数增减在原文 ±10% 以内**
+11. 如存在 `human_texture_review`，必须已通过 gate，且未新增结构性 Human Texture 字段
