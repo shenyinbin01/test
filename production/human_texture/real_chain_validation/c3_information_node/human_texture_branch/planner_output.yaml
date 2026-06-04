@@ -1,0 +1,113 @@
+# C3 饭堂/矿洞信息露出节点 — Human Texture 实验分支 Planner 输出
+# 使用分支: experiment/human-texture-skill-pack-v0
+# 生成模型: deepseek-v4-pro
+# 生成时间: 2026-06-04
+
+chapter_number: 3
+chapter_title: "矿洞"
+total_scenes: 5
+
+cognitive_advantage_triggered: true
+pressure_deepened: true
+revelation_progress:
+  triggered: true
+  description: "揭示矿洞真相——积分分配系统、枯竭周期、筛选机制"
+
+scenes:
+  - order: 1
+    title: "饭堂里的地名"
+    narrative_function: hook
+    pov: "苏衍"
+    location: "宗门饭堂杂役区"
+    emotion_target: "警觉、被勾起"
+    conflict_type: "人与系统"
+    dialogue_ratio: 0.5
+    length: 500
+    key_lines:
+      - "复检告示贴出的那天早上，苏衍在饭堂里听到了一个地名"
+      - "老杂役：'后山那个地方...以前可不是挖矿的'"
+
+  - order: 2
+    title: "借牌与追线"
+    narrative_function: build
+    pov: "苏衍"
+    location: "后山/杂役区"
+    emotion_target: "紧张、追踪的专注"
+    conflict_type: "人与系统"
+    dialogue_ratio: 0.2
+    length: 600
+    key_lines:
+      - "苏衍找看火杂役借了后山送柴牌——欠下一顿替换班"
+      - "金线在日光下几乎隐形，但激发残余能量时会微光一闪"
+
+  - order: 3
+    title: "进入矿洞"
+    narrative_function: build
+    pov: "苏衍"
+    location: "矿洞通道"
+    emotion_target: "敬畏、好奇、轻微恐惧"
+    conflict_type: "人与系统"
+    dialogue_ratio: 0.0
+    length: 500
+    key_lines:
+      - "通道向下倾斜，石面上刻着密密麻麻的符文"
+      - "残光接触指尖的瞬间被吸了进去，积分跳了一个数，同时响起一个女人的笑声"
+
+  - order: 4
+    title: "阵眼真相"
+    narrative_function: climax
+    pov: "苏衍"
+    location: "矿洞圆形空间/阵眼前"
+    emotion_target: "震撼、顿悟"
+    conflict_type: "人与系统"
+    dialogue_ratio: 0.0
+    length: 700
+    key_lines:
+      - "阵眼的大部分区域已经完全暗淡了"
+      - "苏衍从符文残缺规律拼出结论——这是一个分配系统"
+      - "记忆洪流中，白发老人确认：枯竭不是意外，是设计"
+
+  - order: 5
+    title: "离开矿洞"
+    narrative_function: release
+    pov: "苏衍"
+    location: "矿洞外/后山"
+    emotion_target: "沉重、担子变重"
+    conflict_type: "人与自我"
+    dialogue_ratio: 0.0
+    length: 300
+    key_lines:
+      - "苏衍走出矿洞时天快黑了，他想起饭堂里那粒硌牙的硬米和自己欠下的替班"
+      - "他知道复检前他不仅要藏积分，还要解释半日缺勤"
+
+climax:
+  scene_index: 4
+  payoff: "枯竭周期=筛选机制——世界观重大揭示"
+
+cliffhanger: "苏衍带着积分暴涨和情绪碎片走出矿洞。天亮后就是复检。他需要同时藏住三件事：金线的源头、暴涨的积分、和那几代人的情绪。"
+
+# --- Human Texture block (实验 v0) ---
+human_texture:
+  focus_fields:
+    - information_carrier
+    - scene_resistance
+    - consequence_next_friction
+
+  private_want: ""
+
+  shame_or_avoidance: ""
+
+  relationship_debt_change: ""
+
+  scene_resistance: "饭堂不是信息公告板——是稀粥、木屏风、分区的制度空间；后山不是开放式地图——是荒药田、封路木牌、天黑点名、送柴牌制度。每个信息节点都必须被物理和制度阻力包裹"
+
+  information_carrier: "矿洞信息通过三层载体露出：①老杂役的含混闲谈（被正式弟子听见的风险→压低声量→信息碎片化）；②送柴牌+看火杂役的私心（制度缝隙→苏衍借到后山通行权）；③石壁旧刻痕+阵眼维护标记（物证→苏衍从日期规律拼出枯竭周期）。不依赖旁白说明或权威人物直接告知"
+
+  consequence_next_friction: "苏衍获取信息的代价：①欠看火杂役一顿替换班（饭钱或体力债务）；②留下后山行踪痕迹（天黑前点名可能暴露缺勤）；③积分和情绪碎片双暴涨（加重复检压力）。这些代价必须进入下一章"
+
+  carry_forward:
+    relationship_debt:
+      - "苏衍欠看火杂役的替班债——下一章如被催讨可能影响他的行动自由"
+    consequence:
+      - "后山行踪痕迹：封路木牌被移动过、碎石路上的新脚印——执事或巡查弟子可能注意到"
+      - "积分暴涨+情绪碎片：复检压力从'藏金线秘密'升级为'藏积分和情绪双重异常'"
