@@ -1,0 +1,30 @@
+project: work_voice_skill_pack_injection_design
+version: v0
+status: design_draft
+base:
+  branch: experiment/work-voice-mvp-design-v0
+  commit: 0056867d630896091aa03c9e0491a5536e2bbf74
+inputs:
+  mvp_path: production/work_voice/mvp/
+  research_path: production/work_voice/research/
+  skill_pack_read_only:
+    - skill-pack/creation_skills/webnovel_planner/SKILL.md
+    - skill-pack/creation_skills/webnovel_writer/SKILL.md
+    - skill-pack/creation_skills/webnovel_reviewer/SKILL.md
+    - skill-pack/creation_skills/webnovel_polisher/SKILL.md
+scope:
+  modify_skill_pack: false
+  modify_phase8: false
+  add_approved_patterns: false
+  generate_fiction: false
+  run_deepseek: false
+  run_validation: false
+  use_raw_corpus: false
+  save_source_excerpt: false
+  author_imitation: false
+  create_real_voice_contract: false
+next_step:
+  - human_review
+  - revise_injection_design
+  - create_experimental_skill_pack_patch_after_approval
+  - run_dry_run_after_patch_approval
