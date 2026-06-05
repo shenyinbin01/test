@@ -1,0 +1,126 @@
+state_delta:
+  delta_id: delta_ch003_run002_B_longform
+  source_chapter: chapter_003
+  source_event_log:
+    - event_003_01: "纪先生携三件物品（黄色验证纸、举证表、终审铜牌）亲自上门"
+    - event_003_02: "纪先生评定第一关（通行令无辅助材料=不出彩但合规）和第二关（独立观察路径正确）"
+    - event_003_03: "纪先生揭示赵恪联署方为纪昀（纪先生次子），赵恪青色信号来自联署方内部信息"
+    - event_003_04: "第三关终审定级规则出示：身份标记、资源配额、债责记录，不可申诉"
+    - event_003_05: "纪先生给出选择：'察进'（观察中进阶，三年双人联署+季度审查）或退出（资格冻结一年，苏晚令不解冻）"
+    - event_003_06: "林砚询问赵恪结果：赵恪获'优进'，但纪昀信息通道冻结六个月且每季联署审计"
+    - event_003_07: "林砚选择接受'察进'——带着镣铐的通行证"
+    - event_003_08: "苏晚收到联署状态更新：其通行令冻结保留，不得申请新令，不得参与下轮评估，直至林砚完成首次季度审查"
+    - event_003_09: "苏晚告知林砚：纪先生昨晚调出旧档，已知道纪昀替赵恪签联署一事"
+    - event_003_10: "林砚写下终局复盘：察进身份、苏晚三个月等待、季度审查倒计时"
+  status: proposed
+  accepted_changes: []
+  rejected_changes: []
+  conflict_report:
+    conflict_type: none
+    conflicting_source: ""
+    reason: ""
+    proposed_resolution: ""
+    return_to: ""
+  provenance:
+    generated_from:
+      - chapter_card_lite_x3.yaml(chapter_003)
+      - state_delta_ch001.yaml (proposed, read as constraint source)
+      - state_delta_ch002.yaml (proposed, read as constraint source)
+      - ledger_view_after_ch001.yaml (preview, read as constraint source)
+      - ledger_view_after_ch002.yaml (preview, read as constraint source)
+      - chapter_001_draft.md
+      - chapter_002_draft.md
+      - chapter_001_reviewer_report.md
+      - chapter_002_reviewer_report.md
+    reviewed_by: "reviewer_gate_critical_standard"
+    accepted_by: ""
+    source_artifacts:
+      - generation/chapter_003_draft.md
+      - generation/chapter_002_draft.md (referenced)
+      - generation/chapter_001_draft.md (referenced)
+      - review/chapter_002_reviewer_report.md (referenced)
+      - state/state_delta_ch002.yaml (referenced)
+      - state/ledger_view_after_ch002.yaml (referenced)
+  plot_change: "终审定级：林砚选择'察进'（观察中进阶）而非退出。三条先前的delta共同塑造了这一结果——ch001的通行令消耗导致苏晚联署锁定（退出=苏晚白锁）；ch002的独立观察举证被认可但赵恪联署方被揭示（纪昀=纪先生次子），导致规则收紧。赵恪虽获'优进'但附带联署审计条款——代价模式对称。林砚以'待观察'身份（三年双人联署+季度审查）换取进阶资格，付出的代价是自由受限+苏晚至少等待三个月。"
+  character_change:
+    protagonist:
+      before: "已澄清知识边界，已提交独立观察举证，路径收窄但成本明确"
+      after: "获得'察进'身份——不是胜利，而是一个有条件限制的通行证。对系统规则和联署代价有清醒认知。知道赵恪的'胜利'代价模式（联署审计）与自己'察进'的代价模式（双人联署+季度审查）是同一套规则的不同输出。身份从'想要进阶的参评者'变为'待观察的进阶者'。"
+  relationship_debt_change:
+    debt_id: relationship_debt_01
+    debtor: "林砚(protagonist)"
+    creditor: "苏晚(ally)"
+    nature: "三个月前苏晚替林砚保全评估资格，联署条款已触发"
+    status_before: "联署债务双重深化——规则层面禁止林砚接触苏晚信息渠道；情感层面澄清苏晚未背叛"
+    status_after: "联署债务进入'有期限的冻结结算'阶段。苏晚通行令转为冻结保留——她不能申请新令、不能参与下轮评估，必须等林砚完成首次季度审查（至少三个月）。债务从'当下的约束'变为'未来的账单'——林砚的察进身份不解除，苏晚就永远被锁。同时苏晚确认林砚的决策（选察进而非退出）让她的锁有了期限，债务中混入了反向的情感（苏晚的'你已经还了'暗示她接受了这个代价）——但客观规则上债务仍然存在且持续计息。"
+    evidence:
+      - "event_003_08: 联署状态更新通知——苏晚通行令冻结保留"
+      - "event_003_07: 林砚选择察进（而非退出）使苏晚的锁有了期限"
+      - "event_003_09: 苏晚说'你已经还了'——情感结算但不等于规则解除"
+    persistence_requirement: "must manifest in all three chapters — chapter_003 shows transformation into a temporal debt with a measurable countdown"
+  knowledge_change:
+    boundary_id: knowledge_boundary_01
+    status_before: "部分解决——确认苏晚记录可靠，赵恪故意截留信息"
+    status_after: "进一步解决——揭示赵恪的联署方为纪昀（纪先生次子），解释了赵恪的信息优势来源。林砚现在确切知道：第一关信号未被误读，信息不对齐来源于联署结构（纪昀-赵恪共享内部信息），而他自己和苏晚的联署结构只有债务约束没有信息优势。系统的不对称不是个人恶意，是结构性的。"
+    known_facts:
+      - "赵恪联署方=纪昀（纪先生次子），信息优势来自联署共享"
+      - "赵恪获得'优进'但有联署审计条款（每季一查+纪昀通道冻结六个月）"
+      - "林砚获得'察进'（三年双人联署+季度审查）"
+      - "苏晚通行令冻结保留（至少三个月，取决于林砚季度审查结果）"
+      - "联署系统存在不对称：纪昀-赵恪联署获得信息优势；苏晚-林砚联署只有债务约束"
+    unknown_facts:
+      - "季度审查的具体标准和通过条件"
+      - "赵恪的联署审计是否会影响林砚"
+      - "察进身份在三年内的升级/降级规则"
+  resource_change:
+    resource_id: access_token_initial
+    type: "通行令体系资源"
+    status_before: "林砚通行令已消耗，苏晚备用通行令联署锁定，第二关木牌禁止通行令体系资源和联署渠道"
+    status_after: "终审后状态：林砚通行令永久消耗（不可恢复）。苏晚通行令转为'冻结保留'——保留所有权但不可使用，解冻条件=林砚完成首次季度审查。新资源状态：林砚获得'察进'身份令牌（铜牌）——有限资源，附带有条件的使用权。"
+  reputation_or_identity_change:
+    identity_before: "云阁评估参评者——身份未定，处于考核进程中"
+    identity_after: "察进（观察中进阶）——正式身份标记，带有'待观察'注记。在社会层面，这是一个公开的标记——意味着林砚的每一步都会被系统记录和审查。优先于参评者但低于优进者。附带约束：未来三年资源申请需双人联署。"
+    evidence:
+      - "event_003_05: 纪先生出示'察进'选项及具体条件"
+      - "event_003_07: 林砚接受察进，铜牌盖章生效"
+      - "event_003_10: 林砚写下'察进。待观察。'"
+  reader_question_change:
+    questions_added:
+      - "What cost follows from the changed status?（改变后的身份/状态会带来什么后续代价？）"
+    questions_resolved: []
+    questions_active_before:
+      - "Which assessment signal was misread? (partially answered in ch002, fully contextualized in ch003)"
+      - "Was the second checkpoint tactic based on reliable knowledge?"
+    questions_active_after:
+      - "Which assessment signal was misread? -- resolved: 信号本身正确，信息不对齐源于联署结构（纪昀-赵恪有信息优势，苏晚-林砚没有）"
+      - "Was the second checkpoint tactic based on reliable knowledge? -- resolved: 独立观察策略基于可靠知识（苏晚记录验证通过旧档库），但赵恪联署方的揭示提供了新的上下文"
+      - "What cost follows from the changed status? -- active new question"
+    evidence_in_text:
+      - "event_003_03: 赵恪联署方揭示"
+      - "event_003_05: 纪先生出示终审选项"
+      - "event_003_07: 林砚选择察进"
+      - "event_003_08: 苏晚联署状态更新"
+      - "chapter_end: 季度审查倒计时开始"
+  foreshadowing_or_payoff_change:
+    paid_foreshadowing:
+      - "赵恪墨痕同色暗示共享信息池 (ch001) -> payoff: 赵恪联署方纪昀=纪先生次子，同源记录+内部信息通道 (ch003)"
+      - "联署条款的连锁反应 (ch001) -> payoff: 苏晚通行令冻结保留且不得参与下轮评估，需等待林砚季度审查 (ch003)"
+      - "赵恪一年前签过联署 (ch002) -> payoff: 联署方身份揭示+联署审计条款 (ch003)"
+      - "独立观察举证三条件规则 (ch002) -> payoff: 纪先生认可独立观察路径正确，是第三关选项的基础 (ch003)"
+    new_foreshadowing:
+      - "季度审查标准和通过条件"
+      - "赵恪联署审计是否波及林砚"
+      - "察进身份能否在三年内升级"
+      - "纪先生已知纪昀替赵恪签联署——这会影响纪昀/赵恪的未来吗"
+  next_chapter_seed_change: "本卷终。如果续写，可选方向：林砚面临首次季度审查——他需要找到一个愿意为他联署的人（苏晚被冻结、通行令体系资源关闭、赵恪不可信）。赵恪的联署审计结果可能产生跨参评者影响。苏晚的解冻取决于林砚的季度审查结果——时间压力持续。"
+  evidence_ref:
+    - "generation/chapter_003_draft.md: line 1-15 (纪先生上门)"
+    - "generation/chapter_003_draft.md: line 16-50 (第一关+第二关评定+赵恪联署方揭示)"
+    - "generation/chapter_003_draft.md: line 51-70 (第三关·终审定级规则与选择)"
+    - "generation/chapter_003_draft.md: line 71-95 (赵恪结果揭示+林砚选择察进)"
+    - "generation/chapter_003_draft.md: line 96-120 (苏晚联署更新+情感结算)"
+    - "generation/chapter_003_draft.md: line 121-end (林砚终局复盘+季度审查倒计时)"
+    - "generation/chapter_002_draft.md (referenced: 旧档库发现、独立观察策略)"
+    - "generation/chapter_001_draft.md (referenced: 通行令提交、登记处门口场景)"
+    - "state/state_delta_ch002.yaml (referenced: knowledge_change, relationship_debt_change)"
+    - "state/ledger_view_after_ch002.yaml (referenced: next_chapter_seed constraints)"

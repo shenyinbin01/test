@@ -1,0 +1,97 @@
+# Ledger View After Chapter 003
+# STATUS: preview_from_proposed_delta — NOT official ledger
+
+ledger_view_id: "ledger_view_after_ch003_run002"
+source_delta: "delta_ch003_run002"
+inherits_from: "delta_ch002_run002 (→ delta_ch001_run002)"
+delta_status: proposed
+
+volume_progress_ledger:
+  volume_goal: "Survive or pass the local advancement assessment with traceable cost."
+  progress: "三章连续性窗口完成。三关全部通过。排名升至第二但晋升评定为待定。所有代价有完整追溯链。"
+  remaining: "无（三章测试窗口完成）。下期考核在两月后重开——属于后续窗口。"
+  checkpoint_completed: 3
+  checkpoint_total: 3
+  cost_chain_summary:
+    ch001: "放弃非公开渠道 → 建立 rel_debt_01（信任不对等）→ 创建 rq_01"
+    ch002: "rel_debt_01 恶化为期待错位 → 第二关延迟扣分排名第三 → 创建 rq_02（已答：知识不可靠）"
+    ch003: "选择揭露赵锐而非坦白自己 → 方法论创新排名升至第二 → 晋升待定 → 关系债制度化 → 创建 rq_03"
+
+character_state_ledger:
+  protagonist:
+    name: "林砚"
+    current_state: "三关全过，总排名第二，晋升待定。关系债承诺未兑现。面对信任链路制度化评估。"
+    arc_summary: "从信息劣势中的竞争者 → 背负关系债的晋升候选人 → 选择第三种路径（揭露而非坦白）→ 排名上升但代价制度化"
+  competitor:
+    name: "赵锐"
+    current_state: "总分第一。个人档案保留使用他人终端资源的备注。体系认可效率，记录了边缘行为。"
+  ally_with_debt:
+    name: "苏棠"
+    current_state: "认出匿名案例中的自己。接受半真半假解释。收到还债承诺但未回复。信任处于待重建。"
+  assessor:
+    name: "沈组长"
+    role: "考核管理者。评语中引用了林砚案例，引入了信任链路评估。作为体系代理人执行规则。"
+
+relationship_debt_ledger:
+  active_debts:
+    - debt_id: "rel_debt_01_sutang_trust_gap"
+      summary: "三章演化弧线：信任不对等(ch001) → 期待错位(ch002) → 制度化信任债(ch003)"
+      current_state: "active_and_institutionalized"
+      repayment_status: "承诺但未开始（ch003_evt_11）"
+      institutional_factor: "信任链路前置评估将在下期考核中将此债务量化为可评分变量"
+  resolved_debts: []
+  excluded: []
+
+knowledge_ledger:
+  active_boundaries:
+    - boundary_id: "kn_boundary_01_signal_reliability"
+      summary: "温馨提醒为真（与考核系统同模板），发送者身份未确认（设计性未完成）"
+      state: "partially_verified"
+    - boundary_id: "kn_boundary_02_sutang_test_trap"
+      summary: "测试导致第二关延迟，赵锐档案备注证实使用他人终端资源被记录"
+      state: "partially_revealed"
+    - boundary_id: "kn_boundary_03_trust_linkage_assessment"
+      summary: "信任链路评估的具体机制未知——将在下期考核中揭示"
+      state: "newly_introduced"
+  resolved_boundaries: []
+  excluded: []
+
+resource_ledger:
+  active_resources:
+    - resource_id: "access_token_initial"
+      state: "已完全消耗（三关全部使用完毕）"
+  future_resources:
+    - resource_id: "trust_linkage_assessment_future"
+      type: "制度性评估维度"
+      state: "两月后启用"
+      impact: "将林砚/苏棠的关系债纳入评分体系"
+  depleted_resources:
+    - "non_formal_channel_opportunity — 永久放弃"
+
+reader_question_ledger:
+  active_questions:
+    - question_id: "rq_01_signal_misread"
+      question: "哪一个考核信号被误读了？"
+      partial_answer: "温馨提醒是真的——发送者（赵锐？）意图仍未知"
+      state: "partially_answered"
+    - question_id: "rq_02_tactic_knowledge"
+      question: "第二关的策略是否基于可靠的知识？"
+      answer: "否——知识不可靠导致延迟扣分"
+      state: "answered (negative) → carried forward"
+    - question_id: "rq_03_cost_of_changed_status"
+      question: "身份变更后跟随的是什么样的代价？"
+      status: "newly_active — 代价清单已建立"
+      state: "active"
+
+next_chapter_seed:
+  note: "三章连续性测试窗口结束。以下为延续性种子（仅为合约要求，不构成真实长篇大纲）："
+  seeds:
+    - "晋升待定 → 补充材料窗口 → 不确定期内的策略"
+    - "关系债制度化 → 信任链路评估 → 私人债务的公共化"
+    - "苏棠已读未回复 → 信任重建进度 → 还债方式的选择"
+    - "赵锐档案备注 → 备注的长期后果 → 规则利用与规则惩罚的边界"
+  spotlight_budget_if_continued:
+    primary: "debt_repayment_or_institutional_cost"
+    secondary: ["relationship_debt_01", "trust_linkage_assessment"]
+    background: "two_month_interim"
+    note: "此为合约要求的 seed 占位符，不代表真实下一章的合同"

@@ -1,0 +1,99 @@
+# State Delta — 第003章
+# Group A_baseline — 简化版，status: proposed ONLY
+
+state_delta:
+  delta_id: "delta_ch003_A_baseline"
+  source_chapter: "ch003"
+  source_event_log: "generation/chapter_003_draft.md"
+  status: "proposed"
+  accepted_changes: []
+  rejected_changes: []
+  conflict_report: null
+  provenance: "group_A_baseline_chapter_003_draft"
+  inherited_from:
+    - "delta_ch001_A_baseline"
+    - "delta_ch002_A_baseline"
+
+  plot_change:
+    summary: "第三检查点综合情境应对，赵铭利用苏晚关系发起合规审计挑战，苏晚主动回报化解，林远在答辩中以合规案例意外获得陈主任正面评价，最终赵铭晋升、林远声誉提升、持续摩擦建立。"
+    beats:
+      - "林远面对前两个检查点的累积劣势"
+      - "赵铭发起针对苏晚-林远档案操作的审计"
+      - "苏晚主动处理，审计结果合规，反而加分"
+      - "林远在答辩中以苏晚档案案例展示合规能力"
+      - "陈主任综合评估，写下可信赖评价"
+      - "最终结果：赵铭晋升，林远获后备干部资格"
+      - "赵铭成为上级，持续摩擦建立"
+
+  character_change:
+    protagonist_initial: "劣势累积、路径缩窄、人情债加深"
+    protagonist_final: "未晋升但声誉转变、人际信任资本建立、拥有后备干部资格、面对新的上下级关系"
+    changed: true
+
+  relationship_debt_change:
+    debtor: "林远"
+    creditor: "苏晚"
+    previous_state: "互相亏欠，持续牵扯"
+    new_state: "苏晚主动回报，双方扯平，债务结清，转为对等关系"
+    nature: "debt_settled_both_sides"
+
+  knowledge_change:
+    previous_state: "已澄清评分细则，了解赵铭战术"
+    new_state: "知识维度保持稳定，无新知识突破"
+    nature: "stable"
+
+  resource_change:
+    short_term:
+      - resource_name: "晋升名额"
+        status: "彻底失去"
+        winner: "赵铭"
+    long_term:
+      - resource_name: "人际信任资本"
+        status: "获得"
+        evidence: "陈主任评价可信赖，苏晚的公开支持"
+      - resource_name: "后备干部资格"
+        status: "获得"
+        evidence: "邮件附注：建议纳入后备干部重点培养库，下一轮晋升优先考虑"
+    nature: "short_term_loss_long_term_gain"
+
+  reputation_or_identity_change:
+    previous_state: "在苏晚眼中可信赖，在赵铭眼中可被利用，在陈主任眼中资源决策待观察"
+    new_state: "在苏晚眼中对等的伙伴，在赵铭眼中可被尊重的对手，在陈主任眼中可信赖的团队稳定器"
+    key_evidence: "陈主任评价：可信赖。建议作为团队稳定器保留关键职能"
+    nature: "identity_upgrade_despite_loss"
+
+  reader_question_change:
+    previous_questions_resolved:
+      - "林远的牺牲是否值得？— 值得，合规操作反而成为亮点"
+      - "赵铭会如何利用苏晚线索？— 发起审计但被化解"
+      - "苏晚的互评签字能挽回吗？— 苏晚主动回报，但不足以翻盘"
+    new_open_questions:
+      - "林远在赵铭手下将如何自处？"
+      - "后备干部资格何时兑现？"
+      - "两人的竞争关系在新的上下级格局下如何演变？"
+    nature: "partial_resolution_new_tension"
+
+  foreshadowing_or_payoff_change:
+    paid_off:
+      - seed: "ch002赵铭走廊一瞥注意到苏晚"
+        payoff: "ch003赵铭发起合规审计，但被苏晚合规操作化解，反成林远加分项"
+      - seed: "ch001苏晚的事情才刚刚开始"
+        payoff: "ch003苏晚主动回报，债务结清"
+    new_seeds:
+      - "林远成为赵铭下属后的持续摩擦——预留"
+    nature: "payoff_with_new_seed"
+
+  next_chapter_seed_change:
+    seed: "赵铭成为上级后，林远在持续摩擦中需要证明自己。后备干部资格为潜在续篇留白。"
+    nature: "open_ended"
+
+  evidence_ref:
+    draft_file: "generation/chapter_003_draft.md"
+    predecessor_draft: "generation/chapter_002_draft.md"
+    predecessor_state_delta: "state/state_delta_ch002.yaml"
+    predecessor_ledger_view: "state/ledger_view_after_ch002.yaml"
+    key_lines:
+      - "陈主任写的是——可信赖。建议作为团队稳定器保留关键职能"
+      - "赵铭在走廊上看到苏晚这个名字后，果然开始在第三关动手"
+      - "林远把写着后备干部重点培养的邮件折好，放进了抽屉最里面"
+      - "在一个不再是朋友的人手下，做出对的事"

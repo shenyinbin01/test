@@ -1,0 +1,84 @@
+state_delta:
+  delta_id: delta_ch001_run002_B_longform
+  source_chapter: chapter_001
+  source_event_log:
+    - event_001_01: "云阁考核通知送达，三个约束条件列出：三日、单次通行令换验证、禁止同源重试"
+    - event_001_02: "林砚与苏晚见面，确认通行令归属及联署关系"
+    - event_001_03: "苏晚提供第一关解读记录（含黄色信号与不能同源的规则）"
+    - event_001_04: "林砚在登记处交通行令，收到黄色（待察）验证信号"
+    - event_001_05: "林砚在登记处门口与赵恪相遇，赵恪已拿到青色信号"
+    - event_001_06: "林砚发现赵恪袖口墨痕与苏晚记录墨痕同色，产生信息可靠性怀疑"
+    - event_001_07: "林砚取出副署文书，发现苏晚通行令已转入联署状态——债务连锁触发"
+    - event_001_08: "林砚制定第二轮计划：需找非同源补充材料，同时验证苏晚记录可靠性"
+  status: proposed
+  accepted_changes: []
+  rejected_changes: []
+  conflict_report:
+    conflict_type: none
+    conflicting_source: ""
+    reason: ""
+    proposed_resolution: ""
+    return_to: ""
+  provenance:
+    generated_from:
+      - chapter_card_lite_x3.yaml(chapter_001)
+      - hot_ledger_slice_initial.yaml
+      - world_slice_lite.yaml
+      - volume_card_lite.yaml
+    reviewed_by: "reviewer_gate_critical_standard"
+    accepted_by: ""
+    source_artifacts:
+      - generation/chapter_001_draft.md
+  plot_change: "考核第一关启动，林砚交出通行令后获得黄色（待察）信号，必须在第二轮提供不能同源的补充证据。同时发现苏晚的备用通行令因联署条款被锁定——人情债从隐性转为显性约束。"
+  character_change:
+    protagonist:
+      before: "想要进阶但缺乏验证过的信息"
+      after: "已做出第一项有成本的选择（交出通行令且拿到黄而非青），对苏晚记录的信息可靠性产生怀疑，背负激活的联署债务"
+  relationship_debt_change:
+    debt_id: relationship_debt_01
+    debtor: "林砚(protagonist)"
+    creditor: "苏晚(ally)"
+    nature: "三个月前苏晚动用名额替林砚保全评估资格，现因联署条款激活为显性债务"
+    status_before: "隐性人情债，双方心知但未正式触发"
+    status_after: "联署状态触发——苏晚的备用通行令随林砚的使用而被锁定，林砚无法在后续关卡中单独决策而不牵连苏晚"
+    evidence:
+      - "event_001_02: 苏晚确认通行令归属"
+      - "event_001_07: 副署文书揭示联署条款"
+    persistence_requirement: "must manifest in all three chapters"
+  knowledge_change:
+    boundary_id: knowledge_boundary_01
+    status_before: "评估信号可靠性未知，无任何验证信息"
+    status_after: "林砚持有苏晚提供的解读记录，但遭遇可靠性疑问：赵恪行为与苏晚记录存在不一致（赵恪未透露黄色信号细节），且墨痕同源暗示共享信息池"
+    known_facts:
+      - "通行令提交后返回三色信号：青（通过）、黄（待察）、赤（驳回）"
+      - "黄色信号需第二轮补充证据且不能同源"
+      - "苏晚记录与赵恪行为的对齐度存疑——可能不是同一份记录"
+    unknown_facts:
+      - "苏晚记录的准确来源"
+      - "赵恪为何拿到青色——他是否有额外信息"
+      - "黄色信号的补充证据具体标准"
+  resource_change:
+    resource_id: access_token_initial
+    type: "通行令（考核入场及资源调用凭证）"
+    status_before: "林砚持有一枚通行令（苏晚三个月前保全），苏晚持有一枚备用通行令"
+    status_after: "林砚通行令已提交（消耗），苏晚备用通行令因联署条款被锁定（不可用）。通行令体系资源对林砚关闭。后续必须使用非同源补充材料。"
+  reputation_or_identity_change: {}
+  reader_question_change:
+    questions_added:
+      - "Which assessment signal was misread?（哪个评估信号被误读了？）"
+    questions_resolved: []
+    questions_active_before: []
+    questions_active_after:
+      - "Which assessment signal was misread?"
+    evidence_in_text:
+      - "event_001_06: 林砚在登记处门口与赵恪相遇，赵恪已拿到青色信号"
+      - "event_001_05: 林砚怀疑苏晚记录可靠性"
+      - "chapter_end: 林砚写下'验证信号是否可靠判断'"
+  foreshadowing_or_payoff_change: {}
+  next_chapter_seed_change: "chapter_002 必须面对：通行令资源已耗尽、联署债务已激活、苏晚记录可靠性存疑。林砚不能使用相同资源（通行令）也不能使用相同信任路径（无条件依赖苏晚）。第二关需要非同源补充材料，必须解决知识边界问题。"
+  evidence_ref:
+    - "generation/chapter_001_draft.md: line 1-20 (考核通知送达)"
+    - "generation/chapter_001_draft.md: line 21-40 (苏晚对话与联署揭示)"
+    - "generation/chapter_001_draft.md: line 41-60 (赵恪相遇与信息矛盾)"
+    - "generation/chapter_001_draft.md: line 61-80 (登记处黄色信号)"
+    - "generation/chapter_001_draft.md: line 81-end (林砚复盘与第二轮计划)"

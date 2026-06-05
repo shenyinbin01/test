@@ -1,0 +1,187 @@
+state_delta:
+  delta_id: "delta_ch002_run002"
+  source_chapter: "chapter_002"
+  reads_previous_delta: "delta_ch001_run002"
+  inherited_from_ch001:
+    - field: "relationship_debt_change"
+      item: "rel_debt_01_sutang_trust_gap"
+      inherited_state: "active — 信任不对等（信息隐瞒）"
+    - field: "knowledge_change"
+      item: "kn_boundary_01_signal_reliability"
+      inherited_state: "unverified"
+    - field: "resource_change"
+      item: "access_token_initial"
+      inherited_state: "已提交申请，排队中"
+    - field: "resource_change"
+      item: "non_formal_channel_opportunity"
+      inherited_state: "已永久放弃"
+    - field: "reader_question_change"
+      item: "rq_01_signal_misread"
+      inherited_state: "active — 等待验证"
+
+  source_event_log:
+    - event_id: "ch002_evt_01"
+      summary: "第一关考题公布：三组信息源甄别，每组包含核心信息和干扰信号"
+      draft_ref: "chapter_002_draft.md 第1段"
+    - event_id: "ch002_evt_02"
+      summary: "林砚识别出干扰信号格式与「温馨提示」模板一致——验证非公开渠道与考核系统存在真实关联"
+      draft_ref: "chapter_002_draft.md 第4段"
+    - event_id: "ch002_evt_03"
+      summary: "林砚用规则框架推导完成第一关，排名第三"
+      draft_ref: "chapter_002_draft.md 第6-8段"
+    - event_id: "ch002_evt_04"
+      summary: "苏棠声称使用了林砚说的判别方法通关——但林砚从未说过。关系债从「隐瞒」恶化为「期待错位」"
+      draft_ref: "chapter_002_draft.md 苏棠消息段落"
+    - event_id: "ch002_evt_05"
+      summary: "第二关规则公布：策略协同，搭档不可更换，评分与第一关联动"
+      draft_ref: "chapter_002_draft.md 第14-15段"
+    - event_id: "ch002_evt_06"
+      summary: "林砚发现赵锐拥有非公开渠道验证码——确认温馨提醒为真，赵锐使用该渠道获得信息优势"
+      draft_ref: "chapter_002_draft.md 赵锐验证码段落"
+    - event_id: "ch002_evt_07"
+      summary: "林砚选择A路径（准入凭证→优先级调度），苏棠做执行端"
+      draft_ref: "chapter_002_draft.md 选择A段落"
+    - event_id: "ch002_evt_08"
+      summary: "系统检测到苏棠终端存在「帮赵锐做的测试」残留数据，导致协同延迟六分钟"
+      draft_ref: "chapter_002_draft.md 系统提示段落"
+    - event_id: "ch002_evt_09"
+      summary: "赵锐/另一搭档在B路径高速推进"
+      draft_ref: "chapter_002_draft.md 赵锐观察段落"
+    - event_id: "ch002_evt_10"
+      summary: "第二关结果公布：林砚/苏棠总分第三，赵锐第二"
+      draft_ref: "chapter_002_draft.md 第二关结果段落"
+    - event_id: "ch002_evt_11"
+      summary: "第三关通知：收官评定，禁止协同，独立提交个人成果"
+      draft_ref: "chapter_002_draft.md 最后段落"
+
+  status: proposed
+
+  accepted_changes: []
+
+  rejected_changes: []
+
+  conflict_report:
+    conflict_type: none
+    conflicting_source: ""
+    reason: ""
+    proposed_resolution: ""
+    return_to: ""
+
+  provenance:
+    generated_from:
+      - "chapter_card_lite_x3.yaml"
+      - "state_delta_ch001.yaml (inherited state)"
+      - "spotlight_budget_initial.yaml (ch002 section)"
+      - "hot_ledger_slice_initial.yaml"
+    reviewed_by: "chapter_002_reviewer_report.md"
+    accepted_by: ""
+    source_artifacts:
+      - "chapter_002_draft.md"
+      - "chapter_002_reviewer_report.md"
+      - "chapter_001_draft.md"
+      - "state_delta_ch001.yaml"
+
+  plot_change: "第一关通过（排名第三）；温馨提醒被验证为与考核系统有真实关联；第二关因协同延迟排名第三；关系债从「隐瞒」恶化为「期待错位」；第三关规则引入「禁止协同」。"
+
+  character_change:
+    protagonist:
+      before: "携带 ch001 债务和未验证知识，进入第一关"
+      after: "通过两关考核，但路径受限（只有A路径），排名退至第三。确认温馨提醒为真，但发送者身份不明。背负期待错位型债务。"
+      agency_choice: "ch002 中两次关键选择：①用规则框架而非回忆做第一关（理性选择）；②明知A路径有风险仍推进（承担性选择）；③对苏棠隐瞒期待错位的真相（延续性选择）"
+      choice_consequence: "排名第三、延迟扣分、关系债恶化"
+
+  relationship_debt_change:
+    relationship_debt_01:
+      debt_id: "rel_debt_01_sutang_trust_gap"
+      from_character: "林砚"
+      to_character: "苏棠"
+      debt_type: "信任不对等（information asymmetry + dependency）"
+      origin_event: "ch001_evt_05"
+      ch002_evolution:
+        stage: "从「隐瞒」恶化为「期待错位」"
+        detail: "苏棠把林砚从未说过的建议当作林砚给的支持——债务从'林砚知道而苏棠不知道'变为'苏棠以为林砚给了而林砚没有给'"
+        escalation_event: "ch002_evt_04"
+        new_stakes: "期待错位无法通过坦白解决——坦白意味着让苏棠面对自己记忆/判断的失误。债务的偿还路径从'澄清'变为'承担不澄清的后果'。"
+        impact_on_tactic: "导致第二关A路径中苏棠的未知测试负载出现时，林砚无法诚实沟通——因为诚实沟通需要先解释期待错位。"
+      current_state: "active_and_worsened"
+      draft_ref: "chapter_002_draft.md 苏棠消息段落 + '隐瞒可以坦白。期待落空没法坦白'"
+
+  knowledge_change:
+    knowledge_boundary_01:
+      boundary_id: "kn_boundary_01_signal_reliability"
+      subject: "温馨提醒的真假以及与考核系统的关联"
+      before_ch002: "unverified"
+      after_ch002: "partially_verified — ①确认温馨提醒的模板格式与第一关考题干扰信号一致；②确认赵锐拥有对应的验证码（非公开渠道接入权限）；③温馨提醒内容为真（第一关确实涉及信息甄别），但发送者身份未确认"
+      new_unknown: "发送温馨提醒的人是谁（赵锐嫌疑上升但无直接证据）"
+      draft_ref: "chapter_002_draft.md 干扰信号识别段落 + 赵锐验证码段落"
+    knowledge_boundary_02:
+      boundary_id: "kn_boundary_02_sutang_test_trap"
+      subject: "苏棠帮赵锐做的测试的真实目的"
+      known_by: ["赵锐（推测）"]
+      unknown_by: ["林砚", "苏棠"]
+      state: "unverified — 测试导致第二关延迟，但不确定是赵锐的蓄意策略还是苏棠的无意失误"
+      draft_ref: "chapter_002_draft.md 苏棠测试段落"
+
+  resource_change:
+    access_token:
+      resource_id: "access_token_initial"
+      resource_type: "准入凭证（考核资格令牌）"
+      before: "已提交申请，排队中"
+      after: "已确认发放，用于第二关A路径的优先级调度功能"
+      usage: "仅支持A路径，B路径需要验证码（林砚没有）"
+      draft_ref: "chapter_002_draft.md A路径选择段落"
+    non_formal_channel:
+      resource_id: "non_formal_channel_opportunity"
+      status: "仍为永久放弃（由 ch001 决定，ch002 不变）"
+      confirmed_utility: "经 ch002 验证，该渠道确实能获取考核核心信息——验证码为真"
+      draft_ref: "chapter_002_draft.md 赵锐验证码段落"
+
+  reputation_or_identity_change:
+    ranking_position:
+      before: "未进入排名"
+      after: "第一关第三名，第二关第三名（累计排名第三）"
+      public_evidence: "沈组长公布的考核排名记录"
+      draft_ref: "chapter_002_draft.md 排名公布段落"
+
+  reader_question_change:
+    reader_question_01:
+      question_id: "rq_01_signal_misread"
+      question_text: "哪一个考核信号被误读了？"
+      before_ch002: "active — 温馨提醒是真还是假？"
+      after_ch002: "partially_answered — 温馨提醒是真的（格式与考核系统一致），但发送者身份仍未知。子问题更新：发送温馨提醒的人（赵锐？）出于什么意图？"
+    reader_question_02:
+      question_id: "rq_02_tactic_knowledge"
+      question_text: "第二关的策略是否基于可靠的知识？"
+      before_ch002: "不存在"
+      after_ch002: "active — 林砚选择A路径基于'只有准入凭证可用'的知识，但该知识不完整：他不知道苏棠的终端上有测试残留。策略的结果（延迟扣分）表明知识不可靠。"
+      linked_event: "ch002_evt_08"
+      draft_ref: "chapter_002_draft.md 系统提示 + 排名结果段落"
+
+  foreshadowing_or_payoff_change:
+    foreshadowing_01:
+      foreshadow_id: "fsh_01_warm_tip_validity"
+      status: "partially_paid_off — 温馨提醒被验证为真，但发送者身份和意图仍为伏笔"
+      draft_ref: "chapter_002_draft.md 干扰信号段落"
+    foreshadowing_02:
+      foreshadow_id: "fsh_02_zhao_rui_position"
+      status: "paid_off — 赵锐拥有验证码，使用非公开渠道获得信息优势，排名优势得到解释"
+      draft_ref: "chapter_002_draft.md 赵锐验证码段落"
+    foreshadowing_03:
+      foreshadow_id: "fsh_03_sutang_dependency"
+      status: "escalated — 苏棠的依赖从压力变为期待错位，产生实质性战术影响（延迟扣分）"
+      draft_ref: "chapter_002_draft.md 期待错位段落"
+    foreshadowing_new:
+      foreshadow_id: "fsh_04_sutang_test_consequence"
+      content: "苏棠帮赵锐做的测试——在第三关可能产生额外后果"
+      planted_in: "chapter_002"
+      expected_payoff_in: "chapter_003"
+      draft_ref: "chapter_002_draft.md 苏棠测试段落"
+
+  next_chapter_seed_change: "第三关为收官评定，禁止协同、独立提交个人成果。林砚排名第三，背负期待错位型关系债，知识状态为'已知温馨提醒为真但发送者未确认'。面临的核心选择：①是否在收官评定中揭露赵锐使用非公开渠道的行为（可能被认定为合法策略而非违规）；②是否向苏棠坦白期待错位（可能破坏她的自我认知）；③独立提交成果需要在有限资源下展示个人价值。第三章必须接受代价而不能获得干净晋升——代价的方向由本章的债务和排名状态决定。"
+
+  evidence_ref:
+    - "chapter_002_draft.md — 完整草稿"
+    - "chapter_002_reviewer_report.md — 审稿报告（平均4.92/5，state_delta_trust=5）"
+    - "chapter_001_draft.md — 前序章节草稿"
+    - "state_delta_ch001.yaml — 第一章 state_delta（继承依据）"
+    - "event_log 条目 ch002_evt_01 至 ch002_evt_11"

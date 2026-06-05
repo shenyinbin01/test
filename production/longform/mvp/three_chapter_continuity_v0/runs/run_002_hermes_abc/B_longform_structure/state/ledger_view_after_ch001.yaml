@@ -1,0 +1,66 @@
+# Ledger View After Chapter 001
+# STATUS: preview_from_proposed_delta ONLY — NOT official ledger
+# Delta: delta_ch001_run002_B_longform — status: proposed
+
+ledger_view_preview:
+  preview_source: delta_ch001_run002_B_longform
+  preview_status: proposed
+  generated_at: "chapter_001_end"
+  
+  volume_progress_ledger:
+    volume_goal_assessment_window:
+      status: in_progress
+      checkpoint_001: "黄色信号（待察）——未通过，需补充证据"
+      checkpoint_002: not_started
+      checkpoint_003: not_started
+      summary: "第一关开了需要补证的缺口，三天倒计时剩余两天"
+
+  character_state_ledger:
+    protagonist_pressure_initial:
+      before: "想要进阶但缺乏验证过的信息"
+      after: "拿到黄色信号，通行令已消耗，对联署债务的连锁反应有了清醒认知，对苏晚记录的可靠性产生怀疑"
+      active_pressure:
+        - "黄色信号必须在两天内补证为青色"
+        - "补充材料不能与通行令同源"
+        - "苏晚的联署债务已触发"
+
+  relationship_debt_ledger:
+    relationship_debt_01:
+      debtor: "林砚"
+      creditor: "苏晚"
+      nature: "三个月前苏晚替林砚保全评估资格，现因联署条款激活"
+      status: active_and_worsening
+      current_manifestation: "苏晚的备用通行令因联署被锁定——林砚的每一个评估决策都牵连苏晚"
+      cross_chapter_persistence: "第1章已显现；第2-3章必须持续"
+
+  knowledge_ledger:
+    knowledge_boundary_01:
+      status: partially_verified_with_uncertainty
+      verified_facts:
+        - "通行令换取验证信号，信号分三色"
+        - "黄色=待察，需补充证据"
+      unverified_or_misread:
+        - "苏晚记录的来源不明确"
+        - "赵恪的青色信号获取路径未知（信息不对齐）"
+        - "补充证据的具体标准规则"
+      active_reader_question: "哪个评估信号被误读了？"
+
+  resource_ledger:
+    access_token_initial:
+      status: consumed_and_locked
+      protagonist_token: "已提交（不可再用）"
+      ally_token: "联署锁定（不可动用）"
+      consequence: "通行令体系资源对林砚关闭；第二轮必须使用非同源材料"
+
+  reader_question_ledger:
+    reader_question_01:
+      question: "哪个评估信号被误读了？"
+      status: active
+      planted_in: chapter_001
+      expected_progress_in: chapter_002
+
+  next_chapter_seed:
+    ch002_constraint_01: "不能使用通行令资源（已耗尽且联署锁定）"
+    ch002_constraint_02: "不能无条件依赖苏晚信任路径（记录可靠性存疑）"
+    ch002_constraint_03: "必须在两天内找到非同源补充材料"
+    ch002_question_seed: "第二关策略是否建立在可靠知识之上？"

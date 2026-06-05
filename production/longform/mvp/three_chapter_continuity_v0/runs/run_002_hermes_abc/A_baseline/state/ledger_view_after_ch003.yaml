@@ -1,0 +1,54 @@
+# Ledger View — 第003章后（最终）
+# Group A_baseline — preview_from_proposed_delta ONLY
+# 注意：这不是正式ledger，仅为预览
+
+ledger_view:
+  view_type: "preview_from_proposed_delta"
+  chapter: "ch003"
+  generated_at: "after_ch003_draft"
+  official_ledger: false
+  based_on: "preview_from_delta_ch001_ch002_ch003"
+
+  preview_state:
+    protagonist:
+      name: "林远"
+      status: "晋升失利但声誉升级，人际信任资本建立"
+      final_position: "项目部骨干（后备干部重点培养库）"
+      advancement_result: "未晋升（赵铭胜出），获下轮优先考虑资格"
+
+    competitor:
+      name: "赵铭"
+      status: "晋升为高级项目经理"
+      new_role: "林远的直接上级"
+
+    relationship_debts:
+      - debtor: "林远"
+        creditor: "苏晚"
+        balance: "已结清，双方对等"
+        final_status: "从单向债务→部分偿还→互相亏欠→完全结清"
+
+    resources_final:
+      short_term_lost:
+        - "晋升名额"
+        - "项目优先调配权"
+      long_term_gained:
+        - "人际信任资本（陈主任评价、苏晚支持）"
+        - "后备干部资格"
+        - "合规口碑"
+
+    reputation:
+      chen_director_view: "可信赖的团队稳定器"
+      su_wan_view: "对等的伙伴"
+      zhao_ming_view: "可被尊重的对手（从可被利用升级）"
+
+    reader_questions_open:
+      - "林远在赵铭手下将如何自处？"
+      - "后备干部资格何时兑现？"
+      - "两人的竞争关系在新格局下如何演变？"
+
+    continuing_friction: "赵铭成为上级，林远需在非对等关系中证明自己"
+
+    foreshadowing_active:
+      - "后备干部资格为续篇留白"
+
+  note: "此预览基于ch001/ch002/ch003的proposed state_delta，不代表正式状态。Group A_baseline不使用正式ledger。"

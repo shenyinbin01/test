@@ -1,0 +1,149 @@
+state_delta:
+  delta_id: "delta_ch001_run002"
+  source_chapter: "chapter_001"
+  source_event_log:
+    - event_id: "ch001_evt_01"
+      summary: "林砚收到沈组长的考核通知（三关制，资源有限，每关一个主力策略）"
+      draft_ref: "chapter_001_draft.md 第1段"
+    - event_id: "ch001_evt_02"
+      summary: "林砚收到未署名的「温馨提示」——声称第一关题目可通过非公开渠道提前获取"
+      draft_ref: "chapter_001_draft.md 第4-6段"
+    - event_id: "ch001_evt_03"
+      summary: "苏棠透露赵锐已拿到准入凭证，并表达对林砚的依赖需要"
+      draft_ref: "chapter_001_draft.md 第3-7段"
+    - event_id: "ch001_evt_04"
+      summary: "林砚在截止前提交准入凭证申请，主动放弃非公开渠道接触机会"
+      draft_ref: "chapter_001_draft.md 选择A段落"
+    - event_id: "ch001_evt_05"
+      summary: "林砚在茶水间删除「温馨提示」消息，苏棠不知情"
+      draft_ref: "chapter_001_draft.md 茶水间段落"
+    - event_id: "ch001_evt_06"
+      summary: "沈组长公布入围名单，八人入选，赵锐排在第一位"
+      draft_ref: "chapter_001_draft.md 沈组长公布段落"
+    - event_id: "ch001_evt_07"
+      summary: "赵锐对林砚展示微笑——竞争者姿态"
+      draft_ref: "chapter_001_draft.md 最后对话段落"
+
+  status: proposed
+
+  accepted_changes: []
+    # 等待人工审查或后续审查器确认后填入
+
+  rejected_changes: []
+
+  conflict_report:
+    conflict_type: none
+    conflicting_source: ""
+    reason: ""
+    proposed_resolution: ""
+    return_to: ""
+
+  provenance:
+    generated_from: ["chapter_card_lite_x3.yaml", "world_slice_lite.yaml", "single_book_story_lite.yaml", "volume_card_lite.yaml", "hot_ledger_slice_initial.yaml", "spotlight_budget_initial.yaml"]
+    reviewed_by: "chapter_001_reviewer_report.md"
+    accepted_by: ""
+    source_artifacts:
+      - "chapter_001_draft.md"
+      - "chapter_001_reviewer_report.md"
+
+  plot_change: "考核窗口启动。林砚在第一个有界选择中提交准入凭证，放弃非公开渠道。考核正式进入第一关准备阶段。"
+
+  character_change:
+    protagonist:
+      before: "想晋升但缺乏验证信息"
+      after: "做了一个有代价的选择（提交凭证/放弃非公开信息），留下可见证据"
+      agency_choice: "主动选择相信规则门槛而非小道消息，放弃可能的先手优势"
+      choice_consequence: "进入第一关时对题目方向一无所知，同时对苏棠隐瞒了删除提示的行为"
+    competitor:
+      before: "未知状态"
+      after: "已获得准入凭证，排在入围名单第一位，对林砚展示竞争姿态"
+      agency_choice: "未明确——根据 spotlight_budget 保持 background_only"
+    assessor:
+      before: "未出现"
+      after: "沈组长作为考核管理者出现，执行规则框架"
+    ally_with_debt:
+      before: "需要林砚分担考核压力"
+      after: "依赖林砚通过第一关以在第二关获取信息——但不知道林砚隐瞒了关于温馨提示的信息"
+
+  relationship_debt_change:
+    relationship_debt_01:
+      debt_id: "rel_debt_01_sutang_trust_gap"
+      from_character: "林砚"
+      to_character: "苏棠"
+      debt_type: "信任不对等（information asymmetry + dependency）"
+      origin_event: "ch001_evt_05 — 林砚删除温馨提示消息，苏棠不知情"
+      current_state: "active — 苏棠认为林砚已做好正常准备，实际林砚背负着自己知情而她不知的负担"
+      change_description: "新建活跃关系债。林砚隐瞒的信息在后续考核中可能导致苏棠的策略失误。"
+      draft_ref: "chapter_001_draft.md 茶水间段落 + '这就是第一笔债'"
+
+  knowledge_change:
+    knowledge_boundary_01:
+      boundary_id: "kn_boundary_01_signal_reliability"
+      subject: "未署名的「温馨提示」——第一关题目是否能通过非公开渠道提前获取"
+      known_by: []
+      unknown_by: ["林砚"]
+      partially_known_by: []
+      state: "unverified — 林砚删除了消息但无法验证真假"
+      change_description: "知识边界新建。该信号的可靠性成为后续章节中需要验证的关键未知项。"
+      draft_ref: "chapter_001_draft.md 温馨提醒段落"
+
+  resource_change:
+    access_token:
+      resource_id: "access_token_initial"
+      resource_type: "准入凭证（考核资格令牌）"
+      before: "未申请"
+      after: "已提交申请，排队中（7人/约3小时），截止时间前提交"
+      owner: "林砚"
+      change_description: "林砚使用仅有的申请窗口提交了准入凭证，同时放弃了非公开渠道接触机会。资源从'可获取但未获取'变为'已获取（排队中）'。"
+      draft_ref: "chapter_001_draft.md 申请提交段落"
+    non_formal_channel:
+      resource_id: "non_formal_channel_opportunity"
+      resource_type: "一次性的非公开渠道接触机会"
+      before: "可用（未使用）"
+      after: "已放弃（林砚选择不接触，且删除了消息）"
+      owner: "无（林砚放弃后不可恢复）"
+      change_description: "林砚用准入凭证换取了规则合规性，代价是失去可能的先手信息优势。"
+      draft_ref: "chapter_001_draft.md 茶水间删除段落"
+
+  reputation_or_identity_change: {}
+    # 第一章尚未触发身份/声誉变更
+
+  reader_question_change:
+    reader_question_01:
+      question_id: "rq_01_signal_misread"
+      question_text: "哪一个考核信号被误读了？"
+      before_state: "不存在"
+      after_state: "active — 温馨提醒是真还是假？如果是假的，是谁在放烟雾弹？如果是真的，林砚放弃了什么样的优势？"
+      linked_event: "ch001_evt_02 + ch001_evt_05"
+      expected_answer_window: "chapter_002 或 chapter_003"
+      draft_ref: "chapter_001_draft.md 结尾段落"
+
+  foreshadowing_or_payoff_change:
+    foreshadowing_01:
+      foreshadow_id: "fsh_01_warm_tip_validity"
+      content: "温馨提醒的真假待验证"
+      planted_in: "chapter_001"
+      expected_payoff_in: "chapter_002 或 chapter_003"
+      status: "planted"
+      draft_ref: "chapter_001_draft.md 温馨提醒段落"
+    foreshadowing_02:
+      foreshadow_id: "fsh_02_zhao_rui_position"
+      content: "赵锐排在入围名单第一位，对林砚微笑——可能掌握林砚不知道的信息"
+      planted_in: "chapter_001"
+      expected_payoff_in: "chapter_002"
+      status: "planted"
+      draft_ref: "chapter_001_draft.md 名单公布段落"
+    foreshadowing_03:
+      foreshadow_id: "fsh_03_sutang_dependency"
+      content: "苏棠依赖林砚通过第一关以在第二关获得帮助——这笔依赖如果落空，关系债会恶化"
+      planted_in: "chapter_001"
+      expected_payoff_in: "chapter_002 或 chapter_003"
+      status: "planted"
+      draft_ref: "chapter_001_draft.md 苏棠对话段落"
+
+  next_chapter_seed_change: "已接受的 delta 约束第二章战术——林砚不能再使用相同的资源路径（准入凭证已用，非公开渠道已放弃），也不能使用相同的信任路径（对苏棠的隐瞒尚未坦白）。第二章必须使用新策略，并面对关系债的压力。"
+
+  evidence_ref:
+    - "chapter_001_draft.md — 完整草稿"
+    - "chapter_001_reviewer_report.md — 审稿报告（平均4.69/5，state_delta_trust=5）"
+    - "event_log 条目 ch001_evt_01 至 ch001_evt_07"

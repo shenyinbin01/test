@@ -1,0 +1,91 @@
+# Ledger View After Chapter 002
+# STATUS: preview_from_proposed_delta — NOT official ledger
+
+ledger_view_id: "ledger_view_after_ch002_run002"
+source_delta: "delta_ch002_run002"
+inherits_from: "delta_ch001_run002"
+delta_status: proposed
+
+volume_progress_ledger:
+  volume_goal: "Survive or pass the local advancement assessment with traceable cost."
+  progress: "第二步完成：两关已过。第一关排名第三，第二关排名第三。所有代价有追溯链。"
+  remaining: "第三关——收官评定（禁止协同，独立提交个人成果）"
+  checkpoint_completed: 2
+  checkpoint_total: 3
+  accumulated_cost:
+    - "放弃非公开渠道（ch001）→ 第一关无先手信息（ch002）"
+    - "准入凭证选择（ch001）→ 第二关仅A路径可用（ch002）"
+    - "关系债隐瞒（ch001）→ 期待错位恶化（ch002）→ 协同延迟扣分"
+
+character_state_ledger:
+  protagonist:
+    name: "林砚"
+    current_state: "累计排名第三。已知温馨提醒为真但发送者未确认。背负期待错位型关系债。资源有限（仅准入凭证）。即将面对独立收官评定。"
+    last_choice: "选择A路径推进协同，明知风险仍承担后果。选择不揭穿苏棠的期待错位。"
+  competitor:
+    name: "赵锐"
+    current_state: "累计排名第二。拥有非公开渠道验证码。B路径完成速度快于林砚组。"
+    known_actions: "考前使用非公开渠道获取信息，考前让苏棠帮忙做测试（真实意图不明）。"
+  ally_with_debt:
+    name: "苏棠"
+    current_state: "因测试残留导致第二关延迟，自责中。持有对林砚的期待错位——认为林砚给了她关键建议。依赖林砚的预期仍在但已产生裂缝。"
+    debt_state: "期待错位型债务的承受方（不知情）。"
+
+relationship_debt_ledger:
+  active_debts:
+    - debt_id: "rel_debt_01_sutang_trust_gap"
+      summary: "从信任不对等恶化为期待错位。林砚无法通过坦白解决——坦白意味着打破苏棠的自我认知。"
+      stage: "escalated (ch001→ch002: 隐瞒→期待错位)"
+      impact: "已产生实质战术影响（第二关延迟扣分）"
+      origin: "ch001_evt_05, ch002_evt_04"
+      state: "active_and_worsened"
+  resolved_debts: []
+  excluded: []
+
+knowledge_ledger:
+  active_boundaries:
+    - boundary_id: "kn_boundary_01_signal_reliability"
+      summary: "温馨提醒为真（与考核系统干扰信号同模板），赵锐持有对应验证码。发送者身份未确认。"
+      state: "partially_verified"
+    - boundary_id: "kn_boundary_02_sutang_test_trap"
+      summary: "苏棠帮赵锐做的测试导致第二关延迟。测试的真实目的未知——蓄意阻碍还是无意利用？"
+      state: "unverified"
+  resolved_boundaries: []
+  excluded: []
+
+resource_ledger:
+  active_resources:
+    - resource_id: "access_token_initial"
+      state: "已确认并使用（第二关A路径优先级调度）。仍可用于第三关个人成果提交。"
+      owner: "林砚"
+    - resource_id: "zhao_rui_channel_verification"
+      state: "赵锐持有非公开渠道验证码（已确认）。林砚无法获取同等资源。"
+      note: "林砚已永久放弃该资源（ch001），资源差距在第二关中已兑现为排名差异。"
+  depleted_resources:
+    - "non_formal_channel_opportunity — 永久放弃"
+
+reader_question_ledger:
+  active_questions:
+    - question_id: "rq_01_signal_misread"
+      question: "哪一个考核信号被误读了？"
+      partial_answer: "温馨提醒是真的——但发送者（赵锐？）的意图仍然未知。"
+      remaining: "赵锐发送温馨提醒是为了让林砚放弃申请（陷阱），还是真的想帮他（试探）？"
+      state: "partially_answered"
+    - question_id: "rq_02_tactic_knowledge"
+      question: "第二关的策略是否基于可靠的知识？"
+      answer_status: "否——林砚的选择基于不完整知识（不知道苏棠有测试残留），导致延迟扣分。"
+      state: "answered (negative) → 第三关需要处理知识不可靠的后果"
+
+next_chapter_seed:
+  constraint: "第三关收官评定：禁止协同，独立提交个人成果。林砚必须接受代价而非干净晋升。"
+  inheritance:
+    - "rel_debt_01 为恶化状态（期待错位）——影响第三关是否选择坦白"
+    - "kn_boundary_01 部分验证——第三关可能需要决定是否揭露赵锐的行为"
+    - "kn_boundary_02 未验证——苏棠测试的真实目的可能在第三关揭示"
+    - "排名第三——收官评定中需要逆转或接受排名结果"
+    - "access_token 仍可用——但独立提交的成果需要超越凭证本身的价值"
+  spotlight_budget_ch003:
+    primary: "status_or_resource_change"
+    secondary: ["relationship_debt_01", "reader_question_01"]
+    background: "possible_next_window"
+    forbidden: ["complete_arc_resolution", "new_longform_outline"]

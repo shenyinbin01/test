@@ -1,0 +1,201 @@
+state_delta:
+  delta_id: "delta_ch003_run002"
+  source_chapter: "chapter_003"
+  reads_previous_delta: "delta_ch002_run002"
+  inherited_from_ch002:
+    - field: "relationship_debt_change"
+      item: "rel_debt_01_sutang_trust_gap"
+      inherited_state: "恶化为期待错位 — 林砚无法通过坦白解决"
+    - field: "knowledge_change"
+      item: "kn_boundary_01_signal_reliability"
+      inherited_state: "partially_verified — 温馨提醒为真，发送者未确认"
+    - field: "knowledge_change"
+      item: "kn_boundary_02_sutang_test_trap"
+      inherited_state: "unverified — 苏棠测试的真实目的不明"
+    - field: "reputation_or_identity_change"
+      item: "ranking_position"
+      inherited_state: "累计排名第三"
+
+  source_event_log:
+    - event_id: "ch003_evt_01"
+      summary: "第三关通知公布：独立提交个人成果，与前两关联动评分"
+      draft_ref: "chapter_003_draft.md 第1段"
+    - event_id: "ch003_evt_02"
+      summary: "苏棠在考核室门口质问林砚是否隐瞒了什么——要求坦诚"
+      draft_ref: "chapter_003_draft.md 苏棠拦截段落"
+    - event_id: "ch003_evt_03"
+      summary: "林砚选择第三种路径：不坦白自己的隐瞒，但揭露赵锐利用非公开渠道和苏棠终端做测试"
+      draft_ref: "chapter_003_draft.md 林砚回应段落"
+    - event_id: "ch003_evt_04"
+      summary: "林砚撰写并提交分析成果「信任锚定与信息推导」——以苏棠案例为数据（匿名）"
+      draft_ref: "chapter_003_draft.md 提交段落"
+    - event_id: "ch003_evt_05"
+      summary: "第三关结果公布：林砚方法论创新附加分第二，总排名升至第二。赵锐总分第一"
+      draft_ref: "chapter_003_draft.md 结果公布段落"
+    - event_id: "ch003_evt_06"
+      summary: "沈组长公开评语引用林砚成果案例细节——苏棠认出自己"
+      draft_ref: "chapter_003_draft.md 沈组长评语段落"
+    - event_id: "ch003_evt_07"
+      summary: "苏棠质问林砚案例是否写她——林砚半真半假回应（声称她是真正贡献者）"
+      draft_ref: "chapter_003_draft.md 苏棠走廊质问段落"
+    - event_id: "ch003_evt_08"
+      summary: "赵锐收到非公开评估：使用他人终端资源记录为档案备注，无实质惩罚"
+      draft_ref: "chapter_003_draft.md 赵锐评估段落"
+    - event_id: "ch003_evt_09"
+      summary: "晋升评定结果公布：待定，需补充材料"
+      draft_ref: "chapter_003_draft.md 晋升待定段落"
+    - event_id: "ch003_evt_10"
+      summary: "下一期考核通知：两个月后重开窗口，引入信任链路前置评估"
+      draft_ref: "chapter_003_draft.md 下一期通知段落"
+    - event_id: "ch003_evt_11"
+      summary: "林砚回复苏棠消息：承诺还债，但方式和时间未定。消息已读未回复"
+      draft_ref: "chapter_003_draft.md 结尾段落"
+
+  status: proposed
+
+  accepted_changes: []
+
+  rejected_changes: []
+
+  conflict_report:
+    conflict_type: none
+    conflicting_source: ""
+    reason: ""
+    proposed_resolution: ""
+    return_to: ""
+
+  provenance:
+    generated_from:
+      - "chapter_card_lite_x3.yaml"
+      - "state_delta_ch002.yaml (inherited state)"
+      - "spotlight_budget_initial.yaml (ch003 section)"
+      - "hot_ledger_slice_initial.yaml"
+    reviewed_by: "chapter_003_reviewer_report.md"
+    accepted_by: ""
+    source_artifacts:
+      - "chapter_003_draft.md"
+      - "chapter_003_reviewer_report.md"
+      - "chapter_002_draft.md"
+      - "state_delta_ch002.yaml"
+
+  plot_change: "第三关收官评定完成：林砚以方法论创新成果获得附加分，总排名升至第二。晋升评定为待定（需补充材料）。下一期考核将引入信任链路前置评估——将关系债从私人负担变为系统可量化变量。三章窗口结束，代价已被记录（待定状态），摩擦持续（债务未清、补充材料待提交）。"
+
+  character_change:
+    protagonist:
+      before: "累计排名第三，背负期待错位型关系债，知识状态为部分验证"
+      after: "总排名升至第二但晋升待定。选择第三种路径（揭露赵锐而非坦白自己），关系债进入制度化阶段。承诺还债但方式未定。"
+      agency_choice: "ch003 中三次关键选择：①揭露赵锐而非坦白隐瞒（对苏棠的部分坦诚）；②提交苏棠案例分析而非展示自身优势（以分析他人替代自我展示）；③半真半假回应苏棠质问（保护她免受双重事实冲击）"
+      choice_consequence: "排名上升但晋升待定、关系债从私人变为制度可见、信任链路评估的引入意味着债务的利息已被纳入体系"
+    competitor:
+      name: "赵锐"
+      before: "累计排名第二（可能在第三关后升至第一），拥有非公开渠道验证码"
+      after: "总分第一，但个人档案中保留使用他人终端资源的备注。体系认可其高效利用规则，同时记录了边缘行为"
+    ally_with_debt:
+      name: "苏棠"
+      before: "持有对林砚的期待错位，自责第二关延迟"
+      after: "认出了林砚匿名案例中的自己。面临两个未完全揭示的真相：①她错把推导当成林砚的给予；②她依赖的林砚也在信息劣势中挣扎。林砚选择了不让她同时面对两个事实。"
+      response: "质问后接受半真半假的解释。收到林砚的还债承诺，已读但未回复——信任处于待重建状态"
+
+  relationship_debt_change:
+    relationship_debt_01:
+      debt_id: "rel_debt_01_sutang_trust_gap"
+      from_character: "林砚"
+      to_character: "苏棠"
+      debt_type: "信任不对等 → 期待错位 → 制度化信任债"
+      origin_event: "ch001_evt_05"
+      ch002_evolution: "从隐瞒恶化为期待错位"
+      ch003_evolution:
+        stage: "从期待错位进入制度化阶段"
+        detail: "林砚选择揭露赵锐而非坦白自己的隐瞒（第三种路径）。苏棠认出匿名案例中的自己并质问——林砚半真半假回应。下一期考核引入信任链路评估——关系债从私人情绪负担变为系统可量化变量。"
+        escalation_event: "ch003_evt_03 + ch003_evt_06 + ch003_evt_07"
+        institutionalization: "信任链路前置评估意味着林砚和苏棠的债务关系将在未来被系统评分——债务的'利息'被制度化"
+        repayment_promise: "林砚承诺还债但方式未定（ch003_evt_11）——债务处于'声明待清偿'状态"
+      current_state: "active_and_institutionalized — 不再是单纯的私人债务，已被系统框架所捕捉"
+      draft_ref: "chapter_003_draft.md 全章 — 关系债贯穿始终"
+
+  knowledge_change:
+    knowledge_boundary_01:
+      boundary_id: "kn_boundary_01_signal_reliability"
+      subject: "温馨提醒的真假和发送者"
+      before_ch003: "partially_verified — 温馨提醒为真，发送者未确认"
+      after_ch003: "unchanged — 本章焦点在收官评定，温馨提醒发送者未进一步验证"
+      note: "三章窗口的限制（forbidden: complete_arc_resolution）——发送者身份在有限窗口内保持开放是设计性选择"
+    knowledge_boundary_02:
+      boundary_id: "kn_boundary_02_sutang_test_trap"
+      subject: "苏棠帮赵锐做的测试的真实目的"
+      before_ch003: "unverified"
+      after_ch003: "partially_revealed — 林砚推测赵锐使用苏棠的终端跑了验证流程，将其记录为关联链路。赵锐的备注证实了'使用他人终端资源'的记录，但未说明是蓄意还是利用"
+    knowledge_boundary_03:
+      boundary_id: "kn_boundary_03_trust_linkage_assessment"
+      subject: "信任链路评估的具体评分机制和权重"
+      known_by: ["沈组长（通知发布者）"]
+      unknown_by: ["林砚", "苏棠", "读者"]
+      state: "newly_introduced — 将在下一期考核中正式启用"
+      draft_ref: "chapter_003_draft.md 下一期通知段落"
+
+  resource_change:
+    access_token:
+      resource_id: "access_token_initial"
+      state: "三关全部使用完毕。在第三关中支持了个人成果提交流程。"
+      note: "准入凭证的效用已完全消耗——下一期考核可能需要新的资源"
+    trust_linkage_dimension:
+      resource_id: "trust_linkage_assessment_future"
+      resource_type: "制度性资源/约束——信任链路评估维度"
+      before: "不存在"
+      after: "下一期考核将引入——林砚和苏棠的债务关系将被量化为可评分变量"
+      note: "这不是林砚拥有的资源，而是制度施加的新约束——关系债从私人领域进入公共评分体系"
+
+  reputation_or_identity_change:
+    ranking_change:
+      before: "累计第三"
+      after: "总排名第二（方法论创新附加分+2位）"
+      evidence: "沈组长公布的第三关成绩（ch003_evt_05）"
+    promotion_status:
+      before: "未评定"
+      after: "待定（需补充材料）"
+      evidence: "系统通知（ch003_evt_09）"
+    identity_shift:
+      description: "林砚从'信息劣势中的竞争者'转变为'被系统标记为信任风险评估对象的晋升候选人'"
+      note: "排名的提升被晋升待定所对冲——身份变更不是简单的上升，而是附带制度性条件"
+      draft_ref: "chapter_003_draft.md 晋升待定 + 信任链路评估段落"
+
+  reader_question_change:
+    reader_question_02:
+      question_id: "rq_02_tactic_knowledge"
+      question_text: "第二关的策略是否基于可靠的知识？"
+      before_ch003: "answered (negative) — 知识不可靠导致延迟扣分"
+      after_ch003: "carried_forward — 第三关的策略（信任锚定分析）部分补偿了第二关的知识缺陷，但策略的成功也带来了新的未知（苏棠认出案例后的情绪反应）"
+    reader_question_03:
+      question_id: "rq_03_cost_of_changed_status"
+      question_text: "身份变更后跟随的是什么样的代价？"
+      before_ch003: "不存在"
+      after_ch003: "active — 林砚排名升至第二但晋升待定。代价清单：①需要补充材料（制度性的不确定期）；②关系债被纳入制度化评估框架（私人债务→公共变量）；③苏棠的信任处于待重建状态（已读未回复）"
+      linked_event: "ch003_evt_09 + ch003_evt_10 + ch003_evt_11"
+      draft_ref: "chapter_003_draft.md 结尾三段"
+
+  foreshadowing_or_payoff_change:
+    foreshadowing_04:
+      foreshadow_id: "fsh_04_sutang_test_consequence"
+      status: "partially_paid_off — 赵锐的备注证实使用他人终端资源被记录，但无实质惩罚。测试的'充分利用'反映在赵锐的档案备注中"
+      draft_ref: "chapter_003_draft.md 赵锐评估段落"
+    foreshadowing_new:
+      foreshadow_id: "fsh_05_trust_linkage_future"
+      content: "信任链路前置评估 — 可能在未来将林砚/苏棠的关系债量化为影响晋升的评分因子"
+      planted_in: "chapter_003"
+      expected_payoff_in: "未来可能的延续"
+      draft_ref: "chapter_003_draft.md 下一期通知段落"
+    foreshadowing_new_2:
+      foreshadow_id: "fsh_06_zhao_rui_archive_note"
+      content: "赵锐的个人档案中保留了使用他人终端资源的备注 — 可能在未来的晋升或审查中触发后果"
+      planted_in: "chapter_003"
+      expected_payoff_in: "未来可能的延续"
+      draft_ref: "chapter_003_draft.md 赵锐评估段落"
+
+  next_chapter_seed_change: "三章窗口结束。延续性种子：①林砚的晋升评定为待定，需补充材料（不确定窗口期）；②关系债进入制度化阶段——信任链路评估将债变为公共变量；③苏棠已读未回复——信任重建的进度和方向未定；④赵锐的档案备注可能在更长的时间尺度上产生后果。如果延续，核心张力将从'考核竞争'转向'信任制度化与个人关系之间的冲突'。"
+
+  evidence_ref:
+    - "chapter_003_draft.md — 完整草稿"
+    - "chapter_003_reviewer_report.md — 审稿报告（平均4.92/5，state_delta_trust=5）"
+    - "chapter_002_draft.md — ch002草稿（继承源）"
+    - "state_delta_ch002.yaml — ch002 state_delta（继承依据）"
+    - "event_log 条目 ch003_evt_01 至 ch003_evt_11"

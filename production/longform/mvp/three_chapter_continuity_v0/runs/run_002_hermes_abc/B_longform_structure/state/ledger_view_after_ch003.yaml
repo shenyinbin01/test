@@ -1,0 +1,90 @@
+# Ledger View After Chapter 003
+# STATUS: preview_from_proposed_delta ONLY — NOT official ledger
+# Delta: delta_ch003_run002_B_longform — status: proposed
+
+ledger_view_preview:
+  preview_source: delta_ch003_run002_B_longform
+  preview_status: proposed
+  generated_at: "chapter_003_end"
+  inherited_from_ch001_ch002:
+    resource_constraint: "通行令已消耗，苏晚备用令联署锁定 -- 终审后林砚通行令永久消耗，苏晚令冻结保留"
+    relationship_debt: "联署条款已触发 -- 第二关深化 -- 第三关进入有期限冻结结算"
+    knowledge_boundary: "苏晚记录可靠性存疑 -- 部分解决 -- 赵恪联署方揭示，结构性不对称确认"
+    reader_question_ch001: "哪个评估信号被误读了？-- resolved"
+    reader_question_ch002: "第二关策略是否建立在可靠知识之上？-- resolved"
+  
+  volume_progress_ledger:
+    volume_goal_assessment_window:
+      status: completed
+      checkpoint_001: "黄色信号（待察）— 已提交独立观察举证材料"
+      checkpoint_002: "举证答辩已提交并通过（独立观察路径被认可）"
+      checkpoint_003: "终审定级完成 — 林砚获'察进'身份（观察中进阶）"
+      volume_outcome: "三个关卡连续性验证通过。可追溯成本链：通行令消耗(ch001) -> 联署债务加深(ch002) -> 察进身份+季度审查(ch003)。"
+      summary: "评估窗口关闭。林砚以'察进'身份通过评估，附带三年双人联署+季度审查+待观察标注。代价：自由受限，苏晚冻结至少三个月。"
+
+  character_state_ledger:
+    protagonist_pressure_initial:
+      before: "已澄清知识边界，已提交独立观察举证，路径收窄但成本明确"
+      after: "身份从'参评者'变为'察进者'（观察中进阶）。持有铜牌身份令牌。对系统的不对称（联署结构决定信息优势 vs 债务约束）有认知。接受了非完美的结局——慢但可走的路。"
+      next_pressure:
+        - "首次季度审查倒计时已开始"
+        - "察进身份需双人联署才能申请资源——需要找到愿意联署的人"
+        - "苏晚的解冻取决于他的审查结果"
+      identity: "察进（观察中进阶）"
+
+  relationship_debt_ledger:
+    relationship_debt_01:
+      debtor: "林砚"
+      creditor: "苏晚"
+      nature: "三个月前苏晚替林砚保全评估资格，联署条款已触发"
+      status: active_with_temporal_countdown
+      current_manifestation: "苏晚通行令冻结保留——不得申请新令、不得参与下轮评估。解冻条件：林砚完成首次季度审查（至少三个月）。债务从即时约束转为期货——林砚的每一步成功都解冻一部分苏晚的自由。"
+      cross_chapter_persistence: "第1章激活 -> 第2章深化 -> 第3章转为有期限冻结结算 | 债务贯穿全卷，持续存在且可计量"
+
+  knowledge_ledger:
+    knowledge_boundary_01:
+      status: resolved_with_new_unknowns
+      verified_facts:
+        - "苏晚记录来源=纪先生公开讲稿（可靠）"
+        - "赵恪联署方=纪昀（纪先生次子），信息优势来自结构性联署"
+        - "联署系统存在不对称——纪昀-赵恪获得信息优势，苏晚-林砚只有债务约束"
+        - "赵恪获'优进'但附带联署审计条款（每季一查+纪昀通道冻结六个月）"
+        - "林砚获'察进'（三年双人联署+季度审查）"
+        - "第一关信号未被误读——信息不对齐来源于联署结构的先天不对称"
+      new_unknowns:
+        - "季度审查标准"
+        - "赵恪联署审计是否跨参评者影响"
+        - "察进身份升级/降级规则"
+        - "纪昀被纪先生发现后会发生什么"
+
+  resource_ledger:
+    access_token_initial:
+      status: permanently_consumed_or_frozen
+      protagonist_token: "永久消耗（终审确认不可恢复）"
+      ally_token: "冻结保留（解冻条件=林砚完成首次季度审查，至少三个月后）"
+      new_identity_resource: "察进铜牌——身份令牌，附带条件使用权限（需双人联署方可申请资源）"
+
+  reader_question_ledger:
+    reader_question_01:
+      question: "哪个评估信号被误读了？"
+      status: resolved
+      answer: "信号本身正确。信息不对齐源于联署结构——纪昀-赵恪联署提供信息优势，苏晚-林砚联署只提供债务约束。赵恪故意截留信息而非信号被误读。"
+    reader_question_02:
+      question: "第二关策略是否建立在可靠知识之上？"
+      status: resolved
+      answer: "是。独立观察策略基于通过旧档库验证的可靠知识（苏晚记录=纪先生公开讲稿），且恰当地利用了驳回案例中的替代路径规则。赵恪联署方的揭示进一步确认了知识基础的可靠性。"
+    reader_question_03:
+      question: "改变后的身份/状态会带来什么后续代价？"
+      status: active
+      planted_in: chapter_003
+      expected_payoff: "季度审查结果、察进身份的实际运作、苏晚的解冻"
+
+  next_chapter_seed:
+    volume_end: "本卷三个关卡完成"
+    optional_continuation:
+      direction: "林砚面临首次季度审查"
+      open_tensions:
+        - "需要找到愿意为察进者联署的人（苏晚冻结、通行令关闭、赵恪不可信）"
+        - "赵恪联署审计结果可能产生跨参评者影响"
+        - "苏晚解冻倒计时——时间压力"
+        - "察进身份的季度审查标准未知"

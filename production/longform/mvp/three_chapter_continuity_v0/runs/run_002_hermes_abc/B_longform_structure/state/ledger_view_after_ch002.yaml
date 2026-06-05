@@ -1,0 +1,83 @@
+# Ledger View After Chapter 002
+# STATUS: preview_from_proposed_delta ONLY — NOT official ledger
+# Delta: delta_ch002_run002_B_longform — status: proposed
+
+ledger_view_preview:
+  preview_source: delta_ch002_run002_B_longform
+  preview_status: proposed
+  generated_at: "chapter_002_end"
+  inherited_from_ch001:
+    - resource_constraint: "通行令已消耗，苏晚备用令联署锁定"
+    - relationship_debt: "联署条款已触发"
+    - knowledge_boundary: "苏晚记录可靠性存疑，赵恪与苏晚信息不对齐"
+    - reader_question: "哪个评估信号被误读了？"
+  
+  volume_progress_ledger:
+    volume_goal_assessment_window:
+      status: in_progress
+      checkpoint_001: "黄色信号（待察）— 已提交独立观察举证材料"
+      checkpoint_002: "举证答辩已提交 — 等待纪先生判定"
+      checkpoint_003: not_started
+      summary: "第二关举证材料已递交，基于独立观察（非联署方、联署触发前、与信号相关）。进度从 partial failure 推进到 pending review。"
+
+  character_state_ledger:
+    protagonist_pressure_initial:
+      before: "拿到黄色信号，通行令已消耗，对联署债务的连锁反应有了清醒认知，对苏晚记录的可靠性产生怀疑"
+      after: "已澄清知识边界（苏晚记录可靠，赵恪故意截留信息）。使用独立观察作为第二关策略——非完美的替代方案，但路径清晰。对信息不对称有精确认知，知道自己在博弈中的位置。"
+      active_pressure:
+        - "独立观察举证是否被纪先生接受（未知）"
+        - "不能使用苏晚任何信息渠道（木牌明文禁止）"
+        - "联署债务从'可能的背叛'转为'确知的约束'——情感账单澄清但规则账单加重"
+        - "赵恪有联署方——可能影响第三关"
+
+  relationship_debt_ledger:
+    relationship_debt_01:
+      debtor: "林砚"
+      creditor: "苏晚"
+      nature: "三个月前苏晚替林砚保全评估资格，联署条款已触发"
+      status: active_and_deepened
+      current_manifestation: "债务双重深化：(1)规则层面—第二关木牌禁止联署约束渠道，林砚不能接触苏晚的任何信息；(2)情感层面—苏晚澄清未藏信息，债务从'怀疑下的负担'变为'确知中的约束'"
+      cross_chapter_persistence: "第1章激活→第2章深化→第3章必须 traceable"
+
+  knowledge_ledger:
+    knowledge_boundary_01:
+      status: partially_resolved
+      verified_facts:
+        - "苏晚记录来源=纪先生公开讲稿（可靠）"
+        - "赵恪看过同源记录且故意选择性共享信息"
+        - "赵恪一年前签过联署（联署方未知）"
+        - "独立观察可作为非同源举证材料（三条件规则）"
+        - "第二关明确禁止联署约束渠道"
+      unverified_or_misread:
+        - "独立观察举证是否会被接受"
+        - "赵恪的联署方身份"
+        - "第一关信号被'误读'的具体节点——信号正确，但信息被截留，这算不算'误读'"
+      active_reader_question_ch001: "哪个评估信号被误读了？| partially answered: 信号本身正确，但赵恪截留信息"
+      active_reader_question_ch002: "第二关策略是否建立在可靠知识之上？"
+
+  resource_ledger:
+    access_token_initial:
+      status: consumed_and_locked
+      protagonist_token: "已提交（不可再用）"
+      ally_token: "联署锁定（不可动用）"
+      new_alternative_resource: "独立观察记录（非通行令体系）——已提交为举证材料"
+      constraint_deepening: "第二关木牌不仅禁止通行令体系资源，还禁止联署约束渠道的任何信息"
+
+  reader_question_ledger:
+    reader_question_01:
+      question: "哪个评估信号被误读了？"
+      status: partially_answered
+      planted_in: chapter_001
+      progress_in_ch002: "确认信号本身未被误读——但信息在传递中被赵恪故意截留"
+    reader_question_02:
+      question: "第二关策略是否建立在可靠知识之上？"
+      status: active
+      planted_in: chapter_002
+      expected_progress_in: chapter_003
+
+  next_chapter_seed:
+    ch003_constraint_01: "独立观察举证结果将由纪先生判定——可能接受、驳回、或要求更多"
+    ch003_constraint_02: "不能使用通行令资源，不能接触苏晚信息渠道"
+    ch003_constraint_03: "赵恪联署方身份可能浮出——一年前签过的联署在第三关会有什么影响"
+    ch003_constraint_04: "联署债务必须从规则约束延伸到第三关的最终结果"
+    ch003_question_seed: "改变后的身份/状态会带来什么后续代价？"

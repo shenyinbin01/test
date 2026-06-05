@@ -1,0 +1,34 @@
+# 角色设定 — Group A_baseline
+# 场景: 小组织晋升/考核
+
+characters:
+  protagonist:
+    name: "林远"
+    role: "主角"
+    position: "项目部骨干"
+    goal: "争取晋升名额，成为高级项目经理"
+    constraint: "掌握的信息有限且未经核实，依赖他人传递的二手情报"
+    trait: "谨慎但不够果断，重视人情"
+    
+  competitor:
+    name: "赵铭"
+    role: "竞争者"
+    position: "同期骨干"
+    goal: "与林远竞争同一个晋升名额"
+    trait: "信息灵通，善于利用规则，更主动"
+    
+  supervisor:
+    name: "陈主任"
+    role: "考核负责人"
+    position: "部门副主任"
+    goal: "按照制度执行三方考核，不做偏袒"
+    trait: "公事公办，看重流程合规，对人情账不敏感"
+    
+  relationship_debt_character:
+    name: "苏晚"
+    role: "关系债务对象"
+    position: "前项目搭档，已调岗至后勤"
+    relation_to_protagonist: "林远曾欠她一次关键帮助，至今未还"
+    trait: "温和但记得人情，在林远需要时会提出请求"
+
+scenario: "小组织内部晋升考核，设有三个检查点（checkpoint），名额仅一个。考核方式为三方评估：项目成果、同事互评、上级评价。"

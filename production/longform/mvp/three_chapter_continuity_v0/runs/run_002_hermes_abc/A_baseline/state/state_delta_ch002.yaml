@@ -1,0 +1,86 @@
+# State Delta — 第002章
+# Group A_baseline — 简化版，status: proposed ONLY
+
+state_delta:
+  delta_id: "delta_ch002_A_baseline"
+  source_chapter: "ch002"
+  source_event_log: "generation/chapter_002_draft.md"
+  status: "proposed"
+  accepted_changes: []
+  rejected_changes: []
+  conflict_report: null
+  provenance: "group_A_baseline_chapter_002_draft"
+  inherited_from: "delta_ch001_A_baseline"
+
+  plot_change:
+    summary: "林远在资源劣势下调整第二检查点策略，尝试走同事互评路径，期间苏晚再次牵扯、偶然发现评分细则、澄清知识盲区，最终提交时路径已明显变窄。"
+    beats:
+      - "林远查看ch001结果，资源项黄标坐实"
+      - "赵铭已在同事互评维度抢先布局"
+      - "苏晚再次请求帮忙，人情债持续牵扯"
+      - "林远在档案室偶然发现评分细则，澄清无效支持证据规则"
+      - "林远发现跨部门协作权重调高，但支撑证据不足"
+      - "第二检查点提交，策略项有进步，资源项仍弱"
+      - "苏晚提出为互评签字，林远接受——债务转为互相亏欠"
+      - "赵铭在走廊看到苏晚的名字，记在心里"
+
+  character_change:
+    protagonist_initial: "资源受损、策略路径不明、知识有盲区"
+    protagonist_final: "策略意识增强、知识边界扩展、路径变窄但更清晰、人情债更深"
+    changed: true
+
+  relationship_debt_change:
+    debtor: "林远"
+    creditor: "苏晚"
+    previous_state: "部分偿还，关系正向化"
+    new_state: "持续牵扯，互相亏欠态势形成，苏晚提出为林远互评签字"
+    nature: "debt_sustained_and_deepened"
+
+  knowledge_change:
+    domain: "考核评分细则"
+    previous_state: "林远对细则不了解，依赖碎片信息"
+    new_state: "澄清了同事互评中无效支持证据规则、跨部门协作权重调高规则"
+    evidence: "在档案室偶然看到赵铭遗留的细则复印件"
+    nature: "boundary_clarified"
+
+  resource_change:
+    resource_name: "同事互评维度 — 老周支持路径"
+    previous_state: "潜在可用路径"
+    new_state: "发现为无效路径（老周与林远无直接项目关联）"
+    impact: "避免了在无效路径上浪费精力，但可走的路进一步缩窄"
+    nature: "path_blocked_by_knowledge"
+    additional_resource: "苏晚的跨部门签字，潜在可用但尚未兑现"
+
+  reputation_or_identity_change:
+    previous_state: "在苏晚眼中可信赖，在赵铭眼中可被利用"
+    new_state: "持续中，无显著变化"
+    nature: "stable"
+
+  reader_question_change:
+    previous_questions_status: "仍开放"
+    new_questions:
+      - "赵铭注意到苏晚后会采取什么行动？"
+      - "苏晚的互评签字能生效吗？"
+      - "林远在路径越来越窄的情况下还能翻盘吗？"
+    nature: "evolved"
+
+  foreshadowing_or_payoff_change:
+    previous_seeds_status: "苏晚的后续牵扯已兑现，赵铭的微笑尚未完全兑现"
+    new_seeds:
+      - "赵铭在走廊看到苏晚名字——明确会在第三检查点利用"
+    nature: "developed"
+
+  next_chapter_seed_change:
+    seed: "赵铭将利用苏晚-林远关系制造合规质疑，林远需在最终检查点面对人情债的终极代价和可能的意外回报"
+    nature: "planted"
+
+  evidence_ref:
+    draft_file: "generation/chapter_002_draft.md"
+    predecessor_draft: "generation/chapter_001_draft.md"
+    predecessor_state_delta: "state/state_delta_ch001.yaml"
+    predecessor_ledger_view: "state/ledger_view_after_ch001.yaml"
+    key_lines:
+      - "林远看到自己的资源项旁边被打了个黄色的标记"
+      - "苏晚的消息弹出来：还需要一份材料"
+      - "细则第十四条：无效支持证据规则"
+      - "赵铭碰巧路过，目光在林远亮起的手机屏幕上一扫而过，苏晚这个名字被他记在了心里"

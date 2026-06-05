@@ -1,0 +1,99 @@
+state_delta:
+  delta_id: delta_ch002_run002_B_longform
+  source_chapter: chapter_002
+  source_event_log:
+    - event_002_01: "林砚复盘：明确通行令不能再用，苏晚记录可靠性问题必须回答"
+    - event_002_02: "林砚前往旧档库查验历届考核原始记录"
+    - event_002_03: "发现一年前赵恪签署的联署回执——赵恪知道联署条款但未告知林砚"
+    - event_002_04: "第二关通知送达（木牌）：举证答辩，非同源材料，禁止联署约束渠道"
+    - event_002_05: "苏晚在中庭现身，澄清记录来源（纪先生公开讲稿），确认赵恪也看过同源记录"
+    - event_002_06: "林砚确认苏晚没有藏信息，但赵恪故意选择性共享——信息不对齐被证实"
+    - event_002_07: "林砚在旧档库找到驳回案例中的替代方案规则：独立观察记录三条件"
+    - event_002_08: "林砚基于登记处门口对赵恪的独立观察撰写举证材料——非联署方、联署触发前、与信号直接相关"
+    - event_002_09: "林砚提交举证表，走向登记处——路径收窄但成本清晰"
+  status: proposed
+  accepted_changes: []
+  rejected_changes: []
+  conflict_report:
+    conflict_type: none
+    conflicting_source: ""
+    reason: ""
+    proposed_resolution: ""
+    return_to: ""
+  provenance:
+    generated_from:
+      - chapter_card_lite_x3.yaml(chapter_002)
+      - state_delta_ch001.yaml (proposed, read as constraint source)
+      - ledger_view_after_ch001.yaml (preview, read as constraint source)
+      - chapter_001_draft.md
+      - chapter_001_reviewer_report.md
+    reviewed_by: "reviewer_gate_critical_standard"
+    accepted_by: ""
+    source_artifacts:
+      - generation/chapter_002_draft.md
+      - generation/chapter_001_draft.md (referenced)
+      - review/chapter_001_reviewer_report.md (referenced)
+      - state/state_delta_ch001.yaml (referenced)
+      - state/ledger_view_after_ch001.yaml (referenced)
+  plot_change: "第二关举证答辩：林砚不能使用通行令体系资源（来自ch001 delta），不能使用苏晚信息渠道（木牌明文禁止联署约束渠道）。通过旧档库独立调查验证了知识边界——证实苏晚记录可靠但赵恪故意不共享完整信息。基于独立观察撰写举证材料（非联署方、联署触发前、与信号相关），提交第二关。路径收窄，成本（债务+信息不对称）明确化。"
+  character_change:
+    protagonist:
+      before: "已做出第一项有成本的选择（交出通行令且拿到黄而非青），对苏晚记录的信息可靠性产生怀疑，背负激活的联署债务"
+      after: "已澄清苏晚记录可靠但赵恪选择性共享信息——知识边界部分解决。用独立观察作为第二关举证材料——路径比第一关更窄（不能使用资源、不能使用信任路径）。对信息不对称有精确认知。"
+  relationship_debt_change:
+    debt_id: relationship_debt_01
+    debtor: "林砚(protagonist)"
+    creditor: "苏晚(ally)"
+    nature: "三个月前苏晚替林砚保全评估资格，联署条款已触发"
+    status_before: "联署状态触发——苏晚备用通行令被锁定"
+    status_after: "联署债务深化——第二关木牌明确'受债务联署约束之渠道视为无效'，林砚不能接触苏晚的任何信息渠道。同时林砚确认苏晚未藏信息（她的记录正确且公开），债务从'可能的背叛'转为'确知的约束'——情感账单澄清但规则账单加重。"
+    evidence:
+      - "event_002_05: 苏晚澄清记录来源"
+      - "event_002_04: 木牌禁止联署约束渠道"
+      - "event_002_08: 林砚选择独立观察路径，避开苏晚渠道"
+    persistence_requirement: "must manifest in all three chapters — chapter_002 shows deepening"
+  knowledge_change:
+    boundary_id: knowledge_boundary_01
+    status_before: "林砚持有苏晚提供的解读记录，但遭遇可靠性疑问（赵恪行为与苏晚记录存在不一致）"
+    status_after: "部分解决——确认苏晚记录可靠（来源是纪先生公开讲稿），但确认赵恪故意选择性共享信息（他知道黄色信号补证规则但未告知）。林砚现在确切知道：信号本身不是误读——是信息被中间人截留。"
+    known_facts:
+      - "苏晚记录来源=纪先生公开讲稿，内容正确"
+      - "赵恪一年前签过联署，且看过同源记录"
+      - "赵恪故意不告知黄色信号的补证规则——信息不对齐是有意为之"
+      - "独立观察可作为非同源举证材料（三条件规则）"
+      - "第二关禁止联署约束渠道的任何信息"
+    unknown_facts:
+      - "独立观察举证是否会被接受（能否把黄改成青）"
+      - "第三关会是什么形式"
+      - "赵恪的联署方是谁，是否影响后续"
+  resource_change:
+    resource_id: access_token_initial
+    type: "通行令体系资源"
+    status_before: "林砚通行令已消耗，苏晚备用通行令联署锁定"
+    status_after: "状态不变，但约束加深——第二关木牌明确禁止通行令体系内任何资源，且禁止联署约束渠道。林砚找到替代资源：独立观察记录（非通行令体系、非联署渠道）。"
+  reputation_or_identity_change: {}
+  reader_question_change:
+    questions_added:
+      - "Was the second checkpoint tactic based on reliable knowledge?（第二关策略是否建立在可靠知识之上？）"
+    questions_resolved: []
+    questions_active_before:
+      - "Which assessment signal was misread?（哪个评估信号被误读了？）"
+    questions_active_after:
+      - "Which assessment signal was misread? -- partially answered -- 信号本身未被误读，但信息被赵恪故意截留"
+      - "Was the second checkpoint tactic based on reliable knowledge?"
+    evidence_in_text:
+      - "event_002_03: 旧档库发现赵恪联署回执"
+      - "event_002_05: 苏晚确认记录来源"
+      - "event_002_08: 林砚基于独立观察撰写举证"
+      - "chapter_end: 林砚提交举证表"
+  foreshadowing_or_payoff_change: {}
+  next_chapter_seed_change: "chapter_003 必须面对：独立观察举证结果（纪先生是否接受）；赵恪的联署方身份可能浮出水面；联署债务从规则约束（不能碰苏晚渠道）转向情感压力（苏晚已澄清，林砚欠她的仍然是真实的）。第三关是最终 checkpoint——状态、资源、债务变化需要可追溯。新增问题：赵恪的联署方会不会影响第三关？"
+  evidence_ref:
+    - "generation/chapter_002_draft.md: line 1-15 (复盘：通行令不能用、记录可靠性问题)"
+    - "generation/chapter_002_draft.md: line 16-45 (旧档库调查：发现赵恪联署回执)"
+    - "generation/chapter_002_draft.md: line 46-65 (第二关木牌通知)"
+    - "generation/chapter_002_draft.md: line 66-95 (中庭与苏晚对话：记录来源澄清)"
+    - "generation/chapter_002_draft.md: line 96-end (找到驳回案例替代方案+撰写独立观察举证+提交)"
+    - "generation/chapter_001_draft.md (referenced: 赵恪墨痕、登记处门口场景)"
+    - "state/state_delta_ch001.yaml (referenced: resource_change, relationship_debt_change)"
+    - "state/ledger_view_after_ch001.yaml (referenced: next_chapter_seed constraints)"

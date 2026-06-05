@@ -1,0 +1,85 @@
+# Ledger View After Chapter 001
+# STATUS: preview_from_proposed_delta — NOT official ledger
+# DO NOT use for reducer input until delta status = 'accepted'
+
+ledger_view_id: "ledger_view_after_ch001_run002"
+source_delta: "delta_ch001_run002"
+delta_status: proposed
+
+volume_progress_ledger:
+  volume_goal: "Survive or pass the local advancement assessment with traceable cost."
+  progress: "第一步完成：考核窗口启动。准入凭证已提交。第一关准备阶段。"
+  remaining: "第二关、第三关尚未开始。"
+  checkpoint_completed: 0
+  checkpoint_total: 3
+
+character_state_ledger:
+  protagonist:
+    name: "林砚"
+    current_state: "已提交准入凭证，放弃了非公开渠道信息优势。对苏棠有未坦白的信任债务。"
+    pressure: "即将面对第一关（信息甄别），方向未知。赵锐处于领先位置。"
+    last_choice: "选择规则合规性而非不确定的信息捷径。"
+    choice_trace: "evt_04 + evt_05"
+  competitor:
+    name: "赵锐"
+    current_state: "排在入围名单第一位，已拿到准入凭证多时。对林砚展示竞争姿态。"
+    note: "根据 spotlight_budget，本章为 background_only。"
+  ally_with_debt:
+    name: "苏棠"
+    current_state: "依赖林砚通过第一关，不知林砚隐瞒了删除提示消息的行为。"
+    dependency_active: true
+
+relationship_debt_ledger:
+  active_debts:
+    - debt_id: "rel_debt_01_sutang_trust_gap"
+      summary: "林砚对苏棠存在信息不对称债务。林砚知道自己删除了温馨提醒，苏棠不知道。"
+      state: "active"
+      origin_chapter: "chapter_001"
+      draft_ref: "ch001_evt_05"
+  resolved_debts: []
+  excluded: []
+
+knowledge_ledger:
+  active_boundaries:
+    - boundary_id: "kn_boundary_01_signal_reliability"
+      summary: "温馨提醒的真假未知。已知信息：提醒未署名、非公开渠道只能用一次、林砚已放弃接触。"
+      state: "unverified"
+      known_by: []
+      unknown_by: ["林砚", "苏棠", "读者"]
+  resolved_boundaries: []
+  excluded: []
+
+resource_ledger:
+  active_resources:
+    - resource_id: "access_token_initial"
+      state: "已提交申请，排队中（约三小时后确认）。"
+      owner: "林砚（待确认）"
+      note: "准入凭证是进入考核的资格令牌，一旦确认即不可重复使用。"
+    - resource_id: "non_formal_channel_opportunity"
+      state: "已永久放弃"
+      owner: "无"
+      note: "林砚选择不接触并删除消息。此资源不再可用。"
+  depleted_resources: []
+
+reader_question_ledger:
+  active_questions:
+    - question_id: "rq_01_signal_misread"
+      question: "哪一个考核信号被误读了？"
+      sub_questions:
+        - "温馨提醒是真——林砚放弃了先手优势？"
+        - "温馨提醒是假——是谁在放烟雾弹（赵锐？）？"
+      state: "active — 等待后续章节验证。"
+      planted_in: "chapter_001"
+      expected_answer_in: "chapter_002 或 chapter_003"
+
+next_chapter_seed:
+  constraint: "第二章战术受第一章 delta 约束：不能重复使用准入凭证逻辑，不能重复使用相同的信任路径。"
+  inheritance:
+    - "rel_debt_01 为活跃状态——影响第二章战术选择"
+    - "kn_boundary_01 未解决——第二章面临知识不确定"
+    - "access_token 已提交待确认——第二章进入时资源状态已固定"
+  spotlight_budget_ch002:
+    primary: "inherited_delta_constrains_tactic"
+    secondary: ["relationship_debt_01", "knowledge_boundary_01"]
+    background: "assessment_rule_context"
+    forbidden: ["new_faction_map", "full_rule_lesson"]

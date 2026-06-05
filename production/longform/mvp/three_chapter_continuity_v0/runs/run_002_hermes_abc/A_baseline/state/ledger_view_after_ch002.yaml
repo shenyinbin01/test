@@ -1,0 +1,55 @@
+# Ledger View — 第002章后
+# Group A_baseline — preview_from_proposed_delta ONLY
+# 注意：这不是正式ledger，仅为预览
+
+ledger_view:
+  view_type: "preview_from_proposed_delta"
+  chapter: "ch002"
+  generated_at: "after_ch002_draft"
+  official_ledger: false
+  based_on: "preview_from_delta_ch001_and_delta_ch002"
+
+  preview_state:
+    protagonist:
+      name: "林远"
+      status: "资源持续劣势，策略路径收窄，知识边界已澄清，人情债加深为互相亏欠"
+      current_position: "项目部骨干"
+      advancement_progress: "第二检查点完成，策略项有进步，资源项仍黄标，同事互评支撑不足"
+
+    competitor:
+      name: "赵铭"
+      status: "全面领先，注意到苏晚这个突破口"
+      advancement_progress: "三项指标均为绿标A档"
+
+    relationship_debts:
+      - debtor: "林远"
+        creditor: "苏晚"
+        balance: "互相亏欠 — 林远帮苏晚调档案，苏晚提出为林远互评签字"
+        risk_level: "high — 赵铭已注意到此关系"
+
+    knowledge:
+      - domain: "考核评分细则"
+        status: "已澄清 — 无效支持证据规则、跨部门协作权重"
+      - domain: "赵铭的战术模式"
+        status: "已识别 — 赵铭在测试细则理解深度"
+
+    resources:
+      - name: "项目优先调配权"
+        status: "已消耗"
+      - name: "老周互评路径"
+        status: "已识别为无效"
+      - name: "苏晚跨部门签字"
+        status: "潜在可用，待兑现，但会加深债务"
+
+    reader_questions_open:
+      - "林远的牺牲是否值得？"
+      - "赵铭会如何利用苏晚线索？"
+      - "苏晚的互评签字能挽回劣势吗？"
+      - "路径越来越窄，林远能翻盘吗？"
+
+    foreshadowing_active:
+      - "赵铭走廊一瞥 — 将在第三检查点收线"
+
+    next_chapter_seed: "第三检查点综合情境应对，赵铭将利用苏晚关系发起合规挑战，林远需面对人情债的终极考验"
+
+  note: "此预览基于ch001和ch002的proposed state_delta，不代表正式状态。"

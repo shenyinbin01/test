@@ -1,0 +1,75 @@
+# State Delta — 第001章
+# Group A_baseline — 简化版，status: proposed ONLY
+
+state_delta:
+  delta_id: "delta_ch001_A_baseline"
+  source_chapter: "ch001"
+  source_event_log: "generation/chapter_001_draft.md"
+  status: "proposed"
+  accepted_changes: []
+  rejected_changes: []
+  conflict_report: null
+  provenance: "group_A_baseline_chapter_001_draft"
+
+  plot_change:
+    summary: "考核启动，林远在第一个检查点前面对资源与关系的两难选择，最终选择帮助苏晚而牺牲优先调配权。"
+    beats:
+      - "晋升考核邮件公布，三个检查点，一个名额"
+      - "赵铭利用关系获取内部评分细则，占据信息优势"
+      - "苏晚以人情债为由请求林远帮忙调档案"
+      - "林远放弃新项目优先调配权，选择帮苏晚"
+      - "第一检查点提交，资源项被标黄"
+      - "赵铭注意到林远劣势"
+
+  character_change:
+    protagonist_initial: "希望晋升、信息不足、谨慎"
+    protagonist_final: "已做出第一个代价选择、资源受损、人情债部分偿还"
+    changed: true
+
+  relationship_debt_change:
+    debtor: "林远"
+    creditor: "苏晚"
+    previous_state: "林远欠苏晚一次关键帮助，三个月前苏晚替林远扛雷"
+    new_state: "林远通过放弃优先调配权帮助苏晚，人情债部分偿还，关系从单向债务转为正向互动"
+    nature: "debt_partially_repaid"
+
+  knowledge_change:
+    previous_state: "林远对考核规则了解有限"
+    new_state: "林远意识到赵铭拥有信息优势但自身信息仍不足"
+    nature: "awareness_only_no_resolution"
+
+  resource_change:
+    resource_name: "项目优先调配权"
+    previous_state: "持有，可用于第一检查点选高价值项目"
+    new_state: "已放弃，用于帮苏晚调档案"
+    impact: "第一检查点资源项被标记为待加强黄标"
+    nature: "lost"
+
+  reputation_or_identity_change:
+    previous_state: "N/A，首章"
+    new_state: "在苏晚眼中可信赖的还债者，在赵铭眼中可被利用的弱点对手，在陈主任眼中资源决策有待观察"
+    nature: "initial_formation"
+
+  reader_question_change:
+    questions:
+      - "林远放弃资源的选择在后续检查点是否值得？"
+      - "赵铭将如何利用林远的资源劣势？"
+      - "苏晚的人情债是否真的还清，还是会有新的牵扯？"
+    nature: "established"
+
+  foreshadowing_or_payoff_change:
+    seeds:
+      - "苏晚的事情才刚刚开始，暗示后续牵扯"
+      - "赵铭的嘴角弧度，暗示他将展开针对性行动"
+    nature: "seeded"
+
+  next_chapter_seed_change:
+    seed: "林远带着资源劣势和与苏晚的新关系进入第二检查点，赵铭在资源项领先，评分细则仍不明确"
+    nature: "planted"
+
+  evidence_ref:
+    draft_file: "generation/chapter_001_draft.md"
+    key_lines:
+      - "林远看到自己的资源项旁边被打了个黄色的标记"
+      - "苏晚的事情才刚刚开始"
+      - "赵铭微微侧过头，嘴角带着一个不易察觉的弧度"
