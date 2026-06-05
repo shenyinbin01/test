@@ -1,0 +1,24 @@
+﻿project: longform_three_chapter_execution_review
+version: v0
+status: readiness_review
+base_branch: planning/longform-three-chapter-execution-packet-v0
+base_commit: dd175f8dcad14244da8902a75f85d08a4ff96733
+scope:
+  generate_fiction: false
+  create_real_outline: false
+  create_real_ip_universe: false
+  modify_skill_pack: false
+  run_deepseek: false
+  run_hermes: false
+  run_abc_validation: false
+  execute_deep_research: false
+  use_raw_corpus: false
+  add_approved_patterns: false
+review_targets:
+  execution_packet_complete: true
+  templates_consistent: true
+  gates_executable: true
+  renderer_boundary_clear: true
+  state_delta_reviewable: true
+  output_paths_defined: true
+  go_no_go_ready: true
