@@ -16,8 +16,17 @@
 
 建议先上传整个 `production/deep_research_packet/` 目录，而不是整个仓库。若 Deep Research 要求补充背景，再按 `upload_manifest.md` 选择性补充。
 
+## GitHub 入口模式
+
+如果 Deep Research 可以读取 GitHub，优先使用 [DEEP_RESEARCH_ENTRYPOINT.md](DEEP_RESEARCH_ENTRYPOINT.md)。项目负责人只需要提供该入口页 URL，并复制 [deep_research_github_prompt.md](deep_research_github_prompt.md) 中的 prompt。
+
+如果 Deep Research 无法读取 GitHub，再按 [upload_manifest.md](upload_manifest.md) 上传必传文件。不建议上传整个仓库。
+
 ## 文件清单
 
+- `DEEP_RESEARCH_ENTRYPOINT.md`：Deep Research 读取 GitHub 时的唯一入口页。
+- `deep_research_github_prompt.md`：只提供一个 GitHub URL 时使用的 prompt。
+- `github_reading_order.md`：GitHub 读取顺序和每个文件用途。
 - `packet_status.yaml`：资料包状态和输入路径检查。
 - `upload_manifest.md`：建议上传、推荐上传和不建议上传的文件。
 - `project_summary.md`：项目总摘要。

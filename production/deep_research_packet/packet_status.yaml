@@ -38,6 +38,9 @@ inputs_checked:
 created_files:
   - README.md
   - packet_status.yaml
+  - DEEP_RESEARCH_ENTRYPOINT.md
+  - deep_research_github_prompt.md
+  - github_reading_order.md
   - upload_manifest.md
   - project_summary.md
   - terminology_glossary.md

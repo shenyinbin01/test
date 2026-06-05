@@ -32,3 +32,11 @@
 ## 上传原则
 
 先上传资料包，再让 Deep Research 基于公开资料做外部研究、理论对标、工程对标和批判性审计。不要把资料包当成结论本身。
+
+## GitHub URL 替代上传方案
+
+首选：提供 [DEEP_RESEARCH_ENTRYPOINT.md](DEEP_RESEARCH_ENTRYPOINT.md) 的 GitHub URL，让 Deep Research 按入口页中的读取顺序阅读资料包。
+
+备选：如果 Deep Research 无法读取 GitHub，再上传 A 类必传文件。
+
+不建议：上传整个仓库。整个仓库包含大量与本次研究无关的工程文件，容易增加噪音和误读风险。
