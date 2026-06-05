@@ -6,27 +6,46 @@
 
 作者退半步，人物漏半拍，读者补半截。
 
+钩子负责把人拉进来，真东西负责让人留下来。
+
 ## Do Not Drift
 
-- 不要把 Human Texture 当成最终人味方案。
-- 不要把 Work Voice 写成老练讲课。
+- 不要把人物质感（Human Texture）当成最终人味方案。
+- 不要把作品声音 / 作者站位（Work Voice）写成老练讲课。
 - 不要把作者站位变成作者抢戏。
-- 不要把 Character Agency 写成主角永远主动出击。
-- 不要把 Live Leakage 写成刻意小动作堆砌。
-- 不要把 Reader Immersion 写成解释读者应该怎么想。
-- 不要把 Agentic Narrative Engine 变成自由聊天型多 agent 跑飞。
+- 不要把角色主动感 / 行动主权（Character Agency）写成主角永远主动出击。
+- 不要把活人浅痕 / 活人漏痕（Live Leakage）写成刻意小动作堆砌。
+- 不要把读者代入感 / 读者解压（Reader Immersion）写成解释读者应该怎么想。
+- 不要把角色驱动叙事引擎（Agentic Narrative Engine）变成自由聊天型多 agent 跑飞。
 - 不要因为发现新范式就废弃已有中间成果。
 - 每个子项目都必须有可验收产物。
 - 失败也要沉淀为风险和边界。
+- 不要把数据反馈等同于创作判断。
+- 不要把读者当成只会被生理钩子驱动的对象。
+- 不要把工程化产能变成低质投喂能力。
+- 不要把“懂网文”变成“只会套路”。
+- 不要把爽点密度当成作品质量。
+- 不要把平台分发逻辑当成创作价值观。
+- 不要让任何模块只增强操控，而不增强作品本身。
+- 不要把内容价值观写成反商业、反爽点或反网文。
 
 ## Specific Boundaries
 
-Work Voice is not author imitation and not Author Fingerprint. It is a narrator-position contract that says what the narrator notices, withholds, compresses and lets leak.
+作品声音 / 作者站位（Work Voice）不是作者模仿，也不是作者指纹。它是讲述者位置契约，说明讲述者注意什么、保留什么、压缩什么、轻轻漏出什么。
 
-Live Leakage is not “add more details.” It is low-salience residue from pressure, habit and relation. If readers notice the technique before they feel the person, it is too loud.
+活人浅痕 / 活人漏痕（Live Leakage）不是“多加细节”。它是压力、习惯和关系留下的低显著残痕。如果读者先注意到技巧，再感到人物，它就太响了。
 
-Character Agency is not constant initiative. Retreat, silence, compromise, delay and misjudgment can all be agency when they come from the character's goal and pressure.
+角色主动感 / 行动主权（Character Agency）不是持续主动出击。退让、沉默、妥协、拖延和误判，只要来自角色自己的目标和压力，也可以是行动主权。
 
-Reader Immersion is not telling readers what to feel. It is arranging information, pressure and release so the reader can complete the emotional circuit.
+读者代入感 / 读者解压（Reader Immersion）不是告诉读者该怎么感受。它是安排信息、压力和释放，让读者自己补全情绪回路。
 
-Agentic Narrative Engine is not a replacement order. It is a research track that must pass bounded-scene validation before any production discussion.
+角色驱动叙事引擎（Agentic Narrative Engine）不是替换命令。它是研究线，必须先通过有边界的场景验证，再讨论任何生产接入。
+
+## Content Value Guardrail
+
+内容价值观不是空泛愿景，而是工程检查项。每个子项目都要问：
+
+- 它是否增强人物活性，而不是只增加标签。
+- 它是否增强叙述诚意，而不是让作者出来抢戏。
+- 它是否保留读者解压空间，而不是替读者解释结论。
+- 它是否逼近现场感，而不是扩大低质批量投喂能力。

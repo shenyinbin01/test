@@ -6,42 +6,54 @@
 
 这句话是当前所有子项目的共同边界。它要求链路不要只补“好看的句子”，而要让人物、行动、叙述者、细节和读者体验各自承担自己的职责。
 
-## Mainline A: Current Generation Pipeline Enhancement
+作者退半步，人物漏半拍，读者补半截。
 
-当前生产链路仍然以 Planner / Writer / Reviewer / Polisher 的多角色 Skill 体系为主。Mainline A 的目标不是推翻它，而是在现有链路上逐层补强正文质量。
+钩子负责把人拉进来，真东西负责让人留下来。
 
-| Layer | Role | Solves | Boundary |
+## 顶层内容定位：工程化厨房，而不是喂屎机器
+
+本项目不做喂屎机器，也不满足于低级预制菜。项目定位是工程化厨房：有流程、有标准、有备料，但工程化的目标不是更高效地套路读者，而是尽量稳定地逼近现场创作感。
+
+数据可以告诉我们什么容易勾住人，不能告诉我们什么值得写。爽点、节奏、钩子是工具，不是作品灵魂。每个模块都要接受同一个顶层追问：它是在增强作品，还是只是在增强操控？
+
+后续所有 MVP 的 acceptance criteria 都应加入反低质投喂检查：是否避免滑向纯套路、纯操控、低质投喂。
+
+## 主线 A：当前生成链路增强（Current Generation Pipeline Enhancement）
+
+当前生产链路仍然以规划者、写作者、审核者、润色者的多角色 Skill 体系为主。主线 A 的目标不是推翻它，而是在现有链路上逐层补强正文质量。
+
+| 层级 | 职责 | 解决问题 | 边界 |
 | --- | --- | --- | --- |
-| Human Texture | 人物 / 关系层 | 人物、信息、关系不像人 | 不等于最终人味方案，不替代叙述者和角色主权 |
-| Work Voice / Narrative Stance | 叙述者位置层 | 正文里有没有稳定讲述者、作者站位 | 不等于作者模仿，不是 Author Fingerprint |
-| Character Agency | 人物行动主权层 | 人物是否按自己的目标、误判、资源和关系行动 | 不等于主角永远主动出击 |
-| Live Leakage | 低显著活人痕迹层 | 人物和场景是否有轻微、非模板的活人漏痕 | 不等于多加细节或小动作堆砌 |
-| Reader Immersion | 读者参与和解压层 | 读者是否能自己补全、代入和释放压力 | 不等于解释读者应该怎么想 |
+| 人物质感（Human Texture） | 人物 / 关系层 | 人物、信息、关系不像人 | 不等于最终人味方案，不替代叙述者和角色主权 |
+| 作品声音 / 作者站位（Work Voice / Narrative Stance） | 叙述者位置层 | 正文里有没有稳定讲述者、作者站位 | 不等于作者模仿，不是作者指纹（Author Fingerprint） |
+| 角色主动感 / 行动主权（Character Agency） | 人物行动主权层 | 人物是否按自己的目标、误判、资源和关系行动 | 不等于主角永远主动出击 |
+| 活人浅痕 / 活人漏痕（Live Leakage） | 低显著活人痕迹层 | 人物和场景是否有轻微、非模板的活人漏痕 | 不等于多加细节或小动作堆砌 |
+| 读者代入感 / 读者解压（Reader Immersion） | 读者参与和解压层 | 读者是否能自己补全、代入和释放压力 | 不等于解释读者应该怎么想 |
 
-Mainline A 的推进方式应保持小闭环：每一层先设计最小产物，再做 dry run 或小样本验证，再决定是否进入 skill-pack 或生产链路。
+主线 A 的推进方式应保持小闭环：每一层先设计最小产物，再做 dry run 或小样本验证，再决定是否进入 skill-pack 或生产链路。
 
-## Mainline B: Agentic Narrative Engine
+## 主线 B：角色驱动叙事引擎（Agentic Narrative Engine）
 
-Agentic Narrative Engine 是长线范式研究，不立即替换当前生产链路。它把小说生成从“先规划章节再写正文”推进到“先运行世界和角色，再把事件日志渲染成正文”。
+角色驱动叙事引擎（Agentic Narrative Engine）是长线范式研究，不立即替换当前生产链路。它把小说生成从“先规划章节再写正文”推进到“先运行世界和角色，再把事件日志渲染成正文”。
 
-| Component | Role |
+| 组件 | 职责 |
 | --- | --- |
-| IP Universe | 定义世界类型、题材承诺、核心矛盾和可持续资产 |
-| World State | 保存当前世界事实、资源、制度、位置和事件后果 |
-| Character Agents | 让角色拥有目标、认知边界、误判、关系、资源和策略 |
-| Scene Simulation | 在有边界的场景里运行角色互动 |
-| Event Log | 记录角色行动、冲突、信息流动和后果 |
-| Narrative Renderer | 把事件日志渲染成符合网文阅读体验的正文 |
-| Reviewer Gates | 审核类型承诺、节奏、爽点、人物主权和越界风险 |
+| IP 宇宙（IP Universe） | 定义世界类型、题材承诺、核心矛盾和可持续资产 |
+| 世界状态（World State） | 保存当前世界事实、资源、制度、位置和事件后果 |
+| 角色代理（Character Agents） | 让角色拥有目标、认知边界、误判、关系、资源和策略 |
+| 场景仿真（Scene Simulation） | 在有边界的场景里运行角色互动 |
+| 事件日志（Event Log） | 记录角色行动、冲突、信息流动和后果 |
+| 叙述渲染器（Narrative Renderer） | 把事件日志渲染成符合网文阅读体验的正文 |
+| 审核门禁（Reviewer Gates） | 审核类型承诺、节奏、爽点、人物主权和越界风险 |
 
 Agentic Narrative Engine 的第一阶段只能做有边界的 1-scene MVP。自由多 agent 不是当前目标，因为它容易失控、难验收，也会干扰现有产物收口。
 
 ## Relationship Between Mainlines
 
-Mainline A 是当前主线，服务近期质量提升。Mainline B 是研究主线，服务未来范式升级。
+主线 A 是当前主线，服务近期质量提升。主线 B 是研究主线，服务未来范式升级。
 
-两者的关系不是替代，而是递进：Character Agency 和 Work Voice 的判断会为 Agentic Narrative Engine 提供角色代理和叙述渲染的早期边界；Agentic 的研究结果也可以反向帮助当前链路理解“人物为什么动”和“叙述者该退到哪里”。
+两者的关系不是替代，而是递进：角色主动感 / 行动主权（Character Agency）和作品声音 / 作者站位（Work Voice）的判断会为角色驱动叙事引擎（Agentic Narrative Engine）提供角色代理和叙述渲染的早期边界；长线范式研究也可以反向帮助当前链路理解“人物为什么动”和“叙述者该退到哪里”。
 
 ## Guardrail
 
-当出现新概念时，不能因此废弃已有中间成果。Human Texture、Work Voice、Character Agency、Live Leakage、Reader Immersion 是渐进式质量层；Agentic Narrative Engine 是长线范式层。二者都需要可验收产物、失败记录和明确的停止条件。
+当出现新概念时，不能因此废弃已有中间成果。人物质感（Human Texture）、作品声音 / 作者站位（Work Voice）、角色主动感 / 行动主权（Character Agency）、活人浅痕 / 活人漏痕（Live Leakage）、读者代入感 / 读者解压（Reader Immersion）是渐进式质量层；角色驱动叙事引擎（Agentic Narrative Engine）是长线范式层。二者都需要可验收产物、失败记录和明确的停止条件。
