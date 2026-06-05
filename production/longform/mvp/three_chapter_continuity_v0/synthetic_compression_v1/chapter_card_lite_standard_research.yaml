@@ -1,0 +1,49 @@
+chapter_card_tiers:
+  default_for_real_three_chapter_sample: chapter_card_lite
+  chapter_card_lite:
+    purpose: "minimum state-change contract for default three-chapter sample"
+    fields:
+      chapter_id: ""
+      chapter_one_sentence: ""
+      volume_goal_link: ""
+      plot_function: ""
+      required_conflict: ""
+      required_payoff_or_debt: ""
+      character_state_before: {}
+      character_state_after: {}
+      reader_question_before: []
+      reader_question_after: []
+      must_not_happen: []
+      next_chapter_seed: ""
+    excluded_from_lite:
+      - required_reveal
+      - relationship_pressure_change
+      - knowledge_state_change
+      - resource_or_status_change
+      - spotlight_targets
+      - anti_feed_notes
+      - drift_watch_items
+  chapter_card_standard:
+    purpose: "normal three-chapter sample with human review"
+    adds:
+      required_reveal: ""
+      relationship_pressure_change: {}
+      knowledge_state_change: {}
+      resource_or_status_change: {}
+      spotlight_budget: {}
+      allowed_divergence_band: []
+    note: "Standard is complete enough for three-chapter validation, but not a research ledger."
+  chapter_card_research:
+    purpose: "diagnostic mode only; not default production input"
+    adds:
+      spotlight_targets: []
+      anti_feed_notes: []
+      drift_watch_items: []
+      foreshadow_payoff_window: []
+      renderer_risk_notes: []
+      orchestrator_replan_options: []
+    note: "Research fields are used only after failure or for architecture research."
+rules:
+  - "chapter_one_sentence is a navigation anchor, not a full chapter contract."
+  - "Lite must contain only fields that affect next chapter continuity."
+  - "Research fields must not enter default Writer / Renderer prompts."

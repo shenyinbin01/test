@@ -1,0 +1,28 @@
+project: longform_three_chapter_synthetic_compression
+version: v1
+status: schema_compression_validation
+base_branch: planning/longform-three-chapter-synthetic-dry-run-v0
+base_commit: 02a345847cba7183142a868d759ccc86b514f11f
+scope:
+  generate_fiction: false
+  create_real_outline: false
+  modify_skill_pack: false
+  run_deepseek: false
+  run_hermes: false
+  run_abc_validation: false
+  execute_deep_research: false
+  use_raw_corpus: false
+  add_approved_patterns: false
+goals:
+  reduce_schema_weight: true
+  add_state_delta_status: true
+  add_state_delta_conflict_report: true
+  add_provenance: true
+  add_spotlight_budget: true
+  add_hot_ledger_slice: true
+  tier_reviewer_gate: true
+  preserve_v0_flow: true
+result:
+  v1_compression_completed: true
+  default_mode: Lite
+  recommended_next_step: human_review_then_v1_1_schema_polish

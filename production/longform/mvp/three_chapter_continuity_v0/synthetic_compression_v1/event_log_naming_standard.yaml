@@ -1,0 +1,52 @@
+event_log_naming_standard:
+  purpose: "standardize sanctioned trace between scene agency and state_delta"
+  event_log_entry:
+    event_id: ""
+    source_chapter_id: ""
+    source_scene_id: ""
+    source_agency_packet_id: ""
+    visible_event: ""
+    character_intention: ""
+    chosen_tactic: ""
+    immediate_outcome: ""
+    consequence_seed: ""
+    affected_state_delta_fields: []
+    renderer_visible: []
+    renderer_forbidden_to_change: []
+    evidence_ref: []
+  rules:
+    - "event_log is sanctioned trace, not free agent chatter."
+    - "Renderer reads event_log, not unreviewed agent logs."
+    - "event_log must support state_delta evidence_ref."
+    - "hidden intention is allowed only as character_intention, not as certified fact."
+  replaces_or_merges_v0_fields:
+    source_scene_agency_packet: source_agency_packet_id
+    source_scene_id: source_scene_id
+    actor: "derived from source_agency_packet_id.active_character when needed"
+    action_taken: chosen_tactic
+    immediate_result: immediate_outcome
+    visible_evidence: evidence_ref
+    renderer_allowed_to_see: renderer_visible
+    renderer_not_allowed_to_change: renderer_forbidden_to_change
+  sample_entry:
+    event_id: event_ch001_resource_removed
+    source_chapter_id: chapter_001
+    source_scene_id: scene_ch001_access_loss
+    source_agency_packet_id: scene_agency_ch001_primary
+    visible_event: "resource_token_A status changes to revoked"
+    character_intention: "protagonist wants to preserve evidence before asking mentor"
+    chosen_tactic: "record timestamp and withhold incomplete suspicion"
+    immediate_outcome: "access blocked; evidence_seed_A preserved"
+    consequence_seed: "relationship_debt_01 and reader_question_02"
+    affected_state_delta_fields:
+      - resource_change
+      - relationship_debt_change
+      - reader_question_change
+    renderer_visible:
+      - "revoked resource status"
+      - "timestamp evidence"
+    renderer_forbidden_to_change:
+      - "resource_token_A cannot be restored"
+      - "hidden_fact_A cannot become verified"
+    evidence_ref:
+      - "resource_token_A.status_field"

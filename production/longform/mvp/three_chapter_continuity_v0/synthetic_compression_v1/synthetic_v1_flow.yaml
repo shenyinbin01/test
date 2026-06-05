@@ -1,0 +1,170 @@
+synthetic_v1_flow:
+  mode: Lite_default_with_Standard_review
+  note: "compressed shape only; no prose generation"
+  inputs:
+    world_slice: synthetic_world_slice_minimal
+    book_spine: synthetic_single_book_story_minimal
+    volume_card: synthetic_volume_card_01
+    chapter_card_mode: chapter_card_lite
+    hot_ledger_slice_mode: latest_relevant_items_only
+    reviewer_gate_mode:
+      - Critical
+      - Standard
+    research_fields_default: false
+  chapter_cards_lite:
+    - chapter_id: chapter_001
+      chapter_one_sentence: "protagonist loses resource_token_A and preserves evidence_seed_A"
+      volume_goal_link: volume_goal_01
+      plot_function: access_loss_and_evidence_seed
+      required_conflict: "challenge publicly or gather evidence quietly"
+      required_payoff_or_debt: "relationship_debt_01 created"
+      character_state_before:
+        protagonist: "expects access"
+      character_state_after:
+        protagonist: "blocked but has evidence_seed_A"
+      reader_question_before:
+        - reader_question_01
+      reader_question_after:
+        - reader_question_01_refreshed
+        - reader_question_02_created
+      must_not_happen:
+        - "no free resource_token_A restoration"
+      next_chapter_seed: "seek limited mentor exception"
+    - chapter_id: chapter_002
+      reads_state_delta: state_delta_v1_ch001
+      chapter_one_sentence: "protagonist gets limited exception and visible relationship cost"
+      volume_goal_link: volume_goal_01
+      plot_function: costly_partial_recovery
+      required_conflict: "mentor demands disclosure before exception"
+      required_payoff_or_debt: "relationship_debt_01 refreshed"
+      character_state_before:
+        protagonist: "blocked"
+      character_state_after:
+        protagonist: "limited access with public obligation"
+      reader_question_before:
+        - reader_question_02
+      reader_question_after:
+        - reader_question_02_partially_paid
+        - reader_question_03_created
+      must_not_happen:
+        - "no instant trust repair"
+      next_chapter_seed: "use access_exception_A before deadline"
+    - chapter_id: chapter_003
+      reads_state_delta: state_delta_v1_ch002
+      chapter_one_sentence: "protagonist spends exception to expose false_record_A and triggers scrutiny"
+      volume_goal_link: volume_goal_01
+      plot_function: partial_payoff_with_new_pressure
+      required_conflict: "spend exception now or lose record access"
+      required_payoff_or_debt: "payoff_01 partial and scrutiny created"
+      character_state_before:
+        protagonist: "limited access with deadline"
+      character_state_after:
+        protagonist: "evidence held but under scrutiny"
+      reader_question_before:
+        - reader_question_03
+      reader_question_after:
+        - reader_question_03_partially_paid
+        - reader_question_04_created
+      must_not_happen:
+        - "no complete volume resolution"
+      next_chapter_seed: "formal_review_A begins"
+  hot_ledger_slice_before_ch003:
+    max_items: 8
+    included_items:
+      - item_id: volume_goal_01
+        ledger: volume_progress_ledger
+        inclusion_reason: "current chapter must advance partial payoff"
+        latest_delta_ref: state_delta_v1_ch002
+      - item_id: relationship_debt_01
+        ledger: relationship_debt_ledger
+        inclusion_reason: "must manifest in chapter_003"
+        latest_delta_ref: state_delta_v1_ch002
+      - item_id: hidden_fact_A
+        ledger: knowledge_ledger
+        inclusion_reason: "chapter_003 reveal boundary"
+        latest_delta_ref: state_delta_v1_ch002
+      - item_id: access_exception_A
+        ledger: resource_ledger
+        inclusion_reason: "must be spent or expire"
+        latest_delta_ref: state_delta_v1_ch002
+      - item_id: reader_question_03
+        ledger: reader_question_ledger
+        inclusion_reason: "must be partially paid or delayed"
+        latest_delta_ref: state_delta_v1_ch002
+  spotlight_budget_ch003:
+    chapter_id: chapter_003
+    primary_focus:
+      - protagonist_decision
+    secondary_focus:
+      - access_exception_A_cost
+      - hidden_fact_A_partial_support
+    background_only:
+      - institution_A_setting
+      - rival_circle_A_context
+    forbidden_to_steal_scene:
+      - full_world_exposition
+      - rival_backstory_dump
+    max_scene_focus_count: 3
+    must_manifest_relationship_debt:
+      - relationship_debt_01
+  event_log_entry_standard:
+    event_id: event_ch003_record_check
+    source_chapter_id: chapter_003
+    source_scene_id: scene_ch003_record_check
+    source_agency_packet_id: scene_agency_ch003_primary
+    visible_event: "visible_record_A contradicts false_record_A"
+    character_intention: "protagonist wants support before accusation"
+    chosen_tactic: "spend access_exception_A on one record check"
+    immediate_outcome: "partial evidence gained and scrutiny triggered"
+    consequence_seed: "institution_scrutiny_A and reader_question_04"
+    affected_state_delta_fields:
+      - plot_change
+      - knowledge_change
+      - resource_change
+      - reader_question_change
+    renderer_visible:
+      - visible_record_A
+      - access_exception_A_spent
+    renderer_forbidden_to_change:
+      - "hidden_fact_A cannot become fully verified"
+      - "institution_scrutiny_A cannot disappear"
+    evidence_ref:
+      - event_ch003_record_check.visible_event
+  state_delta_v1_example:
+    delta_id: state_delta_v1_ch003
+    source_chapter: chapter_003
+    source_event_log:
+      - event_ch003_record_check
+    status: accepted
+    accepted_changes:
+      - change_id: ch003_knowledge_01
+        field: knowledge_change.hidden_fact_A
+        value: supported_partial
+        evidence_ref:
+          - event_ch003_record_check.visible_event
+      - change_id: ch003_resource_01
+        field: resource_change.access_exception_A
+        value: spent
+        evidence_ref:
+          - event_ch003_record_check.visible_event
+    rejected_changes: []
+    conflict_report:
+      conflict_type: none
+      conflicting_source: ""
+      reason: ""
+      proposed_resolution: ""
+      return_to: ""
+    provenance:
+      generated_from:
+        - chapter_card_lite.chapter_003
+        - event_log.event_ch003_record_check
+        - reviewer_gate.Critical
+      reviewed_by: longform_reviewer
+      accepted_by: state_manager
+      source_artifacts:
+        - synthetic_v1_flow.yaml
+  reducer_result_shape:
+    only_accepted_delta_merged: true
+    merge_status: merged
+    provenance_required: true
+    hot_slice_updated: true

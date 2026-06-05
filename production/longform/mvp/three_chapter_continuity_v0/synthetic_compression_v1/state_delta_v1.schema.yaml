@@ -1,0 +1,61 @@
+state_delta:
+  delta_id: ""
+  source_chapter: ""
+  source_event_log: []
+  status: proposed
+  accepted_changes:
+    - change_id: ""
+      field: ""
+      value: ""
+      evidence_ref: []
+  rejected_changes:
+    - change_id: ""
+      field: ""
+      reason: ""
+      return_to: ""
+  conflict_report:
+    conflict_type: none
+    conflicting_source: ""
+    reason: ""
+    proposed_resolution: ""
+    return_to: ""
+  provenance:
+    generated_from:
+      - chapter_card_lite_or_standard
+      - event_log
+      - reviewer_gate
+    reviewed_by: ""
+    accepted_by: ""
+    source_artifacts: []
+  plot_change: ""
+  character_change: {}
+  relationship_debt_change: {}
+  knowledge_change: {}
+  resource_change: {}
+  reputation_or_identity_change: {}
+  reader_question_change: {}
+  foreshadowing_or_payoff_change: {}
+  next_chapter_seed_change: ""
+  evidence_ref: []
+status_values:
+  - proposed
+  - accepted
+  - rejected
+  - conflict
+  - needs_human_review
+conflict_report_shape:
+  conflict_type: "missing_evidence|ledger_conflict|knowledge_conflict|resource_conflict|relationship_conflict|canon_conflict|none"
+  conflicting_source: ""
+  reason: ""
+  proposed_resolution: ""
+  return_to: "Reviewer|StateManager|Orchestrator|SceneEngine"
+provenance_shape:
+  generated_from: []
+  reviewed_by: ""
+  accepted_by: ""
+  source_artifacts: []
+rules:
+  - "Only accepted state_delta can enter reducers."
+  - "conflict and needs_human_review must not auto-merge into ledgers."
+  - "state_delta is not a chapter summary."
+  - "accepted_changes must carry evidence_ref."
