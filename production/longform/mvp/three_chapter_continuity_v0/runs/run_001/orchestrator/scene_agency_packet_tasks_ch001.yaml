@@ -1,0 +1,30 @@
+﻿scene_agency_packet_tasks:
+  - task_id: scene_agency_ch001_primary
+    linked_chapter_id: chapter_001
+    active_character: protagonist
+    local_goal: "Enter the first checkpoint without losing the only access token."
+    belief_about_situation: "The marked signal may indicate the safe queue, but it is not verified."
+    available_options:
+      - "Spend the access token now and keep relationship_debt_01 hidden."
+      - "Ask the indebted ally for help and expose the debt."
+      - "Wait for more evidence and risk missing the checkpoint."
+    chosen_tactic_expected_shape: "Protect the ally from immediate blame by spending the access token."
+    perceived_cost: "Resource loss and a visible obligation to the ally."
+    wrong_model_or_blindspot: "Protagonist assumes the marked signal is procedural, not a warning."
+    withheld_plan: "Does not reveal the full uncertainty to the ally."
+    attention_target: "access_token_initial and relationship_debt_01"
+    visible_action_seed: "hands over the token before asking the ally to speak"
+    next_friction: "second checkpoint cannot reuse the spent token"
+    not_allowed:
+      - "Do not generate a perfect choice."
+      - "Do not solve the assessment."
+      - "Do not explain the whole institution."
+  - task_id: event_log_seed_ch001
+    linked_chapter_id: chapter_001
+    event_log_entries:
+      - event_id: event_ch001_access_token_spent
+        visible_event: "access_token_initial is spent at checkpoint one"
+        evidence_ref: "generation/chapter_001_draft.md#token-spent"
+      - event_id: event_ch001_debt_created
+        visible_event: "relationship_debt_01 becomes active because ally takes visible risk"
+        evidence_ref: "generation/chapter_001_draft.md#ally-risk"

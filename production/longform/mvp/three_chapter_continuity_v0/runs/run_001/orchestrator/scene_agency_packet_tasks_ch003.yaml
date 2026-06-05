@@ -1,0 +1,33 @@
+﻿scene_agency_packet_tasks:
+  - task_id: scene_agency_ch003_primary
+    linked_chapter_id: chapter_003
+    active_character: protagonist
+    previous_delta_read:
+      - state/state_delta_ch002.yaml
+      - state/ledger_view_after_ch002.yaml
+    local_goal: "Complete the final checkpoint without hiding the debt."
+    belief_about_situation: "The partial verification from chapter_002 is useful but not enough for a clean pass."
+    available_options:
+      - "Claim full certainty and risk false status."
+      - "Admit the uncertainty and accept a lower but traceable status."
+      - "Let the ally take blame for the incomplete verification."
+    chosen_tactic_expected_shape: "Admit uncertainty and accept provisional advancement with recorded cost."
+    perceived_cost: "Lower status and unresolved debt with ally."
+    wrong_model_or_blindspot: "Protagonist underestimates how visible the admission will be."
+    withheld_plan: "Keeps a later repair path private, without turning it into a new arc."
+    attention_target: "status change and relationship_debt_01"
+    visible_action_seed: "chooses provisional mark instead of clean pass"
+    next_friction: "status changes, but ally trust remains damaged"
+    not_allowed:
+      - "Do not produce total victory."
+      - "Do not erase debt."
+      - "Do not open a full new longform arc."
+  - task_id: event_log_seed_ch003
+    linked_chapter_id: chapter_003
+    event_log_entries:
+      - event_id: event_ch003_status_changes_with_cost
+        visible_event: "protagonist receives provisional advancement, not full pass"
+        evidence_ref: "generation/chapter_003_draft.md#provisional-mark"
+      - event_id: event_ch003_next_friction_created
+        visible_event: "relationship_debt_01 remains active after ally hears the admission"
+        evidence_ref: "generation/chapter_003_draft.md#ally-friction"

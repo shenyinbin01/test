@@ -1,0 +1,23 @@
+﻿ledger_view:
+  ledger_id: ledger_view_after_ch003
+  status: preview_from_proposed_delta
+  source_state_delta: state/state_delta_ch003.yaml
+  formal_reducer_entry: false
+  reason: "state_delta_ch003 is proposed and has not been accepted by assigned reviewer."
+  plot_ledger:
+    current: "Three-checkpoint sample completed with provisional advancement."
+  relationship_debt_ledger:
+    relationship_debt_01:
+      status: active_unresolved
+      evidence_ref:
+        - generation/chapter_003_draft.md#ally-friction
+  knowledge_ledger:
+    knowledge_boundary_01: "The sample clarifies white strip condition without opening full world rules."
+  resource_ledger:
+    access_status: restricted
+  reputation_or_identity_ledger:
+    assessment_status: provisional_advancement
+  reader_question_ledger:
+    active:
+      - "What cost follows from the changed status?"
+  reducer_note: "Preview only. No accepted ledger merge occurred."

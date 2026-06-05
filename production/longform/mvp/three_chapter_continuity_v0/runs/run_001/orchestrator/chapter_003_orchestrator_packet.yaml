@@ -1,0 +1,34 @@
+﻿orchestrator_packet:
+  chapter_id: chapter_003
+  status: prepared_for_generation
+  required_previous_reads:
+    draft: generation/chapter_002_draft.md
+    reviewer_report: review/chapter_002_reviewer_report.md
+    state_delta: state/state_delta_ch002.yaml
+    ledger_preview: state/ledger_view_after_ch002.yaml
+  source_inputs:
+    chapter_card: input/chapter_card_lite_x3.yaml#chapter_003
+    spotlight_budget: input/spotlight_budget_initial.yaml#chapter_003
+  inherited_constraints:
+    - "knowledge_boundary_01 is partially clarified but not fully solved."
+    - "relationship_debt_01 remains active."
+    - "second checkpoint tactic created status pressure."
+  chapter_contract:
+    plot_function: "Prove prior deltas shape the final checkpoint outcome."
+    required_conflict: "Accept a cost instead of receiving clean advancement."
+    required_payoff_or_debt: "Record one status or resource change and one continuing friction."
+    forbidden_resolution:
+      - "No total victory."
+      - "No erased relationship debt."
+      - "No new full arc."
+  reader_question_refresh_plan:
+    before:
+      - "Was the second checkpoint tactic based on reliable knowledge?"
+    after:
+      - "What cost follows from the changed status?"
+  event_log_required:
+    - event_ch003_status_changes_with_cost
+    - event_ch003_next_friction_created
+  replan_trigger:
+    - "chapter_002 proposed state_delta is not read."
+    - "final checkpoint removes all cost."

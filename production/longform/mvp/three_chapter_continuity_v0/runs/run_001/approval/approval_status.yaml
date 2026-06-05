@@ -1,17 +1,21 @@
 ﻿project: longform_three_chapter_run001_approval
 version: v0
 status: approval_packet_prepared
-execution_approved: false
-run_deepseek: false
-run_hermes: false
+execution_approved: true
+run_deepseek: true
+run_hermes: true
+approved_scope: run_001_only
 assigned_reviewer:
   final_decision_owner: project_owner
+  assigned_reviewer: project_owner
   assistant_review_support: ChatGPT
   codex_can_accept_state_delta: false
 output_path_lock:
   allowed_root: production/longform/mvp/three_chapter_continuity_v0/runs/run_001/
+  output_path_lock_confirmed: true
+failure_stop_rules_confirmed: true
 scope:
-  generate_fiction_now: false
+  generate_fiction_now: true
   create_real_ip_universe: false
   create_real_longform_outline: false
   modify_skill_pack: false

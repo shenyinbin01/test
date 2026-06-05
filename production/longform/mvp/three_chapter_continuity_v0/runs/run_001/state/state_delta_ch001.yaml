@@ -1,0 +1,58 @@
+﻿state_delta:
+  delta_id: state_delta_ch001
+  source_chapter: chapter_001
+  source_event_log:
+    - event_ch001_access_token_spent
+    - event_ch001_debt_created
+  status: proposed
+  accepted_changes: []
+  rejected_changes: []
+  conflict_report:
+    conflict_type: none
+    conflicting_source: ""
+    reason: ""
+    proposed_resolution: ""
+    return_to: ""
+  provenance:
+    generated_from:
+      - generation/chapter_001_draft.md
+      - review/chapter_001_reviewer_report.md
+      - orchestrator/scene_agency_packet_tasks_ch001.yaml
+    reviewed_by: codex_structural_review
+    accepted_by: pending_assigned_reviewer
+    source_artifacts:
+      - generation/chapter_001_draft.md
+      - review/chapter_001_reviewer_report.md
+  plot_change: "First checkpoint entered with spent token and witness path constraint."
+  character_change:
+    protagonist: "Made a bounded choice that protects ally from immediate blame but spends resource."
+  relationship_debt_change:
+    relationship_debt_01:
+      status: active
+      change: "Lio signs witness strip and takes visible risk."
+      evidence_ref:
+        - generation/chapter_001_draft.md#ally-risk
+  knowledge_change:
+    knowledge_boundary_01:
+      status: uncertain
+      change: "Marked signal remains ambiguous."
+      evidence_ref:
+        - generation/chapter_001_draft.md#token-spent
+  resource_change:
+    access_token_initial:
+      status: spent
+      evidence_ref:
+        - generation/chapter_001_draft.md#token-spent
+  reputation_or_identity_change: {}
+  reader_question_change:
+    opened:
+      - "Which assessment signal was misread?"
+  foreshadowing_or_payoff_change:
+    seed:
+      - "Spent token blocks future easy entry."
+  next_chapter_seed_change: "Chapter 002 cannot use token entry and must carry relationship_debt_01."
+  evidence_ref:
+    - generation/chapter_001_draft.md#token-spent
+    - generation/chapter_001_draft.md#ally-risk
+rules:
+  reducer_entry: blocked_until_assigned_reviewer_accepts

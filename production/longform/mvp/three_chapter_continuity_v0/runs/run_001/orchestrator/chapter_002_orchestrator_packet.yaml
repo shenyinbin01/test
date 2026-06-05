@@ -1,0 +1,34 @@
+﻿orchestrator_packet:
+  chapter_id: chapter_002
+  status: prepared_for_generation
+  required_previous_reads:
+    draft: generation/chapter_001_draft.md
+    reviewer_report: review/chapter_001_reviewer_report.md
+    state_delta: state/state_delta_ch001.yaml
+    ledger_preview: state/ledger_view_after_ch001.yaml
+  source_inputs:
+    chapter_card: input/chapter_card_lite_x3.yaml#chapter_002
+    spotlight_budget: input/spotlight_budget_initial.yaml#chapter_002
+  inherited_constraints:
+    - "access_token_initial is spent or blocked from reuse."
+    - "relationship_debt_01 is active and visible."
+    - "reader_question_01 remains open."
+  chapter_contract:
+    plot_function: "Show state inheritance and refresh active relationship debt."
+    required_conflict: "Prior cost blocks the easy second-checkpoint tactic."
+    required_payoff_or_debt: "Clarify one knowledge boundary without full reveal."
+    forbidden_resolution:
+      - "No reset of chapter_001 cost."
+      - "No unearned certainty."
+      - "No free payoff."
+  reader_question_refresh_plan:
+    before:
+      - "Which assessment signal was misread?"
+    after:
+      - "Was the second checkpoint tactic based on reliable knowledge?"
+  event_log_required:
+    - event_ch002_prior_delta_blocks_easy_tactic
+    - event_ch002_debt_worsens_or_delays
+  replan_trigger:
+    - "chapter_001 proposed state_delta is not read."
+    - "relationship_debt_01 disappears."

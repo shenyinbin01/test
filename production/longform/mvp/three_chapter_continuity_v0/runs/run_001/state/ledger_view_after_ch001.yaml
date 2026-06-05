@@ -1,0 +1,25 @@
+﻿ledger_view:
+  ledger_id: ledger_view_after_ch001
+  status: preview_from_proposed_delta
+  source_state_delta: state/state_delta_ch001.yaml
+  formal_reducer_entry: false
+  reason: "state_delta_ch001 is proposed and has not been accepted by assigned reviewer."
+  plot_ledger:
+    current: "First checkpoint entered with cost."
+  relationship_debt_ledger:
+    relationship_debt_01:
+      status: active
+      evidence_ref:
+        - generation/chapter_001_draft.md#ally-risk
+  knowledge_ledger:
+    knowledge_boundary_01: "Assessment signal remains ambiguous."
+  resource_ledger:
+    access_token_initial: spent
+  reader_question_ledger:
+    active:
+      - "Which assessment signal was misread?"
+  next_chapter_retrieval:
+    must_read:
+      - relationship_debt_01
+      - access_token_initial
+      - reader_question_01

@@ -1,0 +1,33 @@
+﻿scene_agency_packet_tasks:
+  - task_id: scene_agency_ch002_primary
+    linked_chapter_id: chapter_002
+    active_character: protagonist
+    previous_delta_read:
+      - state/state_delta_ch001.yaml
+      - state/ledger_view_after_ch001.yaml
+    local_goal: "Pass the second checkpoint while carrying the spent-token cost."
+    belief_about_situation: "The earlier marked signal may have been a warning about witness order."
+    available_options:
+      - "Ask the ally to cover the gap and deepen the debt."
+      - "Challenge the rule openly and risk disqualification."
+      - "Use the competitor's hint without verifying it."
+    chosen_tactic_expected_shape: "Use the competitor's hint only as a lead, then ask ally to verify the witness order."
+    perceived_cost: "Debt worsens and competitor sees the hesitation."
+    wrong_model_or_blindspot: "Protagonist treats partial verification as enough to choose quickly."
+    withheld_plan: "Does not tell the ally that the hint came from the competitor."
+    attention_target: "knowledge_boundary_01 and relationship_debt_01"
+    visible_action_seed: "changes queue position after ally confirms only part of the hint"
+    next_friction: "ally learns the source later and trust weakens"
+    not_allowed:
+      - "Do not reset the spent access token."
+      - "Do not give full certainty."
+      - "Do not erase relationship debt."
+  - task_id: event_log_seed_ch002
+    linked_chapter_id: chapter_002
+    event_log_entries:
+      - event_id: event_ch002_prior_delta_blocks_easy_tactic
+        visible_event: "spent token prevents the easy second-checkpoint entry"
+        evidence_ref: "generation/chapter_002_draft.md#token-block"
+      - event_id: event_ch002_debt_worsens_or_delays
+        visible_event: "relationship_debt_01 worsens because ally verifies under incomplete disclosure"
+        evidence_ref: "generation/chapter_002_draft.md#debt-worsens"

@@ -1,0 +1,32 @@
+﻿orchestrator_packet:
+  chapter_id: chapter_001
+  status: prepared_for_generation
+  source_inputs:
+    chapter_card: input/chapter_card_lite_x3.yaml#chapter_001
+    hot_ledger_slice: input/hot_ledger_slice_initial.yaml
+    spotlight_budget: input/spotlight_budget_initial.yaml#chapter_001
+  chapter_contract:
+    plot_function: "Create first reviewable event log and proposed state_delta."
+    required_conflict: "Preserve access_token or protect relationship_debt_01."
+    required_payoff_or_debt: "Create active relationship debt and reader question."
+    forbidden_resolution:
+      - "No complete assessment pass."
+      - "No external rescue."
+      - "No full world explanation."
+  reader_question_refresh_plan:
+    after:
+      - "Which assessment signal was misread?"
+  reveal_constraints:
+    allowed_reveals:
+      - "The assessment signal can be ambiguous."
+    forbidden_reveals:
+      - "The full assessment rulebook."
+      - "A guaranteed correct interpretation."
+  allowed_divergence_band:
+    - "Tactic may protect resource or relationship, but must cost the other."
+  event_log_required:
+    - event_ch001_access_token_spent
+    - event_ch001_debt_created
+  replan_trigger:
+    - "No evidence_ref for resource or relationship change."
+    - "Protagonist receives free checkpoint success."

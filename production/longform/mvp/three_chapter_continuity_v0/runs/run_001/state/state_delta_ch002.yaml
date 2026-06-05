@@ -1,0 +1,66 @@
+﻿state_delta:
+  delta_id: state_delta_ch002
+  source_chapter: chapter_002
+  source_event_log:
+    - event_ch002_prior_delta_blocks_easy_tactic
+    - event_ch002_debt_worsens_or_delays
+  status: proposed
+  previous_delta_read:
+    - state/state_delta_ch001.yaml
+    - state/ledger_view_after_ch001.yaml
+  accepted_changes: []
+  rejected_changes: []
+  conflict_report:
+    conflict_type: none
+    conflicting_source: ""
+    reason: ""
+    proposed_resolution: ""
+    return_to: ""
+  provenance:
+    generated_from:
+      - generation/chapter_002_draft.md
+      - review/chapter_002_reviewer_report.md
+      - orchestrator/scene_agency_packet_tasks_ch002.yaml
+    reviewed_by: codex_structural_review
+    accepted_by: pending_assigned_reviewer
+    source_artifacts:
+      - generation/chapter_002_draft.md
+      - review/chapter_002_reviewer_report.md
+      - state/state_delta_ch001.yaml
+  plot_change: "Second checkpoint remains open through delayed gray strip, not clean pass."
+  character_change:
+    protagonist: "Uses partial verification and carries cost of hiding the hint source."
+  relationship_debt_change:
+    relationship_debt_01:
+      status: worsened
+      change: "Ally verifies under incomplete disclosure."
+      evidence_ref:
+        - generation/chapter_002_draft.md#debt-worsens
+  knowledge_change:
+    knowledge_boundary_01:
+      status: partially_clarified
+      change: "White strip is clean only for unmarked witness; gray is delayed path."
+      evidence_ref:
+        - generation/chapter_002_draft.md#debt-worsens
+  resource_change:
+    access_token_initial:
+      status: spent_and_blocking_reuse
+      evidence_ref:
+        - generation/chapter_002_draft.md#token-block
+  reputation_or_identity_change: {}
+  reader_question_change:
+    closed_or_shifted:
+      - "Which assessment signal was misread?"
+    opened:
+      - "Was the second checkpoint tactic based on reliable knowledge?"
+  foreshadowing_or_payoff_change:
+    payoff:
+      - "Chapter 1 spent token blocks easy second entry."
+    seed:
+      - "Ally learns the hidden source of the hint."
+  next_chapter_seed_change: "Chapter 003 must handle partial knowledge and damaged trust."
+  evidence_ref:
+    - generation/chapter_002_draft.md#token-block
+    - generation/chapter_002_draft.md#debt-worsens
+rules:
+  reducer_entry: blocked_until_assigned_reviewer_accepts

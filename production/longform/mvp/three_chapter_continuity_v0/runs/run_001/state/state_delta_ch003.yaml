@@ -1,0 +1,68 @@
+﻿state_delta:
+  delta_id: state_delta_ch003
+  source_chapter: chapter_003
+  source_event_log:
+    - event_ch003_status_changes_with_cost
+    - event_ch003_next_friction_created
+  status: proposed
+  previous_delta_read:
+    - state/state_delta_ch002.yaml
+    - state/ledger_view_after_ch002.yaml
+  accepted_changes: []
+  rejected_changes: []
+  conflict_report:
+    conflict_type: none
+    conflicting_source: ""
+    reason: ""
+    proposed_resolution: ""
+    return_to: ""
+  provenance:
+    generated_from:
+      - generation/chapter_003_draft.md
+      - review/chapter_003_reviewer_report.md
+      - orchestrator/scene_agency_packet_tasks_ch003.yaml
+    reviewed_by: codex_structural_review
+    accepted_by: pending_assigned_reviewer
+    source_artifacts:
+      - generation/chapter_003_draft.md
+      - review/chapter_003_reviewer_report.md
+      - state/state_delta_ch002.yaml
+  plot_change: "Final checkpoint produces provisional advancement with restricted access."
+  character_change:
+    protagonist: "Chooses admission of uncertainty over clean false pass."
+  relationship_debt_change:
+    relationship_debt_01:
+      status: active_unresolved
+      change: "Ally hears truth after cost is already his."
+      evidence_ref:
+        - generation/chapter_003_draft.md#ally-friction
+  knowledge_change:
+    knowledge_boundary_01:
+      status: clarified_for_sample
+      change: "White strip was available but unreliable for a marked witness."
+      evidence_ref:
+        - generation/chapter_003_draft.md#provisional-mark
+  resource_change:
+    access_status:
+      status: restricted
+      evidence_ref:
+        - generation/chapter_003_draft.md#provisional-mark
+  reputation_or_identity_change:
+    assessment_status:
+      status: provisional_advancement
+      evidence_ref:
+        - generation/chapter_003_draft.md#provisional-mark
+  reader_question_change:
+    closed_or_shifted:
+      - "Was the second checkpoint tactic based on reliable knowledge?"
+    opened:
+      - "What cost follows from the changed status?"
+  foreshadowing_or_payoff_change:
+    payoff:
+      - "Gray delay and witness debt produce provisional, not clean, advancement."
+  next_chapter_seed_change: "Optional continuation only: restricted status and active debt remain."
+  evidence_ref:
+    - generation/chapter_003_draft.md#provisional-mark
+    - generation/chapter_003_draft.md#ally-friction
+rules:
+  reducer_entry: blocked_until_assigned_reviewer_accepts
