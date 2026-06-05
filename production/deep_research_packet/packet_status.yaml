@@ -1,0 +1,53 @@
+project: deep_research_packet
+version: v0
+status: draft_for_upload
+created_at: 2026-06-05
+base:
+  branch: planning/project-long-term-roadmap-v0
+  commit: 855ff7bac2edc6b7420306e9313ff87a8463c451
+purpose:
+  - prepare_context_for_deep_research
+  - avoid_uploading_entire_repo
+  - clarify_project_terms
+  - define_research_questions
+scope:
+  execute_deep_research: false
+  web_research_by_codex: false
+  modify_skill_pack: false
+  modify_phase8: false
+  generate_fiction: false
+  run_deepseek: false
+  run_hermes: false
+  run_abc_validation: false
+  use_raw_corpus: false
+  include_source_text: false
+  author_imitation: false
+  add_approved_patterns: false
+inputs_checked:
+  project_roadmap: available
+  content_philosophy: available
+  terminology_policy: available
+  human_texture: available
+  human_texture_real_chain_validation_rerun: not_found
+  human_texture_skill_pack_patch: pending
+  work_voice_research: available
+  work_voice_mvp: available
+  work_voice_injection_design: available
+  work_voice_patch: not_found
+  skill_pack_read_only_reference: available
+created_files:
+  - README.md
+  - packet_status.yaml
+  - upload_manifest.md
+  - project_summary.md
+  - terminology_glossary.md
+  - current_pipeline_summary.md
+  - completed_assets_summary.md
+  - long_term_framework_summary.md
+  - content_philosophy_summary.md
+  - key_hypotheses.md
+  - research_questions.md
+  - forbidden_boundaries.md
+  - requested_outputs.md
+  - deep_research_prompt.md
+  - source_file_index.md
