@@ -1,0 +1,13 @@
+﻿single_book_story_lite:
+  book_id: run001_abstract_book
+  book_one_sentence: "A protagonist tries to keep agency while passing a constrained local assessment."
+  protagonist_core_drive: "Preserve self-directed advancement under local rule pressure."
+  central_opposition: "Assessment rules, resource limits, a competitor, and incomplete knowledge."
+  genre_promise: "Progression under institutional pressure."
+  emotional_promise: "Choice pressure leaves relationship debt and delayed trust."
+  end_state_hint: "The sample should end with a measurable status, debt, or knowledge change."
+  forbidden_drift:
+    - "Do not create a real longform outline."
+    - "Do not expand into a complete universe."
+    - "Do not solve all assessment pressure in three chapters."
+    - "Do not imitate a specific author."

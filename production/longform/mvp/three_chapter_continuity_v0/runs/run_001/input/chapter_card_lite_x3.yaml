@@ -1,0 +1,109 @@
+﻿chapter_001:
+  chapter_id: chapter_001
+  previous_delta_input:
+    source_chapter: none
+    required_status: none
+    required_fields: []
+  chapter_one_sentence: "Assessment pressure appears and forces the first bounded choice."
+  volume_goal_link: "Start the local advancement assessment."
+  plot_function: "Create first reviewable event log and proposed state_delta."
+  required_conflict: "Protagonist must choose between preserving a resource and protecting a relationship debt."
+  required_payoff_or_debt: "Create active relationship debt and one reader question."
+  character_state_before:
+    protagonist: "wants advancement but lacks verified information"
+  character_state_after:
+    protagonist: "has made one costly choice with visible evidence"
+  reader_question_before: []
+  reader_question_after:
+    - "Which assessment signal was misread?"
+  must_not_happen:
+    - "No complete assessment pass."
+    - "No external rescue."
+    - "No full world explanation."
+  next_chapter_seed: "Accepted delta constrains chapter_002 tactic."
+  state_change_expected:
+    - relationship_debt_change
+    - reader_question_change
+    - resource_change
+  minimal_continuity_check:
+    reads_previous_delta: false
+    creates_delta_for_next_chapter: true
+    relationship_debt_checked: true
+    knowledge_state_checked: true
+    reader_question_checked: true
+
+chapter_002:
+  chapter_id: chapter_002
+  previous_delta_input:
+    source_chapter: chapter_001
+    required_status: accepted
+    required_fields:
+      - relationship_debt_change
+      - resource_change
+      - reader_question_change
+  chapter_one_sentence: "The prior state delta blocks the easy tactic and forces debt management."
+  volume_goal_link: "Advance to the second checkpoint with inherited cost."
+  plot_function: "Show state inheritance and refresh the active relationship debt."
+  required_conflict: "Protagonist cannot use the same resource or same trust path as chapter_001."
+  required_payoff_or_debt: "Delay or worsen debt while clarifying one knowledge boundary."
+  character_state_before:
+    protagonist: "carries accepted debt and incomplete knowledge from chapter_001"
+  character_state_after:
+    protagonist: "has a narrower path and a clearer cost"
+  reader_question_before:
+    - "Which assessment signal was misread?"
+  reader_question_after:
+    - "Was the second checkpoint tactic based on reliable knowledge?"
+  must_not_happen:
+    - "No reset of chapter_001 cost."
+    - "No unearned certainty."
+    - "No free payoff."
+  next_chapter_seed: "Accepted chapter_002 delta determines chapter_003 status pressure."
+  state_change_expected:
+    - knowledge_change
+    - relationship_debt_change
+    - next_chapter_seed_change
+  minimal_continuity_check:
+    reads_previous_delta: true
+    creates_delta_for_next_chapter: true
+    relationship_debt_checked: true
+    knowledge_state_checked: true
+    reader_question_checked: true
+
+chapter_003:
+  chapter_id: chapter_003
+  previous_delta_input:
+    source_chapter: chapter_002
+    required_status: accepted
+    required_fields:
+      - knowledge_change
+      - relationship_debt_change
+      - next_chapter_seed_change
+  chapter_one_sentence: "The final checkpoint produces a traceable status, resource, or debt change."
+  volume_goal_link: "Complete the three-chapter continuity test window."
+  plot_function: "Prove that prior deltas shape the final checkpoint outcome."
+  required_conflict: "Protagonist must accept a cost instead of receiving a clean advancement."
+  required_payoff_or_debt: "Record one status/resource change and one continuing friction."
+  character_state_before:
+    protagonist: "has inherited debt and constrained knowledge from chapter_002"
+  character_state_after:
+    protagonist: "has a measurable changed status and next friction"
+  reader_question_before:
+    - "Was the second checkpoint tactic based on reliable knowledge?"
+  reader_question_after:
+    - "What cost follows from the changed status?"
+  must_not_happen:
+    - "No total victory."
+    - "No erased relationship debt."
+    - "No new full arc."
+  next_chapter_seed: "Optional continuation seed only, not a real longform outline."
+  state_change_expected:
+    - reputation_or_identity_change
+    - resource_change
+    - foreshadowing_or_payoff_change
+  minimal_continuity_check:
+    reads_previous_delta: true
+    creates_delta_for_next_chapter: true
+    relationship_debt_checked: true
+    knowledge_state_checked: true
+    reader_question_checked: true

@@ -1,0 +1,18 @@
+﻿orchestrator_packet:
+  chapter_id: chapter_003
+  status: placeholder_only
+  source_inputs:
+    chapter_card: input/chapter_card_lite_x3.yaml#chapter_003
+    required_previous_delta: state/state_delta_ch002.yaml
+    hot_ledger_slice: "refreshed after chapter_002 accepted state_delta"
+    spotlight_budget: input/spotlight_budget_initial.yaml#chapter_003
+  expected_outputs:
+    scene_agency_packet_tasks: []
+    reader_question_refresh_plan: []
+    reveal_constraints: []
+    allowed_divergence_band: []
+    replan_trigger: []
+  forbidden:
+    - "Do not run if chapter_002 accepted state_delta is missing."
+    - "Do not generate prose."
+    - "Do not create a full longform outline."

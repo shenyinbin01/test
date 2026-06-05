@@ -1,0 +1,53 @@
+﻿chapter_001:
+  chapter_id: chapter_001
+  primary_focus:
+    - protagonist_first_bounded_choice
+  secondary_focus:
+    - relationship_debt_01
+    - access_token_initial
+  background_only:
+    - local_assessment_group
+  forbidden_to_steal_scene:
+    - full_world_exposition
+    - full_competitor_backstory
+  max_scene_focus_count: 3
+  must_manifest_relationship_debt:
+    - relationship_debt_01
+  notes:
+    - "Assessment pressure must stay local and structural."
+
+chapter_002:
+  chapter_id: chapter_002
+  primary_focus:
+    - inherited_delta_constrains_tactic
+  secondary_focus:
+    - relationship_debt_01
+    - knowledge_boundary_01
+  background_only:
+    - assessment_rule_context
+  forbidden_to_steal_scene:
+    - new_faction_map
+    - full_rule_lesson
+  max_scene_focus_count: 3
+  must_manifest_relationship_debt:
+    - relationship_debt_01
+  notes:
+    - "Prior delta must affect tactic shape."
+
+chapter_003:
+  chapter_id: chapter_003
+  primary_focus:
+    - status_or_resource_change
+  secondary_focus:
+    - relationship_debt_01
+    - reader_question_01
+  background_only:
+    - possible_next_window
+  forbidden_to_steal_scene:
+    - complete_arc_resolution
+    - new_longform_outline
+  max_scene_focus_count: 3
+  must_manifest_relationship_debt:
+    - relationship_debt_01
+  notes:
+    - "End with traceable state change and next friction, not total resolution."

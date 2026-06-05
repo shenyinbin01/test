@@ -1,0 +1,42 @@
+﻿state_delta:
+  delta_id: ""
+  source_chapter: ""
+  source_event_log: []
+  status: proposed
+  accepted_changes: []
+  rejected_changes: []
+  conflict_report:
+    conflict_type: none
+    conflicting_source: ""
+    reason: ""
+    proposed_resolution: ""
+    return_to: ""
+  provenance:
+    generated_from: []
+    reviewed_by: ""
+    accepted_by: ""
+    source_artifacts: []
+  plot_change: ""
+  character_change: {}
+  relationship_debt_change: {}
+  knowledge_change: {}
+  resource_change: {}
+  reputation_or_identity_change: {}
+  reader_question_change: {}
+  foreshadowing_or_payoff_change: {}
+  next_chapter_seed_change: ""
+  evidence_ref: []
+status_values:
+  - proposed
+  - accepted
+  - rejected
+  - conflict
+  - needs_human_review
+rules:
+  - "Only accepted state_delta can enter reducers."
+  - "proposed must not enter reducers."
+  - "conflict must not enter reducers."
+  - "needs_human_review must not enter reducers."
+  - "rejected must not enter reducers."
+  - "accepted_changes must carry evidence_ref."
+  - "assigned reviewer must explicitly mark accepted."

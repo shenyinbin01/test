@@ -1,0 +1,17 @@
+﻿orchestrator_packet:
+  chapter_id: chapter_001
+  status: placeholder_only
+  source_inputs:
+    chapter_card: input/chapter_card_lite_x3.yaml#chapter_001
+    hot_ledger_slice: input/hot_ledger_slice_initial.yaml
+    spotlight_budget: input/spotlight_budget_initial.yaml#chapter_001
+  expected_outputs:
+    scene_agency_packet_tasks: []
+    reader_question_refresh_plan: []
+    reveal_constraints: []
+    allowed_divergence_band: []
+    replan_trigger: []
+  forbidden:
+    - "Do not generate prose."
+    - "Do not choose final scene action."
+    - "Do not edit accepted ledger state."

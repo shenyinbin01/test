@@ -1,0 +1,15 @@
+﻿volume_card_lite:
+  volume_id: run001_volume_assessment_window
+  volume_one_sentence: "Three linked checkpoints test whether the protagonist can advance without losing agency or continuity."
+  volume_goal: "Survive or pass the local advancement assessment with traceable cost."
+  antagonistic_force: "A competitor, one strict rule, one scarce resource, and one misread signal."
+  escalation_path:
+    - chapter_001: "Assessment pressure appears and creates first accepted delta."
+    - chapter_002: "Prior delta constrains tactic and refreshes relationship debt."
+    - chapter_003: "Result changes status, resource, or debt and proves continuity."
+  payoff_window:
+    - "A checkpoint can be partially resolved only if cost is recorded."
+  debt_window:
+    - "One active relationship debt must persist or change across all three chapters."
+  ending_state: "Run ends with reviewable state change, not full resolution."
+  next_volume_seed: "Optional seed only; no real next volume is planned."

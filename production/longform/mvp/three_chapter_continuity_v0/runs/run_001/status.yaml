@@ -1,0 +1,24 @@
+﻿project: longform_three_chapter_run_001
+version: v0
+status: scaffold_only
+scenario: small_organization_promotion_exam
+scope:
+  generate_fiction: false
+  run_deepseek: false
+  run_hermes: false
+  run_abc_validation: false
+  modify_skill_pack: false
+  use_raw_corpus: false
+  add_approved_patterns: false
+  create_real_ip_universe: false
+  create_real_longform_outline: false
+decisions:
+  reviewer_gate: critical_plus_standard
+  state_delta_review: human_assigned_reviewer_accept_only
+  manual_review_average_threshold: 3.8
+  state_delta_trust_threshold: 4
+  minimum_single_dimension_score: 3
+  no_critical_failure_required: true
+next_step:
+  - human_review_run001_scaffold
+  - approve_or_reject_actual_execution

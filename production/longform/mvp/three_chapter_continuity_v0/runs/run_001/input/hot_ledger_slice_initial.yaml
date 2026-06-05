@@ -1,0 +1,54 @@
+﻿hot_ledger_slice:
+  slice_id: run001_initial_hot_slice
+  source_ledgers:
+    - plot_ledger
+    - character_state_ledger
+    - relationship_debt_ledger
+    - knowledge_ledger
+    - reader_question_ledger
+    - volume_progress_ledger
+  included_items:
+    - ledger: volume_progress_ledger
+      item_id: volume_goal_assessment_window
+      summary: "Three linked checkpoints test continuity and state inheritance."
+      latest_delta_ref: none
+    - ledger: character_state_ledger
+      item_id: protagonist_pressure_initial
+      summary: "Protagonist wants advancement but lacks verified information."
+      latest_delta_ref: none
+    - ledger: relationship_debt_ledger
+      item_id: relationship_debt_01
+      summary: "One trust or obligation debt must manifest in all three chapters."
+      latest_delta_ref: none
+    - ledger: knowledge_ledger
+      item_id: knowledge_boundary_01
+      summary: "One assessment signal may be misread until evidence changes."
+      latest_delta_ref: none
+    - ledger: resource_ledger
+      item_id: access_token_initial
+      summary: "One limited access resource constrains tactics."
+      latest_delta_ref: none
+    - ledger: reader_question_ledger
+      item_id: reader_question_01
+      summary: "Which assessment signal is reliable?"
+      latest_delta_ref: none
+  inclusion_reason:
+    - "must affect current chapter choice"
+    - "must affect the next one to three chapters"
+    - "must constrain knowledge, relationship, resource, or volume progress"
+  max_items: 12
+  must_include:
+    - current_volume_goal_progress
+    - current_protagonist_pressure
+    - active_relationship_debt
+    - active_knowledge_boundary
+    - active_reader_question
+  excluded_items:
+    - "full organization history"
+    - "resolved debts"
+    - "world facts not used in run_001"
+  stale_items: []
+  retrieval_notes:
+    - "Renderer and Writer do not read full ledger."
+    - "Initial slice must be manually reviewed before execution."
+    - "After each accepted state_delta, refresh this slice for the next chapter."

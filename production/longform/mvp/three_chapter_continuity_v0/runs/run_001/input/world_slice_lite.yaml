@@ -1,0 +1,31 @@
+﻿world_slice_lite:
+  world_slice_id: run001_small_org_assessment_slice
+  scope: "A local small organization runs a limited advancement assessment."
+  relevant_rules:
+    - rule_id: assessment_window
+      summary: "The assessment has three sequential checkpoints."
+    - rule_id: limited_attempt
+      summary: "Each checkpoint allows only one primary tactic."
+    - rule_id: evidence_required
+      summary: "Status change requires visible evidence, not narrator assertion."
+  relevant_institutions:
+    - institution_id: local_assessment_group
+      role: "Administers the advancement test."
+  relevant_resources:
+    - resource_id: access_token
+      role: "Limited resource needed to enter or keep assessment status."
+    - resource_id: verified_hint
+      role: "Small information resource that may be misread."
+  relevant_taboo_or_constraint:
+    - "Do not bypass the assessment by outside authority."
+    - "Do not turn the local group into a full world system."
+  active_power_or_status_rule:
+    - "Temporary status changes only after accepted event evidence."
+  must_not_expand:
+    - "No complete IP universe."
+    - "No full organization history."
+    - "No external faction map."
+    - "No real work or author reference."
+  notes:
+    - "Small organization advancement / assessment is an abstract test scenario."
+    - "This file defines structure only, not prose."
