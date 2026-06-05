@@ -1,0 +1,25 @@
+﻿project: character_agency_mvp_design
+version: v0
+status: design_draft
+created_from:
+  branch: planning/engine-and-longform-research-v0
+  base_branch: planning/deep-research-github-entry-v0
+scope:
+  modify_skill_pack: false
+  modify_phase8: false
+  generate_fiction: false
+  run_deepseek: false
+  run_hermes: false
+  run_abc_validation: false
+  use_raw_corpus: false
+purpose:
+  - define_scene_level_decision_packet
+  - define_consequence_ledger
+  - define_relationship_debt_ledger
+  - prepare_one_scene_mvp
+  - keep_polisher_out_of_structural_failures
+depends_on:
+  - production/deep_research_results/round1_findings_summary.md
+  - production/mainline_reframe/engine_first_strategy.md
+  - production/human_texture/skill_pack_design/
+  - production/work_voice/skill_pack_injection_design/

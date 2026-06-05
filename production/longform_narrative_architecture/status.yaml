@@ -1,0 +1,17 @@
+﻿project: longform_narrative_architecture
+version: v0
+status: research_frame
+scope:
+  modify_skill_pack: false
+  modify_phase8: false
+  generate_fiction: false
+  execute_deep_research: false
+  web_research_by_codex: false
+  run_deepseek: false
+  run_hermes: false
+  use_raw_corpus: false
+purpose:
+  - define_longform_production_layers
+  - clarify_dependency_on_character_agency
+  - prepare_deep_research_round2
+  - prevent_architecture_from_replacing_engine

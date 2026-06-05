@@ -1,0 +1,100 @@
+﻿scene_agency_packet:
+  scene_id:
+    description: "场景或片段编号，用于关联 chapter beat 与后果账本。"
+    examples:
+      - "c4_recheck_liuqingyan"
+      - "c3_canteen_mine_reveal"
+    forbidden_usage:
+      - "不要用含糊编号，例如 current_scene。"
+      - "不要把完整正文粘进 scene_id。"
+  active_character:
+    description: "本场景真正推动选择的人物，可以是主角，也可以是配角或群体代表。"
+    examples:
+      - "苏衍"
+      - "柳青砚"
+      - "被迫排队登记的外门弟子"
+    forbidden_usage:
+      - "不要默认永远是主角。"
+      - "不要写成所有人。"
+  local_goal:
+    description: "人物在本场景里的小目标，必须具体到可行动。"
+    examples:
+      - "不让柳青砚继续追问白签来源。"
+      - "用最少暴露换到矿洞筛选传闻。"
+    forbidden_usage:
+      - "不要写成长远宏愿。"
+      - "不要写成完成剧情任务。"
+  belief_about_situation:
+    description: "人物此刻以为局面是什么，允许错误或不完整。"
+    examples:
+      - "他以为柳青砚只是在生气，不知道她已经开始怀疑他把她排除在外。"
+      - "他以为矿洞只是在筛人，不确定枯端是否是制度标记。"
+    forbidden_usage:
+      - "不要让人物拥有作者全知。"
+      - "不要直接写底层真相。"
+  available_options:
+    description: "人物看得到的 2-4 个选择。"
+    examples:
+      - "承认一半"
+      - "继续撒谎"
+      - "转移到规则漏洞"
+      - "沉默让对方误会"
+    forbidden_usage:
+      - "不要列十几个选项。"
+      - "不要把必选剧情伪装成选项。"
+  chosen_tactic:
+    description: "人物实际采用的策略，必须带有取舍。"
+    examples:
+      - "承认白签有问题，但隐去来源。"
+      - "假装听错饭堂闲话，实际记住矿洞口令。"
+    forbidden_usage:
+      - "不要写成正确行动。"
+      - "不要写成情绪标签。"
+  perceived_cost:
+    description: "人物以为自己要付出的代价，不一定等于真实代价。"
+    examples:
+      - "柳青砚短期不再信他。"
+      - "多问一句会被执事记住脸。"
+    forbidden_usage:
+      - "不要只写很痛苦。"
+      - "不要写成抽象牺牲。"
+  wrong_model_or_blindspot:
+    description: "人物误判、盲点或低估之处，用于制造真实后果。"
+    examples:
+      - "他低估了柳青砚对被排除的敏感。"
+      - "他把饭堂传闻当闲话，忽视说话人已经被标记。"
+    forbidden_usage:
+      - "不要让人物犯蠢。"
+      - "不要用盲点强行制造降智。"
+  withheld_plan:
+    description: "人物暂时不说出的计划或真实意图。"
+    examples:
+      - "他想等白签生效后再解释。"
+      - "他打算先确认枯端是否会出现在名单上。"
+    forbidden_usage:
+      - "不要把所有底牌都藏起来。"
+      - "不要让 withholding 破坏读者理解。"
+  attention_target:
+    description: "人物注意力真正落点，帮助 Writer 写行动而非解释。"
+    examples:
+      - "柳青砚没有收回去的手。"
+      - "饭堂木屏风后被擦掉一半的名单。"
+    forbidden_usage:
+      - "不要写成风景描写目标。"
+      - "不要写成作者想展示的设定。"
+  visible_action_seed:
+    description: "可转成正文动作的种子，必须能被读者看见。"
+    examples:
+      - "他说到白签来源时停了一拍。"
+      - "他把碗推到传话弟子旁边，装作让路。"
+    forbidden_usage:
+      - "不要只写内心活动。"
+      - "不要写成完整正文。"
+  next_friction:
+    description: "本选择给下一场景留下的具体摩擦。"
+    examples:
+      - "柳青砚下一章不再主动替他说话。"
+      - "执事记住他问过矿洞名单。"
+    forbidden_usage:
+      - "不要写成关系变差。"
+      - "不要写成下一章继续。"

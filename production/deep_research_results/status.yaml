@@ -1,0 +1,26 @@
+﻿project: deep_research_results
+version: round1
+status:
+  original_report_in_repo: false
+  summarized_from_project_owner_context: true
+  used_for_route_adjustment: true
+  placeholder_created: true
+scope:
+  execute_deep_research: false
+  web_research_by_codex: false
+  modify_skill_pack: false
+  modify_phase8: false
+  generate_fiction: false
+  run_deepseek: false
+  run_hermes: false
+  run_abc_validation: false
+  use_raw_corpus: false
+source:
+  expected_original_report_path: production/deep_research_results/original_report.md
+  current_placeholder_path: production/deep_research_results/original_report_placeholder.md
+  basis:
+    - project_owner_summary
+    - existing_deep_research_packet
+    - project_roadmap
+    - human_texture_results
+    - work_voice_design_package

@@ -1,0 +1,67 @@
+﻿relationship_debt_ledger:
+  debt_id:
+    description: "关系债编号。"
+    examples:
+      - "debt_suyan_liuqingyan_white_tag"
+    forbidden_usage:
+      - "不要用人物名直接当编号。"
+  character_a:
+    description: "关系一方。"
+    examples:
+      - "苏衍"
+    forbidden_usage:
+      - "不要写群体大类。"
+  character_b:
+    description: "关系另一方。"
+    examples:
+      - "柳青砚"
+    forbidden_usage:
+      - "不要写抽象阵营。"
+  debt_type:
+    description: "关系债类型。"
+    examples:
+      - "trust_break"
+      - "withheld_truth"
+      - "unpaid_help"
+      - "public_embarrassment"
+    forbidden_usage:
+      - "不要写成好感度。"
+  debt_direction:
+    description: "债务方向，说明谁欠谁或谁对谁产生压力。"
+    examples:
+      - "苏衍 owes 柳青砚 explanation"
+      - "柳青砚 pressures 苏衍 for truth"
+    forbidden_usage:
+      - "不要只写双向。"
+  current_balance:
+    description: "当前关系余额，用短句说明。"
+    examples:
+      - "柳青砚仍帮他，但不再替他说完话。"
+    forbidden_usage:
+      - "不要用数字好感度代替。"
+  visible_to_reader:
+    description: "读者是否能看见这笔债的表现。"
+    examples:
+      - true
+      - false
+    forbidden_usage:
+      - "不要把不可见债务当成已写出。"
+  hidden_from_character:
+    description: "哪些角色不知道或误判这笔债。"
+    examples:
+      - "苏衍低估柳青砚的失望。"
+      - ""
+    forbidden_usage:
+      - "不要写成读者不知道。"
+  last_changed_scene:
+    description: "最近一次改变关系债的场景。"
+    examples:
+      - "c4_recheck_liuqingyan"
+    forbidden_usage:
+      - "不要空泛写上一章。"
+  expected_pressure_point:
+    description: "这笔债应在何处制造下一次压力。"
+    examples:
+      - "需要柳青砚作证时，她不给台阶。"
+    forbidden_usage:
+      - "不要写成后续继续影响。"

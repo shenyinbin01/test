@@ -1,0 +1,27 @@
+﻿project: deep_research_round2_packet
+version: v0
+status: ready_for_human_review
+created_from:
+  branch: planning/engine-and-longform-research-v0
+  base_branch: planning/deep-research-github-entry-v0
+scope:
+  execute_deep_research: false
+  web_research_by_codex: false
+  generate_external_research_conclusions: false
+  modify_skill_pack: false
+  modify_phase8: false
+  generate_fiction: false
+  run_deepseek: false
+  run_hermes: false
+  run_abc_validation: false
+  use_raw_corpus: false
+  author_imitation: false
+source_paths:
+  deep_research_results: production/deep_research_results/
+  mainline_reframe: production/mainline_reframe/
+  character_agency_mvp: production/character_agency/mvp_design/
+  longform_architecture: production/longform_narrative_architecture/
+  human_texture: production/human_texture/
+  work_voice: production/work_voice/
+entrypoint: production/deep_research_round2_packet/DEEP_RESEARCH_ROUND2_ENTRYPOINT.md
+copy_prompt: production/deep_research_round2_packet/deep_research_round2_prompt.md

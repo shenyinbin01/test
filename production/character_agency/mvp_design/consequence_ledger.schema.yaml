@@ -1,0 +1,81 @@
+﻿consequence_ledger:
+  entry_id:
+    description: "后果条目编号。"
+    examples:
+      - "cons_c4_white_tag_lie"
+    forbidden_usage:
+      - "不要重复使用同一编号。"
+  source_scene:
+    description: "产生后果的场景编号，应能回连 scene_agency_packet.scene_id。"
+    examples:
+      - "c4_recheck_liuqingyan"
+    forbidden_usage:
+      - "不要写成整章。"
+  consequence_type:
+    description: "后果类型。"
+    examples:
+      - "relationship"
+      - "knowledge"
+      - "resource"
+      - "reputation"
+      - "physical_or_emotional"
+    forbidden_usage:
+      - "不要写成 mixed_everything。"
+  affected_character:
+    description: "被后果影响的人物。"
+    examples:
+      - "苏衍"
+      - "柳青砚"
+    forbidden_usage:
+      - "不要写成所有角色。"
+  affected_relationship:
+    description: "被影响的关系，若无则为空字符串。"
+    examples:
+      - "苏衍 -> 柳青砚"
+      - ""
+    forbidden_usage:
+      - "不要写抽象关系网。"
+  resource_change:
+    description: "资源变化，包括积分、道具、机会、行动空间。"
+    examples:
+      - "白签到手，但解释窗口缩短。"
+      - "矿洞口令线索增加，安全余地减少。"
+    forbidden_usage:
+      - "不要写成获得奖励。"
+  knowledge_change:
+    description: "信息状态变化，包括谁知道、谁误会、谁被瞒。"
+    examples:
+      - "柳青砚知道苏衍隐瞒了白签来源。"
+    forbidden_usage:
+      - "不要写成读者知道了设定。"
+  reputation_change:
+    description: "名声、制度位置或被监控程度的变化。"
+    examples:
+      - "执事把苏衍列入需要观察的人。"
+    forbidden_usage:
+      - "不要写成名声变好或变坏。"
+  physical_or_emotional_cost:
+    description: "身体或情绪代价，必须能影响后续行为。"
+    examples:
+      - "柳青砚避开苏衍的视线，导致下一场无法快速对口供。"
+    forbidden_usage:
+      - "不要只写伤心、愤怒或震惊。"
+  unresolved_debt:
+    description: "尚未结清的责任、亏欠、怀疑或承诺。"
+    examples:
+      - "苏衍欠柳青砚一次真实解释。"
+    forbidden_usage:
+      - "不要写成以后会解释。"
+  must_resurface_by:
+    description: "最迟应在何处回收。"
+    examples:
+      - "c5_before_gate_choice"
+      - "next_chapter_first_conflict"
+    forbidden_usage:
+      - "不要无限期悬置。"
+  next_scene_hook:
+    description: "该后果如何进入下一场景。"
+    examples:
+      - "柳青砚拒绝替苏衍作证，迫使他自己面对执事。"
+    forbidden_usage:
+      - "不要写成留下悬念。"
