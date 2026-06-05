@@ -1,0 +1,44 @@
+project: project_long_term_roadmap
+version: v0
+status: planning_draft
+created_at: 2026-06-05
+base:
+  branch: experiment/work-voice-skill-pack-injection-design-v0
+  commit: 97393b0efb32ec2a881a9d1e9cdd031c5bf0675e
+  fallback_reason: experiment/work-voice-skill-pack-patch-v0 was not available in the local repository.
+scope:
+  modify_skill_pack: false
+  modify_phase8: false
+  generate_fiction: false
+  rewrite_chapters: false
+  run_deepseek: false
+  run_hermes: false
+  run_abc_validation: false
+  use_raw_corpus: false
+  add_approved_patterns: false
+purpose:
+  - align_long_term_framework
+  - position_existing_assets
+  - define_subprojects
+  - prevent_direction_drift
+  - prepare_next_codex_tasks
+mainlines:
+  current_generation_pipeline_enhancement:
+    - human_texture
+    - work_voice
+    - character_agency
+    - live_leakage
+    - reader_immersion
+  agentic_narrative_engine:
+    - ip_universe
+    - world_state
+    - character_agents
+    - scene_simulation
+    - event_log
+    - narrative_renderer
+    - reviewer_gates
+verification_expectation:
+  - git_diff_check
+  - yaml_parse_check
+  - mermaid_block_format_check
+  - git_status_short
