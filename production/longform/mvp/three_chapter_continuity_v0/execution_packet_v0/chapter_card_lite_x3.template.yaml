@@ -1,0 +1,70 @@
+﻿chapter_001:
+  chapter_id: chapter_001
+  chapter_one_sentence: ""
+  volume_goal_link: ""
+  plot_function: ""
+  required_conflict: ""
+  required_payoff_or_debt: ""
+  character_state_before: {}
+  character_state_after: {}
+  reader_question_before: []
+  reader_question_after: []
+  must_not_happen: []
+  next_chapter_seed: ""
+  state_change_expected: []
+  minimal_continuity_check:
+    reads_previous_delta: false
+    creates_delta_for_next_chapter: true
+    relationship_debt_checked: true
+    knowledge_state_checked: true
+    reader_question_checked: true
+
+chapter_002:
+  chapter_id: chapter_002
+  previous_delta_input:
+    source_chapter: chapter_001
+    required_status: accepted
+    required_fields: []
+  chapter_one_sentence: ""
+  volume_goal_link: ""
+  plot_function: ""
+  required_conflict: ""
+  required_payoff_or_debt: ""
+  character_state_before: {}
+  character_state_after: {}
+  reader_question_before: []
+  reader_question_after: []
+  must_not_happen: []
+  next_chapter_seed: ""
+  state_change_expected: []
+  minimal_continuity_check:
+    reads_previous_delta: true
+    creates_delta_for_next_chapter: true
+    relationship_debt_checked: true
+    knowledge_state_checked: true
+    reader_question_checked: true
+
+chapter_003:
+  chapter_id: chapter_003
+  previous_delta_input:
+    source_chapter: chapter_002
+    required_status: accepted
+    required_fields: []
+  chapter_one_sentence: ""
+  volume_goal_link: ""
+  plot_function: ""
+  required_conflict: ""
+  required_payoff_or_debt: ""
+  character_state_before: {}
+  character_state_after: {}
+  reader_question_before: []
+  reader_question_after: []
+  must_not_happen: []
+  next_chapter_seed: ""
+  state_change_expected: []
+  minimal_continuity_check:
+    reads_previous_delta: true
+    creates_delta_for_next_chapter: true
+    relationship_debt_checked: true
+    knowledge_state_checked: true
+    reader_question_checked: true

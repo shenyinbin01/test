@@ -1,0 +1,10 @@
+﻿volume_card_lite:
+  volume_id: ""
+  volume_one_sentence: ""
+  volume_goal: ""
+  antagonistic_force: ""
+  escalation_path: []
+  payoff_window: []
+  debt_window: []
+  ending_state: ""
+  next_volume_seed: ""

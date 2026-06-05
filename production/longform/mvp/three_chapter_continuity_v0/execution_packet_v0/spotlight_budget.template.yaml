@@ -1,0 +1,12 @@
+﻿spotlight_budget:
+  chapter_id: ""
+  primary_focus: []
+  secondary_focus: []
+  background_only: []
+  forbidden_to_steal_scene: []
+  max_scene_focus_count: 3
+  must_manifest_relationship_debt: []
+  notes:
+    - "Spotlight is narrative burden, not word count."
+    - "Renderer must not expand background_only into main burden."
+    - "If spotlight imbalance appears, return to Orchestrator, not Polisher."

@@ -1,0 +1,19 @@
+﻿event_log_entry:
+  event_id: ""
+  source_chapter_id: ""
+  source_scene_id: ""
+  source_agency_packet_id: ""
+  visible_event: ""
+  character_intention: ""
+  chosen_tactic: ""
+  immediate_outcome: ""
+  consequence_seed: ""
+  affected_state_delta_fields: []
+  renderer_visible: []
+  renderer_forbidden_to_change: []
+  evidence_ref: []
+rules:
+  - "event_log is sanctioned trace, not free agent chatter."
+  - "Renderer reads event_log, not unreviewed agent logs."
+  - "event_log must support state_delta evidence_ref."
+  - "character_intention may describe intent, but cannot certify hidden facts as proven."

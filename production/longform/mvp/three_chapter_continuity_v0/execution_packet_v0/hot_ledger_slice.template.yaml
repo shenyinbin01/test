@@ -1,0 +1,30 @@
+﻿hot_ledger_slice:
+  slice_id: ""
+  source_ledgers:
+    - plot_ledger
+    - character_state_ledger
+    - relationship_debt_ledger
+    - knowledge_ledger
+    - reader_question_ledger
+    - volume_progress_ledger
+  included_items: []
+  inclusion_reason:
+    - "must affect current chapter choice"
+    - "must affect the next one to three chapters"
+    - "must constrain knowledge, relationship, resource, or volume progress"
+  max_items: 12
+  must_include:
+    - current_volume_goal_progress
+    - current_protagonist_pressure
+    - active_relationship_debt
+    - active_knowledge_boundary
+    - active_reader_question
+  excluded_items:
+    - "resolved debts with no next manifestation"
+    - "world facts not used in the next three chapters"
+    - "old resources with no choice impact"
+  stale_items: []
+  retrieval_notes:
+    - "Renderer and Writer do not read full ledger."
+    - "Prefer latest accepted delta."
+    - "Include stale item only if Reviewer flags it."

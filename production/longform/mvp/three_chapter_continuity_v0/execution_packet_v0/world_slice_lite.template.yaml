@@ -1,0 +1,13 @@
+﻿world_slice_lite:
+  world_slice_id: ""
+  scope: ""
+  relevant_rules: []
+  relevant_institutions: []
+  relevant_resources: []
+  relevant_taboo_or_constraint: []
+  active_power_or_status_rule: []
+  must_not_expand: []
+  notes:
+    - "Minimal world slice only."
+    - "This is not a complete IP universe."
+    - "Include only rules, institutions, resources, and constraints needed for the next three chapters."

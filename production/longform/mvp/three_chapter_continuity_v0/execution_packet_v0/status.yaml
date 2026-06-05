@@ -1,0 +1,26 @@
+﻿project: longform_three_chapter_execution_packet
+version: v0
+status: execution_packet_draft
+base_branch: planning/longform-three-chapter-synthetic-compression-v1
+base_commit: 3dbcbac1f83acd06ce4af8ed0a33b5be18c90382
+scope:
+  generate_fiction: false
+  create_real_outline: false
+  create_real_ip_universe: false
+  modify_skill_pack: false
+  run_deepseek: false
+  run_hermes: false
+  run_abc_validation: false
+  execute_deep_research: false
+  use_raw_corpus: false
+  add_approved_patterns: false
+default_mode:
+  chapter_card: lite
+  reviewer_gate: critical_plus_standard
+  ledger_context: hot_slice
+  state_delta: v1
+  renderer: contract_limited
+next_step:
+  - human_review
+  - optional_v1_1_cleanup
+  - approve_or_reject_hermes_deepseek_trial

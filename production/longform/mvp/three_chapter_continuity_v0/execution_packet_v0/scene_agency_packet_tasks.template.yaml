@@ -1,0 +1,19 @@
+﻿scene_agency_packet_task:
+  task_id: ""
+  linked_chapter_id: ""
+  active_character: ""
+  local_goal: ""
+  belief_about_situation: ""
+  available_options: []
+  chosen_tactic_expected_shape: ""
+  perceived_cost: ""
+  wrong_model_or_blindspot: ""
+  withheld_plan: ""
+  attention_target: ""
+  visible_action_seed: ""
+  next_friction: ""
+  not_allowed:
+    - "Do not write long psychological explanation."
+    - "Do not make the character choose a universally correct option."
+    - "Do not make the character a standard reaction machine."
+    - "Do not generate prose."
