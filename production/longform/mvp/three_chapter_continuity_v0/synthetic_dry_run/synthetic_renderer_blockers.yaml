@@ -1,0 +1,41 @@
+renderer_blockers:
+  - blocker_id: blocker_causal_thinness
+    type: causal_thinness
+    trigger_condition: "chapter_card requires state change but event_log lacks supporting event"
+    return_to: "Story Orchestrator Lite / Scene Engine"
+    severity: high
+    example_shape:
+      missing: "visible_event for resource_change"
+      forbidden_renderer_action: "invent a new event"
+  - blocker_id: blocker_embodied_consequence_missing
+    type: embodied_consequence_missing
+    trigger_condition: "relationship_debt_delta exists but no visible pressure or behavior carrier exists"
+    return_to: "Scene Engine"
+    severity: medium
+    example_shape:
+      missing: "visible_action_seed for debt manifestation"
+      forbidden_renderer_action: "add decorative emotion"
+  - blocker_id: blocker_focalization_breach
+    type: focalization_breach
+    trigger_condition: "renderer_input would reveal hidden_fact_A to a character not listed in knowledge_ledger"
+    return_to: "Renderer Contract / Reviewer"
+    severity: high
+    example_shape:
+      invalid_access: "mentor knows hidden_fact_A before state_delta supports it"
+      forbidden_renderer_action: "narrate unearned knowledge"
+  - blocker_id: blocker_exposition_clump
+    type: exposition_clump
+    trigger_condition: "required_reveal lacks information carrier and would require system-style explanation"
+    return_to: "Chapter Card / Renderer"
+    severity: medium
+    example_shape:
+      missing: "event_log.visible_evidence"
+      forbidden_renderer_action: "dump institution_A rules"
+  - blocker_id: blocker_spotlight_imbalance
+    type: spotlight_imbalance
+    trigger_condition: "rival or institution explanation consumes spotlight budget and hides protagonist cost"
+    return_to: "Story Orchestrator Lite"
+    severity: medium
+    example_shape:
+      imbalance: "setting explanation overrides protagonist decision point"
+      forbidden_renderer_action: "expand world context instead of rendering sanctioned trace"

@@ -1,0 +1,17 @@
+single_book_story:
+  book_one_sentence: "protagonist seeks institutional legitimacy while discovering that legitimacy can be weaponized by rival_circle_A"
+  protagonist_core_drive: "gain durable agency inside institution_A without becoming its passive tool"
+  central_opposition: "institution_A rules plus rival_circle_A manipulation of access and records"
+  end_state: "protagonist holds a verified claim and accepts a visible cost for using it"
+  genre_promise: "rule pressure, strategic resource use, staged reveal, consequence inheritance"
+  emotional_promise: "earned agency under mistrust rather than instant recognition"
+  main_transformation: "from seeking permission to negotiating consequences of action"
+  forbidden_drift:
+    - "do not solve pressure through free access"
+    - "do not turn institution_A into full worldbuilding dump"
+    - "do not let narrator explain moral meaning for the reader"
+  target_reader_pressure:
+    - "reader tracks what protagonist can prove, not only what protagonist suspects"
+  main_reader_questions:
+    - reader_question_01
+    - reader_question_02

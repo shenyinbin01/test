@@ -1,0 +1,70 @@
+event_logs:
+  - event_id: event_ch001_token_removed
+    source_scene_agency_packet: scene_ch001_access_loss
+    source_scene_id: scene_ch001_access_loss
+    actor: protagonist
+    action_taken: "records resource_token_A revocation timestamp"
+    immediate_result: "access path is blocked but evidence_seed_A is preserved"
+    visible_event: "resource_token_A status changes from active to revoked"
+    visible_evidence: "resource_token_A status field and timestamp"
+    hidden_intention_if_allowed: "rival_circle_A may be connected, but event_log does not certify this"
+    consequence_seed: "protagonist has no access and must seek sanctioned exception"
+    affected_ledgers:
+      - resource_ledger
+      - knowledge_ledger
+      - reader_question_ledger
+      - relationship_debt_ledger
+    renderer_allowed_to_see:
+      - "revoked token status"
+      - "protagonist records timestamp"
+      - "mentor not yet informed"
+    renderer_not_allowed_to_change:
+      - "resource_token_A cannot be restored"
+      - "hidden_fact_A cannot become verified"
+  - event_id: event_ch002_limited_exception
+    source_scene_agency_packet: scene_ch002_mentor_exception
+    source_scene_id: scene_ch002_mentor_exception
+    actor: mentor
+    action_taken: "grants access_exception_A with deadline"
+    immediate_result: "protagonist gains limited access and mentor becomes publicly linked"
+    visible_event: "mentor grants access_exception_A with deadline and public trace"
+    visible_evidence: "access_exception_A grant record"
+    hidden_intention_if_allowed: "protagonist intends to verify before full disclosure"
+    consequence_seed: "relationship_debt_01 becomes visible mistrust"
+    affected_ledgers:
+      - resource_ledger
+      - relationship_debt_ledger
+      - knowledge_ledger
+      - reputation_identity_ledger
+    renderer_allowed_to_see:
+      - "access_exception_A granted"
+      - "mentor support is conditional"
+      - "withheld source remains withheld"
+    renderer_not_allowed_to_change:
+      - "mentor cannot fully trust protagonist yet"
+      - "hidden_fact_A remains unverified"
+  - event_id: event_ch003_false_record_found
+    source_scene_agency_packet: scene_ch003_record_check
+    source_scene_id: scene_ch003_record_check
+    actor: protagonist
+    action_taken: "spends access_exception_A on record_node_A check"
+    immediate_result: "visible_record_A contradicts false_record_A and triggers scrutiny"
+    visible_event: "visible_record_A contradicts false_record_A"
+    visible_evidence: "visible_record_A mismatch field"
+    hidden_intention_if_allowed: "protagonist wants to delay accusation until record is accepted"
+    consequence_seed: "institution_scrutiny_A begins; hidden_fact_A reliability increases"
+    affected_ledgers:
+      - plot_ledger
+      - knowledge_ledger
+      - resource_ledger
+      - reputation_identity_ledger
+      - reader_question_ledger
+      - foreshadow_payoff_ledger
+      - volume_progress_ledger
+    renderer_allowed_to_see:
+      - "visible_record_A mismatch"
+      - "access_exception_A spent"
+      - "institution_scrutiny_A triggered"
+    renderer_not_allowed_to_change:
+      - "volume_goal_01 cannot be fully complete"
+      - "institution_scrutiny_A cannot disappear"

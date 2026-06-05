@@ -1,0 +1,41 @@
+world_slice:
+  world_slice_id: synthetic_world_slice_001
+  note: "Hot-path minimal world slice only; not a complete IP universe."
+  active_rules:
+    - rule_id: institution_rule_01
+      description: "institution requires resource_token_A for restricted_area_A access"
+      choice_limit: "protagonist cannot enter restricted_area_A without a token or sanctioned exception"
+    - rule_id: evidence_rule_01
+      description: "hidden_fact_A can be accepted only through visible_record_A"
+      choice_limit: "rumor alone cannot change knowledge_ledger"
+  active_locations:
+    - location_id: public_gate_A
+      function: "visible access control point"
+    - location_id: record_node_A
+      function: "minimal record source for hidden_fact_A"
+  active_institutions:
+    - institution_id: institution_A
+      function: "controls access, records, and sanctions"
+  current_constraints:
+    - "resource_token_A is scarce"
+    - "mentor can grant limited exception but creates relationship_debt_01"
+    - "rival may exploit institution_rule_01"
+  relevant_power_groups:
+    - group_id: institution_A
+      interest: "preserve control of access records"
+    - group_id: rival_circle_A
+      interest: "keep hidden_sponsor_A unverified"
+  information_boundaries:
+    - fact_id: hidden_fact_A
+      known_by: ["rival"]
+      suspected_by: ["protagonist"]
+      withheld_from: ["mentor", "institution_A_public_record"]
+  resource_limits:
+    - resource_id: resource_token_A
+      owner: institution_A
+      scarcity_level: high
+  taboo_or_forbidden_actions:
+    - "no complete universe history"
+    - "no unearned direct access to hidden_fact_A"
+  open_world_questions:
+    - "why institution_A tolerates rival_circle_A"

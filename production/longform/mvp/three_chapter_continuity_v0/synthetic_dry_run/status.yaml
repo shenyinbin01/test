@@ -1,0 +1,31 @@
+project: longform_three_chapter_synthetic_dry_run
+version: v0
+status: synthetic_shape_validation
+base_branch: planning/longform-three-chapter-mvp-v0
+base_commit: febfc3d429093c8eac69a50bda26daf4254ff586
+scope:
+  generate_fiction: false
+  create_real_outline: false
+  modify_skill_pack: false
+  run_deepseek: false
+  run_hermes: false
+  run_abc_validation: false
+  execute_deep_research: false
+  use_raw_corpus: false
+  add_approved_patterns: false
+validation_targets:
+  world_slice_to_book_spine: true
+  book_spine_to_volume_card: true
+  volume_card_to_chapter_cards: true
+  chapter_cards_to_scene_agency_packets: true
+  scene_agency_to_event_logs: true
+  event_logs_to_renderer_inputs: true
+  renderer_blocker_shape: true
+  state_delta_traceability: true
+  ledger_reducer_flow: true
+  drift_detection_shape: true
+  anti_feed_gate_shape: true
+result:
+  synthetic_dry_run_completed: true
+  fiction_generated: false
+  schema_flow_status: connected_with_gaps

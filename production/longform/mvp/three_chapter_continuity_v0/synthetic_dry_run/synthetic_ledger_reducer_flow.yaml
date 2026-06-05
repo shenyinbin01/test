@@ -1,0 +1,87 @@
+ledger_reducer_flow:
+  principles:
+    writer_directly_edits_ledger: false
+    renderer_directly_edits_ledger: false
+    ledger_views_generated_by_reducer: true
+    reducer_input_source: accepted_state_delta_only
+    conflict_policy: "if state_delta conflicts with evidence_ref, fail before ledger update"
+  inputs:
+    - state_delta_ch001
+    - state_delta_ch002
+    - state_delta_ch003
+  reducers:
+    plot_ledger:
+      reads:
+        - plot_change
+        - next_chapter_seed_change
+      output_shape:
+        active_threads: []
+        blocked_threads: []
+        next_required_actions: []
+    character_state_ledger:
+      reads:
+        - character_change
+      output_shape:
+        character_id: ""
+        current_goal: ""
+        pressure: ""
+        latest_delta_ref: ""
+    relationship_debt_ledger:
+      reads:
+        - relationship_debt_change
+      output_shape:
+        debt_id: ""
+        current_balance: ""
+        next_manifestation: ""
+        latest_delta_ref: ""
+    knowledge_ledger:
+      reads:
+        - knowledge_change
+      output_shape:
+        fact_id: ""
+        known_by: []
+        believed_by: []
+        withheld_from: []
+        reliability: ""
+        latest_delta_ref: ""
+    resource_ledger:
+      reads:
+        - resource_change
+      output_shape:
+        resource_id: ""
+        owner_or_holder: ""
+        current_status: ""
+        latest_delta_ref: ""
+    reputation_identity_ledger:
+      reads:
+        - reputation_or_identity_change
+      output_shape:
+        subject: ""
+        public_status: ""
+        institutional_restriction: ""
+        latest_delta_ref: ""
+    reader_question_ledger:
+      reads:
+        - reader_question_change
+      output_shape:
+        question_id: ""
+        status: ""
+        expected_payoff_window: ""
+        latest_delta_ref: ""
+    foreshadow_payoff_ledger:
+      reads:
+        - foreshadowing_or_payoff_change
+      output_shape:
+        foreshadow_id: ""
+        current_status: ""
+        payoff_or_delay_reason: ""
+        latest_delta_ref: ""
+    volume_progress_ledger:
+      reads:
+        - plot_change
+        - volume_goal_link_from_chapter_card
+      output_shape:
+        volume_id: synthetic_volume_01
+        progress_summary: ""
+        remaining_pressure: ""
+        latest_delta_ref: ""

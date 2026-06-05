@@ -1,0 +1,23 @@
+volume_card:
+  volume_id: synthetic_volume_01
+  volume_one_sentence: "protagonist must keep limited access long enough to verify hidden_fact_A while relationship_debt_01 grows"
+  volume_goal: volume_goal_01_verify_hidden_fact_A_without_free_access
+  volume_antagonistic_force: "institution_rule_01 plus rival_circle_A information control"
+  midpoint_turn: "protagonist learns that resource_token_A can be restored only by creating a public obligation"
+  escalation_path:
+    - chapter_001: "access removed; evidence seed appears"
+    - chapter_002: "limited access restored with relationship cost"
+    - chapter_003: "false record exposed; institutional scrutiny begins"
+  payoff_window:
+    - payoff_id: payoff_01
+      target: hidden_fact_A
+      expected_window: chapter_003
+  debt_window:
+    - debt_id: relationship_debt_01
+      expected_refresh: ["chapter_002", "chapter_003"]
+  ending_state: "volume_goal_01 partially advanced; protagonist has evidence but is under scrutiny"
+  next_volume_seed: "institution_A opens formal review that can confirm or punish protagonist"
+  spotlight_rotation:
+    - chapter_001: ["protagonist", "rival"]
+    - chapter_002: ["protagonist", "mentor"]
+    - chapter_003: ["protagonist", "institution_A"]

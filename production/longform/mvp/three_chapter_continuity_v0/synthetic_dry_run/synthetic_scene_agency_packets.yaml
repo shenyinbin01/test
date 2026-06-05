@@ -1,0 +1,49 @@
+scene_agency_packets:
+  - scene_id: scene_ch001_access_loss
+    linked_chapter_id: chapter_001
+    active_character: protagonist
+    local_goal: "preserve a path to restricted_area_A after resource_token_A is removed"
+    belief_about_situation: "protagonist believes rival caused the access loss but cannot prove it"
+    available_options:
+      - "publicly challenge institution_rule_01"
+      - "quietly inspect evidence_seed_A"
+      - "ask mentor for immediate help"
+    chosen_tactic: "quietly inspect evidence_seed_A before involving mentor"
+    perceived_cost: "mentor may read the delay as distrust"
+    wrong_model_or_blindspot: "protagonist underestimates how fast rival can alter record_node_A"
+    withheld_plan: "do not tell mentor about evidence_seed_A until it has a visible record"
+    attention_target: "resource_token_A status field"
+    visible_action_seed: "protagonist records token removal timestamp"
+    next_friction: "mentor is approached late and notices withheld context"
+  - scene_id: scene_ch002_mentor_exception
+    linked_chapter_id: chapter_002
+    active_character: protagonist
+    local_goal: "obtain limited access without revealing full evidence_seed_A"
+    belief_about_situation: "protagonist believes partial disclosure protects mentor"
+    available_options:
+      - "tell mentor all suspicion"
+      - "request narrow access_exception_A"
+      - "attempt unsanctioned access"
+    chosen_tactic: "request narrow access_exception_A while admitting withholding"
+    perceived_cost: "mentor support becomes conditional and publicly traceable"
+    wrong_model_or_blindspot: "protagonist underestimates mentor's exposure risk"
+    withheld_plan: "reserve hidden_fact_A until visible_record_A exists"
+    attention_target: "deadline attached to access_exception_A"
+    visible_action_seed: "protagonist accepts limited exception condition"
+    next_friction: "mentor becomes linked to protagonist's next action"
+  - scene_id: scene_ch003_record_check
+    linked_chapter_id: chapter_003
+    active_character: protagonist
+    local_goal: "use access_exception_A before rival blocks record_node_A"
+    belief_about_situation: "protagonist believes false_record_A can support hidden_fact_A"
+    available_options:
+      - "check record_node_A immediately"
+      - "warn mentor first"
+      - "wait for safer verification"
+    chosen_tactic: "check record_node_A immediately"
+    perceived_cost: "access_exception_A will be spent and traceable"
+    wrong_model_or_blindspot: "protagonist underestimates institution_A scrutiny response"
+    withheld_plan: "withhold final accusation until false_record_A is visible"
+    attention_target: "visible_record_A mismatch field"
+    visible_action_seed: "protagonist spends access_exception_A on one record check"
+    next_friction: "institution_scrutiny_A targets both protagonist and mentor"

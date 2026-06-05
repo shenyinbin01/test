@@ -1,0 +1,67 @@
+renderer_inputs:
+  note: "Renderer reads only sanctioned trace, not free agent chatter or unreviewed simulation logs."
+  chapter_001:
+    chapter_card: chapter_001
+    scene_agency_packets:
+      - scene_ch001_access_loss
+    event_logs:
+      - event_ch001_token_removed
+    human_texture_packet:
+      status: placeholder_only
+      focus_fields:
+        - relationship_debt_change
+        - information_carrier
+    work_voice_contract:
+      status: placeholder_only
+      constraints:
+        - "no narrator conclusion about moral meaning"
+        - "maintain limited knowledge boundary"
+    hot_ledger_slice:
+      relationship_debt_ledger: []
+      knowledge_ledger:
+        - hidden_fact_A: suspected_by_protagonist
+      resource_ledger:
+        - resource_token_A: active_before_chapter
+  chapter_002:
+    chapter_card: chapter_002
+    scene_agency_packets:
+      - scene_ch002_mentor_exception
+    event_logs:
+      - event_ch002_limited_exception
+    human_texture_packet:
+      status: placeholder_only
+      focus_fields:
+        - shame_or_avoidance
+        - relationship_debt_change
+    work_voice_contract:
+      status: placeholder_only
+      constraints:
+        - "do not explain mentor's final judgment"
+        - "keep protagonist knowledge incomplete"
+    hot_ledger_slice:
+      previous_state_delta: state_delta_ch001
+      relationship_debt_ledger:
+        - relationship_debt_01
+      resource_ledger:
+        - resource_token_A: revoked
+  chapter_003:
+    chapter_card: chapter_003
+    scene_agency_packets:
+      - scene_ch003_record_check
+    event_logs:
+      - event_ch003_false_record_found
+    human_texture_packet:
+      status: placeholder_only
+      focus_fields:
+        - consequence_next_friction
+        - scene_resistance
+    work_voice_contract:
+      status: placeholder_only
+      constraints:
+        - "render pressure without changing causality"
+        - "return blocker if payoff lacks evidence"
+    hot_ledger_slice:
+      previous_state_delta: state_delta_ch002
+      access_exception_A: active_with_deadline
+      relationship_debt_01: visible_mistrust
+      reader_question_03: active

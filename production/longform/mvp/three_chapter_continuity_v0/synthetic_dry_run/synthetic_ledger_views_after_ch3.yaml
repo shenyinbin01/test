@@ -1,0 +1,84 @@
+ledger_views_after_ch3:
+  generated_by: ledger_reducers
+  source_deltas:
+    - state_delta_ch001
+    - state_delta_ch002
+    - state_delta_ch003
+  plot_ledger:
+    active_threads:
+      - thread_id: volume_goal_01
+        status: "partially_advanced"
+        latest_delta_ref: state_delta_ch003
+        next_required_action: "resolve formal_review_A pressure"
+    blocked_threads:
+      - thread_id: full_verification_hidden_fact_A
+        reason: "hidden_fact_A supported but not final"
+  character_state_ledger:
+    protagonist:
+      current_goal: "survive institution_scrutiny_A and preserve visible_record_A"
+      pressure: "access spent plus public scrutiny"
+      latest_delta_ref: state_delta_ch003
+    mentor:
+      current_goal: "limit exposure while deciding whether to keep supporting protagonist"
+      pressure: "publicly linked to access_exception_A"
+      latest_delta_ref: state_delta_ch003
+  relationship_debt_ledger:
+    relationship_debt_01:
+      current_balance: "protagonist owes mentor explanation; mentor is now exposed"
+      next_manifestation: "mentor may refuse future exception or demand full disclosure"
+      latest_delta_ref: state_delta_ch003
+  knowledge_ledger:
+    hidden_fact_A:
+      known_by: []
+      believed_by:
+        protagonist: "supported_by_visible_record_A"
+        reader: "supported_but_not_complete"
+      withheld_from:
+        mentor: "full hidden_fact_A remains withheld"
+      reliability: supported_partial
+      latest_delta_ref: state_delta_ch003
+  resource_ledger:
+    resource_token_A:
+      current_status: revoked
+      latest_delta_ref: state_delta_ch001
+    access_exception_A:
+      current_status: spent
+      latest_delta_ref: state_delta_ch003
+    visible_record_A:
+      current_status: acquired
+      latest_delta_ref: state_delta_ch003
+  reputation_identity_ledger:
+    protagonist_status:
+      public_status: under_institution_scrutiny_A
+      latest_delta_ref: state_delta_ch003
+    mentor_status:
+      public_status: linked_to_scrutiny
+      latest_delta_ref: state_delta_ch003
+  reader_question_ledger:
+    reader_question_01:
+      status: refreshed_then_subsumed_by_reader_question_03
+      latest_delta_ref: state_delta_ch001
+    reader_question_02:
+      status: partially_paid
+      latest_delta_ref: state_delta_ch002
+    reader_question_03:
+      status: partially_paid
+      latest_delta_ref: state_delta_ch003
+    reader_question_04:
+      status: active
+      expected_payoff_window: next_chapter_or_formal_review_window
+      latest_delta_ref: state_delta_ch003
+  foreshadow_payoff_ledger:
+    payoff_01:
+      current_status: partial_payoff
+      payoff_or_delay_reason: "visible_record_A supports but does not complete hidden_fact_A"
+      latest_delta_ref: state_delta_ch003
+    formal_review_A:
+      current_status: seeded
+      latest_delta_ref: state_delta_ch003
+  volume_progress_ledger:
+    synthetic_volume_01:
+      progress_type: partial_payoff_with_new_pressure
+      progress_summary: "access loss led to evidence; limited access produced visible_record_A; scrutiny opens next pressure"
+      remaining_pressure: "formal_review_A and full hidden_fact_A verification"
+      latest_delta_ref: state_delta_ch003

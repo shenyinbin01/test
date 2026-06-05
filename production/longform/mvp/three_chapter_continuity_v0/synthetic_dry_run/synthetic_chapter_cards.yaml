@@ -1,0 +1,96 @@
+chapter_cards:
+  - chapter_id: chapter_001
+    chapter_one_sentence: "protagonist loses access to resource_token_A but gains evidence_seed_A about rival's hidden sponsor"
+    volume_goal_link: volume_goal_01_verify_hidden_fact_A_without_free_access
+    plot_function: "inciting access loss plus evidence seed"
+    required_conflict: "protagonist must choose between public challenge and quiet evidence gathering"
+    required_reveal: "evidence_seed_A exists but is not enough to verify hidden_fact_A"
+    required_payoff_or_debt: "create relationship_debt_01 by withholding suspicion from mentor"
+    character_state_before:
+      protagonist: "expects resource_token_A to be stable"
+    character_state_after:
+      protagonist: "has evidence_seed_A but no access"
+    relationship_pressure_change:
+      relationship_debt_01: "mentor is not told the full suspicion"
+    knowledge_state_change:
+      hidden_fact_A: "suspected_by protagonist; unknown_to mentor"
+    resource_or_status_change:
+      resource_token_A: "removed_from protagonist"
+    reader_question_before:
+      - reader_question_01: "why rival_circle_A controls access"
+    reader_question_after:
+      - reader_question_01: "refreshed with evidence_seed_A"
+      - reader_question_02: "what cost will protagonist pay to regain access"
+    spotlight_targets: ["protagonist_choice", "resource_token_A", "hidden_fact_A"]
+    allowed_divergence_band:
+      - "protagonist may challenge or withhold, but cannot regain full access"
+      - "hidden_fact_A cannot be verified yet"
+    must_not_happen:
+      - "no free restoration of resource_token_A"
+      - "no full exposition of institution_A"
+    next_chapter_seed: "protagonist needs mentor exception while hiding part of evidence_seed_A"
+  - chapter_id: chapter_002
+    reads_state_delta: state_delta_ch001
+    chapter_one_sentence: "protagonist obtains limited exception from mentor while relationship_debt_01 becomes visible"
+    volume_goal_link: volume_goal_01_verify_hidden_fact_A_without_free_access
+    plot_function: "costly partial recovery"
+    required_conflict: "mentor demands disclosure before granting limited exception"
+    required_reveal: "mentor learns protagonist is withholding a source, not the full hidden_fact_A"
+    required_payoff_or_debt: "refresh relationship_debt_01 and create access_exception_A"
+    character_state_before:
+      protagonist: "blocked from restricted_area_A"
+      mentor: "expects trust before support"
+    character_state_after:
+      protagonist: "has limited access but carries public obligation"
+      mentor: "supports with reservation"
+    relationship_pressure_change:
+      relationship_debt_01: "changed from hidden withholding to visible mistrust"
+    knowledge_state_change:
+      hidden_fact_A: "mentor knows there is a withheld source; still does not know fact"
+    resource_or_status_change:
+      access_exception_A: "created with deadline"
+    reader_question_before:
+      - reader_question_02: "what cost will protagonist pay to regain access"
+    reader_question_after:
+      - reader_question_02: "partially paid through relationship_debt_01"
+      - reader_question_03: "whether limited access is enough to verify hidden_fact_A"
+    spotlight_targets: ["protagonist_tactic", "mentor_boundary", "relationship_debt_01"]
+    allowed_divergence_band:
+      - "mentor can refuse or grant limited exception, but full trust cannot be restored"
+      - "resource recovery must carry a visible obligation"
+    must_not_happen:
+      - "no instant reconciliation"
+      - "no complete reveal to mentor"
+    next_chapter_seed: "access_exception_A allows one record check before deadline"
+  - chapter_id: chapter_003
+    reads_state_delta: state_delta_ch002
+    chapter_one_sentence: "protagonist uses limited access to expose false_record_A while triggering institution_scrutiny_A"
+    volume_goal_link: volume_goal_01_verify_hidden_fact_A_without_free_access
+    plot_function: "partial payoff with new scrutiny"
+    required_conflict: "protagonist must spend access_exception_A before rival blocks record_node_A"
+    required_reveal: "false_record_A proves hidden_fact_A is plausible but not fully resolved"
+    required_payoff_or_debt: "payoff_01 partial; relationship_debt_01 refreshes through mentor's public exposure"
+    character_state_before:
+      protagonist: "has limited access and deadline pressure"
+    character_state_after:
+      protagonist: "has visible_record_A and institution_scrutiny_A"
+    relationship_pressure_change:
+      relationship_debt_01: "mentor is implicated by granting exception"
+    knowledge_state_change:
+      hidden_fact_A: "visible_record_A shifts reliability from suspected to supported"
+    resource_or_status_change:
+      access_exception_A: "spent"
+      institution_scrutiny_A: "created"
+    reader_question_before:
+      - reader_question_03: "whether limited access is enough to verify hidden_fact_A"
+    reader_question_after:
+      - reader_question_03: "partially paid off"
+      - reader_question_04: "whether institution_scrutiny_A confirms or punishes protagonist"
+    spotlight_targets: ["evidence_ref", "access_cost", "institution_scrutiny_A"]
+    allowed_divergence_band:
+      - "evidence can expose false_record_A but cannot end volume_goal_01"
+      - "institution response must add pressure"
+    must_not_happen:
+      - "no complete victory"
+      - "no ledger update without event evidence"
+    next_chapter_seed: "formal_review_A starts with mentor and protagonist under pressure"

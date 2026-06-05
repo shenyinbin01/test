@@ -1,0 +1,110 @@
+state_deltas:
+  - delta_id: state_delta_ch001
+    chapter_id: chapter_001
+    source_chapter: chapter_001
+    source_event_log:
+      - event_ch001_token_removed
+    plot_change: "volume_goal_01 blocked by revoked resource_token_A; evidence_seed_A introduced"
+    character_change:
+      protagonist:
+        current_goal: "regain sanctioned access"
+        pressure: "blocked access plus withheld suspicion"
+    relationship_debt_change:
+      relationship_debt_01: "created; protagonist withholds evidence_seed_A from mentor"
+    knowledge_change:
+      hidden_fact_A:
+        protagonist: suspected
+        mentor: unknown
+        reader: sees evidence_seed_A exists
+    resource_change:
+      resource_token_A: revoked
+    reputation_or_identity_change:
+      protagonist_status: "access holder to blocked applicant"
+    reader_question_change:
+      reader_question_01: refreshed
+      reader_question_02: created
+    foreshadowing_or_payoff_change:
+      payoff_01: "setup with evidence_seed_A"
+    next_chapter_seed_change: "seek access_exception_A from mentor"
+    evidence_ref:
+      - event_ch001_token_removed.visible_event
+      - scene_ch001_access_loss.visible_action_seed
+    evidence_refs:
+      - event_ch001_token_removed.visible_event
+      - scene_ch001_access_loss.visible_action_seed
+    note: "state_delta is not a chapter summary; it records only changes affecting next chapter."
+  - delta_id: state_delta_ch002
+    chapter_id: chapter_002
+    source_chapter: chapter_002
+    source_event_log:
+      - event_ch002_limited_exception
+    plot_change: "volume_goal_01 can advance through limited access but now has public obligation"
+    character_change:
+      protagonist:
+        current_goal: "use access_exception_A before deadline"
+        pressure: "mentor trust reduced"
+      mentor:
+        current_goal: "support without being misled"
+        pressure: "public trace attached to exception"
+    relationship_debt_change:
+      relationship_debt_01: "refreshed; hidden withholding becomes visible mistrust"
+    knowledge_change:
+      hidden_fact_A:
+        protagonist: suspected_with_evidence_seed
+        mentor: knows_withheld_source_exists
+        reader: knows protagonist is withholding source
+    resource_change:
+      access_exception_A: active_with_deadline
+      resource_token_A: still_revoked
+    reputation_or_identity_change:
+      mentor_status: "publicly linked to protagonist request"
+    reader_question_change:
+      reader_question_02: partially_paid
+      reader_question_03: created
+    foreshadowing_or_payoff_change:
+      payoff_01: "payoff window moved to chapter_003"
+    next_chapter_seed_change: "perform one record check before access_exception_A expires"
+    evidence_ref:
+      - event_ch002_limited_exception.visible_event
+      - scene_ch002_mentor_exception.visible_action_seed
+    evidence_refs:
+      - event_ch002_limited_exception.visible_event
+      - scene_ch002_mentor_exception.visible_action_seed
+    note: "ledger updates must be reduced from this delta, not hand-edited."
+  - delta_id: state_delta_ch003
+    chapter_id: chapter_003
+    source_chapter: chapter_003
+    source_event_log:
+      - event_ch003_false_record_found
+    plot_change: "false_record_A exposed; hidden_fact_A becomes supported but not fully resolved"
+    character_change:
+      protagonist:
+        current_goal: "survive institution_scrutiny_A and preserve visible_record_A"
+        pressure: "access spent; scrutiny opened"
+    relationship_debt_change:
+      relationship_debt_01: "refreshed; mentor is exposed by granting exception"
+    knowledge_change:
+      hidden_fact_A:
+        protagonist: supported_by_visible_record_A
+        mentor: knows action produced public exposure
+        institution_A: aware_of_record_conflict
+    resource_change:
+      access_exception_A: spent
+      visible_record_A: acquired
+    reputation_or_identity_change:
+      protagonist_status: "under institution_scrutiny_A"
+      mentor_status: "linked_to_scrutiny"
+    reader_question_change:
+      reader_question_03: partially_paid
+      reader_question_04: created
+    foreshadowing_or_payoff_change:
+      payoff_01: partial_payoff
+      formal_review_A: seeded
+    next_chapter_seed_change: "formal_review_A pressures protagonist and mentor"
+    evidence_ref:
+      - event_ch003_false_record_found.visible_event
+      - scene_ch003_record_check.visible_action_seed
+    evidence_refs:
+      - event_ch003_false_record_found.visible_event
+      - scene_ch003_record_check.visible_action_seed
+    note: "this is a partial payoff, not a full volume resolution."
