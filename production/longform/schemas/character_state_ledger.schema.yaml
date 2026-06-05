@@ -1,0 +1,33 @@
+schema: character_state_ledger
+purpose: "角色状态账本；由 reducers 记录角色当前目标、策略、压力、盲点和未结成本。"
+owner: "Ledger Reducer"
+readers:
+  - "Story Orchestrator Lite"
+  - "Scene Engine"
+  - "Renderer"
+  - "Reviewer"
+update_timing: "每章 accepted state_delta 后归并；关键场景可读取热切片。"
+required_fields:
+  - character_id
+  - current_goal
+  - current_strategy
+  - pressure
+  - blindspot
+  - unresolved_cost
+  - latest_delta_ref
+optional_fields:
+  - wounds_or_fatigue
+  - emotional_residue
+  - public_mask
+validation_rules:
+  - "ledger 是 reducers 输出的物化视图，不应该由 Writer 直接手改。"
+  - "目标或策略变化必须有 state_delta 证据。"
+  - "情绪只有造成行为或选择后果才进入账本。"
+failure_modes:
+  - "人物每章重置。"
+  - "动机漂移无原因。"
+  - "情绪有命名无后果。"
+not_for:
+  - "人物小传。"
+  - "心理分析散文。"
+  - "好感度系统。"

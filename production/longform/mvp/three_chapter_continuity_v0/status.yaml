@@ -1,0 +1,23 @@
+project: three_chapter_continuity_mvp
+version: v0
+status: design_draft
+scope:
+  generate_fiction: false
+  run_deepseek: false
+  run_hermes: false
+  run_abc_experiment: false
+  use_raw_corpus: false
+  use_specific_author: false
+  modify_skill_pack: false
+inputs:
+  required:
+    - single_book_story
+    - volume_card
+    - three_chapter_cards
+    - state_delta_schema
+    - ledger_reducer_rules
+groups:
+  A: current_baseline
+  B: longform_structure
+  C: longform_plus_engine
+next_gate: human_review

@@ -1,0 +1,35 @@
+schema: scene_agency_packet
+purpose: "场景行动包；让角色基于局部目标、信念、误判、选择和代价推动局面。"
+owner: "Scene Engine / Planner"
+readers:
+  - "Story Orchestrator Lite"
+  - "Renderer"
+  - "Reviewer"
+  - "State Delta extractor"
+update_timing: "关键场景生成前创建；场景执行后由 event_log 和 state_delta 记录结果。"
+required_fields:
+  - scene_id
+  - active_character
+  - local_goal
+  - belief_about_situation
+  - available_options
+  - chosen_tactic
+  - perceived_cost
+  - wrong_model_or_blindspot
+  - next_friction
+optional_fields:
+  - withheld_plan
+  - attention_target
+  - visible_action_seed
+validation_rules:
+  - "人物必须有可行动目标，不是剧情任务标签。"
+  - "chosen_tactic 必须包含取舍或代价。"
+  - "next_friction 必须能进入下一场景、下一章或 state_delta。"
+failure_modes:
+  - "人物像执行章节卡。"
+  - "选择没有误判或成本。"
+  - "后果不继承。"
+not_for:
+  - "正文片段。"
+  - "心理描写模板。"
+  - "完整多 agent 仿真日志。"

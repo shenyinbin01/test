@@ -1,25 +1,36 @@
-﻿# Current Priority Order
+# Current Priority Order
 
 ## 新优先级
 
-P0：确认 Human Texture v0 底座来源，避免 Work Voice patch 失去地基。
+P0：确认并保留 Human Texture v0 底座来源，不让后续 patch 覆盖它。
 
-P1：角色主动感 / 行动主权 schema。
+P1：角色主动感 / 行动主权 schema 与 `scene_agency_packet`。
 
-P2：后果继承账本 / 关系债账本。
+P2：Consequence Ledger / Relationship Debt Ledger / State Delta。
 
-P3：1-scene MVP 设计。
+P3：Longform hot path schema：
 
-P4：Work Voice patch 收口，不继续扩展。
+- `world_slice`
+- `single_book_story`
+- `volume_card`
+- `chapter_card`
 
-P5：Reader Immersion reviewer rubric。
+P4：Story Orchestrator Lite + Narrative Renderer Contract。
 
-P6：Long-form narrative architecture 第二轮调研。
+P5：3 章连续 MVP 设计。
 
-P7：Agentic Narrative Engine one-scene sandbox。
+P6：longform reviewer gate + drift detection。
+
+P7：Work Voice 收口为 renderer contract 子模块。
+
+P8：Reader Immersion 收口为 `reader_question_ledger` + reviewer rubric。
+
+P9：Agentic Narrative Engine one-scene sandbox，等待后续。
+
+P10：完整 IP 宇宙，暂缓。
 
 ## 排序理由
 
-角色主动感和后果继承是因果发动机。没有它，Human Texture 可能只是在场景里加人味，Work Voice 可能只是在叙述上更稳，但人物仍然没有推动局面的能力。
+角色主动感和后果继承仍然是因果发动机。没有它，Human Texture 只是在场景里加人味，Work Voice 只是在叙述上更稳，人物仍然没有推动局面的能力。
 
-长篇车架很重要，但它依赖发动机。车架可以同步调研，不应替代发动机主线。
+第二轮 Deep Research 把长篇车架推入主线，但它不是完整 IP 宇宙先行，而是热路径闭环先行：Book Spine、Volume Card、Chapter Card、State Delta 和 Ledger Reducers。三章连续 MVP 用来验证这套车架能否承接发动机，并让后果、信息、关系债和读者问题跨章继承。

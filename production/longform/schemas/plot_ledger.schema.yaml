@@ -1,0 +1,31 @@
+schema: plot_ledger
+purpose: "剧情账本；由 reducers 从 state_delta 生成的主线、支线、阻塞和下一步物化视图。"
+owner: "Ledger Reducer"
+readers:
+  - "Story Orchestrator Lite"
+  - "Chapter Card designer"
+  - "Reviewer"
+update_timing: "每章 accepted state_delta 后归并。"
+required_fields:
+  - thread_id
+  - thread_type
+  - current_status
+  - latest_delta_ref
+  - blocking_issue
+  - next_required_action
+optional_fields:
+  - deadline
+  - related_reader_question
+  - related_foreshadow
+validation_rules:
+  - "ledger 是 reducers 输出的物化视图，不应该由 Writer 直接手改。"
+  - "每个变化必须回连 state_delta。"
+  - "主线 thread 必须链接 Book Spine 或 Volume Card。"
+failure_modes:
+  - "章节推进为空。"
+  - "支线吞掉主线。"
+  - "旧 thread 被遗忘。"
+not_for:
+  - "正文大纲。"
+  - "手写剧情备忘录。"
+  - "未证实事件记录。"

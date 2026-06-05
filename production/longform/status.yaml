@@ -1,0 +1,28 @@
+project: longform_narrative_production
+version: v0
+status: design_draft
+based_on:
+  deep_research_round1: summarized_and_original_report_saved
+  deep_research_round2: summarized_and_original_report_saved
+scope:
+  modify_skill_pack: false
+  generate_fiction: false
+  run_deepseek: false
+  run_hermes: false
+  run_validation: false
+  use_raw_corpus: false
+  create_real_novel_outline: false
+priority:
+  full_ip_universe: deferred
+  three_chapter_mvp: next_design_target
+  story_orchestrator_lite: design_only
+  renderer_contract: design_only
+  state_delta_first: design_only
+entry_paths:
+  architecture: production/longform/longform_architecture.md
+  schemas: production/longform/schemas/
+  mvp_design: production/longform/mvp/three_chapter_continuity_v0/
+constraints:
+  no_phase8_asset_change: true
+  no_approved_patterns_change: true
+  no_external_project_trial: true

@@ -1,0 +1,37 @@
+schema: state_delta
+purpose: "状态增量；写后唯一增量事实。任何账本更新必须能追溯到 state_delta。"
+owner: "State Manager / Reviewer"
+readers:
+  - "Ledger Reducers"
+  - "Story Orchestrator Lite"
+  - "Reviewer"
+update_timing: "每章 accepted 后生成；未通过 Reviewer gate 不得归并到账本。"
+required_fields:
+  - delta_id
+  - chapter_id
+  - evidence_refs
+  - plot_delta
+  - character_state_delta
+  - relationship_debt_delta
+  - knowledge_delta
+  - resource_or_status_delta
+  - reader_question_delta
+  - next_chapter_seed
+optional_fields:
+  - reputation_identity_delta
+  - foreshadow_payoff_delta
+  - volume_progress_delta
+  - unresolved_threads
+validation_rules:
+  - "state_delta 是唯一写后增量事实。"
+  - "每条 delta 必须有 evidence_refs。"
+  - "ledger reducer 只能读取 accepted state_delta。"
+  - "delta 与正文证据冲突时必须失败。"
+failure_modes:
+  - "账本虚构。"
+  - "正文无证据却新增状态。"
+  - "连续性靠 summary 兜底。"
+not_for:
+  - "全文摘要。"
+  - "Writer 直接编辑对象。"
+  - "Renderer 修结构的入口。"

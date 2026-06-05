@@ -1,0 +1,32 @@
+schema: reputation_identity_ledger
+purpose: "声誉 / 身份账本；由 reducers 记录外界如何认知人物、身份限制和制度压力。"
+owner: "Ledger Reducer"
+readers:
+  - "Story Orchestrator Lite"
+  - "Chapter Card designer"
+  - "Renderer"
+  - "Reviewer"
+update_timing: "每章 accepted state_delta 后归并；身份或名声影响场景入口时必须读取。"
+required_fields:
+  - identity_or_reputation_id
+  - subject
+  - public_status
+  - trust_map
+  - institutional_restriction
+  - latest_delta_ref
+optional_fields:
+  - false_identity
+  - rumor_state
+  - exposure_risk
+validation_rules:
+  - "ledger 是 reducers 输出的物化视图，不应该由 Writer 直接手改。"
+  - "声誉变化必须有公共证据或制度记录。"
+  - "身份限制必须改变可进入场景、可用资源或被监控程度。"
+failure_modes:
+  - "名声变化不继承。"
+  - "身份冲突忽隐忽现。"
+  - "制度压力只在需要时出现。"
+not_for:
+  - "人物档案。"
+  - "阵营百科。"
+  - "无证据的群众评价。"

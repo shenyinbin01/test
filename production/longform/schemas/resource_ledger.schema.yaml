@@ -1,0 +1,31 @@
+schema: resource_ledger
+purpose: "资源账本；由 reducers 记录钱、时间、物品、权限、体力、机会等可耗资源。"
+owner: "Ledger Reducer"
+readers:
+  - "Story Orchestrator Lite"
+  - "Scene Engine"
+  - "Reviewer"
+update_timing: "每章 accepted state_delta 后归并；资源用于下一章策略选择。"
+required_fields:
+  - resource_id
+  - owner
+  - current_amount_or_status
+  - scarcity_level
+  - deadline
+  - latest_delta_ref
+optional_fields:
+  - access_condition
+  - hidden_cost
+  - transfer_history
+validation_rules:
+  - "ledger 是 reducers 输出的物化视图，不应该由 Writer 直接手改。"
+  - "资源变化必须影响行动空间或代价。"
+  - "获得资源不得免费绕过已建立压力。"
+failure_modes:
+  - "资源前后不一致。"
+  - "代价无继承。"
+  - "免费爽点。"
+not_for:
+  - "背包系统大全。"
+  - "设定物品百科。"
+  - "奖励清单。"

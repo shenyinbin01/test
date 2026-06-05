@@ -1,0 +1,31 @@
+schema: volume_progress_ledger
+purpose: "卷目标进度账本；由 reducers 记录每章对当前卷目标的推进、延迟、反转或代价扩大。"
+owner: "Ledger Reducer"
+readers:
+  - "Story Orchestrator Lite"
+  - "Chapter Card designer"
+  - "Reviewer"
+update_timing: "每章 accepted state_delta 后归并。"
+required_fields:
+  - volume_id
+  - chapter_id
+  - progress_type
+  - progress_summary
+  - remaining_pressure
+  - latest_delta_ref
+optional_fields:
+  - midpoint_turn_status
+  - payoff_window_status
+  - debt_window_status
+validation_rules:
+  - "ledger 是 reducers 输出的物化视图，不应该由 Writer 直接手改。"
+  - "每章必须说明与 volume_goal 的关系。"
+  - "连续三章不能全部空推进。"
+failure_modes:
+  - "章节都顺，但卷目标不动。"
+  - "主线偏航。"
+  - "回收窗口失效。"
+not_for:
+  - "卷大纲全文。"
+  - "章节评分表。"
+  - "正文摘要。"

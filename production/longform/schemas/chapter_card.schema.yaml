@@ -1,0 +1,46 @@
+schema: chapter_card
+purpose: "章节卡；一章的状态变化合同。chapter_one_sentence 只是导航锚点，不是完整章节合同。"
+owner: "Planner / Story Orchestrator Lite"
+readers:
+  - "Scene Engine"
+  - "Renderer"
+  - "Reviewer"
+  - "State Delta extractor"
+update_timing: "每章生成前创建；scene outcome 偏离 allowed_divergence_band 时局部修订。"
+required_fields:
+  - chapter_id
+  - chapter_one_sentence
+  - volume_goal_link
+  - plot_function
+  - required_conflict
+  - required_reveal
+  - required_payoff_or_debt
+  - character_state_before
+  - character_state_after
+  - relationship_pressure_change
+  - knowledge_state_change
+  - resource_or_status_change
+  - reader_question_before
+  - reader_question_after
+  - spotlight_targets
+  - allowed_divergence_band
+  - must_not_happen
+  - next_chapter_seed
+optional_fields:
+  - hook_type
+  - pacing_target
+  - human_texture_focus
+  - work_voice_focus
+validation_rules:
+  - "chapter_one_sentence 只能作为顶部导航锚点。"
+  - "必须说明本章前后至少一种状态变化。"
+  - "reader_question_after 必须承接或改写 reader_question_before。"
+  - "allowed_divergence_band 必须允许人物主动选择，但不能破坏卷目标。"
+failure_modes:
+  - "本章像剧情摘要而非状态合同。"
+  - "钩子压过人物承受点。"
+  - "下一章 seed 与本章 delta 脱节。"
+not_for:
+  - "完整正文。"
+  - "逐场景台词表。"
+  - "用来硬控人物每一步反应。"

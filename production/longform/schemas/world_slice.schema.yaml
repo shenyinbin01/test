@@ -1,0 +1,34 @@
+schema: world_slice
+purpose: "世界切片；当前热路径使用的最小世界规则、制度、地点和限制，不是完整 IP 宇宙。"
+owner: "Planner / Story Orchestrator Lite"
+readers:
+  - "Book Spine designer"
+  - "Volume Card designer"
+  - "Chapter Card designer"
+  - "Scene Engine"
+  - "Renderer"
+update_timing: "三章 MVP 启动前创建；只有当章节必须依赖新世界约束时才更新。"
+required_fields:
+  - world_slice_id
+  - active_rules
+  - active_locations
+  - active_institutions
+  - current_constraints
+  - relevant_power_groups
+  - information_boundaries
+optional_fields:
+  - resource_limits
+  - taboo_or_forbidden_actions
+  - open_world_questions
+validation_rules:
+  - "必须只包含当前三章热路径需要的信息。"
+  - "不得要求完整 IP Universe 才能启动。"
+  - "每条规则必须说明它会如何限制人物选择或信息露出。"
+failure_modes:
+  - "设定堆砌，正文变成公告。"
+  - "世界资料很多，但章节连续性没有改善。"
+  - "把冷层资产误当热路径入口。"
+not_for:
+  - "完整世界观百科。"
+  - "系列 IP 资产池。"
+  - "正文设定说明。"

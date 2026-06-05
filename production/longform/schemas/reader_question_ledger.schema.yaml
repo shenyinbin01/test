@@ -1,0 +1,33 @@
+schema: reader_question_ledger
+purpose: "读者问题账本；由 reducers 记录读者当前应保留、刷新、回收或延期的问题。"
+owner: "Ledger Reducer / Reviewer"
+readers:
+  - "Story Orchestrator Lite"
+  - "Chapter Card designer"
+  - "Renderer"
+  - "Reviewer"
+update_timing: "每章 accepted state_delta 后归并；下一章 chapter_card 必须读取热切片。"
+required_fields:
+  - question_id
+  - question_text
+  - question_type
+  - status
+  - expected_payoff_window
+  - latest_delta_ref
+optional_fields:
+  - withholding_reason
+  - inference_slots
+  - emotional_position
+  - linked_foreshadow_id
+validation_rules:
+  - "ledger 是 reducers 输出的物化视图，不应该由 Writer 直接手改。"
+  - "问题不能无限延期；延期必须有理由。"
+  - "读者问题不能变成作者替读者解释感受。"
+failure_modes:
+  - "读者期待断裂。"
+  - "旧问题被遗忘。"
+  - "信息隐藏无场面内原因。"
+not_for:
+  - "Writer 的感受 prompt。"
+  - "读者心理操控清单。"
+  - "章节标题悬念库。"

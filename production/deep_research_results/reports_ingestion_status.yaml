@@ -1,0 +1,33 @@
+project: deep_research_results
+version: v0
+status: ingested
+ingested_reports:
+  round1:
+    path: production/deep_research_results/original_report_round1.md
+    original_report_saved: true
+    ingestion_mode: full_report_read_and_project_decision_extracted
+    primary_outputs:
+      - production/deep_research_results/round1_findings_summary.md
+      - production/deep_research_results/round1_decision_impact.md
+      - production/deep_research_results/round1_recommendation_matrix.md
+  round2:
+    path: production/deep_research_results/original_report_round2.md
+    original_report_saved: true
+    ingestion_mode: full_report_read_and_project_decision_extracted
+    primary_outputs:
+      - production/deep_research_results/round2_findings_summary.md
+      - production/deep_research_results/round2_decision_impact.md
+      - production/deep_research_results/combined_research_decision_matrix.md
+      - production/deep_research_results/combined_research_route_reframe.md
+original_reports_not_fully_ingested: false
+scope_confirmations:
+  web_search_performed: false
+  deep_research_executed: false
+  fiction_generated: false
+  raw_corpus_used: false
+  skill_pack_modified: false
+  phase8_modified: false
+decision_status:
+  round1: absorbed
+  round2: absorbed
+  current_route: longform_hot_path_plus_scene_engine

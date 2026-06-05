@@ -1,0 +1,35 @@
+schema: relationship_debt_ledger
+purpose: "关系债账本；由 reducers 记录谁欠谁、谁误会谁、谁躲谁，以及下一次压力点。"
+owner: "Ledger Reducer"
+readers:
+  - "Story Orchestrator Lite"
+  - "Scene Engine"
+  - "Renderer"
+  - "Reviewer"
+update_timing: "每章 accepted state_delta 后归并。"
+required_fields:
+  - debt_id
+  - pair_or_group_id
+  - debt_type
+  - debtor
+  - creditor
+  - visibility
+  - current_balance
+  - next_manifestation
+  - latest_delta_ref
+optional_fields:
+  - temperature
+  - hidden_from_character
+  - must_resurface_by
+validation_rules:
+  - "ledger 是 reducers 输出的物化视图，不应该由 Writer 直接手改。"
+  - "关系债必须影响下一次互动、信息交换或选择空间。"
+  - "债务延期必须有理由和窗口。"
+failure_modes:
+  - "关系蒸发。"
+  - "配角只承担功能。"
+  - "信任破裂后立刻无成本和解。"
+not_for:
+  - "好感度数字。"
+  - "情绪标签库。"
+  - "正文台词提示。"

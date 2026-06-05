@@ -1,0 +1,35 @@
+schema: volume_card
+purpose: "卷卡；当前卷的阶段目标、阻力、升级路径、回收窗口和结尾状态。"
+owner: "Planner / Story Orchestrator Lite"
+readers:
+  - "Chapter Card designer"
+  - "Scene Engine"
+  - "Reviewer"
+update_timing: "卷启动前创建；卷内中点或重大反转后可修订。"
+required_fields:
+  - volume_id
+  - volume_one_sentence
+  - volume_goal
+  - volume_antagonistic_force
+  - midpoint_turn
+  - escalation_path
+  - payoff_window
+  - debt_window
+  - ending_state
+  - next_volume_seed
+optional_fields:
+  - spotlight_rotation
+  - resource_pressure_curve
+  - expected_reader_questions
+validation_rules:
+  - "每个 chapter_card 必须说明与 volume_goal 的关系。"
+  - "payoff_window 与 debt_window 必须有可检查窗口。"
+  - "ending_state 必须能影响下一卷或当前书主线。"
+failure_modes:
+  - "章节单看有效，卷目标不推进。"
+  - "旧债或伏笔只开不收。"
+  - "卷中反转不改变策略。"
+not_for:
+  - "完整卷正文。"
+  - "每章详细大纲。"
+  - "世界设定扩展。"

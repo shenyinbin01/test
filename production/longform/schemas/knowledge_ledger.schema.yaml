@@ -1,0 +1,33 @@
+schema: knowledge_ledger
+purpose: "信息账本；由 reducers 记录谁知道、误知道、被瞒着什么，以及信息可靠度和揭示状态。"
+owner: "Ledger Reducer"
+readers:
+  - "Story Orchestrator Lite"
+  - "Chapter Card designer"
+  - "Renderer"
+  - "Reviewer"
+update_timing: "每章 accepted state_delta 后归并；信息揭示前必须读取。"
+required_fields:
+  - fact_id
+  - known_by
+  - believed_by
+  - withheld_from
+  - reliability
+  - reveal_status
+  - latest_delta_ref
+optional_fields:
+  - misinformation_source
+  - exposure_cost
+  - planned_reveal_window
+validation_rules:
+  - "ledger 是 reducers 输出的物化视图，不应该由 Writer 直接手改。"
+  - "谁知道什么必须与 state_delta 和正文证据一致。"
+  - "信息揭示必须有载体、代价或场面内原因。"
+failure_modes:
+  - "角色突然知道不该知道的内容。"
+  - "反转失效。"
+  - "信息像系统公告。"
+not_for:
+  - "设定百科。"
+  - "作者给读者的说明。"
+  - "隐藏真相清单的全文剧透。"

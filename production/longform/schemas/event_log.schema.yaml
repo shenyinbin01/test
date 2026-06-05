@@ -1,0 +1,34 @@
+schema: event_log
+purpose: "事件日志；记录场景行动结果、证据和状态变化依据，供 Renderer 与 State Delta 使用。"
+owner: "Scene Engine / Reviewer"
+readers:
+  - "Renderer"
+  - "State Delta extractor"
+  - "Ledger Reducers"
+  - "Reviewer"
+update_timing: "场景执行后写入；章节完成后冻结 accepted 事件。"
+required_fields:
+  - event_id
+  - source_scene_id
+  - actor
+  - action_taken
+  - immediate_result
+  - visible_evidence
+  - affected_state_targets
+optional_fields:
+  - failed_options
+  - misread_created
+  - cost_paid
+  - unresolved_tail
+validation_rules:
+  - "每条事件必须能回连 scene_agency_packet。"
+  - "visible_evidence 必须支持后续 state_delta。"
+  - "不能记录未发生的解释性推断为事实。"
+failure_modes:
+  - "日志很丰富但没有主线作用。"
+  - "事件证据无法支撑账本更新。"
+  - "把作者解释写成事件。"
+not_for:
+  - "全文摘要。"
+  - "角色聊天记录。"
+  - "自由 agent 全量日志。"

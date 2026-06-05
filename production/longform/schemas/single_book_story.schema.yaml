@@ -1,0 +1,33 @@
+schema: single_book_story
+purpose: "单书故事 / Book Spine；一本书的核心承诺、主对抗、终局方向和类型 / 情绪承诺。"
+owner: "Planner / Story Orchestrator Lite"
+readers:
+  - "Volume Card designer"
+  - "Chapter Card designer"
+  - "Reviewer"
+update_timing: "单书启动时创建；除非项目负责人批准，不在三章 MVP 内重写。"
+required_fields:
+  - book_one_sentence
+  - protagonist_core_drive
+  - central_opposition
+  - end_state
+  - genre_promise
+  - emotional_promise
+  - main_transformation
+  - forbidden_drift
+optional_fields:
+  - target_reader_pressure
+  - serial_promise
+  - main_reader_questions
+validation_rules:
+  - "必须能约束卷目标和章节卡。"
+  - "不能写成宣传语或抽象主题。"
+  - "forbidden_drift 必须具体到可检查。"
+failure_modes:
+  - "卷目标松散。"
+  - "主角长期驱动力不继承。"
+  - "漂亮支线吞掉主线。"
+not_for:
+  - "完整长篇大纲。"
+  - "正文梗概。"
+  - "作者风格说明。"

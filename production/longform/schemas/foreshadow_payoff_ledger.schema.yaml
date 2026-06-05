@@ -1,0 +1,32 @@
+schema: foreshadow_payoff_ledger
+purpose: "伏笔 / 回收账本；由 reducers 记录伏笔、回收窗口、兑现证据和延期理由。"
+owner: "Ledger Reducer / Reviewer"
+readers:
+  - "Story Orchestrator Lite"
+  - "Chapter Card designer"
+  - "Renderer"
+  - "Reviewer"
+update_timing: "每章 accepted state_delta 后归并；回收窗口临近时强制读取。"
+required_fields:
+  - foreshadow_id
+  - setup_ref
+  - expected_payoff_window
+  - current_status
+  - payoff_or_delay_reason
+  - latest_delta_ref
+optional_fields:
+  - reader_question_id
+  - related_resource_id
+  - risk_if_forgotten
+validation_rules:
+  - "ledger 是 reducers 输出的物化视图，不应该由 Writer 直接手改。"
+  - "伏笔必须有 setup evidence。"
+  - "回收或延期必须进入 chapter_card。"
+failure_modes:
+  - "只开坑不回收。"
+  - "免费回收。"
+  - "伏笔在读者期待中超期。"
+not_for:
+  - "悬念库存。"
+  - "完整剧透表。"
+  - "章尾钩子替代品。"
