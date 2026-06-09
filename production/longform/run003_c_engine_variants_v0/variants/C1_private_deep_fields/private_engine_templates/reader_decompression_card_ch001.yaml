@@ -1,0 +1,9 @@
+card_id: c1_ch001_reader_decompression
+chapter_id: ch001
+private_to_pipeline: true
+reader_knows: [protagonist saw an informal signal, ally does not know]
+protagonist_knows: [signal exists, truth unknown]
+gap_between_reader_and_protagonist: reader can feel the silence becoming debt
+intended_inference: the first cost is relational, not procedural
+what_to_leave_unsaid: [signal source, full consequence, final trust meaning]
+what_would_ruin_effect: explaining the relationship debt

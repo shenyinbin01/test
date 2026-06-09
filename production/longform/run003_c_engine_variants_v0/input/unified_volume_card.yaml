@@ -1,0 +1,27 @@
+volume_card_id: run003_three_chapter_window
+schema_version: "0.1"
+window_type: three_chapter_mvp
+volume_goal: Obtain advancement qualification with visible, inherited, non-zero cost.
+chapter_count: 3
+word_range_per_chapter:
+  min_zh_chars: 1800
+  max_zh_chars: 2600
+required_arcs:
+  plot:
+    - gate_01 opens and forces a constrained first choice
+    - gate_02 inherits first-choice cost and strains trust
+    - gate_03 converts private cost into institutional or relational friction
+  relationship:
+    - trust gap created
+    - trust gap worsens through withholding or misread
+    - trust gap becomes a next-window obligation
+  information:
+    - suspicious signal planted
+    - signal partially tested
+    - answer remains costly or incomplete
+ending_requirement: non_clean_advancement_with_next_friction
+forbidden_endings:
+  - clean win
+  - total failure
+  - exposition-only reveal
+  - relationship fully repaired

@@ -1,0 +1,9 @@
+brief_id: c1_ch002_stance
+chapter_id: ch002
+safe_for_renderer: true
+focal_character: lin_yan
+distance_to_character: close
+narrator_visibility: restrained
+sentence_pressure: tighter during tactical exchange
+detail_selection_bias: pauses, withheld questions, changed forms of address
+what_not_to_name: [trust gap, scene heat, tactic turn]

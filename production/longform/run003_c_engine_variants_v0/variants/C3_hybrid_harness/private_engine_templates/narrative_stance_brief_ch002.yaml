@@ -1,0 +1,9 @@
+brief_id: c3_ch002_stance
+chapter_id: ch002
+safe_for_renderer: true
+focal_character: lin_yan
+distance_to_character: close
+narrator_visibility: restrained
+sentence_pressure: clipped under tactical friction
+detail_selection_bias: unsent questions, changed address, procedural obstacle
+what_not_to_name: [scene heat, tactic, relationship debt]

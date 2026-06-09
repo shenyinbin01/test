@@ -1,0 +1,16 @@
+reader_question_seed:
+  question_id: rq_01_signal_and_trust
+  question_text: Which signal is being misread, and what will the withheld truth cost the relationship?
+  initial_state: active
+  expected_progression:
+    ch001: plant suspicious signal and trust gap
+    ch002: partial test creates worse relationship pressure
+    ch003: answer remains costly or incomplete; next friction is seeded
+reader_decompression_goal:
+  - Reader should infer that the protagonist's silence is not neutral.
+  - Reader should worry about both assessment success and ally trust.
+  - Reader should not receive a full system explanation.
+what_must_remain_unsaid:
+  - exact source of the informal signal in ch001
+  - full motive of competitor before ch003
+  - final repair of ally trust

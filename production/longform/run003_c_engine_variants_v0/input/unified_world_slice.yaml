@@ -1,0 +1,27 @@
+world_slice_id: run003_unified_world_slice
+schema_version: "0.1"
+setting_type: small_organization_advancement_assessment
+language: zh-CN
+world_name: local_assessment_office
+core_mechanism:
+  name: three_gate_advancement_assessment
+  description: A local organization runs a three-gate advancement assessment with constrained information access, limited tactics, and traceable cost.
+  gates:
+    - gate_id: gate_01
+      function: information_discrimination
+      pressure: The protagonist must decide whether to trust a formal entry path or a tempting informal signal.
+    - gate_id: gate_02
+      function: strategy_coordination
+      pressure: The protagonist must act while a prior hidden choice damages trust with an ally.
+    - gate_id: gate_03
+      function: final_assessment
+      pressure: The protagonist must preserve advancement while paying visible relationship and institutional cost.
+rules:
+  - Every gain must create or inherit a cost.
+  - Information cannot appear from omniscient explanation.
+  - Relationship debt must alter behavior, access, or next friction.
+  - No variant may change world, characters, assessment mechanism, or initial state.
+protected_boundary:
+  raw_corpus_used: false
+  author_imitation_target: false
+  official_ledger_created: false

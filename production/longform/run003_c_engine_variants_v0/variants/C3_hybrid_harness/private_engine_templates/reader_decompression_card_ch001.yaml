@@ -1,0 +1,8 @@
+card_id: c3_ch001_reader_decompression
+chapter_id: ch001
+private_to_pipeline: true
+reader_knows: [silence is chosen, ally is unaware]
+protagonist_knows: [signal exists, truth unknown]
+intended_inference: first cost is relational
+what_to_leave_unsaid: [signal source, future damage]
+what_would_ruin_effect: naming the relationship debt

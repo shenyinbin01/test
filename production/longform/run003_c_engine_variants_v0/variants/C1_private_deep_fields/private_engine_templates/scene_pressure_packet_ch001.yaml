@@ -1,0 +1,10 @@
+packet_id: c1_ch001_scene_pressure
+chapter_id: ch001
+private_to_pipeline: true
+visible_goal: enter gate_01
+hidden_goal: keep the informal signal hidden
+obstacle: deadline and ally expectation collide
+information_gap: reader sees silence before ally does
+turn: protagonist submits formally but deletes or buries the signal
+irreversible_mark: ally trust now rests on incomplete information
+renderer_brief: compile only into natural language

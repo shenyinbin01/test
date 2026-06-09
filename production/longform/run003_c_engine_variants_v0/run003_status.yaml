@@ -1,0 +1,23 @@
+run_id: run003_c_engine_variants_v0
+status: ready_for_hermes_execution
+base_branch: planning/c-engine-reframe-v0
+base_commit: 9f7067509a137a9c14e0c395de8cbbc9eebe4cee
+active_branch: planning/run003-c-engine-variants-v0
+execution_owner: hermes
+package_owner: codex
+prose_generated_by_codex: false
+run002_modified: false
+skill_pack_modified: false
+phase8_modified: false
+approved_patterns_added: false
+raw_corpus_used: false
+author_imitation_target: false
+state_delta_acceptance: none
+official_ledger_created: false
+llm_reviewer_can_choose_winner: false
+human_blind_eval_required: true
+variants:
+  - C0_current_c_anchor
+  - C1_private_deep_fields
+  - C2_exemplar_distillation
+  - C3_hybrid_harness

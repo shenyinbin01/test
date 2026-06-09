@@ -1,0 +1,9 @@
+card_id: c1_ch003_reader_decompression
+chapter_id: ch003
+private_to_pipeline: true
+reader_knows: [success is incomplete, ally has not fully accepted explanation]
+protagonist_knows: [advancement result, visible cost]
+gap_between_reader_and_protagonist: reader senses the next problem before protagonist can solve it
+intended_inference: the assessment ends but the relationship does not reset
+what_to_leave_unsaid: [full repair, exact next consequence]
+what_would_ruin_effect: tying every thread into a report summary

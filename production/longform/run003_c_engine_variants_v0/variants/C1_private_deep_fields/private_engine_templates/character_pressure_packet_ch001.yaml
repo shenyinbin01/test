@@ -1,0 +1,14 @@
+packet_id: c1_ch001_character_pressure
+chapter_id: ch001
+private_to_pipeline: true
+character_id: lin_yan
+desire: pass without owing the ally more
+fear: being exposed as someone relying on hidden channels
+shame: he considered the informal signal
+misbelief: silence protects the ally
+available_tactics: [formal entry, test informal signal, confess to ally]
+chosen_tactic: formal entry while withholding the signal
+rejected_tactic: confess to ally
+why_choice_is_not_clean: honesty would expose weakness and delay action
+cost: creates trust gap
+next_friction: ally assumes normal preparation

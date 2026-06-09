@@ -1,0 +1,32 @@
+characters:
+  protagonist:
+    id: lin_yan
+    role: advancement_candidate
+    public_want: pass the three-gate assessment
+    private_want: prove he can advance without owing the ally more
+    fear: being seen as someone who survives by borrowing trust
+    shame_or_face_cost: admitting he considered an informal signal
+    misbelief: silence is safer than letting the ally worry
+  ally:
+    id: su_tang
+    role: ally_with_trust_stake
+    public_want: pass or remain eligible through coordinated assessment
+    private_want: know whether the protagonist still treats her as a partner
+    leverage: prior support and current dependence
+    likely_misread: protagonist's silence means he does not trust her
+  competitor:
+    id: zhao_rui
+    role: competitor_with_information_advantage
+    public_want: rank above the protagonist
+    private_want: make others reveal their channels first
+    leverage: timing, rumor access, social confidence
+  assessor:
+    id: shen_lead
+    role: assessment_authority
+    function: enforce gates and convert behavior into institutional consequence
+relationship_seed:
+  debt_id: rel_01_trust_gap
+  from: lin_yan
+  to: su_tang
+  initial_state: active_private
+  cause: protagonist withholds the informal signal from ally

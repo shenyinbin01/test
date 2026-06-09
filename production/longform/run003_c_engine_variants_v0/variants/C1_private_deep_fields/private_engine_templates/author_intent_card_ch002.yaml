@@ -1,0 +1,8 @@
+card_id: c1_ch002_author_intent
+chapter_id: ch002
+private_to_pipeline: true
+intended_reader_feeling: pressure from a choice that cannot be reused
+intended_reader_misread: ally's coldness may be anger or fear
+intended_reader_question: whether silence has already changed the partnership
+must_be_shown_through: [blocked tactic, misread ally response, partial test]
+must_not_be_explained_as: [strategy report, system announcement]

@@ -1,0 +1,46 @@
+chapter_cards:
+  - chapter_id: ch001
+    function: first_constrained_choice
+    visible_goal: enter gate_01 without losing eligibility
+    hidden_pressure: protagonist has seen an informal signal and hides it from ally
+    must_include:
+      - formal assessment notice
+      - informal signal or rumor
+      - ally expectation
+      - protagonist chooses one imperfect tactic
+      - trust gap seed
+      - reader question seed
+    must_not_include:
+      - omniscient explanation of signal truth
+      - clean shared confession
+      - visible engineering notes
+  - chapter_id: ch002
+    function: inherited_cost_and_relationship_friction
+    visible_goal: survive gate_02 under a rule that blocks repeated tactics
+    hidden_pressure: ally believes protagonist withheld more than he admits
+    must_include:
+      - prior tactic cannot be reused
+      - ally misread or withheld response
+      - counterparty pressure
+      - partial information test
+      - cost worsens
+      - reader learns something before a character can fully process it
+    must_not_include:
+      - relationship repaired immediately
+      - information delivered as announcement
+      - protagonist directly reads the whole system
+  - chapter_id: ch003
+    function: final_assessment_with_irreversible_mark
+    visible_goal: secure advancement qualification
+    hidden_pressure: the cost of passing must become public, relational, or institutionally trackable
+    must_include:
+      - final assessment pressure
+      - protagonist chooses a flawed but understandable tactic
+      - relationship debt becomes next friction
+      - incomplete reader question remains
+      - non-clean advancement
+    must_not_include:
+      - total victory
+      - state_delta acceptance
+      - official ledger
+      - report-style ending

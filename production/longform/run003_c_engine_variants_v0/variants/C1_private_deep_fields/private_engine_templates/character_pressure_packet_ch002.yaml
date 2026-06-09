@@ -1,0 +1,14 @@
+packet_id: c1_ch002_character_pressure
+chapter_id: ch002
+private_to_pipeline: true
+character_id: lin_yan
+desire: solve gate_02 without using the same path
+fear: ally will discover he hid the signal
+shame: he needs her trust while not trusting her with the truth
+misbelief: doing well will compensate for silence
+available_tactics: [ask ally directly, test rumor indirectly, confront competitor]
+chosen_tactic: indirect test
+rejected_tactic: ask ally directly
+why_choice_is_not_clean: direct honesty risks immediate rupture
+cost: ally misreads distance as distrust
+next_friction: partial information worsens trust gap

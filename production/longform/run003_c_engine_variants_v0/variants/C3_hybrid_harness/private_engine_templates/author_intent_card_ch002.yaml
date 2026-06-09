@@ -1,0 +1,8 @@
+card_id: c3_ch002_author_intent
+chapter_id: ch002
+private_to_pipeline: true
+intended_reader_feeling: useful tactics can make emotional damage worse
+intended_reader_misread: silence may look like competence
+intended_reader_question: whether ally will still coordinate
+must_be_shown_through: [blocked tactic, indirect test, changed ally behavior]
+exemplar_axes: [scene_heat, character_pressure]

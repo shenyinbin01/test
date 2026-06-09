@@ -1,0 +1,9 @@
+card_id: c1_ch002_reader_decompression
+chapter_id: ch002
+private_to_pipeline: true
+reader_knows: [protagonist is avoiding a confession, ally senses distance]
+protagonist_knows: [gate_02 pressure, partial clue]
+gap_between_reader_and_protagonist: reader can see trust degrading faster than the assessment result
+intended_inference: correct tactics can still damage relationships
+what_to_leave_unsaid: [ally's full interpretation, competitor's full motive]
+what_would_ruin_effect: an announcement explaining all motives

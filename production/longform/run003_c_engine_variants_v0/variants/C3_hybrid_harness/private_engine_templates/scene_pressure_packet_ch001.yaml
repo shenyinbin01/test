@@ -1,0 +1,8 @@
+packet_id: c3_ch001_scene_pressure
+chapter_id: ch001
+private_to_pipeline: true
+visible_goal: enter gate_01
+obstacle: deadline, informal signal, ally expectation
+subtext: he wants trust without disclosure
+turn: formal entry chosen as a self-protective compromise
+irreversible_mark: ally's trust rests on a false sense of shared information

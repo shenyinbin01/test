@@ -1,0 +1,9 @@
+brief_id: c3_ch003_stance
+chapter_id: ch003
+safe_for_renderer: true
+focal_character: lin_yan
+distance_to_character: close
+narrator_visibility: restrained
+sentence_pressure: steady, cost-aware, not victorious
+detail_selection_bias: formal words, small relational after-beat, unfinished answer
+what_not_to_name: [success threshold, reader pull, relationship debt]

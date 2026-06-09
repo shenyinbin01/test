@@ -1,0 +1,10 @@
+packet_id: c1_ch002_scene_pressure
+chapter_id: ch002
+private_to_pipeline: true
+visible_goal: pass gate_02 under blocked tactics
+hidden_goal: avoid exposing ch001 silence
+obstacle: old tactic forbidden and ally expects coordination
+information_gap: reader sees two interpretations of ally's silence
+turn: indirect test produces useful clue and relational damage
+irreversible_mark: ally changes how she shares information
+renderer_brief: compile only into natural language

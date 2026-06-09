@@ -1,0 +1,8 @@
+card_id: c3_ch003_author_intent
+chapter_id: ch003
+private_to_pipeline: true
+intended_reader_feeling: passing is real but not clean
+intended_reader_misread: public result may look better than private consequence
+intended_reader_question: what must be repaired next
+must_be_shown_through: [assessment result, visible cost, ally after-beat]
+exemplar_axes: [reader_decompression, scene_heat]

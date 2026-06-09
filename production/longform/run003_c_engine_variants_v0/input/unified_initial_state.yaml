@@ -1,0 +1,34 @@
+initial_state_id: run003_initial_state
+schema_version: "0.1"
+state_status: seed_only
+official_ledger_created: false
+state_delta_acceptance: none
+resources:
+  formal_entry_token:
+    owner: lin_yan
+    state: available_but_costly
+  informal_signal:
+    owner: unknown
+    state: unverified
+knowledge_boundaries:
+  signal_truth:
+    known_by: []
+    partially_known_by: []
+    unknown_by: [lin_yan, su_tang]
+  ally_expectation:
+    known_by: [lin_yan, su_tang]
+    partially_known_by: []
+    unknown_by: [zhao_rui]
+relationship_debts:
+  rel_01_trust_gap:
+    state: seed
+    current_holder: lin_yan
+    affected_party: su_tang
+    expected_evolution:
+      - created in ch001
+      - worsened in ch002
+      - converted into next friction in ch003
+forbidden_state_transitions:
+  - proposed_to_accepted
+  - preview_to_official_ledger
+  - hidden_signal_fully_explained_in_ch001

@@ -1,0 +1,14 @@
+packet_id: c1_ch003_character_pressure
+chapter_id: ch003
+private_to_pipeline: true
+character_id: lin_yan
+desire: secure advancement without losing ally completely
+fear: success will prove he used her trust as material
+shame: his best tactic still protects himself first
+misbelief: a partial explanation may be enough
+available_tactics: [full confession, procedural defense, partial disclosure]
+chosen_tactic: partial disclosure under assessment pressure
+rejected_tactic: full confession
+why_choice_is_not_clean: full confession may lose the gate and the ally at once
+cost: advancement carries next-friction obligation
+next_friction: ally accepts result but not the story

@@ -1,0 +1,8 @@
+packet_id: c3_ch002_scene_pressure
+chapter_id: ch002
+private_to_pipeline: true
+visible_goal: survive gate_02
+obstacle: old route blocked and ally distrust rising
+subtext: both need coordination but neither names the wound
+turn: clue gained by indirect tactic creates worse relational cost
+irreversible_mark: ally changes access or tone

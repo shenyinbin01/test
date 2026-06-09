@@ -1,0 +1,8 @@
+card_id: c3_ch002_reader_decompression
+chapter_id: ch002
+private_to_pipeline: true
+reader_knows: [his tactical success is worsening trust]
+protagonist_knows: [partial clue, ally's changed response]
+intended_inference: he is winning the gate and losing leverage
+what_to_leave_unsaid: [ally's full judgment, competitor's full motive]
+what_would_ruin_effect: full explanation of the misread
