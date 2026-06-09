@@ -1,0 +1,114 @@
+# C4 柳青砚关系节点 — Human Texture 实验分支 Planner 输出
+# 使用分支: experiment/human-texture-skill-pack-v0
+# 生成模型: deepseek-v4-pro
+# 生成时间: 2026-06-04
+
+chapter_number: 4
+chapter_title: "白签"
+total_scenes: 5
+
+cognitive_advantage_triggered: true
+pressure_deepened: true
+revelation_progress:
+  triggered: true
+  description: "通过复检过程揭示积分检测系统的证人规则和宗门等级制度"
+
+scenes:
+  - order: 1
+    title: "复检点名"
+    narrative_function: hook
+    pov: "苏衍"
+    location: "演武场复检区"
+    emotion_target: "紧张、被审视"
+    conflict_type: "人与系统"
+    dialogue_ratio: 0.3
+    length: 500
+    key_lines:
+      - "执事的目光落在苏衍身上，不像审问，像称重"
+      - "苏衍握紧手里的白签，签边已经被手心的汗浸软"
+
+  - order: 2
+    title: "柳青砚指控"
+    narrative_function: conflict
+    pov: "苏衍"
+    location: "演武场复检区"
+    emotion_target: "压迫、两难"
+    conflict_type: "人与人"
+    dialogue_ratio: 0.5
+    length: 700
+    key_lines:
+      - "柳青砚站出来，指着苏衍：'他的积分有问题'"
+      - "苏衍张开嘴，准备说'可能是你感知错了'"
+
+  - order: 3
+    title: "胖少年作证"
+    narrative_function: build
+    pov: "苏衍"
+    location: "演武场复检区"
+    emotion_target: "意外、复杂感激"
+    conflict_type: "人与人"
+    dialogue_ratio: 0.6
+    length: 500
+    key_lines:
+      - "胖少年站出来：'但是他输了。输了以后感知可能不准'"
+      - "执事宣布复检异常需要两个证人，杂役方无人站出"
+
+  - order: 4
+    title: "柳青砚的台阶"
+    narrative_function: climax
+    pov: "苏衍"
+    location: "演武场复检区"
+    emotion_target: "失望、被推开"
+    conflict_type: "人与人"
+    dialogue_ratio: 0.5
+    length: 600
+    key_lines:
+      - "柳青砚低声说：'我不是在害你。我是在给你台阶'"
+      - "苏衍说：'我没有秘密'"
+      - "柳青砚退了一步，脸上是失望"
+
+  - order: 5
+    title: "白签到手"
+    narrative_function: release
+    pov: "苏衍"
+    location: "演武场复检区"
+    emotion_target: "空洞、欠债感"
+    conflict_type: "人与自我"
+    dialogue_ratio: 0.1
+    length: 200
+    key_lines:
+      - "苏衍走过去拿他的签。白色的"
+      - "他没有胜利感"
+
+climax:
+  scene_index: 4
+  payoff: "柳青砚被推开后的失望——关系债成立"
+
+cliffhanger: "白签到手，但柳青砚不再看他。苏衍意识到：通过复检的代价是失去一个愿意帮他的人。"
+
+# --- Human Texture block (实验 v0) ---
+human_texture:
+  focus_fields:
+    - private_want
+    - shame_or_avoidance
+    - relationship_debt_change
+
+  private_want: "苏衍想通过复检，同时不让柳青砚卷入自己的异常——他还有一个自己不愿承认的私心：不想在柳青砚面前变成'需要被保护的人'"
+
+  shame_or_avoidance: "苏衍害怕的不是柳青砚的指控本身，而是指控成功以后柳青砚会看见他吸收情绪碎片的真相——那等于承认他一直在利用柳青砚掌心金线泄露的信息"
+
+  relationship_debt_change: "柳青砚从'愿意为苏衍违反宗门惯例私下给台阶'变成'被苏衍亲手推开后决定不再伸手'——这是信任债的断裂而非累积"
+
+  scene_resistance: ""
+
+  information_carrier: ""
+
+  consequence_next_friction: ""
+
+  carry_forward:
+    relationship_debt:
+      - "柳青砚对苏衍的信任从'主动帮忙'降级为'冷眼旁观'，下一章她不会再为苏衍说话"
+      - "胖少年欠苏衍的人情已还，但苏衍欠他一次公开作证的感谢——这笔债暂时无法偿还"
+    consequence:
+      - "苏衍撒谎后，积分秘密的暴露风险并未降低，反而因为柳青砚不再替他兜底而增加"
+      - "杂役们看见了苏衍拒绝帮助的后果，会更不愿接近他"

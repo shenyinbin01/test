@@ -1,0 +1,111 @@
+# C4 柳青砚关系节点 — Human Texture 实验分支 Planner 输出
+# 分支: experiment/human-texture-skill-pack-v0 (4aa0229)  目录: /tmp/ht_exp
+# 模型: deepseek-v4-pro  来源: 干净 brief，无已有正文参考
+
+chapter_number: 4
+chapter_title: "裂隙"
+total_scenes: 5
+
+cognitive_advantage_triggered: true
+pressure_deepened: true
+revelation_progress:
+  triggered: false
+  description: "人物关系转折节点"
+
+scenes:
+  - order: 1
+    title: "被盯上"
+    narrative_function: hook
+    pov: "苏衍"
+    location: "宗门测试殿"
+    emotion_target: "被审视的紧张"
+    conflict_type: "人与系统"
+    dialogue_ratio: 0.2
+    length: 300
+    key_lines:
+      - "苏衍把右手藏进袖子里"
+      - "执事念他名字的时候多看了他一眼"
+
+  - order: 2
+    title: "追问"
+    narrative_function: conflict
+    pov: "苏衍"
+    location: "测试殿侧廊"
+    emotion_target: "被逼到墙角的窒息感"
+    conflict_type: "人与人"
+    dialogue_ratio: 0.5
+    length: 400
+    key_lines:
+      - "柳青砚拦住他：'你经络里有东西不在登记册上'"
+      - "苏衍：'你感知错了'"
+
+  - order: 3
+    title: "台阶"
+    narrative_function: build
+    pov: "苏衍"
+    location: "测试殿侧廊"
+    emotion_target: "矛盾——想接又不敢接"
+    conflict_type: "人与人"
+    dialogue_ratio: 0.4
+    length: 350
+    key_lines:
+      - "柳青砚压低声音：'我不是来告发你的。但你得让我知道那是什么'"
+      - "苏衍看见她手在抖——不是害怕，是在克制"
+
+  - order: 4
+    title: "撒谎"
+    narrative_function: climax
+    pov: "苏衍"
+    location: "测试殿侧廊"
+    emotion_target: "决裂、被推开"
+    conflict_type: "人与人"
+    dialogue_ratio: 0.3
+    length: 300
+    key_lines:
+      - "苏衍说：'什么都没有。你感知错了'"
+      - "柳青砚往后退了两步，然后转身走了"
+
+  - order: 5
+    title: "过关后"
+    narrative_function: release
+    pov: "苏衍"
+    location: "测试殿门口"
+    emotion_target: "空虚、复杂"
+    conflict_type: "人与自我"
+    dialogue_ratio: 0.2
+    length: 200
+    key_lines:
+      - "胖少年：'她刚才帮你挡了一次抽查'"
+      - "苏衍捏着通过牌，手指被木刺扎了一下"
+
+climax:
+  scene_index: 4
+  payoff: "苏衍撒谎→柳青砚被推开→关系裂痕不可逆"
+
+cliffhanger: "通过牌到手，但柳青砚帮他挡过抽查——他欠她一个人情，而她不会再给他还的机会。"
+
+# --- Human Texture block (实验 v0) ---
+human_texture:
+  focus_fields:
+    - private_want
+    - shame_or_avoidance
+    - relationship_debt_change
+
+  private_want: "苏衍想通过复检——但他还有一个不想对任何人承认的私心：不想让柳青砚把自己当成需要被保护的弱者"
+
+  shame_or_avoidance: "苏衍害怕的不仅是秘密暴露——如果他承认经络异常，就等于承认那天交手时他在利用柳青砚的感知敏锐来测试自己的能力边界"
+
+  relationship_debt_change: "柳青砚从'主动给苏衍台阶、帮他挡抽查'变成'被当面撒谎推开后收回所有帮助'——这不是一次争吵，是信任账户的清零"
+
+  scene_resistance: ""
+
+  information_carrier: ""
+
+  consequence_next_friction: ""
+
+  carry_forward:
+    relationship_debt:
+      - "柳青砚不会再为苏衍说话——下一章苏衍若再遇麻烦，她不会站出来"
+      - "苏衍欠柳青砚一次挡抽查的人情——他知道但无法还，因为柳青砚不会再给他开口的机会"
+    consequence:
+      - "苏衍通过撒谎保住了秘密，但失去了唯一一个愿意替他在制度缝隙里兜底的人"

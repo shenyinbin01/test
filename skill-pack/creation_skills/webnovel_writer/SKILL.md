@@ -105,6 +105,20 @@ tags: ["webnovel", "writer", "draft", "phase7", "phase8"]
 - 有时主角的认知判断是错的（造成新的冲突）
 - 有时用对话/关系中的人性维度打破纯认知模式
 
+### 规则五：Human Texture compact brief（实验 v0）
+
+当 chapter beat 包含 `human_texture` block 时，Writer 必须把 `focus_fields` 转成行为、误读、场景阻力、选择或后果，而不是逐项显性解释字段。
+
+**执行要求**：
+- 不写"他的私心是..."、"这是关系债..."等字段说明句
+- 禁止靠风景、比喻、口语化或装饰性细节假装有人味
+- 情绪节点每个情绪最多一个动作后果，避免把情绪写成连续燃料条
+- 信息公告节点优先使用人、物、制度缝隙、误读和代价作为信息载体
+- 章尾钩子必须保留人物承受点，但不能削弱钩子本身
+- 不得为了人味牺牲网文推进、规则破局、爽点、设定揭示和节奏
+
+如果 `human_texture` 要求改变 beat 事件、因果或新增未规划剧情，停止并退回 Planner。
+
 ---
 
 ## 禁止行为
@@ -128,13 +142,15 @@ tags: ["webnovel", "writer", "draft", "phase7", "phase8"]
 3. 读取 deai_rules 规则库
 4. 读取 Writer Prompt 模板
 5. **检查 beat 中的 cognitive_advantage_triggered / conflict_resolution_type 标记，预判本章写作策略**
-6. 调用 DeepSeek，传入 beat + context + 设定 + deai_rules + 写作约束
-7. 接收 DeepSeek 输出的正文草稿
-8. **检查开章 200 字是否进入压力/冲突/任务/异常场（规则一）**
-9. **检查高潮解法（规则二）**
-10. 检查是否完整（章节目标 2500-3000 中文字，最低 2200，超过 3500 建议拆章；场景数匹配 beat）
-11. 写入 `manuscript/drafts/chapter_XXX_draft.md`
-12. 向 Hermes 报告输出路径和基本信息（字数、场景数、开章类型、高潮类型）
+6. 如 beat 包含 `human_texture`，检查 `focus_fields` 是否不超过 3 个，并预判每个字段如何落为一个可见选择、信息载体或后果
+7. 调用 DeepSeek，传入 beat + context + 设定 + deai_rules + 写作约束
+8. 接收 DeepSeek 输出的正文草稿
+9. **检查开章 200 字是否进入压力/冲突/任务/异常场（规则一）**
+10. **检查高潮解法（规则二）**
+11. 如有 `human_texture`，检查字段是否已自然进入正文且未模板化显性写出
+12. 检查是否完整（章节目标 2500-3000 中文字，最低 2200，超过 3500 建议拆章；场景数匹配 beat）
+13. 写入 `manuscript/drafts/chapter_XXX_draft.md`
+14. 向 Hermes 报告输出路径和基本信息（字数、场景数、开章类型、高潮类型）
 
 ## 失败处理
 
@@ -157,6 +173,7 @@ tags: ["webnovel", "writer", "draft", "phase7", "phase8"]
 8. 未同步 WPS
 9. 未出现 self-censor（如"我不能写"）
 10. **未出现机械重复的认知碾压模板**
+11. 如 beat 包含 `human_texture`，正文保留原剧情功能，且 `focus_fields` 没有被写成字段解释或装饰性细节
 
 ## 与其他 Skill 的关系
 

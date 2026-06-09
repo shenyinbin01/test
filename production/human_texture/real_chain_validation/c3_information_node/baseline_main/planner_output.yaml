@@ -1,0 +1,87 @@
+# C3 饭堂/矿洞信息露出节点 — Baseline (main) Planner 输出
+# 使用分支: main（无 Human Texture patch）
+# 生成模型: deepseek-v4-pro
+# 生成时间: 2026-06-04
+
+chapter_number: 3
+chapter_title: "矿洞"
+total_scenes: 5
+
+cognitive_advantage_triggered: true
+pressure_deepened: true
+revelation_progress:
+  triggered: true
+  description: "揭示矿洞真相——积分分配系统、枯竭周期、筛选机制"
+
+scenes:
+  - order: 1
+    title: "饭堂里的地名"
+    narrative_function: hook
+    pov: "苏衍"
+    location: "宗门饭堂杂役区"
+    emotion_target: "警觉、被勾起"
+    conflict_type: "人与系统"
+    dialogue_ratio: 0.5
+    length: 500
+    key_lines:
+      - "复检告示贴出的那天早上，苏衍在饭堂里听到了一个地名"
+      - "老杂役：'后山那个矿洞，以前可不是矿洞。是个修炼室'"
+
+  - order: 2
+    title: "追金线"
+    narrative_function: build
+    pov: "苏衍"
+    location: "后山"
+    emotion_target: "紧张、追踪的专注"
+    conflict_type: "人与系统"
+    dialogue_ratio: 0.0
+    length: 600
+    key_lines:
+      - "苏衍花了整个上午在后山找金线的源头"
+      - "金线从裂缝里伸出来，直直指向他的眉心"
+
+  - order: 3
+    title: "进入矿洞"
+    narrative_function: build
+    pov: "苏衍"
+    location: "矿洞通道"
+    emotion_target: "敬畏、好奇"
+    conflict_type: "人与系统"
+    dialogue_ratio: 0.0
+    length: 500
+    key_lines:
+      - "通道向下倾斜，石面上刻着密密麻麻的符文"
+      - "残光接触指尖的瞬间被吸了进去，积分跳了一个数"
+
+  - order: 4
+    title: "阵眼真相"
+    narrative_function: climax
+    pov: "苏衍"
+    location: "矿洞圆形空间/阵眼前"
+    emotion_target: "震撼、顿悟"
+    conflict_type: "人与系统"
+    dialogue_ratio: 0.0
+    length: 700
+    key_lines:
+      - "阵眼的大部分区域已经完全暗淡了"
+      - "这是一个分配系统。积分不是天地生成的"
+      - "记忆洪流涌入：枯竭不是意外，是周期，是设计"
+
+  - order: 5
+    title: "离开矿洞"
+    narrative_function: release
+    pov: "苏衍"
+    location: "矿洞外/后山"
+    emotion_target: "沉重、担子变重"
+    conflict_type: "人与自我"
+    dialogue_ratio: 0.0
+    length: 300
+    key_lines:
+      - "苏衍走出矿洞时天快黑了"
+      - "他知道复检前他不仅要藏积分，还要解释半日缺勤"
+
+climax:
+  scene_index: 4
+  payoff: "枯竭周期=筛选机制——世界观重大揭示"
+
+cliffhanger: "苏衍带着积分暴涨和情绪碎片走出矿洞。天亮后就是复检。他需要同时藏住三件事：金线的源头、暴涨的积分、和那几代人的情绪。"
