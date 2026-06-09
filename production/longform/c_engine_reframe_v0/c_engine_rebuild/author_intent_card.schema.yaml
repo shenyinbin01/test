@@ -1,0 +1,32 @@
+schema_name: author_intent_card
+schema_version: "0.1"
+description: "Private author-intent compression card. It forbids direct theme explanation in prose."
+private_to_pipeline: true
+must_not_enter_prose_prompt_raw: true
+required_fields:
+  - card_id
+  - source_scene
+  - intended_reader_feeling
+  - intended_reader_misread
+  - intended_reader_worry
+  - intended_reader_question
+  - compressed_theme
+  - must_be_shown_through
+  - must_not_be_explained_as
+  - scene_level_expression_path
+properties:
+  card_id: {type: string}
+  source_scene: {type: string}
+  intended_reader_feeling: {type: string}
+  intended_reader_misread: {type: string}
+  intended_reader_worry: {type: string}
+  intended_reader_question: {type: string}
+  compressed_theme: {type: string}
+  must_be_shown_through:
+    type: array
+    items: {type: string}
+  must_not_be_explained_as:
+    type: array
+    items: {type: string}
+  scene_level_expression_path:
+    type: string

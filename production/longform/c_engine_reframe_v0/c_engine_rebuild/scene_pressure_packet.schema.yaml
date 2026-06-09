@@ -1,0 +1,108 @@
+schema_name: scene_pressure_packet
+schema_version: "0.1"
+description: "Private replacement for scene_agency_packet. Must be compiled before prose rendering."
+required_fields:
+  - schema_version
+  - packet_id
+  - scene_id
+  - source_chapter
+  - private_to_pipeline
+  - must_not_enter_prose_prompt
+  - scene_objective
+  - character_pressure
+  - scene_heat
+  - reader_decompression
+  - renderer_brief
+properties:
+  schema_version:
+    type: string
+  packet_id:
+    type: string
+  scene_id:
+    type: string
+  source_chapter:
+    type: string
+  private_to_pipeline:
+    type: boolean
+    const: true
+  must_not_enter_prose_prompt:
+    type: boolean
+    const: true
+  scene_objective:
+    type: object
+    required: [visible_goal, hidden_goal, emotional_pressure]
+    properties:
+      visible_goal:
+        type: string
+      hidden_goal:
+        type: string
+      emotional_pressure:
+        type: string
+  character_pressure:
+    type: object
+    required: [protagonist, key_counterparty]
+    properties:
+      protagonist:
+        type: object
+        required:
+          - local_goal
+          - private_want
+          - fear
+          - shame_or_self_image_cost
+          - misbelief
+          - known_information
+          - unknown_information
+          - available_tactics
+          - chosen_tactic
+          - rejected_tactic
+          - reason_the_character_cannot_choose_cleanly
+          - immediate_cost
+          - next_friction
+        properties:
+          local_goal: {type: string}
+          private_want: {type: string}
+          fear: {type: string}
+          shame_or_self_image_cost: {type: string}
+          misbelief: {type: string}
+          known_information: {type: array, items: {type: string}}
+          unknown_information: {type: array, items: {type: string}}
+          available_tactics: {type: array, items: {type: string}}
+          chosen_tactic: {type: string}
+          rejected_tactic: {type: string}
+          reason_the_character_cannot_choose_cleanly: {type: string}
+          immediate_cost: {type: string}
+          next_friction: {type: string}
+      key_counterparty:
+        type: object
+        required: [local_goal, private_want, leverage, misbelief, pressure_on_protagonist]
+        properties:
+          local_goal: {type: string}
+          private_want: {type: string}
+          leverage: {type: string}
+          misbelief: {type: string}
+          pressure_on_protagonist: {type: string}
+  scene_heat:
+    type: object
+    required: [obstacle, information_gap, subtext, turn, escalation, irreversible_mark]
+    properties:
+      obstacle: {type: string}
+      information_gap: {type: string}
+      subtext: {type: string}
+      turn: {type: string}
+      escalation: {type: string}
+      irreversible_mark: {type: string}
+  reader_decompression:
+    type: object
+    required: [what_reader_knows, what_character_does_not_know, what_reader_should_infer, what_must_not_be_explained]
+    properties:
+      what_reader_knows: {type: array, items: {type: string}}
+      what_character_does_not_know: {type: array, items: {type: string}}
+      what_reader_should_infer: {type: array, items: {type: string}}
+      what_must_not_be_explained: {type: array, items: {type: string}}
+  renderer_brief:
+    type: object
+    required: [natural_language_scene_brief, forbidden_terms, prose_leakage_blockers]
+    properties:
+      natural_language_scene_brief: {type: string}
+      forbidden_terms: {type: array, items: {type: string}}
+      prose_leakage_blockers: {type: array, items: {type: string}}

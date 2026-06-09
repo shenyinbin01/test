@@ -1,0 +1,33 @@
+schema_name: craft_sample_card
+schema_version: "0.1"
+description: "Rights-clear craft sample for technique contrast."
+required_fields:
+  - sample_id
+  - rights_status
+  - scene_type
+  - brief
+  - version_good
+  - version_bad
+  - craft_axis
+  - why_good_works
+  - why_bad_fails
+  - transferable_principle
+  - forbidden_surface_imitation
+  - reviewer_notes
+properties:
+  sample_id: {type: string}
+  rights_status:
+    type: string
+    enum: [self_built, commissioned, public_domain_abstracted, rights_clear, synthetic_internal]
+  scene_type: {type: string}
+  brief: {type: string}
+  version_good: {type: string}
+  version_bad: {type: string}
+  craft_axis: {type: string}
+  why_good_works: {type: string}
+  why_bad_fails: {type: string}
+  transferable_principle: {type: string}
+  forbidden_surface_imitation:
+    type: array
+    items: {type: string}
+  reviewer_notes: {type: string}

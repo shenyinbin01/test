@@ -1,0 +1,52 @@
+schema_name: character_pressure_packet
+schema_version: "0.1"
+description: "Private packet for modeling a character's pressured tactic, deeper than agency_choice."
+private_to_pipeline: true
+must_not_enter_prose_prompt: true
+required_fields:
+  - character_id
+  - source_scene
+  - desire
+  - fear
+  - shame
+  - self_image
+  - misbelief
+  - secret
+  - relationship_debt
+  - social_constraint
+  - available_tactics
+  - rejected_tactics
+  - chosen_tactic
+  - why_this_choice_is_not_clean
+  - cost_if_success
+  - cost_if_failure
+  - body_or_behavior_leak
+  - next_friction
+properties:
+  character_id: {type: string}
+  source_scene: {type: string}
+  desire: {type: string}
+  fear: {type: string}
+  shame: {type: string}
+  self_image: {type: string}
+  misbelief: {type: string}
+  secret: {type: string}
+  relationship_debt: {type: string}
+  social_constraint: {type: string}
+  available_tactics:
+    type: array
+    items: {type: string}
+  rejected_tactics:
+    type: array
+    items:
+      type: object
+      required: [tactic, reason_rejected]
+      properties:
+        tactic: {type: string}
+        reason_rejected: {type: string}
+  chosen_tactic: {type: string}
+  why_this_choice_is_not_clean: {type: string}
+  cost_if_success: {type: string}
+  cost_if_failure: {type: string}
+  body_or_behavior_leak: {type: string}
+  next_friction: {type: string}

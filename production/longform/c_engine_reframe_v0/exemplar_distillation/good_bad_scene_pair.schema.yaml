@@ -1,0 +1,37 @@
+schema_name: good_bad_scene_pair
+schema_version: "0.1"
+description: "Good/bad contrast pair for craft distillation."
+required_fields:
+  - pair_id
+  - rights_status
+  - craft_axis
+  - scene_brief
+  - bad_version
+  - good_version
+  - contrast_notes
+  - transferable_principle
+  - forbidden_surface_imitation
+properties:
+  pair_id: {type: string}
+  rights_status:
+    type: string
+    enum: [self_built, commissioned, public_domain_abstracted, rights_clear, synthetic_internal]
+  craft_axis:
+    type: string
+    enum:
+      - scene_heat
+      - character_pressure
+      - subtext
+      - anti_explanation
+      - reader_decompression
+      - narrative_stance
+      - anti_ai_surface
+      - agency_depth
+  scene_brief: {type: string}
+  bad_version: {type: string}
+  good_version: {type: string}
+  contrast_notes: {type: string}
+  transferable_principle: {type: string}
+  forbidden_surface_imitation:
+    type: array
+    items: {type: string}

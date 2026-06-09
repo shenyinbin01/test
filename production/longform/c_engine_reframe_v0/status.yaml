@@ -1,0 +1,12 @@
+phase: c_engine_reframe_v0
+status: proposed
+owner_acceptance_required: true
+codex_acceptance_authority: false
+b_chassis_status: freeze_candidate
+c_engine_status: rebuild_candidate
+run003_status: design_only
+state_delta_acceptance: none
+official_ledger_created: false
+raw_corpus_used: false
+author_imitation_target: false
+protected_dirs_touched: false

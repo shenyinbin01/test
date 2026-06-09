@@ -1,0 +1,30 @@
+schema_name: scene_heat_card
+schema_version: "0.1"
+description: "Private card for scene pressure, turn, and irreversible aftertaste."
+private_to_pipeline: true
+required_fields:
+  - card_id
+  - source_scene
+  - objective
+  - obstacle
+  - tactic
+  - counter_tactic
+  - subtext
+  - pressure_clock
+  - leverage
+  - turn
+  - cost
+  - irreversible_aftertaste
+properties:
+  card_id: {type: string}
+  source_scene: {type: string}
+  objective: {type: string}
+  obstacle: {type: string}
+  tactic: {type: string}
+  counter_tactic: {type: string}
+  subtext: {type: string}
+  pressure_clock: {type: string}
+  leverage: {type: string}
+  turn: {type: string}
+  cost: {type: string}
+  irreversible_aftertaste: {type: string}

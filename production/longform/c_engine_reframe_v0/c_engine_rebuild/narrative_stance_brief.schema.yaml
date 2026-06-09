@@ -1,0 +1,38 @@
+schema_name: narrative_stance_brief
+schema_version: "0.1"
+description: "Safe brief for focal distance, narrator visibility, and detail selection."
+safe_for_prose_prompt: true
+required_fields:
+  - brief_id
+  - focal_character
+  - distance_to_character
+  - narrator_judgment_level
+  - narrator_visibility
+  - allowed_commentary
+  - forbidden_commentary
+  - sentence_pressure
+  - detail_selection_bias
+  - what_not_to_name
+properties:
+  brief_id: {type: string}
+  focal_character: {type: string}
+  distance_to_character:
+    type: string
+    enum: [close, medium, distant]
+  narrator_judgment_level:
+    type: string
+    enum: [none, low, medium]
+  narrator_visibility:
+    type: string
+    enum: [invisible, restrained, lightly_present]
+  allowed_commentary:
+    type: array
+    items: {type: string}
+  forbidden_commentary:
+    type: array
+    items: {type: string}
+  sentence_pressure: {type: string}
+  detail_selection_bias: {type: string}
+  what_not_to_name:
+    type: array
+    items: {type: string}

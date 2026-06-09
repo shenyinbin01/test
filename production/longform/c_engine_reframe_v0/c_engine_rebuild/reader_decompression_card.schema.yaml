@@ -1,0 +1,36 @@
+schema_name: reader_decompression_card
+schema_version: "0.1"
+description: "Private card for preserving reader inference room."
+private_to_pipeline: true
+required_fields:
+  - card_id
+  - source_scene
+  - reader_knows
+  - protagonist_knows
+  - gap_between_reader_and_protagonist
+  - intended_inference
+  - emotional_payoff
+  - delayed_answer
+  - what_to_leave_unsaid
+  - what_would_ruin_the_effect
+properties:
+  card_id: {type: string}
+  source_scene: {type: string}
+  reader_knows:
+    type: array
+    items: {type: string}
+  protagonist_knows:
+    type: array
+    items: {type: string}
+  gap_between_reader_and_protagonist: {type: string}
+  intended_inference:
+    type: array
+    items: {type: string}
+  emotional_payoff: {type: string}
+  delayed_answer: {type: string}
+  what_to_leave_unsaid:
+    type: array
+    items: {type: string}
+  what_would_ruin_the_effect:
+    type: array
+    items: {type: string}
