@@ -1,0 +1,58 @@
+chapter: ch003
+variant: C3_hybrid_harness
+ledger_type: preview_from_proposed_delta
+relationship_ledger:
+  LinYan_to_SuTang:
+    original_debt: 2 (ch001 withholding + ch002 failure to address)
+    partial_repayment: "Factual confession of rumor content (ch003)"
+    debt_remaining: 2 (stabilized, not resolved)
+    debt_nature_after_ch003: >
+      Factual debt partially addressed but emotional debt untouched.
+      Lin Yan told her WHAT he heard but not WHY he stayed silent.
+      The relationship functions professionally but the personal
+      trust that existed before gate_01 is not restored.
+    repayment_status: "Partially addressed; emotional truth remains outstanding"
+    next_friction: "The unspoken emotional truth will surface in future interactions"
+  SuTang_to_LinYan:
+    counter_debt_from_ch002: "Professional distance maintained in gate_03"
+    position_after_ch003: >
+      Su Tang has received factual information and used it professionally.
+      She has not received the emotional truth she waited two days for.
+      Her '知道了' closes the chapter but does not close the wound.
+trust_ledger:
+  mutual_trust_before_ch003: 55 (fractured but functional)
+  mutual_trust_after_ch003: 50 (stabilized at professional distance)
+  LinYan_perception: "Believes partial confession was sufficient for functional cooperation"
+  SuTang_perception: "Functional cooperation restored; personal trust remains damaged"
+  reader_perception: "Relationship structurally altered; warmth replaced by professional boundary"
+information_ledger:
+  formal_information:
+    - "Gate_03 task: state judgment basis for all prior choices"
+    - "Results posted: Lin Yan (通过/备注), Su Tang (通过), Zhao Rui (通过/第一)"
+  informal_information:
+    - "Rumor content now public: Lin Yan admitted informal channel usage to Shen Lead"
+    - "Zhao Rui probe outcome: permanently ambiguous"
+    - "Su Tang's emotional state: known through behavior only, not stated"
+  information_symmetry_restored: "All parties now know about the rumor; asymmetry resolved"
+position_ledger:
+  LinYan: "Advanced with notation — positional cost is public and permanent"
+  SuTang: "Advanced without notation — higher effective standing than Lin Yan"
+  ZhaoRui: "Advanced ranked first — maximum positional gain"
+  ShenLead: "Assessment complete — notation filed"
+risk_ledger:
+  active_risks:
+    - "Lin Yan's notation may affect future advancement opportunities"
+    - "Su Tang's professional boundary may harden into permanent distance"
+    - "Zhao Rui's ambiguity advantage persists into next assessment cycle"
+  dormant_risks:
+    - "Unspoken emotional truth may resurface under future pressure"
+    - "Lin Yan's misbelief ('partial truth is enough') may recur in new contexts"
+  resolved_risks:
+    - "Informal signal asymmetry: resolved via public admission"
+    - "Gate passage: all three candidates passed all three gates"
+arc_completion_status:
+  three_gate_assessment: complete
+  advancement: achieved (non-clean)
+  relationship_arc: "Transformed from warm partnership to professional distance"
+  reader_question: "Partially answered; emotional layer deferred to next arc"
+  next_friction_seeded: "The unspoken emotional truth — why Lin Yan withheld"

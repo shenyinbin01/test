@@ -1,0 +1,23 @@
+chapter: "003"
+narrative_stance_brief:
+  pov: "Close third, Lin Yan — with one brief Su Tang shift at the end"
+  narrative_distance: >
+    Intimate throughout. Reader shares Lin Yan's final-hour pressure.
+    The Su Tang shift at the end provides a single beat of her perspective —
+    enough for reader to register her cost without diluting Lin Yan's arc.
+  narrator_knowledge: >
+    Limited to character perception. The narrator does not resolve
+    the informal signal's truth or Zhao Rui's advantage. These remain
+    in the world, not in the narration.
+  tone_register:
+    baseline: "Compressed, slightly breathless during panel; looser after results"
+    closing_beat: "Quiet, image-forward, open — not summarized"
+  prose_constraints:
+    - "No explicit 'lesson learned' or thematic summary."
+    - "No explanation of what Lin Yan should have done."
+    - "No resolution of the informal signal's full meaning."
+    - "Avoid all engineering/meta language."
+  anti_technique:
+    - "No 'Lin Yan realized his mistake' — his misbelief survives."
+    - "No scoreboard or ranking announcement."
+    - "No epilogue-style closure."

@@ -1,0 +1,52 @@
+# Ledger View — After Chapter 003
+# ledger_type: preview_from_proposed_delta
+
+ledger_type: preview_from_proposed_delta
+chapter: 3
+gate: 3 (final_assessment)
+
+trust_accounts:
+  lin_yan_to_su_tang:
+    balance: -3
+    description: "Cumulative: original trust debt + concealment exposure + signature confirmation debt"
+    last_transaction: "su_tang_signed_confirmation_and_left_personal_note"
+  su_tang_to_lin_yan:
+    balance: +1 (forgiving but watching)
+    description: "Signed despite hurt. Metric: whether he learned to speak, not professional obligation."
+    last_transaction: "三年档案换一条消息，不算贵 + final 好"
+
+advancement_result:
+  status: "passed"
+  cleanliness: "non_clean"
+  permanent_record: "collaborative_trust_deficiency_3_years"
+  next_evaluation_threshold: "elevated_collaboration_must_improve_substantially"
+
+relationship_debt:
+  current_layers:
+    - layer_1: "trust_borrowed_in_prior_incident"
+    - layer_2: "informal_signal_concealed_in_gate_01"
+    - layer_3: "su_tang_signature_confirming_his_deficiency"
+  next_friction: "archive_record_raises_next_cycle_threshold"
+  pattern_risk: "debt_compounds_without_pattern_change"
+
+info_asymmetry:
+  resolved_all_major:
+    - "both_parties_know_full_context_of_gate_01_concealment"
+    - "lin_yan_knows_su_tang_was_protecting_him_in_gate_02"
+  remaining_ambiguity:
+    - "su_tang_好_is_multivalent_acceptance_warning_or_hope"
+    - "will_lin_yan_actually_change_behavior_pattern"
+
+pattern_flags:
+  - flag: "silence_as_defense"
+    status: "acknowledged_by_protagonist_challenged_by_assessment"
+    resolution: "partial_lin_yan_sent_proactive_messages_in_ch003"
+  - flag: "debt_avoidance_over_vulnerability"
+    status: "still_active_compounded_not_resolved"
+    resolution: "next_cycle_will_test_whether_pattern_changes"
+
+reader_ledger:
+  question_incomplete: "was_advancement_worth_3_year_record_will_pattern_repeat"
+  thematic_closure: "non_clean_forward_motion > clean_stasis"
+  ambiguity_preserved: "su_tang_好_is_deliberately_open"
+  next_arc_seed: "elevated_threshold_forces_confrontation_with_pattern"

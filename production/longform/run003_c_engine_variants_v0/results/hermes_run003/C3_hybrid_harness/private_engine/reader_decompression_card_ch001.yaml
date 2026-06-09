@@ -1,0 +1,39 @@
+chapter: ch001
+variant: C3_hybrid_harness
+decompression_strategy: delayed_answer_with_visible_cost
+inference_gap_1:
+  label: "What is Lin Yan hiding?"
+  reader_knows: |
+    The reader is shown the rumor arriving (a colleague whispers something in
+    Lin Yan's ear in the corridor). The reader is NOT shown the content of
+    the whisper. The reader knows Lin Yan received something, knows he is
+    withholding it from Su Tang, but does not know the specifics. This gap
+    drives the reader question: "Which signal is being misread, and what will
+    the withheld truth cost?"
+  character_knows: |
+    Lin Yan knows the full content. Su Tang knows nothing of the whisper but
+    senses the withholding.
+  decompression_schedule: |
+    Partial decompression in ch002 when the rumor's content becomes tactically
+    relevant. Full emotional decompression in ch003 when the relationship cost
+    crystallizes.
+
+inference_gap_2:
+  label: "Su Tang's private processing"
+  reader_knows: |
+    The reader sees Su Tang's face change after the deflection — a brief
+    tightening at the corner of her mouth, a slower pace as she walks away.
+    The reader can infer she has noticed the gap and is hurt or calculating.
+  character_knows: |
+    Lin Yan does not register this. He is focused on his own relief that the
+    conversation ended without confrontation.
+
+reader_experience_target: |
+  By the end of ch001, the reader should feel a low-grade unease — the
+  beginning of a question they cannot yet fully articulate. They should
+  trust Su Tang's perception more than Lin Yan's self-assessment.
+
+craft_exemplar_applied: |
+  reader_decompression principle: Prose leaves gap. The reader sees one more
+  consequence (Su Tang's facial shift) than the focal character can admit.
+  Delay full answer; emotional cost is greater than the factual answer.

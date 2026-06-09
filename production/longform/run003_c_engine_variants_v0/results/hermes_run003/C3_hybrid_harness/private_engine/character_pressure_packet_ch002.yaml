@@ -1,0 +1,61 @@
+chapter: ch002
+variant: C3_hybrid_harness
+protagonist:
+  name: 林延 (Lin Yan)
+  public_want: "Survive gate_02 and maintain ranking position"
+  private_want: "Recover the information advantage he thought he had, without admitting he withheld anything"
+  fear: "Being exposed as someone who acted on an informal signal — confirming Su Tang's suspicion and Zhao Rui's leverage"
+  shame: "The rumor he staked his approach on is either incomplete or known to others — his secret strategy may have been visible all along"
+  misbelief: "If I can just pass gate_02 alone, the silence of ch001 will be justified by results"
+  pressure_evolution: |
+    In ch002, Lin Yan's prior tactic (relying on the withheld rumor) fails.
+    The assessment gate tests something adjacent to what the rumor suggested —
+    close enough to feel like a near-miss, far enough to make the tactic
+    useless. He is now doubly exposed: he cannot use the information, and he
+    cannot ask Su Tang for help without explaining why he needs it.
+  behavioral_manifestation: |
+    Lin Yan attempts to navigate gate_02 alone. He makes twice the effort for
+    half the result. When Su Tang passes a portion of the gate without visible
+    struggle, relief wars with resentment on his face. When Zhao Rui makes his
+    probing remark, Lin Yan's reaction is physical — a pause in his hands, a
+    too-long silence before responding.
+
+ally:
+  name: 苏棠 (Su Tang)
+  public_want: "Pass gate_02"
+  private_want: "See whether Lin Yan will acknowledge the distance between them"
+  likely_misread: "His continued silence in gate_02 means he never saw her as a real partner — he was using the appearance of partnership"
+  pressure_evolution: |
+    Su Tang has had time to process ch001. Her misread has hardened. In ch002,
+    she does not ask again — she watches. When Lin Yan struggles with a section
+    of gate_02 that she could help him navigate, she stays silent. This is her
+    counter-tactic: she withholds cooperation as he withheld information.
+  behavioral_manifestation: |
+    Su Tang completes her portion of gate_02 efficiently and then stands aside.
+    She does not offer help. She does not gloat. She watches Lin Yan with the
+    stillness of someone who has made a private decision. One line of dialogue:
+    "你自己可以的" (You can handle it yourself) — a mirror of the reassurance he
+    gave her in ch001.
+
+competitor:
+  name: 赵锐 (Zhao Rui)
+  public_want: "Rank above Lin Yan"
+  private_want: "Confirm whether Lin Yan's information channel is compromised — and whether he can exploit the widening gap between Lin Yan and Su Tang"
+  pressure_evolution: |
+    Zhao Rui applies the partial info test. He approaches Lin Yan during a
+    transition between gate sections and says, in a voice meant only for him:
+    "The corridor talk doesn't always match what's inside the gate, does it."
+    This is not a question. It is a probe. Lin Yan cannot tell how much Zhao
+    Rui knows, or whether this is a bluff.
+  behavioral_manifestation: |
+    Zhao Rui delivers his line and keeps walking. He does not wait for an
+    answer. The probe is the entire tactic — the silence it leaves is the
+    pressure.
+
+assessor:
+  name: 沈主任 (Shen Lead)
+  role: Assessment authority
+  chapter_presence: |
+    Shen Lead observes gate_02 from a raised platform. He takes no action and
+    makes no comment. His presence is a reminder that everything is being
+    watched. His stillness becomes oppressive.

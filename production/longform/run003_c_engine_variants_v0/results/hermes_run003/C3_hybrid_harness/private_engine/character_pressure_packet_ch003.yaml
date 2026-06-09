@@ -1,0 +1,69 @@
+chapter: ch003
+variant: C3_hybrid_harness
+protagonist:
+  name: 林延 (Lin Yan)
+  public_want: "Pass gate_03 and secure advancement"
+  private_want: "Achieve advancement without owing Su Tang a new debt — while also repairing enough of the relationship to function through the final gate"
+  fear: "Advancing alone and being seen as someone who discarded his ally to climb — or worse, failing because the relationship debt blocked him"
+  shame: "The partial confession: he tells Su Tang the facts but not the feelings. He knows this is incomplete. The incompleteness is its own new shame."
+  misbelief: "A partial truth is enough — the emotional wound can be managed later, after advancement is secure"
+  pressure_evolution: |
+    Gate_03 is the final assessment with the highest stakes. Lin Yan enters
+    weakened by the prior gates — his positioning is compromised, Su Tang is
+    distant, Zhao Rui is watching. The gate requires a visible cost to be
+    paid. Lin Yan chooses to pay it publicly: he admits to the assessor that
+    he relied on an informal channel during gate_01. This is the cost.
+  behavioral_manifestation: |
+    Before gate_03 begins, Lin Yan approaches Su Tang. He tells her: "The first
+    gate. I heard something in the corridor before we started. I should have
+    told you." He frames it as a tactical oversight. He does not say: "I was
+    ashamed to need it." Su Tang listens. Her response is a small nod.
+    During the final assessment, Lin Yan performs competently but without the
+    ease Su Tang shows. When the assessor asks a direct question about his
+    information sources, Lin Yan volunteers the admission. This costs him
+    positioning — Shen Lead makes a note — but satisfies the gate's requirement
+    of visible cost.
+
+ally:
+  name: 苏棠 (Su Tang)
+  public_want: "Pass gate_03 and secure advancement"
+  private_want: "Hear the truth from Lin Yan — not just the fact of the rumor, but the reason he withheld it"
+  likely_misread: "His partial confession confirms that he sees her as a functional partner, not a trusted one. The factual truth without the emotional truth is a second withholding."
+  pressure_evolution: |
+    Su Tang receives Lin Yan's partial confession in silence. She does not
+    forgive; she does not accuse. Her nod is acknowledgment, not acceptance.
+    During gate_03 she performs well but does not coordinate with Lin Yan
+    beyond what the gate's structure requires. She has recalibrated the
+    relationship to professional distance.
+  behavioral_manifestation: |
+    After Lin Yan's admission to the assessor, Su Tang glances at him once —
+    a look that holds neither triumph nor pity. It is the look of someone who
+    has filed information. She then completes her portion of the assessment
+    and waits for results without speaking to him again.
+
+competitor:
+  name: 赵锐 (Zhao Rui)
+  public_want: "Rank above Lin Yan"
+  private_want: "Secure his position without revealing whether his earlier probe was knowledge or bluff"
+  pressure_evolution: |
+    Zhao Rui does not need to act in gate_03. The damage from his ch002 probe
+    is self-sustaining. He passes the gate conventionally and secures his
+    ranking. His only action is a glance at Lin Yan when Lin Yan makes his
+    admission — a flicker of confirmation that his probe landed.
+  behavioral_manifestation: |
+    Zhao Rui remains quiet throughout gate_03. He does not gloat. His silence
+    is the final pressure — Lin Yan cannot know whether Zhao Rui's corridor
+    remark was genuine intelligence or a successful bluff, and he never will.
+
+assessor:
+  name: 沈主任 (Shen Lead)
+  role: Assessment authority
+  chapter_presence: |
+    Shen Lead conducts the final assessment. When Lin Yan volunteers his
+    admission about the informal channel, Shen Lead pauses. He makes a note.
+    He says: "Noted." No praise. No condemnation. The note is the cost.
+  final_announcement: |
+    Shen Lead announces results. Lin Yan advances — but the announcement
+    includes the notation about his information source. This is the non-clean
+    advancement: he passed, but everyone knows how. Su Tang advances without
+    notation. Zhao Rui advances with a higher ranking.

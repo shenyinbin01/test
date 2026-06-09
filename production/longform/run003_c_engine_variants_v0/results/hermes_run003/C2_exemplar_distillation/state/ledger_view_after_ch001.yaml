@@ -1,0 +1,41 @@
+# Ledger View — After Chapter 001
+# ledger_type: preview_from_proposed_delta
+
+ledger_type: preview_from_proposed_delta
+chapter: 1
+gate: 1 (information_discrimination)
+
+trust_accounts:
+  lin_yan_to_su_tang:
+    balance: -1
+    description: "Lin Yan owes Su Tang unspoken debt from prior incident; now compounded by concealed informal signal"
+    last_transaction: "deflected_su_tang_intel_offer_in_break_room"
+  su_tang_to_lin_yan:
+    balance: 0
+    description: "Su Tang extended trust by sharing intel; received no reciprocity"
+    last_transaction: "offered_intel_asked_path_question_received_deflection"
+
+info_asymmetry:
+  zhao_rui_advantage:
+    knows: "lin_yan_received_coded_signal_and_chose_path_2"
+    revealed_to: "su_tang (end of chapter)"
+  lin_yan_disadvantage:
+    does_not_know_1: "su_tang_knows_he_concealed_signal"
+    does_not_know_2: "su_tang_is_waiting_in_cafeteria"
+  su_tang_partial:
+    knows: "lin_yan_chose_path_2_instead_of_sharing"
+    does_not_know: "why_he_stayed_silent"
+
+pattern_flags:
+  - flag: "silence_as_defense"
+    first_observed: "ch001_break_room"
+    risk: "ally_misread_as_distrust"
+  - flag: "debt_avoidance_over_vulnerability"
+    first_observed: "ch001_path_choice"
+    risk: "compounds_trust_deficit"
+
+reader_ledger:
+  ahead_of_protagonist:
+    - "su_tang_location_and_emotional_state"
+    - "zhao_rui_has_revealed_info_to_su_tang"
+  unresolved_question: "what_would_have_happened_if_lin_yan_shared"

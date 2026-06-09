@@ -1,0 +1,26 @@
+chapter: "001"
+reader_decompression_card:
+  tension_buildup_summary: >
+    Reader enters a closed institutional space with high personal stakes.
+    A formal notice sets the frame. An informal signal arrives like a stone
+    dropped into still water — Lin Yan catches it alone. Su Tang reaches out;
+    Lin Yan pulls back just enough to create a gap. Reader feels the gap before
+    the characters name it.
+  decompression_strategy:
+    type: "gradual_breathe"
+    mechanism: >
+      Interleave pressure with sensory detail and small moments of
+      ordinary life — the weight of a teacup, a hallway that smells of
+      floor wax, a glance that lasts one second too long. These anchor
+      the reader without releasing the underlying tension.
+  relief_moments:
+    - "Description of the conference room: mundane details soften the stakes."
+    - "Su Tang's brief smile when she suggests working together — a flash
+      of warmth before the withholding."
+    - "Lin Yan walking alone at scene end: a quiet space for reader to sit
+      with what just happened."
+  lingering_question_cultivation:
+    question: "Which signal will Lin Yan trust — and what will hiding the other cost?"
+    why_it_works: >
+      The reader has seen both signals but does not know which is reliable.
+      The question is planted, not answered. It will grow across chapters.

@@ -1,0 +1,32 @@
+chapter: "003"
+status: proposed
+state_delta:
+  trust_gap:
+    from: widening
+    to: institutionalized
+    detail: >
+      Gate_03 panel assessment makes the trust gap visible to institution.
+      Lin Yan passes with "协作维度波动，建议持续观察" notation. Su Tang
+      confirms her conclusion through pattern of behavior. Trust gap is now
+      not just interpersonal — it has an institutional record.
+  lin_yan:
+    active_tactic: "competent_performance_with_relational_flaw"
+    outcome: "advancement approved"
+    cost_paid: "institutional flag on collaboration dimension; Su Tang's trust not rebuilt"
+    misbelief_state: "intact — silence-as-protection framework survives"
+    relationship_debt: "carried forward as next friction; no resolution"
+  su_tang:
+    answer_received: "Lin Yan keeps things from her; not through words, through pattern"
+    outcome: "advancement approved; trust set aside, not repaired"
+    future_vector: "will matter in next assessment cycle"
+  zhao_rui:
+    outcome: "also advanced; information advantage remains unconfirmed"
+    final_gesture: "ambiguous glance at Lin Yan"
+  shen_lead:
+    institutional_action: "noted collaboration variation; no elaboration"
+  reader_knowledge:
+    question_state: "partially answered — reader knows cost pattern but not full truth"
+    open_questions:
+      - "Was 老周's signal exclusive or shared?"
+      - "Will Lin Yan ever tell Su Tang?"
+      - "Can the partnership recover or will next friction compound?"

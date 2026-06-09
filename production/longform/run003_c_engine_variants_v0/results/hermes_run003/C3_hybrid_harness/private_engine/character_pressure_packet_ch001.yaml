@@ -1,0 +1,59 @@
+chapter: ch001
+variant: C3_hybrid_harness
+protagonist:
+  name: 林延 (Lin Yan)
+  public_want: "Pass the three-gate advancement assessment"
+  private_want: "Prove he can advance without owing Su Tang more than he already does"
+  fear: "Being seen as someone who survives by borrowing trust rather than earning it"
+  shame: "Admitting he considered an informal signal — that he was willing to act on a rumor rather than face the test squarely"
+  misbelief: "Silence is safer than letting an ally worry — if I say nothing, no new debt is created"
+  pressure_situation: |
+    Lin Yan has received both the formal assessment notice and an informal
+    signal: a whispered rumor that gate_01 has an unspoken layer — the
+    assessors value the candidate's ability to discern information quality over
+    raw correctness. He withholds this from Su Tang. The withheld information
+    is the trust gap seed.
+  behavioral_manifestation: |
+    When Su Tang approaches to discuss strategy, Lin Yan deflects. He responds
+    to her direct questions with generic reassurances. His body language
+    signals withdrawal — he looks at the assessment notice instead of at her.
+    She notices the deflection but cannot name what is wrong.
+  rejected_tactic_visibility: |
+    The cleaner option (telling Su Tang about the rumor) remains visible
+    through Lin Yan's hesitation. Twice he opens his mouth to speak, twice he
+    closes it. The reader sees the open door he refuses to walk through.
+
+ally:
+  name: 苏棠 (Su Tang)
+  public_want: "Pass the assessment"
+  private_want: "Know whether Lin Yan still treats her as a true partner"
+  likely_misread: "Lin Yan's silence = he no longer trusts her or sees her as an equal"
+  pressure_situation: |
+    Su Tang approaches Lin Yan with the expectation of partnership. She asks
+    direct questions about how he plans to handle gate_01. When he deflects,
+    her misread begins: she interprets his silence as exclusion from trust.
+  behavioral_manifestation: |
+    Su Tang's tone shifts from warm to controlled. She stops pressing after
+    the second deflection. She leaves the room without saying what she feels.
+    The reader sees her processing the gap but Lin Yan does not register it.
+
+competitor:
+  name: 赵锐 (Zhao Rui)
+  public_want: "Rank above Lin Yan"
+  private_want: "Make others reveal their information channels before he commits"
+  pressure_situation: |
+    Zhao Rui is present in the periphery. He observes the interaction between
+    Lin Yan and Su Tang. He files it away as leverage.
+  behavioral_manifestation: |
+    Zhao Rui does not engage directly in this chapter. He passes through the
+    common area, glances at Lin Yan and Su Tang, and a faint smile crosses
+    his face before he exits. His presence is a pressure field, not an action.
+
+assessor:
+  name: 沈主任 (Shen Lead)
+  role: Assessment authority
+  chapter_presence: |
+    Shen Lead delivers the formal notice at the start. His phrasing is neutral
+    but careful — he says "the assessment will test your capacity to
+    discriminate" and pauses just long enough for the word to settle. This
+    pause is the only hint the formal channel gives about the rumored layer.

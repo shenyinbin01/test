@@ -1,0 +1,17 @@
+# Variant Anonymization Map - PRIVATE
+# Do NOT share with evaluators during blind pairwise evaluation.
+
+anonymization_map:
+  V_A: C0_current_c_anchor
+  V_B: C1_private_deep_fields
+  V_C: C2_exemplar_distillation
+  V_D: C3_hybrid_harness
+
+variant_roles:
+  C0_current_c_anchor: baseline_anchor
+  C1_private_deep_fields: private_fields_test
+  C2_exemplar_distillation: exemplar_only_test
+  C3_hybrid_harness: main_candidate
+
+primary_comparison: V_D_vs_V_A
+acceptance_threshold: "C3 must beat C0 in >=60% of preferences"

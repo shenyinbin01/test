@@ -1,0 +1,30 @@
+chapter: "002"
+author_intent_card:
+  scene_purpose: >
+    Gate_02 tests strategy coordination. Lin Yan's prior withholding compounds:
+    Su Tang's misread deepens, the tactic from gate_01 is blocked, and
+    counterparty pressure forces a costly improvisation. The chapter deepens
+    the trust gap and makes the cost material.
+  reader_experience_target:
+    primary: >
+      Reader learns something about the informal signal's context before
+      Lin Yan does — and watches him walk toward a consequence he cannot yet see.
+    secondary: >
+      Su Tang's misread becomes an active obstacle, not just emotional static.
+      The partnership frays under operational pressure.
+  emotional_arc: guarded cooperation → misread collision → isolated improvisation
+  what_must_land:
+    - The tactic Lin Yan used in gate_01 (withholding-based) cannot be reused.
+    - Su Tang interprets Lin Yan's behavior as deliberate exclusion.
+    - Counterparty pressure (Zhao Rui or institutional friction) tightens.
+    - Lin Yan must make a decision with partial information.
+    - The cost of the initial silence becomes visible — but not yet fully paid.
+  what_must_avoid:
+    - Relationship being repaired or even discussed openly.
+    - Info delivered as clean announcement rather than partial, contested.
+    - Lin Yan realizing the full picture.
+  compression_ratio: "4:1"
+  decompression_markers:
+    - A moment where Su Tang almost asks — and doesn't
+    - Physical detail during high-pressure coordination
+    - Reader's superior knowledge creating dramatic irony

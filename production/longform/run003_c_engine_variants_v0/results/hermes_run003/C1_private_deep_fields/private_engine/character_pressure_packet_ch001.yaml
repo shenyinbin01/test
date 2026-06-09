@@ -1,0 +1,48 @@
+chapter: "001"
+character_pressure_packet:
+  lin_yan:
+    desire_tension:
+      public_want: "Pass three-gate assessment"
+      private_want: "Prove he can advance without owing Su Tang more"
+      conflict: >
+        The informal signal offers a potential shortcut — but accepting it silently
+        means owing an unknown source instead of Su Tang. Both paths carry debt.
+    fear_activation:
+      primary_fear: "Being seen as someone who survives by borrowing trust"
+      trigger: >
+        Su Tang's immediate assumption that they will pool information.
+      response: "Withhold the informal signal; perform calm."
+    shame_surface:
+      source: "Admitting he considered an informal signal that might be illegitimate"
+      behavior: "Avoids eye contact when Su Tang asks if he's heard anything."
+    misbelief_drive:
+      belief: "Silence is safer than letting ally worry"
+      how_it_manifests: >
+        Rationalizes withholding as protecting Su Tang from distraction.
+        Does not voice the real calculus — that disclosure would acknowledge
+        dependency.
+    agency_anchor:
+      decision: "Keep informal signal private; proceed with formal entry only."
+      cost_visible: "Su Tang's glance lingers a beat too long."
+      cost_hidden: "Lin Yan has now touched a channel he can't later deny."
+  su_tang:
+    desire_tension:
+      public_want: "Pass assessment"
+      private_want: "Know if Lin Yan still treats her as partner"
+      conflict: >
+        She cannot ask directly without revealing her own insecurity.
+        So she watches.
+    misread_formation:
+      evidence: "Lin Yan's hesitation, averted gaze, generic reassurance"
+      conclusion: "He doesn't trust her with something."
+      accuracy: "Partially correct — he's withholding, but not from distrust."
+    agency_anchor:
+      decision: "Do not press. File the observation."
+      cost: "A thread of doubt enters the partnership."
+  zhao_rui:
+    desire_tension:
+      public_want: "Rank above Lin Yan"
+      private_want: "Make others reveal their channels first"
+    role_in_scene: "Appears briefly; observes Lin Yan and Su Tang; says little."
+  shen_lead:
+    role_in_scene: "Delivers formal assessment notice; neutral authority presence."

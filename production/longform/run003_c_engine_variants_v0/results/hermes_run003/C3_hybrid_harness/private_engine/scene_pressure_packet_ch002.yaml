@@ -1,0 +1,50 @@
+chapter: ch002
+variant: C3_hybrid_harness
+scene_id: "gate_02_inherited_cost"
+scene_objective: |
+  Lin Yan must navigate gate_02, which tests strategy coordination — the
+  ability to act under uncertainty while managing relationships. His goal:
+  pass this gate without exposing the information he withheld.
+scene_obstacle: |
+  Triple obstacle: (1) The informal signal from ch001 does not match the actual
+  gate_02 terrain — his prior tactic is blocked. (2) Su Tang withholds her
+  cooperation — the ally he needs is now distant and watching. (3) Zhao Rui
+  applies a partial-info probe that forces Lin Yan to navigate paranoia.
+protagonist_tactic: |
+  Lin Yan's tactic: push through alone, relying on general competence rather
+  than specific information. This is the flawed tactic — it costs him time,
+  energy, and positioning, and it creates visible strain that others notice.
+  He could ask Su Tang for help (clean option) but cannot admit the original
+  withholding.
+counter_tactic_1: |
+  Su Tang's counter-tactic: complete her portion efficiently, then withdraw
+  cooperation. Her line "你自己可以的" is a mirror of Lin Yan's ch001 deflection.
+  She is showing him what exclusion feels like without naming it.
+counter_tactic_2: |
+  Zhao Rui's counter-tactic: the corridor-talk probe. He does not accuse or
+  confirm. He plants a statement and walks away. The ambiguity is the weapon —
+  Lin Yan cannot know whether to defend, explain, or ignore.
+turn_point: |
+  The turn comes when Lin Yan, mid-struggle with gate_02, glances at Su Tang
+  and sees her watching him with an expression he cannot read. In that moment,
+  he understands — not admits, but understands — that his silence in ch001 has
+  cost him something he cannot immediately name. He looks away first.
+irreversible_cost: |
+  The relationship debt is no longer a seed — it is a visible fracture. Su Tang
+  has demonstrated that she can function without him. Zhao Rui has established
+  that he knows (or appears to know) something. Lin Yan passes gate_02 but at
+  a positional cost: he enters gate_03 weakened, watched, and alone.
+scene_heat_verification:
+  has_objective: true
+  has_obstacle: true
+  has_tactic: true
+  has_counter_tactic: true
+  has_turn: true
+  has_irreversible_cost: true
+craft_exemplar_applied: |
+  scene_heat principle: Each character wants something different. Lin Yan wants
+  to pass alone to protect his shame; Su Tang wants acknowledgment; Zhao Rui
+  wants information. Their tactics collide. The turn (Lin Yan seeing Su Tang
+  watch him) is emotional, not explanatory. No one states what is happening.
+  character_pressure principle: Lin Yan's tactic is flawed — he pushes through
+  alone because admitting he needs help would expose the original lie.

@@ -1,0 +1,33 @@
+chapter: ch003
+variant: C3_hybrid_harness
+author_intent_summary: |
+  Secure advancement through gate_03, the final assessment. Lin Yan must
+  preserve his advancement while paying a visible cost. His tactic is flawed
+  but understandable: he reveals part of the truth to Su Tang — enough to
+  partially repair the working relationship — but withholds the emotional
+  truth about why he withheld it. The relationship debt crystallizes into
+  the next friction. Advancement is achieved but not cleanly. The reader
+  question remains partially open.
+craft_intentions:
+  - "Show Lin Yan choosing a flawed tactic: he tells Su Tang about the rumor but frames it as a strategic decision, not as a shame-driven withholding. This is the partial confession — it repairs enough to pass gate_03 but does not heal the wound."
+  - "Su Tang accepts the functional information but does not accept the framing. Her response is cool and professional — the relationship debt is now a structural feature, not a temporary misunderstanding."
+  - "Zhao Rui secures his ranking through conventional channels while Lin Yan pays the visible cost. The cost is public enough that Shen Lead notes it."
+  - "The ending must feel earned but not triumphant. Lin Yan advances. Su Tang passes too. But something between them is permanently altered."
+reader_decompression_target: |
+  The reader question ("Which signal is being misread, and what will the
+  withheld truth cost the relationship?") receives a partial answer: the
+  informal signal was the rumor about gate_01's information-discrimination
+  layer, and the cost is a permanent alteration of trust between Lin Yan and
+  Su Tang. But the full emotional truth — that Lin Yan withheld because of
+  shame, not strategy — remains unspoken and will become the next friction.
+rejected_clean_option: |
+  Lin Yan could tell Su Tang everything: the rumor, why he withheld it, the
+  shame that drove him. A full confession would clean the wound. He rejects
+  this because the partial confession already costs him more visible face
+  than he can bear; a full confession would require vulnerability he is not
+  capable of. The reader should understand his limitation even while wishing
+  he would choose differently.
+forbidden_technique_check:
+  - "No internal monologue naming emotions"
+  - "No narrator explanation of the mechanism"
+  - "No engineering terminology"

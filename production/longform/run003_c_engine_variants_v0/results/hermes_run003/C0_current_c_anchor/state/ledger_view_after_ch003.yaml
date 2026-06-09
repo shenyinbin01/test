@@ -1,0 +1,55 @@
+# ledger_view_after_ch003.yaml
+# ledger_type: preview_from_proposed_delta
+# Preview of what the ledger would show after chapter 003, based on proposed state delta.
+
+ledger_type: preview_from_proposed_delta
+chapter: "ch003"
+variant: "C0_current_c_anchor"
+
+relationship_ledger:
+  lin_yan_su_tang:
+    balance:
+      trust_credits: 1
+      trust_debits: 4
+      description: "Asymmetrical debt. Lin Yan chose to sacrifice advancement for Su Tang. Su Tang self-reported false non-compliance to save Lin Yan's position. Both paid: she lost advancement, he lost clean conscience."
+    active_items:
+      - item: "withheld_informal_signal_ch001"
+        status: "resolved_in_story_not_ledger"
+        resolution: "Lin Yan admitted withholding in gate_03 binary choice"
+      - item: "withheld_system_hint_ch002"
+        status: "unresolved"
+      - item: "su_tang_false_self_report"
+        status: "open"
+        owed_by: su_tang
+        owed_to: lin_yan
+        note: "she claimed her penciled note was non-compliant — likely untrue"
+      - item: "lin_yan_sacrifice_attempt"
+        status: "overridden"
+        note: "he chose option 1 to save her; she overrode it with self-report"
+      - item: "relationship_crack"
+        status: "active_next_friction"
+        description: "path forward starts from a visible crack, not from zero"
+
+information_ledger:
+  known_to_lin_yan_only:
+    - "Su Tang's self-report was likely a lie — her note wasn't really non-compliant"
+    - "he carries her pencil as physical reminder of debt"
+  known_to_su_tang_only:
+    - "true motivation for self-report — whether guilt, reciprocity, or strategy"
+  known_to_both:
+    - "final rankings: Zhao Rui 1, Lin Yan 2, Su Tang 3"
+    - "Lin Yan advances, Su Tang does not"
+  known_to_reader_not_characters:
+    - "full ambiguity of Su Tang's motivation remains unresolved"
+    - "official records show only scores, not the操场 exchange"
+
+competitive_ledger:
+  final_rankings:
+    zhao_rui: 1 (clean advancement)
+    lin_yan: 2 (non-clean advancement, carries irreversible mark)
+    su_tang: 3 (self-eliminated)
+  advancement_quality:
+    lin_yan: "passed but not clean — relationship debt transformed into next friction"
+    su_tang: "eliminated but not defeated — her choice was tactical and unresolved"
+
+notes: "preview only — none of these values are finalized. Human evaluation required. Non-clean advancement achieved. Next friction: asymmetrical relationship debt with unresolved emotional weight."

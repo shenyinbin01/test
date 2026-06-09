@@ -1,0 +1,52 @@
+# ledger_view_after_ch002.yaml
+# ledger_type: preview_from_proposed_delta
+# Preview of what the ledger would show after chapter 002, based on proposed state delta.
+
+ledger_type: preview_from_proposed_delta
+chapter: "ch002"
+variant: "C0_current_c_anchor"
+
+relationship_ledger:
+  lin_yan_su_tang:
+    balance:
+      trust_credits: 0
+      trust_debits: 3
+      description: "Trust gap widened. Su Tang revealed she knew about withheld signal. Lin Yan continued incomplete disclosure in gate_02. Su Tang mirrored withholding behavior."
+    active_items:
+      - item: "withheld_informal_signal_ch001"
+        origin: "ch001_tea_room_overhear"
+        status: "confirmed_by_ally"
+        owed_by: lin_yan
+        owed_to: su_tang
+      - item: "withheld_system_hint_ch002"
+        origin: "ch002_gate_02_A_line_priority_hint"
+        status: "open"
+        owed_by: lin_yan
+        owed_to: su_tang
+      - item: "mirrored_withholding"
+        origin: "ch002_su_tang_reciprocal_silence"
+        status: "open"
+        owed_by: su_tang
+        owed_to: lin_yan
+
+information_ledger:
+  known_to_lin_yan_only:
+    - "system displayed A-line priority channel hint (gray bar)"
+  known_to_su_tang_only:
+    - "system displayed coordination suggestion about Lin Yan's screen (green bar)"
+    - "she overheard Zhao Rui in ch001"
+  known_to_both:
+    - "gate_01 rankings posted"
+    - "gate_02 requires coordination with no modifications"
+  known_to_reader_not_characters:
+    - "Su Tang overheard Zhao Rui at the same time as Lin Yan — revealed before Lin Yan processes it fully"
+    - "Su Tang chose A-line using Lin Yan's ID verification code"
+
+competitive_ledger:
+  gate_02_outcomes:
+    zhao_rui: "completed coordination, details unknown"
+    lin_yan: "minus 3 points for B-line conflict; missed optimal bonus with C-line blank choice"
+    su_tang: "chose A-line with Lin Yan's verification code; results affected by coordination failure"
+  prior_tactic_blocked: "silence/withholding marked as 'strategy fixation' — cannot reuse"
+
+notes: "preview only — none of these values are finalized. Human evaluation required."

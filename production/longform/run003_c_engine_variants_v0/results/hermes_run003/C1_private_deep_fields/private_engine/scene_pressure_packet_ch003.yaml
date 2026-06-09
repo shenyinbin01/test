@@ -1,0 +1,48 @@
+chapter: "003"
+scene_pressure_packet:
+  setting: >
+    Final assessment room — larger, more formal. Panel-style setup:
+    Shen Lead at center, two silent observers at the sides. Candidates
+    present individually and then jointly. Late afternoon; the light
+    through high windows has turned amber. The air is still.
+  pressure_sources:
+    institutional:
+      type: "Final panel assessment with collaboration scoring"
+      weight: "critical"
+      effect: >
+        Everything the candidates have done across all three gates is
+        visible in summary. The assessment is both individual and
+        relational. Lin Yan's technical performance is strong; his
+        partnership metrics are ambiguous.
+    relational:
+      type: "Unresolved trust gap becomes public subtext"
+      weight: "high"
+      effect: >
+        During joint presentation, Lin Yan and Su Tang coordinate
+        adequately — but the panel can see the distance. Shen Lead's
+        pen pauses.
+    internal:
+      type: "Lin Yan's accumulated silence debt"
+      weight: "high"
+      effect: >
+        He has withheld three times now. The pattern is visible to
+        anyone watching. He knows it. He doesn't know if the panel
+        knows it. The uncertainty is its own pressure.
+  pressure_escalation_map:
+    - moment: "Individual assessments presented"
+      pressure_level: "baseline — competence carries"
+    - moment: "Joint presentation begins"
+      pressure_level: "elevated — distance visible"
+    - moment: "Shen Lead pauses writing"
+      pressure_level: "very high — institutional notice"
+    - moment: "Results announced — both advance"
+      pressure_level: "relief mixed with cost awareness"
+  decompression_points:
+    - "The amber light: beautiful and indifferent, a patch of warmth
+      on the conference table that belongs to no one."
+    - "Su Tang's small nod when results are read — acknowledgment, not warmth."
+    - "Lin Yan exhaling — a private moment the reader shares."
+  reader_inference_gap:
+    prompt: "What will the withheld truth cost next — and can the partnership recover?"
+    withheld: "Whether Su Tang will eventually ask. Whether Lin Yan will ever tell."
+    provided: "The cost of this round; the institutional flag; the pattern locked in."

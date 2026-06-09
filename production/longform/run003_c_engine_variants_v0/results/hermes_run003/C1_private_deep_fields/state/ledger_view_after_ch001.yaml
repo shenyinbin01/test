@@ -1,0 +1,17 @@
+ledger_type: preview_from_proposed_delta
+chapter: "001"
+ledger_preview:
+  relationship_debt_balance:
+    lin_yan_to_su_tang: 1
+    su_tang_to_lin_yan: 0
+    note: "Lin Yan withheld informal signal; Su Tang noticed but did not press"
+  information_asymmetry:
+    lin_yan_knows_not_shared: "informal signal from 老周 about gate_01 evaluation model"
+    su_tang_suspects_not_confirmed: "something was withheld"
+  trust_ledger:
+    su_tang_trust_in_lin_yan: "slightly decreased — paused at threshold"
+    lin_yan_trust_in_self: "maintained — rationalizing secrecy as strategy"
+  future_liability:
+    - "If informal signal proves inaccurate, Lin Yan wasted trust for nothing"
+    - "If informal signal proves accurate, Lin Yan owes 老周, not Su Tang"
+    - "Su Tang's observation may resurface under pressure"

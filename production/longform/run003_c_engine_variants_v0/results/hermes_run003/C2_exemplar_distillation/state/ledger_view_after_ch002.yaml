@@ -1,0 +1,46 @@
+# Ledger View — After Chapter 002
+# ledger_type: preview_from_proposed_delta
+
+ledger_type: preview_from_proposed_delta
+chapter: 2
+gate: 2 (strategy_coordination)
+
+trust_accounts:
+  lin_yan_to_su_tang:
+    balance: -2
+    description: "Original trust debt + exposed concealment of informal signal. Su Tang knows he hid information."
+    last_transaction: "belated_explanation_failed_su_tang_replied_不需要"
+  su_tang_to_lin_yan:
+    balance: +1 (protective)
+    description: "Su Tang completed framework alone, absorbing imbalance penalty. Protecting him despite hurt."
+    last_transaction: "sent_complete_framework_with_no_decision_spaces_left_for_lin_yan"
+
+info_asymmetry:
+  resolved:
+    - "su_tang_now_knows_lin_yan_had_coded_signal"
+    - "lin_yan_now_knows_su_tang_knows"
+  lin_yan_disadvantage:
+    does_not_know: "su_tang_is_absorbing_scoring_penalty_by_solo_framework"
+  su_tang_partial:
+    knows: "lin_yan_tried_to_explain_and_failed"
+    does_not_know: "lin_yan_has_realized_cost_exceeds_score_penalty"
+
+cost_escalation:
+  original_cost: "marginal_score_on_gate_01"
+  compounded_cost: "ally_no_longer_leaves_thermos_near_him"
+  hidden_cost: "su_tang_absorbing_imbalance_penalty_for_him"
+  tactic_status: "old_tactic_silence_now_broken_and_counterproductive"
+
+pattern_flags:
+  - flag: "silence_as_defense"
+    status: "broken_cannot_reuse"
+    consequence: "exposed_and_weaponized_by_zhao_rui"
+  - flag: "debt_avoidance_over_vulnerability"
+    status: "escalating"
+    consequence: "ally_now_self_protective_armor_up"
+
+reader_ledger:
+  ahead_of_protagonist:
+    - "su_tang_protective_intent_behind_solo_framework"
+    - "extra_comma_in_framework_signals_hesitation_not_indifference"
+  question_evolving: "can_lin_yan_find_way_to_speak_before_su_tang_withdraws_completely"

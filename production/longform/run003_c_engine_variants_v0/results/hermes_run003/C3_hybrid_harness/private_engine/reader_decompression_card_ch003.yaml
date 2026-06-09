@@ -1,0 +1,48 @@
+chapter: ch003
+variant: C3_hybrid_harness
+decompression_strategy: partial_answer_with_remaining_tension
+inference_gap_1:
+  label: "What Lin Yan hoped Su Tang would do"
+  reader_knows: |
+    After Lin Yan's partial confession and his public admission to Shen Lead,
+    he looks at Su Tang. The prose describes the physical action: he turns his
+    head, his eyes find her, he waits a beat. Su Tang meets his eyes and then
+    looks away — at Shen Lead, at the assessment board, anywhere but at him.
+    The reader sees the gap between what Lin Yan is unconsciously seeking
+    (forgiveness, warmth, restoration) and what Su Tang is offering
+    (professional acknowledgment). The reader must infer the nature of his
+    hope, because he cannot name it himself.
+  character_knows: |
+    Lin Yan registers the look-away as a fact, not as a message. He tells
+    himself the admission was the right tactical move. He does not allow
+    himself to notice that he was waiting for something from Su Tang that did
+    not arrive.
+  decompression_schedule: |
+    This gap remains open. It is the next friction — the emotional truth that
+    was never spoken. This is the seed for the next arc.
+
+inference_gap_2:
+  label: "Whether Zhao Rui was bluffing"
+  reader_knows: |
+    Zhao Rui never confirms whether his ch002 corridor remark was based on
+    real knowledge or was a successful fishing expedition. His silence in
+    ch003 preserves the ambiguity. The reader can choose to believe either
+    interpretation — and the uncertainty is the point. Lin Yan's paranoia was
+    the weapon regardless of Zhao Rui's actual knowledge.
+  character_knows: |
+    Lin Yan will never know. This is a permanent cost he carries forward.
+
+reader_experience_target: |
+  By the end of ch003, the reader should feel the advancement is earned but
+  incomplete. The original reader question has a partial answer: the misread
+  signal was the informal rumor, and the cost is a permanent alteration of the
+  Lin Yan-Su Tang relationship. But the deeper question — what the full
+  emotional truth would have cost, had Lin Yan been capable of speaking it —
+  remains as next friction.
+
+craft_exemplar_applied: |
+  reader_decompression principle: Prose does not explain what Lin Yan hoped
+  for. The gap is left. The reader sees one more consequence (Su Tang's
+  look-away) than Lin Yan can admit. The full answer is delayed because the
+  emotional cost of acknowledging the hope exceeds the tactical cost of the
+  partial confession.

@@ -1,0 +1,42 @@
+chapter: ch001
+variant: C3_hybrid_harness
+scene_id: "gate_01_initial_entry"
+scene_objective: |
+  Lin Yan must decide how to approach gate_01: rely solely on the formal
+  notice, or incorporate the informal rumor about information discrimination.
+  The objective is not yet to pass — it is to choose an approach.
+scene_obstacle: |
+  Su Tang expects partnership. She comes to him wanting to coordinate. If he
+  tells her the rumor, he admits he considered an informal channel — exposing
+  his shame. If he says nothing, she will sense the gap and her trust will
+  erode. There is no option without cost.
+protagonist_tactic: |
+  Lin Yan's tactic: withhold the rumor, deflect Su Tang's questions with
+  generic reassurances ("We'll handle gate_01 the way we always do"), and
+  hope the gap goes unnoticed. This is the imperfect tactic — it protects his
+  shame in the short term at the cost of relationship trust.
+counter_tactic: |
+  Su Tang's counter-tactic: she does not confront him. Instead, she asks a
+  precise follow-up question — "Did you hear anything about what Shen Lead
+  really meant?" — that forces Lin Yan to either lie directly or reveal his
+  withholding. He lies by omission: "Just the formal notice."
+turn_point: |
+  Su Tang's silence after his answer. She does not challenge the lie, but she
+  stops talking. The conversation ends not with a fight but with a withdrawal.
+  She leaves the room. Lin Yan tells himself the silence means she accepted
+  his answer. The reader knows otherwise.
+irreversible_cost: |
+  The trust gap is seeded. Su Tang now has evidence (however subtle) that
+  Lin Yan withholds information. This cannot be taken back. The gap will
+  compound in gate_02 when the hidden information becomes relevant.
+scene_heat_verification:
+  has_objective: true
+  has_obstacle: true
+  has_tactic: true
+  has_counter_tactic: true
+  has_turn: true
+  has_irreversible_cost: true
+craft_exemplar_applied: |
+  character_pressure principle: Lin Yan's tactic is flawed — he chooses
+  withholding over admission because the cleaner option would expose his fear
+  of being seen as someone who needs borrowed trust.

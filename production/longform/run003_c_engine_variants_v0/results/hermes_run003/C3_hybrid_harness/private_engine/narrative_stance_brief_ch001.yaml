@@ -1,0 +1,33 @@
+chapter: ch001
+variant: C3_hybrid_harness
+narrative_mode: third_person_limited
+focal_character: 林延 (Lin Yan)
+narrative_distance: |
+  Close third person — the prose stays in Lin Yan's perceptual field (what he
+  sees, hears, and physically feels) but the narrator does not report his
+  internal monologue. Thoughts are shown through action, hesitation, and
+  physical response, never stated as "He thought..." or "He felt afraid..."
+stylistic_registers:
+  primary: |
+    Naturalistic Chinese webnovel prose. Simple sentence structures. Concrete
+    sensory detail: what is seen, heard, touched. Emotional states conveyed
+    through body language, pacing, and object focus.
+  dialogue: |
+    Dialogue is clipped and functional. Characters say less than they mean.
+    Pauses and silences do more work than words.
+what_is_visible_to_reader: |
+  - Lin Yan's physical actions and sensory perceptions
+  - Dialogue (spoken words only, no thought-tags)
+  - Su Tang's observable behavior and speech
+  - Environmental detail that Lin Yan notices
+what_is_hidden_from_reader: |
+  - The exact content of the informal rumor (delayed until ch002)
+  - Lin Yan's interior emotional labeling
+  - Su Tang's interior processing (shown only through behavior)
+  - Any narrator-level explanation of the assessment mechanism
+prohibited_elements:
+  - "他心里想"
+  - "他感到恐惧"
+  - "她明白了"
+  - "state_delta, ledger, agency_choice, event_log, YAML, Markdown engineering"
+  - "any meta-discourse about writing technique or assessment"

@@ -1,0 +1,26 @@
+chapter: "001"
+status: proposed
+state_delta:
+  trust_gap:
+    from: none
+    to: seeded
+    detail: >
+      Lin Yan receives informal signal (老周's message) and withholds it from
+      Su Tang. Su Tang perceives hesitation but does not confront. Trust gap
+      opens as a hairline fracture — invisible to others, perceptible to both.
+  lin_yan:
+    active_tactic: "information_withholding"
+    tactic_origin: "spontaneous — triggered by informal signal arrival"
+    relationship_debt: +1 (withheld from Su Tang)
+    internal_state: "guarded, rationalizing silence as protection"
+    unresolved: "cannot verify informal signal truth; will carry into gate_02"
+  su_tang:
+    perception_change: "noticed Lin Yan's hesitation and one-word reply"
+    misread_forming: "Lin Yan is withholding something → he may not trust her"
+    action_taken: "did not press; filed observation"
+  zhao_rui:
+    presence: "observed meeting; no direct engagement"
+  reader_knowledge:
+    knows: "informal signal exists, Lin Yan visited 老周, Su Tang noticed hesitation"
+    does_not_know: "signal's truth value, 老周's motive, whether signal was exclusive"
+    question_planted: "Which signal is being misread, and what will the withheld truth cost?"

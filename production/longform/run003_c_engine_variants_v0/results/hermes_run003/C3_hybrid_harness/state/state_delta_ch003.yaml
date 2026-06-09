@@ -1,0 +1,71 @@
+chapter: ch003
+variant: C3_hybrid_harness
+status: proposed
+state_delta:
+  relationship_debt:
+    after_ch002: 2
+    after_ch003: "2 (stabilized, not resolved)"
+    description: >
+      Lin Yan makes partial confession — tells Su Tang the factual content
+      of the rumor but not the emotional reason for withholding. Debt is
+      not repaid; it crystallizes into a structural feature of the
+      relationship. Professional functionality restored; personal trust
+      remains damaged.
+  trust_gap:
+    type: crystallized_structural_fissure
+    prior_state: "Visible fracture, Su Tang maintaining professional distance"
+    new_state: "Functional partnership restored; emotional trust not restored"
+    trigger: "Lin Yan's partial confession (fact without feeling)"
+    permanent_mark: "Su Tang's '知道了' (acknowledged but did not accept)"
+  character_positions:
+    Lin Yan:
+      gate_status: passed_all_three_with_notation
+      information_advantage: none_remaining
+      relationship_state: functional_partnership_restored_emotionally_damaged
+      internal_cost: "Public notation on record; private knowledge that partial truth was insufficient"
+      advancement: non_clean — annotated for informal channel usage
+      unresolved: "Cannot name what he hoped Su Tang would do after his confession"
+    Su Tang:
+      gate_status: passed_all_three_without_notation
+      information_advantage: received_factual_truth_from_LinYan
+      relationship_state: recalibrated_permanently_to_professional_boundary
+      internal_cost: "Emotional truth withheld from her — factual truth is not the same as trust"
+      advancement: clean — no notation, higher effective standing than Lin Yan
+      final_gesture: "Looked at Lin Yan after his admission, looked away; did not speak again"
+    Zhao Rui:
+      gate_status: passed_all_three_ranked_first
+      information_advantage: probe_outcome_never_confirmed
+      relationship_state: "Position secured; ambiguity weapon retired but never disarmed"
+      advancement: clean — ranked first
+      permanent_ambiguity: "Lin Yan will never know if probe was knowledge or bluff"
+    Shen Lead:
+      role: final_assessor
+      notable_action: "Recorded Lin Yan's informal channel usage; announced results with notation"
+      final_announcement: "Lin Yan — 通过, 备注. Su Tang — 通过, 无备注. Zhao Rui — 通过, 排名第一"
+  reader_question_status:
+    question: "Which signal is being misread, and what will the withheld truth cost the relationship?"
+    partial_answer: >
+      The misread signal was the informal rumor about gate_01's true test
+      (information discrimination over correctness). Su Tang misread Lin Yan's
+      silence as permanent exclusion from trust. The cost: professional
+      functionality restored but personal trust permanently altered. Notation
+      on Lin Yan's record.
+    remaining_open: >
+      The emotional truth — WHY Lin Yan withheld (shame/fear of being seen as
+      needing borrowed trust) — was never spoken. This unspoken truth becomes
+      the next friction. The reader question's deepest layer remains for
+      future arcs.
+  event_log:
+    - "Pre-gate_03 - Lin Yan finds Su Tang at corridor window"
+    - "Lin Yan delivers partial confession: tells her the rumor content, frames as tactical oversight"
+    - "Su Tang nods: '知道了' — acknowledges fact, not feeling"
+    - "Su Tang enters waiting area; Lin Yan realizes his confession omitted the emotional truth"
+    - "Gate_03 begins - Shen Lead explains final assessment: state judgment basis for prior choices"
+    - "Zhao Rui states first: all decisions based on formal channels"
+    - "Su Tang states second: independent judgment; emphasis on '独立'"
+    - "Lin Yan states: admits informal channel usage; calls it 'judgment error'"
+    - "Shen Lead records notation: '记录在案'"
+    - "Results posted: Lin Yan passes with notation; Su Tang passes clean; Zhao Rui ranks first"
+    - "Final corridor encounter: Lin Yan and Su Tang see each other; both pause; she looks, looks away, walks on"
+    - "Lin Yan unfolds/refolds notification; walks opposite direction"
+    - "End - Non-clean advancement; relationship debt crystallized; reader question partially open"

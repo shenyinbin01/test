@@ -1,0 +1,59 @@
+chapter: "003"
+character_pressure_packet:
+  lin_yan:
+    desire_tension:
+      public_want: "Pass gate_03 and secure advancement"
+      private_want: >
+        Prove he can advance without owing ally more — but now he owes
+        an invisible source AND has damaged the ally relationship.
+        The private want has become impossible.
+      conflict: >
+        To pass, he must demonstrate institutional fitness —
+        which includes relationship management. His partnership with
+        Su Tang is visibly strained. He must either explain or perform.
+    fear_activation:
+      primary_fear: "Being seen as someone who survives by borrowing trust"
+      trigger: >
+        Shen Lead's final assessment includes a "collaboration dimension."
+        Lin Yan's partnership score is borderline.
+      response: >
+        He does not confess. He performs what remains of the partnership
+        — and it's enough to pass, but not enough to erase the question.
+    shame_surface:
+      source: "Su Tang knows he withheld something. She doesn't say it.
+        Neither does he. The unsaid sits between them like a third person."
+      behavior: >
+        After advancement is confirmed, Lin Yan tries to meet Su Tang's
+        eyes. She is looking at the door.
+    misbelief_drive:
+      belief: "Silence is safer than letting ally worry"
+      how_it_manifests: >
+        Even at the end, he does not reverse course. He passes by
+        demonstrating competence, not by repairing trust. The misbelief
+        is not resolved — it becomes the next friction.
+    agency_anchor:
+      decision: "Complete the assessment with a competent but relationally-flawed performance."
+      cost_visible: "Su Tang's distance. Shen Lead's notation."
+      cost_hidden: "Lin Yan has now locked in a pattern. Future gates will be harder."
+  su_tang:
+    desire_tension:
+      public_want: "Pass gate_03"
+      private_want: "Closure on whether she was partner or convenience"
+      conflict: >
+        She passes. She gets her answer — not through words, but through
+        Lin Yan's pattern of behavior. The answer is: he keeps things
+        from her. She doesn't know why. She may never know why.
+    agency_anchor:
+      decision: "Accept advancement. File the answer. Do not confront."
+      cost: "Trust is not rebuilt. It is set aside. It will matter later."
+  zhao_rui:
+    role_in_scene: >
+      Also passes. His information advantage remains unconfirmed —
+      reader never learns for certain whether he had access to the
+      same informal channel. He glances at Lin Yan once, a look that
+      could mean anything.
+  shen_lead:
+    role_in_scene: >
+      Delivers results. Notes briefly that "collaboration metrics were
+      adequate but showed variation." Does not elaborate. The institutional
+      record now contains a soft flag.

@@ -1,0 +1,56 @@
+chapter: ch002
+variant: C3_hybrid_harness
+status: proposed
+state_delta:
+  relationship_debt:
+    after_ch001: 1
+    after_ch002: 2
+    description: >
+      Debt compounds. Su Tang's counter-tactic (withholding cooperation,
+      mirrored reassurance) creates a symmetrical wound. Lin Yan cannot
+      name the symmetry because he cannot admit the original withholding.
+  trust_gap:
+    type: compound_fracture
+    prior_state: "Su Tang sensed gap but could not name it"
+    new_state: "Su Tang demonstrates functional independence; gap is now visible in behavior"
+    trigger: "Lin Yan's continued silence in gate_02; Su Tang's mirrored 'you can handle it yourself'"
+  character_positions:
+    Lin Yan:
+      gate_status: passed_gate_02_at_cost
+      information_advantage: informal_signal_blocked_by_gate_terrain
+      relationship_state: trust_fracture_visible
+      internal_cost: "Cannot ask for help; cannot explain why; self-doubt compounds"
+      new_wound: "Zhao Rui's probe creates permanent uncertainty about who knows what"
+    Su Tang:
+      gate_status: passed_gate_02_efficiently
+      information_advantage: independent_analysis_sufficient
+      relationship_state: recalibrated_to_professional_distance
+      internal_cost: "Misread hardened: his silence means permanent exclusion from trust"
+      counter_tactic_deployed: "Withheld cooperation; mirrored Lin Yan's ch001 deflection"
+    Zhao Rui:
+      gate_status: passed_gate_02
+      information_advantage: "Deployed partial-info probe; outcome ambiguous"
+      relationship_state: "Established as unknown variable in Lin Yan's calculus"
+      probe_result: "Lin Yan's reaction confirms information sensitivity exists"
+    Shen Lead:
+      role: silent_observer
+      notable_action: "Present on raised platform; cameras recording; no intervention"
+  reader_question_status:
+    question: "Which signal is being misread, and what will the withheld truth cost?"
+    partial_answer_emerging: >
+      The misread signal is the informal rumor about gate_01. Su Tang misreads
+      Lin Yan's silence as permanent exclusion. The cost is becoming visible:
+      relationship fracture, positional weakening, paranoia about Zhao Rui.
+    remaining_open: "Full emotional cost not yet revealed"
+  event_log:
+    - "Gate_02 opens - three-option task with encoded labels (A7, B3, C5)"
+    - "Lin Yan realizes informal signal does not decode the options"
+    - "Lin Yan considers asking Su Tang for help; cannot do so without exposing prior silence"
+    - "Su Tang enters, makes her choice without hesitation"
+    - "Su Tang completes gate_02 efficiently while Lin Yan struggles"
+    - "Zhao Rui enters, delivers corridor-talk probe: 'corridor words don't always match gate content'"
+    - "Zhao Rui's probe leaves Lin Yan unable to determine knowledge vs. bluff"
+    - "Su Tang passes Lin Yan's cubicle: 'You can handle it yourself' — mirrored reassurance"
+    - "Su Tang exits; Lin Yan finishes alone, positional cost incurred"
+    - "Lin Yan exits to dark corridor; realizes he must act before gate_03"
+    - "End - Trust fracture visible, reader ahead of protagonist on cost recognition"

@@ -1,0 +1,63 @@
+# state_delta_ch003.yaml
+# status: proposed
+# Records what actually happened in chapter 003 prose.
+
+delta_id: "delta_ch003_c0_anchor"
+chapter: "ch003"
+variant: "C0_current_c_anchor"
+status: proposed
+
+character_states:
+  lin_yan:
+    position: advanced_candidate_with_mark
+    final_rank: 2_of_cohort
+    advancement_result: "non-clean advancement — passed but relationship debt now visible and irreversible"
+    gate_03_choice_presented: "two options: (1) admit withholding, keep rank 3, Su Tang advances; (2) convert withholding to tactical bonus, rank 1, Su Tang drops to 3"
+    tactic_used: "chose option 1 — admitted withholding, sacrificed own advancement for Su Tang"
+    stated_reason: "didn't want to use the escape route she left him to step on her"
+    outcome_override: "Su Tang self-reported her penciled note as non-compliant info exchange, deducting her own score"
+    final_position: "rank 2, advanced — but only because Su Tang sacrificed herself"
+    cost_visible: "he knows she lied about the note being non-compliant; she took a fault that wasn't hers"
+    emotional_state: "holding her pencil, standing on track alone, watching sunset"
+    next_friction: "relationship debt transformed — now he owes her more than just an unsaid message"
+    irreversible_mark: "he carries knowledge that she self-sabotaged to save him; this cannot be undone"
+
+  su_tang:
+    position: eliminated_ally
+    final_rank: 3_of_cohort
+    advancement_result: "eliminated by self-reported deduction"
+    action: "reported own penciled note as non-compliant information exchange, deducting gate_01 tactical bonus"
+    truth: "note was a genuine supportive gesture, not actually non-compliant — she took a fault she didn't commit"
+    final_words_to_lin_yan: "'Next time if there's something to say, say it. Then make your choice.'"
+    final_visible_state: "walked away without looking back, no tears, no anger, no relief — nothing extra"
+    cost: "lost advancement to preserve Lin Yan's position after he tried to sacrifice for her"
+
+  zhao_rui:
+    position: top_ranked_competitor
+    final_rank: 1_of_cohort
+    advancement_result: "clean advancement, first place"
+    final_dialogue: "'Congratulations' to Lin Yan"
+    note: "unaffected by the exchange between Lin Yan and Su Tang"
+
+  shen_lead:
+    position: assessment_authority
+    action: "administered gate_03 binary choice, recorded scores, accepted Su Tang's self-report"
+    final_output: "official ranking: Zhao Rui 1, Lin Yan 2, Su Tang 3"
+
+relationship_states:
+  lin_yan_su_tang:
+    trust_gap: transformed_into_visible_debt
+    debt_type: "now asymmetrical — she sacrificed advancement for him after he tried to sacrifice for her"
+    next_friction: "relationship continues but now carries unresolved weight of her self-sacrifice and his original silence"
+    incomplete_closure: "she gave him a rule ('say it before choosing') but didn't forgive or reconcile"
+    reader_question_remains: "which signal was misread? He misread her patience as ignorance, she misread his silence as distrust. What will the withheld truth cost? Her advancement and a crack that will follow them forward."
+
+gate_progress:
+  gate_01: passed
+  gate_02: survived_with_cost
+  gate_03: passed_with_irreversible_mark
+
+reader_state:
+  ending_type: "non-clean advancement"
+  incomplete_question: "reader knows Su Tang's self-report may have been a lie, but no one in-world will investigate"
+  next_friction_seeded: "Lin Yan carries her pencil; their path forward starts from a crack, not from zero"

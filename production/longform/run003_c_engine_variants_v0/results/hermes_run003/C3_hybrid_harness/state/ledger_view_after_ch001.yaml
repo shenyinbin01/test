@@ -1,0 +1,41 @@
+chapter: ch001
+variant: C3_hybrid_harness
+ledger_type: preview_from_proposed_delta
+relationship_ledger:
+  LinYan_to_SuTang:
+    debt_incurred: 1
+    debt_nature: "Withheld informal signal that could have aided joint preparation"
+    repayment_status: outstanding
+    interest_accruing: "Su Tang's unasked third question creates compounding silence"
+  SuTang_to_LinYan:
+    debt_incurred: 0
+    debt_nature: none
+    repayment_status: n/a
+    note: "Su Tang has incurred no debt; her misread is a loss not a debt"
+trust_ledger:
+  mutual_trust_before_ch001: 100 (assumed baseline)
+  mutual_trust_after_ch001: 85 (estimated, Lin Yan unaware of drop)
+  LinYan_perception: "Believes trust is intact; Su Tang accepted his answer"
+  SuTang_perception: "Trust questioned; she sensed withholding"
+  reader_perception: "Trust gap visible; Su Tang's unease clearer than Lin Yan realizes"
+information_ledger:
+  formal_information:
+    - "Three-gate assessment notice delivered by Shen Lead"
+    - "Gate_01 described as testing information discrimination"
+  informal_information:
+    - "Zhou Yan's corridor whisper: test is about what you trust, not right/wrong"
+    - "Status: held by Lin Yan, withheld from Su Tang"
+  information_asymmetry: "Lin Yan has 2 pieces; Su Tang has 1"
+position_ledger:
+  LinYan: "Entering gate_01 with information advantage but relationship cost"
+  SuTang: "Entering gate_01 with less information but no debt"
+  ZhaoRui: "Entering gate_01; observed Lin Yan-Su Tang interaction; filed as potential leverage"
+  ShenLead: "Assessment authority; delivered notice with controlled ambiguity"
+risk_ledger:
+  active_risks:
+    - "Su Tang may discover withholding independently"
+    - "Gate_01 may require coordination that silence prevents"
+    - "Zhao Rui's observation may become actionable"
+  dormant_risks:
+    - "Informal signal may be incomplete or misleading"
+    - "Withholding may compound across subsequent gates"

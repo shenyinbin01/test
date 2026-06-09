@@ -1,0 +1,38 @@
+chapter: ch002
+variant: C3_hybrid_harness
+narrative_mode: third_person_limited
+focal_character: 林延 (Lin Yan)
+narrative_distance: |
+  Close third person, consistent with ch001. The prose stays in Lin Yan's
+  perceptual field but the gap between his perception and the reader's
+  inference widens. The reader is now ahead of the protagonist: the reader
+  can interpret Zhao Rui's probe and Su Tang's withdrawal more accurately
+  than Lin Yan can.
+stylistic_registers:
+  primary: |
+    Naturalistic Chinese webnovel prose, with a subtle shift toward a slightly
+    more pressurized register. Sentences are shorter when Lin Yan struggles,
+    longer when he observes others moving easily. Physical detail carries
+    emotional weight: the sound of Su Tang's footsteps stopping, the texture
+    of the assessment materials under Lin Yan's fingers.
+  dialogue: |
+    Dialogue is even more constrained than ch001. Su Tang speaks one mirrored
+    line. Zhao Rui speaks one probe. Lin Yan speaks mostly to himself or to
+    the gate mechanism. Silence dominates.
+what_is_visible_to_reader: |
+  - Lin Yan's physical struggle with gate_02
+  - Su Tang's efficient passage and subsequent withdrawal
+  - Zhao Rui's corridor remark (exact words audible)
+  - The assessor's silent observation
+  - Gate_02's physical environment
+what_is_hidden_from_reader: |
+  - The full scope of what Zhao Rui knows (deliberate ambiguity)
+  - Su Tang's interior reasoning (shown only through behavior)
+  - Whether the rumor was truly common knowledge or Zhao Rui is bluffing
+  - Lin Yan's emotional self-labeling
+prohibited_elements:
+  - "他心里想"
+  - "他感到恐惧"
+  - "她明白了"
+  - "state_delta, ledger, agency_choice, event_log, YAML, Markdown engineering"
+  - "any meta-discourse about writing technique or assessment"

@@ -1,0 +1,55 @@
+chapter: "002"
+character_pressure_packet:
+  lin_yan:
+    desire_tension:
+      public_want: "Pass gate_02"
+      private_want: "Prove self-sufficiency without ally debt"
+      conflict: >
+        The informal signal from gate_01 has lost relevance — gate_02 requires
+        live coordination. But withholding it has cost Su Tang's trust, and
+        now he must coordinate with someone who no longer fully reads him.
+    fear_activation:
+      primary_fear: "Being seen as someone who survives by borrowing trust"
+      trigger: >
+        Su Tang coordinates with formal precision but no personal warmth.
+        She is performing partnership without offering it.
+      response: "Lin Yan does not explain. He improvises alone."
+    shame_surface:
+      source: "Realizing the informal signal was likely a test, not a gift"
+      behavior: >
+        A flush when Zhao Rui mentions "some people got early hints."
+        Lin Yan doesn't know if Zhao Rui means him.
+    misbelief_drive:
+      belief: "Silence is safer than letting ally worry"
+      how_it_manifests: >
+        Even now, as the cost becomes visible, Lin Yan doubles down —
+        he has no framework for reversing silence without confession.
+    agency_anchor:
+      decision: "Improvise a coordination tactic without Su Tang's full input."
+      cost_visible: "Su Tang completes her part but stops looking at him."
+      cost_hidden: "Lin Yan has now used an unshared channel twice; pattern locks."
+  su_tang:
+    desire_tension:
+      public_want: "Pass gate_02"
+      private_want: "Know if she's partner or convenience"
+      conflict: >
+        She wants to be wrong about Lin Yan. But his choices suggest otherwise.
+    misread_evolution:
+      original_misread: "He doesn't trust her."
+      new_evidence: "He acts without consulting her despite operational need."
+      reinforced_conclusion: "He's working a separate channel."
+      accuracy: "Correct about the channel, wrong about the motive."
+    agency_anchor:
+      decision: "Complete her role with professional distance."
+      cost: "The warmth leaves the partnership. It may not return easily."
+  zhao_rui:
+    desire_tension:
+      public_want: "Outperform Lin Yan"
+      private_want: "Identify what info advantage Lin Yan might have"
+    role_in_scene: >
+      Applies counterparty pressure during gate_02. Drops a reference to
+      "early hints" that neither confirms nor denies his own access. Tests
+      whether Lin Yan or Su Tang reacts.
+    agency_anchor:
+      decision: "Probe without revealing own position."
+      effect: "Su Tang notices Lin Yan's micro-reaction; misread deepens."

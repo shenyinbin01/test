@@ -1,0 +1,46 @@
+chapter: "001"
+scene_pressure_packet:
+  setting: >
+    A modest conference room in the local organization building. Afternoon light
+    through dusty blinds. Shen Lead stands at the head of a long table; candidates
+    scattered around it. The air smells of old paper and faint tea.
+  pressure_sources:
+    institutional:
+      type: "Formal assessment announcement"
+      weight: "high"
+      effect: >
+        Everyone in the room knows these three gates determine their trajectory
+        for years. The notice is public and impersonal — no one gets special treatment
+        on the record.
+    informational:
+      type: "Informal signal arriving through side channel"
+      weight: "high"
+      effect: >
+        Lin Yan receives a brief message after the meeting — a former senior
+        mentions a pattern in gate_01 evaluation criteria that the formal notice
+        doesn't cover. The senior doesn't explain how they know. Lin Yan cannot
+        verify.
+    relational:
+      type: "Su Tang's expectation of information-sharing"
+      weight: "medium"
+      effect: >
+        Su Tang walks with Lin Yan after the meeting, voice casual: "Let's go
+        over the notice together tonight." Her tone is light; her implication is
+        partnership. Lin Yan agrees — without volunteering what he just learned.
+  pressure_escalation_map:
+    - moment: "Formal notice delivered"
+      pressure_level: "baseline"
+    - moment: "Informal signal arrives"
+      pressure_level: "elevated — internal conflict"
+    - moment: "Su Tang proposes collaboration"
+      pressure_level: "peak — Lin Yan must choose in real time"
+    - moment: "Lin Yan withholds"
+      pressure_level: "sustained — choice made, cost unpaid"
+  decompression_points:
+    - "Sensory grounding: the feel of paper, the taste of cooling tea"
+    - "Su Tang's unreadable expression — reader gets to interpret"
+    - "A moment of mundane relief: a phone buzz, a hallway encounter"
+  reader_inference_gap:
+    prompt: "Who sent the informal signal, and why?"
+    withheld: "The senior's identity and motive"
+    provided: "The signal's content and Lin Yan's reaction"

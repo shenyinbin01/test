@@ -1,0 +1,58 @@
+# State Delta — Chapter 001 (Enter Gate 01)
+# Status: proposed
+
+delta_id: "ch001_gate01_entry"
+status: proposed
+chapter: 1
+
+character_states:
+  lin_yan:
+    position: at_workstation_after_gate01_notice
+    emotional_state: internal_conflict_unexpressed
+    tactic_chosen: silent_digestion_formal_path
+    tactic_rejected: share_informal_signal_with_ally
+    fear_active: being_seen_as_trust_borrower
+    shame_active: considered_using_informal_signal
+    trust_gap_seeded: true
+    relationships:
+      su_tang:
+        trust_level: superficially_intact_actually_fraying
+        debt_layer: +1 (unspoken)
+        last_interaction: deflection_in_break_room
+      zhao_rui:
+        info_asymmetry: zhao_rui_knows_lin_yan_choice
+        threat_level: passive_observer_escalating
+
+  su_tang:
+    position: cafeteria_after_learning_lin_yan_choice
+    emotional_state: hurt_confused_withdrawing
+    private_want_threatened: partner_status_unconfirmed
+    misread_active: lin_yan_silence_equals_distrust
+    action_taken: did_not_confront_waited_for_message
+    relationships:
+      lin_yan:
+        trust_gap_aware: partial (knows he didn't share, doesn't know why)
+        waiting_for: outreach_from_lin_yan
+
+  zhao_rui:
+    position: monitoring_from_distance
+    info_advantage: knows_both_sides_signal_content
+    tactic: reveal_lin_yan_choice_to_su_tang_without_context
+    objective_advanced: competitor_ranking_threat_managed
+
+  shen_lead:
+    position: observing_gate01_outcomes
+    assessment_note: path_choice_noted
+
+world_state:
+  gate: 1 (information_discrimination)
+  assessment_phase: in_progress
+  formal_notice: posted_and_read
+  informal_signal: received_by_lin_yan_and_concealed
+  ally_expectation: su_tang_expected_reciprocity
+  trust_gap_seed: planted (lin_yan_silence_+_zhao_rui_revelation)
+
+reader_state:
+  question_seeded: "What would have happened if Lin Yan shared the signal?"
+  knowledge_ahead_of_protagonist: su_tang_is_waiting_in_cafeteria
+  inference_room: why_lin_yan_chose_silence_over_vulnerability

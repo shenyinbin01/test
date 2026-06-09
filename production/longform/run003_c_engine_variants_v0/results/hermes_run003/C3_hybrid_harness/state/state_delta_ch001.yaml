@@ -1,0 +1,48 @@
+chapter: ch001
+variant: C3_hybrid_harness
+status: proposed
+state_delta:
+  relationship_debt:
+    initial: 0
+    after_ch001: 1
+    description: >
+      Lin Yan withholds informal signal from Su Tang. Trust gap seed planted.
+      Su Tang registers the deflection but does not confront.
+  trust_gap:
+    type: informational_asymmetry
+    holder: Lin Yan
+    withheld_from: Su Tang
+    content: "Informal rumor about gate_01 testing information discrimination over correctness"
+    visibility: "Su Tang senses gap but cannot name it"
+  character_positions:
+    Lin Yan:
+      gate_status: entered_gate_01
+      information_advantage: informal_signal_acquired
+      relationship_state: trust_gap_created_by_withholding
+      internal_cost: shame_not_admitted
+    Su Tang:
+      gate_status: entered_gate_01
+      information_advantage: formal_notice_only
+      relationship_state: misread_begins
+      internal_cost: trust_doubt_seeded
+    Zhao Rui:
+      gate_status: entered_gate_01
+      information_advantage: observed_LinYan_SuTang_interaction
+      relationship_state: neutral_observer
+    Shen Lead:
+      role: delivered_formal_notice
+      notable_action: ambiguous_pause_after_discriminate
+  reader_question_status:
+    question: "Which signal is being misread, and what will the withheld truth cost?"
+    planted: true
+    partial_answer: none_yet
+  event_log:
+    - "15:00 - Shen Lead delivers formal three-gate assessment notice"
+    - "15:05 - Zhou Yan whispers informal signal to Lin Yan in corridor"
+    - "15:10 - Su Tang waits in common area, has annotated notice with red pen"
+    - "15:12 - Lin Yan deflects Su Tang's direct question about Shen Lead's intent"
+    - "15:15 - Su Tang asks follow-up: 'What do you think Shen Lead really meant?'"
+    - "15:16 - Lin Yan responds: 'We'll prepare based on what the notice says'"
+    - "15:17 - Su Tang closes file, pauses, leaves without asking third question"
+    - "15:20 - Lin Yan rereads notice alone, notes unusual phrasing"
+    - "End - Trust gap seed planted, reader question seeded"

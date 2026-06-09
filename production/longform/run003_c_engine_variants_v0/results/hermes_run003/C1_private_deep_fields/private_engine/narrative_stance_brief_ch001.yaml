@@ -1,0 +1,22 @@
+chapter: "001"
+narrative_stance_brief:
+  pov: "Close third, Lin Yan"
+  narrative_distance: "intimate — reader shares Lin Yan's sensory field and
+    internal flickers but not his full reasoning"
+  narrator_knowledge: >
+    Limited to what Lin Yan perceives, plus one degree of dramatic irony:
+    the narrator occasionally shows Su Tang's expression in a way that Lin Yan
+    notices but does not fully process. Reader may process more than character.
+  tone_register:
+    baseline: "Clean, slightly restrained contemporary Chinese webnovel prose"
+    pressure_moments: "Sensory compression — shorter sentences, physical detail"
+    decompression_moments: "Slightly looser, more atmospheric"
+  prose_constraints:
+    - "No internal monologue explaining the signal's meaning."
+    - "No character states their fear or shame explicitly."
+    - "Show through behavior: hesitation, averted gaze, half-sentences."
+    - "Avoid all engineering/meta language."
+  anti_technique:
+    - "No 'Lin Yan felt afraid because...' — show the fear in his body."
+    - "No exposition dump about the assessment system."
+    - "No omniscient explanation of the informal signal's truth."

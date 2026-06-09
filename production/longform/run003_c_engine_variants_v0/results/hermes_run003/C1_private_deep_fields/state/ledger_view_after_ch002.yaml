@@ -1,0 +1,18 @@
+ledger_type: preview_from_proposed_delta
+chapter: "002"
+ledger_preview:
+  relationship_debt_balance:
+    lin_yan_to_su_tang: 2
+    su_tang_to_lin_yan: 0
+    note: "Second debt: Lin Yan chose Zhao Rui's data over Su Tang's during coordination crunch"
+  information_asymmetry:
+    lin_yan_knows_not_shared: "informal signal from 老周 + inability to explain hesitation"
+    su_tang_now_believes: "Lin Yan operates a separate channel (accurate) and excludes her (partially inaccurate)"
+    zhao_rui_suspects: "Lin Yan received informal signal"
+  trust_ledger:
+    su_tang_trust_in_lin_yan: "actively decreasing — shifted to professional assessment mode"
+    lin_yan_trust_in_self: "under strain — knows cost is accumulating but cannot reverse without confession"
+  future_liability:
+    - "2% deviation now in institutional record"
+    - "Su Tang's read is now firm; reversing it requires evidence, not words"
+    - "Zhao Rui has observed enough to use as future leverage"

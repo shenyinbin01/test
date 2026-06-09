@@ -1,0 +1,66 @@
+chapter: ch003
+variant: C3_hybrid_harness
+scene_id: "gate_03_final_assessment"
+scene_objective: |
+  Lin Yan must pass gate_03 — the final assessment that tests whether the
+  candidate can preserve advancement while paying a visible cost. The gate
+  requires a demonstration of accountability: the assessor asks a direct
+  question about the candidate's conduct across all three gates.
+scene_obstacle: |
+  Dual obstacle: (1) Lin Yan must navigate the final assessment while carrying
+  the accumulated costs of ch001 (trust gap) and ch002 (relationship fracture,
+  positional weakening). (2) He must pay a visible cost that satisfies the
+  gate's requirement — but doing so publicly confirms to Su Tang, Zhao Rui,
+  and Shen Lead that his earlier silence was a choice, not an oversight.
+protagonist_tactic: |
+  Lin Yan's flawed but understandable tactic: the partial confession. He tells
+  Su Tang the factual truth about the rumor before the assessment begins,
+  framing it as a tactical mistake rather than a shame-driven withholding.
+  During the gate, he volunteers the admission to Shen Lead. This satisfies
+  the cost requirement and partially repairs the working relationship with
+  Su Tang, but leaves the emotional wound untreated.
+counter_tactic_1: |
+  Su Tang's counter-tactic: professional acceptance without personal
+  reconciliation. She accepts the factual information — it helps her navigate
+  gate_03 — but does not offer the emotional response Lin Yan hoped for (he did
+  not consciously hope, but the reader can see his body language searching for
+  warmth that does not come). Her nod is acknowledgment; her silence is the
+  new boundary.
+counter_tactic_2: |
+  The gate itself is a counter-tactic: Shen Lead's direct question forces Lin
+  Yan to either lie (impossible under assessment conditions) or volunteer the
+  admission. The gate is designed to extract visible cost. Lin Yan's admission
+  is not courage — it is the minimum the gate will accept.
+turn_point: |
+  The turn comes when Lin Yan finishes his admission and looks at Su Tang,
+  expecting — what? He cannot name it. She meets his eyes briefly, then looks
+  at Shen Lead. The assessment continues. Lin Yan receives the message without
+  words: the functional partnership is restored, but the personal trust is not.
+irreversible_cost: |
+  The advancement is non-clean. Lin Yan passes but with a notation on his
+  record. Su Tang passes without notation and with a higher effective standing.
+  Zhao Rui ranks above both. The relationship debt crystallizes: Lin Yan and
+  Su Tang will continue working together, but the warmth that existed before
+  gate_01 is gone. The reader question remains partially open — the withheld
+  emotional truth will become the next friction.
+scene_heat_verification:
+  has_objective: true
+  has_obstacle: true
+  has_tactic: true
+  has_counter_tactic: true
+  has_turn: true
+  has_irreversible_cost: true
+craft_exemplar_applied: |
+  character_pressure principle: Lin Yan chooses the partial confession (flawed)
+  over the full confession (clean) because the full confession would expose the
+  shame that drove the original withholding. His behavior shows the rejected
+  option — he hesitates before Su Tang, and the words he does not say are as
+  visible as the words he does.
+  scene_heat principle: The final gate's design (direct question forcing cost)
+  is the structural counter-tactic. Lin Yan's tactic (partial confession)
+  collides with Su Tang's counter-tactic (professional distance) and the
+  gate's counter-tactic (enforced visibility). The turn is emotional — a
+  glance, not an explanation.
+  reader_decompression principle: The reader is not told what Lin Yan hoped
+  Su Tang would do after his admission. The gap is left — reader sees his body
+  language and Su Tang's response, and must infer the hope he cannot name.

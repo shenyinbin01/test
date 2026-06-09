@@ -1,0 +1,57 @@
+# State Delta — Chapter 002 (Survive Gate 02)
+# Status: proposed
+
+delta_id: "ch002_gate02_coordination"
+status: proposed
+chapter: 2
+
+character_states:
+  lin_yan:
+    position: at_workstation_after_gate02_assignment
+    emotional_state: regret_compounding_impotence
+    old_tactic: silent_digestion (now_broken_cannot_reuse)
+    new_tactic_attempted: belated_explanation (failed)
+    cost_realization: trust_loss_exceeds_score_penalty
+    relationships:
+      su_tang:
+        trust_level: damaged (su_tang_completed_framework_alone)
+        debt_layer: +2 (original_trust_debt + exposed_concealment)
+        communication_status: su_tang_replied_不需要
+      zhao_rui:
+        threat_realized: zhao_rui_exposed_concealed_signal
+        tactic_effectiveness: zhao_rui_succeeded_in_driving_wedge
+
+  su_tang:
+    position: at_workstation_after_sending_framework
+    emotional_state: armored_but_still_protective
+    tactic: self_protective_completion (solo framework, no decision spaces)
+    hidden_cost: absorbing_imbalance_penalty_for_lin_yan
+    misread_resolved: now_knows_lin_yan_had_signal_and_concealed_it
+    relationships:
+      lin_yan:
+        trust_status: functional_not_emotional (framework sent, but no collaboration)
+        internal_conflict: protecting_him_while_withdrawing
+
+  zhao_rui:
+    position: post_exposure_observing
+    info_advantage: partially_spent (revealed lin_yan's signal to su_tang)
+    objective: keeping_pressure_on_competitor
+    next_move: unknown
+
+  shen_lead:
+    position: monitoring_gate02_coordination
+    rubric_noted: imbalance_penalty_present_in_scoring
+
+world_state:
+  gate: 2 (strategy_coordination)
+  assessment_phase: in_progress
+  tactic_reuse: impossible (silence tactic now exposed and damaging)
+  ally_misread: resolved_for_su_tang_not_for_lin_yan
+  counterparty_pressure: zhao_rui_applied_via_info_revelation
+  partial_info_test: scoring_rubric_imbalance_penalty_discovered_by_lin_yan
+  cost_worsened: trust_damage > score_damage
+
+reader_state:
+  knows_before_character: su_tang_is_absorbing_penalty_to_protect_lin_yan
+  question_evolving: "Can Lin Yan learn to speak before he loses her completely?"
+  inference_room: why_su_tang_left_extra_comma_in_framework

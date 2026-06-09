@@ -1,0 +1,53 @@
+# State Delta — Chapter 003 (Secure Advancement)
+# Status: proposed
+
+delta_id: "ch003_gate03_final_assessment"
+status: proposed
+chapter: 3
+
+character_states:
+  lin_yan:
+    position: post_advancement_at_workstation
+    emotional_state: sober_relief_with_residual_tension
+    advancement_result: passed_with_archive_record
+    tactic_chosen: option_3 (full_promotion_with_su_tang_signature)
+    tactic_quality: flawed_but_communicative (finally_spoke_before_acting)
+    behavior_pattern_diagnosed: collaborative_trust_deficiency
+    relationships:
+      su_tang:
+        trust_level: partially_repaired (she_signed_and_left_note)
+        debt_layer: +3 (original_trust + concealment_exposure + signature_debt)
+        next_friction_seeded: archive_record_raises_next_evaluation_threshold
+        communication_breakthrough: first_proactive_message_sent_and_acknowledged
+      zhao_rui:
+        threat_status: neutralized_for_this_cycle
+        info_advantage: irrelevant_post_advancement
+
+  su_tang:
+    position: "post_signature_off_screen"
+    emotional_state: acknowledged_but_cautious
+    action: "signed_confirmation_plus_personal_note"
+    metric_used: "did_he_learn_to_speak"
+    last_word: "好_ambiguous_acceptance_warning_or_hope"
+    relationships:
+      lin_yan:
+        stance: "conditional_openness_door_not_closed_not_wide_open"
+
+  shen_lead:
+    position: delivered_final_assessment_result
+    assessment_complete: true
+    archive_record: collaborative_trust_deficiency_3_years
+    next_cycle_note: collaboration_must_improve_substantially
+
+world_state:
+  gate: 3 (final_assessment)
+  assessment_phase: complete
+  advancement: non_clean (passed with permanent record)
+  visible_cost: archive_deficiency_record + elevated_next_threshold
+  relationship_debt: compounded (three_layers now)
+  next_arc_seed: next_evaluation_collaboration_improvement_required
+
+reader_state:
+  question_incomplete: "Was the advancement worth the 3-year record? Will he change?"
+  thematic_resolution: non_clean_advancement_better_than_clean_stasis
+  ambiguity_preserved: su_tang's_好_is_deliberately_multivalent

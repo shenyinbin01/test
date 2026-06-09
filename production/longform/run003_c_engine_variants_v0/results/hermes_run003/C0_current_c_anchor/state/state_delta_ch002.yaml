@@ -1,0 +1,59 @@
+# state_delta_ch002.yaml
+# status: proposed
+# Records what actually happened in chapter 002 prose.
+
+delta_id: "delta_ch002_c0_anchor"
+chapter: "ch002"
+variant: "C0_current_c_anchor"
+status: proposed
+
+character_states:
+  lin_yan:
+    position: advancement_candidate
+    current_gate: gate_02_survived
+    gate_01_result: rank_4_of_cohort
+    prior_tactic_blocked: "silence/withholding cannot be reused per system rule"
+    tactic_used: "direct answer about formal channel but still incomplete — omitted why he stayed formal"
+    new_information_received:
+      - "system displayed A-line priority channel hint only to him"
+    information_shared_with_ally: false
+    ally_test_result: "Su Tang revealed she knew about his withholding all along"
+    cost_incurred:
+      - "coordination penalty: minus 3 points for B-line conflict"
+      - "missed optimal strategy bonus by choosing blank C-line"
+    realized_after: "Su Tang had chosen A-line using his own ID verification code, waiting for him to share"
+    emotional_state: "dry throat, sense of accumulating debt"
+
+  su_tang:
+    position: ally_with_trust_stake
+    gate_01_result: rank_2_of_cohort
+    private_knowledge_revealed: "she overheard Zhao Rui's signal at the same time Lin Yan did"
+    tactic: "tested Lin Yan's willingness to share — had system hint about what Lin Yan's screen showed"
+    action: "chose A-line with Lin Yan's verification code, waiting for him to share gray-bar information"
+    reaction_to_lin_yan_choice: "withdrew, chose silence in return, said 'don't explain yet'"
+    emotional_state: "clean voice with a layer of distance"
+    cost_incurred: "trust erosion deepens; she now mirrors his withholding behavior"
+
+  zhao_rui:
+    position: competitor
+    gate_01_result: rank_1_of_cohort
+    gate_02_action: "completed his coordination round, results unknown"
+    dialogue: "stated gate_02 seemed rough for Lin Yan, noted gate_03 is decisive"
+
+relationship_states:
+  lin_yan_su_tang:
+    trust_gap: widened
+    debt_type: "mutual withholding now — she mirrored his silence"
+    ally_awareness: "confirmed — she knew from the start"
+    new_dynamic: "she chose his advancement path (A-line with his ID) but he didn't share; disappointment now layered with tactical patience"
+    next_friction_seeded: "she left without resolution; gate_03 will inherit this gap"
+
+gate_progress:
+  gate_01: passed
+  gate_02: survived_with_cost
+  gate_03: not_reached
+
+reader_state:
+  reader_learned_before_character: "Su Tang overheard Zhao Rui at the same time — revealed to reader before Lin Yan fully processes it"
+  question_progress: "Which signal is being misread? Lin Yan misread Su Tang's patience as ignorance. What will the withheld truth cost? Coordination penalty and mirrored silence."
+  incomplete_information: "Zhao Rui's full gate_02 strategy unknown; Su Tang's final gate_02 choice not fully disclosed"

@@ -1,0 +1,39 @@
+chapter: ch003
+variant: C3_hybrid_harness
+narrative_mode: third_person_limited
+focal_character: 林延 (Lin Yan)
+narrative_distance: |
+  Close third person, consistent with ch001 and ch002. The gap between reader
+  inference and protagonist awareness is at its widest here. The reader has
+  accumulated knowledge from all three chapters that Lin Yan has not fully
+  processed. The prose tracks his perceptual field but the reader interprets
+  it through a wider lens.
+stylistic_registers:
+  primary: |
+    Naturalistic Chinese webnovel prose. The register shifts slightly toward
+    a more measured, reflective tone in the closing paragraphs — not because
+    the narrator is editorializing, but because Lin Yan's pace slows after
+    the cost is paid. Physical detail remains the carrier of emotional weight.
+  dialogue: |
+    Dialogue is sparse. Lin Yan's partial confession to Su Tang is the chapter's
+    longest speech. Shen Lead speaks in assessment language — neutral and
+    procedural. Su Tang's nod is her only response to the confession; her only
+    words in the chapter are functional, related to the assessment.
+what_is_visible_to_reader: |
+  - Lin Yan's physical actions during gate_03
+  - The partial confession to Su Tang (exact words)
+  - Su Tang's nod and subsequent professional distance
+  - Lin Yan's public admission to Shen Lead
+  - Shen Lead's notation and result announcement
+  - The final positioning of all three candidates
+what_is_hidden_from_reader: |
+  - Lin Yan's emotional self-labeling (never stated)
+  - Su Tang's interior response to the partial confession
+  - Whether Zhao Rui was bluffing (permanent ambiguity)
+  - What Lin Yan unconsciously hoped Su Tang would do
+prohibited_elements:
+  - "他心里想"
+  - "他感到恐惧"
+  - "她明白了"
+  - "state_delta, ledger, agency_choice, event_log, YAML, Markdown engineering"
+  - "any meta-discourse about writing technique or assessment"

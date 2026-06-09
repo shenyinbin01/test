@@ -1,0 +1,24 @@
+chapter: "002"
+narrative_stance_brief:
+  pov: "Close third, alternating between Lin Yan and Su Tang (70/30 split)"
+  narrative_distance: >
+    Lin Yan sections: intimate but slightly more distant than ch001 —
+    reader sees his actions more clearly than he does.
+    Su Tang sections: tight close — reader feels her cooling.
+  narrator_knowledge: >
+    Still limited to character perception, but the alternating POV
+    gives reader a composite view neither character individually holds.
+    The gap between their perceptions IS the dramatic engine.
+  tone_register:
+    baseline: "Clean, slightly more compressed than ch001 — pressure shows in prose rhythm"
+    lin_yan_sections: "Forward-motion, task-oriented, subtly avoidant"
+    su_tang_sections: "Observing, disappointed, professionally armored"
+  prose_constraints:
+    - "No explicit statement of what Su Tang's misread is — show through her behavior."
+    - "No Lin Yan realizing 'I should have told her' — his misbelief holds."
+    - "Zhao Rui's probe must read as casual, not villainous."
+    - "Avoid all engineering/meta language."
+  anti_technique:
+    - "No 'Su Tang felt betrayed' — show her pulling back."
+    - "No Lin Yan narration explaining his strategy."
+    - "No omniscient narration about the informal signal's truth."

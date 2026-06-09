@@ -1,0 +1,28 @@
+chapter: "002"
+status: proposed
+state_delta:
+  trust_gap:
+    from: seeded
+    to: widening
+    detail: >
+      Gate_02 coordination task forces Lin Yan-Su Tang interaction. Su Tang
+      maintains professional distance. Lin Yan's prior withholding compounds:
+      he cannot explain a one-second hesitation without revealing the informal
+      signal. Zhao Rui probes, deepening Su Tang's misread.
+  lin_yan:
+    active_tactic: "individual_improvisation"
+    tactic_constraint: "prior withholding tactic (information arbitrage) useless in coordination task"
+    relationship_debt: +2 (withheld informal signal + chose Zhao Rui's data over Su Tang's)
+    internal_state: "isolated, rationalizing, doubling down on silence"
+    cost_materialized: "operational — substitution caused 2% deviation; relational — Su Tang's distance"
+  su_tang:
+    misread_evolution: "from 'he doesn't trust her' to 'he is working a separate channel'"
+    accuracy: "correct about channel, wrong about motive (protecting, not excluding)"
+    action_taken: "complete task with professional distance; stop looking at him"
+  zhao_rui:
+    active_role: "probed with 'early hints' comment; observed micro-reactions"
+    effect: "Su Tang caught Lin Yan's flinch; misread reinforced"
+  reader_knowledge:
+    new_info: "Zhao Rui knows about informal signals; 老周 sent follow-up 'no need to reply'"
+    advantage_over_characters: "reader suspects signal was a test; Lin Yan does not"
+    question_deepening: "How much longer can Lin Yan sustain silence before something breaks permanently?"

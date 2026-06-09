@@ -1,0 +1,22 @@
+ledger_type: preview_from_proposed_delta
+chapter: "003"
+ledger_preview:
+  relationship_debt_balance:
+    lin_yan_to_su_tang: "carried forward — unresolved"
+    su_tang_to_lin_yan: 0
+    note: "Debt not repaid, not forgiven. It becomes structural friction."
+  information_asymmetry:
+    lin_yan_still_withholding: "informal signal origin and full content"
+    su_tang_now_certain: "Lin Yan withholds; she doesn't know why; stopped asking"
+    institutional_record: "协作维度波动，建议持续观察"
+  trust_ledger:
+    su_tang_trust_in_lin_yan: "functional minimum — enough to complete tasks, not enough for partnership"
+    lin_yan_trust_in_self: "advancement validates competence but not relationship choices"
+  future_liability:
+    - "Institutional flag may affect future gate assignments"
+    - "Pattern of withholding is now behavioral — will recur"
+    - "Su Tang's unasked question is a time bomb in the partnership"
+  open_positions:
+    - "老周's motive unconfirmed"
+    - "Zhao Rui's info advantage unverified"
+    - "Reader question partially open: 'Which signal misread, what will truth cost?'"

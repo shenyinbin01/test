@@ -1,0 +1,45 @@
+chapter: ch002
+variant: C3_hybrid_harness
+decompression_strategy: reader_learns_before_character
+inference_gap_1:
+  label: "The rumor was never secret"
+  reader_knows: |
+    Through Zhao Rui's corridor-talk probe and Su Tang's knowing withdrawal,
+    the reader learns that the informal signal Lin Yan guarded so carefully was
+    circulating more widely than he realized. Zhao Rui's probe confirms this;
+    Su Tang's silence suggests she may have heard it too. The reader now
+    understands something Lin Yan refuses to process: his secret was never as
+    private as he believed.
+  character_knows: |
+    Lin Yan hears Zhao Rui's words but dismisses them as fishing. He cannot
+    afford to believe the rumor was common knowledge — that would mean his
+    withholding from Su Tang was not protective but pointless. His ego rejects
+    this before his mind can examine it.
+  decompression_schedule: |
+    Full decompression deferred to ch003, when Lin Yan must face the cost of
+    having guarded something that was never his alone.
+
+inference_gap_2:
+  label: "Su Tang's decision"
+  reader_knows: |
+    The reader sees Su Tang complete gate_02 without visible difficulty, then
+    stand aside. Her stillness, her mirrored line "你自己可以的," her refusal to
+    gloat — these are not neutrality. They are the behavior of someone who has
+    made a decision about the relationship. The reader can infer injury and
+    withdrawal; Lin Yan only sees that she is not helping.
+  character_knows: |
+    Lin Yan registers her withdrawal as absence, not as a decision. He cannot
+    yet see that she is doing to him what he did to her.
+
+reader_experience_target: |
+  By the end of ch002, the reader should feel the cost escalating. The reader
+  question from ch001 ("which signal is being misread?") now has a partial
+  answer: Su Tang is misreading Lin Yan's silence as permanent exclusion. The
+  second half ("what will the withheld truth cost the relationship?") is now
+  visible in Su Tang's withdrawal — and the reader sees it before Lin Yan does.
+
+craft_exemplar_applied: |
+  reader_decompression principle: Prose does not explain what the reader should
+  think. The gap is left — reader sees Su Tang's decision through her behavior,
+  and sees Zhao Rui's knowledge through his probe, without narration explaining
+  either. The emotional cost is shown, not stated.

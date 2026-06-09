@@ -1,0 +1,53 @@
+chapter: "002"
+scene_pressure_packet:
+  setting: >
+    Gate_02 evaluation room — a smaller space with workstations. Real-time
+    coordination task. Candidates must produce a joint output under time
+    constraint. Shen Lead observes from a side desk; does not intervene.
+    Fluorescent light, no windows, a wall clock with a loud second hand.
+  pressure_sources:
+    operational:
+      type: "Timed coordination task requiring information-sharing"
+      weight: "critical"
+      effect: >
+        The gate_01 tactic — individual information arbitrage — is useless
+        here. This gate demands active partnership. Lin Yan's prior choice
+        to withhold now blocks the very coordination the task requires.
+    relational:
+      type: "Su Tang's professional distance"
+      weight: "high"
+      effect: >
+        Su Tang executes her role with technical precision but no
+        collaboration energy. She answers direct questions; she does not
+        volunteer. Lin Yan feels the temperature drop and cannot address
+        it without acknowledging why.
+    competitive:
+      type: "Zhao Rui's probing"
+      weight: "medium"
+      effect: >
+        Zhao Rui plants a comment about information asymmetry —
+        "some gates favor preparation." He watches for tells.
+        Su Tang catches Lin Yan's split-second freeze.
+    informational:
+      type: "Partial info test"
+      weight: "high"
+      effect: >
+        The task itself distributes incomplete data across candidates.
+        No one can complete it alone. The design forces trust decisions.
+  pressure_escalation_map:
+    - moment: "Task parameters revealed — coordination required"
+      pressure_level: "elevated"
+    - moment: "Su Tang shifts to professional distance"
+      pressure_level: "high"
+    - moment: "Zhao Rui mentions 'early hints'"
+      pressure_level: "very high — misread collision"
+    - moment: "Lin Yan improvises alone"
+      pressure_level: "peak — cost materializes"
+  decompression_points:
+    - "The clock's second hand: a neutral rhythm under high pressure"
+    - "A brief exchange where Su Tang almost softens — then doesn't"
+    - "Reader's dramatic irony: knowing what Lin Yan doesn't"
+  reader_inference_gap:
+    prompt: "What did the informal signal really mean — and who benefits from Lin Yan's silence?"
+    withheld: "Confirmation of signal's origin and purpose"
+    provided: "The operational cost; Su Tang's reaction; Zhao Rui's probe"

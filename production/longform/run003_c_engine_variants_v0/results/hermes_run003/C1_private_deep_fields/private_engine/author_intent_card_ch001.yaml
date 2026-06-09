@@ -1,0 +1,33 @@
+chapter: "001"
+author_intent_card:
+  scene_purpose: >
+    Open the three-gate assessment and seed the trust gap. Lin Yan receives both
+    formal notice and an informal signal. He faces a first choice: share with Su Tang
+    or hold back. His choice — partial withholding — is the imperfect tactic that will
+    compound across gates.
+  reader_experience_target:
+    primary: >
+      Reader senses Lin Yan is concealing something from his closest ally and
+      wonders why. The informal signal is presented as ambiguous — reader cannot
+      tell if it's trap or opportunity.
+    secondary: >
+      Establish Su Tang's expectation of partnership and her sharp perception.
+      Make the reader feel the weight of a small silence.
+  emotional_arc: trust → uncertainty → guarded silence
+  what_must_land:
+    - Formal assessment notice arrives; stakes are real.
+    - Informal signal reaches Lin Yan through a side channel; it is specific enough
+      to be tempting but not proven.
+    - Su Tang expects to share information; Lin Yan does not fully disclose.
+    - A crack opens in the partnership that neither names aloud.
+    - Reader question: "Which signal is being misread?"
+  what_must_avoid:
+    - Explaining the informal signal's origin or truth value.
+    - Lin Yan confessing his withholding to anyone.
+    - Engineering or meta language in prose.
+    - Making Lin Yan unsympathetic.
+  compression_ratio: "3:1"
+  decompression_markers:
+    - Su Tang noticing Lin Yan's hesitation
+    - The formal notice's cold bureaucratic language
+    - Small sensory detail that anchors reader in scene

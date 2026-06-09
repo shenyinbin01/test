@@ -1,0 +1,38 @@
+# ledger_view_after_ch001.yaml
+# ledger_type: preview_from_proposed_delta
+# Preview of what the ledger would show after chapter 001, based on proposed state delta.
+
+ledger_type: preview_from_proposed_delta
+chapter: "ch001"
+variant: "C0_current_c_anchor"
+
+relationship_ledger:
+  lin_yan_su_tang:
+    balance:
+      trust_credits: 0
+      trust_debits: 1
+      description: "Lin Yan withheld informal signal. Su Tang sensed withholding but has not confirmed."
+    active_items:
+      - item: "withheld_informal_signal"
+        origin: "ch001_tea_room_overhear"
+        status: "open"
+        owed_by: lin_yan
+        owed_to: su_tang
+
+information_ledger:
+  known_to_lin_yan_only:
+    - "Zhao Rui mentioned west bridge maintenance ladder as unofficial shortcut"
+  known_to_both:
+    - "formal assessment notice content"
+    - "Su Tang's full case materials"
+  known_to_su_tang_only:
+    - "she left penciled note 'if you have another judgment, tell me'"
+  known_to_reader_not_characters: []
+
+competitive_ledger:
+  gate_01_entry_positions:
+    zhao_rui: "entered with informal signal planted"
+    lin_yan: "entered with withheld signal + formal notice"
+    su_tang: "entered with full materials + expectation of reciprocity"
+
+notes: "preview only — none of these values are finalized. Human evaluation required."

@@ -1,0 +1,29 @@
+chapter: ch002
+variant: C3_hybrid_harness
+author_intent_summary: |
+  Survive gate_02 with the prior tactic no longer usable. The informal signal
+  Lin Yan withheld in ch001 becomes tactically relevant — but in a way that
+  blocks his approach rather than helping him. Su Tang's misread of his silence
+  deepens into withheld cooperation. Zhao Rui applies counterparty pressure.
+  The relationship cost compounds. The reader must learn something about the
+  situation before Lin Yan processes it.
+craft_intentions:
+  - "Show Lin Yan attempting to reuse his information advantage from ch001, only to find the terrain has shifted — the rumor was incomplete or the gate has a layer he did not anticipate."
+  - "Su Tang's counter-tactic: she withholds her own observation in response to his withholding. This creates a mirror wound — she is doing to him what he did to her, but he cannot name it because he cannot admit the original sin."
+  - "Zhao Rui's pressure: he drops a hint that he knows Lin Yan acted on something unofficial. Lin Yan cannot tell if Zhao Rui truly knows or is fishing. This is the partial info test."
+  - "Scene heat: objective (pass gate_02) + obstacle (tactic blocked, ally distant) + counter-tactic (Su Tang withholds, Zhao Rui probes) + turn (partial info test forces reaction) + cost (relationship worsens, self-doubt compounds)."
+reader_decompression_target: |
+  The reader learns — through Su Tang's observable behavior and Zhao Rui's
+  pointed remark — that the informal signal was never as secret as Lin Yan
+  believed. The reader sees this before Lin Yan admits it to himself. By
+  chapter end, the reader understands the shape of the hidden cost better
+  than the protagonist does.
+rejected_clean_option: |
+  Lin Yan could come clean to Su Tang about the withheld rumor, explain his
+  reasoning, and ask for her help. He cannot do this because the shame has
+  now doubled: not only did he need the rumor, but hiding it also failed.
+  Admitting failure would confirm his deepest fear.
+forbidden_technique_check:
+  - "No internal monologue naming emotions"
+  - "No narrator explanation of the mechanism"
+  - "No engineering terminology"

@@ -1,0 +1,48 @@
+chapter: ch002
+variant: C3_hybrid_harness
+ledger_type: preview_from_proposed_delta
+relationship_ledger:
+  LinYan_to_SuTang:
+    debt_incurred: 1 (from ch001)
+    debt_compounded: 1 (ch002 - continued silence blocks repair opportunity)
+    total_debt: 2
+    debt_nature: "Original withholding + failure to address gap when tactically necessary"
+    repayment_status: outstanding_and_growing
+    interest_accruing: "Su Tang now mirroring the exclusion; debt has become structural"
+  SuTang_to_LinYan:
+    debt_incurred: 0 (from ch001 - not debt, misread)
+    new_counter_debt: "Withholding of cooperation in gate_02 (mirror behavior)"
+    note: "Su Tang's withholding is a response to injury, not an originating debt"
+trust_ledger:
+  mutual_trust_before_ch002: 85 (estimated)
+  mutual_trust_after_ch002: 55 (estimated, functional but fractured)
+  LinYan_perception: "Registers her withdrawal as absence, not as a decision about him"
+  SuTang_perception: "His silence confirmed — he does not see her as true partner"
+  reader_perception: "Relationship damage visible; reader ahead of Lin Yan in recognizing cost"
+information_ledger:
+  formal_information:
+    - "Gate_02 task: three encoded options requiring strategy coordination"
+  informal_information:
+    - "Zhou Yan's whisper: proved incomplete — did not decode gate_02 options"
+    - "Zhao Rui's probe: ambiguous — may be knowledge, may be bluff"
+    - "Su Tang's mirrored statement: confirms she noticed ch001 deflection"
+  information_asymmetry:
+    LinYan: "Lost advantage; informal signal blocked; uncertain about Zhao Rui"
+    SuTang: "Independent capability demonstrated; no longer needs Lin Yan's information"
+    ZhaoRui: "Holds ambiguity as weapon; Lin Yan cannot calibrate response"
+position_ledger:
+  LinYan: "Passed gate_02 but weakened — alone, watched, self-doubting"
+  SuTang: "Passed gate_02 efficiently — demonstrated independence"
+  ZhaoRui: "Passed gate_02 — probe deployed, result filed"
+  ShenLead: "Silent observation — all actions recorded"
+risk_ledger:
+  active_risks:
+    - "Gate_03 requires visible cost — Lin Yan must choose what to reveal"
+    - "Zhao Rui's ambiguity persists — will affect final assessment positioning"
+    - "Su Tang likely to maintain professional distance in gate_03"
+  dormant_risks:
+    - "Lin Yan may attempt partial confession rather than full truth"
+    - "Relationship may stabilize at 'professional distance' permanently"
+  realized_risks:
+    - "Informal signal was incomplete — tactic blocked (ch002)"
+    - "Withholding compounded — Su Tang now mirrors exclusion (ch002)"

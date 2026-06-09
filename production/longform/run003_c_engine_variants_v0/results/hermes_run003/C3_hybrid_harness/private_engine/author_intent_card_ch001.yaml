@@ -1,0 +1,27 @@
+chapter: ch001
+variant: C3_hybrid_harness
+author_intent_summary: |
+  Introduce the three-gate assessment as the story's mechanism of pressure.
+  Plant the trust gap seed: Lin Yan receives an informal signal (a whispered
+  rumor about gate_01 having an unspoken trial layer beneath the formal
+  notice) and withholds it from Su Tang. Establish the relationship dynamics —
+  two people who should be partners but are not fully aligned. The reader must
+  feel the protagonist's shame and fear without being told about them. The
+  chapter must end with an unresolved question in the reader's mind about what
+  the silence will cost.
+craft_intentions:
+  - "Show Lin Yan choosing a flawed tactic (withholding) rather than the cleaner option (telling Su Tang), because admitting he considered the rumor would expose his shame: that he is someone who survives by borrowing trust rather than earning it."
+  - "Build scene heat through conflicting objectives: Lin Yan wants to protect his perceived autonomy; Su Tang wants confirmation of partnership. Neither gets what they want cleanly."
+  - "Leave inference room: never state what Lin Yan is hiding. Let the reader see the gap between what Su Tang perceives and what Lin Yan withholds."
+reader_decompression_target: |
+  By chapter end, the reader should feel a question forming: "What is Lin Yan
+  not telling her, and how badly will this backfire?" The reader should sense
+  Su Tang's unease more clearly than Lin Yan does.
+rejected_clean_option: |
+  Lin Yan could tell Su Tang about the rumor immediately. He rejects this
+  because it would expose his private fear — that he is not capable enough to
+  pass alone, and that Su Tang's help would be another debt he cannot repay.
+forbidden_technique_check:
+  - "No explicit character interior monologue naming fear/shame"
+  - "No omniscient narrator explaining the signal"
+  - "No engineering terminology in rendered prose"

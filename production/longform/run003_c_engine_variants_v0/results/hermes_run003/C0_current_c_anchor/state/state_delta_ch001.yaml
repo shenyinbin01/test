@@ -1,0 +1,69 @@
+# state_delta_ch001.yaml
+# status: proposed
+# Records what actually happened in chapter 001 prose.
+
+delta_id: "delta_ch001_c0_anchor"
+chapter: "ch001"
+variant: "C0_current_c_anchor"
+status: proposed
+
+character_states:
+  lin_yan:
+    position: advancement_candidate
+    current_gate: gate_01_entered
+    public_want: "pass three-gate assessment"
+    private_want: "prove he can advance without owing ally more"
+    fear_activated: "being seen as someone who survives by borrowing trust"
+    shame_present: "admitted to self he considered the informal signal"
+    misbelief_active: "silence is safer than letting ally worry"
+    tactic_used: "withheld informal signal from Su Tang"
+    known_information:
+      - formal_assessment_notice_received
+      - zhao_rui_informal_signal_about_west_bridge_maintenance_ladder
+      - su_tang_prepared_full_case_materials
+    information_shared_with_ally:
+      - formal_notice_content
+    information_withheld_from_ally:
+      - zhao_rui_informal_signal
+    trust_gap_planted: true
+    last_internal_state: "uncertain which signal to trust first"
+
+  su_tang:
+    position: ally_with_trust_stake
+    public_want: "pass assessment"
+    private_want: "know if protagonist still treats her as partner"
+    likely_misread: "protagonist's silence = he doesn't trust her"
+    action: "shared all prepared materials, waited for reciprocation"
+    received_from_lin_yan: "formal_notice_confirmation only"
+    sensed_withholding: true
+    last_action: "left penciled note on last page: 'if you have another judgment, tell me'"
+    last_visible_state: "waited, didn't push, left room with unresolved expectation"
+
+  zhao_rui:
+    position: competitor_with_info_advantage
+    public_want: "rank above protagonist"
+    private_want: "make others reveal channels first"
+    action: "leaked informal signal near tea room where Lin Yan could overhear"
+    signal_delivered: true
+    signal_truth_unknown: true
+
+  shen_lead:
+    position: assessment_authority
+    action: "issued formal assessment notice for gate_01"
+
+relationship_states:
+  lin_yan_su_tang:
+    trust_gap: initial
+    debt_type: "information_withholding"
+    ally_awareness: "sensed but unconfirmed"
+    seed_planted: true
+
+gate_progress:
+  gate_01: entered
+  gate_02: not_reached
+  gate_03: not_reached
+
+reader_state:
+  question_seeded: "Which signal is being misread, and what will the withheld truth cost?"
+  knowledge_ahead_of_characters: false
+  incomplete_information: "truth of Zhao Rui's signal unknown"

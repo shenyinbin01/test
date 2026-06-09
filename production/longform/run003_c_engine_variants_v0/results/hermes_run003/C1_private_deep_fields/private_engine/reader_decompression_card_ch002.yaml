@@ -1,0 +1,29 @@
+chapter: "002"
+reader_decompression_card:
+  tension_buildup_summary: >
+    Gate_02 forces a coordination task at the exact moment the partnership
+    is compromised. Reader has partial knowledge advantage — suspects the
+    informal signal was a test — and watches Lin Yan compound his error
+    without realizing it. Su Tang's professional distance is the emotional
+    cost made visible.
+  decompression_strategy:
+    type: "dramatic_irony_breathe"
+    mechanism: >
+      Give reader information slightly ahead of Lin Yan, creating a
+      watching-from-above sensation. Intersperse with sensory anchors —
+      sounds, physical discomfort — that ground the scene without
+      releasing tension.
+  relief_moments:
+    - "The clock tick: steady, indifferent, a rhythm the reader can breathe to."
+    - "Su Tang's almost-softening — a flicker of the old partnership that
+      reader recognizes as real, not yet dead."
+    - "Lin Yan's moment of pure task focus: a brief escape from relational weight."
+  lingering_question_cultivation:
+    question: "How much longer can Lin Yan sustain the silence before it breaks something permanently?"
+    why_it_works: >
+      Reader sees the structural flaw now — the silence is a debt that
+      compounds. The question shifts from 'will it cost?' to 'how much?'
+      This escalates investment without providing resolution.
+  reader_knowledge_advantage:
+    what_reader_suspects: "The informal signal was a planted test, not a gift."
+    what_lin_yan_still_misses: "That his silence is visible to others, not just Su Tang."
