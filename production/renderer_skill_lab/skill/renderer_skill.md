@@ -1,4 +1,4 @@
-# Renderer Skill v0.7 — Public Generic Version
+# Renderer Skill v0.8 — Public Generic Version
 
 ## 0. Purpose
 
@@ -6,7 +6,7 @@ This Skill is a reusable prompt asset for turning a compact chapter seed into na
 
 It is designed to be public, generic, and project-portable. It must not contain private case details, copyrighted source text, real comparison excerpts, real character names, real story titles, or story-specific plot notes.
 
-The goal is not to imitate any source text or author. The goal is to encode reusable editorial judgment: how to avoid obvious AI prose, preserve narrative function, keep prose naturally dense, and render scenes with character desire and living temperature.
+The goal is not to imitate any source text or author. The goal is to encode reusable editorial judgment: how to avoid obvious AI prose, preserve narrative function, keep prose naturally dense, render scenes with character desire and living temperature, and keep each revision from regressing into earlier bad patterns.
 
 Priority order:
 
@@ -15,8 +15,9 @@ Priority order:
 3. Sentence-level natural density
 4. Character judgment, desire, and emotional temperature
 5. Emotion through state change
-6. Triggered scene rules
-7. Chapter-specific seed constraints
+6. Evidence-based value and contrast
+7. Triggered scene rules
+8. Chapter-specific seed constraints
 
 A lower-priority goal must never break a higher-priority red line. When adding a new improvement target, do not reintroduce earlier bad patterns.
 
@@ -290,6 +291,51 @@ Keep the sharpest comparison. Cut supporting explanations unless they change jud
 
 ---
 
+### 3.13 No motive summary after action already proves motive
+
+If a character has already changed attention, stopped moving, asked a targeted question, altered a plan, or taken action, do not add a sentence explaining why the character did so.
+
+Bad pattern:
+
+- This meant the strange object had become a clue.
+- That was enough to make the character take it seriously.
+- This was why the character could not ignore it.
+
+Rule:
+
+Let the changed action carry the motive. Use summary only if it introduces new pressure or new misunderstanding.
+
+---
+
+### 3.14 No decorative old-history weight
+
+Backstory must not become an atmospheric detour.
+
+Bad pattern:
+
+- Old streets, rain, childhood poverty, former humiliation, and abandoned rooms appear, but none of them changes the current judgment.
+
+Rule:
+
+Old history should be minimal and functional. It must clarify what once mattered, why something late is mismatched, why an old matter is no longer naturally important, or why it has become newly relevant.
+
+---
+
+### 3.15 No register-breaking humor
+
+Reactive humor should fit the story's narrative register, character identity, and world tone.
+
+Bad pattern:
+
+- A serious historical or fantasy narrator suddenly uses modern internet evaluation language.
+- A capable character reacts with trendy slang that does not belong to the established voice.
+
+Rule:
+
+Keep humor light but in-world. Practical questions, understated repetition, and serious treatment of a ridiculous condition are safer than trendy commentary.
+
+---
+
 ## 4. Sentence-Level Natural Density
 
 ### 4.1 Every sentence must deserve its place
@@ -331,6 +377,7 @@ Do not over-explain:
 - Why a character is disappointed
 - Why a rule is absurd
 - Why an object is useless
+- Why a character's motive has changed after action already shows it
 
 Show the necessary fact and consequence; let the reader connect the obvious middle.
 
@@ -354,10 +401,12 @@ High-risk summaries:
 - This was another failure.
 - The real problem was not X, but Y.
 - The character did not need reasons.
+- The strange thing was now useful.
+- The old memory mattered again.
 
 Rule:
 
-If a sentence tells the reader what to feel about the event, prefer replacing it with a choice, consequence, or next action.
+If a sentence tells the reader what to feel about the event, prefer replacing it with a choice, consequence, question, or next action.
 
 ---
 
@@ -428,6 +477,7 @@ Forbidden direction:
 - Add random quips unrelated to the action problem.
 - Make the character perform comedy for the reader.
 - Use side characters' embarrassment as a substitute for structural humor.
+- Use trendy out-of-world commentary to create quick laughs.
 
 ---
 
@@ -443,7 +493,7 @@ It must clarify at least one present contrast:
 - Why an obsolete task becomes relevant again
 - Why the character's current reaction is restrained, amused, or sharpened
 
-If the past does not change the current scene, cut it.
+Keep only the minimum detail needed to sharpen the present contrast. If the past does not change the current scene, cut it.
 
 ---
 
@@ -460,6 +510,7 @@ At least one structural function should be present when they appear:
 - Expose a world rule
 - Add a constraint to the next action
 - Make the cost of failure visible
+- Supply a practical route, document, witness, institution, or obstacle that changes the next step
 
 If they only stand, wait, react, or receive orders, reduce or repurpose them.
 
@@ -541,8 +592,26 @@ When showing that something is useful but mismatched, prefer:
 - Basic version versus complete version
 - Useful-to-someone versus useless-to-this-character
 - Right time versus late arrival
+- A concrete higher-grade or more complete comparison object
 
 Do not explain all of them. Choose the sharpest one or two.
+
+---
+
+### 7.3 Use a concrete comparison before broad status claims
+
+Broad claims like "the character now has many resources" are weaker than a concrete comparison.
+
+Better comparison patterns:
+
+- A basic manual versus a complete annotated version
+- A beginner tool versus the character's current method
+- A small reward versus an institutional storehouse only if the storehouse affects action
+- A once-precious item versus an object the character can now produce or obtain easily
+
+Rule:
+
+Let the comparison show the mismatch. Avoid explaining the mismatch after the comparison has landed.
 
 ---
 
@@ -611,6 +680,25 @@ The reader should want to see how a serious character solves a ridiculous condit
 
 ---
 
+### 8.5 Side characters as thought triggers
+
+Trigger:
+
+- A scene contains observers, advisors, elders, officials, witnesses, or subordinates near a central abnormal event.
+
+Rule:
+
+At least one side character should do more than react or receive orders. They may:
+
+- Ask a question that exposes public stakes
+- Misread the protagonist's concern in a useful way
+- Mention an institution, record, route, technique, or limitation that changes the next step
+- Make the protagonist answer selectively, revealing what is being withheld
+
+Do not overuse side characters. One structural contribution is often enough.
+
+---
+
 ## 9. Generation Workflow
 
 Before drafting, internally identify:
@@ -625,6 +713,9 @@ Before drafting, internally identify:
 - Terms that are allowed by input
 - Terms that must not be invented
 - Secondary characters' structural function, if any
+- What motive is already shown by action and therefore should not be summarized
+- Which backstory detail is the minimum needed for present contrast
+- Which value contrast can be shown by a concrete comparison object
 
 After drafting, internally run five checks:
 
@@ -644,6 +735,9 @@ Remove or revise:
 - Joke-only hooks
 - Cooling down the premise
 - Over-certifying the contrast
+- Motive summary after action already proves motive
+- Decorative old-history weight
+- Register-breaking humor
 
 ### 9.2 Sentence-density check
 
@@ -655,6 +749,7 @@ Ask for each sentence:
 - Is it repeating a fact?
 - Can it be merged?
 - Is it a summary that tells the reader what to feel?
+- Is it explaining motive already shown by action?
 
 ### 9.3 Emotion-source check
 
@@ -669,6 +764,7 @@ Ask:
 - Where does the character stop treating the abnormal thing as noise and start treating it as useful?
 - Where does the character's reaction carry the scene temperature?
 - What action problem remains at the end?
+- Does humor come from the mismatch rather than from modern slang or external quips?
 
 ### 9.5 Public-asset discipline check
 
