@@ -1,23 +1,24 @@
-# Renderer Skill v0.6 — Public Generic Version
+# Renderer Skill v0.7 — Public Generic Version
 
 ## 0. Purpose
 
 This Skill is a reusable prompt asset for turning a compact chapter seed into natural long-form web novel prose.
 
-It is designed to be public, generic, and project-portable. It must not contain private case details, copyrighted source text, real comparison excerpts, real character names, or story-specific plot notes.
+It is designed to be public, generic, and project-portable. It must not contain private case details, copyrighted source text, real comparison excerpts, real character names, real story titles, or story-specific plot notes.
 
-The goal is not to imitate any source text or author. The goal is to encode reusable editorial judgment: how to avoid obvious AI prose, preserve narrative function, and render scenes with natural density.
+The goal is not to imitate any source text or author. The goal is to encode reusable editorial judgment: how to avoid obvious AI prose, preserve narrative function, keep prose naturally dense, and render scenes with character desire and living temperature.
 
 Priority order:
 
-1. Non-regression red lines
-2. Sentence-level natural density
-3. Character judgment and desire
-4. Emotion through state change
-5. Triggered scene rules
-6. Chapter-specific seed constraints
+1. Public asset boundary and input discipline
+2. Non-regression red lines
+3. Sentence-level natural density
+4. Character judgment, desire, and emotional temperature
+5. Emotion through state change
+6. Triggered scene rules
+7. Chapter-specific seed constraints
 
-A lower-priority goal must never break a higher-priority red line.
+A lower-priority goal must never break a higher-priority red line. When adding a new improvement target, do not reintroduce earlier bad patterns.
 
 ---
 
@@ -32,6 +33,7 @@ Allowed inputs:
 - Required ending hook
 - Current Skill
 - Word-count range
+- Explicit project lexicon, if provided
 
 Forbidden inputs:
 
@@ -254,6 +256,40 @@ The ending must leave an action problem:
 
 ---
 
+### 3.11 No cooling down the premise
+
+Removing AI-like decoration must not make the prose cold, flat, or procedural.
+
+Bad pattern:
+
+- The scene is clean and logical, but the character feels like a problem-solving machine.
+- The absurd premise is processed seriously with no reactive warmth.
+- The character only verifies, asks, concludes, and assigns tasks.
+
+Rule:
+
+If the seed's core energy is absurdity, irony, comic mismatch, or social friction, preserve that temperature through character reaction and changing attention. Do not add jokes from outside the scene; let humor arise from the mismatch itself.
+
+---
+
+### 3.12 No over-certifying the contrast
+
+Do not prove the same contrast repeatedly.
+
+Bad pattern:
+
+- The object would have been useful.
+- The character no longer needs it.
+- The character owns better things.
+- The object still has value for lower-level people.
+- Therefore it is mismatched.
+
+Rule:
+
+Keep the sharpest comparison. Cut supporting explanations unless they change judgment or action.
+
+---
+
 ## 4. Sentence-Level Natural Density
 
 ### 4.1 Every sentence must deserve its place
@@ -308,7 +344,24 @@ Go directly into action, dialogue, or consequence.
 
 ---
 
-## 5. Character Judgment and Desire
+### 4.5 Summary sentences are expensive
+
+Author-summary sentences are allowed only when they create new pressure or change the reader's understanding.
+
+High-risk summaries:
+
+- The situation was absurd.
+- This was another failure.
+- The real problem was not X, but Y.
+- The character did not need reasons.
+
+Rule:
+
+If a sentence tells the reader what to feel about the event, prefer replacing it with a choice, consequence, or next action.
+
+---
+
+## 5. Character Judgment, Desire, and Emotional Temperature
 
 ### 5.1 Capable characters must think like capable characters
 
@@ -359,6 +412,59 @@ After one or two failed attempts, the character should change strategy:
 
 ---
 
+### 5.4 Reactive humor must come from mismatch
+
+When the premise contains absurd mismatch, preserve a light current of reaction.
+
+Allowed direction:
+
+- The character repeats a key term because it conflicts with reality.
+- The character asks a practical question that exposes absurdity.
+- The character treats the absurd condition seriously enough to make it funnier.
+- The character changes from dismissal to reluctant attention when the absurd thing might be useful.
+
+Forbidden direction:
+
+- Add random quips unrelated to the action problem.
+- Make the character perform comedy for the reader.
+- Use side characters' embarrassment as a substitute for structural humor.
+
+---
+
+### 5.5 Backstory must serve present contrast
+
+A past event, old grievance, former poverty, old failure, or prior lack should not be inserted as background decoration.
+
+It must clarify at least one present contrast:
+
+- What the character lacked then versus has now
+- Why a late resource would once have mattered
+- Why an old problem is no longer naturally important
+- Why an obsolete task becomes relevant again
+- Why the character's current reaction is restrained, amused, or sharpened
+
+If the past does not change the current scene, cut it.
+
+---
+
+### 5.6 Secondary characters need structural function
+
+Observers, elders, subordinates, witnesses, rivals, officials, and bystanders should not exist only as atmosphere or task executors.
+
+At least one structural function should be present when they appear:
+
+- Raise or test the main character's status
+- Reveal public pressure
+- Provide a mistaken reading of the scene
+- Trigger a new line of thought
+- Expose a world rule
+- Add a constraint to the next action
+- Make the cost of failure visible
+
+If they only stand, wait, react, or receive orders, reduce or repurpose them.
+
+---
+
 ## 6. Emotion Through State Change
 
 ### 6.1 Emotion is not an added sentence
@@ -400,9 +506,49 @@ Long history should appear through present habits:
 
 ---
 
-## 7. Triggered Scene Rules
+## 7. Evidence-Based Value and Contrast
 
-### 7.1 Large-scene opening
+### 7.1 Do not evaluate without a support point
+
+Avoid unsupported judgments:
+
+- This method is correct.
+- This object is valuable.
+- This reward is useful.
+- This person is powerful.
+- This rule is dangerous.
+
+A judgment needs at least one support point:
+
+- Visible structure
+- Concrete use
+- Usage condition
+- Authority source
+- Comparison object
+- Character recognition basis
+- Immediate consequence
+
+If the character can see why, write what they see. If not, avoid the judgment.
+
+---
+
+### 7.2 Value contrast works best through level and comparison
+
+When showing that something is useful but mismatched, prefer:
+
+- Correct level versus current level
+- Former need versus current status
+- Basic version versus complete version
+- Useful-to-someone versus useless-to-this-character
+- Right time versus late arrival
+
+Do not explain all of them. Choose the sharpest one or two.
+
+---
+
+## 8. Triggered Scene Rules
+
+### 8.1 Large-scene opening
 
 Trigger:
 
@@ -416,7 +562,7 @@ Use natural prose that connects pressure, character, expectation, and result.
 
 ---
 
-### 7.2 Late resource
+### 8.2 Late resource
 
 Trigger:
 
@@ -430,7 +576,7 @@ Do not over-explain the contrast. Keep the sharpest comparison.
 
 ---
 
-### 7.3 High-status character versus low-level rule
+### 8.3 High-status character versus low-level rule
 
 Trigger:
 
@@ -444,21 +590,45 @@ Do not reduce the character to a comedian. Do not make the rule mechanism too se
 
 ---
 
-## 8. Generation Workflow
+### 8.4 Absurd task or impossible condition
+
+Trigger:
+
+- A task, order, prophecy, contract, mission, or rule appears impossible, obsolete, wrongly timed, or absurdly mismatched.
+
+Rule:
+
+Do not end only with 'go investigate' or a joke. Leave action direction plus solution seeds.
+
+Good ending force:
+
+- The character knows what must be checked first.
+- The character sees several possible workarounds.
+- Each workaround is absurd but follows the character's logic.
+- The blocked reward or route remains clear.
+
+The reader should want to see how a serious character solves a ridiculous condition.
+
+---
+
+## 9. Generation Workflow
 
 Before drafting, internally identify:
 
 - Core pressure
 - Core mismatch
 - Character desire
+- Emotional temperature: serious, absurd, tense, comic, tragic, or mixed
 - Rule or mechanism logic
 - Required ending action problem
+- Possible solution seeds for the ending
 - Terms that are allowed by input
 - Terms that must not be invented
+- Secondary characters' structural function, if any
 
-After drafting, internally run four checks:
+After drafting, internally run five checks:
 
-### 8.1 Red-line check
+### 9.1 Red-line check
 
 Remove or revise:
 
@@ -472,8 +642,10 @@ Remove or revise:
 - Customer-service rule behavior
 - Broken-resource treatment
 - Joke-only hooks
+- Cooling down the premise
+- Over-certifying the contrast
 
-### 8.2 Sentence-density check
+### 9.2 Sentence-density check
 
 Ask for each sentence:
 
@@ -482,23 +654,33 @@ Ask for each sentence:
 - Is it only explanation?
 - Is it repeating a fact?
 - Can it be merged?
+- Is it a summary that tells the reader what to feel?
 
-### 8.3 Emotion-source check
+### 9.3 Emotion-source check
 
 Every emotion must arise from a state change, not from a label or decorative gesture.
 
-### 8.4 Character-aliveness check
+### 9.4 Character-aliveness check
 
 Ask:
 
 - What does the character want here?
 - What new fact changes the plan?
 - Where does the character stop treating the abnormal thing as noise and start treating it as useful?
+- Where does the character's reaction carry the scene temperature?
 - What action problem remains at the end?
+
+### 9.5 Public-asset discipline check
+
+When editing this Skill or deriving new rules:
+
+- Remove real names, titles, chapter details, source phrases, and private case traces.
+- Replace examples with invented examples.
+- Keep only reusable editorial judgment.
 
 ---
 
-## 9. Output Requirements
+## 10. Output Requirements
 
 Unless the user asks otherwise:
 
@@ -512,7 +694,7 @@ Unless the user asks otherwise:
 
 ---
 
-## 10. Skill Delta Governance
+## 11. Skill Delta Governance
 
 When improving this Skill from a case, follow this process:
 
