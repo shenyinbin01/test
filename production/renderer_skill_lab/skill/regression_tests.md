@@ -393,3 +393,111 @@ The contrast is generic and unproven.
 ### Fix direction
 
 Use one concrete comparison object or usage condition to show the mismatch, then stop explaining.
+
+---
+
+## RT-022 Crowded main image
+
+### Bad pattern
+
+```text
+The mountain cracked, three old wards failed, the council raised shields, the soldiers' sleeves burned, the record hall rang, and only then did the protagonist appear at the center.
+```
+
+### Failure
+
+The opening proves scale through supporting details before establishing the main image.
+
+### Fix direction
+
+Show place, pressure, main subject, and how the subject bears the pressure first. Move witnesses and mechanisms later or cut them.
+
+---
+
+## RT-023 Aftermath-only strong entrance
+
+### Bad pattern
+
+```text
+When the storm ended, the hero was still standing there.
+```
+
+### Failure
+
+The pressure is over before the character is shown under it. The entrance is weaker than it should be.
+
+### Fix direction
+
+Show the storm acting on the character and the character's manner of bearing it.
+
+---
+
+## RT-024 Structural side character forcing new lore
+
+### Bad pattern
+
+```text
+To make the advisor useful, the draft invents a national archive, three departments, an old incident, and a special registry not present in the seed.
+```
+
+### Failure
+
+The side character's function is bought by unsupported world expansion.
+
+### Fix direction
+
+Use a simpler scene-based function: a question, a mistaken reading, an immediate constraint, or a known route already justified by input.
+
+---
+
+## RT-025 Premature proceduralization of absurd task
+
+### Bad pattern
+
+```text
+The impossible task appeared. The protagonist immediately assigned offices, registries, clerks, old files, and travel permits.
+```
+
+### Failure
+
+The absurdity is swallowed by administrative workflow before it becomes funny or narratively alive.
+
+### Fix direction
+
+Let the character first test the ridiculous logic and consider workarounds. Procedure may follow later.
+
+---
+
+## RT-026 Clever reply after every mismatch
+
+### Bad pattern
+
+```text
+Every system line is followed by a polished quip from the protagonist.
+```
+
+### Failure
+
+The character becomes a joke delivery machine. The structural contrast is over-written.
+
+### Fix direction
+
+Use restrained reaction: repeat the conflicting term, ask a plain practical question, pause, or change strategy.
+
+---
+
+## RT-027 Proof-style prose
+
+### Bad pattern
+
+```text
+The paragraph proves the disaster is large, proves the protagonist is powerful, proves the witnesses matter, proves the object is useful, and proves the next step is logical.
+```
+
+### Failure
+
+The prose reads like an argument for why the scene works, not like a scene.
+
+### Fix direction
+
+Let story facts land and move. Cut proof layers once the necessary fact is clear.
