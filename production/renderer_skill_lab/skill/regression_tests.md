@@ -303,3 +303,93 @@ The ending has direction but no solution texture.
 ### Fix direction
 
 Leave a few possible workarounds that are absurd but follow the character's logic. The reader should want to see how the serious character solves the ridiculous condition.
+
+---
+
+## RT-017 Motive summary after action proves motive
+
+### Bad pattern
+
+```text
+The strange device mentioned a route outside the realm. He stopped walking and asked three more questions. This meant the device had become a clue he could not ignore.
+```
+
+### Failure
+
+The changed action already proves motive. The final sentence explains what the reader has understood.
+
+### Fix direction
+
+Cut the summary. Let stopping, asking, and changing plan carry the motive.
+
+---
+
+## RT-018 Old-history overweight
+
+### Bad pattern
+
+```text
+He remembered the lane, the rain, the broken roof, the cold meal, the torn shoes, and the mocking voices. None of this changes what he chooses next.
+```
+
+### Failure
+
+The past becomes mood weight instead of present contrast.
+
+### Fix direction
+
+Keep only the detail that explains why the late object or old task matters now.
+
+---
+
+## RT-019 Register-breaking humor
+
+### Bad pattern
+
+```text
+After reading the ancient decree, the general thought the whole thing was cringe.
+```
+
+### Failure
+
+The humor comes from out-of-register modern commentary, not from the scene's mismatch.
+
+### Fix direction
+
+Keep humor in-world: practical questions, restrained irony, or serious handling of an absurd condition.
+
+---
+
+## RT-020 Passive helper versus structural side character
+
+### Bad pattern
+
+```text
+The minister bowed, accepted the order to search the archive, and left.
+```
+
+### Failure
+
+The side character is only a task executor.
+
+### Fix direction
+
+Let the side character add a constraint, institution, document route, mistaken assumption, or factual hook that changes the next step.
+
+---
+
+## RT-021 Vague resource abundance instead of concrete contrast
+
+### Bad pattern
+
+```text
+The reward would have helped once, but now the protagonist had countless better things.
+```
+
+### Failure
+
+The contrast is generic and unproven.
+
+### Fix direction
+
+Use one concrete comparison object or usage condition to show the mismatch, then stop explaining.
