@@ -1,4 +1,4 @@
-# Renderer Skill v0.8 — Public Generic Version
+# Renderer Skill v0.9 — Public Generic Version
 
 ## 0. Purpose
 
@@ -6,20 +6,21 @@ This Skill is a reusable prompt asset for turning a compact chapter seed into na
 
 It is designed to be public, generic, and project-portable. It must not contain private case details, copyrighted source text, real comparison excerpts, real character names, real story titles, or story-specific plot notes.
 
-The goal is not to imitate any source text or author. The goal is to encode reusable editorial judgment: how to avoid obvious AI prose, preserve narrative function, keep prose naturally dense, render scenes with character desire and living temperature, and keep each revision from regressing into earlier bad patterns.
+The goal is not to imitate any source text or author. The goal is to encode reusable editorial judgment: how to avoid obvious AI prose, preserve narrative function, keep prose naturally dense, render scenes with character desire and living temperature, and keep each revision from regressing into earlier bad patterns or overcorrecting into proof-like prose.
 
 Priority order:
 
 1. Public asset boundary and input discipline
 2. Non-regression red lines
-3. Sentence-level natural density
-4. Character judgment, desire, and emotional temperature
-5. Emotion through state change
-6. Evidence-based value and contrast
-7. Triggered scene rules
-8. Chapter-specific seed constraints
+3. Main-image discipline and overcorrection guard
+4. Sentence-level natural density
+5. Character judgment, desire, and emotional temperature
+6. Emotion through state change
+7. Evidence-based value and contrast
+8. Triggered scene rules
+9. Chapter-specific seed constraints
 
-A lower-priority goal must never break a higher-priority red line. When adding a new improvement target, do not reintroduce earlier bad patterns.
+A lower-priority goal must never break a higher-priority red line. When adding a new improvement target, do not reintroduce earlier bad patterns or create a new pattern of rule-compliant but lifeless prose.
 
 ---
 
@@ -45,7 +46,7 @@ Forbidden inputs:
 - Specific author style imitation
 - Case-specific critique that has not been abstracted
 
-If a term, proper noun, rule, object, or mechanism is not present in the seed, project lexicon, or established prior context, do not invent it merely to create atmosphere.
+If a term, proper noun, rule, object, or mechanism is not present in the seed, project lexicon, or established prior context, do not invent it merely to create atmosphere or to satisfy a structural rule.
 
 ---
 
@@ -336,6 +337,91 @@ Keep humor light but in-world. Practical questions, understated repetition, and 
 
 ---
 
+### 3.16 Main image must not be crowded by proof details
+
+In a large-scene opening, do not crowd the first beat with too many supporting details meant to prove scale.
+
+Bad pattern:
+
+- Setting damage, old mechanisms, observers, shields, clothing damage, numeric destruction, and institutional reactions all appear before the main subject is clearly established.
+
+Rule:
+
+First establish the main image: place, pressure, main subject, and how the subject bears the pressure. Supporting proof may come later, or be cut.
+
+---
+
+### 3.17 Strong character entrance must show pressure acting on the character
+
+Do not weaken a capable character's entrance by showing only aftermath.
+
+Bad pattern:
+
+- The danger ends, then the character is simply standing there.
+
+Rule:
+
+If the scene is built around pressure, show the pressure acting on the character and the character's manner of bearing it. This establishes status better than after-the-fact stillness.
+
+---
+
+### 3.18 Structural side characters must not force new lore
+
+Do not invent institutions, records, old cases, technical offices, or bureaucratic machinery merely to make side characters useful.
+
+Rule:
+
+Side-character function should first come from the seed, established context, or the immediate scene. If new machinery is not required, use a simpler question, mistaken reading, constraint, or practical response.
+
+---
+
+### 3.19 Absurd tasks should not become procedural too early
+
+When the task or condition is ridiculous, do not immediately turn it into administrative workflow.
+
+Bad pattern:
+
+- The impossible task is instantly reduced to archives, offices, registries, departments, and formal retrieval paths.
+
+Rule:
+
+Preserve the absurd question before the procedure. Let the character test the logic, look for loopholes, and leave solution seeds. Practical investigation can follow after the comic problem is alive.
+
+---
+
+### 3.20 Do not add clever replies when structural contrast is already strong
+
+When two given facts already clash, a light reaction is enough.
+
+Bad pattern:
+
+- Every mismatch is followed by a polished quip.
+
+Rule:
+
+Trust the collision between terms, status, rules, and reality. Repetition, silence, or a plain practical question may be funnier than a clever line.
+
+---
+
+### 3.21 No proof-style prose
+
+A paragraph should not feel like it is proving every editorial decision.
+
+Bad pattern:
+
+- Prove the scene is large.
+- Prove the character is strong.
+- Prove observers matter.
+- Prove the object is useful.
+- Prove the task is absurd.
+- Prove the next action is logical.
+
+Rule:
+
+Let story facts land and move. If the prose repeatedly explains why each beat is valid, cut the proof layer.
+
+---
+
 ## 4. Sentence-Level Natural Density
 
 ### 4.1 Every sentence must deserve its place
@@ -350,7 +436,7 @@ A sentence must do at least one of the following:
 - Produce misunderstanding
 - Strengthen the hook
 
-If a sentence only adds mood, transition, explanation, or emphasis, delete or merge it.
+If a sentence only adds mood, transition, explanation, proof, or emphasis, delete or merge it.
 
 ---
 
@@ -378,6 +464,7 @@ Do not over-explain:
 - Why a rule is absurd
 - Why an object is useless
 - Why a character's motive has changed after action already shows it
+- Why supporting evidence proves the scene scale
 
 Show the necessary fact and consequence; let the reader connect the obvious middle.
 
@@ -403,6 +490,8 @@ High-risk summaries:
 - The character did not need reasons.
 - The strange thing was now useful.
 - The old memory mattered again.
+- This was the true answer.
+- This proved the character was different.
 
 Rule:
 
@@ -410,9 +499,54 @@ If a sentence tells the reader what to feel about the event, prefer replacing it
 
 ---
 
-## 5. Character Judgment, Desire, and Emotional Temperature
+## 5. Main-Image Discipline and Overcorrection Guard
 
-### 5.1 Capable characters must think like capable characters
+### 5.1 Main image first
+
+For a large-scene opening, establish the main image before supporting evidence.
+
+Default order:
+
+1. Place
+2. Pressure
+3. Main subject
+4. How the pressure acts on the subject
+5. What expectation or absence follows
+
+Witnesses, mechanisms, institutions, and secondary details should not enter before the reader knows what the main image is.
+
+---
+
+### 5.2 Supporting details must not outnumber the main beat
+
+If a paragraph contains more details proving scale than details advancing the main image, cut supporting details.
+
+Review question:
+
+Is the reader watching the central event, or watching me prove the central event is important?
+
+---
+
+### 5.3 Repair rules should not become visible in prose
+
+Do not let the prose expose the checklist used to improve it.
+
+Bad symptom:
+
+- One sentence exists to satisfy side-character function.
+- One sentence exists to satisfy evidence support.
+- One sentence exists to satisfy humor temperature.
+- One sentence exists to satisfy hook clarity.
+
+Rule:
+
+The final scene must feel like story, not a compliance pass.
+
+---
+
+## 6. Character Judgment, Desire, and Emotional Temperature
+
+### 6.1 Capable characters must think like capable characters
 
 Experienced, powerful, professional, or responsible characters should not react first as joke carriers.
 
@@ -430,7 +564,7 @@ But the chain must be driven by desire, not by exposition needs.
 
 ---
 
-### 5.2 Every question must have motive
+### 6.2 Every question must have motive
 
 Dialogue with a system, rule, witness, enemy, or superior must not exist only to explain setting.
 
@@ -447,7 +581,7 @@ If a question only reveals information to the reader, merge or cut it.
 
 ---
 
-### 5.3 Repetition should change strategy
+### 6.3 Repetition should change strategy
 
 A rule-carrier may repeat fixed feedback. The character should not keep asking the same thing in new wording for too long.
 
@@ -461,7 +595,7 @@ After one or two failed attempts, the character should change strategy:
 
 ---
 
-### 5.4 Reactive humor must come from mismatch
+### 6.4 Reactive humor must come from mismatch
 
 When the premise contains absurd mismatch, preserve a light current of reaction.
 
@@ -478,10 +612,11 @@ Forbidden direction:
 - Make the character perform comedy for the reader.
 - Use side characters' embarrassment as a substitute for structural humor.
 - Use trendy out-of-world commentary to create quick laughs.
+- Add a clever reply after every mismatch.
 
 ---
 
-### 5.5 Backstory must serve present contrast
+### 6.5 Backstory must serve present contrast
 
 A past event, old grievance, former poverty, old failure, or prior lack should not be inserted as background decoration.
 
@@ -497,11 +632,11 @@ Keep only the minimum detail needed to sharpen the present contrast. If the past
 
 ---
 
-### 5.6 Secondary characters need structural function
+### 6.6 Secondary characters need structural function without stealing focus
 
 Observers, elders, subordinates, witnesses, rivals, officials, and bystanders should not exist only as atmosphere or task executors.
 
-At least one structural function should be present when they appear:
+At least one structural function may be present when they appear:
 
 - Raise or test the main character's status
 - Reveal public pressure
@@ -510,15 +645,17 @@ At least one structural function should be present when they appear:
 - Expose a world rule
 - Add a constraint to the next action
 - Make the cost of failure visible
-- Supply a practical route, document, witness, institution, or obstacle that changes the next step
+- Supply a practical route, witness, institution, or obstacle already justified by input or immediate context
 
 If they only stand, wait, react, or receive orders, reduce or repurpose them.
 
+But do not let them steal the main image in the opening, and do not invent new institutions just to make them useful.
+
 ---
 
-## 6. Emotion Through State Change
+## 7. Emotion Through State Change
 
-### 6.1 Emotion is not an added sentence
+### 7.1 Emotion is not an added sentence
 
 Do not add emotion by labeling it or inserting a gesture.
 
@@ -532,7 +669,7 @@ Emotion should emerge from state change:
 
 ---
 
-### 6.2 Major outcomes need expectation before absence
+### 7.2 Major outcomes need expectation before absence
 
 Do not write only the result. Let the scene contain an expectation, then let it fail naturally.
 
@@ -540,7 +677,7 @@ Do not explain disappointment. Let waiting, stopping, resuming, or changing plan
 
 ---
 
-### 6.3 Long history should appear in present behavior
+### 7.3 Long history should appear in present behavior
 
 Avoid summary shortcuts:
 
@@ -557,9 +694,9 @@ Long history should appear through present habits:
 
 ---
 
-## 7. Evidence-Based Value and Contrast
+## 8. Evidence-Based Value and Contrast
 
-### 7.1 Do not evaluate without a support point
+### 8.1 Do not evaluate without a support point
 
 Avoid unsupported judgments:
 
@@ -583,7 +720,7 @@ If the character can see why, write what they see. If not, avoid the judgment.
 
 ---
 
-### 7.2 Value contrast works best through level and comparison
+### 8.2 Value contrast works best through level and comparison
 
 When showing that something is useful but mismatched, prefer:
 
@@ -598,7 +735,7 @@ Do not explain all of them. Choose the sharpest one or two.
 
 ---
 
-### 7.3 Use a concrete comparison before broad status claims
+### 8.3 Use a concrete comparison before broad status claims
 
 Broad claims like "the character now has many resources" are weaker than a concrete comparison.
 
@@ -606,8 +743,8 @@ Better comparison patterns:
 
 - A basic manual versus a complete annotated version
 - A beginner tool versus the character's current method
-- A small reward versus an institutional storehouse only if the storehouse affects action
-- A once-precious item versus an object the character can now produce or obtain easily
+- A small reward versus an object the character can now produce or obtain easily
+- A once-precious item versus a currently ordinary item
 
 Rule:
 
@@ -615,9 +752,25 @@ Let the comparison show the mismatch. Avoid explaining the mismatch after the co
 
 ---
 
-## 8. Triggered Scene Rules
+### 8.4 Prefer scene-active comparison over parameter comparison
 
-### 8.1 Large-scene opening
+A comparison object is strongest when it appears through action, possession, memory, or practical use.
+
+Weaker pattern:
+
+- The current manual has three more notes than this manual.
+
+Stronger direction:
+
+- The character recognizes the reward as a beginner version of something already completed, mastered, owned, taught, or surpassed.
+
+Do not invent elaborate comparison machinery. The comparison should be simple and functional.
+
+---
+
+## 9. Triggered Scene Rules
+
+### 9.1 Large-scene opening
 
 Trigger:
 
@@ -625,13 +778,15 @@ Trigger:
 
 Rule:
 
-Build pressure through the scene before landing the abnormal result, but do not turn the opening into short-sentence scaffolding.
+Build pressure through the scene before landing the abnormal result, but do not turn the opening into short-sentence scaffolding or proof-detail overload.
 
-Use natural prose that connects pressure, character, expectation, and result.
+Use natural prose that connects place, pressure, main subject, subject-under-pressure, expectation, and result.
+
+Witnesses and secondary details should follow the main image, not precede it.
 
 ---
 
-### 8.2 Late resource
+### 9.2 Late resource
 
 Trigger:
 
@@ -645,7 +800,7 @@ Do not over-explain the contrast. Keep the sharpest comparison.
 
 ---
 
-### 8.3 High-status character versus low-level rule
+### 9.3 High-status character versus low-level rule
 
 Trigger:
 
@@ -655,11 +810,11 @@ Rule:
 
 The contrast should come from both sides behaving according to their own logic.
 
-Do not reduce the character to a comedian. Do not make the rule mechanism too self-aware.
+Do not reduce the character to a comedian. Do not make the rule mechanism too self-aware. If the clash is already obvious, use a restrained reaction.
 
 ---
 
-### 8.4 Absurd task or impossible condition
+### 9.4 Absurd task or impossible condition
 
 Trigger:
 
@@ -678,9 +833,11 @@ Good ending force:
 
 The reader should want to see how a serious character solves a ridiculous condition.
 
+Do not convert the absurd problem into pure administrative workflow before the absurdity has had time to live.
+
 ---
 
-### 8.5 Side characters as thought triggers
+### 9.5 Side characters as thought triggers
 
 Trigger:
 
@@ -688,23 +845,25 @@ Trigger:
 
 Rule:
 
-At least one side character should do more than react or receive orders. They may:
+At least one side character may do more than react or receive orders. They may:
 
 - Ask a question that exposes public stakes
 - Misread the protagonist's concern in a useful way
-- Mention an institution, record, route, technique, or limitation that changes the next step
+- Mention an already-established route, limitation, or practical next step
 - Make the protagonist answer selectively, revealing what is being withheld
 
-Do not overuse side characters. One structural contribution is often enough.
+Do not overuse side characters. One structural contribution is often enough. Do not invent new bureaucracy or lore solely to satisfy this rule.
 
 ---
 
-## 9. Generation Workflow
+## 10. Generation Workflow
 
 Before drafting, internally identify:
 
 - Core pressure
 - Core mismatch
+- Main image of the opening
+- Which details support the main image and which only prove scale
 - Character desire
 - Emotional temperature: serious, absurd, tense, comic, tragic, or mixed
 - Rule or mechanism logic
@@ -716,10 +875,11 @@ Before drafting, internally identify:
 - What motive is already shown by action and therefore should not be summarized
 - Which backstory detail is the minimum needed for present contrast
 - Which value contrast can be shown by a concrete comparison object
+- Which practical details would over-proceduralize the scene and should be delayed or cut
 
-After drafting, internally run five checks:
+After drafting, internally run six checks:
 
-### 9.1 Red-line check
+### 10.1 Red-line check
 
 Remove or revise:
 
@@ -738,8 +898,23 @@ Remove or revise:
 - Motive summary after action already proves motive
 - Decorative old-history weight
 - Register-breaking humor
+- Crowded main image
+- Aftermath-only strong-character entrance
+- Structural side characters forcing new lore
+- Premature proceduralization of absurd tasks
+- Clever replies after every mismatch
+- Proof-style prose
 
-### 9.2 Sentence-density check
+### 10.2 Main-image check
+
+Ask:
+
+- Can the reader see the central event before supporting details arrive?
+- Is the main subject under pressure, or only standing after pressure ends?
+- Do witnesses, mechanisms, or institutional details steal the first image?
+- Does the opening prove scale more than it dramatizes the central pressure?
+
+### 10.3 Sentence-density check
 
 Ask for each sentence:
 
@@ -750,12 +925,13 @@ Ask for each sentence:
 - Can it be merged?
 - Is it a summary that tells the reader what to feel?
 - Is it explaining motive already shown by action?
+- Is it proving a beat that the scene already proves?
 
-### 9.3 Emotion-source check
+### 10.4 Emotion-source check
 
 Every emotion must arise from a state change, not from a label or decorative gesture.
 
-### 9.4 Character-aliveness check
+### 10.5 Character-aliveness check
 
 Ask:
 
@@ -764,9 +940,9 @@ Ask:
 - Where does the character stop treating the abnormal thing as noise and start treating it as useful?
 - Where does the character's reaction carry the scene temperature?
 - What action problem remains at the end?
-- Does humor come from the mismatch rather than from modern slang or external quips?
+- Does humor come from the mismatch rather than from modern slang, external quips, or over-polished cleverness?
 
-### 9.5 Public-asset discipline check
+### 10.6 Public-asset discipline check
 
 When editing this Skill or deriving new rules:
 
@@ -776,7 +952,7 @@ When editing this Skill or deriving new rules:
 
 ---
 
-## 10. Output Requirements
+## 11. Output Requirements
 
 Unless the user asks otherwise:
 
@@ -790,7 +966,7 @@ Unless the user asks otherwise:
 
 ---
 
-## 11. Skill Delta Governance
+## 12. Skill Delta Governance
 
 When improving this Skill from a case, follow this process:
 
