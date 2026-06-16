@@ -501,3 +501,57 @@ The prose reads like an argument for why the scene works, not like a scene.
 ### Fix direction
 
 Let story facts land and move. Cut proof layers once the necessary fact is clear.
+
+---
+
+## RT-028 Over-cinematic pressure
+
+### Bad pattern
+
+```text
+The mountain sank, the sky cracked, blue fire poured down like a river, space folded, and the air screamed before the actual story problem appeared.
+```
+
+### Failure
+
+The pressure detail becomes a visual-effects reel and loads the scene with more weight than the chapter's core tone needs.
+
+### Fix direction
+
+Use enough pressure to establish stakes and status, then move toward character reaction and story problem.
+
+---
+
+## RT-029 Aphoristic closure before action
+
+### Bad pattern
+
+```text
+The gate did not open. Absence was the answer.
+```
+
+### Failure
+
+The second sentence seals the meaning instead of letting the character's next action carry the result.
+
+### Fix direction
+
+State the missing result once, then move to reaction, interruption, or consequence.
+
+---
+
+## RT-030 Moral explanation backstory
+
+### Bad pattern
+
+```text
+He did not forgive the old enemy; he was simply too powerful now to care.
+```
+
+### Failure
+
+The narration explains the character's moral posture instead of letting current scale and action imply it.
+
+### Fix direction
+
+Keep the past functional: what mattered then, why it no longer naturally matters, and why it is relevant again now.
